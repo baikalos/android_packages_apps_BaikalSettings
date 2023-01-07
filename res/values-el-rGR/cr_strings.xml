@@ -16,7 +16,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- App Title -->
-    <string name="crdroid_settings_title">crDroid Ρυθμίσεις</string>
+    <string name="crdroid_settings_title">BaikalOS Ρυθμίσεις</string>
     <string name="crdroid_settings_summary">Ανοίξτε τα \"καλούδια\"</string>
     <string name="reset_settings_title">Επαναφορά ρυθμίσεων</string>
     <string name="reset_settings_message">Αυτό θα επαναφέρει τις περισσότερες ρυθμίσεις crdroid στις προεπιλεγμένες τιμές τους για τον τρέχοντα χρήστη. Θέλετε να συνεχίσετε;</string>
@@ -57,17 +57,17 @@
     <string name="changelog_crdroid_summary">Προβολή αλλαγών στην εγκατεστημένη ROM</string>
     <string name="changelog_crdroid_error">Αποτυχία φόρτωσης του αρχείου αλλαγών</string>
     <!-- About crDroid -->
-    <string name="about_crdroid">Σχετικά με το crDroid</string>
+    <string name="about_crdroid">Σχετικά με το BaikalOS</string>
     <string name="about_device_name">Συσκευή</string>
     <!-- Share crDroid -->
-    <string name="share_crdroid_title">Μοιραστείτε το crDroid</string>
-    <string name="share_crdroid_summary">Ενημερώστε τους άλλους για το crDroid</string>
-    <string name="share_message">Ελέγξτε αν το #crDroidAndroid είναι διαθέσιμο για τη συσκευή σας @ https://crdroid.net/</string>
-    <string name="share_chooser_title">Μοιραστείτε το crDroid</string>
+    <string name="share_crdroid_title">Μοιραστείτε το BaikalOS</string>
+    <string name="share_crdroid_summary">Ενημερώστε τους άλλους για το BaikalOS</string>
+    <string name="share_message">Ελέγξτε αν το #BaikalOS είναι διαθέσιμο για τη συσκευή σας @ https://github.com/BaikalOS-Devices/</string>
+    <string name="share_chooser_title">Μοιραστείτε το BaikalOS</string>
     <!-- Sites crDroid -->
     <string name="crdroid_source_title">GitHub</string>
     <string name="crdroid_source_summary">Μας αρέσει ο ανοιχτός κώδικας, ελέγξτε μας</string>
-    <string name="crdroid_telegram_title">Κοινότητα crDroid</string>
+    <string name="crdroid_telegram_title">Κοινότητα BaikalOS</string>
     <string name="crdroid_telegram_summary">Είμαστε στο telegram. Ελάτε μαζί μας!</string>
     <string name="crdroid_telegram_channel_title">Κανάλι ενημερώσεων</string>
     <string name="crdroid_telegram_channel_summary">Ενημερωθείτε για νέες εκδόσεις στο Telegram</string>

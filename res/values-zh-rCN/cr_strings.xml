@@ -16,7 +16,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- App Title -->
-    <string name="crdroid_settings_title">crDroid 设置</string>
+    <string name="crdroid_settings_title">BaikalOS 设置</string>
     <string name="crdroid_settings_summary">个性化设置</string>
     <string name="reset_settings_title">重置设置</string>
     <string name="reset_settings_message">这将会重置当前用户的大部分 crdroid 设置为默认值。您要继续吗？</string>
@@ -57,17 +57,17 @@
     <string name="changelog_crdroid_summary">查看已安装 ROM 中的更改</string>
     <string name="changelog_crdroid_error">无法加载更新日志</string>
     <!-- About crDroid -->
-    <string name="about_crdroid">关于 crDroid</string>
+    <string name="about_crdroid">关于 BaikalOS</string>
     <string name="about_device_name">设备</string>
     <!-- Share crDroid -->
-    <string name="share_crdroid_title">分享 crDroid</string>
-    <string name="share_crdroid_summary">让更多人了解 crDroid</string>
-    <string name="share_message">查看 #crDroid Android 的全部内容 @ https://crdroid.net/</string>
-    <string name="share_chooser_title">分享 crDroid</string>
+    <string name="share_crdroid_title">分享 BaikalOS</string>
+    <string name="share_crdroid_summary">让更多人了解 BaikalOS</string>
+    <string name="share_message">查看 #BaikalOS Android 的全部内容 @ https://BaikalOS.net/</string>
+    <string name="share_chooser_title">分享 BaikalOS</string>
     <!-- Sites crDroid -->
     <string name="crdroid_source_title">GitHub</string>
     <string name="crdroid_source_summary">我们热爱开源，来看看我们的代码吧。</string>
-    <string name="crdroid_telegram_title">crDroid 社区</string>
+    <string name="crdroid_telegram_title">BaikalOS 社区</string>
     <string name="crdroid_telegram_summary">我们有 TG 群。加入我们！</string>
     <string name="crdroid_telegram_channel_title">更新频道</string>
     <string name="crdroid_telegram_channel_summary">在 Telegram 上获取更新通知</string>

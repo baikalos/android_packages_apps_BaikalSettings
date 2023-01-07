@@ -16,7 +16,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- App Title -->
-    <string name="crdroid_settings_title">Настройки crDroid</string>
+    <string name="crdroid_settings_title">Настройки BaikalOS</string>
     <string name="crdroid_settings_summary">Здесь происходит волшебство</string>
     <string name="reset_settings_title">Сбросить настройки</string>
     <string name="reset_settings_message">Это приведет к сбросу большинства настроек crdroid к значениям по умолчанию для текущего пользователя. Продолжить?</string>
@@ -57,17 +57,17 @@
     <string name="changelog_crdroid_summary">Просмотр изменений в текущей прошивки</string>
     <string name="changelog_crdroid_error">Невозможно загрузить список изменений</string>
     <!-- About crDroid -->
-    <string name="about_crdroid">О crDroid</string>
+    <string name="about_crdroid">О BaikalOS</string>
     <string name="about_device_name">Устройство</string>
     <!-- Share crDroid -->
-    <string name="share_crdroid_title">Рассказать о crDroid</string>
-    <string name="share_crdroid_summary">Пусть другие узнают о crDroid</string>
-    <string name="share_message">Узнайте, доступен ли #crDroidAndroid для вашего устройства на @ https://crdroid.net/</string>
-    <string name="share_chooser_title">Рассказать о crDroid</string>
+    <string name="share_crdroid_title">Рассказать о BaikalOS</string>
+    <string name="share_crdroid_summary">Пусть другие узнают о BaikalOS</string>
+    <string name="share_message">Узнайте, доступен ли #BaikalOS для вашего устройства на @ https://github.com/BaikalOS-Devices/</string>
+    <string name="share_chooser_title">Рассказать о BaikalOS</string>
     <!-- Sites crDroid -->
     <string name="crdroid_source_title">Github</string>
     <string name="crdroid_source_summary">Мы любим открытый исходный код, посмотрите его</string>
-    <string name="crdroid_telegram_title">Cообщество crDroid</string>
+    <string name="crdroid_telegram_title">Cообщество BaikalOS</string>
     <string name="crdroid_telegram_summary">Мы в Telegram. Присоединяйтесь!</string>
     <string name="crdroid_telegram_channel_title">Канал обновлений</string>
     <string name="crdroid_telegram_channel_summary">Получать уведомления о новых сборках в Telegram</string>

@@ -57,17 +57,17 @@
     <string name="changelog_crdroid_summary">عرض التغييرات في الروم المثبت</string>
     <string name="changelog_crdroid_error">غير قادر على تحميل سجل التغييرات</string>
     <!-- About crDroid -->
-    <string name="about_crdroid">حول crDroid</string>
+    <string name="about_crdroid">حول BaikalOS</string>
     <string name="about_device_name">الجهاز</string>
     <!-- Share crDroid -->
-    <string name="share_crdroid_title">مشاركة crDroid</string>
-    <string name="share_crdroid_summary">دع الآخرين يعرفون عن crDroid</string>
-    <string name="share_message">تحقق مما إذا كان #crDroidAndroid متوفر لجهازك @ https://crdroid.net/</string>
-    <string name="share_chooser_title">مشاركة crDroid</string>
+    <string name="share_crdroid_title">مشاركة BaikalOS</string>
+    <string name="share_crdroid_summary">دع الآخرين يعرفون عن BaikalOS</string>
+    <string name="share_message">تحقق مما إذا كان #BaikalOS متوفر لجهازك @ https://github.com/BaikalOS-Devices/</string>
+    <string name="share_chooser_title">مشاركة BaikalOS</string>
     <!-- Sites crDroid -->
     <string name="crdroid_source_title">على موقع Github</string>
     <string name="crdroid_source_summary">نحن نحب المصدر المفتوح، تحقق منا</string>
-    <string name="crdroid_telegram_title">مجتمع crDroid</string>
+    <string name="crdroid_telegram_title">مجتمع BaikalOS</string>
     <string name="crdroid_telegram_summary">نحن على تليجرام. انضم إلينا!</string>
     <string name="crdroid_telegram_channel_title">قناة التحديثات</string>
     <string name="crdroid_telegram_channel_summary">احصل على إشعارات بالتحديثات الجديدة على تيليجرام</string>

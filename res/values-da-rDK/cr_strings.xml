@@ -16,10 +16,10 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- App Title -->
-    <string name="crdroid_settings_title">crDroid-indstillinger</string>
+    <string name="crdroid_settings_title">BaikalOS-indstillinger</string>
     <string name="crdroid_settings_summary">Åbn Godhed</string>
     <string name="reset_settings_title">Nulstil indstillinger</string>
-    <string name="reset_settings_message">Dette vil nulstille de fleste crDroid-indstillinger til deres standardværdier for den aktuelle bruger. Fortsæt?</string>
+    <string name="reset_settings_message">Dette vil nulstille de fleste BaikalOS-indstillinger til deres standardværdier for den aktuelle bruger. Fortsæt?</string>
     <!-- Personalization Categories -->
     <string name="button_title">Knapper</string>
     <string name="lockscreen_title">Låseskærm</string>
@@ -60,14 +60,14 @@
     <string name="about_crdroid">Om AirDroid</string>
     <string name="about_device_name">Device</string>
     <!-- Share crDroid -->
-    <string name="share_crdroid_title">Del crDroid</string>
-    <string name="share_crdroid_summary">Fortæl andre om crDroid</string>
-    <string name="share_message">Check out if #crDroidAndroid is available for your device @ https://crdroid.net/</string>
-    <string name="share_chooser_title">Del crDroid</string>
+    <string name="share_crdroid_title">Del BaikalOS</string>
+    <string name="share_crdroid_summary">Fortæl andre om BaikalOS</string>
+    <string name="share_message">Check out if #BaikalOS is available for your device @ https://github.com/BaikalOS-Devices/</string>
+    <string name="share_chooser_title">Del BaikalOS</string>
     <!-- Sites crDroid -->
     <string name="crdroid_source_title">GitHub</string>
     <string name="crdroid_source_summary">Vi elsker open source, tjek os ud</string>
-    <string name="crdroid_telegram_title">crDroid community</string>
+    <string name="crdroid_telegram_title">BaikalOS community</string>
     <string name="crdroid_telegram_summary">Vi er på telegram. Tilmeld dig!</string>
     <string name="crdroid_telegram_channel_title">Updates channel</string>
     <string name="crdroid_telegram_channel_summary">Get notified of new builds on Telegram</string>

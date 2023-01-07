@@ -16,10 +16,10 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- App Title -->
-    <string name="crdroid_settings_title">Paramètres crDroid</string>
-    <string name="crdroid_settings_summary">Les trésors de crDroid</string>
+    <string name="crdroid_settings_title">Paramètres BaikalOS</string>
+    <string name="crdroid_settings_summary">Les trésors de BaikalOS</string>
     <string name="reset_settings_title">Réinitialiser les paramètres</string>
-    <string name="reset_settings_message">Cette action réinitialisera la plupart des paramètres crDroid à leurs valeurs par défaut pour l’utilisateur actuel. Souhaitez-vous continuer ?</string>
+    <string name="reset_settings_message">Cette action réinitialisera la plupart des paramètres BaikalOS à leurs valeurs par défaut pour l’utilisateur actuel. Souhaitez-vous continuer ?</string>
     <!-- Personalization Categories -->
     <string name="button_title">Boutons</string>
     <string name="lockscreen_title">Écran de verrouillage</string>
@@ -57,17 +57,17 @@
     <string name="changelog_crdroid_summary">Afficher les modifications de cette version</string>
     <string name="changelog_crdroid_error">Impossible de charger la liste des changements</string>
     <!-- About crDroid -->
-    <string name="about_crdroid">À propos de crDroid</string>
+    <string name="about_crdroid">À propos de BaikalOS</string>
     <string name="about_device_name">Appareil</string>
     <!-- Share crDroid -->
-    <string name="share_crdroid_title">Partager crDroid</string>
-    <string name="share_crdroid_summary">Faire connaitre crDroid</string>
-    <string name="share_message">Vérifiez si #crDroidAndroid est disponible pour votre appareil @ https://crdroid.net/</string>
-    <string name="share_chooser_title">Partager crDroid</string>
+    <string name="share_crdroid_title">Partager BaikalOS</string>
+    <string name="share_crdroid_summary">Faire connaitre BaikalOS</string>
+    <string name="share_message">Vérifiez si #BaikalOS est disponible pour votre appareil @ https://github.com/BaikalOS-Devices/</string>
+    <string name="share_chooser_title">Partager BaikalOS</string>
     <!-- Sites crDroid -->
     <string name="crdroid_source_title">Open source</string>
     <string name="crdroid_source_summary">Consulter notre Github</string>
-    <string name="crdroid_telegram_title">Communauté crDroid</string>
+    <string name="crdroid_telegram_title">Communauté BaikalOS</string>
     <string name="crdroid_telegram_summary">Rejoindre la communauté sur Telegram</string>
     <string name="crdroid_telegram_channel_title">Salon de mise à jour</string>
     <string name="crdroid_telegram_channel_summary">Être informé des nouvelles versions via Telegram</string>

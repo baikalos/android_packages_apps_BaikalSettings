@@ -57,17 +57,17 @@
     <string name="changelog_crdroid_summary">நிறுவப்பட்ட ROM இல் மாற்றங்களைக் காண்க</string>
     <string name="changelog_crdroid_error">மாற்றப் பதிவேட்டை திறக்க முடியவில்லை</string>
     <!-- About crDroid -->
-    <string name="about_crdroid">crDroid ஐப் பற்றி</string>
+    <string name="about_crdroid">BaikalOS ஐப் பற்றி</string>
     <string name="about_device_name">சாதனம்</string>
     <!-- Share crDroid -->
-    <string name="share_crdroid_title">crDroid ஐப் பகிர்</string>
-    <string name="share_crdroid_summary">crDroid பற்றி மற்றவர்களுக்குத் தெரியப்படுத்தவும்</string>
-    <string name="share_message">உங்கள் சாதனத்தில் #crDroidAndroid உள்ளதா எனப் பார்க்கவும் @ https://crdroid.net/</string>
-    <string name="share_chooser_title">crDroid ஐப் பகிர்</string>
+    <string name="share_crdroid_title">BaikalOS ஐப் பகிர்</string>
+    <string name="share_crdroid_summary">BaikalOS பற்றி மற்றவர்களுக்குத் தெரியப்படுத்தவும்</string>
+    <string name="share_message">உங்கள் சாதனத்தில் #BaikalOS உள்ளதா எனப் பார்க்கவும் @ https://github.com/BaikalOS-Devices/</string>
+    <string name="share_chooser_title">BaikalOS ஐப் பகிர்</string>
     <!-- Sites crDroid -->
     <string name="crdroid_source_title">கிட்ஹப்</string>
     <string name="crdroid_source_summary">நாங்கள் திறந்த மூலத்தை விரும்புகிறோம், எங்களைப் பார்க்கவும்</string>
-    <string name="crdroid_telegram_title">crDroid சமூகம்</string>
+    <string name="crdroid_telegram_title">BaikalOS சமூகம்</string>
     <string name="crdroid_telegram_summary">நாங்கள் தந்தியில் இருக்கிறோம்.  எங்களுடன் சேர்!</string>
     <string name="crdroid_telegram_channel_title">சேனலைப் புதுப்பிக்கிறது</string>
     <string name="crdroid_telegram_channel_summary">டெலிகிராமில் புதிய உருவாக்கங்கள் பற்றிய அறிவிப்பைப் பெறுங்கள்</string>

@@ -16,7 +16,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- App Title -->
-    <string name="crdroid_settings_title">Definições crDroid</string>
+    <string name="crdroid_settings_title">Definições BaikalOS</string>
     <string name="crdroid_settings_summary">Abrir as coisinhas boas</string>
     <string name="reset_settings_title">Repor definições</string>
     <string name="reset_settings_message">Isso irá redefinir a maioria das configurações do crdroid para seus valores padrão para o usuário atual. Você gostaria de continuar?</string>
@@ -57,17 +57,17 @@
     <string name="changelog_crdroid_summary">Ver as alterações na ROM instalada</string>
     <string name="changelog_crdroid_error">Não foi possível carregar o changelog</string>
     <!-- About crDroid -->
-    <string name="about_crdroid">Acerca de crDroid</string>
+    <string name="about_crdroid">Acerca de BaikalOS</string>
     <string name="about_device_name">Dispositivo</string>
     <!-- Share crDroid -->
-    <string name="share_crdroid_title">Partilhar crDroid</string>
-    <string name="share_crdroid_summary">Deixar os outros saber da crDroid</string>
-    <string name="share_message">Conferir se #crDroidAndroid está disponível para o seu dispositivo @ https://crdroid.net/</string>
-    <string name="share_chooser_title">Partilhar crDroid</string>
+    <string name="share_crdroid_title">Partilhar BaikalOS</string>
+    <string name="share_crdroid_summary">Deixar os outros saber da BaikalOS</string>
+    <string name="share_message">Conferir se #BaikalOS está disponível para o seu dispositivo @ https://github.com/BaikalOS-Devices/</string>
+    <string name="share_chooser_title">Partilhar BaikalOS</string>
     <!-- Sites crDroid -->
     <string name="crdroid_source_title">GitHub</string>
     <string name="crdroid_source_summary">Nós gostamos de código aberto, confira-nos</string>
-    <string name="crdroid_telegram_title">Comunidade crDroid</string>
+    <string name="crdroid_telegram_title">Comunidade BaikalOS</string>
     <string name="crdroid_telegram_summary">Estamos no Telegram. Junte-se a nós!</string>
     <string name="crdroid_telegram_channel_title">Canal de Atualizações</string>
     <string name="crdroid_telegram_channel_summary">Seja notificado acerca de novas atualizações no Telegram</string>
