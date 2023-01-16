@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * Copyright (C) 2023 BaikalOS
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+-->
+
+<PreferenceScreen 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+    xmlns:lineage="http://schemas.android.com/apk/res-auto"
+    android:title="@string/powersave_title"
+    >
+
+        <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+            android:key="baikalos_aggressive_idle"
+            android:defaultValue="false"
+            android:title="@string/baikalos_aggressive_idle_title"
+            android:summary="@string/baikalos_aggressive_idle_summary"
+        />
+
+        <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+            android:key="baikalos_extreme_idle"
+            android:defaultValue="false"
+            android:title="@string/baikalos_extreme_idle_title"
+            android:summary="@string/baikalos_extreme_idle_summary"
+            android:dependency="baikalos_aggressive_idle"
+        />
+
+        <!-- com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+            android:key="baikalos_alarms_nowake"
+            android:defaultValue="false"
+            android:title="@string/baikalos_alarms_nowake_title"
+            android:summary="@string/baikalos_alarms_nowake_summary"
+            android:dependency="baikalos_aggressive_idle"
+        /-->
+
+        <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+            android:key="baikalos_kill_in_background"
+            android:defaultValue="false"
+            android:title="@string/baikalos_kill_in_background_title"
+            android:summary="@string/baikalos_kill_in_background_summary"
+            android:dependency="baikalos_aggressive_idle"
+        />
+
+        <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+            android:key="baikalos_aggressive_device_idle"
+            android:defaultValue="false"
+            android:title="@string/baikalos_aggressive_device_idle_title"
+            android:summary="@string/baikalos_aggressive_device_idle_summary"
+        />
+
+        <!-- com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+            android:key="baikalos_stamina_enabled"
+            android:defaultValue="false"
+            android:title="@string/baikalos_stamina_title"
+            android:summary="@string/baikalos_stamina_summary"
+        / -->
+
+        <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+            android:key="baikalos_unrestricted_net"
+            android:defaultValue="false"
+            android:title="@string/baikalos_unrestricted_net_title"
+            android:summary="@string/baikalos_unrestricted_net_summary"
+        />
+
+</PreferenceScreen>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Power Save -->
+    <string name="interface_title">Интерфейс</string>
+    <string name="interface_summary">Интерфейс системы</string>
+
+    <string name="system_tweaks_sec_hwc_title">Отключить вторичный HWC</string>
+    <string name="system_tweaks_sec_hwc_summary">Отключить HW Overlay для вторичного экрана. Решает проблему мерцания на Android Auto и WFD.\nТребуется перезагрузка!</string>
+
+    <string name="baikalos_dlsb_enabled_title">Двухстрочная строка состояния</string>
+    <string name="baikalos_dlsb_enabled_summary">Требуется перезагрузка!</string>
+
+    <!-- Old mobile type icons -->
+    <string name="use_old_mobiletype_title">Маленькие значки типа связи</string>
+    <string name="use_old_mobiletype_summary">Показывать маленький значок типа сети сверху от уровня сигнала</string>
+
+    <string name="doze_title">Включать экран при получении уведомлений</string>
+    <string name="doze_summary">Экран включается при появлении новых уведомлений</string>
+
+    <string name="baikalos_headsup_incall_title">Вид Входящего Вызова</string>
+    <string name="baikalos_headsup_incall_summary">Не использовать всплывающее уведомление при входящем вызове</string>
+    <string name="baikalos_headsup_force_sms_title">Форсировать СМС</string>
+    <string name="baikalos_headsup_force_sms_summary">Форсировать всплывающее уведомление для приложения СМС по умолчанию</string>
+
+    <string name="fp_wake_unlock_title">Пробуждать отпечатком</string>
+    <string name="fp_wake_unlock_summary">Пробуждать устройство по сканеру отпечатка пальца</string>
+
+    <string name="baikalos_statusbar_color_icons_title">Цветные Значки</string>
+    <string name="baikalos_statusbar_color_icons_summary">Использовать цветные значки уведомлений в статусбаре</string>
+
+    <string name="baikalos_keep_pinned_in_recents_title">Закрепленные в недавних</string>
+    <string name="baikalos_keep_pinned_in_recents_summary">Не удалять закрепленные приложения из списка недавних</string>
+
+    <string name="baikalos_proximity_disable_title">Запретить Приближение</string>
+    <string name="baikalos_proximity_disable_summary">Запретить использование датчика приближения</string>
+
+</resources>

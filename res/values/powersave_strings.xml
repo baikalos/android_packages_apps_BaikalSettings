@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+    <!-- Power Save -->
+    <string name="powersave_title">Power Save</string>
+    <string name="powersave_summary">Power Saving Tweaks</string>
+
+    <string name="baikalos_aggressive_idle_title">Aggressive Idle</string>
+    <string name="baikalos_aggressive_idle_summary">Aggressively restrict background processes. Kill inactive apps after moderate timeout.</string>
+
+    <string name="baikalos_extreme_idle_title">Extreme Mode</string>
+    <string name="baikalos_extreme_idle_summary">Extremely restrict background processes. Kill inactive apps after short timeout.</string>
+
+    <string name="baikalos_aggressive_device_idle_title">Fast Device Idle</string>
+    <string name="baikalos_aggressive_device_idle_summary">Enter Device Idle mode 30 seconds after screen off. Ignore movement</string>
+
+    <string name="baikal_stamina_oi_enabled_title">Stamina on Screen Off</string>
+    <string name="baikal_stamina_oi_enabled_summary">Enter stamina mode while screen is off. An Emergency mode to reach the power plug.</string>
+
+    <string name="baikalos_unrestricted_net_title">Unrestricted Network</string>
+    <string name="baikalos_unrestricted_net_summary">Do not restrict network access in Idle state. Could fix notification problems. Increases battery drain!</string>
+
+    <string name="powersave_gms_title">Google Services</string>
+    <string name="powersave_gms_summary">Options for Google Play Services</string>
+
+    <string name="powersave_hide_gms_title">Hide Idle from GMS</string>
+    <string name="powersave_hide_gms_summary">Hide Idle state from Google Play Services. Could fix notification problems. Increases battery drain! </string>
+
+    <string name="powersave_hide_all_title">Hide Idle from Apps</string>
+    <string name="powersave_hide_all_summary">Hide Idle state from all user apps. Could fix notification problems. Increases battery drain! </string>
+
+    <string name="powersave_gms_disabled_title">Disable Google Services</string>
+    <string name="powersave_gms_disabled_summary">Disable Google Play Services on this device. Some apps may not work!</string>
+
+    <string name="powersave_gms_blocked_title">Block Always</string>
+    <string name="powersave_gms_blocked_summary">Always block Google Play Services from running. Some apps may not work!</string>
+
+    <string name="powersave_gms_restricted_title">Restrict Always</string>
+    <string name="powersave_gms_restricted_summary">Always Restrict Google Play Services in background. Some apps may not work!</string>
+
+    <string name="powersave_gms_idle_restricted_title">Restrict in Idle</string>
+    <string name="powersave_gms_idle_restricted_summary">Always Restrict Google Play Services in Idle Mode</string>
+
+    <string name="powersave_gms_stamina_restricted_title">Block in Stamina</string>
+    <string name="powersave_gms_stamina_restricted_summary">Always block Google Play Services in Stamina Mode</string>
+
+    <string name="powersave_gps_restricted_title">Restrict Play Market</string>
+    <string name="powersave_gps_restricted_summary">Restrict Play Market activity in background</string>
+
+    <string name="powersave_gms_defer_jobs_title">Defer Jobs</string>
+    <string name="powersave_gms_defer_jobs_summary">Defer GMS background jobs until on charger</string>
+
+
+    <!-- Batery whitelist -->
+    <string name="prefs_battery_saver_title">Whitelist</string>
+    <string name="prefs_battery_saver_summary">Device Whitelist</string>
+
+    <string name="cached_apps_freezer_title">Cached Apps Freezer</string>
+    <string name="cached_apps_freezer_summary">Enable Cached Apps Freezer</string>
+
+    <string name="extreme_freezer_title">Extreme Apps Freezer</string>
+    <string name="extreme_freezer_summary">Freeze apps with unimportant services</string>
+
+    <string name="pinned_freezer_title">Pinned Apps Freezer</string>
+    <string name="pinned_freezer_summary">Freeze pinned apps</string>
+
+    <string name="gms_freezer_title">Google Services Freezer</string>
+    <string name="gms_freezer_summary">Freeze unimportant Google Play Services</string>
+
+    <string name="keep_freezed_title">Keep Freezed</string>
+    <string name="keep_freezed_summary">Don\'t force close freezed apps on timeout</string>
+
+    <string name="baikalos_kill_in_background_title">Close in background</string>
+    <string name="baikalos_kill_in_background_summary">Aggressively close cached background apps after 3-5 mins</string>
+
+</resources>

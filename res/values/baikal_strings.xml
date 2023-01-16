@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+
+    <!-- Device parts -->
+    <string name="device_part_title">Device features</string>
+    <string name="device_part_category">Device</string>
+
+    <string name="user_interface_category">UI</string>
+    <string name="system_category">BaikalOS Settings</string>
+    <string name="other_category">Other</string>
+
+</resources>
