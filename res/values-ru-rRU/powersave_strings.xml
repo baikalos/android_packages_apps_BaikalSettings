@@ -65,4 +65,7 @@
     <string name="baikalos_kill_in_background_title">Закрывать в фоне</string>
     <string name="baikalos_kill_in_background_summary">Агрессивно закрывать неактивные фоновые приложения через 3-5 минут</string>
 
+    <string name="baikalos_alarms_nowake_title">Запретить Пробуждения</string>
+    <string name="baikalos_alarms_nowake_summary">Запретить пробуждения от пользовательских приложений по умолчанию</string>
+
 </resources>

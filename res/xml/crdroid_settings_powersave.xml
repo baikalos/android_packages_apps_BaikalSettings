@@ -45,7 +45,7 @@
             android:title="@string/baikalos_alarms_nowake_title"
             android:summary="@string/baikalos_alarms_nowake_summary"
             android:dependency="baikalos_aggressive_idle"
-        /-->
+        / -->
 
         <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
             android:key="baikalos_kill_in_background"

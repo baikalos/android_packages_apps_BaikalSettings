@@ -72,4 +72,7 @@
     <string name="baikalos_kill_in_background_title">Close in background</string>
     <string name="baikalos_kill_in_background_summary">Aggressively close cached background apps after 3-5 mins</string>
 
+    <string name="baikalos_alarms_nowake_title">Disable Wakeups</string>
+    <string name="baikalos_alarms_nowake_summary">Disable wakeups from user apps by default</string>
+
 </resources>

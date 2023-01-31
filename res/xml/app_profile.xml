@@ -75,21 +75,21 @@
             android:summary="%s"/>
 
 
-        <!-- ListPreference
+        <ListPreference
             android:key="app_profile_performance"
             android:title="@string/app_profile_performance_title"
             android:entries="@array/performance_listentries"
             android:entryValues="@array/performance_listvalues" 
             android:defaultValue="default"
-            android:summary="%s"/ -->
+            android:summary="%s"/>
 
-        <!-- ListPreference
+        <ListPreference
             android:key="app_profile_thermal"
             android:title="@string/app_profile_thermal_title"
             android:entries="@array/thermal_listentries"
             android:entryValues="@array/thermal_listvalues"
             android:defaultValue="default"
-            android:summary="%s" / -->
+            android:summary="%s" />
 
         <ListPreference
             android:key="app_profile_brightness"
@@ -113,7 +113,7 @@
             android:summary="@string/app_profile_full_screen_summary"
             android:defaultValue="false" / -->
 
-        <ListPreference
+        <!-- ListPreference
             android:key="app_profile_min_fps"
             android:title="@string/app_profile_min_fps_title"
             android:entries="@array/min_fps_listentries"
@@ -122,18 +122,18 @@
             android:summary="%s" />
 
         <ListPreference
-            android:key="app_profile_fps"
-            android:title="@string/app_profile_fps_title"
-            android:entries="@array/fps_listentries"
-            android:entryValues="@array/fps_listvalues"
+            android:key="app_profile_max_fps"
+            android:title="@string/app_profile_max_fps_title"
+            android:entries="@array/max_fps_listentries"
+            android:entryValues="@array/max_fps_listvalues"
             android:defaultValue="default"
-            android:summary="%s" />
+            android:summary="%s" /-->
 
-        <SwitchPreference
+        <!-- SwitchPreference
             android:key="app_profile_stamina"
             android:title="@string/app_profile_stamina_title"
             android:summary="@string/app_profile_stamina_summary"
-            android:defaultValue="false" />
+            android:defaultValue="false" / -->
 
         <!-- SwitchPreference
             android:key="app_profile_require_gms"
@@ -155,21 +155,21 @@
             android:defaultValue="0"
             android:summary="%s" / -->
 
-        <ListPreference
+        <!-- ListPreference
             android:key="app_profile_camera"
             android:title="@string/app_profile_camera_title"
             android:entries="@array/camera_listentries"
             android:entryValues="@array/camera_listvalues"
             android:defaultValue="0"
-            android:summary="%s" />
+            android:summary="%s" / -->
 
-        <ListPreference
+        <!-- ListPreference
             android:key="app_profile_microphone"
             android:title="@string/app_profile_microphone_title"
             android:entries="@array/microphone_listentries"
             android:entryValues="@array/microphone_listvalues"
             android:defaultValue="0"
-            android:summary="%s" />
+            android:summary="%s" / -->
 
         <ListPreference
             android:key="app_profile_spoof"
@@ -234,7 +234,7 @@
             android:defaultValue="-99999"/ -->
 
 
-        <SwitchPreference
+        <!-- SwitchPreference
             android:key="app_profile_block_focus_recv"
             android:title="@string/app_profile_block_focus_recv_title"
             android:summary="@string/app_profile_block_focus_recv_summary"
@@ -244,7 +244,7 @@
             android:key="app_profile_block_focus_send"
             android:title="@string/app_profile_block_focus_send_title"
             android:summary="@string/app_profile_block_focus_send_summary"
-            android:defaultValue="false" />
+            android:defaultValue="false" / -->
 
         <SwitchPreference
             android:key="app_profile_force_sonification"

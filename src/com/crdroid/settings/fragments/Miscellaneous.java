@@ -32,7 +32,7 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.SearchIndexable;
 
-import com.crdroid.settings.fragments.misc.GmsSwitch;
+//import com.crdroid.settings.fragments.misc.GmsSwitch;
 import com.crdroid.settings.fragments.misc.SensorBlock;
 import com.crdroid.settings.fragments.misc.SmartCharging;
 
@@ -90,10 +90,10 @@ public class Miscellaneous extends SettingsPreferenceFragment implements
                 Settings.System.THREE_FINGER_GESTURE, 0, UserHandle.USER_CURRENT);
         LineageSettings.System.putIntForUser(resolver,
                 LineageSettings.System.AUTO_BRIGHTNESS_ONE_SHOT, 0, UserHandle.USER_CURRENT);
-        SystemProperties.set(SYS_GAMES_SPOOF, "false");
-        SystemProperties.set(SYS_PHOTOS_SPOOF, "true");
-        SystemProperties.set(SYS_NETFLIX_SPOOF, "false");
-        GmsSwitch.reset(mContext);
+        //SystemProperties.set(SYS_GAMES_SPOOF, "false");
+        //SystemProperties.set(SYS_PHOTOS_SPOOF, "true");
+        //SystemProperties.set(SYS_NETFLIX_SPOOF, "false");
+        //GmsSwitch.reset(mContext);
         SensorBlock.reset(mContext);
         SmartCharging.reset(mContext);
     }

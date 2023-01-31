@@ -16,12 +16,12 @@
 -->
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
-    android:title="@string/gms_enabled_title">
+    android:title="@string/hms_enabled_title">
 
     <SwitchPreference
-        android:key="gms_enabled"
-        android:title="@string/gms_enabled_title"
-        android:summary="@string/gms_enabled_summary"
+        android:key="hms_enabled"
+        android:title="@string/hms_enabled_title"
+        android:summary="@string/hms_enabled_summary"
         android:defaultValue="false" />
 
 </PreferenceScreen>

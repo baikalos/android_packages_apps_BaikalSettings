@@ -24,4 +24,46 @@
     <!-- Device parts -->
     <string name="device_part_title">Возможности устройства</string>
     <string name="device_part_category">Устройство</string>
+
+    <string name="status_bar_notch_category_title">Вырез дисплея</string>
+    <string name="display_hide_notch_title">Скрыть вырез дисплея</string>
+    <string name="display_hide_notch_summary">Отключить заливку черным цветом для выреза экрана</string>
+
+    <!-- Personalization Categories -->
+    <string name="button_summary">Аппаратные кнопки, меню кнопки питания</string>
+    <string name="lockscreen_summary">Настройки экрана блокировки</string>
+    <string name="misc_summary">Все, что непонятно куда засунуть</string>
+    <string name="navigation_summary">Hit the road Jack</string>
+    <string name="notifications_summary">Надоедалки</string>
+    <string name="quicksettings_summary">Попытаемся сделать этот ужас чуть более удобным</string>
+    <string name="sound_summary">They Said To Play It Louder Than Hell</string>
+    <string name="statusbar_summary">Строка, состояния, иконки уведлмление, связи и батареи</string>
+    <string name="display_summary">Display</string>
+    <string name="ui_summary">Дополнительные настройки пользовательского интерфейса</string>
+    <string name="about_summary">Все про BaikalOS</string>
+
+    <!-- Google services -->
+    <string name="gms_enabled_title">Сервисы Google</string>
+    <string name="gms_enabled_summary">Управление сервисами и приложениями Google</string>
+    <string name="gms_enabled_footer">Перед отключением сервисов Google настоятельно рекомендуется отключить "Find My Device" и 2-х факторную верификацию в вашем аккаунте Google. Приложения зависящие от сервисов Google перестануть работать или будут работать с ошибками! Если в работе устройства будут перебои потребуется сброс к заводским настройкам!</string>
+    <string name="gms_disable_confirmation">Отключение Сервисов Google</string>
+
+    <!-- Huawei services -->
+    <string name="hms_enabled_title">Huawei Mobile Services</string>
+    <string name="hms_enabled_summary">Управление сервисами и магазином приложений Huawei</string>
+
+    <!-- Huawei services -->
+    <string name="fdroid_enabled_title">F-Droid App Store</string>
+    <string name="fdroid_enabled_summary">Магазин приложений F-Droid</string>
+
+    <!-- Huawei services -->
+    <string name="aurora_enabled_title">Aurora Store</string>
+    <string name="aurora_enabled_summary">Магазин приложений Aurora</string>
+
+    <string name="services_title">Дополнительные Сервисы</string>
+    <string name="services_summary">Google, Huawei, Fdroid, etc...</string>
+
+    <string name="audio_tweaks_a2dp_last_codec_title">Последний использованный кодек</string>
+    <string name="audio_tweaks_a2dp_last_bitrate_title">Последний использованный битрейт</string>
+
 </resources>

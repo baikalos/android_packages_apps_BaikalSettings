@@ -9,4 +9,46 @@
     <string name="system_category">BaikalOS Settings</string>
     <string name="other_category">Other</string>
 
+    <!-- Display cutout -->
+    <string name="status_bar_notch_category_title">Display Cutout</string>
+    <string name="display_hide_notch_title">Hide display cutout</string>
+    <string name="display_hide_notch_summary">Disable black fill-in for display cutout</string>
+
+    <!-- Personalization Categories -->
+    <string name="button_summary">Hardware keys, power menu</string>
+    <string name="lockscreen_summary">Lock Screen settings</string>
+    <string name="misc_summary">All that is not known where to place</string>
+    <string name="navigation_summary">Hit the road Jack</string>
+    <string name="notifications_summary">Annoyers</string>
+    <string name="quicksettings_summary">Let\'s try to make this ..it a bit more usable</string>
+    <string name="sound_summary">They Said To Play It Louder Than Hell</string>
+    <string name="statusbar_summary">Status bar, icons, etc...</string>
+    <string name="display_title">Display</string>
+    <string name="ui_summary">User Interface settings</string>
+    <string name="about_summary">BaikalOS bits</string>
+
+    <!-- Google services -->
+    <string name="gms_enabled_title">Google Mobile Services</string>
+    <string name="gms_enabled_summary">Control Google services and core apps</string>
+    <string name="gms_enabled_footer">Before disabling Google services and core apps, you should disable "Find My Device" and 2-step verification on your Google account. It is strongly recommended to keep this setting enabled else apps dependent on Google components will be affected. If you run into any issues after changing this setting, perform a factory reset.</string>
+    <string name="gms_disable_confirmation">Google Services Setup</string>
+
+    <!-- Huawei services -->
+    <string name="hms_enabled_title">Huawei Mobile Services</string>
+    <string name="hms_enabled_summary">Control Huawei Mobile services and AppGallery</string>
+
+    <!-- Huawei services -->
+    <string name="fdroid_enabled_title">FDroid App Store</string>
+    <string name="fdroid_enabled_summary">Control FDroid App Store</string>
+
+    <!-- Huawei services -->
+    <string name="aurora_enabled_title">FDroid App Store</string>
+    <string name="aurora_enabled_summary">Control FDroid App Store</string>
+
+    <string name="services_title">Optional Services</string>
+    <string name="services_summary">Google, Huawei, Fdroid, etc...</string>
+
+    <string name="audio_tweaks_a2dp_last_codec_title">Last used codec</string>
+    <string name="audio_tweaks_a2dp_last_bitrate_title">Last used bitrate</string>
+
 </resources>

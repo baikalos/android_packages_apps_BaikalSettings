@@ -59,6 +59,12 @@ public class Sound extends SettingsPreferenceFragment {
     private static final String KEY_VIBRATE_DISCONNECT = "vibrate_on_disconnect";
     private static final String KEY_VOLUME_PANEL_LEFT = "volume_panel_on_left";
 
+    private static final String AUDIO_TWEAKS_A2DP_LAST_CODEC = "audio_tweaks_a2dp_last_codec";
+    private static final String AUDIO_TWEAKS_A2DP_LAST_BITRATE = "audio_tweaks_a2dp_last_bitrate";
+
+    private static final String SYSTEM_PROPERTY_A2DP_LAST_CODEC = "baikal.last.a2dp_codec";
+    private static final String SYSTEM_PROPERTY_A2DP_LAST_BITRATE = "baikal.last.a2dp_bitrate";
+
     private SwitchPreference mVolumePanelLeft;
 
     @Override
@@ -83,6 +89,32 @@ public class Sound extends SettingsPreferenceFragment {
         if (!TelephonyUtils.isVoiceCapable(getActivity())) {
             prefScreen.removePreference(vibCategory);
         }
+
+        Preference  codec = (Preference) findPreference(AUDIO_TWEAKS_A2DP_LAST_CODEC);
+        Preference  bitrate = (Preference) findPreference(AUDIO_TWEAKS_A2DP_LAST_BITRATE);
+
+        String sCodec = SystemProperties.get(SYSTEM_PROPERTY_A2DP_LAST_CODEC,"");
+        String sBitrate = SystemProperties.get(SYSTEM_PROPERTY_A2DP_LAST_BITRATE,"");
+
+
+        if( sCodec != null && sCodec.startsWith("SBC HD") ) {
+            codec.setVisible(true);
+            codec.setSummary(sCodec);
+            bitrate.setVisible(true);
+            bitrate.setSummary(sBitrate + " kBit/s");
+        } 
+        else if( sCodec == null || sCodec.equals("") || sCodec.equals("NONE") ) {
+            codec.setVisible(false);
+            codec.setSummary("");
+            bitrate.setVisible(false);
+            bitrate.setSummary("");
+        } else {
+            codec.setVisible(true);
+            codec.setSummary(sCodec);
+            bitrate.setVisible(false);
+            bitrate.setSummary("");
+        }
+
     }
 
     public static void reset(Context mContext) {

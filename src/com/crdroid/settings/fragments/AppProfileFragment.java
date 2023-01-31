@@ -75,7 +75,6 @@ public class AppProfileFragment extends SettingsPreferenceFragment
     public static final String ARG_PACKAGE_NAME = "package";
     public static final String ARG_PACKAGE_UID = "uid";
 
-    private static final String APP_PROFILE_READER = "app_profile_reader";
     private static final String APP_PROFILE_DISABLE_BOOT = "app_profile_disable_boot";
     private static final String APP_PROFILE_DISABLE_WAKEUP = "app_profile_disable_wakeup";
     private static final String APP_PROFILE_DISABLE_JOBS = "app_profile_disable_jobs";
@@ -186,14 +185,22 @@ public class AppProfileFragment extends SettingsPreferenceFragment
         mContext = (Context) getActivity();
         final Resources res = getActivity().getResources();
 
-        boolean perfProf  = SystemProperties.get("baikal.eng.perf", "0").equals("1");
-        boolean thermProf  = SystemProperties.get("baikal.eng.therm", "0").equals("1");
+        String[] perfProfiles = getResources().getStringArray(R.array.performance_listvalues);
+        String[] thermProfiles = getResources().getStringArray(R.array.thermal_listvalues);
+        String[] refreshRates = getResources().getStringArray(R.array.max_fps_listvalues);
+        String[] cpuLimits = getResources().getStringArray(R.array.cpu_resources_listentries);
 
-        boolean readerMode  = SystemProperties.get("sys.baikal.reader", "0").equals("1");
-        boolean variableFps  = SystemProperties.get("sys.baikal.var_fps", "0").equals("1");
-        boolean lowResSupported = SystemProperties.get("sys.baikal.lowres", "0").equals("1");
+        boolean perfProf  = (perfProfiles !=null && perfProfiles.length > 1);
+        boolean thermProf  = (thermProfiles !=null && thermProfiles.length > 1);
+        boolean variableFps = (refreshRates !=null && refreshRates.length > 1);
 
-        mAppSettings = AppProfileSettings.getInstance(new Handler(),mContext, mContext.getContentResolver(),null);
+
+        Log.e(TAG, "perf profiles : perfProfiles=" + perfProfiles);
+        Log.e(TAG, "perf profiles : perfProfiles.length=" + perfProfiles.length);
+
+        mAppSettings = AppProfileSettings.getInstance(new Handler(),mContext);
+        mAppSettings.registerObserver(false);
+
         mProfile = mAppSettings.getProfile(mPackageName);
         if( mProfile == null ) { 
             mProfile = new AppProfile();
@@ -280,41 +287,18 @@ public class AppProfileFragment extends SettingsPreferenceFragment
                 });
             }
 
-            mAppReader = (SwitchPreference) findPreference(APP_PROFILE_READER);
-            if( mAppReader != null ) {
-                if( !readerMode ) {
-                    mAppReader.setVisible(false);
-                } else {
-                    mAppReader.setChecked(mProfile.mReader);
-                    mAppReader.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
-                        public boolean onPreferenceChange(Preference preference, Object newValue) {
-                            try {
-                                mProfile.mReader = ((Boolean)newValue);
-                                mAppSettings.updateProfile(mProfile);
-                                mAppSettings.save();
-                                Log.e(TAG, "mAppReader: mPackageName=" + mPackageName + ",setReader=" + (Boolean)newValue);
-                            } catch(Exception re) {
-                                Log.e(TAG, "onCreate: mAppReader Fatal! exception", re );
-                            }
-                            return true;
-                        }
-                    });
-                }
-            }
-
             mAppPerfProfile = (ListPreference) findPreference(APP_PROFILE_PERF);
             if( mAppPerfProfile != null ) { 
                 if(!perfProf) {
                     mAppPerfProfile.setVisible(false);
                 } else {
-                    String profile = mProfile.mPerfProfile;
-                    Log.e(TAG, "getAppPerfProfile: mPackageName=" + mPackageName + ",getProfile=" + profile);
-                    if( profile == null ) profile = "default";
-                    mAppPerfProfile.setValue(profile);
+                    int profile = mProfile.mPerfProfile;
+                    Log.e(TAG, "getAppPerfProfile: mPackageName=" + mPackageName + ", getProfile=" + profile);
+                    mAppPerfProfile.setValue(Integer.toString(profile));
                     mAppPerfProfile.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
                         public boolean onPreferenceChange(Preference preference, Object newValue) {
                             try {
-                                mProfile.mPerfProfile = newValue.toString();
+                                mProfile.mPerfProfile = Integer.parseInt(newValue.toString());
                                 mAppSettings.updateProfile(mProfile);
                                 mAppSettings.save();
                                 Log.e(TAG, "mAppPerfProfile: mPackageName=" + mPackageName + ",setProfile=" + newValue.toString());
@@ -332,14 +316,13 @@ public class AppProfileFragment extends SettingsPreferenceFragment
                 if(!thermProf) {
                     mAppThermProfile.setVisible(false);
                 } else {
-                    String profile = mProfile.mThermalProfile;
-                    Log.e(TAG, "getAppThermProfile: mPackageName=" + mPackageName + ",getProfile=" + profile);
-                    if( profile == null ) profile = "default";
-                    mAppThermProfile.setValue(profile);
+                    int profile = mProfile.mThermalProfile;
+                    Log.e(TAG, "getAppThermProfile: mPackageName=" + mPackageName + ", getProfile=" + profile);
+                    mAppThermProfile.setValue(Integer.toString(profile));
                     mAppThermProfile.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
                         public boolean onPreferenceChange(Preference preference, Object newValue) {
                             try {
-                                mProfile.mThermalProfile = newValue.toString();
+                                mProfile.mThermalProfile = Integer.parseInt(newValue.toString());
                                 mAppSettings.updateProfile(mProfile);
                                 mAppSettings.save();
                                 Log.e(TAG, "mAppThermProfile: mPackageName=" + mPackageName + ",setProfile=" + newValue.toString());
@@ -632,25 +615,36 @@ public class AppProfileFragment extends SettingsPreferenceFragment
 
             mPerformanceScale = (ListPreference) findPreference(APP_PROFILE_PERFORMANCE_SCALE);
             if( mPerformanceScale != null ) {
-                int level = mProfile.mPerformanceLevel;
-                if( level > 4 ) level = 4;
-                if( level < 0 ) level = 0;
-                mPerformanceScale.setValue(Integer.toString(level));
-                Log.e(TAG, "mPerformanceScale: mPackageName=" + mPackageName + ", mPerformanceScale=" + level);
-                mPerformanceScale.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
-                    public boolean onPreferenceChange(Preference preference, Object newValue) {
-                        try {
-                            int val = Integer.parseInt(newValue.toString());
-                            mProfile.mPerformanceLevel = val;
-                            mAppSettings.updateProfile(mProfile);
-                            mAppSettings.save();
-                            Log.e(TAG, "mPerformanceScale: mPackageName=" + mPackageName + ", mPerformanceScale=" + val);
-                        } catch(Exception re) {
-                            Log.e(TAG, "onCreate: mPerformanceScale Fatal! exception", re );
-                        }
-                        return true;
+                int num = cpuLimits != null ? cpuLimits.length : 0;
+                if( num < 1 ) {
+                    mPerformanceScale.setVisible(false);
+                    if( mProfile.mPerformanceLevel != 0 ) {
+                        mProfile.mPerformanceLevel = 0;
+                        mAppSettings.updateProfile(mProfile);
+                        mAppSettings.save();
                     }
-                });
+                } else {
+
+                    int level = mProfile.mPerformanceLevel;
+                    if( level < 0 ) level = 0;
+                    if( level >= num ) level = num-1;
+                    mPerformanceScale.setValue(Integer.toString(level));
+                    Log.e(TAG, "mPerformanceScale: mPackageName=" + mPackageName + ", mPerformanceScale=" + level);
+                    mPerformanceScale.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                        public boolean onPreferenceChange(Preference preference, Object newValue) {
+                            try {
+                                int val = Integer.parseInt(newValue.toString());
+                                mProfile.mPerformanceLevel = val;
+                                mAppSettings.updateProfile(mProfile);
+                                mAppSettings.save();
+                                Log.e(TAG, "mPerformanceScale: mPackageName=" + mPackageName + ", mPerformanceScale=" + val);
+                            } catch(Exception re) {
+                                Log.e(TAG, "onCreate: mPerformanceScale Fatal! exception", re );
+                            }
+                            return true;
+                        }
+                    });
+                }
             }
 
 

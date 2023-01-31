@@ -23,6 +23,19 @@
 
     <!-- Status bar icons customizations -->
     <PreferenceCategory
+        android:title="@string/status_bar_notch_category_title">
+
+        <!-- Hide notch fill -->
+        <com.crdroid.settings.preferences.SystemSettingSwitchPreference
+            android:key="display_cutout_mode"
+            android:title="@string/display_hide_notch_title"
+            android:summary="@string/display_hide_notch_summary"
+            android:defaultValue="0" />
+
+    </PreferenceCategory>
+
+    <!-- Status bar icons customizations -->
+    <PreferenceCategory
         android:title="@string/status_bar_icons_category_title">
 
         <Preference

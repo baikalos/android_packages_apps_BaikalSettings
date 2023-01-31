@@ -21,6 +21,16 @@
     <string name="performance_gaming2">Gaming 2</string>
     <string name="performance_camera">Camera</string>
 
+    <string name="performance_low_power">Low Power</string>
+    <string name="performance_sustained_performance">Sustained Performance</string>
+    <string name="performance_fixed_performance">Fixed Performance</string>
+    <string name="performance_vr">VR</string>
+    <string name="performance_expensive_rendering">Expensive Rendering</string>
+    <string name="performance_interactive">Interactive</string>
+    <string name="performance_device_idle">Device Idle</string>
+    <string name="performance_display_inactive">Display Inactive</string>
+    <string name="performance_game">Game</string>
+
     <string name="thermal_default">Default</string>
     <string name="thermal_balance">Balanced</string>
     <string name="thermal_performance">Performance</string>
@@ -163,8 +173,8 @@
     <string name="app_profile_block_focus_send_title">Block Audio Focus</string>
     <string name="app_profile_block_focus_send_summary">Block Audio Focus requests sent by this app</string>
 
-    <string name="app_profile_force_sonification_title">Treat as Notification</string>
-    <string name="app_profile_force_sonification_summary">Treat app sounds as Notifications. Notification sound settings will be applied, like volume, speake duplication, etc...</string>
+    <string name="app_profile_force_sonification_title">Force on Speaker</string>
+    <string name="app_profile_force_sonification_summary">Force app sound to device speaker</string>
 
     <string name="app_backup_restore_backup_title">Backup</string>
     <string name="app_backup_restore_restore_title">Restore</string>
