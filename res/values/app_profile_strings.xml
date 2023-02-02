@@ -26,7 +26,7 @@
     <string name="performance_fixed_performance">Fixed Performance</string>
     <string name="performance_vr">VR</string>
     <string name="performance_expensive_rendering">Expensive Rendering</string>
-    <string name="performance_interactive">Interactive</string>
+    <string name="performance_interactive">Balanced</string>
     <string name="performance_device_idle">Device Idle</string>
     <string name="performance_display_inactive">Display Inactive</string>
     <string name="performance_game">Game</string>

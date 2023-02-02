@@ -859,10 +859,11 @@ public class AppProfileFragment extends SettingsPreferenceFragment
     @Override
     protected void onUnbindPreferences() {
         super.onUnbindPreferences();
+        Log.d(TAG, "onUnbindPreferences() - commit");
         if( mAppSettings != null ) {
             mAppSettings.commit();
         }
-        Log.d(TAG, "onUnbindPreferences()");
+        Log.d(TAG, "onUnbindPreferences() - exit");
     }
 
     @Override

@@ -20,33 +20,28 @@
 
     <string-array name="performance_listentries">
     	<item>@string/performance_default</item>
+    	<item>@string/performance_interactive</item>
     	<item>@string/performance_low_power</item>
     	<item>@string/performance_sustained_performance</item>
     	<item>@string/performance_fixed_performance</item>
-    	<item>@string/performance_vr</item>
-    	<item>@string/performance_expensive_rendering</item>
-    	<item>@string/performance_interactive</item>
     	<item>@string/performance_device_idle</item>
-    	<item>@string/performance_display_inactive</item>
-    	<item>@string/performance_game</item>
+    	<!-- item>@string/performance_expensive_rendering</item -->
+    	<!-- item>@string/performance_display_inactive</item -->
+    	<!-- item>@string/performance_game</item -->
      </string-array>
 
      <string-array name="performance_listvalues">
-    	<item>default</item>
+    	<item>0</item>
+    	<item>7</item>
     	<item>1</item>
     	<item>2</item>
     	<item>3</item>
-    	<item>4</item>
-    	<item>6</item>
-    	<item>7</item>
     	<item>8</item>
-    	<item>9</item>
-    	<item>16</item>
     </string-array>
 
     <string-array name="thermal_listentries">
     	<item>@string/thermal_default</item>
-    	<!--item>@string/thermal_balance</item>
+    	<!-- item>@string/thermal_balance</item>
     	<item>@string/thermal_gaming</item>
     	<item>@string/thermal_gaming2</item>
     	<item>@string/thermal_nolimits</item>
@@ -54,11 +49,11 @@
     	<item>@string/thermal_cool</item>
     	<item>@string/thermal_camera</item>
     	<item>@string/thermal_incall</item>
-    	<item>@string/thermal_vr</item-->
+    	<item>@string/thermal_vr</item -->
      </string-array>
      <string-array name="thermal_listvalues">
     	<item>default</item>
-    	<!--item>balance</item>
+    	<!-- item>balance</item>
     	<item>gaming</item>
     	<item>gaming2</item>
     	<item>nolimits</item>

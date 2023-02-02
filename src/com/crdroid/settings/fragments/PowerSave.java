@@ -54,11 +54,25 @@ public class PowerSave extends SettingsPreferenceFragment {
 
     private static final String TAG = "BaikalExtras";
 
+    private static final String APP_PROFILE_PERF = "default_profile_performance";
+    private static final String APP_PROFILE_THERM = "default_profile_thermal";
+
+    private ListPreference mAppPerfProfile;
+    private ListPreference mAppThermProfile;
+
     private Context mContext;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        ContentResolver resolver = getContentResolver();
+
+        String[] perfProfiles = getResources().getStringArray(R.array.performance_listvalues);
+        String[] thermProfiles = getResources().getStringArray(R.array.thermal_listvalues);
+
+        boolean perfProf  = (perfProfiles !=null && perfProfiles.length > 1);
+        boolean thermProf  = (thermProfiles !=null && thermProfiles.length > 1);
 
 	    addPreferencesFromResource(R.xml.crdroid_settings_powersave);
 
@@ -66,6 +80,57 @@ public class PowerSave extends SettingsPreferenceFragment {
         final Resources res = getActivity().getResources();
 
         final PreferenceScreen screen = getPreferenceScreen();
+
+        try {
+            mAppPerfProfile = (ListPreference) findPreference(APP_PROFILE_PERF);
+            if( mAppPerfProfile != null ) { 
+                if(!perfProf) {
+                    mAppPerfProfile.setVisible(false);
+                } else {
+                    int profile = Settings.Global.getInt(resolver,Settings.Global.BAIKALOS_DEFAULT_PERFORMANCE, -1);
+                    if( profile == -1 ) profile = 7;
+                    Log.e(TAG, "getPerfProfile: getProfile=" + profile);
+                    try { mAppPerfProfile.setValue(Integer.toString(profile)); } catch (Exception rre) { }
+                    mAppPerfProfile.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                        public boolean onPreferenceChange(Preference preference, Object newValue) {
+                            try {
+                                Settings.Global.putInt(resolver,Settings.Global.BAIKALOS_DEFAULT_PERFORMANCE, Integer.parseInt(newValue.toString()));
+                                Log.e(TAG, "getPerfProfile: setProfile=" + newValue.toString());
+                            } catch(Exception re) {
+                                Log.e(TAG, "onCreate: mAppPerfProfile Fatal! exception", re );
+                            }
+                            return true;
+                        }
+                    });
+                }
+            }
+
+            mAppThermProfile = (ListPreference) findPreference(APP_PROFILE_THERM);
+            if( mAppThermProfile != null ) {
+                if(!thermProf) {
+                    mAppThermProfile.setVisible(false);
+                } else {
+                    int profile = Settings.Global.getInt(resolver,Settings.Global.BAIKALOS_DEFAULT_THERMAL, -1);
+                    if( profile == -1 ) profile = 1;
+                    Log.e(TAG, "getThermProfile: getProfile=" + profile);
+                    try { mAppThermProfile.setValue(Integer.toString(profile)); } catch (Exception rre) { }
+                    mAppThermProfile.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                        public boolean onPreferenceChange(Preference preference, Object newValue) {
+                            try {
+                                Settings.Global.putInt(resolver,Settings.Global.BAIKALOS_DEFAULT_THERMAL, Integer.parseInt(newValue.toString()));
+                                Log.e(TAG, "getThermProfile: setProfile=" + newValue.toString());
+                            } catch(Exception re) {
+                                Log.e(TAG, "onCreate: mAppThermProfile Fatal! exception", re );
+                            }
+                            return true;
+                        }
+                    });
+                }
+            }
+        } catch(Exception e) {
+            Log.e(TAG, "onCreate: PowerSave Fatal! exception", e );
+        }
+
     }
 
     @Override
