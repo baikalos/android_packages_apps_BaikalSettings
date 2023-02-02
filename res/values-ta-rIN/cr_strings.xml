@@ -787,6 +787,10 @@
     <string name="gesture_navbar_length_title">Pill length</string>
     <string name="short_label">Short</string>
     <string name="long_label">Long</string>
+    <!-- Gesture navbar radius -->
+    <string name="gesture_navbar_radius_title">Pill radius</string>
+    <string name="thin_label">Thin</string>
+    <string name="thick_label">Thick</string>
     <!-- Back gesture height -->
     <string name="back_height_low_label">முழு</string>
     <string name="back_height_high_label">கீழ்</string>
@@ -1005,5 +1009,6 @@
     <string name="lockscreen_shortcut_flashlight">Flashlight</string>
     <string name="lockscreen_shortcut_qr">QR code scanner</string>
     <string name="lockscreen_shortcut_camera">கேமரா</string>
+    <string name="lockscreen_shortcut_remote">Google TV Remote</string>
     <string name="lockscreen_shortcut_none">எதுவுமில்லை</string>
 </resources>

@@ -502,7 +502,7 @@
     <string name="navbar_invert_layout_summary">Gezinme çubuğu ve klavye değiştiricisi gibi öğelerin düzenini tersine çevirir</string>
     <string name="navbar_actions_category_title">Eylemler</string>
     <string name="navbar_back_long_press_title">Geri uzun basma</string>
-    <string name="navbar_back_double_tap_title">Geri tuşu çift dokunma</string>
+    <string name="navbar_back_double_tap_title">Geri çift dokunma</string>
     <string name="navbar_home_long_press_title">Ana ekrana uzun basma</string>
     <string name="navbar_home_double_tap_title">Ana ekrana çift dokunma</string>
     <string name="navbar_app_switch_long_press_title">Son uygulamalara uzun basma</string>
@@ -787,6 +787,10 @@
     <string name="gesture_navbar_length_title">Gezinme çubuğu uzunluğu</string>
     <string name="short_label">Kısa</string>
     <string name="long_label">Uzun</string>
+    <!-- Gesture navbar radius -->
+    <string name="gesture_navbar_radius_title">Hap yarıçapı</string>
+    <string name="thin_label">İnce</string>
+    <string name="thick_label">Kalın</string>
     <!-- Back gesture height -->
     <string name="back_height_low_label">Tam</string>
     <string name="back_height_high_label">Alt</string>
@@ -1005,5 +1009,6 @@
     <string name="lockscreen_shortcut_flashlight">El feneri</string>
     <string name="lockscreen_shortcut_qr">QR kod tarayıcı</string>
     <string name="lockscreen_shortcut_camera">Kamera</string>
+    <string name="lockscreen_shortcut_remote">Google TV Kumandası</string>
     <string name="lockscreen_shortcut_none">Hiçbiri</string>
 </resources>
