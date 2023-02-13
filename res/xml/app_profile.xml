@@ -91,6 +91,12 @@
             android:defaultValue="default"
             android:summary="%s" />
 
+        <SwitchPreference
+            android:key="app_profile_bypass_charging"
+            android:title="@string/app_profile_bypass_charging_title"
+            android:summary="@string/app_profile_bypass_charging_summary"
+            android:defaultValue="false" />
+
         <ListPreference
             android:key="app_profile_brightness"
             android:title="@string/app_profile_brightness_title"

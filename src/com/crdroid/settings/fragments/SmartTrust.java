@@ -16,6 +16,7 @@
 
 package com.crdroid.settings.fragments;
 
+import android.bluetooth.*;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
@@ -24,6 +25,7 @@ import android.os.Bundle;
 import android.os.UserHandle;
 import android.os.UserManager;
 import android.os.SystemProperties;
+import androidx.preference.CheckBoxPreference;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
@@ -48,6 +50,10 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.SearchIndexable;
 
+import java.util.HashSet;
+import java.util.Set;
+import java.util.Iterator;
+
 import java.util.List;
 import java.util.ArrayList;
 
@@ -60,7 +66,8 @@ public class SmartTrust extends SettingsPreferenceFragment {
 
     private Context mContext;
 
-    private BluetoothDevicePreference mBluetoothDevices;
+    private PreferenceCategory mBluetoothDevices;
+    private Set<String> mCheckedValues;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -73,7 +80,12 @@ public class SmartTrust extends SettingsPreferenceFragment {
 
         final PreferenceScreen screen = getPreferenceScreen();
 
-        mBluetoothDevices = (BluetoothDevicePreference) findPreference(BLUETOOTH_DEVICES);
+        mCheckedValues = new HashSet<String>();
+
+        mBluetoothDevices = (PreferenceCategory) findPreference(BLUETOOTH_DEVICES);
+
+        loadBluetoothTrustSettings();
+        loadBluetoothDevices();
     }
 
     @Override
@@ -81,29 +93,87 @@ public class SmartTrust extends SettingsPreferenceFragment {
         super.onResume();
     }
 
-    private void setSystemPropertyString(String key, String value) {
-        Log.e(TAG, "setSystemPropertyBoolean: key=" + key + ", value=" + value);
-        SystemProperties.set(key, value);
-    }
-
-    private String getSystemPropertyString(String key, String def) {
-        return SystemProperties.get(key,def);
-    }
-
-    private boolean getSystemPropertyBoolean(String key) {
-        if( SystemProperties.get(key,"0").equals("1") || SystemProperties.get(key,"0").equals("true") ) return true;
-	    return false;
-    }
-
-    private void setSystemPropertyBoolean(String key, boolean value) {
-        String text = value?"1":"0";
-        Log.e(TAG, "setSystemPropertyBoolean: key=" + key + ", value=" + value);
-        SystemProperties.set(key, text);
-    }
-
-    public static void reset(Context mContext) {
+    public static void reset(Context context) {
         
     }
+
+    private void loadBluetoothDevices() {
+
+        BluetoothAdapter bta = BluetoothAdapter.getDefaultAdapter();
+        Set<BluetoothDevice> pairedDevices = bta.getBondedDevices();
+
+        BluetoothManager bluetoothManager = (BluetoothManager) mContext.getSystemService(Context.BLUETOOTH_SERVICE);
+        List<BluetoothDevice> connectedLEDevices = bluetoothManager.getConnectedDevices(BluetoothProfile.GATT);
+
+        int i = 0;
+        for (BluetoothDevice dev : pairedDevices) {
+            String name = dev.getName() != null ? dev.getName() : "unknown";
+            String address = dev.getAddress();
+            addBluetoothDevicePreference(mBluetoothDevices,name,address);
+        }
+
+        for (BluetoothDevice dev : connectedLEDevices) {
+            String name = dev.getName() != null ? dev.getName() : "unknown";
+            String address = dev.getAddress();
+            addBluetoothDevicePreference(mBluetoothDevices,name,address);
+        }
+    }
+
+    private void addBluetoothDevicePreference(PreferenceCategory parent, String name, String address) {
+
+        CheckBoxPreference mPreference = new CheckBoxPreference(mContext);
+        mPreference.setTitle(name);
+        mPreference.setSummary(address);
+        mPreference.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+            public boolean onPreferenceChange(Preference preference, Object newValue) {
+                if( (boolean)newValue ) {
+                    if( !mCheckedValues.contains(preference.getSummary()) ) {
+                        mCheckedValues.add(String.valueOf(preference.getSummary()));
+                    }
+                } else {
+                    if( mCheckedValues.contains(preference.getSummary()) ) {
+                        mCheckedValues.remove(preference.getSummary());
+                    }
+                }
+                saveBluetoothTrustSettings();
+                return true;
+            }
+        });
+        parent.addPreference(mPreference);
+    }
+
+    private void loadBluetoothTrustSettings() {
+        String btDevices = Settings.Secure.getString(mContext.getContentResolver(),
+                Settings.Secure.BAIKALOS_TRUST_BT_DEV);
+
+        if (btDevices != null && btDevices.length() != 0) {
+            String[] parts = btDevices.split("\\|");
+            for (int j = 0; j < parts.length; j++) {
+                mCheckedValues.add(parts[j]);
+            }
+        }
+
+    }
+
+    private void saveBluetoothTrustSettings() {
+        StringBuffer buffer = new StringBuffer();
+        Iterator<String> nextItem = mCheckedValues.iterator();
+
+        while (nextItem.hasNext()) {
+            String sTag = nextItem.next();
+            buffer.append(sTag + "|");
+        }
+
+        if (buffer.length() > 0) {
+            buffer.deleteCharAt(buffer.length() - 1);
+        }
+
+        Log.e(TAG, "checked string: " + buffer.toString());
+        Settings.Secure.putStringForUser(mContext.getContentResolver(), Settings.Secure.BAIKALOS_TRUST_BT_DEV,
+            buffer.toString(), UserHandle.USER_CURRENT);
+    }
+    
+    
 
     @Override
     public int getMetricsCategory() {

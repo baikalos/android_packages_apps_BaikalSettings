@@ -18,17 +18,20 @@ import java.util.Set;
 import java.util.List;
 import java.util.Iterator;
 
+import android.os.Parcel;
+import android.os.Parcelable;
 
 
 public class BluetoothDevicePreference extends MultiSelectListPreference implements OnPreferenceChangeListener {
 
-    private static final String TAG = "BluetoothDevicePreference";
+    private static final String TAG = "Baikal.BluetoothDevicePreference";
 
 
     Context mContext;
 
     public BluetoothDevicePreference(Context context, AttributeSet attrs) {
         super(context, attrs);
+        Log.e(TAG, "BluetoothDevicePreference: " + attrs);
 
         mContext = context;
 
@@ -47,6 +50,7 @@ public class BluetoothDevicePreference extends MultiSelectListPreference impleme
             entries[i] = dev.getName();
             if (entries[i] == null) entries[i] = "unknown";
             entryValues[i] = dev.getAddress();
+            checkedValues.add(dev.getAddress());
             i++;
         }
 
@@ -73,11 +77,22 @@ public class BluetoothDevicePreference extends MultiSelectListPreference impleme
         }
 
         setValues(checkedValues);
+        Log.e(TAG, "setValues: " + checkedValues);
 
         setOnPreferenceChangeListener(this);
     }
 
+    @Override
+    protected Parcelable onSaveInstanceState() {
+        Parcelable savedState = super.onSaveInstanceState();
+        Log.e(TAG, "onSaveInstanceState: " + savedState);
+        return savedState;        
+    }
+
+
+    @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
+        Log.e(TAG, "onPreferenceChange: " + newValue);
         Set<String> checked = (Set<String>) newValue;
         for(String address : checked) {
             Log.e(TAG, "checked: " + address);
@@ -106,5 +121,4 @@ public class BluetoothDevicePreference extends MultiSelectListPreference impleme
     public BluetoothDevicePreference(Context context) {
         this(context, null);
     }
-
 }

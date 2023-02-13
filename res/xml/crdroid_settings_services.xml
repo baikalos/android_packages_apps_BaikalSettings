@@ -41,5 +41,11 @@
         android:summary="@string/fdroid_enabled_summary"
         android:fragment="com.crdroid.settings.fragments.services.FdroidSwitch" />
 
+    <!-- Preference
+        android:key="aurora_enabled_settings"
+        android:icon="@drawable/ic_aurora"
+        android:title="@string/aurora_enabled_title"
+        android:summary="@string/aurora_enabled_summary"
+        android:fragment="com.crdroid.settings.fragments.services.AuroraSwitch" / -->
 
 </PreferenceScreen>

@@ -22,9 +22,12 @@ import android.os.Bundle;
 import android.os.SystemProperties;
 import android.os.UserHandle;
 import android.provider.Settings;
+import android.util.Log;
 
+import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
+
 
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.R;
@@ -55,6 +58,8 @@ public class Miscellaneous extends SettingsPreferenceFragment implements
     private Preference mSmartCharging;
     private Preference mPocketJudge;
 
+    private ListPreference mCaptivePortal;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,14 +72,52 @@ public class Miscellaneous extends SettingsPreferenceFragment implements
         mSmartCharging = (Preference) prefScreen.findPreference(SMART_CHARGING);
         boolean mSmartChargingSupported = res.getBoolean(
                 com.android.internal.R.bool.config_smartChargingAvailable);
-        if (!mSmartChargingSupported)
+        if (!mSmartChargingSupported && mSmartCharging != null)
             prefScreen.removePreference(mSmartCharging);
 
         mPocketJudge = (Preference) prefScreen.findPreference(POCKET_JUDGE);
         boolean mPocketJudgeSupported = res.getBoolean(
                 com.android.internal.R.bool.config_pocketModeSupported);
-        if (!mPocketJudgeSupported)
+        if (!mPocketJudgeSupported && mPocketJudge != null)
             prefScreen.removePreference(mPocketJudge);
+
+        mCaptivePortal = (ListPreference) findPreference("system_captive_portal");
+        if( mCaptivePortal != null ) {
+            String portal = Settings.Global.getString(getActivity().getContentResolver(),
+                        Settings.Global.CAPTIVE_PORTAL_HTTPS_URL);
+
+            if( "https://captive.apple.com/generate_204".equals(portal) ) {
+                portal = "apple";
+            } else if( "https://api.browser.yandex.ru/generate_204".equals(portal) ) {
+                portal = "yandex";
+            } else {
+                portal = "default";
+            }
+                    
+            Log.i(TAG, "mCaptivePortal: portal=" + portal);
+            mCaptivePortal.setValue(portal);
+            mCaptivePortal.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    try {
+                        String portal = (String)newValue;
+                        if( "apple".equals(portal) ) {
+                            Settings.Global.putString(getActivity().getContentResolver(),Settings.Global.CAPTIVE_PORTAL_HTTPS_URL, "https://captive.apple.com/generate_204");
+                            Settings.Global.putString(getActivity().getContentResolver(),Settings.Global.CAPTIVE_PORTAL_HTTP_URL, "http://captive.apple.com/generate_204");
+                        } else if( "yandex".equals(portal) ) {
+                            Settings.Global.putString(getActivity().getContentResolver(),Settings.Global.CAPTIVE_PORTAL_HTTPS_URL, "https://api.browser.yandex.ru/generate_204");
+                            Settings.Global.putString(getActivity().getContentResolver(),Settings.Global.CAPTIVE_PORTAL_HTTP_URL, "http://api.browser.yandex.ru/generate_204");
+                        } else {
+                            Settings.Global.putString(getActivity().getContentResolver(),Settings.Global.CAPTIVE_PORTAL_HTTPS_URL, "");
+                            Settings.Global.putString(getActivity().getContentResolver(),Settings.Global.CAPTIVE_PORTAL_HTTP_URL, "");
+                        }
+                        Log.e(TAG, "mCaptivePortal: portal=" + portal);
+                    } catch(Exception re) {
+                        Log.e(TAG, "mCaptivePortal: mCaptivePortal Fatal! exception", re );
+                    }
+                    return true;
+                }
+            });
+        }
     }
 
     @Override

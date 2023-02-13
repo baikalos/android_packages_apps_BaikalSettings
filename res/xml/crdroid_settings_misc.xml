@@ -68,12 +68,12 @@
     </Preference>
 
     <!-- Smart Charging -->
-    <!-- Preference
+    <Preference
         android:key="smart_charging"
         android:icon="@drawable/ic_battery_charging_80"
         android:title="@string/smart_charging_title"
         android:summary="@string/smart_charging_summary"
-        android:fragment="com.crdroid.settings.fragments.misc.SmartCharging"/ -->
+        android:fragment="com.crdroid.settings.fragments.misc.SmartCharging"/>
 
     <!-- Three-fingers-swipe to screenshot -->
     <com.crdroid.settings.preferences.SystemSettingSwitchPreference
@@ -93,6 +93,7 @@
 
     <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
         android:key="baikalos_proximity_disable"
+        android:icon="@drawable/ic_doze_pocket"
         android:title="@string/baikalos_proximity_disable_title"
         android:summary="@string/baikalos_proximity_disable_summary"
         android:defaultValue="false" />
@@ -115,5 +116,21 @@
             android:targetPackage="org.omnirom.omnijaws"
             android:targetClass="org.omnirom.omnijaws.SettingsActivity" />
     </Preference>
+
+    <ListPreference
+ 	    android:key="system_captive_portal"
+        android:icon="@drawable/ic_network"
+   	    android:title="@string/captive_portal_title"
+   	    android:entries="@array/default_captive_portal_listentries"
+   	    android:entryValues="@array/default_captive_portal_listvalues" 
+        android:defaultValue="default"
+        android:summary="%s"/>
+
+    <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+        android:key="baikalos_r_secure"
+        android:icon="@drawable/ic_storage"
+        android:title="@string/r_secure_title"
+        android:summary="@string/r_secure_summary"
+        android:defaultValue="false" />
 
 </PreferenceScreen>

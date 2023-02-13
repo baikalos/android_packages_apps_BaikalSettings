@@ -70,7 +70,7 @@ import java.util.Locale;
 public class AppProfileFragment extends SettingsPreferenceFragment
             implements Preference.OnPreferenceChangeListener {
 
-    private static final String TAG = "BaikalExtras";
+    private static final String TAG = "BaikalPreferences";
 
     public static final String ARG_PACKAGE_NAME = "package";
     public static final String ARG_PACKAGE_UID = "uid";
@@ -104,6 +104,8 @@ public class AppProfileFragment extends SettingsPreferenceFragment
     private static final String APP_PROFILE_BLOCK_FOCUS_SEND = "app_profile_block_focus_send";
     private static final String APP_PROFILE_FORCE_SONIFICATION = "app_profile_force_sonification";
 
+    private static final String APP_PROFILE_BYPASS_CHARGING = "app_profile_bypass_charging";
+
     private static final String APP_PROFILE_SPOOF = "app_profile_spoof";
     private static final String APP_PROFILE_FILE_ACCESS = "file_access";
     private static final String APP_PROFILE_PHKA = "app_profile_phka";
@@ -134,6 +136,7 @@ public class AppProfileFragment extends SettingsPreferenceFragment
     private SwitchPreference mBlockFocusRecv;
     private SwitchPreference mBlockFocusSend;
     private SwitchPreference mForceSonification;
+    private SwitchPreference mBypassCharging;
     private SwitchPreference mAppKeepOn;
     private SwitchPreference mAppFullScreen;
     private SwitchPreference mAppOverrideFonts;
@@ -708,6 +711,26 @@ public class AppProfileFragment extends SettingsPreferenceFragment
                 });
             }
 
+            mBypassCharging = (SwitchPreference) findPreference(APP_PROFILE_BYPASS_CHARGING);
+            if( mBypassCharging != null ) {
+                boolean bypassCharging = mProfile.mBypassCharging;
+                Log.e(TAG, "mBypassCharging: mPackageName=" + mPackageName + ", mBypassCharging=" + bypassCharging);
+                mBypassCharging.setChecked(bypassCharging);
+                mBypassCharging.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                  public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    try {
+                        mProfile.mBypassCharging = (Boolean)newValue;
+                        mAppSettings.updateProfile(mProfile);
+                        mAppSettings.save();
+                        Log.e(TAG, "mBypassCharging: mPackageName=" + mPackageName + ", mBypassCharging=" + mProfile.mBypassCharging);
+                    } catch(Exception re) {
+                        Log.e(TAG, "onCreate: mBypassCharging Fatal! exception", re );
+                    }
+                    return true;
+                  }
+                });
+            }
+
             mAppCamera = (ListPreference) findPreference(APP_PROFILE_CAMERA);
             if( mAppCamera != null ) {
                     int level = mProfile.mCamera;
@@ -852,7 +875,21 @@ public class AppProfileFragment extends SettingsPreferenceFragment
     @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        Log.d(TAG, "onSaveInstanceState()");
+        Log.d(TAG, "onSaveInstanceState() - commit");
+        if( mAppSettings != null ) {
+            //if( mProfile != null ) mAppSettings.updateSystemSettings(mProfile);
+            Thread thread = new Thread() {
+                @Override
+                public void run() {
+                    if( mProfile != null ) {
+                        mAppSettings.updateSystemSettings(mProfile);
+                    }
+                    mAppSettings.commit();
+                }
+            };
+            thread.start();
+        }
+        Log.d(TAG, "onSaveInstanceState() - exit");
     }
 
 
@@ -861,7 +898,17 @@ public class AppProfileFragment extends SettingsPreferenceFragment
         super.onUnbindPreferences();
         Log.d(TAG, "onUnbindPreferences() - commit");
         if( mAppSettings != null ) {
-            mAppSettings.commit();
+            //if( mProfile != null ) mAppSettings.updateSystemSettings(mProfile);
+            Thread thread = new Thread() {
+                @Override
+                public void run() {
+                    if( mProfile != null ) {
+                        mAppSettings.updateSystemSettings(mProfile);
+                    }
+                    mAppSettings.commit();
+                }
+            };
+            thread.start();
         }
         Log.d(TAG, "onUnbindPreferences() - exit");
     }

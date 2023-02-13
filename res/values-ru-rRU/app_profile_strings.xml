@@ -148,6 +148,9 @@
     <string name="app_profile_force_sonification_title">Звук на Динамик</string>
     <string name="app_profile_force_sonification_summary">Всегда выводить звук приложения на динамик телефона</string>
 
+    <string name="app_profile_bypass_charging_title">Обходная зарядка</string>
+    <string name="app_profile_bypass_charging_summary">Не заряжать батарею пока работает это приложение. Питать устройство напрямую от зарядника.</string>
+
     <string name="app_profile_spoof_title">Подстановка Модели Устройства</string>
 
     <string name="app_profile_keep_on_title">Удерживать включенным</string>

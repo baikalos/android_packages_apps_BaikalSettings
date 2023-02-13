@@ -37,13 +37,13 @@
     <string name="hms_enabled_title">Huawei Mobile Services</string>
     <string name="hms_enabled_summary">Control Huawei Mobile services and AppGallery</string>
 
-    <!-- Huawei services -->
+    <!-- F-Droid services -->
     <string name="fdroid_enabled_title">FDroid App Store</string>
     <string name="fdroid_enabled_summary">Control FDroid App Store</string>
 
-    <!-- Huawei services -->
-    <string name="aurora_enabled_title">FDroid App Store</string>
-    <string name="aurora_enabled_summary">Control FDroid App Store</string>
+    <!-- Aurora services -->
+    <string name="aurora_enabled_title">Aurora Store</string>
+    <string name="aurora_enabled_summary">Control Aurora Store</string>
 
     <string name="services_title">Optional Services</string>
     <string name="services_summary">Google, Huawei, Fdroid, etc...</string>
@@ -51,4 +51,11 @@
     <string name="audio_tweaks_a2dp_last_codec_title">Last used codec</string>
     <string name="audio_tweaks_a2dp_last_bitrate_title">Last used bitrate</string>
 
+    <string name="captive_portal_title">Network Monitor Server</string>
+    <string name="captive_portal_default">Default (Google)</string>
+    <string name="captive_portal_apple">Apple</string>
+    <string name="captive_portal_yandex">Yandex</string>
+
+    <string name="r_secure_title">Unrestricted Storage</string>
+    <string name="r_secure_summary">Disable restrictions introduced by Android 11 on access to some External Storage folders</string>
 </resources>

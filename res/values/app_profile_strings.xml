@@ -176,6 +176,9 @@
     <string name="app_profile_force_sonification_title">Force on Speaker</string>
     <string name="app_profile_force_sonification_summary">Force app sound to device speaker</string>
 
+    <string name="app_profile_bypass_charging_title">Bypass Charging</string>
+    <string name="app_profile_bypass_charging_summary">Do not charge the battery while this app is running. Power device directly from charger.</string>
+
     <string name="app_backup_restore_backup_title">Backup</string>
     <string name="app_backup_restore_restore_title">Restore</string>
 

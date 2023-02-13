@@ -66,4 +66,12 @@
     <string name="audio_tweaks_a2dp_last_codec_title">Последний использованный кодек</string>
     <string name="audio_tweaks_a2dp_last_bitrate_title">Последний использованный битрейт</string>
 
+    <string name="captive_portal_title">Сервер сетевого монитора</string>
+    <string name="captive_portal_default">По умолчанию (Google)</string>
+    <string name="captive_portal_apple">Apple</string>
+    <string name="captive_portal_yandex">Yandex</string>
+
+    <string name="r_secure_title">Неограниченный доступ</string>
+    <string name="r_secure_summary">Отключить введенные Android 11 ограничения на доступ к некоторым папкам внешнего хранилища</string>
+
 </resources>
