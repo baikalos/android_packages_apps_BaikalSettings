@@ -70,7 +70,7 @@
     <string name="app_profile_reader_title">Режим чтения</string>
     <string name="app_profile_reader_summary">Разрешить ЦП переходить в режим глубокого сна во время работы этого приложения</string>
 
-    <string name="app_profile_fps_title">Максимальная частота обновления экрана</string>
+    <string name="app_profile_max_fps_title">Максимальная частота обновления экрана</string>
     <string name="app_profile_min_fps_title">Минимальная частота обновления экрана</string>
 
     <string name="edit_profile_title">Редактировать профиль</string>

@@ -66,7 +66,7 @@ public class GmsSwitch extends SettingsPreferenceFragment {
 
         //findPreference(GMS_ENABLED_FOOTER).setTitle(R.string.gms_enabled_footer);
         mEnabled = Settings.Secure.getIntForUser(mResolver,
-            Settings.Secure.GMS_ENABLED, 0, UserHandle.USER_CURRENT) != 0;
+            Settings.Secure.GMS_ENABLED, 1, UserHandle.USER_CURRENT) != 0;
 
         mSwitchEnable = (SwitchPreference) findPreference(GMS_ENABLED);
         if( mSwitchEnable != null ) {

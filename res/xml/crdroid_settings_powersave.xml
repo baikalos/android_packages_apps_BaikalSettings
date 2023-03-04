@@ -92,4 +92,18 @@
             android:summary="@string/baikalos_unrestricted_net_summary"
         />
 
+        <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+            android:key="baikalos_boost_interaction_disable"
+            android:defaultValue="true"
+            android:title="@string/baikalos_interaction_boost_title"
+            android:summary="@string/baikalos_interaction_boost_summary"
+        />
+
+        <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+            android:key="baikalos_boost_display_update_imminent_disable"
+            android:defaultValue="true"
+            android:title="@string/baikalos_display_boost_title"
+            android:summary="@string/baikalos_display_boost_summary"
+        />
+
 </PreferenceScreen>

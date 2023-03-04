@@ -34,6 +34,7 @@ import androidx.preference.PreferenceScreen;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.SwitchPreference;
 import android.provider.Settings;
+import android.view.Display;
 import android.view.MenuItem;
 import android.view.View;
 import android.util.Log;
@@ -48,6 +49,7 @@ import com.android.internal.baikalos.AppProfileSettings;
 
 import com.android.internal.baikalos.PowerWhitelistBackend;
 import com.android.internal.baikalos.BaikalSpoofer;
+import com.android.internal.baikalos.BaikalConstants;
 
 //import com.crdroid.settings.R;
 
@@ -83,7 +85,7 @@ public class AppProfileFragment extends SettingsPreferenceFragment
     private static final String APP_PROFILE_THERM = "app_profile_thermal";
     private static final String APP_PROFILE_BRIGHTNESS = "app_profile_brightness";
     private static final String APP_PROFILE_ROTATION = "app_profile_rotation";
-    private static final String APP_PROFILE_FPS = "app_profile_fps";
+    private static final String APP_PROFILE_MAX_FPS = "app_profile_max_fps";
     private static final String APP_PROFILE_MIN_FPS = "app_profile_min_fps";
     private static final String APP_PROFILE_KEEP_ON = "app_profile_keep_on";
     private static final String APP_PROFILE_FULL_SCREEN = "app_profile_full_screen";
@@ -150,7 +152,7 @@ public class AppProfileFragment extends SettingsPreferenceFragment
     private ListPreference mAppThermProfile;
     private ListPreference mAppBrightnessProfile;
     private ListPreference mAppRotationProfile;
-    private ListPreference mAppFpsProfile;
+    private ListPreference mAppMaxFpsProfile;
     private ListPreference mAppMinFpsProfile;
     private ListPreference mAppBackgroundProfile;
     private ListPreference mAppSpoofProfile;
@@ -197,6 +199,11 @@ public class AppProfileFragment extends SettingsPreferenceFragment
         boolean thermProf  = (thermProfiles !=null && thermProfiles.length > 1);
         boolean variableFps = (refreshRates !=null && refreshRates.length > 1);
 
+        if( !BaikalConstants.isKernelCompatible() ) {
+            Log.e(TAG, "profiles : incompatible kernel");
+            thermProf = false;
+            perfProf = false;
+        }
 
         Log.e(TAG, "perf profiles : perfProfiles=" + perfProfiles);
         Log.e(TAG, "perf profiles : perfProfiles.length=" + perfProfiles.length);
@@ -381,22 +388,44 @@ public class AppProfileFragment extends SettingsPreferenceFragment
                 });
             }
 
-            mAppFpsProfile = (ListPreference) findPreference(APP_PROFILE_FPS);
-            if( mAppFpsProfile != null ) {
-                if(!variableFps) {
-                    mAppFpsProfile.setVisible(false);
+            mAppMaxFpsProfile = (ListPreference) findPreference(APP_PROFILE_MAX_FPS);
+            if( mAppMaxFpsProfile != null ) {
+                if(!mContext.getResources().getBoolean(R.bool.config_show_peak_refresh_rate_switch)) {
+                    mAppMaxFpsProfile.setVisible(false);
                 } else {
+
+                    List<String> entries = new ArrayList<>();
+                    List<String> values = new ArrayList<>();
+
+                    entries.add("Default");
+                    values.add("0");
+
+                    Display.Mode mode = mContext.getDisplay().getMode();
+                    Display.Mode[] modes = mContext.getDisplay().getSupportedModes();
+
+                    for (Display.Mode m : modes) {
+                        if (m.getPhysicalWidth() == mode.getPhysicalWidth() &&
+                            m.getPhysicalHeight() == mode.getPhysicalHeight()) {
+                            entries.add(String.format("%.02fHz", m.getRefreshRate())
+                                    .replaceAll("[\\.,]00", ""));
+                            values.add(String.format(Locale.US, "%d", (int)m.getRefreshRate()));
+                        }
+                    }
+
+                    mAppMaxFpsProfile.setEntries(entries.toArray(new String[entries.size()]));
+                    mAppMaxFpsProfile.setEntryValues(values.toArray(new String[values.size()]));
+
                     int fps = mProfile.mMaxFrameRate;
-                    Log.e(TAG, "setAppFps: mPackageName=" + mPackageName + ",fps=" + fps);
-                    mAppFpsProfile.setValue(Integer.toString(fps));
-                    mAppFpsProfile.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                    Log.e(TAG, "setAppFps: mPackageName=" + mPackageName + ", max_fps=" + fps);
+                    mAppMaxFpsProfile.setValue(Integer.toString(fps));
+                    mAppMaxFpsProfile.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
                       public boolean onPreferenceChange(Preference preference, Object newValue) {
                         try {
                             int val = Integer.parseInt(newValue.toString());
                             mProfile.mMaxFrameRate = val;
                             mAppSettings.updateProfile(mProfile);
                             mAppSettings.save();
-                            Log.e(TAG, "setAppFps: mPackageName=" + mPackageName + ",fps=" + val);
+                            Log.e(TAG, "setAppFps: mPackageName=" + mPackageName + ", max_fps=" + val);
                         } catch(Exception re) {
                             Log.e(TAG, "onCreate: setAppFps Fatal! exception", re );
                         }
@@ -408,11 +437,33 @@ public class AppProfileFragment extends SettingsPreferenceFragment
 
             mAppMinFpsProfile = (ListPreference) findPreference(APP_PROFILE_MIN_FPS);
             if( mAppMinFpsProfile != null ) {
-                if(!variableFps) {
+
+                if (!mContext.getResources().getBoolean(R.bool.config_show_min_refresh_rate_switch)) {
                     mAppMinFpsProfile.setVisible(false);
                 } else {
+                
+                    List<String> entries = new ArrayList<>();
+                    List<String> values = new ArrayList<>();
+
+                    entries.add("Default");
+                    values.add("0");
+
+                    Display.Mode mode = mContext.getDisplay().getMode();
+                    Display.Mode[] modes = mContext.getDisplay().getSupportedModes();
+                    for (Display.Mode m : modes) {
+                        if (m.getPhysicalWidth() == mode.getPhysicalWidth() &&
+                            m.getPhysicalHeight() == mode.getPhysicalHeight()) {
+                            entries.add(String.format("%.02fHz", m.getRefreshRate())
+                                    .replaceAll("[\\.,]00", ""));
+                            values.add(String.format(Locale.US, "%d", (int)m.getRefreshRate()));
+                        }
+                    }
+
+                    mAppMinFpsProfile.setEntries(entries.toArray(new String[entries.size()]));
+                    mAppMinFpsProfile.setEntryValues(values.toArray(new String[values.size()]));
+
                     int fps = mProfile.mMinFrameRate;
-                    Log.e(TAG, "mAppMinFpsProfile: mPackageName=" + mPackageName + ",fps=" + fps);
+                    Log.e(TAG, "mAppMinFpsProfile: mPackageName=" + mPackageName + ", min_fps=" + fps);
                     mAppMinFpsProfile.setValue(Integer.toString(fps));
                     mAppMinFpsProfile.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
                       public boolean onPreferenceChange(Preference preference, Object newValue) {
@@ -421,7 +472,7 @@ public class AppProfileFragment extends SettingsPreferenceFragment
                             mProfile.mMinFrameRate = val;
                             mAppSettings.updateProfile(mProfile);
                             mAppSettings.save();
-                            Log.e(TAG, "mAppMinFpsProfile: mPackageName=" + mPackageName + ",fps=" + val);
+                            Log.e(TAG, "mAppMinFpsProfile: mPackageName=" + mPackageName + ", min_fps=" + val);
                         } catch(Exception re) {
                             Log.e(TAG, "onCreate: mAppMinFpsProfile Fatal! exception", re );
                         }

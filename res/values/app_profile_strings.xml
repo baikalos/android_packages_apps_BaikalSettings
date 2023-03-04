@@ -94,7 +94,7 @@
     <string name="app_profile_reader_title">Reader Mode</string>
     <string name="app_profile_reader_summary">Allow CPU to sleep while this app is running</string>
 
-    <string name="app_profile_fps_title">Maximum Refresh Rate</string>
+    <string name="app_profile_max_fps_title">Maximum Refresh Rate</string>
     <string name="app_profile_min_fps_title">Minimum Refresh Rate</string>
 
     <string name="edit_profile_title">Edit profile</string>

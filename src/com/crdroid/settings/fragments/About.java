@@ -92,7 +92,7 @@ public class About extends SettingsPreferenceFragment {
         } else if (preference == mWebsite) {
             launchUrl("https://baikalos.net");
         } else if (preference == mTelegramChannelUrl) {
-            launchUrl("https://t.me/BaikalOSUpdates");
+            launchUrl("https://t.me/baikalos");
         } else if (preference == mSponsor) {
             launchUrl("https://www.baikalos.net");
         }

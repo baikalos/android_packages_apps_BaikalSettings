@@ -43,6 +43,8 @@ import java.util.List;
 
 import lineageos.providers.LineageSettings;
 
+import com.android.internal.baikalos.BaikalConstants;
+
 @SearchIndexable
 public class Miscellaneous extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
@@ -72,6 +74,9 @@ public class Miscellaneous extends SettingsPreferenceFragment implements
         mSmartCharging = (Preference) prefScreen.findPreference(SMART_CHARGING);
         boolean mSmartChargingSupported = res.getBoolean(
                 com.android.internal.R.bool.config_smartChargingAvailable);
+
+        if( !BaikalConstants.isKernelCompatible() ) mSmartChargingSupported = false;
+
         if (!mSmartChargingSupported && mSmartCharging != null)
             prefScreen.removePreference(mSmartCharging);
 

@@ -17,6 +17,25 @@
  */
 -->
 <resources>
+
+    <string name="log_it_title">Снять лог!</string>
+    <string name="log_it_summary">Logcat, kmesg, dmesg</string>
+    <string name="logcat_title">Logcat</string>
+    <string name="logcat_radio_title">Радио лог</string>
+    <string name="kmesg_title">Kmesg</string>
+    <string name="dmesg_title">Dmesg</string>
+    <string name="share_title">Поделиться...</string>
+    <string name="log_it_share_subject">Логи BaikalOS</string>
+    <string name="log_it_now_summary">Ожидайте создания логов</string>
+    <string name="log_it_logs_in_progress">Создаются логи …</string>
+    <string name="log_it_share_type_title">Метод отправки</string>
+    <string name="log_it_share_type_zip">ZIP-Файл</string>
+    <string name="log_it_share_type_haste">Загрузить на BaikalOS Haste</string>
+    <string name="log_it_share_via">Поделиться через</string>
+
+    <string name="baikalos_debug_title">Подробный лог</string>
+    <string name="baikalos_debug_summary">Включить подробный лог. Не включайте без причины. Расходует реусрсы, увеличивает потребление.</string>
+
     <!-- Dashboard -->
     <string name="user_interface_category">Интерфейс</string>
     <string name="system_category">Настройки BaikalOS</string>
@@ -73,5 +92,13 @@
 
     <string name="r_secure_title">Неограниченный доступ</string>
     <string name="r_secure_summary">Отключить введенные Android 11 ограничения на доступ к некоторым папкам внешнего хранилища</string>
+
+    <string name="baikalos_limited_charge_screen_on_title">Ограничить</string>
+    <string name="baikalos_limited_charge_screen_on_summary">Ограничить ток заряда при включенном экране</string>
+    <string name="baikalos_bpcharge_screen_on_title">Обходная зарядка</string>
+    <string name="baikalos_bpcharge_screen_on_summary">Использовать обходную зарядку при включенном экране</string>
+
+    <string name="baikalos_aod_on_charger_title">AOD при зарядке</string>
+    <string name="baikalos_aod_on_charger_summary">Включать Always On Display при зарядке</string>
 
 </resources>

@@ -124,6 +124,7 @@ public class SmartTrust extends SettingsPreferenceFragment {
         CheckBoxPreference mPreference = new CheckBoxPreference(mContext);
         mPreference.setTitle(name);
         mPreference.setSummary(address);
+        if( mCheckedValues.contains(address) ) mPreference.setChecked(true);
         mPreference.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
             public boolean onPreferenceChange(Preference preference, Object newValue) {
                 if( (boolean)newValue ) {
@@ -145,6 +146,8 @@ public class SmartTrust extends SettingsPreferenceFragment {
     private void loadBluetoothTrustSettings() {
         String btDevices = Settings.Secure.getString(mContext.getContentResolver(),
                 Settings.Secure.BAIKALOS_TRUST_BT_DEV);
+
+        mCheckedValues.clear();
 
         if (btDevices != null && btDevices.length() != 0) {
             String[] parts = btDevices.split("\\|");

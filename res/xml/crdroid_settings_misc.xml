@@ -133,4 +133,11 @@
         android:summary="@string/r_secure_summary"
         android:defaultValue="false" />
 
+    <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+        android:key="baikalos_disable_autorevoke"
+        android:icon="@drawable/ic_settings_security"
+        android:title="@string/disable_autorevoke_title"
+        android:summary="@string/disable_autorevoke_summary"
+        android:defaultValue="false" />
+
 </PreferenceScreen>

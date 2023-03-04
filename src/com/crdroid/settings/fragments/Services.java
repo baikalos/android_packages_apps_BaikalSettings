@@ -17,6 +17,7 @@ package com.crdroid.settings.fragments;
 
 import android.content.ContentResolver;
 import android.content.Context;
+import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.os.SystemProperties;
@@ -39,12 +40,31 @@ import com.android.settingslib.search.SearchIndexable;
 import java.util.List;
 
 import lineageos.providers.LineageSettings;
+import org.lineageos.internal.util.PackageManagerUtils;
+
 
 @SearchIndexable
 public class Services extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
     public static final String TAG = "Services";
+
+    private static final String GMS_PREF = "gms_enabled_settings";
+    private static final String HMS_PREF = "hms_enabled_settings";
+    private static final String DOLBY_PREF = "dolby_enabled_settings";
+    private static final String JDSP_PREF = "jdsp_enabled_settings";
+    private static final String AFX_PREF = "afx_enabled_settings";
+
+
+    private static final String GMS_PACKAGE = "com.google.android.gms";
+    private static final String MGMS_PACKAGE = "com.mgoogle.android.gms";
+    private static final String HMS_PACKAGE = "com.huawei.hwid";
+
+    private static final String DOLBY_PACKAGE = "com.dolby.daxservice";
+    private static final String JDSP_PACKAGE = "james.dsp";
+    private static final String AFX_PACKAGE = "org.lineageos.audiofx";
+
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -54,6 +74,48 @@ public class Services extends SettingsPreferenceFragment implements
 
         final PreferenceScreen prefScreen = getPreferenceScreen();
         final Resources res = getResources();
+
+        Preference gmsPreference = (Preference) findPreference(GMS_PREF);
+
+        if (gmsPreference != null &&
+            !PackageManagerUtils.isAppInstalled(getContext(), GMS_PACKAGE, 
+                PackageManager.MATCH_DISABLED_COMPONENTS | 
+                PackageManager.MATCH_DISABLED_UNTIL_USED_COMPONENTS) )  {
+           gmsPreference.setVisible(false); 
+        }
+
+        Preference hmsPreference = (Preference) findPreference(HMS_PREF);
+        if (hmsPreference != null &&
+            !PackageManagerUtils.isAppInstalled(getContext(), HMS_PACKAGE, 
+                PackageManager.MATCH_DISABLED_COMPONENTS | 
+                PackageManager.MATCH_DISABLED_UNTIL_USED_COMPONENTS) )  {
+           hmsPreference.setVisible(false); 
+        }
+
+        Preference dolbyPreference = (Preference) findPreference(DOLBY_PREF);
+        if (dolbyPreference != null &&
+            !PackageManagerUtils.isAppInstalled(getContext(), DOLBY_PACKAGE, 
+                PackageManager.MATCH_DISABLED_COMPONENTS | 
+                PackageManager.MATCH_DISABLED_UNTIL_USED_COMPONENTS) )  {
+           dolbyPreference.setVisible(false); 
+        }
+
+        Preference jdspPreference = (Preference) findPreference(JDSP_PREF);
+        if (jdspPreference != null &&
+            !PackageManagerUtils.isAppInstalled(getContext(), JDSP_PACKAGE, 
+                PackageManager.MATCH_DISABLED_COMPONENTS | 
+                PackageManager.MATCH_DISABLED_UNTIL_USED_COMPONENTS) )  {
+           jdspPreference.setVisible(false); 
+        }
+
+        Preference afxPreference = (Preference) findPreference(AFX_PREF);
+        if (afxPreference != null &&
+            !PackageManagerUtils.isAppInstalled(getContext(), AFX_PACKAGE, 
+                PackageManager.MATCH_DISABLED_COMPONENTS | 
+                PackageManager.MATCH_DISABLED_UNTIL_USED_COMPONENTS) )  {
+           afxPreference.setVisible(false); 
+        }
+
     }
 
     @Override

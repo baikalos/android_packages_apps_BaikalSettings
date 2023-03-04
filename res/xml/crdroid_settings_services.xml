@@ -19,33 +19,53 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/services_title"
     >
-    <!-- Google services -->
+    <!-- Google services android:icon="@drawable/ic_google" -->
     <Preference
         android:key="gms_enabled_settings"
-        android:icon="@drawable/ic_google"
         android:title="@string/gms_enabled_title"
         android:summary="@string/gms_enabled_summary"
         android:fragment="com.crdroid.settings.fragments.services.GmsSwitch" />
 
+    <!-- android:icon="@drawable/ic_settings_hwid" -->
     <Preference
         android:key="hms_enabled_settings"
-        android:icon="@drawable/ic_settings_hwid"
         android:title="@string/hms_enabled_title"
         android:summary="@string/hms_enabled_summary"
         android:fragment="com.crdroid.settings.fragments.services.HmsSwitch" />
 
-    <Preference
+    <!-- android:icon="@drawable/ic_fdroid" -->
+    <!-- Preference
         android:key="fdroid_enabled_settings"
-        android:icon="@drawable/ic_fdroid"
         android:title="@string/fdroid_enabled_title"
         android:summary="@string/fdroid_enabled_summary"
-        android:fragment="com.crdroid.settings.fragments.services.FdroidSwitch" />
+        android:fragment="com.crdroid.settings.fragments.services.FdroidSwitch" / -->
 
+    <!-- android:icon="@drawable/ic_aurora" -->
     <!-- Preference
         android:key="aurora_enabled_settings"
-        android:icon="@drawable/ic_aurora"
         android:title="@string/aurora_enabled_title"
         android:summary="@string/aurora_enabled_summary"
         android:fragment="com.crdroid.settings.fragments.services.AuroraSwitch" / -->
+
+    <!-- android:icon="@drawable/ic_dolby" -->
+    <Preference
+        android:key="dolby_enabled_settings"
+        android:title="@string/dolby_enabled_title"
+        android:summary="@string/dolby_enabled_summary"
+        android:fragment="com.crdroid.settings.fragments.services.DolbySwitch" />
+
+    <!-- android:icon="@drawable/ic_jdsp" -->
+    <Preference
+        android:key="jdsp_enabled_settings"
+        android:title="@string/jdsp_enabled_title"
+        android:summary="@string/jdsp_enabled_summary"
+        android:fragment="com.crdroid.settings.fragments.services.JdspSwitch" />
+
+    <!-- android:icon="@drawable/ic_jdsp" -->
+    <Preference
+        android:key="afx_enabled_settings"
+        android:title="@string/afx_enabled_title"
+        android:summary="@string/afx_enabled_summary"
+        android:fragment="com.crdroid.settings.fragments.services.AfxSwitch" />
 
 </PreferenceScreen>

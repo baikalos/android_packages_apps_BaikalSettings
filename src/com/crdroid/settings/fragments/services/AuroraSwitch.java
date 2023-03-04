@@ -89,7 +89,7 @@ public class AuroraSwitch extends SettingsPreferenceFragment {
     public static void reset(Context mContext) {
         /*ContentResolver resolver = mContext.getContentResolver();
         Settings.Secure.putIntForUser(resolver,
-                Settings.Secure.GMS_ENABLED, 0, UserHandle.USER_CURRENT);*/
+                Settings.Secure.AURORA_ENABLED, 0, UserHandle.USER_CURRENT);*/
     }
 
     @Override

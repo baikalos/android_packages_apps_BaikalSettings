@@ -42,11 +42,10 @@ import com.android.settings.SettingsPreferenceFragment;
 
 import java.util.concurrent.Semaphore;
 
-public class FdroidSwitch extends SettingsPreferenceFragment {
+public class DolbySwitch extends SettingsPreferenceFragment {
 
-    private static final String TAG = "FdroidSwitch";
-    private static final String FDROID_ENABLED = "fdroid_enabled";
-    private static final String FDROID_ENABLED_FOOTER = "fdroid_enabled_footer";
+    private static final String TAG = "DolbySwitch";
+    private static final String DOLBY_ENABLED = "dolby_enabled";
 
     private boolean mConfirmed = false;
     private SwitchPreference mSwitchEnable;
@@ -58,24 +57,23 @@ public class FdroidSwitch extends SettingsPreferenceFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        addPreferencesFromResource(R.xml.fdroid_enabled_settings);
+        addPreferencesFromResource(R.xml.dolby_enabled_settings);
 
         mResolver = getContext().getContentResolver();
 
-        mEnabled = Settings.Secure.getIntForUser(mResolver,
-            Settings.Secure.FDROID_ENABLED, 0, UserHandle.USER_CURRENT) != 0;
+        mEnabled = Settings.Secure.getIntForUser(mResolver, DOLBY_ENABLED, 1, UserHandle.USER_CURRENT) != 0;
 
-        mSwitchEnable = (SwitchPreference) findPreference(FDROID_ENABLED);
+        mSwitchEnable = (SwitchPreference) findPreference(DOLBY_ENABLED);
         if( mSwitchEnable != null ) {
             mSwitchEnable.setChecked(mEnabled);
-            Log.e(TAG, "mSwitchEnable: fdroid_enabled=" + mEnabled);
+            Log.e(TAG, "mSwitchEnable: " + DOLBY_ENABLED + "=" + mEnabled);
             mSwitchEnable.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
                 public boolean onPreferenceChange(Preference preference, Object newValue) {
                     try {
                         if( mEnabled == (Boolean)newValue ) return false;
-                        Settings.Secure.putIntForUser(mResolver,
-                               Settings.Secure.FDROID_ENABLED, (Boolean) newValue ? 1:0, UserHandle.USER_CURRENT);
+                        Settings.Secure.putIntForUser(mResolver, DOLBY_ENABLED, (Boolean) newValue ? 1:0, UserHandle.USER_CURRENT);
                         mEnabled = (Boolean)newValue;
+                        Log.e(TAG, "mSwitchEnable: " + DOLBY_ENABLED + "=" + mEnabled);
                     } catch(Exception re) {
                         Log.e(TAG, "onCreate: mSwitchEnable Fatal! exception", re );
                     }
@@ -89,7 +87,7 @@ public class FdroidSwitch extends SettingsPreferenceFragment {
     public static void reset(Context mContext) {
         /*ContentResolver resolver = mContext.getContentResolver();
         Settings.Secure.putIntForUser(resolver,
-                Settings.Secure.FDROID_ENABLED, 0, UserHandle.USER_CURRENT);*/
+                Settings.Secure.DOLBY_ENABLED, 0, UserHandle.USER_CURRENT);*/
     }
 
     @Override

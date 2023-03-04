@@ -12,4 +12,35 @@
     	<item>apple</item>
     	<item>yandex</item>
     </string-array>
+
+    <string-array name="background_blur_type_entries">
+    	<item>Default</item>
+    	<item>CLAMP</item>
+    	<item>REPEAT</item>
+    	<item>MIRROR</item>
+    	<item>DECAL</item>
+     </string-array>
+
+     <string-array name="background_blur_type_values">
+    	<item>0</item>
+    	<item>1</item>
+    	<item>2</item>
+    	<item>3</item>
+    	<item>4</item>
+    </string-array>
+
+
+    <!-- Log it -->
+
+    <string-array name="log_it_share_type_entries" translatable="false">
+        <item>@string/log_it_share_type_zip</item>
+        <item>@string/log_it_share_type_haste</item>
+    </string-array>
+
+    <string-array name="log_it_share_type_values" translatable="false">
+        <item>1</item>
+        <item>0</item>
+    </string-array>
+
+
 </resources>

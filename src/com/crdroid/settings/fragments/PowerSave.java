@@ -39,12 +39,12 @@ import android.content.res.Resources;
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.internal.util.crdroid.Utils;
 
-//import ru.baikalos.extras.BaseSettingsFragment;
-//import ru.baikalos.extras.PerfProfileDetailsActivity;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.SearchIndexable;
+
+import com.android.internal.baikalos.BaikalConstants;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -73,6 +73,12 @@ public class PowerSave extends SettingsPreferenceFragment {
 
         boolean perfProf  = (perfProfiles !=null && perfProfiles.length > 1);
         boolean thermProf  = (thermProfiles !=null && thermProfiles.length > 1);
+
+        if( !BaikalConstants.isKernelCompatible() ) {
+            Log.e(TAG, "profiles : incompatible kernel");
+            thermProf = false;
+            perfProf = false;
+        }
 
 	    addPreferencesFromResource(R.xml.crdroid_settings_powersave);
 
