@@ -957,7 +957,7 @@
     <string name="status_bar_logo_summary">Відображати користувацький логотип ліворуч або праворуч від рядка стану</string>
     <string name="status_bar_logo_position_title">Позиція логотипу</string>
     <string name="status_bar_logo_style_title">Стиль логотипу</string>
-    <string name="status_bar_logo_style_crdroid">CrDroid</string>
+    <string name="status_bar_logo_style_crdroid">BaikalOS</string>
     <string name="status_bar_logo_style_android">Андроїд</string>
     <string name="status_bar_logo_style_adidas">Adidas</string>
     <string name="status_bar_logo_style_alien">Чужий</string>

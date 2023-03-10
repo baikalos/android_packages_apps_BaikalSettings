@@ -951,7 +951,7 @@
     <string name="status_bar_logo_summary">在狀態列左側顯示自訂圖示</string>
     <string name="status_bar_logo_position_title">圖示位置</string>
     <string name="status_bar_logo_style_title">圖示樣式</string>
-    <string name="status_bar_logo_style_crdroid">CrDroid</string>
+    <string name="status_bar_logo_style_crdroid">BaikalOS</string>
     <string name="status_bar_logo_style_android">Android</string>
     <string name="status_bar_logo_style_adidas">愛迪達</string>
     <string name="status_bar_logo_style_alien">外星人</string>

@@ -67,7 +67,7 @@
     <!-- Sites crDroid -->
     <string name="crdroid_source_title">GitHub</string>
     <string name="crdroid_source_summary">Noi amiamo l\'open source, vieni a trovarci</string>
-    <string name="crdroid_telegram_title">Comunità CrDroid</string>
+    <string name="crdroid_telegram_title">Comunità BaikalOS</string>
     <string name="crdroid_telegram_summary">Siamo su Telegram. Entra!</string>
     <string name="crdroid_telegram_channel_title">Canale degli aggiornamenti</string>
     <string name="crdroid_telegram_channel_summary">Ricevi una notifica delle nuove build su Telegram</string>
@@ -953,7 +953,7 @@
     <string name="status_bar_logo_summary">Mostra un logo personalizzato a sinistra o a destra della barra di stato</string>
     <string name="status_bar_logo_position_title">Posizione logo</string>
     <string name="status_bar_logo_style_title">Stile logo</string>
-    <string name="status_bar_logo_style_crdroid">CrDroid</string>
+    <string name="status_bar_logo_style_crdroid">BaikalOS</string>
     <string name="status_bar_logo_style_android">Android</string>
     <string name="status_bar_logo_style_adidas">Adidas</string>
     <string name="status_bar_logo_style_alien">Alien</string>

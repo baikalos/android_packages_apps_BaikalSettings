@@ -953,7 +953,7 @@
     <string name="status_bar_logo_summary">Vəziyyət panelinin solunda və ya sağında fərdi loqo göstərin</string>
     <string name="status_bar_logo_position_title">Loqo məkanı</string>
     <string name="status_bar_logo_style_title">Loqo görünüşü</string>
-    <string name="status_bar_logo_style_crdroid">CrDroid</string>
+    <string name="status_bar_logo_style_crdroid">BaikalOS</string>
     <string name="status_bar_logo_style_android">Android</string>
     <string name="status_bar_logo_style_adidas">Adidas</string>
     <string name="status_bar_logo_style_alien">Alien</string>

@@ -958,7 +958,7 @@
     <string name="status_bar_logo_summary">Адлюстраванне ўласнага лагатыпа злева або справа ад радка стану</string>
     <string name="status_bar_logo_position_title">Пазіцыя лагатыпа</string>
     <string name="status_bar_logo_style_title">Стыль лагатыпу</string>
-    <string name="status_bar_logo_style_crdroid">CrDroid</string>
+    <string name="status_bar_logo_style_crdroid">BaikalOS</string>
     <string name="status_bar_logo_style_android">Android</string>
     <string name="status_bar_logo_style_adidas">Adidas</string>
     <string name="status_bar_logo_style_alien">Alien</string>
