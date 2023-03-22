@@ -53,6 +53,15 @@
         android:summary="@string/adaptive_playback_summary"
         android:fragment="com.crdroid.settings.fragments.sound.AdaptivePlayback" />
 
+    <ListPreference
+        android:key="sonif_a2dp_pref"
+        android:icon="@drawable/ic_settings_notification"
+        android:title="@string/sound_sonif_a2dp_title"
+        android:entries="@array/sonif_a2dp_listentries"
+        android:entryValues="@array/sonif_a2dp_listvalues"
+        android:defaultValue="0"
+        android:summary="%s" />
+
     <!-- Volume panel -->
     <PreferenceCategory
         android:key="volume_panel"
@@ -96,6 +105,7 @@
             android:title="@string/incall_vibrate_disconnect_title"
             android:defaultValue="false" />
     </PreferenceCategory>
+
 
     <Preference
             android:key="audio_tweaks_a2dp_last_codec"

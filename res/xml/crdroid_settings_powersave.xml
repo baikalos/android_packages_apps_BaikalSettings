@@ -106,4 +106,28 @@
             android:summary="@string/baikalos_display_boost_summary"
         />
 
+        <com.crdroid.settings.preferences.GlobalSettingSeekBarPreference
+            android:key="baikalos_boost_override_silver"
+            android:title="@string/boost_override_silver_title"
+            android:max="100"
+            settings:min="-1"
+            settings:units="%"
+            android:defaultValue="-1"/>
+
+        <com.crdroid.settings.preferences.GlobalSettingSeekBarPreference
+            android:key="baikalos_boost_override_gold"
+            android:title="@string/boost_override_gold_title"
+            android:max="100"
+            settings:min="-1"
+            settings:units="%"
+            android:defaultValue="-1"/>
+
+        <!-- com.crdroid.settings.preferences.GlobalSettingSeekBarPreference
+            android:key="baikalos_boost_override_platinum"
+            android:title="@string/boost_override_platinum_title"
+            android:max="100"
+            settings:min="-1"
+            settings:units="%"
+            android:defaultValue="-1"/ -->
+
 </PreferenceScreen>

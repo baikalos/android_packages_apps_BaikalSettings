@@ -102,6 +102,10 @@
     <string name="baikalos_interaction_boost_title">Interaction Boost</string>
     <string name="baikalos_interaction_boost_summary">Enable interaction boost</string>
 
+    <string name="boost_override_silver_title">Silver cluster boost</string>
+    <string name="boost_override_gold_title">Gold cluster boost</string>
+    <string name="boost_override_platinum_title">Platinum cluster boost</string>
+
     <string name="baikalos_display_boost_title">Display Boost</string>
     <string name="baikalos_display_boost_summary">Enable boost on display update</string>
 
@@ -112,5 +116,12 @@
 
     <string name="baikalos_aod_on_charger_title">AOD on Charger</string>
     <string name="baikalos_aod_on_charger_summary">Enable Always On Display on charger</string>
+
+    <string name="sound_sonif_a2dp_title">Notification sound</string>
+    <string name="sonif_a2dp_default">Default</string>
+    <string name="sonif_a2dp_force_speaker">Force on speaker</string>
+    <string name="sonif_a2dp_duplicate_speaker">Duplicate on speaker</string>
+
+    <string name="app_sound_sonif_a2dp_title">App sound</string>
 
 </resources>

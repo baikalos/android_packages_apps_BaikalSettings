@@ -25,6 +25,8 @@ import android.os.Bundle;
 import android.os.SystemProperties;
 import android.os.UserHandle;
 import android.provider.Settings;
+import android.util.Log;
+
 
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
@@ -59,6 +61,8 @@ public class Sound extends SettingsPreferenceFragment {
     private static final String KEY_VIBRATE_DISCONNECT = "vibrate_on_disconnect";
     private static final String KEY_VOLUME_PANEL_LEFT = "volume_panel_on_left";
 
+    private static final String SONIF_A2DP_PREF = "sonif_a2dp_pref";
+
     private static final String AUDIO_TWEAKS_A2DP_LAST_CODEC = "audio_tweaks_a2dp_last_codec";
     private static final String AUDIO_TWEAKS_A2DP_LAST_BITRATE = "audio_tweaks_a2dp_last_bitrate";
 
@@ -66,6 +70,7 @@ public class Sound extends SettingsPreferenceFragment {
     private static final String SYSTEM_PROPERTY_A2DP_LAST_BITRATE = "baikal.last.a2dp_bitrate";
 
     private SwitchPreference mVolumePanelLeft;
+    private ListPreference mSonifA2dp;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -89,6 +94,33 @@ public class Sound extends SettingsPreferenceFragment {
         if (!TelephonyUtils.isVoiceCapable(getActivity())) {
             prefScreen.removePreference(vibCategory);
         }
+
+        try {
+            int sonif_a2dp = 0;
+            try {
+                sonif_a2dp = Integer.parseInt(SystemProperties.get("persist.baikal.sonif_a2dp", "0"));
+            } catch(Exception e1) {
+            }
+
+	        mSonifA2dp = (ListPreference) findPreference(SONIF_A2DP_PREF);
+      	    if( mSonifA2dp != null ) { 
+                Log.i(TAG, "mSonifA2dp: val=" + sonif_a2dp);
+                mSonifA2dp.setValue(Integer.toString(sonif_a2dp));
+                mSonifA2dp.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                  public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    try {
+                        SystemProperties.set("persist.baikal.sonif_a2dp", newValue.toString());
+                        Log.e(TAG, "mSonifA2dp: fps=" + newValue.toString());
+                    } catch(Exception re) {
+                        Log.e(TAG, "onCreate: mSonifA2dp Fatal! exception", re );
+                    }
+                    return true;
+                  }
+                });
+            }
+        } catch(Exception e2) {
+        }
+
 
         Preference  codec = (Preference) findPreference(AUDIO_TWEAKS_A2DP_LAST_CODEC);
         Preference  bitrate = (Preference) findPreference(AUDIO_TWEAKS_A2DP_LAST_BITRATE);

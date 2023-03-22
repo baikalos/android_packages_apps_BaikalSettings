@@ -28,6 +28,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.StrictMode;
 import android.os.SystemProperties;
+import android.provider.Settings;
 import androidx.preference.CheckBoxPreference;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
@@ -137,11 +138,15 @@ public class LogIt extends SettingsPreferenceFragment implements Preference.OnPr
 
     private boolean shareHaste = false;
     private boolean shareZip = true;
+    private int mDebugMask = 0;
 
+    private Context mContext;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        mContext = (Context) getActivity();
 
 	    addPreferencesFromResource(R.xml.log_it);
 
@@ -169,6 +174,12 @@ public class LogIt extends SettingsPreferenceFragment implements Preference.OnPr
         mShareType.setOnPreferenceChangeListener(this);
 
         try {
+            String debugMaskString = Settings.Global.getString(mContext.getContentResolver(), Settings.Global.BAIKALOS_DEBUG_MASK);
+            if( debugMaskString == null || "".equals(debugMaskString) ) {
+                debugMaskString = "0";
+            }
+            mDebugMask = Integer.parseInt(debugMaskString,16);
+ 
             mDEBUG_MASK_SENSORS=initDebugPref("BAIKAL_DEBUG_SENSORS", BaikalConstants.DEBUG_MASK_SENSORS);
             mDEBUG_MASK_TORCH=initDebugPref("BAIKAL_DEBUG_TORCH", BaikalConstants.DEBUG_MASK_TORCH);
             mDEBUG_MASK_TELEPHONY=initDebugPref("BAIKAL_DEBUG_TELEPHONY", BaikalConstants.DEBUG_MASK_TELEPHONY);
@@ -197,24 +208,18 @@ public class LogIt extends SettingsPreferenceFragment implements Preference.OnPr
     }
 
 
-    private SwitchPreference initDebugPref( String name, int mask ) {
-
-        int debugMask = Integer.parseInt(SystemProperties.get("persist.baikal.debug_mask","1"),16);
-
+    private SwitchPreference initDebugPref( String name, int mask) {
         SwitchPreference mLogPref = (SwitchPreference) findPreference( name.toLowerCase() );
         if( mLogPref != null ) { 
-            mLogPref.setChecked( (debugMask & mask) != 0 );
+            mLogPref.setChecked( (mDebugMask & mask) != 0 );
             mLogPref.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
                 public boolean onPreferenceChange(Preference preference, Object newValue) {
                     try {
-
-                        int debug = Integer.parseInt(SystemProperties.get("persist.baikal.debug_mask","1"),16);
-
                         ((SwitchPreference)preference).setChecked((Boolean) newValue);
-                        if( (Boolean) newValue ) debug |= mask;
-                        else debug &= ~mask;
-                        Log.e(TAG, "set persist.baikal.debug_mask="+ String.format("%X",debug));
-                        SystemProperties.set("persist.baikal.debug_mask", String.format("%X",debug));
+                        if( (Boolean) newValue ) mDebugMask |= mask;
+                        else mDebugMask &= ~mask;
+                        Log.e(TAG, "set debug_mask="+ String.format("%X",mDebugMask));
+                        Settings.Global.putString(mContext.getContentResolver(), Settings.Global.BAIKALOS_DEBUG_MASK, String.format("%X",mDebugMask));
                     } catch(Exception re) {
                         Log.e(TAG, "onCreate: mLogPref Fatal! exception", re );
                     }

@@ -137,7 +137,6 @@ public class AppProfileFragment extends SettingsPreferenceFragment
     private SwitchPreference mAppDisableJobs;
     private SwitchPreference mBlockFocusRecv;
     private SwitchPreference mBlockFocusSend;
-    private SwitchPreference mForceSonification;
     private SwitchPreference mBypassCharging;
     private SwitchPreference mAppKeepOn;
     private SwitchPreference mAppFullScreen;
@@ -148,6 +147,7 @@ public class AppProfileFragment extends SettingsPreferenceFragment
     private SwitchPreference mAppAllowIdleNetwork;
     private SwitchPreference mAppForcedScreenshot;
 
+    private ListPreference mForceSonification;
     private ListPreference mAppPerfProfile;
     private ListPreference mAppThermProfile;
     private ListPreference mAppBrightnessProfile;
@@ -742,15 +742,16 @@ public class AppProfileFragment extends SettingsPreferenceFragment
                 });
             }
 
-            mForceSonification = (SwitchPreference) findPreference(APP_PROFILE_FORCE_SONIFICATION);
+            mForceSonification = (ListPreference) findPreference(APP_PROFILE_FORCE_SONIFICATION);
             if( mForceSonification != null ) {
-                boolean forceSonification = mProfile.mSonification;
+                int forceSonification = mProfile.mSonification;
+                mForceSonification.setValue(Integer.toString(forceSonification));
                 Log.e(TAG, "mForceSonification: mPackageName=" + mPackageName + ", mSonification=" + forceSonification);
-                mForceSonification.setChecked(forceSonification);
                 mForceSonification.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
                   public boolean onPreferenceChange(Preference preference, Object newValue) {
                     try {
-                        mProfile.mSonification = (Boolean)newValue;
+                        int val = Integer.parseInt(newValue.toString());
+                        mProfile.mSonification = val;
                         mAppSettings.updateProfile(mProfile);
                         mAppSettings.save();
                         Log.e(TAG, "mForceSonification: mPackageName=" + mPackageName + ", mSonification=" + mProfile.mSonification);

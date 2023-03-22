@@ -101,4 +101,11 @@
     <string name="baikalos_aod_on_charger_title">AOD при зарядке</string>
     <string name="baikalos_aod_on_charger_summary">Включать Always On Display при зарядке</string>
 
+    <string name="sound_sonif_a2dp_title">Звук уведомления</string>
+    <string name="sonif_a2dp_default">По умолчанию</string>
+    <string name="sonif_a2dp_force_speaker">Форсировать на динамик</string>
+    <string name="sonif_a2dp_duplicate_speaker">Дублировать на динамик</string>
+
+    <string name="app_sound_sonif_a2dp_title">Звук приложения</string>
+
 </resources>

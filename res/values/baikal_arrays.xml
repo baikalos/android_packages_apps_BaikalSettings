@@ -42,5 +42,17 @@
         <item>0</item>
     </string-array>
 
+    <string-array name="sonif_a2dp_listentries" translatable="false">
+        <item>@string/sonif_a2dp_default</item>
+        <item>@string/sonif_a2dp_force_speaker</item>
+        <item>@string/sonif_a2dp_duplicate_speaker</item>
+    </string-array>
+
+
+    <string-array name="sonif_a2dp_listvalues" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
 
 </resources>

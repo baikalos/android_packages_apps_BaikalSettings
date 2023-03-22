@@ -43,6 +43,12 @@
             android:summary="%s"/>
 
         <SwitchPreference
+            android:key="app_profile_stamina"
+            android:title="@string/app_profile_stamina_title"
+            android:summary="@string/app_profile_stamina_summary"
+            android:defaultValue="false" />
+
+        <SwitchPreference
             android:key="app_profile_disable_wakeup"
             android:title="@string/app_profile_disable_wakeup_title"
             android:summary="@string/app_profile_disable_wakeup_summary"
@@ -130,12 +136,6 @@
             android:title="@string/app_profile_max_fps_title"
             android:defaultValue="0"
             android:summary="%s" />
-
-        <!-- SwitchPreference
-            android:key="app_profile_stamina"
-            android:title="@string/app_profile_stamina_title"
-            android:summary="@string/app_profile_stamina_summary"
-            android:defaultValue="false" / -->
 
         <!-- SwitchPreference
             android:key="app_profile_require_gms"
@@ -248,11 +248,20 @@
             android:summary="@string/app_profile_block_focus_send_summary"
             android:defaultValue="false" / -->
 
-        <SwitchPreference
+        <!-- SwitchPreference
             android:key="app_profile_force_sonification"
             android:title="@string/app_profile_force_sonification_title"
             android:summary="@string/app_profile_force_sonification_summary"
-            android:defaultValue="false" />
+            android:defaultValue="false" / -->
+
+        <ListPreference
+            android:key="app_profile_force_sonification"
+            android:title="@string/app_sound_sonif_a2dp_title"
+            android:entries="@array/sonif_a2dp_listentries"
+            android:entryValues="@array/sonif_a2dp_listvalues"
+            android:defaultValue="0"
+            android:summary="%s" />
+
 
 
     <PreferenceCategory
