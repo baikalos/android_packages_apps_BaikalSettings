@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * Copyright (C) 2023 BaikalOS
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+-->
+<PreferenceScreen 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/system_category"
+    >
+
+    <!-- BaikalOS logo -->
+    <!-- Preference
+        android:key="baikalos_logo"
+        android:layout="@layout/dashboard_logo" / -->
+
+    <!-- PreferenceCategory
+        android:title="@string/device_part_category" -->
+
+        <!-- Device Part -->
+        <!-- Preference
+            android:key="device_parts"
+            android:persistent="false"
+            android:title="@string/device_part_title"
+            android:icon="@drawable/ic_settings_device">
+            <intent android:action="android.intent.action.MAIN"
+                 android:targetPackage="org.lineageos.settings.device"
+                 android:targetClass="org.lineageos.settings.device.DeviceSettings"/>
+        </Preference>
+
+        <Preference
+            android:key="lineage_parts"
+            android:persistent="false"
+            android:title="@string/device_part_title"
+            android:icon="@drawable/ic_settings_device">
+            <intent android:action="android.intent.action.MAIN"
+                 android:targetPackage="org.lineageos.settings"
+                 android:targetClass="org.lineageos.settings.DevicePreferenceActivity"/>
+        </Preference -->
+
+    <!-- /PreferenceCategory -->
+
+    <PreferenceCategory
+        android:title="@string/system_category">
+
+        <PreferenceScreen
+            android:title="@string/statusbar_title"
+            android:summary="@string/statusbar_summary"
+            android:icon="@drawable/ic_settings_statusbar"
+            android:fragment="com.crdroid.settings.fragments.StatusBar" />
+
+
+        <PreferenceScreen
+            android:title="@string/quicksettings_title"
+            android:summary="@string/quicksettings_summary"
+            android:icon="@drawable/ic_settings_quicksettings"
+            android:fragment="com.crdroid.settings.fragments.QuickSettings" />
+
+        <PreferenceScreen
+            android:title="@string/lockscreen_title"
+            android:summary="@string/lockscreen_summary"
+            android:icon="@drawable/ic_settings_lockscreen"
+            android:fragment="com.crdroid.settings.fragments.LockScreen" />
+
+        <PreferenceScreen
+            android:title="@string/navigation_title"
+            android:summary="@string/navigation_summary"
+            android:icon="@drawable/ic_settings_navigation"
+            android:fragment="com.crdroid.settings.fragments.Navigation" />
+
+        <PreferenceScreen
+            android:title="@string/button_title"
+            android:summary="@string/button_summary"
+            android:icon="@drawable/ic_settings_button"
+            android:fragment="com.crdroid.settings.fragments.Buttons" />
+
+        <PreferenceScreen
+            android:title="@string/ui_title"
+            android:summary="@string/ui_summary"
+            android:icon="@drawable/ic_settings_ui"
+            android:fragment="com.crdroid.settings.fragments.UserInterface" />
+
+        <PreferenceScreen
+            android:title="@string/notifications_title"
+            android:summary="@string/notifications_summary"
+            android:icon="@drawable/ic_settings_notification"
+            android:fragment="com.crdroid.settings.fragments.Notifications" />
+
+        <PreferenceScreen
+            android:title="@string/sound_title"
+            android:summary="@string/sound_summary"
+            android:icon="@drawable/ic_settings_sound"
+            android:fragment="com.crdroid.settings.fragments.Sound" />
+
+        <PreferenceScreen
+            android:title="@string/powersave_title"
+            android:summary="@string/powersave_summary"
+            android:icon="@drawable/ic_settings_powersave"
+            android:fragment="com.crdroid.settings.fragments.PowerSave" />
+
+        <PreferenceScreen
+            android:title="@string/smart_trust_title"
+            android:summary="@string/smart_trust_summary"
+            android:icon="@drawable/ic_settings_smart_trust"
+            android:fragment="com.crdroid.settings.fragments.SmartTrust" />
+
+        <PreferenceScreen
+            android:title="@string/misc_title"
+            android:summary="@string/misc_summary"
+            android:icon="@drawable/ic_settings_misc"
+            android:fragment="com.crdroid.settings.fragments.Miscellaneous" />
+
+        <PreferenceScreen
+            android:title="@string/services_title"
+            android:summary="@string/services_summary"
+            android:icon="@drawable/ic_settings_services"
+            android:fragment="com.crdroid.settings.fragments.Services" />
+
+        <PreferenceScreen
+            android:title="@string/about_crdroid"
+            android:summary="@string/about_summary"
+            android:icon="@drawable/ic_settings_about"
+            android:fragment="com.crdroid.settings.fragments.About" />
+
+        <!--PreferenceScreen
+            android:title="@string/system_behaviour_title"
+            android:summary="@string/system_behaviour_summary"
+            android:icon="@drawable/ic_settings_system_behaviour"
+            android:fragment="ru.baikalos.extras.fragments.SystemBehaviour" / -->
+
+        <!-- PreferenceScreen
+            android:title="@string/system_extensions_title"
+            android:summary="@string/system_extensions_summary"
+            android:icon="@drawable/ic_settings_system_extensions"
+            android:fragment="ru.baikalos.extras.fragments.SystemExtensions" / -->
+
+
+        <!-- PreferenceScreen
+            android:title="@string/system_title"
+            android:summary="@string/system_summary"
+            android:icon="@drawable/ic_settings_system_behaviour"
+            android:fragment="ru.baikalos.extras.fragments.System" / -->
+
+        <!-- PreferenceScreen
+            android:title="@string/performance_title"
+            android:summary="@string/performance_summary"
+            android:icon="@drawable/ic_settings_applications"
+            android:fragment="ru.baikalos.extras.fragments.Performance" / -->
+
+        <!-- PreferenceScreen
+            android:title="@string/powersave_title"
+            android:summary="@string/powersave_summary"
+            android:icon="@drawable/ic_settings_battery"
+            android:fragment="ru.baikalos.extras.fragments.PowerSave" / -->
+
+        <!-- PreferenceScreen
+            android:title="@string/audio_tweaks_title"
+            android:summary="@string/audio_tweaks_summary"
+            android:icon="@drawable/ic_settings_sound"
+            android:fragment="ru.baikalos.extras.fragments.AudioTweaks" / -->
+
+        <!-- PreferenceScreen
+            android:title="@string/interface_title"
+            android:summary="@string/interface_summary"
+            android:icon="@drawable/ic_settings_ui"
+            android:fragment="ru.baikalos.extras.fragments.InterfaceTweaks" / -->
+
+        <!-- PreferenceScreen
+            android:title="@string/smart_trust_title"
+            android:summary="@string/smart_trust_summary"
+            android:icon="@drawable/ic_settings_trust"
+            android:fragment="ru.baikalos.extras.fragments.SmartTrust" / -->
+
+        <!-- PreferenceScreen
+            android:title="@string/torch_title"
+            android:summary="@string/torch_summary"
+            android:icon="@drawable/ic_settings_torch"
+            android:fragment="ru.baikalos.extras.fragments.Torch" / -->
+
+        <!-- PreferenceScreen
+            android:key="log_it"
+            android:title="@string/log_it_title"
+            android:summary="@string/log_it_summary"
+            android:icon="@drawable/ic_settings_log_it"
+            android:fragment="ru.baikalos.extras.fragments.LogIt" / -->
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

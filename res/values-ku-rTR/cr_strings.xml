@@ -16,7 +16,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- App Title -->
-    <string name="crdroid_settings_title">mîhengên crDroid</string>
+    <string name="crdroid_settings_title">mîhengên BaikalOS</string>
     <string name="crdroid_settings_summary">Xwezî veke</string>
     <string name="reset_settings_title">Mîhengan vegerîne</string>
     <string name="reset_settings_message">Ev ê piraniya mîhengên crdroid-ê li nirxên xweyên xwerû ji bo bikarhênerê heyî vegerîne. Ma hûn dixwazin berdewam bikin?</string>
@@ -57,17 +57,17 @@
     <string name="changelog_crdroid_summary">View changes in the ROM installed</string>
     <string name="changelog_crdroid_error">Unable to load changelog</string>
     <!-- About crDroid -->
-    <string name="about_crdroid">دەربارەی crDroid</string>
+    <string name="about_crdroid">دەربارەی BaikalOS</string>
     <string name="about_device_name">Device</string>
     <!-- Share crDroid -->
-    <string name="share_crdroid_title">هاوبەشکردنی crDroid</string>
-    <string name="share_crdroid_summary">Let others know about crDroid</string>
-    <string name="share_message">Check out if #crDroidAndroid is available for your device @ https://crdroid.net/</string>
-    <string name="share_chooser_title">هاوبەشکردنی crDroid</string>
+    <string name="share_crdroid_title">هاوبەشکردنی BaikalOS</string>
+    <string name="share_crdroid_summary">Let others know about BaikalOS</string>
+    <string name="share_message">Check out if #BaikalOS is available for your device @ https://github.com/BaikalOS-Devices/</string>
+    <string name="share_chooser_title">هاوبەشکردنی BaikalOS</string>
     <!-- Sites crDroid -->
     <string name="crdroid_source_title">GitHub</string>
     <string name="crdroid_source_summary">We love open source, check us out</string>
-    <string name="crdroid_telegram_title">crDroid community</string>
+    <string name="crdroid_telegram_title">BaikalOS community</string>
     <string name="crdroid_telegram_summary">We are on telegram. Join us!</string>
     <string name="crdroid_telegram_channel_title">Updates channel</string>
     <string name="crdroid_telegram_channel_summary">Get notified of new builds on Telegram</string>
@@ -953,7 +953,7 @@
     <string name="status_bar_logo_summary">Display a custom logo on left or right of the status bar</string>
     <string name="status_bar_logo_position_title">شوێنی لۆگۆ</string>
     <string name="status_bar_logo_style_title">شێوازی لۆگۆ</string>
-    <string name="status_bar_logo_style_crdroid">CrDroid</string>
+    <string name="status_bar_logo_style_crdroid">BaikalOS</string>
     <string name="status_bar_logo_style_android">ئەندرۆید</string>
     <string name="status_bar_logo_style_adidas">Adidas</string>
     <string name="status_bar_logo_style_alien">Alien</string>

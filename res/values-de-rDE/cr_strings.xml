@@ -16,10 +16,10 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- App Title -->
-    <string name="crdroid_settings_title">crDroid-Einstellungen</string>
+    <string name="crdroid_settings_title">BaikalOS-Einstellungen</string>
     <string name="crdroid_settings_summary">Erweiterte Einstellungen öffnen</string>
     <string name="reset_settings_title">Einstellungen zurücksetzen</string>
-    <string name="reset_settings_message">Dadurch werden die meisten crDroid-Einstellungen für den aktuellen Nutzer auf die Werkseinstellungen zurückgesetzt. Fortfahren?</string>
+    <string name="reset_settings_message">Dadurch werden die meisten BaikalOS-Einstellungen für den aktuellen Nutzer auf die Werkseinstellungen zurückgesetzt. Fortfahren?</string>
     <!-- Personalization Categories -->
     <string name="button_title">Tasten</string>
     <string name="lockscreen_title">Sperrbildschirm</string>
@@ -57,17 +57,17 @@
     <string name="changelog_crdroid_summary">Änderungen in der installierten ROM anzeigen</string>
     <string name="changelog_crdroid_error">Changelog konnte nicht geladen werden</string>
     <!-- About crDroid -->
-    <string name="about_crdroid">Über crDroid</string>
+    <string name="about_crdroid">Über BaikalOS</string>
     <string name="about_device_name">Gerät</string>
     <!-- Share crDroid -->
-    <string name="share_crdroid_title">crDroid teilen</string>
-    <string name="share_crdroid_summary">crDroid weiterempfehlen</string>
-    <string name="share_message">Finde heraus, ob es #crDroidAndroid schon für dein Gerät gibt auf: https://crdroid.net/</string>
-    <string name="share_chooser_title">crDroid teilen</string>
+    <string name="share_crdroid_title">BaikalOS teilen</string>
+    <string name="share_crdroid_summary">BaikalOS weiterempfehlen</string>
+    <string name="share_message">Finde heraus, ob es #BaikalOS schon für dein Gerät gibt auf: https://github.com/BaikalOS-Devices/</string>
+    <string name="share_chooser_title">BaikalOS teilen</string>
     <!-- Sites crDroid -->
     <string name="crdroid_source_title">GitHub</string>
     <string name="crdroid_source_summary">Wir lieben Open Source, schau doch mal auf unserer GitHub-Seite vorbei</string>
-    <string name="crdroid_telegram_title">crDroid-Community</string>
+    <string name="crdroid_telegram_title">BaikalOS-Community</string>
     <string name="crdroid_telegram_summary">Wir sind auch bei Telegram. Komm in die Gruppe!</string>
     <string name="crdroid_telegram_channel_title">Kanal für Updates</string>
     <string name="crdroid_telegram_channel_summary">Lass dich auf Telegram über neue Builds benachrichtigen</string>

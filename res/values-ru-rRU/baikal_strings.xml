@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * Copyright (C) 2023 BaikalOS
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+-->
+<resources>
+
+    <string name="log_it_title">Снять лог!</string>
+    <string name="log_it_summary">Logcat, kmesg, dmesg</string>
+    <string name="logcat_title">Logcat</string>
+    <string name="logcat_radio_title">Радио лог</string>
+    <string name="kmesg_title">Kmesg</string>
+    <string name="dmesg_title">Dmesg</string>
+    <string name="share_title">Поделиться...</string>
+    <string name="log_it_share_subject">Логи BaikalOS</string>
+    <string name="log_it_now_summary">Ожидайте создания логов</string>
+    <string name="log_it_logs_in_progress">Создаются логи …</string>
+    <string name="log_it_share_type_title">Метод отправки</string>
+    <string name="log_it_share_type_zip">ZIP-Файл</string>
+    <string name="log_it_share_type_haste">Загрузить на BaikalOS Haste</string>
+    <string name="log_it_share_via">Поделиться через</string>
+
+    <string name="baikalos_debug_title">Подробный лог</string>
+    <string name="baikalos_debug_summary">Включить подробный лог. Не включайте без причины. Расходует реусрсы, увеличивает потребление.</string>
+
+    <!-- Dashboard -->
+    <string name="user_interface_category">Интерфейс</string>
+    <string name="system_category">Настройки BaikalOS</string>
+    <string name="other_category">Другое</string>
+    <!-- Device parts -->
+    <string name="device_part_title">Возможности устройства</string>
+    <string name="device_part_category">Устройство</string>
+
+    <string name="status_bar_notch_category_title">Вырез дисплея</string>
+    <string name="display_hide_notch_title">Скрыть вырез дисплея</string>
+    <string name="display_hide_notch_summary">Отключить заливку черным цветом для выреза экрана</string>
+
+    <!-- Personalization Categories -->
+    <string name="button_summary">Аппаратные кнопки, меню кнопки питания</string>
+    <string name="lockscreen_summary">Настройки экрана блокировки</string>
+    <string name="misc_summary">Все, что непонятно куда засунуть</string>
+    <string name="navigation_summary">Hit the road Jack</string>
+    <string name="notifications_summary">Надоедалки</string>
+    <string name="quicksettings_summary">Попытаемся сделать этот ужас чуть более удобным</string>
+    <string name="sound_summary">They Said To Play It Louder Than Hell</string>
+    <string name="statusbar_summary">Строка, состояния, иконки уведлмление, связи и батареи</string>
+    <string name="display_summary">Display</string>
+    <string name="ui_summary">Дополнительные настройки пользовательского интерфейса</string>
+    <string name="about_summary">Все про BaikalOS</string>
+
+    <!-- Google services -->
+    <string name="gms_enabled_title">Сервисы Google</string>
+    <string name="gms_enabled_summary">Управление сервисами и приложениями Google</string>
+    <string name="gms_enabled_footer">Перед отключением сервисов Google настоятельно рекомендуется отключить "Find My Device" и 2-х факторную верификацию в вашем аккаунте Google. Приложения зависящие от сервисов Google перестануть работать или будут работать с ошибками! Если в работе устройства будут перебои потребуется сброс к заводским настройкам!</string>
+    <string name="gms_disable_confirmation">Отключение Сервисов Google</string>
+
+    <!-- Huawei services -->
+    <string name="hms_enabled_title">Huawei Mobile Services</string>
+    <string name="hms_enabled_summary">Управление сервисами и магазином приложений Huawei</string>
+
+    <!-- Huawei services -->
+    <string name="fdroid_enabled_title">F-Droid App Store</string>
+    <string name="fdroid_enabled_summary">Магазин приложений F-Droid</string>
+
+    <!-- Huawei services -->
+    <string name="aurora_enabled_title">Aurora Store</string>
+    <string name="aurora_enabled_summary">Магазин приложений Aurora</string>
+
+    <string name="services_title">Дополнительные Сервисы</string>
+    <string name="services_summary">Google, Huawei, Fdroid, etc...</string>
+
+    <string name="audio_tweaks_a2dp_last_codec_title">Последний использованный кодек</string>
+    <string name="audio_tweaks_a2dp_last_bitrate_title">Последний использованный битрейт</string>
+
+    <string name="captive_portal_title">Сервер сетевого монитора</string>
+    <string name="captive_portal_default">По умолчанию (Google)</string>
+    <string name="captive_portal_apple">Apple</string>
+    <string name="captive_portal_yandex">Yandex</string>
+
+    <string name="r_secure_title">Неограниченный доступ</string>
+    <string name="r_secure_summary">Отключить введенные Android 11 ограничения на доступ к некоторым папкам внешнего хранилища</string>
+
+    <string name="baikalos_limited_charge_screen_on_title">Ограничить</string>
+    <string name="baikalos_limited_charge_screen_on_summary">Ограничить ток заряда при включенном экране</string>
+    <string name="baikalos_bpcharge_screen_on_title">Обходная зарядка</string>
+    <string name="baikalos_bpcharge_screen_on_summary">Использовать обходную зарядку при включенном экране</string>
+
+    <string name="baikalos_aod_on_charger_title">AOD при зарядке</string>
+    <string name="baikalos_aod_on_charger_summary">Включать Always On Display при зарядке</string>
+
+    <string name="sound_sonif_a2dp_title">Звук уведомления</string>
+    <string name="sonif_a2dp_default">По умолчанию</string>
+    <string name="sonif_a2dp_force_speaker">Форсировать на динамик</string>
+    <string name="sonif_a2dp_duplicate_speaker">Дублировать на динамик</string>
+
+    <string name="app_sound_sonif_a2dp_title">Звук приложения</string>
+
+</resources>

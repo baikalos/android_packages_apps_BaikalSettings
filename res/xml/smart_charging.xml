@@ -18,6 +18,18 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/smart_charging_title">
 
+    <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+        android:key="baikalos_limited_charge_screen_on"
+        android:defaultValue="false"
+        android:title="@string/baikalos_limited_charge_screen_on_title"
+        android:summary="@string/baikalos_limited_charge_screen_on_summary"/>
+
+    <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+        android:key="baikalos_bpcharge_screen_on"
+        android:defaultValue="false"
+        android:title="@string/baikalos_bpcharge_screen_on_title"
+        android:summary="@string/baikalos_bpcharge_screen_on_summary"/>
+
     <com.crdroid.settings.preferences.SystemSettingSwitchPreference
         android:key="smart_charging"
         android:title="@string/smart_charging_switch_title"

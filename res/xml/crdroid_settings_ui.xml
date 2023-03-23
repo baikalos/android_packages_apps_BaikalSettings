@@ -17,7 +17,9 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:lineage="http://schemas.android.com/apk/res-auto"
-    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+    android:title="@string/ui_title"
+    >
 
     <!-- Ambient Display -->
     <Preference
@@ -135,5 +137,31 @@
         android:title="@string/floating_rotation_button_title"
         android:summary="@string/floating_rotation_button_summary"
         android:defaultValue="true" />
+
+    <!-- com.crdroid.settings.preferences.SystemSettingSeekBarPreference
+        android:key="background_blur_radius"
+        android:icon="@drawable/ic_blur"
+        android:title="@string/background_blur_radius_title"
+        android:defaultValue="-1"
+        android:max="255"
+        settings:units="@string/unit_pixels"
+        settings:min="-1" / -->
+
+    <!-- com.crdroid.settings.preferences.SystemSettingSeekBarPreference
+        android:key="blur_behind_radius"
+        android:icon="@drawable/ic_blur"
+        android:title="@string/blur_behind_radius_title"
+        android:defaultValue="23"
+        android:max="255"
+        settings:units="@string/unit_pixels"
+        settings:min="0" / -->
+
+    <!-- com.crdroid.settings.preferences.SystemSettingListPreference
+        android:key="background_blur_type"
+        android:icon="@drawable/ic_blur"
+        android:title="@string/background_blur_type_title"
+        android:entries="@array/background_blur_type_entries"
+        android:entryValues="@array/background_blur_type_values"
+        android:defaultValue="0" / -->
 
 </PreferenceScreen>

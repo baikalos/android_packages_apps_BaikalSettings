@@ -17,7 +17,9 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
-    xmlns:lineage="http://schemas.android.com/apk/res-auto">
+    xmlns:lineage="http://schemas.android.com/apk/res-auto"
+    android:title="@string/lockscreen_title"
+    >
 
     <PreferenceCategory
         android:key="lockscreen_interface_category"
@@ -58,6 +60,13 @@
             android:title="@string/lockscreen_battery_info_title"
             android:summary="@string/lockscreen_battery_info_summary"
             android:defaultValue="true" />
+
+        <com.crdroid.settings.preferences.SecureSettingSwitchPreference
+            android:key="doze_always_on_charger"
+            android:icon="@drawable/ic_doze"
+            android:title="@string/baikalos_aod_on_charger_title"
+            android:summary="@string/baikalos_aod_on_charger_summary"
+            android:defaultValue="false" />
 
         <Preference
             android:key="udfps_settings"

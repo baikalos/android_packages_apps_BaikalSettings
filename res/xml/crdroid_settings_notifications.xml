@@ -17,7 +17,9 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:lineage="http://schemas.android.com/apk/res-auto"
-    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+    android:title="@string/notifications_title"
+    >
 
     <com.crdroid.settings.preferences.SystemSettingSwitchPreference
         android:key="alert_slider_notifications"
@@ -63,6 +65,13 @@
             android:title="@string/notification_heads_up_title"
             android:summary="@string/notification_heads_up_summary"
             android:defaultValue="true" />
+
+        <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+            android:key="baikalos_headsup_incall"
+            android:icon="@drawable/ic_headsup"
+            android:title="@string/baikalos_headsup_incall_title"
+            android:summary="@string/baikalos_headsup_incall_summary"
+            android:defaultValue="false" />
 
         <com.crdroid.settings.preferences.SystemSettingSwitchPreference
             android:key="less_boring_heads_up"

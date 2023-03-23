@@ -75,11 +75,11 @@ public class About extends SettingsPreferenceFragment {
     @Override
     public boolean onPreferenceTreeClick(Preference preference) {
         if (preference == mDonate) {
-            launchUrl("https://crdroid.net/donate.php");
+            launchUrl("https://baikalos.net/donate.php");
         } else if (preference == mSourceUrl) {
-            launchUrl("https://github.com/crdroidandroid");
+            launchUrl("https://github.com/baikalos");
         } else if (preference == mTelegramUrl) {
-            launchUrl("https://t.me/crDroidAndroid");
+            launchUrl("https://t.me/baikalos");
         } else if (preference == mShare) {
             Intent intent = new Intent();
             intent.setAction(Intent.ACTION_SEND);
@@ -88,13 +88,13 @@ public class About extends SettingsPreferenceFragment {
                     getActivity().getString(R.string.share_message), Build.MODEL));
             startActivity(Intent.createChooser(intent, getActivity().getString(R.string.share_chooser_title)));
         } else if (preference == mTranslate) {
-            launchUrl("https://crdroid.net/translations.php");
+            launchUrl("https://baikalos.net/translations.php");
         } else if (preference == mWebsite) {
-            launchUrl("https://crdroid.net");
+            launchUrl("https://baikalos.net");
         } else if (preference == mTelegramChannelUrl) {
-            launchUrl("https://t.me/crDroidUpdates");
+            launchUrl("https://t.me/baikalos");
         } else if (preference == mSponsor) {
-            launchUrl("https://www.scopehosts.com");
+            launchUrl("https://www.baikalos.net");
         }
 
         return super.onPreferenceTreeClick(preference);

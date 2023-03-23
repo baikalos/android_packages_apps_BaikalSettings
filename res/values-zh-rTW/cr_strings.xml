@@ -16,10 +16,10 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- App Title -->
-    <string name="crdroid_settings_title">crDroid 設定</string>
+    <string name="crdroid_settings_title">BaikalOS 設定</string>
     <string name="crdroid_settings_summary">各項設定，一次滿足</string>
     <string name="reset_settings_title">恢復默認設置</string>
-    <string name="reset_settings_message">這會將大多數 crDroid 設定重設為目前使用者的預設值。您要繼續嗎？</string>
+    <string name="reset_settings_message">這會將大多數 BaikalOS 設定重設為目前使用者的預設值。您要繼續嗎？</string>
     <!-- Personalization Categories -->
     <string name="button_title">按鍵</string>
     <string name="lockscreen_title">鎖定螢幕</string>
@@ -57,17 +57,17 @@
     <string name="changelog_crdroid_summary">查看此 ROM 的更新紀錄</string>
     <string name="changelog_crdroid_error">無法載入更新日誌</string>
     <!-- About crDroid -->
-    <string name="about_crdroid">關於 crDroid</string>
+    <string name="about_crdroid">關於 BaikalOS</string>
     <string name="about_device_name">裝置</string>
     <!-- Share crDroid -->
-    <string name="share_crdroid_title">分享 crDroid</string>
-    <string name="share_crdroid_summary">讓別人知道 crDroid</string>
-    <string name="share_message">在 https://crdroid.net/ 看看 #crDroid Android</string>
-    <string name="share_chooser_title">分享 crDroid</string>
+    <string name="share_crdroid_title">分享 BaikalOS</string>
+    <string name="share_crdroid_summary">讓別人知道 BaikalOS</string>
+    <string name="share_message">在 https://github.com/BaikalOS-Devices/ 看看 #BaikalOS Android</string>
+    <string name="share_chooser_title">分享 BaikalOS</string>
     <!-- Sites crDroid -->
     <string name="crdroid_source_title">GitHub</string>
     <string name="crdroid_source_summary">我們愛開源，來看看吧</string>
-    <string name="crdroid_telegram_title">crDroid 社群</string>
+    <string name="crdroid_telegram_title">BaikalOS 社群</string>
     <string name="crdroid_telegram_summary">我們也在 Telegram 上，快加入我們！</string>
     <string name="crdroid_telegram_channel_title">更新通道</string>
     <string name="crdroid_telegram_channel_summary">在 Telegram 上獲取新版本通知</string>
@@ -951,7 +951,7 @@
     <string name="status_bar_logo_summary">在狀態列左側顯示自訂圖示</string>
     <string name="status_bar_logo_position_title">圖示位置</string>
     <string name="status_bar_logo_style_title">圖示樣式</string>
-    <string name="status_bar_logo_style_crdroid">CrDroid</string>
+    <string name="status_bar_logo_style_crdroid">BaikalOS</string>
     <string name="status_bar_logo_style_android">Android</string>
     <string name="status_bar_logo_style_adidas">愛迪達</string>
     <string name="status_bar_logo_style_alien">外星人</string>

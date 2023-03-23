@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * Copyright (C) 2023 BaikalOS
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+-->
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+    xmlns:lineage="http://schemas.android.com/apk/res-auto"
+    android:title="@string/app_profile_title">
+
+        <SwitchPreference
+            android:key="app_profile_pinned"
+            android:title="@string/app_profile_pinned_title"
+            android:summary="@string/app_profile_pinned_summary"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="app_profile_disable_boot"
+            android:title="@string/app_profile_disable_title"
+            android:summary="@string/app_profile_disable_summary"
+            android:defaultValue="false" />
+
+        <ListPreference
+            android:key="app_profile_background"
+            android:title="@string/app_profile_background_title"
+            android:entries="@array/background_restrictions_entries"
+            android:entryValues="@array/background_restrictions_values" 
+            android:defaultValue="default"
+            android:summary="%s"/>
+
+        <SwitchPreference
+            android:key="app_profile_stamina"
+            android:title="@string/app_profile_stamina_title"
+            android:summary="@string/app_profile_stamina_summary"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="app_profile_disable_wakeup"
+            android:title="@string/app_profile_disable_wakeup_title"
+            android:summary="@string/app_profile_disable_wakeup_summary"
+            android:defaultValue="false" />
+
+        <!-- SwitchPreference
+            android:key="app_profile_disable_jobs"
+            android:title="@string/app_profile_disable_jobs_title"
+            android:summary="@string/app_profile_disable_jobs_summary"
+            android:defaultValue="false" / -->
+
+        <!-- SwitchPreference
+            android:key="app_profile_freezer"
+            android:title="@string/app_profile_freezer_title"
+            android:summary="@string/app_profile_freezer_summary"
+            android:defaultValue="false" / -->
+
+        <SwitchPreference
+            android:key="app_profile_idle_network"
+            android:title="@string/app_profile_idle_network_title"
+            android:summary="@string/app_profile_idle_network_summary"
+            android:defaultValue="false" />
+
+        <ListPreference
+            android:key="app_profile_cpu_performance_limit"
+            android:title="@string/app_profile_performance_limit_title"
+            android:entries="@array/cpu_resources_listentries"
+            android:entryValues="@array/cpu_resources_listvalues" 
+            android:defaultValue="default"
+            android:summary="%s"/>
+
+
+        <ListPreference
+            android:key="app_profile_performance"
+            android:title="@string/app_profile_performance_title"
+            android:entries="@array/performance_listentries"
+            android:entryValues="@array/performance_listvalues" 
+            android:defaultValue="default"
+            android:summary="%s"/>
+
+        <ListPreference
+            android:key="app_profile_thermal"
+            android:title="@string/app_profile_thermal_title"
+            android:entries="@array/thermal_listentries"
+            android:entryValues="@array/thermal_listvalues"
+            android:defaultValue="default"
+            android:summary="%s" />
+
+        <SwitchPreference
+            android:key="app_profile_bypass_charging"
+            android:title="@string/app_profile_bypass_charging_title"
+            android:summary="@string/app_profile_bypass_charging_summary"
+            android:defaultValue="false" />
+
+        <ListPreference
+            android:key="app_profile_brightness"
+            android:title="@string/app_profile_brightness_title"
+            android:entries="@array/brightness_listentries"
+            android:entryValues="@array/brightness_listvalues"
+            android:defaultValue="default"
+            android:summary="%s" />
+
+        <ListPreference
+            android:key="app_profile_rotation"
+            android:title="@string/app_profile_rotation_title"
+            android:entries="@array/rotation_listentries"
+            android:entryValues="@array/rotation_listvalues"
+            android:defaultValue="default"
+            android:summary="%s" />
+
+        <!-- SwitchPreference
+            android:key="app_profile_full_screen"
+            android:title="@string/app_profile_full_screen_title"
+            android:summary="@string/app_profile_full_screen_summary"
+            android:defaultValue="false" / -->
+
+        <ListPreference
+            android:key="app_profile_min_fps"
+            android:title="@string/app_profile_min_fps_title"
+            android:defaultValue="0"
+            android:summary="%s" />
+
+        <ListPreference
+            android:key="app_profile_max_fps"
+            android:title="@string/app_profile_max_fps_title"
+            android:defaultValue="0"
+            android:summary="%s" />
+
+        <!-- SwitchPreference
+            android:key="app_profile_require_gms"
+            android:title="@string/app_profile_require_gms_title"
+            android:summary="@string/app_profile_require_gms_summary"
+            android:defaultValue="false" / -->
+
+        <SwitchPreference
+            android:key="app_profile_keep_on"
+            android:title="@string/app_profile_keep_on_title"
+            android:summary="@string/app_profile_keep_on_summary"
+            android:defaultValue="false" />
+
+        <!-- ListPreference
+            android:key="app_profile_location"
+            android:title="@string/app_profile_location_title"
+            android:entries="@array/location_listentries"
+            android:entryValues="@array/location_listvalues"
+            android:defaultValue="0"
+            android:summary="%s" / -->
+
+        <!-- ListPreference
+            android:key="app_profile_camera"
+            android:title="@string/app_profile_camera_title"
+            android:entries="@array/camera_listentries"
+            android:entryValues="@array/camera_listvalues"
+            android:defaultValue="0"
+            android:summary="%s" / -->
+
+        <!-- ListPreference
+            android:key="app_profile_microphone"
+            android:title="@string/app_profile_microphone_title"
+            android:entries="@array/microphone_listentries"
+            android:entryValues="@array/microphone_listvalues"
+            android:defaultValue="0"
+            android:summary="%s" / -->
+
+        <ListPreference
+            android:key="app_profile_spoof"
+            android:title="@string/app_profile_spoof_title"
+            android:entries="@array/spoof_listentries"
+            android:entryValues="@array/spoof_listvalues"
+            android:defaultValue="default"
+            android:summary="%s" />
+
+        <!-- ListPreference
+            android:key="app_profile_language"
+            android:title="@string/app_profile_language_title"
+            android:entries="@array/language_listentries"
+            android:entryValues="@array/language_listvalues"
+            android:defaultValue="default"
+            android:summary="%s" / -->
+
+        <SwitchPreference
+            android:key="app_profile_override_fonts"
+            android:title="@string/app_profile_override_fonts_title"
+            android:summary="@string/app_profile_override_fonts_summary"
+            android:defaultValue="false" />
+
+        <!-- SwitchPreference
+            android:key="app_profile_lowres"
+            android:title="@string/app_profile_lowres_title"
+            android:summary="@string/app_profile_lowres_summary"
+            android:persistent="false" / -->
+
+        <SwitchPreference
+            android:key="app_profile_phka"
+            android:title="@string/app_profile_phka_title"
+            android:summary="@string/app_profile_phka_summary"
+            android:persistent="false" />
+
+        <SwitchPreference
+            android:key="app_profile_devmode"
+            android:title="@string/app_profile_devmode_title"
+            android:summary="@string/app_profile_devmode_summary"
+            android:persistent="false" />
+
+
+        <!-- SwitchPreference
+            android:key="app_profile_reader"
+            android:title="@string/app_profile_reader_title"
+            android:summary="@string/app_profile_reader_summary"
+            android:persistent="false" / -->
+
+        <SwitchPreference
+            android:key="app_profile_forced_screenshot"
+            android:title="@string/app_profile_forced_screenshot_title"
+            android:summary="@string/app_profile_forced_screenshot_summary"
+            android:defaultValue="false" />
+
+        <!-- com.aicp.gear.preference.SeekBarPreferenceCham
+            android:key="app_profile_volume_scale"
+            android:title="@string/app_profile_volume_scale_title"
+            android:max="100"
+            android:min="-1"
+            aicpextras:unitsLeft=""
+            aicpextras:unitsRight=""
+            android:defaultValue="-99999"/ -->
+
+
+        <!-- SwitchPreference
+            android:key="app_profile_block_focus_recv"
+            android:title="@string/app_profile_block_focus_recv_title"
+            android:summary="@string/app_profile_block_focus_recv_summary"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="app_profile_block_focus_send"
+            android:title="@string/app_profile_block_focus_send_title"
+            android:summary="@string/app_profile_block_focus_send_summary"
+            android:defaultValue="false" / -->
+
+        <!-- SwitchPreference
+            android:key="app_profile_force_sonification"
+            android:title="@string/app_profile_force_sonification_title"
+            android:summary="@string/app_profile_force_sonification_summary"
+            android:defaultValue="false" / -->
+
+        <ListPreference
+            android:key="app_profile_force_sonification"
+            android:title="@string/app_sound_sonif_a2dp_title"
+            android:entries="@array/sonif_a2dp_listentries"
+            android:entryValues="@array/sonif_a2dp_listvalues"
+            android:defaultValue="0"
+            android:summary="%s" />
+
+
+
+    <PreferenceCategory
+        android:key="app_profile_boot_options"
+        android:title="@string/app_profile_boot_options_title"
+        android:summary="@string/app_profile_boot_options_summary"
+        >
+
+        <ListPreference
+            android:key="file_access"
+            android:title="@string/file_access_title"
+            android:entries="@array/file_access_listentries"
+            android:entryValues="@array/file_access_listvalues"
+            android:defaultValue="default"
+            android:summary="%s" />
+    
+    </PreferenceCategory>
+
+        <!-- SwitchPreference
+            android:key="app_profile_stamina"
+            android:title="@string/app_profile_stamina_title"
+            android:summary="@string/app_profile_stamina_summary"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="app_profile_restricted"
+            android:title="@string/app_profile_restricted_title"
+            android:summary="@string/app_profile_restricted_summary"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="app_profile_restricted_idle"
+            android:title="@string/app_profile_restricted_idle_title"
+            android:summary="@string/app_profile_restricted_idle_summary"
+            android:defaultValue="false" / -->
+
+        <!-- SwitchPreference
+            android:key="app_profile_disable_twl"
+            android:title="@string/app_profile_disable_twl_title"
+            android:summary="@string/app_profile_disable_twl_summary"
+            android:defaultValue="false" / -->
+
+        <!-- SwitchPreference
+            android:key="app_profile_camera_hal1"
+            android:title="@string/app_profile_camera_hal1_title"
+            android:summary="@string/app_profile_camera_hal1_summary"
+            android:defaultValue="false" / -->
+
+        <!-- Preference
+    	    android:key="app_backup_restore_backup"
+    	    android:title="@string/app_backup_restore_backup_title"
+            android:summary="@string/app_backup_restore_backup_summary"/>
+
+        <Preference
+    	    android:key="app_backup_restore_restore"
+    	    android:title="@string/app_backup_restore_restore_title"
+            android:summary="@string/app_backup_restore_restore_summary"/ -->
+
+</PreferenceScreen>

@@ -16,10 +16,10 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- App Title -->
-    <string name="crdroid_settings_title">Nastavení crDroid</string>
+    <string name="crdroid_settings_title">Nastavení BaikalOS</string>
     <string name="crdroid_settings_summary">Odhalte jeho možnosti</string>
     <string name="reset_settings_title">Obnovit nastavení</string>
-    <string name="reset_settings_message">Tímto obnovíte většinu nastavení crDroidu pro aktuálního uživatele na výchozí hodnoty. Přejete si pokračovat?</string>
+    <string name="reset_settings_message">Tímto obnovíte většinu nastavení BaikalOSu pro aktuálního uživatele na výchozí hodnoty. Přejete si pokračovat?</string>
     <!-- Personalization Categories -->
     <string name="button_title">Tlačítka</string>
     <string name="lockscreen_title">Obrazovka uzamčení</string>
@@ -57,17 +57,17 @@
     <string name="changelog_crdroid_summary">Zobrazit změny v\u00a0nainstalované ROM</string>
     <string name="changelog_crdroid_error">Nelze načíst seznam změn</string>
     <!-- About crDroid -->
-    <string name="about_crdroid">O crDroidu</string>
+    <string name="about_crdroid">O BaikalOSu</string>
     <string name="about_device_name">Zařízení</string>
     <!-- Share crDroid -->
-    <string name="share_crdroid_title">Sdílet crDroid</string>
-    <string name="share_crdroid_summary">Dejte vědět ostatním o\u00a0crDroidu</string>
-    <string name="share_message">Podívejte se, jestli je k dispozici #crDroidAndroid pro vaše zařízení @ https://crdroid.net/</string>
-    <string name="share_chooser_title">Sdílet crDroid</string>
+    <string name="share_crdroid_title">Sdílet BaikalOS</string>
+    <string name="share_crdroid_summary">Dejte vědět ostatním o\u00a0BaikalOSu</string>
+    <string name="share_message">Podívejte se, jestli je k dispozici #BaikalOS pro vaše zařízení @ https://github.com/BaikalOS-Devices/</string>
+    <string name="share_chooser_title">Sdílet BaikalOS</string>
     <!-- Sites crDroid -->
     <string name="crdroid_source_title">GitHub</string>
     <string name="crdroid_source_summary">Máme rádi open source. Podívejte se, co děláme</string>
-    <string name="crdroid_telegram_title">Komunita crDroidu</string>
+    <string name="crdroid_telegram_title">Komunita BaikalOSu</string>
     <string name="crdroid_telegram_summary">Jsme na Telegramu. Přidejte se k\u00a0nám!</string>
     <string name="crdroid_telegram_channel_title">Kanál aktualizací</string>
     <string name="crdroid_telegram_channel_summary">Dostávejte na Telegramu oznámení o\u00a0nových sestaveních</string>
@@ -957,7 +957,7 @@
     <string name="status_bar_logo_summary">Zobrazit vlastní logo vlevo nebo vpravo na stavové liště</string>
     <string name="status_bar_logo_position_title">Umístění loga</string>
     <string name="status_bar_logo_style_title">Styl loga</string>
-    <string name="status_bar_logo_style_crdroid">CrDroid</string>
+    <string name="status_bar_logo_style_crdroid">BaikalOS</string>
     <string name="status_bar_logo_style_android">Android</string>
     <string name="status_bar_logo_style_adidas">Adidas</string>
     <string name="status_bar_logo_style_alien">Alien</string>

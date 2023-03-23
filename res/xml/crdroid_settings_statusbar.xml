@@ -17,7 +17,21 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
-    xmlns:lineage="http://schemas.android.com/apk/res-auto">
+    xmlns:lineage="http://schemas.android.com/apk/res-auto"
+    android:title="@string/statusbar_title"
+    >
+
+    <!-- Status bar icons customizations -->
+    <!-- PreferenceCategory
+        android:title="@string/status_bar_notch_category_title">
+
+        <com.crdroid.settings.preferences.SystemSettingSwitchPreference
+            android:key="display_cutout_mode"
+            android:title="@string/display_hide_notch_title"
+            android:summary="@string/display_hide_notch_summary"
+            android:defaultValue="0" />
+
+    </PreferenceCategory -->
 
     <!-- Status bar icons customizations -->
     <PreferenceCategory

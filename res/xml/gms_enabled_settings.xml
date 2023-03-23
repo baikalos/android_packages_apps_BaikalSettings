@@ -18,15 +18,10 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/gms_enabled_title">
 
-    <com.crdroid.settings.preferences.SecureSettingSwitchPreference
+    <SwitchPreference
         android:key="gms_enabled"
-        android:title="@string/enable"
+        android:title="@string/gms_enabled_title"
         android:summary="@string/gms_enabled_summary"
-        android:defaultValue="true" />
+        android:defaultValue="false" />
 
-    <com.android.settingslib.widget.FooterPreference
-        android:key="gms_enabled_footer"
-        android:selectable="false"
-        settings:searchable="false"
-        android:dependency="gms_enabled" />
 </PreferenceScreen>
