@@ -30,7 +30,7 @@
     <string name="sound_title">Звук</string>
     <string name="statusbar_title">Строка состояния</string>
     <string name="display_title">Экран</string>
-    <string name="ui_title">Пользовательский интерфейс</string>
+    <string name="ui_title">Интерфейс</string>
     <!-- Color Picker -->
     <string name="dialog_color_picker">Цветовая палитра</string>
     <string name="press_color_to_apply">Нажмите на выбранный цвет для применения</string>
@@ -1073,4 +1073,8 @@
     <string name="enable_protection">Включить защиту</string>
     <string name="hide_from_launcher_title">Скрыть из меню приложений</string>
     <string name="hide_from_launcher_summary">Запретить отображение этого приложения в любом лаунчере. Для вступления изменений в силу требуется перезапуск лаунчера.</string>
+
+    <string name="doze_on_charge_title">Всегда включать при зарядке</string>
+    <string name="doze_on_charge_summary">Включать AOD при подключенной зарядке</string>
+
 </resources>
