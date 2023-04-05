@@ -73,7 +73,7 @@ public class Miscellaneous extends SettingsPreferenceFragment implements
 
         mSmartCharging = (Preference) prefScreen.findPreference(SMART_CHARGING);
         boolean mSmartChargingSupported = res.getBoolean(
-                com.android.internal.R.bool.config_smartChargingAvailable);
+                com.android.internal.R.bool.config_bypassChargingAvailable);
 
         if( !BaikalConstants.isKernelCompatible() ) mSmartChargingSupported = false;
 
@@ -163,7 +163,7 @@ public class Miscellaneous extends SettingsPreferenceFragment implements
                     final Resources res = context.getResources();
 
                     boolean mSmartChargingSupported = res.getBoolean(
-                            com.android.internal.R.bool.config_smartChargingAvailable);
+                            com.android.internal.R.bool.config_bypassChargingAvailable);
                     if (!mSmartChargingSupported)
                         keys.add(SMART_CHARGING);
 
