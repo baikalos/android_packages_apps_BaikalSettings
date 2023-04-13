@@ -60,15 +60,15 @@
     <string name="changelog_crdroid_title">Τρέχον αρχείο αλλαγών</string>
     <string name="changelog_crdroid_summary">Προβολή αλλαγών στην εγκατεστημένη ROM</string>
     <string name="changelog_crdroid_error">Αποτυχία φόρτωσης του αρχείου αλλαγών</string>
-    <!-- About crDroid -->
+    <!-- About BaikalOS -->
     <string name="about_crdroid">Σχετικά με το BaikalOS</string>
     <string name="about_device_name">Συσκευή</string>
-    <!-- Share crDroid -->
+    <!-- Share BaikalOS -->
     <string name="share_crdroid_title">Μοιραστείτε το BaikalOS</string>
     <string name="share_crdroid_summary">Ενημερώστε τους άλλους για το BaikalOS</string>
     <string name="share_message">Ελέγξτε αν το #BaikalOS είναι διαθέσιμο για τη συσκευή σας @ https://github.com/BaikalOS-Devices/</string>
     <string name="share_chooser_title">Μοιραστείτε το BaikalOS</string>
-    <!-- Sites crDroid -->
+    <!-- Sites BaikalOS -->
     <string name="crdroid_source_title">GitHub</string>
     <string name="crdroid_source_summary">Μας αρέσει ο ανοιχτός κώδικας, ελέγξτε μας</string>
     <string name="crdroid_telegram_title">Κοινότητα BaikalOS</string>
@@ -80,10 +80,10 @@
     <string name="crdroid_translate_title">Μεταφράσεις</string>
     <string name="crdroid_translate_summary">Βοηθήστε στη μετάφραση της ROM στη γλώσσα σας!</string>
     <string name="crdroid_sponsor_summary">Επισκεφθείτε τον συνεργάτη φιλοξενίας της ιστοσελίδας μας</string>
-    <!-- Donate crDroid -->
+    <!-- Donate BaikalOS -->
     <string name="donate_crdroid_title">Υποστηρίξτε μας</string>
     <string name="donate_crdroid_summary">Δωρεά για την υποστήριξη της περαιτέρω ανάπτυξης</string>
-    <string name="donate_team_title">Ομάδα crDroid</string>
+    <string name="donate_team_title">Ομάδα BaikalOS</string>
     <string name="donate_team_summary">Δωρεά για την υποστήριξη της φιλοξενίας διακομιστή, του χρόνου λειτουργίας του ιστότοπου και της συνολικής διαχείρισης</string>
     <!-- The Drill -->
     <string name="drill_title">The Drill</string>
@@ -557,8 +557,8 @@
     <string name="qs_footer_show_power_menu_title">Συντόμευση μενού ισχύος</string>
     <string name="qs_footer_services_icon_title">Συντόμευση υπηρεσιών που εκτελούνται</string>
     <string name="qs_footer_settings_icon_title">Συντόμευση ρυθμίσεων</string>
-    <!-- Device Info screen. crDroid legal. -->
-    <string name="crdroid_license_title">Νομικές σημειώσεις του crDroid</string>
+    <!-- Device Info screen. BaikalOS legal. -->
+    <string name="crdroid_license_title">Νομικές σημειώσεις του BaikalOS</string>
     <!-- Quick Settings brightness slider -->
     <string name="qs_show_brightness_slider_title">Ρυθμιστικό φωτεινότητας</string>
     <string name="qs_show_brightness_slider_never">Να μην εμφανίζεται ποτέ</string>
@@ -1047,13 +1047,16 @@
     <string name="lockscreen_shortcut_category">Κάτω συντομεύσεις</string>
     <string name="lockscreen_shortcut_start_title">Αριστερή συντόμευση</string>
     <string name="lockscreen_shortcut_end_title">Δεξιά συντόμευση</string>
-    <string name="lockscreen_shortcut_home">Έλεγχοι σπιτιού</string>
     <string name="lockscreen_shortcut_wallet">Πορτοφόλι</string>
+    <string name="lockscreen_shortcut_home">Έλεγχοι σπιτιού</string>
     <string name="lockscreen_shortcut_flashlight">Φακός</string>
     <string name="lockscreen_shortcut_qr">Σαρωτής QR code</string>
     <string name="lockscreen_shortcut_camera">Κάμερα</string>
     <string name="lockscreen_shortcut_remote">Google TV Remote</string>
+    <string name="lockscreen_shortcut_dnd">Μην ενοχλείτε (DND)</string>
     <string name="lockscreen_shortcut_none">Κανένα</string>
+    <string name="lockscreen_shortcut_enforce_title">Επιβολή συντομεύσεων</string>
+    <string name="lockscreen_shortcut_enforce_summary">Να μην εμφανίζεται η επόμενη διαθέσιμη συντόμευση εάν η επιλεγμένη συντόμευση δεν είναι διαθέσιμη</string>
     <!-- App lock -->
     <string name="app_lock_title">Κλείδωμα εφαρμογών</string>
     <plurals name="app_lock_summary">

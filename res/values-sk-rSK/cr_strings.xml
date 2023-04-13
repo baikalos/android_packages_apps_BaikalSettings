@@ -60,15 +60,15 @@
     <string name="changelog_crdroid_title">Aktuálny zoznam zmien</string>
     <string name="changelog_crdroid_summary">Zobraziť zmeny v nainštalovanej ROM</string>
     <string name="changelog_crdroid_error">Nie je možné načítať zoznam zmien</string>
-    <!-- About crDroid -->
+    <!-- About BaikalOS -->
     <string name="about_crdroid">O BaikalOS</string>
     <string name="about_device_name">Zariadenie</string>
-    <!-- Share crDroid -->
+    <!-- Share BaikalOS -->
     <string name="share_crdroid_title">Zdieľať BaikalOS</string>
     <string name="share_crdroid_summary">Dajte ostatným vedieť o BaikalOS</string>
     <string name="share_message">Zistite o #BaikalOS viac na @ https://BaikalOS.net/</string>
     <string name="share_chooser_title">Zdieľať BaikalOS</string>
-    <!-- Sites crDroid -->
+    <!-- Sites BaikalOS -->
     <string name="crdroid_source_title">GitHub</string>
     <string name="crdroid_source_summary">Máme radi open source, pozrite sa na nás</string>
     <string name="crdroid_telegram_title">Telegram</string>
@@ -81,10 +81,10 @@
     <string name="crdroid_translate_summary">Pomoc s lokalizáciou ROM vo vašom jazyku! 
 Ashle-XDA [SLOVAK Preklad]</string>
     <string name="crdroid_sponsor_summary">Navštívte hostiteľa nášho webu</string>
-    <!-- Donate crDroid -->
+    <!-- Donate BaikalOS -->
     <string name="donate_crdroid_title">Podporte nás</string>
     <string name="donate_crdroid_summary">Prispejte na podporu rozvoja a na náš server</string>
-    <string name="donate_team_title">crDroid tím</string>
+    <string name="donate_team_title">BaikalOS tím</string>
     <string name="donate_team_summary">Prispejte na podporu hostingového servera, prevádzku a celkovú správu webu</string>
     <!-- The Drill -->
     <string name="drill_title">Správa od vývojárov</string>
@@ -560,8 +560,8 @@ Ashle-XDA [SLOVAK Preklad]</string>
     <string name="qs_footer_show_power_menu_title">Možnosti ponuky tlačidla Napájanie</string>
     <string name="qs_footer_services_icon_title">Odkaz na spustené služby</string>
     <string name="qs_footer_settings_icon_title">Odkaz na nastavenia</string>
-    <!-- Device Info screen. crDroid legal. -->
-    <string name="crdroid_license_title">Licencia crDroid</string>
+    <!-- Device Info screen. BaikalOS legal. -->
+    <string name="crdroid_license_title">Licencia BaikalOS</string>
     <!-- Quick Settings brightness slider -->
     <string name="qs_show_brightness_slider_title">Posuvník jasu</string>
     <string name="qs_show_brightness_slider_never">Nikdy nezobrazovať</string>
@@ -1052,13 +1052,16 @@ Ashle-XDA [SLOVAK Preklad]</string>
     <string name="lockscreen_shortcut_category">Dolné odkazy</string>
     <string name="lockscreen_shortcut_start_title">Ľavá skratka</string>
     <string name="lockscreen_shortcut_end_title">Pravá skratka</string>
-    <string name="lockscreen_shortcut_home">Ovládanie Domov</string>
     <string name="lockscreen_shortcut_wallet">Peňaženka</string>
+    <string name="lockscreen_shortcut_home">Ovládanie Domov</string>
     <string name="lockscreen_shortcut_flashlight">Svietidlo</string>
     <string name="lockscreen_shortcut_qr">Skener QR kódov</string>
     <string name="lockscreen_shortcut_camera">Fotoaparát</string>
     <string name="lockscreen_shortcut_remote">Diaľkové ovládanie Google TV</string>
+    <string name="lockscreen_shortcut_dnd">DND</string>
     <string name="lockscreen_shortcut_none">Žiadna</string>
+    <string name="lockscreen_shortcut_enforce_title">Enforce shortcuts</string>
+    <string name="lockscreen_shortcut_enforce_summary">Do not display next available shortcut if chosen shortcut is not available</string>
     <!-- App lock -->
     <string name="app_lock_title">Zámok aplikácií</string>
     <plurals name="app_lock_summary">

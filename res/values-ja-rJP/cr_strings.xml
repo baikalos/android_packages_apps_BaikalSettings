@@ -60,15 +60,15 @@
     <string name="changelog_crdroid_title">最近の更新履歴</string>
     <string name="changelog_crdroid_summary">インストールされている ROM の更新内容を確認します</string>
     <string name="changelog_crdroid_error">更新履歴を読み込めませんでした</string>
-    <!-- About crDroid -->
+    <!-- About BaikalOS -->
     <string name="about_crdroid">BaikalOS について</string>
     <string name="about_device_name">デバイス</string>
-    <!-- Share crDroid -->
+    <!-- Share BaikalOS -->
     <string name="share_crdroid_title">BaikalOS についてシェアする</string>
     <string name="share_crdroid_summary">みんなに BaikalOS を知ってもらいましょう</string>
     <string name="share_message">カスタム ROM #BaikalOS を使ってみて！ https://github.com/BaikalOS-Devices/</string>
     <string name="share_chooser_title">BaikalOS をシェア</string>
-    <!-- Sites crDroid -->
+    <!-- Sites BaikalOS -->
     <string name="crdroid_source_title">GitHub</string>
     <string name="crdroid_source_summary">私たちはオープンソースを愛しています。見てみてください</string>
     <string name="crdroid_telegram_title">BaikalOS コミュニティ</string>
@@ -80,10 +80,10 @@
     <string name="crdroid_translate_title">翻訳</string>
     <string name="crdroid_translate_summary">あなたの言語に翻訳するのを手伝ってください！</string>
     <string name="crdroid_sponsor_summary">ウェブサイトのホストパートナーを開きます</string>
-    <!-- Donate crDroid -->
+    <!-- Donate BaikalOS -->
     <string name="donate_crdroid_title">私たちを支援する</string>
     <string name="donate_crdroid_summary">さらなる開発を支援するために寄付をお願いします</string>
-    <string name="donate_team_title">crDroid チーム</string>
+    <string name="donate_team_title">BaikalOS チーム</string>
     <string name="donate_team_summary">寄付でホスティングサーバーや全体的な管理を助けてください</string>
     <!-- The Drill -->
     <string name="drill_title">正しいやり方</string>
@@ -556,8 +556,8 @@
     <string name="qs_footer_show_power_menu_title">電源メニューのショートカット</string>
     <string name="qs_footer_services_icon_title">実行中サービスのショートカット</string>
     <string name="qs_footer_settings_icon_title">設定のショートカット</string>
-    <!-- Device Info screen. crDroid legal. -->
-    <string name="crdroid_license_title">crDroid ライセンス</string>
+    <!-- Device Info screen. BaikalOS legal. -->
+    <string name="crdroid_license_title">BaikalOS ライセンス</string>
     <!-- Quick Settings brightness slider -->
     <string name="qs_show_brightness_slider_title">明るさスライダー</string>
     <string name="qs_show_brightness_slider_never">表示しない</string>
@@ -1045,13 +1045,16 @@
     <string name="lockscreen_shortcut_category">下側のショートカット</string>
     <string name="lockscreen_shortcut_start_title">左側のショートカット</string>
     <string name="lockscreen_shortcut_end_title">右側のショートカット</string>
-    <string name="lockscreen_shortcut_home">ホーム操作</string>
     <string name="lockscreen_shortcut_wallet">ウォレット</string>
+    <string name="lockscreen_shortcut_home">ホーム操作</string>
     <string name="lockscreen_shortcut_flashlight">ライト</string>
     <string name="lockscreen_shortcut_qr">QR コードスキャナー</string>
     <string name="lockscreen_shortcut_camera">カメラ</string>
     <string name="lockscreen_shortcut_remote">Google TV Remote</string>
+    <string name="lockscreen_shortcut_dnd">DND</string>
     <string name="lockscreen_shortcut_none">なし</string>
+    <string name="lockscreen_shortcut_enforce_title">ショートカットを強制する</string>
+    <string name="lockscreen_shortcut_enforce_summary">選択したショートカットが利用できない場合に、次に利用可能なショートカットを表示しません</string>
     <!-- App lock -->
     <string name="app_lock_title">アプリのロック</string>
     <plurals name="app_lock_summary">

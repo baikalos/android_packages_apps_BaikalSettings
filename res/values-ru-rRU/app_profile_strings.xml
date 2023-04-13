@@ -220,4 +220,7 @@
     <string name="app_profile_full_screen_title">Полный экран</string>
     <string name="app_profile_full_screen_summary">Форсировать полноэкранный режим</string>
 
+    <string name="app_profile_debug_title">Отладка</string>
+    <string name="app_profile_debug_summary">Разрешить генерацию подробной отладочной информации для приложения. Не включайте без причины. Это сильно ухудшит производительность.</string>
+
 </resources>

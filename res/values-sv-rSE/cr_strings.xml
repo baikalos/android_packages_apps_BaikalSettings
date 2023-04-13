@@ -60,15 +60,15 @@
     <string name="changelog_crdroid_title">Nuvarande ändringslogg</string>
     <string name="changelog_crdroid_summary">Visa ändringar i den ROM som är installerad</string>
     <string name="changelog_crdroid_error">Laddningen av ändringsloggen kunde inte genomföras</string>
-    <!-- About crDroid -->
+    <!-- About BaikalOS -->
     <string name="about_crdroid">Om BaikalOS</string>
     <string name="about_device_name">Enhet</string>
-    <!-- Share crDroid -->
+    <!-- Share BaikalOS -->
     <string name="share_crdroid_title">Dela BaikalOS</string>
     <string name="share_crdroid_summary">Dela med dig av BaikalOS till andra</string>
     <string name="share_message">Kontrollera ifall #BaikalOS finns tillgänglig för din enhet @ https://github.com/BaikalOS-Devices/</string>
     <string name="share_chooser_title">Dela med dig av BaikalOS</string>
-    <!-- Sites crDroid -->
+    <!-- Sites BaikalOS -->
     <string name="crdroid_source_title">GitHub</string>
     <string name="crdroid_source_summary">Vi älskar öppen källkod, kolla in oss</string>
     <string name="crdroid_telegram_title">BaikalOS gemenskap</string>
@@ -80,10 +80,10 @@
     <string name="crdroid_translate_title">Översättningar</string>
     <string name="crdroid_translate_summary">Bidra med att lokalisera ROM till ditt språk!</string>
     <string name="crdroid_sponsor_summary">Besök sponsorn till vår hemsida</string>
-    <!-- Donate crDroid -->
+    <!-- Donate BaikalOS -->
     <string name="donate_crdroid_title">Stöd oss</string>
     <string name="donate_crdroid_summary">Skänk en donation för att stödja vidare utveckling</string>
-    <string name="donate_team_title">crDroid teamet</string>
+    <string name="donate_team_title">BaikalOS teamet</string>
     <string name="donate_team_summary">Ge en donation för att stödja tillhandahållande av servrar, hemsidans tillgänglighet samt övergripande hantering</string>
     <!-- The Drill -->
     <string name="drill_title">Rutinen</string>
@@ -557,8 +557,8 @@
     <string name="qs_footer_show_power_menu_title">Genväg till avstängningsmenyn</string>
     <string name="qs_footer_services_icon_title">Genväg till aktiva tjänster</string>
     <string name="qs_footer_settings_icon_title">Genväg till inställningar</string>
-    <!-- Device Info screen. crDroid legal. -->
-    <string name="crdroid_license_title">crDroid juridik</string>
+    <!-- Device Info screen. BaikalOS legal. -->
+    <string name="crdroid_license_title">BaikalOS juridik</string>
     <!-- Quick Settings brightness slider -->
     <string name="qs_show_brightness_slider_title">Ljusstyrkereglage</string>
     <string name="qs_show_brightness_slider_never">Visa aldrig</string>
@@ -1047,13 +1047,16 @@
     <string name="lockscreen_shortcut_category">Bottom shortcuts</string>
     <string name="lockscreen_shortcut_start_title">Left shortcut</string>
     <string name="lockscreen_shortcut_end_title">Right shortcut</string>
-    <string name="lockscreen_shortcut_home">Home controls</string>
     <string name="lockscreen_shortcut_wallet">Wallet</string>
+    <string name="lockscreen_shortcut_home">Home controls</string>
     <string name="lockscreen_shortcut_flashlight">Ficklampa</string>
     <string name="lockscreen_shortcut_qr">QR code scanner</string>
     <string name="lockscreen_shortcut_camera">Kamera</string>
     <string name="lockscreen_shortcut_remote">Google TV Remote</string>
+    <string name="lockscreen_shortcut_dnd">DND</string>
     <string name="lockscreen_shortcut_none">Ingen</string>
+    <string name="lockscreen_shortcut_enforce_title">Enforce shortcuts</string>
+    <string name="lockscreen_shortcut_enforce_summary">Do not display next available shortcut if chosen shortcut is not available</string>
     <!-- App lock -->
     <string name="app_lock_title">App lock</string>
     <plurals name="app_lock_summary">

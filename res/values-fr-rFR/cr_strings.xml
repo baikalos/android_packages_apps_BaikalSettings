@@ -60,15 +60,15 @@
     <string name="changelog_crdroid_title">Liste des changements</string>
     <string name="changelog_crdroid_summary">Afficher les modifications de cette version</string>
     <string name="changelog_crdroid_error">Impossible de charger la liste des changements</string>
-    <!-- About crDroid -->
+    <!-- About BaikalOS -->
     <string name="about_crdroid">À propos de BaikalOS</string>
     <string name="about_device_name">Appareil</string>
-    <!-- Share crDroid -->
+    <!-- Share BaikalOS -->
     <string name="share_crdroid_title">Partager BaikalOS</string>
     <string name="share_crdroid_summary">Faire connaitre BaikalOS</string>
     <string name="share_message">Vérifiez si #BaikalOS est disponible pour votre appareil @ https://github.com/BaikalOS-Devices/</string>
     <string name="share_chooser_title">Partager BaikalOS</string>
-    <!-- Sites crDroid -->
+    <!-- Sites BaikalOS -->
     <string name="crdroid_source_title">Open source</string>
     <string name="crdroid_source_summary">Consulter notre Github</string>
     <string name="crdroid_telegram_title">Communauté BaikalOS</string>
@@ -78,12 +78,12 @@
     <string name="crdroid_website_title">Site officiel</string>
     <string name="crdroid_website_summary">Visiter notre site web officiel</string>
     <string name="crdroid_translate_title">Traductions</string>
-    <string name="crdroid_translate_summary">Aider à la traduction de crDroid</string>
+    <string name="crdroid_translate_summary">Aider à la traduction de BaikalOS</string>
     <string name="crdroid_sponsor_summary">Visiter notre partenaire hébergeur web</string>
-    <!-- Donate crDroid -->
+    <!-- Donate BaikalOS -->
     <string name="donate_crdroid_title">Soutenez-nous</string>
     <string name="donate_crdroid_summary">Faire un don pour soutenir le développement</string>
-    <string name="donate_team_title">L\'équipe crDroid</string>
+    <string name="donate_team_title">L\'équipe BaikalOS</string>
     <string name="donate_team_summary">Faire un don pour contribuer aux serveurs d’hébergement, à la maintenance du site et à la gestion globale du projet</string>
     <!-- The Drill -->
     <string name="drill_title">Oups !</string>
@@ -557,8 +557,8 @@
     <string name="qs_footer_show_power_menu_title">Raccourci du menu marche/arrêt</string>
     <string name="qs_footer_services_icon_title">Services en cours d\'exécution</string>
     <string name="qs_footer_settings_icon_title">Paramètres Android</string>
-    <!-- Device Info screen. crDroid legal. -->
-    <string name="crdroid_license_title">Licence crDroid</string>
+    <!-- Device Info screen. BaikalOS legal. -->
+    <string name="crdroid_license_title">Licence BaikalOS</string>
     <!-- Quick Settings brightness slider -->
     <string name="qs_show_brightness_slider_title">Curseur de luminosité</string>
     <string name="qs_show_brightness_slider_never">Ne jamais afficher</string>
@@ -1047,13 +1047,16 @@
     <string name="lockscreen_shortcut_category">Raccourcis en bas de l\'écran de verrouillage</string>
     <string name="lockscreen_shortcut_start_title">Raccourci de gauche</string>
     <string name="lockscreen_shortcut_end_title">Raccourci de droite</string>
-    <string name="lockscreen_shortcut_home">Raccourcis de l\'accueil</string>
     <string name="lockscreen_shortcut_wallet">Portefeuille</string>
+    <string name="lockscreen_shortcut_home">Raccourcis de l\'accueil</string>
     <string name="lockscreen_shortcut_flashlight">Lampe torche</string>
     <string name="lockscreen_shortcut_qr">Scanner de QR code</string>
     <string name="lockscreen_shortcut_camera">Appareil photo</string>
     <string name="lockscreen_shortcut_remote">Télécommande Google TV</string>
+    <string name="lockscreen_shortcut_dnd">DND</string>
     <string name="lockscreen_shortcut_none">Aucun</string>
+    <string name="lockscreen_shortcut_enforce_title">Forcer les raccourcis</string>
+    <string name="lockscreen_shortcut_enforce_summary">Ne pas afficher le prochain raccourci disponible si le raccourci choisi n\'est pas disponible</string>
     <!-- App lock -->
     <string name="app_lock_title">Verrouillage d\'applications</string>
     <plurals name="app_lock_summary">

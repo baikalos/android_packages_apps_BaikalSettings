@@ -60,15 +60,15 @@
     <string name="changelog_crdroid_title">Registro de cambios</string>
     <string name="changelog_crdroid_summary">Ver los cambios en la ROM instalada</string>
     <string name="changelog_crdroid_error">No se ha podido cargar el registro de cambios</string>
-    <!-- About crDroid -->
+    <!-- About BaikalOS -->
     <string name="about_crdroid">Acerca de BaikalOS</string>
     <string name="about_device_name">Dispositivo</string>
-    <!-- Share crDroid -->
+    <!-- Share BaikalOS -->
     <string name="share_crdroid_title">Compartir BaikalOS</string>
     <string name="share_crdroid_summary">Haz saber a los demás qué es BaikalOS</string>
     <string name="share_message">Echa un vistazo si #BaikalOS está disponible para tu dispositivo @ https://github.com/BaikalOS-Devices/</string>
     <string name="share_chooser_title">Compartir BaikalOS</string>
-    <!-- Sites crDroid -->
+    <!-- Sites BaikalOS -->
     <string name="crdroid_source_title">GitHub</string>
     <string name="crdroid_source_summary">Nos encanta el código abierto, échanos un vistazo</string>
     <string name="crdroid_telegram_title">comunidad de BaikalOS</string>
@@ -80,10 +80,10 @@
     <string name="crdroid_translate_title">Traducciones</string>
     <string name="crdroid_translate_summary">¡Ayuda con la traducción de la ROM en tu idioma!</string>
     <string name="crdroid_sponsor_summary">Visita a nuestro socio de alojamiento web</string>
-    <!-- Donate crDroid -->
+    <!-- Donate BaikalOS -->
     <string name="donate_crdroid_title">Apóyanos</string>
     <string name="donate_crdroid_summary">Donar para apoyar un mejor desarrollo</string>
-    <string name="donate_team_title">equipo crDroid</string>
+    <string name="donate_team_title">equipo BaikalOS</string>
     <string name="donate_team_summary">Haz una donación para apoyar el alojamiento del servidor, el tiempo de actividad del sitio y la administración general</string>
     <!-- The Drill -->
     <string name="drill_title">El taladro</string>
@@ -558,8 +558,8 @@ Mantén presionado para establecer</string>
     <string name="qs_footer_show_power_menu_title">Acceso directo al menú de apagado</string>
     <string name="qs_footer_services_icon_title">Acceso directo a servicios en ejecución</string>
     <string name="qs_footer_settings_icon_title">Acceso directo a ajustes</string>
-    <!-- Device Info screen. crDroid legal. -->
-    <string name="crdroid_license_title">Equipo legal de crDroid</string>
+    <!-- Device Info screen. BaikalOS legal. -->
+    <string name="crdroid_license_title">Equipo legal de BaikalOS</string>
     <!-- Quick Settings brightness slider -->
     <string name="qs_show_brightness_slider_title">Barra de brillo</string>
     <string name="qs_show_brightness_slider_never">No mostrar nunca</string>
@@ -1048,13 +1048,16 @@ Mantén presionado para establecer</string>
     <string name="lockscreen_shortcut_category">Accesos directos inferiores</string>
     <string name="lockscreen_shortcut_start_title">Acceso directo izquierdo</string>
     <string name="lockscreen_shortcut_end_title">Acceso directo derecho</string>
-    <string name="lockscreen_shortcut_home">Control del Hogar</string>
     <string name="lockscreen_shortcut_wallet">Billetera</string>
+    <string name="lockscreen_shortcut_home">Control del Hogar</string>
     <string name="lockscreen_shortcut_flashlight">Linterna</string>
     <string name="lockscreen_shortcut_qr">Escáner de códigos QR</string>
     <string name="lockscreen_shortcut_camera">Cámara</string>
     <string name="lockscreen_shortcut_remote">Control de Google TV</string>
+    <string name="lockscreen_shortcut_dnd">DND</string>
     <string name="lockscreen_shortcut_none">Ninguno</string>
+    <string name="lockscreen_shortcut_enforce_title">Enforce shortcuts</string>
+    <string name="lockscreen_shortcut_enforce_summary">Do not display next available shortcut if chosen shortcut is not available</string>
     <!-- App lock -->
     <string name="app_lock_title">Bloqueo de aplicaciones</string>
     <plurals name="app_lock_summary">

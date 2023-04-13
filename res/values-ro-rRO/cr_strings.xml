@@ -60,15 +60,15 @@
     <string name="changelog_crdroid_title">Jurnal modificări curente</string>
     <string name="changelog_crdroid_summary">Vezi modificările în ROM-ul instalat</string>
     <string name="changelog_crdroid_error">Imposibil de încărcat jurnalul modificărilor</string>
-    <!-- About crDroid -->
+    <!-- About BaikalOS -->
     <string name="about_crdroid">Despre BaikalOS</string>
     <string name="about_device_name">Dispozitiv</string>
-    <!-- Share crDroid -->
+    <!-- Share BaikalOS -->
     <string name="share_crdroid_title">Distribuie BaikalOS</string>
     <string name="share_crdroid_summary">Anunta-i si pe altii despre BaikalOS</string>
     <string name="share_message">Verifică dacă #BaikalOS este disponibil pentru dispozitivul tău @ https://github.com/BaikalOS-Devices/</string>
     <string name="share_chooser_title">Distribuie BaikalOS</string>
-    <!-- Sites crDroid -->
+    <!-- Sites BaikalOS -->
     <string name="crdroid_source_title">GitHub</string>
     <string name="crdroid_source_summary">Ne plac sursele deschise, vezi mai mulle</string>
     <string name="crdroid_telegram_title">Comunitatea BaikalOS</string>
@@ -80,10 +80,10 @@
     <string name="crdroid_translate_title">Traduceri</string>
     <string name="crdroid_translate_summary">Ajută la localizarea ROM-ului în limba ta!</string>
     <string name="crdroid_sponsor_summary">Vizitați partenerul nostru gazdă</string>
-    <!-- Donate crDroid -->
+    <!-- Donate BaikalOS -->
     <string name="donate_crdroid_title">Susține-ne</string>
     <string name="donate_crdroid_summary">Donează pentru a sprijini dezvoltarea ulterioară</string>
-    <string name="donate_team_title">Echipa crDroid</string>
+    <string name="donate_team_title">Echipa BaikalOS</string>
     <string name="donate_team_summary">Donați pentru a sprijini serverul de găzduire, site-ul uptime și managementul general</string>
     <!-- The Drill -->
     <string name="drill_title">Exercițiul</string>
@@ -558,8 +558,8 @@
     <string name="qs_footer_show_power_menu_title">Scurtătură meniu pornire</string>
     <string name="qs_footer_services_icon_title">Scurtătură servicii rulante</string>
     <string name="qs_footer_settings_icon_title">Scurtătură setări</string>
-    <!-- Device Info screen. crDroid legal. -->
-    <string name="crdroid_license_title">Legal crDroid</string>
+    <!-- Device Info screen. BaikalOS legal. -->
+    <string name="crdroid_license_title">Legal BaikalOS</string>
     <!-- Quick Settings brightness slider -->
     <string name="qs_show_brightness_slider_title">Cursor luminozitate</string>
     <string name="qs_show_brightness_slider_never">Nu arăta niciodată</string>
@@ -1049,13 +1049,16 @@
     <string name="lockscreen_shortcut_category">Comenzi rapide din josul ecranului de deblocare</string>
     <string name="lockscreen_shortcut_start_title">Scurtătură stânga</string>
     <string name="lockscreen_shortcut_end_title">Scurtătură dreapta</string>
-    <string name="lockscreen_shortcut_home">Comenzi acasă</string>
     <string name="lockscreen_shortcut_wallet">Portofel</string>
+    <string name="lockscreen_shortcut_home">Comenzi acasă</string>
     <string name="lockscreen_shortcut_flashlight">Lanternă</string>
     <string name="lockscreen_shortcut_qr">Scaner cod QR</string>
     <string name="lockscreen_shortcut_camera">Camera</string>
     <string name="lockscreen_shortcut_remote">Telecomanda Google TV</string>
+    <string name="lockscreen_shortcut_dnd">DND</string>
     <string name="lockscreen_shortcut_none">Nici unul</string>
+    <string name="lockscreen_shortcut_enforce_title">Enforce shortcuts</string>
+    <string name="lockscreen_shortcut_enforce_summary">Do not display next available shortcut if chosen shortcut is not available</string>
     <!-- App lock -->
     <string name="app_lock_title">Blocare aplicații</string>
     <plurals name="app_lock_summary">

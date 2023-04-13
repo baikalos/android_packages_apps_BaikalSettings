@@ -60,15 +60,15 @@
     <string name="changelog_crdroid_title">יומן השינויים הנוכחי</string>
     <string name="changelog_crdroid_summary">ראה שינויים ברום שהותקן</string>
     <string name="changelog_crdroid_error">טעינת יומן השינויים נכשלה</string>
-    <!-- About crDroid -->
+    <!-- About BaikalOS -->
     <string name="about_crdroid">אודות BaikalOS</string>
     <string name="about_device_name">מכשיר</string>
-    <!-- Share crDroid -->
+    <!-- Share BaikalOS -->
     <string name="share_crdroid_title">שתף BaikalOS</string>
     <string name="share_crdroid_summary">עזור לאנשים אחרים לדעת אודות BaikalOS</string>
     <string name="share_message">בדוק האם BaikalOS# זמין למכשיר שלך https://github.com/BaikalOS-Devices/</string>
     <string name="share_chooser_title">שתף BaikalOS</string>
-    <!-- Sites crDroid -->
+    <!-- Sites BaikalOS -->
     <string name="crdroid_source_title">GitHub</string>
     <string name="crdroid_source_summary">אנחנו אוהבים מקור פתוח, בדוק אותנו</string>
     <string name="crdroid_telegram_title">קהילת BaikalOS</string>
@@ -80,10 +80,10 @@
     <string name="crdroid_translate_title">תרגומים</string>
     <string name="crdroid_translate_summary">עזור לנו להתאים את ה-ROM לשפה שלך!</string>
     <string name="crdroid_sponsor_summary">בקרו במארח האתרים השותף שלנו</string>
-    <!-- Donate crDroid -->
+    <!-- Donate BaikalOS -->
     <string name="donate_crdroid_title">תמוך בנו</string>
     <string name="donate_crdroid_summary">תמוך בנו כדי לאפשר המשך פיתוח עתידי</string>
-    <string name="donate_team_title">צוות crDroid</string>
+    <string name="donate_team_title">צוות BaikalOS</string>
     <string name="donate_team_summary">תירמו לתמיכה בשרתי האחסון, הפעלת האתר והניהול הכללי</string>
     <!-- The Drill -->
     <string name="drill_title">התהליך</string>
@@ -559,8 +559,8 @@
     <string name="qs_footer_show_power_menu_title">קיצור דרך לתפריט הפעלה</string>
     <string name="qs_footer_services_icon_title">קיצור דרך להפעלת שירותים</string>
     <string name="qs_footer_settings_icon_title">קיצור דרך להגדרות</string>
-    <!-- Device Info screen. crDroid legal. -->
-    <string name="crdroid_license_title">חוקי crDroid</string>
+    <!-- Device Info screen. BaikalOS legal. -->
+    <string name="crdroid_license_title">חוקי BaikalOS</string>
     <!-- Quick Settings brightness slider -->
     <string name="qs_show_brightness_slider_title">מחוון בהירות</string>
     <string name="qs_show_brightness_slider_never">אל תציג אף פעם</string>
@@ -1053,13 +1053,16 @@
     <string name="lockscreen_shortcut_category">קיצורי דרך בתחתית המסך</string>
     <string name="lockscreen_shortcut_start_title">קיצור דרך שמאל</string>
     <string name="lockscreen_shortcut_end_title">קיצור דרך ימין</string>
-    <string name="lockscreen_shortcut_home">שליטה בדף הבית</string>
     <string name="lockscreen_shortcut_wallet">ארנק</string>
+    <string name="lockscreen_shortcut_home">שליטה בדף הבית</string>
     <string name="lockscreen_shortcut_flashlight">פנס</string>
     <string name="lockscreen_shortcut_qr">סורק קוד QR</string>
     <string name="lockscreen_shortcut_camera">מצלמה</string>
     <string name="lockscreen_shortcut_remote">שלט-רחוק של Google TV</string>
+    <string name="lockscreen_shortcut_dnd">ללא הפרעה</string>
     <string name="lockscreen_shortcut_none">לא כלום</string>
+    <string name="lockscreen_shortcut_enforce_title">אכיפת קיצורי דרך</string>
+    <string name="lockscreen_shortcut_enforce_summary">ללא הצגת קיצור הדרך הזמין הבא אם קיצור הדרך שנבחר אינו זמין</string>
     <!-- App lock -->
     <string name="app_lock_title">נעילת יישומים</string>
     <plurals name="app_lock_summary">

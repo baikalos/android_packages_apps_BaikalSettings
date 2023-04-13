@@ -60,15 +60,15 @@
     <string name="changelog_crdroid_title">Trenutna lista izmena</string>
     <string name="changelog_crdroid_summary">Vidi izmene u trenutno instaliranom ROM-u</string>
     <string name="changelog_crdroid_error">Ne mogu učitati listu izmena</string>
-    <!-- About crDroid -->
+    <!-- About BaikalOS -->
     <string name="about_crdroid">O BaikalOS-u</string>
     <string name="about_device_name">Uređaj</string>
-    <!-- Share crDroid -->
+    <!-- Share BaikalOS -->
     <string name="share_crdroid_title">Podeli BaikalOS</string>
     <string name="share_crdroid_summary">Obavesti druge o BaikalOS-u</string>
     <string name="share_message">Proveri da li je #BaikalOS dostupan za tvoj uređaj @ https://github.com/BaikalOS-Devices/</string>
     <string name="share_chooser_title">Podeli BaikalOS</string>
-    <!-- Sites crDroid -->
+    <!-- Sites BaikalOS -->
     <string name="crdroid_source_title">GitHub</string>
     <string name="crdroid_source_summary">Mi volimo open source, proveri nas</string>
     <string name="crdroid_telegram_title">BaikalOS zajednica</string>
@@ -80,10 +80,10 @@
     <string name="crdroid_translate_title">Prevodi</string>
     <string name="crdroid_translate_summary">Pomozi nam sa lokalizacijama ROM-a na tvom jeziku!</string>
     <string name="crdroid_sponsor_summary">Posetite host partnere našeg sajta</string>
-    <!-- Donate crDroid -->
+    <!-- Donate BaikalOS -->
     <string name="donate_crdroid_title">Podržite nas</string>
     <string name="donate_crdroid_summary">Donirajte da podržite dalji razvoj</string>
-    <string name="donate_team_title">crDroid tim</string>
+    <string name="donate_team_title">BaikalOS tim</string>
     <string name="donate_team_summary">Donirajte da podržite hosting servera, sajt i sveukupno održavanje</string>
     <!-- The Drill -->
     <string name="drill_title">Dril</string>
@@ -558,8 +558,8 @@
     <string name="qs_footer_show_power_menu_title">Prečice menija uključenja</string>
     <string name="qs_footer_services_icon_title">Prečica pokrenutih servisa</string>
     <string name="qs_footer_settings_icon_title">Prečica za podešavanja</string>
-    <!-- Device Info screen. crDroid legal. -->
-    <string name="crdroid_license_title">crDroid pravne informacije</string>
+    <!-- Device Info screen. BaikalOS legal. -->
+    <string name="crdroid_license_title">BaikalOS pravne informacije</string>
     <!-- Quick Settings brightness slider -->
     <string name="qs_show_brightness_slider_title">Nivo osvjetljenja</string>
     <string name="qs_show_brightness_slider_never">Nikad ne pokazuj</string>
@@ -1049,13 +1049,16 @@
     <string name="lockscreen_shortcut_category">Prečice za dugmad</string>
     <string name="lockscreen_shortcut_start_title">Leva prečica</string>
     <string name="lockscreen_shortcut_end_title">Desna prečica</string>
-    <string name="lockscreen_shortcut_home">Kontrola početnog dugmeta </string>
     <string name="lockscreen_shortcut_wallet">Novčanik</string>
+    <string name="lockscreen_shortcut_home">Kontrola početnog dugmeta </string>
     <string name="lockscreen_shortcut_flashlight">Lampa</string>
     <string name="lockscreen_shortcut_qr">QR kod skener</string>
     <string name="lockscreen_shortcut_camera">Kamera</string>
     <string name="lockscreen_shortcut_remote">Google TV Remote</string>
+    <string name="lockscreen_shortcut_dnd">DND</string>
     <string name="lockscreen_shortcut_none">Nijedno</string>
+    <string name="lockscreen_shortcut_enforce_title">Enforce shortcuts</string>
+    <string name="lockscreen_shortcut_enforce_summary">Do not display next available shortcut if chosen shortcut is not available</string>
     <!-- App lock -->
     <string name="app_lock_title">App lock</string>
     <plurals name="app_lock_summary">

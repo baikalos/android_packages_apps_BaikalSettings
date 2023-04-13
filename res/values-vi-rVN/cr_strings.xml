@@ -60,15 +60,15 @@
     <string name="changelog_crdroid_title">Thay đổi hiện tại</string>
     <string name="changelog_crdroid_summary">Xem những thay đổi của bản ROM được cài đặt</string>
     <string name="changelog_crdroid_error">Không thể tải nhật ký thay đổi</string>
-    <!-- About crDroid -->
+    <!-- About BaikalOS -->
     <string name="about_crdroid">Về BaikalOS</string>
     <string name="about_device_name">Thiết bị</string>
-    <!-- Share crDroid -->
+    <!-- Share BaikalOS -->
     <string name="share_crdroid_title">Chia sẻ BaikalOS</string>
     <string name="share_crdroid_summary">Cho những người khác biết về BaikalOS</string>
     <string name="share_message">Kiểm tra nếu #BaikalOS khả dụng cho thiết bị của bạn @ https://github.com/BaikalOS-Devices/</string>
     <string name="share_chooser_title">Chia sẻ BaikalOS</string>
-    <!-- Sites crDroid -->
+    <!-- Sites BaikalOS -->
     <string name="crdroid_source_title">Mã nguồn</string>
     <string name="crdroid_source_summary">Chúng tôi yêu nguồn mở, kiểm tra với chúng tôi</string>
     <string name="crdroid_telegram_title">Cộng đồng BaikalOS</string>
@@ -80,10 +80,10 @@
     <string name="crdroid_translate_title">Dịch thuật</string>
     <string name="crdroid_translate_summary">Giúp bản ROM phù hợp với ngôn ngữ của bạn!</string>
     <string name="crdroid_sponsor_summary">Ghé thăm đối tác lưu trữ trang web của chúng tôi</string>
-    <!-- Donate crDroid -->
+    <!-- Donate BaikalOS -->
     <string name="donate_crdroid_title">Hỗ trợ chúng tôi</string>
     <string name="donate_crdroid_summary">Đóng góp để hỗ trợ phát triển hơn nữa</string>
-    <string name="donate_team_title">Đội ngũ crDroid</string>
+    <string name="donate_team_title">Đội ngũ BaikalOS</string>
     <string name="donate_team_summary">Donate nhóm để hỗ trợ máy chủ lưu trữ, hoạt động trang web và quản lý tổng thể</string>
     <!-- The Drill -->
     <string name="drill_title">Luyện tập</string>
@@ -235,16 +235,16 @@
     <string name="monet_summary">Chỉnh sửa engine Monet</string>
     <!-- Monet Engine -->
     <string name="monet_engine_custom_color_title">Màu nhấn</string>
-    <string name="monet_engine_custom_color_summary">Choose custom color for accent</string>
-    <string name="monet_engine_custom_bgcolor_title">Background color</string>
+    <string name="monet_engine_custom_color_summary">Chọn màu tùy chỉnh cho điểm nhấn</string>
+    <string name="monet_engine_custom_bgcolor_title">Màu nền</string>
     <string name="monet_engine_custom_bgcolor_summary">Chọn màu tùy chỉnh cho nền</string>
     <string name="monet_engine_color_override_title">Tùy chỉnh màu sắc</string>
-    <string name="monet_engine_luminance_factor_title">Luminance</string>
-    <string name="monet_engine_luminance_factor_summary">Higher values produce brighter colors</string>
+    <string name="monet_engine_luminance_factor_title">Độ sáng</string>
+    <string name="monet_engine_luminance_factor_summary">Giá trị cao hơn cho ra màu sáng hơn</string>
     <string name="monet_engine_chroma_factor_title">Yếu tố sắc tố</string>
-    <string name="monet_engine_chroma_factor_summary">Higher values produce stronger colors</string>
-    <string name="monet_engine_tint_background_title">Tint background</string>
-    <string name="monet_engine_tint_background_summary">Make luminance and chroma selection affect background colors as well</string>
+    <string name="monet_engine_chroma_factor_summary">Giá trị cao hơn cho ra màu đậm hơn</string>
+    <string name="monet_engine_tint_background_title">Màu của nền</string>
+    <string name="monet_engine_tint_background_summary">Tùy chỉnh độ sáng và độ trong cũng ảnh hưởng đến màu nền</string>
     <!-- Quick unlock -->
     <string name="unlock_quick_unlock_control_title">Mở khóa nhanh</string>
     <string name="unlock_quick_unlock_control_summary">Tự động mở khóa khi nhập đúng mật khẩu</string>
@@ -268,14 +268,14 @@
     <string name="doze_vibrate_summary">Thời gian rung khi có thông báo</string>
     <string name="sensor_warning_message">Cài đặt dựa trên cảm biến có thể phụ thuộc vào tương thích phần cứng. Cho phép thiết bị cảm biến cho màn hình xung quanh có thể gây tốn pin.</string>
     <!-- Edge light -->
-    <string name="edge_light_title">always on display</string>
+    <string name="edge_light_title">Ánh sáng cạnh</string>
     <string name="edge_light_summary">Làm sáng các cạnh bên của màn hình khi có thông báo</string>
     <string name="edge_light_always_trigger_on_pulse_title">Luôn kích hoạt theo nhịp</string>
     <string name="edge_light_always_trigger_on_pulse_summary">Bật ánh sáng cạnh bất cứ khi nào màn hình xung quanh được hiển thị và không chỉ dành cho thông báo</string>
     <string name="edge_light_repeat_animation_title">Lặp lại hoạt ảnh</string>
     <string name="edge_light_repeat_animation_summary_on">Lặp lại đến khi hết thời gian</string>
     <string name="edge_light_repeat_animation_summary_off">Chỉ hiển thị một lần</string>
-    <string name="edge_light_color_mode_title">Màu sắc chữ của always on display</string>
+    <string name="edge_light_color_mode_title">Chế độ màu ánh sáng cạnh</string>
     <!-- Ambient Ticker -->
     <string name="pulse_on_new_tracks_title">Thông báo cho nhạc</string>
     <string name="pulse_on_new_tracks_summary">Hiển thị nhạc trên màn hình xung quanh trong khi thay đổi bản nhạc</string>
@@ -556,8 +556,8 @@
     <string name="qs_footer_show_power_menu_title">Lối tắt menu nguồn</string>
     <string name="qs_footer_services_icon_title">Lối tắt các dịch vụ đang chạy</string>
     <string name="qs_footer_settings_icon_title">Lối tắt cài đặt</string>
-    <!-- Device Info screen. crDroid legal. -->
-    <string name="crdroid_license_title">Giấy phép crDroid</string>
+    <!-- Device Info screen. BaikalOS legal. -->
+    <string name="crdroid_license_title">Giấy phép BaikalOS</string>
     <!-- Quick Settings brightness slider -->
     <string name="qs_show_brightness_slider_title">Thanh điều chỉnh độ sáng</string>
     <string name="qs_show_brightness_slider_never">Không bao giờ hiển thị</string>
@@ -1048,13 +1048,16 @@ Dùng để phát hiện các cổng kết nối cố định.</string>
     <string name="lockscreen_shortcut_category">Các phím tắt phía dưới</string>
     <string name="lockscreen_shortcut_start_title">Phím tắt bên trái</string>
     <string name="lockscreen_shortcut_end_title">Phím tắt bên phải</string>
-    <string name="lockscreen_shortcut_home">Điều khiển phím trang chủ</string>
     <string name="lockscreen_shortcut_wallet">Ví tiền</string>
+    <string name="lockscreen_shortcut_home">Điều khiển phím trang chủ</string>
     <string name="lockscreen_shortcut_flashlight">Đèn pin</string>
     <string name="lockscreen_shortcut_qr">Máy quét mã vạch</string>
     <string name="lockscreen_shortcut_camera">Máy ảnh</string>
     <string name="lockscreen_shortcut_remote">Điều khiển từ xa</string>
+    <string name="lockscreen_shortcut_dnd">Không làm phiền</string>
     <string name="lockscreen_shortcut_none">Không</string>
+    <string name="lockscreen_shortcut_enforce_title">Thực thi các phím tắt</string>
+    <string name="lockscreen_shortcut_enforce_summary">Không hiện phím tắt khả dụng tiếp theo nếu phím tắt đã chọn không có sẵn</string>
     <!-- App lock -->
     <string name="app_lock_title">Khóa ứng dụng</string>
     <plurals name="app_lock_summary">

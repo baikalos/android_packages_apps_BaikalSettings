@@ -20,7 +20,7 @@
     android:title="@string/about_crdroid"
     >
 
-    <!-- crDroid Changelog -->
+    <!-- BaikalOS Changelog -->
     <Preference
         android:key="crdroid_changelog"
         android:title="@string/changelog_crdroid_title"
@@ -30,41 +30,41 @@
              android:targetClass="com.crdroid.settings.fragments.about.ChangelogActivity"/>
     </Preference>
 
-    <!-- crDroid Website -->
+    <!-- BaikalOS Website -->
     <!-- Preference
         android:key="crdroid_website"
         android:icon="@drawable/ic_web"
         android:title="@string/crdroid_website_title"
         android:summary="@string/crdroid_website_summary" / -->
 
-    <!-- crDroid Translate -->
+    <!-- BaikalOS Translate -->
     <!-- Preference
         android:key="crdroid_translate"
         android:icon="@drawable/ic_translate"
         android:title="@string/crdroid_translate_title"
         android:summary="@string/crdroid_translate_summary" / -->
 
-    <!-- crDroid Share -->
+    <!-- BaikalOS Share -->
     <!-- Preference
         android:key="crdroid_share"
         android:icon="@drawable/ic_share"
         android:title="@string/share_crdroid_title"
         android:summary="@string/share_crdroid_summary" / -->
 
-    <!-- crDroid Donate -->
+    <!-- BaikalOS Donate -->
     <!-- Preference
         android:key="crdroid_donate"
         android:icon="@drawable/ic_donate"
         android:title="@string/donate_crdroid_title"
         android:summary="@string/donate_crdroid_summary" / -->
 
-    <!-- crDroid Source -->
+    <!-- BaikalOS Source -->
     <Preference
         android:key="crdroid_source"
         android:title="@string/crdroid_source_title"
         android:summary="@string/crdroid_source_summary" />
 
-    <!-- crDroid Telegram -->
+    <!-- BaikalOS Telegram -->
     <Preference
         android:key="crdroid_telegram"
         android:title="@string/crdroid_telegram_title"
@@ -76,21 +76,21 @@
         android:summary="@string/log_it_summary"
         android:fragment="com.crdroid.settings.fragments.LogIt" />
 
-    <!-- crDroid Telegram Updates Channel -->
+    <!-- BaikalOS Telegram Updates Channel -->
     <!-- Preference
         android:key="crdroid_telegram_channel"
         android:icon="@drawable/ic_telegram_channel"
         android:title="@string/crdroid_telegram_channel_title"
         android:summary="@string/crdroid_telegram_channel_summary" /-->
 
-    <!-- crDroid sponsor -->
+    <!-- BaikalOS sponsor -->
     <!-- Preference
         android:key="crdroid_sponsor"
         android:icon="@drawable/ic_sponsor"
         android:title="@string/crdroid_sponsor_title"
         android:summary="@string/crdroid_sponsor_summary" / -->
 
-    <!-- crDroid OTA update -->
+    <!-- BaikalOS OTA update -->
     <!-- Preference
         android:key="system_update_settings"
         android:title="@string/crdroid_update_title"
@@ -100,7 +100,7 @@
         <intent android:action="android.settings.SYSTEM_UPDATE_SETTINGS" />
     </Preference -->
 
-    <!-- crDroid Drill -->
+    <!-- BaikalOS Drill -->
     <!-- Preference
         android:key="crdroid_drill"
         android:icon="@drawable/ic_drill"

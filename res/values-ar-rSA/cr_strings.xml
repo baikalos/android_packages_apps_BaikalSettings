@@ -60,15 +60,15 @@
     <string name="changelog_crdroid_title">سجل التغييرات الحالي</string>
     <string name="changelog_crdroid_summary">عرض التغييرات في الروم المثبت</string>
     <string name="changelog_crdroid_error">غير قادر على تحميل سجل التغييرات</string>
-    <!-- About crDroid -->
+    <!-- About BaikalOS -->
     <string name="about_crdroid">حول BaikalOS</string>
     <string name="about_device_name">الجهاز</string>
-    <!-- Share crDroid -->
+    <!-- Share BaikalOS -->
     <string name="share_crdroid_title">مشاركة BaikalOS</string>
     <string name="share_crdroid_summary">دع الآخرين يعرفون عن BaikalOS</string>
     <string name="share_message">تحقق مما إذا كان #BaikalOS متوفر لجهازك @ https://github.com/BaikalOS-Devices/</string>
     <string name="share_chooser_title">مشاركة BaikalOS</string>
-    <!-- Sites crDroid -->
+    <!-- Sites BaikalOS -->
     <string name="crdroid_source_title">على موقع Github</string>
     <string name="crdroid_source_summary">نحن نحب المصدر المفتوح، تحقق منا</string>
     <string name="crdroid_telegram_title">مجتمع BaikalOS</string>
@@ -80,10 +80,10 @@
     <string name="crdroid_translate_title">الترجمة</string>
     <string name="crdroid_translate_summary">المساعدة في تعريب الروم بلغتك!</string>
     <string name="crdroid_sponsor_summary">قم بزيارة الشريك المضيف لموقعنا</string>
-    <!-- Donate crDroid -->
+    <!-- Donate BaikalOS -->
     <string name="donate_crdroid_title">ادعمنا</string>
     <string name="donate_crdroid_summary">تبرع لدعم المزيد من التطوير</string>
-    <string name="donate_team_title">فريق crDroid</string>
+    <string name="donate_team_title">فريق BaikalOS</string>
     <string name="donate_team_summary">التبرع لدعم استضافة الخوادم، وموقع العمل الإضافي والإدارة العامة</string>
     <!-- The Drill -->
     <string name="drill_title">الطريقة لابلاغ عن مشكلة</string>
@@ -561,8 +561,8 @@
     <string name="qs_footer_show_power_menu_title">اختصار قائمة التشغيل</string>
     <string name="qs_footer_services_icon_title">عرض رمز اختصار للخدمات قيد التشغيل</string>
     <string name="qs_footer_settings_icon_title">إختصار الإعدادات</string>
-    <!-- Device Info screen. crDroid legal. -->
-    <string name="crdroid_license_title">فريق crDroid</string>
+    <!-- Device Info screen. BaikalOS legal. -->
+    <string name="crdroid_license_title">فريق BaikalOS</string>
     <!-- Quick Settings brightness slider -->
     <string name="qs_show_brightness_slider_title">شريط السطوع</string>
     <string name="qs_show_brightness_slider_never">لا تُظهر أبداً</string>
@@ -1055,13 +1055,16 @@
     <string name="lockscreen_shortcut_category">الإختصارات السفلية</string>
     <string name="lockscreen_shortcut_start_title">إختصار اليسار</string>
     <string name="lockscreen_shortcut_end_title">إختصار اليمين</string>
-    <string name="lockscreen_shortcut_home">Home controls</string>
     <string name="lockscreen_shortcut_wallet">Wallet</string>
+    <string name="lockscreen_shortcut_home">Home controls</string>
     <string name="lockscreen_shortcut_flashlight">الكشاف</string>
     <string name="lockscreen_shortcut_qr">QR code scanner</string>
     <string name="lockscreen_shortcut_camera">الكاميرا</string>
     <string name="lockscreen_shortcut_remote">Google TV Remote</string>
+    <string name="lockscreen_shortcut_dnd">DND</string>
     <string name="lockscreen_shortcut_none">بلا</string>
+    <string name="lockscreen_shortcut_enforce_title">Enforce shortcuts</string>
+    <string name="lockscreen_shortcut_enforce_summary">Do not display next available shortcut if chosen shortcut is not available</string>
     <!-- App lock -->
     <string name="app_lock_title">App lock</string>
     <plurals name="app_lock_summary">

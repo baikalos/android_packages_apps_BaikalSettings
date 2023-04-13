@@ -60,15 +60,15 @@
     <string name="changelog_crdroid_title">Текущий список изменений</string>
     <string name="changelog_crdroid_summary">Просмотр изменений в текущей прошивки</string>
     <string name="changelog_crdroid_error">Невозможно загрузить список изменений</string>
-    <!-- About crDroid -->
+    <!-- About BaikalOS -->
     <string name="about_crdroid">О BaikalOS</string>
     <string name="about_device_name">Устройство</string>
-    <!-- Share crDroid -->
+    <!-- Share BaikalOS -->
     <string name="share_crdroid_title">Рассказать о BaikalOS</string>
     <string name="share_crdroid_summary">Пусть другие узнают о BaikalOS</string>
     <string name="share_message">Узнайте, доступен ли #BaikalOS для вашего устройства на @ https://github.com/BaikalOS-Devices/</string>
     <string name="share_chooser_title">Рассказать о BaikalOS</string>
-    <!-- Sites crDroid -->
+    <!-- Sites BaikalOS -->
     <string name="crdroid_source_title">Github</string>
     <string name="crdroid_source_summary">Мы любим открытый исходный код, посмотрите его</string>
     <string name="crdroid_telegram_title">Cообщество BaikalOS</string>
@@ -80,10 +80,10 @@
     <string name="crdroid_translate_title">Переводы</string>
     <string name="crdroid_translate_summary">Помогите перевести прошивку на ваш язык!</string>
     <string name="crdroid_sponsor_summary">Посетите нашего партнёра по размещению веб-сайтов</string>
-    <!-- Donate crDroid -->
+    <!-- Donate BaikalOS -->
     <string name="donate_crdroid_title">Поддержать нас</string>
     <string name="donate_crdroid_summary">Пожертвуйте для поддержки дальнейшего развития</string>
-    <string name="donate_team_title">Команда crDroid</string>
+    <string name="donate_team_title">Команда BaikalOS</string>
     <string name="donate_team_summary">Пожертвовать на поддержку хостинга, сайта и общие задачи</string>
     <!-- The Drill -->
     <string name="drill_title">Послание от разработчиков</string>
@@ -559,8 +559,8 @@
     <string name="qs_footer_show_power_menu_title">Содержание меню кнопки питания</string>
     <string name="qs_footer_services_icon_title">Значок работающих приложений</string>
     <string name="qs_footer_settings_icon_title">Значок настроек</string>
-    <!-- Device Info screen. crDroid legal. -->
-    <string name="crdroid_license_title">О crDroid</string>
+    <!-- Device Info screen. BaikalOS legal. -->
+    <string name="crdroid_license_title">О BaikalOS</string>
     <!-- Quick Settings brightness slider -->
     <string name="qs_show_brightness_slider_title">Ползунок яркости</string>
     <string name="qs_show_brightness_slider_never">Не показывать</string>
@@ -1051,13 +1051,16 @@
     <string name="lockscreen_shortcut_category">Ярлыки внизу экрана</string>
     <string name="lockscreen_shortcut_start_title">Ярлык слева</string>
     <string name="lockscreen_shortcut_end_title">Ярлык справа</string>
-    <string name="lockscreen_shortcut_home">Домой</string>
     <string name="lockscreen_shortcut_wallet">Кошелёк</string>
+    <string name="lockscreen_shortcut_home">Домой</string>
     <string name="lockscreen_shortcut_flashlight">Фонарик</string>
     <string name="lockscreen_shortcut_qr">QR сканер</string>
     <string name="lockscreen_shortcut_camera">Камера</string>
     <string name="lockscreen_shortcut_remote">Пульт Google TV</string>
+    <string name="lockscreen_shortcut_dnd">Не беспокоить</string>
     <string name="lockscreen_shortcut_none">Ничего</string>
+    <string name="lockscreen_shortcut_enforce_title">Принудительные ярлыки</string>
+    <string name="lockscreen_shortcut_enforce_summary">Не показывать следующий доступный ярлык, если выбранный ярлык недоступен</string>
     <!-- App lock -->
     <string name="app_lock_title">Блокировка приложений</string>
     <plurals name="app_lock_summary">

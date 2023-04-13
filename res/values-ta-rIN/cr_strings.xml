@@ -60,15 +60,15 @@
     <string name="changelog_crdroid_title">தற்போதைய மாற்றங்கள்</string>
     <string name="changelog_crdroid_summary">நிறுவப்பட்ட ROM இல் மாற்றங்களைக் காண்க</string>
     <string name="changelog_crdroid_error">மாற்றப் பதிவேட்டை திறக்க முடியவில்லை</string>
-    <!-- About crDroid -->
+    <!-- About BaikalOS -->
     <string name="about_crdroid">BaikalOS ஐப் பற்றி</string>
     <string name="about_device_name">சாதனம்</string>
-    <!-- Share crDroid -->
+    <!-- Share BaikalOS -->
     <string name="share_crdroid_title">BaikalOS ஐப் பகிர்</string>
     <string name="share_crdroid_summary">BaikalOS பற்றி மற்றவர்களுக்குத் தெரியப்படுத்தவும்</string>
     <string name="share_message">உங்கள் சாதனத்தில் #BaikalOS உள்ளதா எனப் பார்க்கவும் @ https://github.com/BaikalOS-Devices/</string>
     <string name="share_chooser_title">BaikalOS ஐப் பகிர்</string>
-    <!-- Sites crDroid -->
+    <!-- Sites BaikalOS -->
     <string name="crdroid_source_title">கிட்ஹப்</string>
     <string name="crdroid_source_summary">நாங்கள் திறந்த மூலத்தை விரும்புகிறோம், எங்களைப் பார்க்கவும்</string>
     <string name="crdroid_telegram_title">BaikalOS சமூகம்</string>
@@ -80,10 +80,10 @@
     <string name="crdroid_translate_title">மொழிபெயர்ப்புகள்</string>
     <string name="crdroid_translate_summary">இந்த ROM-ஐ உங்கள் மொழியில் மொழிபெயர்க்க உதவிடுங்கள்!</string>
     <string name="crdroid_sponsor_summary">எங்கள் Website Host Partner-ஐ பார்வையிட</string>
-    <!-- Donate crDroid -->
+    <!-- Donate BaikalOS -->
     <string name="donate_crdroid_title">எங்களை ஆதரியுங்கள்</string>
     <string name="donate_crdroid_summary">வளர்ச்சிக்கு உதவிட நன்கொடை அளியுங்கள்</string>
-    <string name="donate_team_title">crDroid குழு</string>
+    <string name="donate_team_title">BaikalOS குழு</string>
     <string name="donate_team_summary">Server hosting, site uptime மற்றும் ஒட்டுமொத்த நிர்வாகத்தை ஆதரிக்க நன்கொடை அளிக்கவும்</string>
     <!-- The Drill -->
     <string name="drill_title">The drill</string>
@@ -557,8 +557,8 @@
     <string name="qs_footer_show_power_menu_title">Power menu shortcut</string>
     <string name="qs_footer_services_icon_title">இயங்கும் சேவைகள் குறுக்குவழி</string>
     <string name="qs_footer_settings_icon_title">அமைப்புகள் குறுக்குவழி</string>
-    <!-- Device Info screen. crDroid legal. -->
-    <string name="crdroid_license_title">crDroid legal</string>
+    <!-- Device Info screen. BaikalOS legal. -->
+    <string name="crdroid_license_title">BaikalOS legal</string>
     <!-- Quick Settings brightness slider -->
     <string name="qs_show_brightness_slider_title">பிரகாசம் நகர்வுகோல்</string>
     <string name="qs_show_brightness_slider_never">Never show</string>
@@ -1047,13 +1047,16 @@
     <string name="lockscreen_shortcut_category">Bottom shortcuts</string>
     <string name="lockscreen_shortcut_start_title">Left shortcut</string>
     <string name="lockscreen_shortcut_end_title">Right shortcut</string>
-    <string name="lockscreen_shortcut_home">Home controls</string>
     <string name="lockscreen_shortcut_wallet">Wallet</string>
+    <string name="lockscreen_shortcut_home">Home controls</string>
     <string name="lockscreen_shortcut_flashlight">Flashlight</string>
     <string name="lockscreen_shortcut_qr">QR code scanner</string>
     <string name="lockscreen_shortcut_camera">கேமரா</string>
     <string name="lockscreen_shortcut_remote">Google TV Remote</string>
+    <string name="lockscreen_shortcut_dnd">DND</string>
     <string name="lockscreen_shortcut_none">எதுவுமில்லை</string>
+    <string name="lockscreen_shortcut_enforce_title">Enforce shortcuts</string>
+    <string name="lockscreen_shortcut_enforce_summary">Do not display next available shortcut if chosen shortcut is not available</string>
     <!-- App lock -->
     <string name="app_lock_title">App lock</string>
     <plurals name="app_lock_summary">

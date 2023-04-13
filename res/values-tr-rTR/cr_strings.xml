@@ -60,15 +60,15 @@
     <string name="changelog_crdroid_title">Mevcut değişiklikler</string>
     <string name="changelog_crdroid_summary">Yüklü ROM\'daki değişiklikleri görüntüleyin</string>
     <string name="changelog_crdroid_error">Değişiklikler yüklenemiyor</string>
-    <!-- About crDroid -->
+    <!-- About BaikalOS -->
     <string name="about_crdroid">BaikalOS hakkında</string>
     <string name="about_device_name">Cihaz</string>
-    <!-- Share crDroid -->
+    <!-- Share BaikalOS -->
     <string name="share_crdroid_title">BaikalOS\'i paylaş</string>
     <string name="share_crdroid_summary">Başkalarına BaikalOS hakkında bilgi verin</string>
     <string name="share_message">Cihazınız için #BaikalOS\'in mevcut olup olmadığını kontrol edin @ https://github.com/BaikalOS-Devices/</string>
     <string name="share_chooser_title">BaikalOS\'i paylaş</string>
-    <!-- Sites crDroid -->
+    <!-- Sites BaikalOS -->
     <string name="crdroid_source_title">GitHub</string>
     <string name="crdroid_source_summary">Kaynak kodumuzu görüntüleyin</string>
     <string name="crdroid_telegram_title">BaikalOS topluluğu</string>
@@ -80,10 +80,10 @@
     <string name="crdroid_translate_title">Çeviriler</string>
     <string name="crdroid_translate_summary">ROM\'u kendi dilinize çevirmek için bize yardım edin!</string>
     <string name="crdroid_sponsor_summary">Web sitesi barındırma ortağımızı ziyaret edin</string>
-    <!-- Donate crDroid -->
+    <!-- Donate BaikalOS -->
     <string name="donate_crdroid_title">Bizi destekle</string>
     <string name="donate_crdroid_summary">Daha fazla gelişmeyi desteklemek için bağış yapın</string>
-    <string name="donate_team_title">crDroid ekibi</string>
+    <string name="donate_team_title">BaikalOS ekibi</string>
     <string name="donate_team_summary">Sunucu hostingi, site çalışma zamanı ve genel yönetimi desteklemek için bağış yapın</string>
     <!-- The Drill -->
     <string name="drill_title">The drill</string>
@@ -557,8 +557,8 @@
     <string name="qs_footer_show_power_menu_title">Güç menüsü kısayolu</string>
     <string name="qs_footer_services_icon_title">Çalışan hizmetler kısayolu</string>
     <string name="qs_footer_settings_icon_title">Ayarlar kısayolu</string>
-    <!-- Device Info screen. crDroid legal. -->
-    <string name="crdroid_license_title">crDroid yasal</string>
+    <!-- Device Info screen. BaikalOS legal. -->
+    <string name="crdroid_license_title">BaikalOS yasal</string>
     <!-- Quick Settings brightness slider -->
     <string name="qs_show_brightness_slider_title">Parlaklık kaydırıcısı</string>
     <string name="qs_show_brightness_slider_never">Asla gösterme</string>
@@ -1047,13 +1047,16 @@
     <string name="lockscreen_shortcut_category">Alt kısayollar</string>
     <string name="lockscreen_shortcut_start_title">Sol kısayol</string>
     <string name="lockscreen_shortcut_end_title">Sağ kısayol</string>
-    <string name="lockscreen_shortcut_home">Ana ekran kontrolleri</string>
     <string name="lockscreen_shortcut_wallet">Cüzdan</string>
+    <string name="lockscreen_shortcut_home">Ana ekran kontrolleri</string>
     <string name="lockscreen_shortcut_flashlight">El feneri</string>
     <string name="lockscreen_shortcut_qr">QR kod tarayıcı</string>
     <string name="lockscreen_shortcut_camera">Kamera</string>
     <string name="lockscreen_shortcut_remote">Google TV Kumandası</string>
+    <string name="lockscreen_shortcut_dnd">DND</string>
     <string name="lockscreen_shortcut_none">Hiçbiri</string>
+    <string name="lockscreen_shortcut_enforce_title">Enforce shortcuts</string>
+    <string name="lockscreen_shortcut_enforce_summary">Do not display next available shortcut if chosen shortcut is not available</string>
     <!-- App lock -->
     <string name="app_lock_title">Uygulama kilidi</string>
     <plurals name="app_lock_summary">

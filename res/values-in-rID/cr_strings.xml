@@ -60,15 +60,15 @@
     <string name="changelog_crdroid_title">Perubahan saat ini</string>
     <string name="changelog_crdroid_summary">Lihat perubahan pada ROM terpasang</string>
     <string name="changelog_crdroid_error">Tidak dapat memuat daftar perubahan</string>
-    <!-- About crDroid -->
+    <!-- About BaikalOS -->
     <string name="about_crdroid">Tentang BaikalOS</string>
     <string name="about_device_name">Perangkat</string>
-    <!-- Share crDroid -->
+    <!-- Share BaikalOS -->
     <string name="share_crdroid_title">Bagikan BaikalOS</string>
     <string name="share_crdroid_summary">Biarkan orang lain tahu tentang BaikalOS</string>
     <string name="share_message">Periksa apakah #BaikalOS tersedia untuk perangkat Anda @ https://github.com/BaikalOS-Devices/</string>
     <string name="share_chooser_title">Bagikan BaikalOS</string>
-    <!-- Sites crDroid -->
+    <!-- Sites BaikalOS -->
     <string name="crdroid_source_title">GitHub</string>
     <string name="crdroid_source_summary">Kami cinta open source, periksa kami</string>
     <string name="crdroid_telegram_title">Komunitas BaikalOS</string>
@@ -80,10 +80,10 @@
     <string name="crdroid_translate_title">Terjemahan</string>
     <string name="crdroid_translate_summary">Bantu kami menerjemahkan ROM ini ke bahasa Anda!</string>
     <string name="crdroid_sponsor_summary">Kunjungi mitra host situs web kami</string>
-    <!-- Donate crDroid -->
+    <!-- Donate BaikalOS -->
     <string name="donate_crdroid_title">Dukung Kami</string>
     <string name="donate_crdroid_summary">Donasi untuk mendukung pengembangan lebih lanjut</string>
-    <string name="donate_team_title">Tim crDroid</string>
+    <string name="donate_team_title">Tim BaikalOS</string>
     <string name="donate_team_summary">Donasi untuk mendukung server hosting, keaktifan situs serta pemanajemenan secara keseluruhan</string>
     <!-- The Drill -->
     <string name="drill_title">The Drill</string>
@@ -556,8 +556,8 @@
     <string name="qs_footer_show_power_menu_title">Pintasan menu daya</string>
     <string name="qs_footer_services_icon_title">Pintasan Layanan Berjalan</string>
     <string name="qs_footer_settings_icon_title">Setelan pintasan</string>
-    <!-- Device Info screen. crDroid legal. -->
-    <string name="crdroid_license_title">Hukum crDroid</string>
+    <!-- Device Info screen. BaikalOS legal. -->
+    <string name="crdroid_license_title">Hukum BaikalOS</string>
     <!-- Quick Settings brightness slider -->
     <string name="qs_show_brightness_slider_title">Slider kecerahan</string>
     <string name="qs_show_brightness_slider_never">Jangan tampilkan</string>
@@ -1045,13 +1045,16 @@
     <string name="lockscreen_shortcut_category">Pintasan bawah</string>
     <string name="lockscreen_shortcut_start_title">Pintasan kiri</string>
     <string name="lockscreen_shortcut_end_title">Pintasan kanan</string>
-    <string name="lockscreen_shortcut_home">Kontrol beranda</string>
     <string name="lockscreen_shortcut_wallet">Dompet</string>
+    <string name="lockscreen_shortcut_home">Kontrol beranda</string>
     <string name="lockscreen_shortcut_flashlight">Senter</string>
     <string name="lockscreen_shortcut_qr">Pemindai kode QR</string>
     <string name="lockscreen_shortcut_camera">Kamera</string>
     <string name="lockscreen_shortcut_remote">Remote Google TV</string>
+    <string name="lockscreen_shortcut_dnd">Jangan Ganggu</string>
     <string name="lockscreen_shortcut_none">Tidak ada</string>
+    <string name="lockscreen_shortcut_enforce_title">Terapkan pintasan</string>
+    <string name="lockscreen_shortcut_enforce_summary">Jangan tampilkan pintasan berikutnya yang tersedia jika pintasan yang dipilih tidak tersedia</string>
     <!-- App lock -->
     <string name="app_lock_title">Kunci Aplikasi</string>
     <plurals name="app_lock_summary">

@@ -19,7 +19,7 @@
     <string name="crdroid_settings_title">BaikalOS 设置</string>
     <string name="crdroid_settings_summary">个性化设置</string>
     <string name="reset_settings_title">重置设置</string>
-    <string name="reset_settings_message">这将会重置当前用户大部分的 crDroid 设置为默认值。您要继续吗？</string>
+    <string name="reset_settings_message">这将会重置当前用户大部分的 BaikalOS 设置为默认值。您要继续吗？</string>
     <!-- Personalization Categories -->
     <string name="button_title">按键</string>
     <string name="lockscreen_title">锁屏界面</string>
@@ -60,15 +60,15 @@
     <string name="changelog_crdroid_title">更新日志</string>
     <string name="changelog_crdroid_summary">查看已安装 ROM 中的变化</string>
     <string name="changelog_crdroid_error">无法加载更新日志</string>
-    <!-- About crDroid -->
+    <!-- About BaikalOS -->
     <string name="about_crdroid">关于 BaikalOS</string>
     <string name="about_device_name">设备</string>
-    <!-- Share crDroid -->
+    <!-- Share BaikalOS -->
     <string name="share_crdroid_title">分享 BaikalOS</string>
     <string name="share_crdroid_summary">让更多人了解 BaikalOS</string>
     <string name="share_message">查看 #BaikalOS Android 的全部内容 @ https://BaikalOS.net/</string>
     <string name="share_chooser_title">分享 BaikalOS</string>
-    <!-- Sites crDroid -->
+    <!-- Sites BaikalOS -->
     <string name="crdroid_source_title">GitHub</string>
     <string name="crdroid_source_summary">我们热爱开源，来看看我们的代码吧。</string>
     <string name="crdroid_telegram_title">BaikalOS 社区</string>
@@ -80,10 +80,10 @@
     <string name="crdroid_translate_title">翻译</string>
     <string name="crdroid_translate_summary">帮助用您的语言本地化 ROM！</string>
     <string name="crdroid_sponsor_summary">访问我们的网站托管合作伙伴</string>
-    <!-- Donate crDroid -->
+    <!-- Donate BaikalOS -->
     <string name="donate_crdroid_title">支持我们</string>
     <string name="donate_crdroid_summary">捐赠以支持开发</string>
-    <string name="donate_team_title">crDroid 团队</string>
+    <string name="donate_team_title">BaikalOS 团队</string>
     <string name="donate_team_summary">捐赠支持服务器托管，网站正常运行时间和整体管理</string>
     <!-- The Drill -->
     <string name="drill_title">实锤</string>
@@ -235,16 +235,16 @@
     <string name="monet_summary">自定义 Monet 主题引擎</string>
     <!-- Monet Engine -->
     <string name="monet_engine_custom_color_title">配色方案</string>
-    <string name="monet_engine_custom_color_summary">Choose custom color for accent</string>
-    <string name="monet_engine_custom_bgcolor_title">Background color</string>
-    <string name="monet_engine_custom_bgcolor_summary">Choose custom color for background</string>
+    <string name="monet_engine_custom_color_summary">自定义强调色</string>
+    <string name="monet_engine_custom_bgcolor_title">背景颜色</string>
+    <string name="monet_engine_custom_bgcolor_summary">自定义背景的颜色</string>
     <string name="monet_engine_color_override_title">自定义颜色</string>
-    <string name="monet_engine_luminance_factor_title">Luminance</string>
-    <string name="monet_engine_luminance_factor_summary">Higher values produce brighter colors</string>
+    <string name="monet_engine_luminance_factor_title">亮度</string>
+    <string name="monet_engine_luminance_factor_summary">更高的亮度生成的色彩看起来更亮</string>
     <string name="monet_engine_chroma_factor_title">色度系数</string>
-    <string name="monet_engine_chroma_factor_summary">Higher values produce stronger colors</string>
-    <string name="monet_engine_tint_background_title">Tint background</string>
-    <string name="monet_engine_tint_background_summary">Make luminance and chroma selection affect background colors as well</string>
+    <string name="monet_engine_chroma_factor_summary">更高的色值生成的色彩看起来更鲜艳</string>
+    <string name="monet_engine_tint_background_title">背景色调</string>
+    <string name="monet_engine_tint_background_summary">让背景色彩也使用自定义亮度和彩度</string>
     <!-- Quick unlock -->
     <string name="unlock_quick_unlock_control_title">快速解锁</string>
     <string name="unlock_quick_unlock_control_summary">当输入正确的 PIN 码/密码后自动解锁</string>
@@ -556,8 +556,8 @@
     <string name="qs_footer_show_power_menu_title">电源菜单快捷方式</string>
     <string name="qs_footer_services_icon_title">运行中服务快捷方式</string>
     <string name="qs_footer_settings_icon_title">设置快捷方式</string>
-    <!-- Device Info screen. crDroid legal. -->
-    <string name="crdroid_license_title">crDroid 法律信息</string>
+    <!-- Device Info screen. BaikalOS legal. -->
+    <string name="crdroid_license_title">BaikalOS 法律信息</string>
     <!-- Quick Settings brightness slider -->
     <string name="qs_show_brightness_slider_title">亮度滑块</string>
     <string name="qs_show_brightness_slider_never">从不显示</string>
@@ -1045,13 +1045,16 @@
     <string name="lockscreen_shortcut_category">底部快捷方式</string>
     <string name="lockscreen_shortcut_start_title">左侧快捷方式</string>
     <string name="lockscreen_shortcut_end_title">右侧快捷方式</string>
-    <string name="lockscreen_shortcut_home">主页控制</string>
     <string name="lockscreen_shortcut_wallet">钱包</string>
+    <string name="lockscreen_shortcut_home">主页控制</string>
     <string name="lockscreen_shortcut_flashlight">手电筒</string>
     <string name="lockscreen_shortcut_qr">二维码扫描器</string>
     <string name="lockscreen_shortcut_camera">相机</string>
     <string name="lockscreen_shortcut_remote">Google TV 遥控器</string>
+    <string name="lockscreen_shortcut_dnd">勿扰</string>
     <string name="lockscreen_shortcut_none">无</string>
+    <string name="lockscreen_shortcut_enforce_title">强制快捷方式</string>
+    <string name="lockscreen_shortcut_enforce_summary">如果选择的快捷方式不可用，请不要显示下一个可用的快捷方式</string>
     <!-- App lock -->
     <string name="app_lock_title">应用锁</string>
     <plurals name="app_lock_summary">

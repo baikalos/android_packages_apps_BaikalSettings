@@ -60,15 +60,15 @@
     <string name="changelog_crdroid_title">Registre de canvis actual</string>
     <string name="changelog_crdroid_summary">Mostra els canvis de la ROM instal·lada</string>
     <string name="changelog_crdroid_error">No s\'ha pogut carregar el registre de canvis</string>
-    <!-- About crDroid -->
+    <!-- About BaikalOS -->
     <string name="about_crdroid">Sobre BaikalOS</string>
     <string name="about_device_name">Dispositiu</string>
-    <!-- Share crDroid -->
+    <!-- Share BaikalOS -->
     <string name="share_crdroid_title">Comparteix BaikalOS</string>
     <string name="share_crdroid_summary">Feu saber a altres usuaris sobre BaikalOS</string>
     <string name="share_message">Consulteu si #BaikalOS està disponible per al vostre dispositiu @ https://github.com/BaikalOS-Devices/</string>
     <string name="share_chooser_title">Comparteix BaikalOS</string>
-    <!-- Sites crDroid -->
+    <!-- Sites BaikalOS -->
     <string name="crdroid_source_title">GitHub</string>
     <string name="crdroid_source_summary">Ens encanta el programari lliure, fes-nos una ullada</string>
     <string name="crdroid_telegram_title">Comunitat BaikalOS</string>
@@ -80,10 +80,10 @@
     <string name="crdroid_translate_title">Traduccions</string>
     <string name="crdroid_translate_summary">Ajuda amb la traducció de la ROM a la vostra llengua!</string>
     <string name="crdroid_sponsor_summary">Visita la web del nostre col·laborador</string>
-    <!-- Donate crDroid -->
+    <!-- Donate BaikalOS -->
     <string name="donate_crdroid_title">Dóna’ns suport</string>
     <string name="donate_crdroid_summary">Fes un donatiu per a ajudar al desenvolupament futur</string>
-    <string name="donate_team_title">Equip crDroid</string>
+    <string name="donate_team_title">Equip BaikalOS</string>
     <string name="donate_team_summary">Fes una donació per a sostenir el hosting del servidor, el lloc web i la gestió general</string>
     <!-- The Drill -->
     <string name="drill_title">Ja saps el que has de fer</string>
@@ -557,8 +557,8 @@
     <string name="qs_footer_show_power_menu_title">Drecera del menú d\'apagat</string>
     <string name="qs_footer_services_icon_title">Drecera dels serveis en execució</string>
     <string name="qs_footer_settings_icon_title">Drecera a la configuració</string>
-    <!-- Device Info screen. crDroid legal. -->
-    <string name="crdroid_license_title">Informació legal de crDroid</string>
+    <!-- Device Info screen. BaikalOS legal. -->
+    <string name="crdroid_license_title">Informació legal de BaikalOS</string>
     <!-- Quick Settings brightness slider -->
     <string name="qs_show_brightness_slider_title">Barra de brillantor</string>
     <string name="qs_show_brightness_slider_never">No mostrar mai</string>
@@ -1047,13 +1047,16 @@
     <string name="lockscreen_shortcut_category">Dreceres de la part inferior</string>
     <string name="lockscreen_shortcut_start_title">Drecera de l\'esquerra</string>
     <string name="lockscreen_shortcut_end_title">Drecera de la dreta</string>
-    <string name="lockscreen_shortcut_home">Controls de la pantalla d\'inici</string>
     <string name="lockscreen_shortcut_wallet">Google Wallet</string>
+    <string name="lockscreen_shortcut_home">Controls de la pantalla d\'inici</string>
     <string name="lockscreen_shortcut_flashlight">Llanterna</string>
     <string name="lockscreen_shortcut_qr">Escàner de codis QR</string>
     <string name="lockscreen_shortcut_camera">Càmera</string>
     <string name="lockscreen_shortcut_remote">Comandament de Google TV</string>
+    <string name="lockscreen_shortcut_dnd">DND</string>
     <string name="lockscreen_shortcut_none">Cap</string>
+    <string name="lockscreen_shortcut_enforce_title">Enforce shortcuts</string>
+    <string name="lockscreen_shortcut_enforce_summary">Do not display next available shortcut if chosen shortcut is not available</string>
     <!-- App lock -->
     <string name="app_lock_title">Bloqueig d\'aplicacions</string>
     <plurals name="app_lock_summary">

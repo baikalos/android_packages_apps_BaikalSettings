@@ -60,15 +60,15 @@
     <string name="changelog_crdroid_title">更新紀錄</string>
     <string name="changelog_crdroid_summary">查看此 ROM 的更新紀錄</string>
     <string name="changelog_crdroid_error">無法載入更新日誌</string>
-    <!-- About crDroid -->
+    <!-- About BaikalOS -->
     <string name="about_crdroid">關於 BaikalOS</string>
     <string name="about_device_name">裝置</string>
-    <!-- Share crDroid -->
+    <!-- Share BaikalOS -->
     <string name="share_crdroid_title">分享 BaikalOS</string>
     <string name="share_crdroid_summary">讓別人知道 BaikalOS</string>
     <string name="share_message">在 https://github.com/BaikalOS-Devices/ 看看 #BaikalOS Android</string>
     <string name="share_chooser_title">分享 BaikalOS</string>
-    <!-- Sites crDroid -->
+    <!-- Sites BaikalOS -->
     <string name="crdroid_source_title">GitHub</string>
     <string name="crdroid_source_summary">我們愛開源，來看看吧</string>
     <string name="crdroid_telegram_title">BaikalOS 社群</string>
@@ -80,10 +80,10 @@
     <string name="crdroid_translate_title">翻譯</string>
     <string name="crdroid_translate_summary">幫忙將 ROM 翻譯成您的語言！</string>
     <string name="crdroid_sponsor_summary">造訪我們的網頁寄存服務提供者</string>
-    <!-- Donate crDroid -->
+    <!-- Donate BaikalOS -->
     <string name="donate_crdroid_title">贊助我們</string>
     <string name="donate_crdroid_summary">捐贈以支持開放原始碼開發。</string>
-    <string name="donate_team_title">crDroid 團隊</string>
+    <string name="donate_team_title">BaikalOS 團隊</string>
     <string name="donate_team_summary">贊助以支援我們的伺服器代管，網站運作與總體管理</string>
     <!-- The Drill -->
     <string name="drill_title">測試</string>
@@ -556,8 +556,8 @@
     <string name="qs_footer_show_power_menu_title">電源選單圖示</string>
     <string name="qs_footer_services_icon_title">正在運作中的服務圖示</string>
     <string name="qs_footer_settings_icon_title">設定圖示</string>
-    <!-- Device Info screen. crDroid legal. -->
-    <string name="crdroid_license_title">crDroid 條款</string>
+    <!-- Device Info screen. BaikalOS legal. -->
+    <string name="crdroid_license_title">BaikalOS 條款</string>
     <!-- Quick Settings brightness slider -->
     <string name="qs_show_brightness_slider_title">亮度控制條</string>
     <string name="qs_show_brightness_slider_never">永不顯示</string>
@@ -1045,13 +1045,16 @@
     <string name="lockscreen_shortcut_category">底部捷徑</string>
     <string name="lockscreen_shortcut_start_title">左側捷徑</string>
     <string name="lockscreen_shortcut_end_title">右側捷徑</string>
-    <string name="lockscreen_shortcut_home">裝置控制</string>
     <string name="lockscreen_shortcut_wallet">錢包</string>
+    <string name="lockscreen_shortcut_home">裝置控制</string>
     <string name="lockscreen_shortcut_flashlight">手電筒</string>
     <string name="lockscreen_shortcut_qr">QR 圖碼掃描器</string>
     <string name="lockscreen_shortcut_camera">相機</string>
     <string name="lockscreen_shortcut_remote">遙控 Google TV</string>
+    <string name="lockscreen_shortcut_dnd">零打擾</string>
     <string name="lockscreen_shortcut_none">無</string>
+    <string name="lockscreen_shortcut_enforce_title">固定捷徑</string>
+    <string name="lockscreen_shortcut_enforce_summary">目前的捷徑無法使用時，不會自動遞補使用者所設定的其他捷徑</string>
     <!-- App lock -->
     <string name="app_lock_title">應用鎖</string>
     <plurals name="app_lock_summary">

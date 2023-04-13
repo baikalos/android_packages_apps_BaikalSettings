@@ -60,15 +60,15 @@
     <string name="changelog_crdroid_title">현재 변경 내역</string>
     <string name="changelog_crdroid_summary">설치된 ROM의 변경 사항을 봅니다.</string>
     <string name="changelog_crdroid_error">변경 사항을 읽을 수 없습니다.</string>
-    <!-- About crDroid -->
+    <!-- About BaikalOS -->
     <string name="about_crdroid">BaikalOS에 관하여</string>
     <string name="about_device_name">기기</string>
-    <!-- Share crDroid -->
+    <!-- Share BaikalOS -->
     <string name="share_crdroid_title">BaikalOS 공유</string>
     <string name="share_crdroid_summary">BaikalOS에 대해 다른 사람들에게 알리기</string>
     <string name="share_message">당신의 장치를 위한 #BaikalOS 이 있는지 확인하려면 @ https://crdroid.net을 확인하세요.</string>
     <string name="share_chooser_title">BaikalOS 공유</string>
-    <!-- Sites crDroid -->
+    <!-- Sites BaikalOS -->
     <string name="crdroid_source_title">GitHub</string>
     <string name="crdroid_source_summary">우리는 오픈 소스를 사랑합니다. 확인해 보세요.</string>
     <string name="crdroid_telegram_title">BaikalOS 커뮤니티</string>
@@ -80,10 +80,10 @@
     <string name="crdroid_translate_title">번역</string>
     <string name="crdroid_translate_summary">귀하의 언어로 ROM 현지화를 도와주세요!</string>
     <string name="crdroid_sponsor_summary">웹 사이트 호스팅 파트너 방문하기</string>
-    <!-- Donate crDroid -->
+    <!-- Donate BaikalOS -->
     <string name="donate_crdroid_title">지원하기</string>
     <string name="donate_crdroid_summary">기부해서 개발 지원하기</string>
-    <string name="donate_team_title">crDroid 팀</string>
+    <string name="donate_team_title">BaikalOS 팀</string>
     <string name="donate_team_summary">서버 호스팅 지원, 가동 시간 및 전반적인 관리 사이트 기부</string>
     <!-- The Drill -->
     <string name="drill_title">The Drill</string>
@@ -556,8 +556,8 @@
     <string name="qs_footer_show_power_menu_title">전원 메뉴 바로 가기</string>
     <string name="qs_footer_services_icon_title">실행 중인 서비스 바로 가기</string>
     <string name="qs_footer_settings_icon_title">설정 바로 가기</string>
-    <!-- Device Info screen. crDroid legal. -->
-    <string name="crdroid_license_title">crDroid 약관</string>
+    <!-- Device Info screen. BaikalOS legal. -->
+    <string name="crdroid_license_title">BaikalOS 약관</string>
     <!-- Quick Settings brightness slider -->
     <string name="qs_show_brightness_slider_title">밝기 조절 슬라이더</string>
     <string name="qs_show_brightness_slider_never">절대 보여주지 않기</string>
@@ -1045,13 +1045,16 @@
     <string name="lockscreen_shortcut_category">Bottom shortcuts</string>
     <string name="lockscreen_shortcut_start_title">Left shortcut</string>
     <string name="lockscreen_shortcut_end_title">Right shortcut</string>
-    <string name="lockscreen_shortcut_home">Home controls</string>
     <string name="lockscreen_shortcut_wallet">Wallet</string>
+    <string name="lockscreen_shortcut_home">Home controls</string>
     <string name="lockscreen_shortcut_flashlight">손전등</string>
     <string name="lockscreen_shortcut_qr">QR code scanner</string>
     <string name="lockscreen_shortcut_camera">카메라</string>
     <string name="lockscreen_shortcut_remote">Google TV Remote</string>
+    <string name="lockscreen_shortcut_dnd">DND</string>
     <string name="lockscreen_shortcut_none">없음</string>
+    <string name="lockscreen_shortcut_enforce_title">Enforce shortcuts</string>
+    <string name="lockscreen_shortcut_enforce_summary">Do not display next available shortcut if chosen shortcut is not available</string>
     <!-- App lock -->
     <string name="app_lock_title">App lock</string>
     <plurals name="app_lock_summary">

@@ -68,17 +68,17 @@
     <string name="changelog_crdroid_summary">View changes in the ROM installed</string>
     <string name="changelog_crdroid_error">Unable to load changelog</string>
 
-    <!-- About crDroid -->
+    <!-- About BaikalOS -->
     <string name="about_crdroid">About BaikalOS</string>
     <string name="about_device_name">Device</string>
 
-    <!-- Share crDroid -->
+    <!-- Share BaikalOS -->
     <string name="share_crdroid_title">Share BaikalOS</string>
     <string name="share_crdroid_summary">Let others know about BaikalOS</string>
     <string name="share_message">Check out if #BaikalOS is available for your device @ https://github.com/BaikalOS-Devices/</string>
     <string name="share_chooser_title">Share BaikalOS</string>
 
-    <!-- Sites crDroid -->
+    <!-- Sites BaikalOS -->
     <string name="crdroid_source_title">GitHub</string>
     <string name="crdroid_source_summary">We love open source, check us out</string>
     <string name="crdroid_telegram_title">BaikalOS community</string>
@@ -92,10 +92,10 @@
     <string name="crdroid_sponsor_title" translatable="false">ScopeHosts</string>
     <string name="crdroid_sponsor_summary">Visit our website host partner</string>
 
-    <!-- Donate crDroid -->
+    <!-- Donate BaikalOS -->
     <string name="donate_crdroid_title">Support us</string>
     <string name="donate_crdroid_summary">Donate to support further development</string>
-    <string name="donate_team_title">crDroid team</string>
+    <string name="donate_team_title">BaikalOS team</string>
     <string name="donate_team_summary">Donate to support server hosting, site uptime and overall management</string>
 
     <!-- The Drill -->
@@ -628,8 +628,8 @@
     <string name="qs_footer_services_icon_title">Running services shortcut</string>
     <string name="qs_footer_settings_icon_title">Settings shortcut</string>
 
-    <!-- Device Info screen. crDroid legal. -->
-    <string name="crdroid_license_title">crDroid legal</string>
+    <!-- Device Info screen. BaikalOS legal. -->
+    <string name="crdroid_license_title">BaikalOS legal</string>
 
     <!-- Quick Settings brightness slider -->
     <string name="qs_show_brightness_slider_title">Brightness slider</string>

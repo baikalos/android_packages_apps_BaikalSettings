@@ -60,15 +60,15 @@
     <string name="changelog_crdroid_title">Praegune muudatuste logi</string>
     <string name="changelog_crdroid_summary">Vaata paigaldatud ROMi muudatusi</string>
     <string name="changelog_crdroid_error">Muudatuste logi ei saanud laadida</string>
-    <!-- About crDroid -->
+    <!-- About BaikalOS -->
     <string name="about_crdroid">Info BaikalOSi kohta</string>
     <string name="about_device_name">Seade</string>
-    <!-- Share crDroid -->
+    <!-- Share BaikalOS -->
     <string name="share_crdroid_title">Jaga BaikalOSi</string>
     <string name="share_crdroid_summary">Anna teistele teada BaikalOSist</string>
     <string name="share_message">Uuri kas #BaikalOS on saadaval sinu seadmele https://github.com/BaikalOS-Devices/</string>
     <string name="share_chooser_title">Jaga BaikalOSi</string>
-    <!-- Sites crDroid -->
+    <!-- Sites BaikalOS -->
     <string name="crdroid_source_title">GitHub</string>
     <string name="crdroid_source_summary">Me armastame avatud tarkvara, tutvu meiega</string>
     <string name="crdroid_telegram_title">BaikalOS kogukond</string>
@@ -80,10 +80,10 @@
     <string name="crdroid_translate_title">Tõlked</string>
     <string name="crdroid_translate_summary">Aita ROM tõlkida oma emakeelde!</string>
     <string name="crdroid_sponsor_summary">Külasta meie veebisaidi hostpartnerit</string>
-    <!-- Donate crDroid -->
+    <!-- Donate BaikalOS -->
     <string name="donate_crdroid_title">Toeta meid</string>
     <string name="donate_crdroid_summary">Anneta edasise arenduse toetamiseks</string>
-    <string name="donate_team_title">crDroidi meeskond</string>
+    <string name="donate_team_title">BaikalOSi meeskond</string>
     <string name="donate_team_summary">Anneta, et toetada serveri majutust, veebilehe ülalpidamist ning üleüldist haldust</string>
     <!-- The Drill -->
     <string name="drill_title">Nagu ikka</string>
@@ -557,8 +557,8 @@
     <string name="qs_footer_show_power_menu_title">Toitemenüü otsetee</string>
     <string name="qs_footer_services_icon_title">Töötavate teenuste otsetee</string>
     <string name="qs_footer_settings_icon_title">Seadete otsetee</string>
-    <!-- Device Info screen. crDroid legal. -->
-    <string name="crdroid_license_title">crDroidi legaalne</string>
+    <!-- Device Info screen. BaikalOS legal. -->
+    <string name="crdroid_license_title">BaikalOSi legaalne</string>
     <!-- Quick Settings brightness slider -->
     <string name="qs_show_brightness_slider_title">Heleduse liugur</string>
     <string name="qs_show_brightness_slider_never">Ära kuva kunagi</string>
@@ -1047,13 +1047,16 @@
     <string name="lockscreen_shortcut_category">Alumised otseteed</string>
     <string name="lockscreen_shortcut_start_title">Vasakpoolne otsetee</string>
     <string name="lockscreen_shortcut_end_title">Parempoolne otsetee</string>
-    <string name="lockscreen_shortcut_home">Kodu juhtnupud</string>
     <string name="lockscreen_shortcut_wallet">Rahakott</string>
+    <string name="lockscreen_shortcut_home">Kodu juhtnupud</string>
     <string name="lockscreen_shortcut_flashlight">Taskulamp</string>
     <string name="lockscreen_shortcut_qr">QR-koodi skanner</string>
     <string name="lockscreen_shortcut_camera">Kaamera</string>
     <string name="lockscreen_shortcut_remote">Google TV pult</string>
+    <string name="lockscreen_shortcut_dnd">DND</string>
     <string name="lockscreen_shortcut_none">Puudub</string>
+    <string name="lockscreen_shortcut_enforce_title">Enforce shortcuts</string>
+    <string name="lockscreen_shortcut_enforce_summary">Do not display next available shortcut if chosen shortcut is not available</string>
     <!-- App lock -->
     <string name="app_lock_title">App lock</string>
     <plurals name="app_lock_summary">
