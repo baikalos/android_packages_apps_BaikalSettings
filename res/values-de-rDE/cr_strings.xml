@@ -961,7 +961,7 @@
     <string name="status_bar_logo_summary">Benutzerdefiniertes Logo rechts oder links in der Statusleiste anzeigen</string>
     <string name="status_bar_logo_position_title">Logoposition</string>
     <string name="status_bar_logo_style_title">Logostil</string>
-    <string name="status_bar_logo_style_crdroid">crDroid</string>
+    <string name="status_bar_logo_style_crdroid">BaikalOS</string>
     <string name="status_bar_logo_style_android">Android</string>
     <string name="status_bar_logo_style_adidas">Adidas</string>
     <string name="status_bar_logo_style_alien">Alien</string>
