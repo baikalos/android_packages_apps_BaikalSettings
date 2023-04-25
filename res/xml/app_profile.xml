@@ -262,7 +262,11 @@
             android:defaultValue="0"
             android:summary="%s" />
 
-
+        <SwitchPreference
+            android:key="app_profile_debug"
+            android:title="@string/app_profile_debug_title"
+            android:summary="@string/app_profile_debug_summary"
+            android:defaultValue="false" />
 
     <PreferenceCategory
         android:key="app_profile_boot_options"

@@ -34,7 +34,7 @@
     <string name="log_it_share_via">Поделиться через</string>
 
     <string name="baikalos_debug_title">Подробный лог</string>
-    <string name="baikalos_debug_summary">Включить подробный лог. Не включайте без причины. Расходует реусрсы, увеличивает потребление.</string>
+    <string name="baikalos_debug_summary">Включить подробный лог. Не включайте без причины. Расходует ресурсы, увеличивает потребление.</string>
 
     <!-- Dashboard -->
     <string name="user_interface_category">Интерфейс</string>

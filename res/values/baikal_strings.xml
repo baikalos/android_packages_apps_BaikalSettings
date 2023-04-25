@@ -102,6 +102,9 @@
     <string name="baikalos_interaction_boost_title">Interaction Boost</string>
     <string name="baikalos_interaction_boost_summary">Enable interaction boost</string>
 
+    <string name="baikalos_rendering_boost_title">Rendering Boost</string>
+    <string name="baikalos_rendering_boost_summary">Enable rendering boost</string>
+
     <string name="boost_override_silver_title">Silver cluster boost</string>
     <string name="boost_override_gold_title">Gold cluster boost</string>
     <string name="boost_override_platinum_title">Platinum cluster boost</string>

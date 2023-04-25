@@ -261,4 +261,7 @@
     <string name="app_profile_full_screen_title">Full Screen</string>
     <string name="app_profile_full_screen_summary">Force full screen mode</string>
 
+    <string name="app_profile_debug_title">Debug</string>
+    <string name="app_profile_debug_summary">Enable verbose debug logging for the app. Do not enable without a reason. It will significantly hit the performance.</string>
+
 </resources>

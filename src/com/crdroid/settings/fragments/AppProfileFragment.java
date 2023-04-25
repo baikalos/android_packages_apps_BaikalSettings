@@ -77,6 +77,7 @@ public class AppProfileFragment extends SettingsPreferenceFragment
     public static final String ARG_PACKAGE_NAME = "package";
     public static final String ARG_PACKAGE_UID = "uid";
 
+    private static final String APP_PROFILE_DEBUG = "app_profile_debug";
     private static final String APP_PROFILE_DISABLE_BOOT = "app_profile_disable_boot";
     private static final String APP_PROFILE_DISABLE_WAKEUP = "app_profile_disable_wakeup";
     private static final String APP_PROFILE_DISABLE_JOBS = "app_profile_disable_jobs";
@@ -127,6 +128,7 @@ public class AppProfileFragment extends SettingsPreferenceFragment
     private int mUid;
     private Context mContext;
 
+    private SwitchPreference mAppDebug;
     private SwitchPreference mAppReader;
     private SwitchPreference mAppPinned;
     private SwitchPreference mAppFreezer;
@@ -220,6 +222,25 @@ public class AppProfileFragment extends SettingsPreferenceFragment
         mProfile = mAppSettings.updateProfileFromSystemSettings(mProfile);
     
         try {
+
+            mAppDebug = (SwitchPreference) findPreference(APP_PROFILE_DEBUG);
+            if( mAppDebug != null ) {
+                mAppDebug.setChecked(mProfile.mDebug);
+                Log.e(TAG, "mAppDebug: mPackageName=" + mPackageName + ",mDebug=" + mProfile.mBootDisabled);
+                mAppDebug.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                    public boolean onPreferenceChange(Preference preference, Object newValue) {
+                        try {
+                            mProfile.mDebug = ((Boolean)newValue);
+                            mAppSettings.updateProfile(mProfile);
+                            mAppSettings.save();
+                            Log.e(TAG, "mAppDebug: mPackageName=" + mPackageName + ",mDebug=" + (Boolean)newValue);
+                        } catch(Exception re) {
+                            Log.e(TAG, "onCreate: mAppDebug Fatal! exception", re );
+                        }
+                        return true;
+                    }
+                });
+            }
 
             mAppDisableBoot = (SwitchPreference) findPreference(APP_PROFILE_DISABLE_BOOT);
             if( mAppDisableBoot != null ) {
