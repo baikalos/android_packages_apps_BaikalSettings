@@ -16,7 +16,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- App Title -->
-    <string name="crdroid_settings_title">crDroid Podešavanja</string>
+    <string name="crdroid_settings_title">BaikalOS Podešavanja</string>
     <string name="crdroid_settings_summary">Otvori dobre stvari</string>
     <string name="reset_settings_title">Resetuj podešavanja</string>
     <string name="reset_settings_message">Ovo će resetovati većinu crdroid podešavanja na njihove podrazumevane vrednosti za trenutnog korisnika. Želite li da nastavite?</string>
@@ -61,17 +61,17 @@
     <string name="changelog_crdroid_summary">Vidi izmene u trenutno instaliranom ROM-u</string>
     <string name="changelog_crdroid_error">Ne mogu učitati listu izmena</string>
     <!-- About crDroid -->
-    <string name="about_crdroid">O crDroid-u</string>
+    <string name="about_crdroid">O BaikalOS-u</string>
     <string name="about_device_name">Uređaj</string>
     <!-- Share crDroid -->
-    <string name="share_crdroid_title">Podeli crDroid</string>
-    <string name="share_crdroid_summary">Obavesti druge o crDroid-u</string>
-    <string name="share_message">Proveri da li je #crDroidAndroid dostupan za tvoj uređaj @ https://crdroid.net/</string>
-    <string name="share_chooser_title">Podeli crDroid</string>
+    <string name="share_crdroid_title">Podeli BaikalOS</string>
+    <string name="share_crdroid_summary">Obavesti druge o BaikalOS-u</string>
+    <string name="share_message">Proveri da li je #BaikalOS dostupan za tvoj uređaj @ https://github.com/BaikalOS-Devices/</string>
+    <string name="share_chooser_title">Podeli BaikalOS</string>
     <!-- Sites crDroid -->
     <string name="crdroid_source_title">GitHub</string>
     <string name="crdroid_source_summary">Mi volimo open source, proveri nas</string>
-    <string name="crdroid_telegram_title">crDroid zajednica</string>
+    <string name="crdroid_telegram_title">BaikalOS zajednica</string>
     <string name="crdroid_telegram_summary">Na Telegramu smo. Pridruži nam se!</string>
     <string name="crdroid_telegram_channel_title">Update kanal</string>
     <string name="crdroid_telegram_channel_summary">Budi obavešten o novom verziji na Terlegramu</string>
@@ -963,7 +963,7 @@
     <string name="status_bar_logo_summary">Display a custom logo on left or right of the status bar</string>
     <string name="status_bar_logo_position_title">Logo position</string>
     <string name="status_bar_logo_style_title">Logo style</string>
-    <string name="status_bar_logo_style_crdroid">CrDroid</string>
+    <string name="status_bar_logo_style_crdroid">BaikalOS</string>
     <string name="status_bar_logo_style_android">Android</string>
     <string name="status_bar_logo_style_adidas">Adidas</string>
     <string name="status_bar_logo_style_alien">Alien</string>

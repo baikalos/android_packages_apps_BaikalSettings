@@ -16,7 +16,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- App Title -->
-    <string name="crdroid_settings_title">Impostazioni crDroid</string>
+    <string name="crdroid_settings_title">Impostazioni BaikalOS</string>
     <string name="crdroid_settings_summary">Dove avviene la magia</string>
     <string name="reset_settings_title">Ripristina le impostazioni iniziali</string>
     <string name="reset_settings_message">Questo ripristinerà la maggior parte delle impostazioni crdroid ai loro valori predefiniti per l\'utente corrente. Vuoi continuare?</string>
@@ -61,17 +61,17 @@
     <string name="changelog_crdroid_summary">Visualizza le modifiche della ROM installata</string>
     <string name="changelog_crdroid_error">Impossibile caricare l\'elenco delle modifiche</string>
     <!-- About crDroid -->
-    <string name="about_crdroid">Informazioni su crDroid</string>
+    <string name="about_crdroid">Informazioni su BaikalOS</string>
     <string name="about_device_name">Dispositivo</string>
     <!-- Share crDroid -->
-    <string name="share_crdroid_title">Condividi crDroid</string>
-    <string name="share_crdroid_summary">Fai conoscere crDroid agli altri</string>
-    <string name="share_message">Controlla se #crDroidAndroid è disponibile per il tuo dispositivo @ https://crdroid.net</string>
-    <string name="share_chooser_title">Condividi crDroid</string>
+    <string name="share_crdroid_title">Condividi BaikalOS</string>
+    <string name="share_crdroid_summary">Fai conoscere BaikalOS agli altri</string>
+    <string name="share_message">Controlla se #BaikalOS è disponibile per il tuo dispositivo @ https://crdroid.net</string>
+    <string name="share_chooser_title">Condividi BaikalOS</string>
     <!-- Sites crDroid -->
     <string name="crdroid_source_title">GitHub</string>
     <string name="crdroid_source_summary">Noi amiamo l\'open source, vieni a trovarci</string>
-    <string name="crdroid_telegram_title">Comunità CrDroid</string>
+    <string name="crdroid_telegram_title">Comunità BaikalOS</string>
     <string name="crdroid_telegram_summary">Siamo su Telegram. Entra!</string>
     <string name="crdroid_telegram_channel_title">Canale degli aggiornamenti</string>
     <string name="crdroid_telegram_channel_summary">Ricevi una notifica delle nuove build su Telegram</string>
@@ -961,7 +961,7 @@
     <string name="status_bar_logo_summary">Mostra un logo personalizzato a sinistra o a destra della barra di stato</string>
     <string name="status_bar_logo_position_title">Posizione logo</string>
     <string name="status_bar_logo_style_title">Stile logo</string>
-    <string name="status_bar_logo_style_crdroid">CrDroid</string>
+    <string name="status_bar_logo_style_crdroid">BaikalOS</string>
     <string name="status_bar_logo_style_android">Android</string>
     <string name="status_bar_logo_style_adidas">Adidas</string>
     <string name="status_bar_logo_style_alien">Alieno</string>

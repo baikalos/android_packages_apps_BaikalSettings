@@ -18,40 +18,52 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/smart_charging_title">
 
+    <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+        android:key="baikalos_limited_charge_screen_on"
+        android:defaultValue="false"
+        android:title="@string/baikalos_limited_charge_screen_on_title"
+        android:summary="@string/baikalos_limited_charge_screen_on_summary"/>
+
+    <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+        android:key="baikalos_bpcharge_screen_on"
+        android:defaultValue="false"
+        android:title="@string/baikalos_bpcharge_screen_on_title"
+        android:summary="@string/baikalos_bpcharge_screen_on_summary"/>
+
     <com.crdroid.settings.preferences.SystemSettingSwitchPreference
-        android:key="smart_charging"
+        android:key="baikalos_smart_charging"
         android:title="@string/smart_charging_switch_title"
         android:summary="@string/smart_charging_summary"
         android:defaultValue="false" />
 
     <com.crdroid.settings.preferences.SystemSettingSwitchPreference
-        android:key="smart_charging_reset_stats"
+        android:key="baikalos_smart_charging_reset_stats"
         android:title="@string/smart_charging_reset_stats_title"
         android:summary="@string/smart_charging_reset_stats_summary"
         android:defaultValue="false"
-        android:dependency="smart_charging" />
+        android:dependency="baikalos_smart_charging" />
 
     <com.crdroid.settings.preferences.SystemSettingSeekBarPreference
-        android:key="smart_charging_level"
+        android:key="baikalos_smart_charging_level"
         android:title="@string/smart_charging_level_title"
         android:max="100"
         settings:min="40"
         settings:units="%"
         android:defaultValue="80"
-        android:dependency="smart_charging" />
+        android:dependency="baikalos_smart_charging" />
 
     <com.crdroid.settings.preferences.SystemSettingSeekBarPreference
-        android:key="smart_charging_resume_level"
+        android:key="baikalos_smart_charging_resume_level"
         android:title="@string/smart_charging_resume_level_title"
         android:max="99"
         settings:min="15"
         settings:units="%"
         android:defaultValue="60"
-        android:dependency="smart_charging" />
+        android:dependency="baikalos_smart_charging" />
 
     <com.android.settingslib.widget.FooterPreference
         android:key="smart_charging_footer"
         android:selectable="false"
         settings:searchable="false"
-        android:dependency="smart_charging" />
+        android:dependency="baikalos_smart_charging" />
 </PreferenceScreen>

@@ -16,10 +16,10 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- App Title -->
-    <string name="crdroid_settings_title">crDroid の設定</string>
+    <string name="crdroid_settings_title">BaikalOS の設定</string>
     <string name="crdroid_settings_summary">高度な設定</string>
     <string name="reset_settings_title">設定のリセット</string>
-    <string name="reset_settings_message">現在のユーザーのほとんどの crDroid 設定を初期設定に戻します。続行しますか？</string>
+    <string name="reset_settings_message">現在のユーザーのほとんどの BaikalOS 設定を初期設定に戻します。続行しますか？</string>
     <!-- Personalization Categories -->
     <string name="button_title">ボタン</string>
     <string name="lockscreen_title">ロック画面</string>
@@ -61,17 +61,17 @@
     <string name="changelog_crdroid_summary">インストールされている ROM の更新内容を確認します</string>
     <string name="changelog_crdroid_error">更新履歴を読み込めませんでした</string>
     <!-- About crDroid -->
-    <string name="about_crdroid">crDroid について</string>
+    <string name="about_crdroid">BaikalOS について</string>
     <string name="about_device_name">デバイス</string>
     <!-- Share crDroid -->
-    <string name="share_crdroid_title">crDroid についてシェアする</string>
-    <string name="share_crdroid_summary">みんなに crDroid を知ってもらいましょう</string>
-    <string name="share_message">カスタム ROM #crDroidAndroid を使ってみて！ https://crdroid.net/</string>
-    <string name="share_chooser_title">crDroid をシェア</string>
+    <string name="share_crdroid_title">BaikalOS についてシェアする</string>
+    <string name="share_crdroid_summary">みんなに BaikalOS を知ってもらいましょう</string>
+    <string name="share_message">カスタム ROM #BaikalOS を使ってみて！ https://github.com/BaikalOS-Devices/</string>
+    <string name="share_chooser_title">BaikalOS をシェア</string>
     <!-- Sites crDroid -->
     <string name="crdroid_source_title">GitHub</string>
     <string name="crdroid_source_summary">私たちはオープンソースを愛しています。見てみてください</string>
-    <string name="crdroid_telegram_title">crDroid コミュニティ</string>
+    <string name="crdroid_telegram_title">BaikalOS コミュニティ</string>
     <string name="crdroid_telegram_summary">Telegram で話しましょう！</string>
     <string name="crdroid_telegram_channel_title">アップデートチャンネル</string>
     <string name="crdroid_telegram_channel_summary">Telegram で新しいビルドの通知を受けます</string>
@@ -959,7 +959,7 @@
     <string name="status_bar_logo_summary">ステータスバーの左右にカスタムロゴを表示します</string>
     <string name="status_bar_logo_position_title">ロゴの位置</string>
     <string name="status_bar_logo_style_title">ロゴのスタイル</string>
-    <string name="status_bar_logo_style_crdroid">CrDroid</string>
+    <string name="status_bar_logo_style_crdroid">BaikalOS</string>
     <string name="status_bar_logo_style_android">Android</string>
     <string name="status_bar_logo_style_adidas">Adidas</string>
     <string name="status_bar_logo_style_alien">宇宙人</string>

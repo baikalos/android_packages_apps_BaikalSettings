@@ -16,7 +16,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- App Title -->
-    <string name="crdroid_settings_title">crDroid Instellingen</string>
+    <string name="crdroid_settings_title">BaikalOS Instellingen</string>
     <string name="crdroid_settings_summary">Goodies</string>
     <string name="reset_settings_title">Instellingen resetten</string>
     <string name="reset_settings_message">Dit zal de meeste crdroid instellingen terugzetten op de standaardwaarden voor de huidige gebruiker. Wilt u doorgaan?</string>
@@ -61,17 +61,17 @@
     <string name="changelog_crdroid_summary">Bekijk wijzigingen in de geïnstalleerde rom</string>
     <string name="changelog_crdroid_error">Kan changelog niet laden</string>
     <!-- About crDroid -->
-    <string name="about_crdroid">Over crDroid</string>
+    <string name="about_crdroid">Over BaikalOS</string>
     <string name="about_device_name">Apparaat</string>
     <!-- Share crDroid -->
-    <string name="share_crdroid_title">Deel crDroid</string>
-    <string name="share_crdroid_summary">Laat anderen weten over crDroid</string>
-    <string name="share_message">Kijk eens of #crDroidAndroid beschikbaar is voor uw apparaat @ https://crdroid.net/</string>
-    <string name="share_chooser_title">Deel crDroid</string>
+    <string name="share_crdroid_title">Deel BaikalOS</string>
+    <string name="share_crdroid_summary">Laat anderen weten over BaikalOS</string>
+    <string name="share_message">Kijk eens of #BaikalOS beschikbaar is voor uw apparaat @ https://github.com/BaikalOS-Devices/</string>
+    <string name="share_chooser_title">Deel BaikalOS</string>
     <!-- Sites crDroid -->
     <string name="crdroid_source_title">Github</string>
     <string name="crdroid_source_summary">We houden van open source, neem een kijkje</string>
-    <string name="crdroid_telegram_title">crDroid gemeenschap</string>
+    <string name="crdroid_telegram_title">BaikalOS gemeenschap</string>
     <string name="crdroid_telegram_summary">Wij zitten op Telegram. Kom er bij!</string>
     <string name="crdroid_telegram_channel_title">Updatekanaal</string>
     <string name="crdroid_telegram_channel_summary">Ontvang een melding van nieuwe builds op Telegram</string>
@@ -961,7 +961,7 @@
     <string name="status_bar_logo_summary">Toon een aangepast logo links of rechts van de statusbalk</string>
     <string name="status_bar_logo_position_title">Logo positie</string>
     <string name="status_bar_logo_style_title">Logo stijl</string>
-    <string name="status_bar_logo_style_crdroid">CrDroid</string>
+    <string name="status_bar_logo_style_crdroid">BaikalOS</string>
     <string name="status_bar_logo_style_android">Android</string>
     <string name="status_bar_logo_style_adidas">Adidas</string>
     <string name="status_bar_logo_style_alien">Alien</string>

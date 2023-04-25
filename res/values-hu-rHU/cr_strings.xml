@@ -16,10 +16,10 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- App Title -->
-    <string name="crdroid_settings_title">A crDroid beállításai</string>
+    <string name="crdroid_settings_title">A BaikalOS beállításai</string>
     <string name="crdroid_settings_summary">Klassz dolgok lelőhelye</string>
     <string name="reset_settings_title">Beállítások visszaállítása</string>
-    <string name="reset_settings_message">Ez a legtöbb crDroid-beállításértéket visszaállítja alapértelmezettre a jelenlegi felhasználónál. Szeretné folytatni?</string>
+    <string name="reset_settings_message">Ez a legtöbb BaikalOS-beállításértéket visszaállítja alapértelmezettre a jelenlegi felhasználónál. Szeretné folytatni?</string>
     <!-- Personalization Categories -->
     <string name="button_title">Gombok</string>
     <string name="lockscreen_title">Záróképernyő</string>
@@ -61,17 +61,17 @@
     <string name="changelog_crdroid_summary">Nézze meg a telepített ROM-ban végrehajtott változtatásokat</string>
     <string name="changelog_crdroid_error">Nem lehet betölteni a változáslistát</string>
     <!-- About crDroid -->
-    <string name="about_crdroid">A crDroidról</string>
+    <string name="about_crdroid">A BaikalOSról</string>
     <string name="about_device_name">Készülék</string>
     <!-- Share crDroid -->
-    <string name="share_crdroid_title">A crDroid ajánlása</string>
-    <string name="share_crdroid_summary">Tudassa másokkal a crDroid létezését</string>
-    <string name="share_message">Nézze meg, hogy a #crDroid Android elkészült-e az Ön készülékéhez: @ https://crdroid.net/</string>
-    <string name="share_chooser_title">A crDroid ajánlása</string>
+    <string name="share_crdroid_title">A BaikalOS ajánlása</string>
+    <string name="share_crdroid_summary">Tudassa másokkal a BaikalOS létezését</string>
+    <string name="share_message">Nézze meg, hogy a #BaikalOS Android elkészült-e az Ön készülékéhez: @ https://BaikalOS.net/</string>
+    <string name="share_chooser_title">A BaikalOS ajánlása</string>
     <!-- Sites crDroid -->
     <string name="crdroid_source_title">GitHub</string>
     <string name="crdroid_source_summary">Kedveljük a nyílt forráskódot, nézzen meg minket</string>
-    <string name="crdroid_telegram_title">crDroid közösség</string>
+    <string name="crdroid_telegram_title">BaikalOS közösség</string>
     <string name="crdroid_telegram_summary">Jelen vagyunk a Telegramon. Csatlakozzon hozzánk!</string>
     <string name="crdroid_telegram_channel_title">Frissítési csatorna</string>
     <string name="crdroid_telegram_channel_summary">Küldjön értesítést, ha új kiadás érhető el a Telegramon</string>
@@ -961,7 +961,7 @@
     <string name="status_bar_logo_summary">Egyéni logo megjelenítése az állapotsor jobb vagy bal oldalán</string>
     <string name="status_bar_logo_position_title">A logó pozíciója</string>
     <string name="status_bar_logo_style_title">Logóstílus</string>
-    <string name="status_bar_logo_style_crdroid">CrDroid</string>
+    <string name="status_bar_logo_style_crdroid">BaikalOS</string>
     <string name="status_bar_logo_style_android">Android</string>
     <string name="status_bar_logo_style_adidas">Adidas</string>
     <string name="status_bar_logo_style_alien">Földönkívüli</string>

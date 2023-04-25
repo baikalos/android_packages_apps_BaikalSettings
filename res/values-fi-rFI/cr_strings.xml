@@ -16,10 +16,10 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- App Title -->
-    <string name="crdroid_settings_title">crDroidin asetukset</string>
+    <string name="crdroid_settings_title">BaikalOS asetukset</string>
     <string name="crdroid_settings_summary">Avaa hyvyys</string>
     <string name="reset_settings_title">Nollaa asetukset</string>
-    <string name="reset_settings_message">Tämä palauttaa nykyiselle käyttäjälle useimmat crDroid-asetukset niiden oletusarvoille. Haluatko jatkaa?</string>
+    <string name="reset_settings_message">Tämä palauttaa nykyiselle käyttäjälle useimmat BaikalOS-asetukset niiden oletusarvoille. Haluatko jatkaa?</string>
     <!-- Personalization Categories -->
     <string name="button_title">Painikkeet</string>
     <string name="lockscreen_title">Lukitusnäyttö</string>
@@ -61,17 +61,17 @@
     <string name="changelog_crdroid_summary">Näytä muutokset asennetussa ROMissa</string>
     <string name="changelog_crdroid_error">Muutoslokin lataaminen epäonnistui</string>
     <!-- About crDroid -->
-    <string name="about_crdroid">Tietoja crDroidista</string>
+    <string name="about_crdroid">Tietoja BaikalOS</string>
     <string name="about_device_name">Laite</string>
     <!-- Share crDroid -->
-    <string name="share_crdroid_title">Jaa crDroid</string>
-    <string name="share_crdroid_summary">Anna muiden tietää crDroidista</string>
-    <string name="share_message">Tarkista, onko #crDroidAndroid saatavilla laitteellesi @ https://crdroid.net/</string>
-    <string name="share_chooser_title">Jaa crDroid</string>
+    <string name="share_crdroid_title">Jaa BaikalOS</string>
+    <string name="share_crdroid_summary">Anna muiden tietää BaikalOS</string>
+    <string name="share_message">Tarkista, onko #BaikalOS saatavilla laitteellesi @ https://github.com/BaikalOS-Devices/</string>
+    <string name="share_chooser_title">Jaa BaikalOS</string>
     <!-- Sites crDroid -->
     <string name="crdroid_source_title">GitHub</string>
     <string name="crdroid_source_summary">Rakastamme avointa lähdekoodia, tutustu meihin</string>
-    <string name="crdroid_telegram_title">crDroid-yhteisö</string>
+    <string name="crdroid_telegram_title">BaikalOS-yhteisö</string>
     <string name="crdroid_telegram_summary">Olemme telegramissa. Liity meihin!</string>
     <string name="crdroid_telegram_channel_title">Päivitykset-kanava</string>
     <string name="crdroid_telegram_channel_summary">Saa ilmoitukset uusista päivityksistä Telegramissa</string>
@@ -83,7 +83,7 @@
     <!-- Donate crDroid -->
     <string name="donate_crdroid_title">Tue meitä</string>
     <string name="donate_crdroid_summary">Tue jatkokehitystä lahjoittamalla</string>
-    <string name="donate_team_title">crDroid tiimi</string>
+    <string name="donate_team_title">BaikalOS tiimi</string>
     <string name="donate_team_summary">Lahjoita palvelimen hostingin, sivuston käytettävyyden ja yleisen hallinnan tueksi</string>
     <!-- The Drill -->
     <string name="drill_title">Tomintatapamme</string>
@@ -961,7 +961,7 @@
     <string name="status_bar_logo_summary">Display a custom logo on left or right of the status bar</string>
     <string name="status_bar_logo_position_title">Logo position</string>
     <string name="status_bar_logo_style_title">Logo style</string>
-    <string name="status_bar_logo_style_crdroid">CrDroid</string>
+    <string name="status_bar_logo_style_crdroid">BaikalOS</string>
     <string name="status_bar_logo_style_android">Android</string>
     <string name="status_bar_logo_style_adidas">Adidas</string>
     <string name="status_bar_logo_style_alien">Alien</string>

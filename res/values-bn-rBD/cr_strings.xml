@@ -61,17 +61,17 @@
     <string name="changelog_crdroid_summary">ইনস্টল করা রমে পরিবর্তন দেখুন</string>
     <string name="changelog_crdroid_error">পরিবর্তন লোড করতে অক্ষম</string>
     <!-- About crDroid -->
-    <string name="about_crdroid">CrDroid সম্পর্কে</string>
+    <string name="about_crdroid">BaikalOS সম্পর্কে</string>
     <string name="about_device_name">ডিভাইস</string>
     <!-- Share crDroid -->
-    <string name="share_crdroid_title">CrDroid শেয়ার করুন</string>
-    <string name="share_crdroid_summary">CrDroid সম্পর্কে অন্যদের জানান</string>
-    <string name="share_message">crDroid আপনার ডিভাইসে আছে কিনা দেখুন</string>
-    <string name="share_chooser_title">CrDroid শেয়ার করুন</string>
+    <string name="share_crdroid_title">BaikalOS শেয়ার করুন</string>
+    <string name="share_crdroid_summary">BaikalOS সম্পর্কে অন্যদের জানান</string>
+    <string name="share_message">BaikalOS আপনার ডিভাইসে আছে কিনা দেখুন</string>
+    <string name="share_chooser_title">BaikalOS শেয়ার করুন</string>
     <!-- Sites crDroid -->
     <string name="crdroid_source_title">গিটহাব</string>
     <string name="crdroid_source_summary">আমরা ওপেন সোর্স ভালবাসি, আমাদেরকে দেখুন</string>
-    <string name="crdroid_telegram_title">crDroid সম্প্রদায়</string>
+    <string name="crdroid_telegram_title">BaikalOS সম্প্রদায়</string>
     <string name="crdroid_telegram_summary">আমরা টেলিগ্রামে আছি। আমাদের সাথে যোগদান করুন!</string>
     <string name="crdroid_telegram_channel_title">আপডেট চ্যানেল</string>
     <string name="crdroid_telegram_channel_summary">টেলিগ্রামে নতুন বিল্ড সম্পর্কে বিজ্ঞপ্তি পান</string>
@@ -961,7 +961,7 @@
     <string name="status_bar_logo_summary">Display a custom logo on left or right of the status bar</string>
     <string name="status_bar_logo_position_title">লোগোর অবস্থান</string>
     <string name="status_bar_logo_style_title">লোগো স্টাইল</string>
-    <string name="status_bar_logo_style_crdroid">CrDroid</string>
+    <string name="status_bar_logo_style_crdroid">BaikalOS</string>
     <string name="status_bar_logo_style_android">অ্যান্ড্রয়েড</string>
     <string name="status_bar_logo_style_adidas">Adidas</string>
     <string name="status_bar_logo_style_alien">Alien</string>

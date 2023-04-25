@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+    <!-- Power Save -->
+    <string name="interface_title">Interface</string>
+    <string name="interface_summary">Interface Tweaks</string>
+
+    <string name="system_tweaks_sec_hwc_title">Disable Secondary HWC</string>
+    <string name="system_tweaks_sec_hwc_summary">Disable HW Overlay on secondary display. Fix flickering on Android Auto and WFD.\nREBOOT REQUIRED!</string>
+
+    <string name="baikalos_dlsb_enabled_title">Dual-line Statusbar</string>
+    <string name="baikalos_dlsb_enabled_summary">Enable dual-line statusbar. Reboot required!</string>
+
+    <!-- Old mobile type icons -->
+    <string name="use_old_mobiletype_title">Small mobile type icon</string>
+    <string name="use_old_mobiletype_summary">Show mobile type icon on top of the signal indicator</string>
+
+    <string name="doze_title">Wake screen for notifications</string>
+    <string name="doze_summary">When screen is dark, it turns on for new notifications</string>
+
+    <string name="baikalos_headsup_incall_title">InCall Heads Up</string>
+    <string name="baikalos_headsup_incall_summary">Do not use heads up notification for Incoming Call</string>
+    <string name="baikalos_headsup_force_sms_title">Force SMS</string>
+    <string name="baikalos_headsup_force_sms_summary">Force Heads Up notifications for the default SMS app</string>
+
+    <string name="fp_wake_unlock_title">Enable FP Wakeup</string>
+    <string name="fp_wake_unlock_summary">Wakeup device on fingerprint scanner touch</string>
+
+    <string name="baikalos_statusbar_color_icons_title">Color Icons</string>
+    <string name="baikalos_statusbar_color_icons_summary">Use old style color icons for statusbar notification area</string>
+
+    <string name="baikalos_keep_pinned_in_recents_title">Keep pinned in recents</string>
+    <string name="baikalos_keep_pinned_in_recents_summary">Keep pinned apps in recents list</string>
+
+    <string name="trust_enable_title">Smart Trust</string>
+    <string name="trust_enable_summary">Enable BaikalOS Smart Trust</string>
+
+    <string name="trust_always_title">Always Trust</string>
+    <string name="trust_always_summary">Keep device unlocked until manually locked or Trust timeout (4 hours)</string>
+
+    <string name="trust_bt_dev_title">Bluetooth Devices</string>
+    <string name="trust_bt_dev_summary">Bluetooth Devices to keep device unlocked</string>
+
+    <string name="baikalos_proximity_disable_title">Disable Proximity</string>
+    <string name="baikalos_proximity_disable_summary">Disable proximity sensor</string>
+
+</resources>

@@ -16,7 +16,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- App Title -->
-    <string name="crdroid_settings_title">Настройки crDroid</string>
+    <string name="crdroid_settings_title">Настройки BaikalOS</string>
     <string name="crdroid_settings_summary">Здесь происходит волшебство</string>
     <string name="reset_settings_title">Сбросить настройки</string>
     <string name="reset_settings_message">Это приведет к сбросу большинства настроек crdroid к значениям по умолчанию для текущего пользователя. Продолжить?</string>
@@ -30,7 +30,7 @@
     <string name="sound_title">Звук</string>
     <string name="statusbar_title">Строка состояния</string>
     <string name="display_title">Экран</string>
-    <string name="ui_title">Пользовательский интерфейс</string>
+    <string name="ui_title">Интерфейс</string>
     <!-- Color Picker -->
     <string name="dialog_color_picker">Цветовая палитра</string>
     <string name="press_color_to_apply">Нажмите на выбранный цвет для применения</string>
@@ -61,17 +61,17 @@
     <string name="changelog_crdroid_summary">Просмотр изменений в текущей прошивки</string>
     <string name="changelog_crdroid_error">Невозможно загрузить список изменений</string>
     <!-- About crDroid -->
-    <string name="about_crdroid">О crDroid</string>
+    <string name="about_crdroid">О BaikalOS</string>
     <string name="about_device_name">Устройство</string>
     <!-- Share crDroid -->
-    <string name="share_crdroid_title">Рассказать о crDroid</string>
-    <string name="share_crdroid_summary">Пусть другие узнают о crDroid</string>
-    <string name="share_message">Узнайте, доступен ли #crDroidAndroid для вашего устройства на @ https://crdroid.net/</string>
-    <string name="share_chooser_title">Рассказать о crDroid</string>
+    <string name="share_crdroid_title">Рассказать о BaikalOS</string>
+    <string name="share_crdroid_summary">Пусть другие узнают о BaikalOS</string>
+    <string name="share_message">Узнайте, доступен ли #BaikalOS для вашего устройства на @ https://github.com/BaikalOS-Devices/</string>
+    <string name="share_chooser_title">Рассказать о BaikalOS</string>
     <!-- Sites crDroid -->
     <string name="crdroid_source_title">Github</string>
     <string name="crdroid_source_summary">Мы любим открытый исходный код, посмотрите его</string>
-    <string name="crdroid_telegram_title">Cообщество crDroid</string>
+    <string name="crdroid_telegram_title">Cообщество BaikalOS</string>
     <string name="crdroid_telegram_summary">Мы в Telegram. Присоединяйтесь!</string>
     <string name="crdroid_telegram_channel_title">Канал обновлений</string>
     <string name="crdroid_telegram_channel_summary">Получать уведомления о новых сборках в Telegram</string>
@@ -939,14 +939,14 @@
     <string name="statusbar_clock_chip_title">Фон под часами</string>
     <string name="statusbar_clock_chip_summary">Показывать фон под часами цвета акцента</string>
     <!-- Smart charging -->
-    <string name="smart_charging_title">Умная зарядка</string>
+    <string name="smart_charging_title">Умная обходная зарядка</string>
     <string name="smart_charging_summary">Установить максимальный уровень заряда</string>
-    <string name="smart_charging_switch_title">Включить умную зарядку</string>
+    <string name="smart_charging_switch_title">Включить умную обходную зарядку</string>
     <string name="smart_charging_level_title">Уровень остановки зарядки устройства</string>
     <string name="smart_charging_resume_level_title">Уровень возобновления зарядки</string>
     <string name="smart_charging_reset_stats_title">Сбросить статистику батареи</string>
     <string name="smart_charging_reset_stats_summary">Сбрасывать статистику батареи после достижения заданного уровня заряда</string>
-    <string name="smart_charging_footer">Умная зарядка позволяет вам установить максимальный уровень заряда для увеличения срока жизни аккумулятора. При включенной функции аккумулятор прекратит зарядку по достижении уровня максимального заряда и возобновит зарядку по достижении уровня минимального заряда. Уровень начала зарядки всегда должен быть выше уровня остановки зарядки.</string>
+    <string name="smart_charging_footer">Умная обходная зарядка позволяет вам установить максимальный уровень заряда для увеличения срока жизни аккумулятора. При включенной функции аккумулятор прекратит зарядку по достижении уровня остановки заряда и возобновит зарядку по достижении уровня возобновления заряда. Уровень остановки зарядки всегда должен быть выше уровня возобновления зарядки.</string>
     <!-- Weather -->
     <string name="weather_settings_title">Настройки погоды</string>
     <string name="weather_settings_summary">Настроить набор значков и службу погоды</string>
@@ -965,7 +965,7 @@
     <string name="status_bar_logo_summary">Отображать пользовательский логотип слева или справа в строки состояния</string>
     <string name="status_bar_logo_position_title">Расположение логотипа</string>
     <string name="status_bar_logo_style_title">Стиль логотипа</string>
-    <string name="status_bar_logo_style_crdroid">CrDroid</string>
+    <string name="status_bar_logo_style_crdroid">BaikalOS</string>
     <string name="status_bar_logo_style_android">Android</string>
     <string name="status_bar_logo_style_adidas">Adidas</string>
     <string name="status_bar_logo_style_alien">Пришелец</string>
@@ -1085,8 +1085,8 @@
     <string name="hide_from_launcher_title">Скрыть из меню приложений</string>
     <string name="hide_from_launcher_summary">Запретить отображение этого приложения в любом лаунчере. Для вступления изменений в силу требуется перезапуск лаунчера.</string>
     <!-- Doze on charge -->
-    <string name="doze_on_charge_title">Всегда включен при зарядке</string>
-    <string name="doze_on_charge_summary">Показывать активный экран во время зарядки устройства</string>
+    <string name="doze_on_charge_title">Всегда включать при зарядке</string>
+    <string name="doze_on_charge_summary">Включать AOD при подключенной зарядке</string>
     <!-- Volume link notification -->
     <string name="volume_link_notification_title">Связать громкость звонка и уведомлений</string>
     <!-- Radio Info -->

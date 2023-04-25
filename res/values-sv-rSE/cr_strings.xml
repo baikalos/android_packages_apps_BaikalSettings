@@ -16,7 +16,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- App Title -->
-    <string name="crdroid_settings_title">crDroid Inställningar</string>
+    <string name="crdroid_settings_title">BaikalOS Inställningar</string>
     <string name="crdroid_settings_summary">Öppna godsaker</string>
     <string name="reset_settings_title">Återställ inställningar</string>
     <string name="reset_settings_message">Detta kommer att återställa de flesta inställningar för crdroid till deras standardvärden för den aktuella användaren. Vill du fortsätta?</string>
@@ -61,17 +61,17 @@
     <string name="changelog_crdroid_summary">Visa ändringar i den ROM som är installerad</string>
     <string name="changelog_crdroid_error">Laddningen av ändringsloggen kunde inte genomföras</string>
     <!-- About crDroid -->
-    <string name="about_crdroid">Om crDroid</string>
+    <string name="about_crdroid">Om BaikalOS</string>
     <string name="about_device_name">Enhet</string>
     <!-- Share crDroid -->
-    <string name="share_crdroid_title">Dela crDroid</string>
-    <string name="share_crdroid_summary">Dela med dig av crDroid till andra</string>
-    <string name="share_message">Kontrollera ifall #crDroidAndroid finns tillgänglig för din enhet @ https://crdroid.net/</string>
-    <string name="share_chooser_title">Dela med dig av crDroid</string>
+    <string name="share_crdroid_title">Dela BaikalOS</string>
+    <string name="share_crdroid_summary">Dela med dig av BaikalOS till andra</string>
+    <string name="share_message">Kontrollera ifall #BaikalOS finns tillgänglig för din enhet @ https://github.com/BaikalOS-Devices/</string>
+    <string name="share_chooser_title">Dela med dig av BaikalOS</string>
     <!-- Sites crDroid -->
     <string name="crdroid_source_title">GitHub</string>
     <string name="crdroid_source_summary">Vi älskar öppen källkod, kolla in oss</string>
-    <string name="crdroid_telegram_title">crDroid gemenskap</string>
+    <string name="crdroid_telegram_title">BaikalOS gemenskap</string>
     <string name="crdroid_telegram_summary">Vi finns på telegram. Anslut dig till oss!</string>
     <string name="crdroid_telegram_channel_title">Kanal för uppdateringar</string>
     <string name="crdroid_telegram_channel_summary">Bli informerad om nya versioner på Telegram</string>
@@ -961,7 +961,7 @@
     <string name="status_bar_logo_summary">Display a custom logo on left or right of the status bar</string>
     <string name="status_bar_logo_position_title">Position på logotyp</string>
     <string name="status_bar_logo_style_title">Stil på logotyp</string>
-    <string name="status_bar_logo_style_crdroid">CrDroid</string>
+    <string name="status_bar_logo_style_crdroid">BaikalOS</string>
     <string name="status_bar_logo_style_android">Android</string>
     <string name="status_bar_logo_style_adidas">Adidas</string>
     <string name="status_bar_logo_style_alien">Alien</string>

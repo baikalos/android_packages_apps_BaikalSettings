@@ -48,6 +48,8 @@ import com.crdroid.settings.fragments.QuickSettings;
 import com.crdroid.settings.fragments.Miscellaneous;
 import com.crdroid.settings.fragments.Navigation;
 import com.crdroid.settings.fragments.Notifications;
+import com.crdroid.settings.fragments.PowerSave;
+import com.crdroid.settings.fragments.SmartTrust;
 import com.crdroid.settings.fragments.Sound;
 import com.crdroid.settings.fragments.StatusBar;
 import com.crdroid.settings.fragments.UserInterface;
@@ -134,9 +136,12 @@ public class crDroidSettingsLayout extends SettingsPreferenceFragment {
             Buttons.reset(rContext);
             LockScreen.reset(rContext);
             QuickSettings.reset(rContext);
+            SmartTrust.reset(rContext);
             Miscellaneous.reset(rContext);
             Navigation.reset(rContext);
             Notifications.reset(rContext);
+            PowerSave.reset(rContext);
+            SmartTrust.reset(rContext);
             Sound.reset(rContext);
             StatusBar.reset(rContext);
             UserInterface.reset(rContext);
@@ -172,8 +177,10 @@ public class crDroidSettingsLayout extends SettingsPreferenceFragment {
             frags[5] = new UserInterface();
             frags[6] = new Notifications();
             frags[7] = new Sound();
-            frags[8] = new Miscellaneous();
-            frags[9] = new About();
+            frags[8] = new PowerSave();
+            frags[9] = new SmartTrust();
+            frags[10] = new Miscellaneous();
+            frags[11] = new About();
         }
 
         @Override
@@ -203,6 +210,8 @@ public class crDroidSettingsLayout extends SettingsPreferenceFragment {
             getString(R.string.ui_title),
             getString(R.string.notifications_title),
             getString(R.string.sound_title),
+            getString(R.string.powersave_title),
+            getString(R.string.smart_trust_title),
             getString(R.string.misc_title),
             getString(R.string.about_crdroid)
         };

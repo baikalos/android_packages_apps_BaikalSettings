@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+
+    <string name="log_it_title">Save Logs</string>
+    <string name="log_it_summary">Logcat, kmesg, dmesg</string>
+
+    <string name="logcat_title">Logcat</string>
+    <string name="logcat_radio_title">Radio log</string>
+    <string name="kmesg_title">Kmesg</string>
+    <string name="dmesg_title">Dmesg</string>
+    <string name="log_it_now_title">Save</string>
+    <string name="log_it_dialog_title">Save</string>
+    <string name="logcat_warning">Share it</string>
+    <string name="share_title">Share...</string>
+    <string name="log_it_share_subject">BaikalOS logs</string>
+    <string name="log_it_now_summary">Be patient for the logs to be created</string>
+    <string name="log_it_logs_in_progress">Logs are being created…</string>
+    <string name="log_it_share_type_title">Share method</string>
+    <string name="log_it_share_type_zip">ZIP-File</string>
+    <string name="log_it_share_type_haste">Upload to BaikalOS Haste</string>
+    <string name="log_it_share_via">Share via</string>
+
+    <string name="baikalos_debug_title">Verbose log</string>
+    <string name="baikalos_debug_summary">Enable verbose logging. Do not enable without a reason</string>
+
+
+    <!-- Device parts -->
+    <string name="device_part_title">Device features</string>
+    <string name="device_part_category">Device</string>
+
+    <string name="user_interface_category">UI</string>
+    <string name="system_category">BaikalOS Settings</string>
+    <string name="other_category">Other</string>
+
+    <!-- Display cutout -->
+    <string name="status_bar_notch_category_title">Display Cutout</string>
+    <string name="display_hide_notch_title">Hide display cutout</string>
+    <string name="display_hide_notch_summary">Disable black fill-in for display cutout</string>
+
+    <!-- Personalization Categories -->
+    <string name="button_summary">Hardware keys, power menu</string>
+    <string name="lockscreen_summary">Lock Screen settings</string>
+    <string name="misc_summary">All that is not known where to place</string>
+    <string name="navigation_summary">Hit the road Jack</string>
+    <string name="notifications_summary">Annoyers</string>
+    <string name="quicksettings_summary">Let\'s try to make this ..it a bit more usable</string>
+    <string name="sound_summary">They Said To Play It Louder Than Hell</string>
+    <string name="statusbar_summary">Status bar, icons, etc...</string>
+    <string name="display_title">Display</string>
+    <string name="ui_summary">User Interface settings</string>
+    <string name="about_summary">BaikalOS bits</string>
+
+    <!-- Google services -->
+    <string name="gms_enabled_title">Google Mobile Services</string>
+    <string name="gms_enabled_summary">Control Google services and core apps</string>
+    <string name="gms_enabled_footer">Before disabling Google services and core apps, you should disable "Find My Device" and 2-step verification on your Google account. It is strongly recommended to keep this setting enabled else apps dependent on Google components will be affected. If you run into any issues after changing this setting, perform a factory reset.</string>
+    <string name="gms_disable_confirmation">Google Services Setup</string>
+
+    <!-- Huawei services -->
+    <string name="hms_enabled_title">Huawei Mobile Services</string>
+    <string name="hms_enabled_summary">Control Huawei Mobile services and AppGallery</string>
+
+    <!-- F-Droid services -->
+    <string name="fdroid_enabled_title">FDroid App Store</string>
+    <string name="fdroid_enabled_summary">Control FDroid App Store</string>
+
+    <!-- Aurora services -->
+    <string name="aurora_enabled_title">Aurora Store</string>
+    <string name="aurora_enabled_summary">Control Aurora Store</string>
+
+    <string name="dolby_enabled_title">Dolby</string>
+    <string name="dolby_enabled_summary">Dolby Audio Service</string>
+
+    <string name="jdsp_enabled_title">James DSP</string>
+    <string name="jdsp_enabled_summary">James DSP audio processor</string>
+
+    <string name="afx_enabled_title">AudioFX DSP</string>
+    <string name="afx_enabled_summary">AOSP AudioFX audio processor</string>
+
+    <string name="services_title">Optional Services</string>
+    <string name="services_summary">Google, Huawei, Fdroid, etc...</string>
+
+    <string name="audio_tweaks_a2dp_last_codec_title">Last used codec</string>
+    <string name="audio_tweaks_a2dp_last_bitrate_title">Last used bitrate</string>
+
+    <string name="captive_portal_title">Network Monitor Server</string>
+    <string name="captive_portal_default">Default (Google)</string>
+    <string name="captive_portal_apple">Apple</string>
+    <string name="captive_portal_yandex">Yandex</string>
+
+    <string name="r_secure_title">Unrestricted Storage</string>
+    <string name="r_secure_summary">Disable restrictions introduced by Android 11 on access to some External Storage folders</string>
+
+    <string name="background_blur_radius_title">Background blur</string>
+    <string name="blur_behind_radius_title">Blur behind</string>
+
+    <string name="background_blur_type_title">Blur type</string>
+
+    <string name="disable_autorevoke_title">Disable Auto Revoke</string>
+    <string name="disable_autorevoke_summary">Disable permissions auto revoke globally. Reboot required!</string>
+
+    <string name="baikalos_interaction_boost_title">Interaction Boost</string>
+    <string name="baikalos_interaction_boost_summary">Enable interaction boost</string>
+
+    <string name="baikalos_rendering_boost_title">Rendering Boost</string>
+    <string name="baikalos_rendering_boost_summary">Enable rendering boost</string>
+
+    <string name="boost_override_silver_title">Silver cluster boost</string>
+    <string name="boost_override_gold_title">Gold cluster boost</string>
+    <string name="boost_override_platinum_title">Platinum cluster boost</string>
+
+    <string name="baikalos_display_boost_title">Display Boost</string>
+    <string name="baikalos_display_boost_summary">Enable boost on display update</string>
+
+    <string name="baikalos_limited_charge_screen_on_title">Limit on screen on</string>
+    <string name="baikalos_limited_charge_screen_on_summary">Limit charging while screen is on</string>
+    <string name="baikalos_bpcharge_screen_on_title">Bypass on screen on</string>
+    <string name="baikalos_bpcharge_screen_on_summary">Turn on bypass charging while screen is on</string>
+
+    <string name="baikalos_aod_on_charger_title">AOD on Charger</string>
+    <string name="baikalos_aod_on_charger_summary">Enable Always On Display on charger</string>
+
+    <string name="sound_sonif_a2dp_title">Notification sound</string>
+    <string name="sonif_a2dp_default">Default</string>
+    <string name="sonif_a2dp_force_speaker">Force on speaker</string>
+    <string name="sonif_a2dp_duplicate_speaker">Duplicate on speaker</string>
+
+    <string name="app_sound_sonif_a2dp_title">App sound</string>
+
+</resources>

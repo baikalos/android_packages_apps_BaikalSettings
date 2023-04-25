@@ -16,10 +16,10 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- App Title -->
-    <string name="crdroid_settings_title">Configuració de crDroid</string>
+    <string name="crdroid_settings_title">Configuració de BaikalOS</string>
     <string name="crdroid_settings_summary">Obrir Goodness</string>
     <string name="reset_settings_title">Restableix la configuració</string>
-    <string name="reset_settings_message">La major part de la configuració de crDroid de l\'usuari actual es restablirà als valors per defecte. Voleu continuar?</string>
+    <string name="reset_settings_message">La major part de la configuració de BaikalOS de l\'usuari actual es restablirà als valors per defecte. Voleu continuar?</string>
     <!-- Personalization Categories -->
     <string name="button_title">Botons</string>
     <string name="lockscreen_title">Pantalla de bloqueig</string>
@@ -61,17 +61,17 @@
     <string name="changelog_crdroid_summary">Mostra els canvis de la ROM instal·lada</string>
     <string name="changelog_crdroid_error">No s\'ha pogut carregar el registre de canvis</string>
     <!-- About crDroid -->
-    <string name="about_crdroid">Sobre crDroid</string>
+    <string name="about_crdroid">Sobre BaikalOS</string>
     <string name="about_device_name">Dispositiu</string>
     <!-- Share crDroid -->
-    <string name="share_crdroid_title">Comparteix crDroid</string>
-    <string name="share_crdroid_summary">Feu saber a altres usuaris sobre crDroid</string>
-    <string name="share_message">Consulteu si #crDroidAndroid està disponible per al vostre dispositiu @ https://crdroid.net/</string>
-    <string name="share_chooser_title">Comparteix crDroid</string>
+    <string name="share_crdroid_title">Comparteix BaikalOS</string>
+    <string name="share_crdroid_summary">Feu saber a altres usuaris sobre BaikalOS</string>
+    <string name="share_message">Consulteu si #BaikalOS està disponible per al vostre dispositiu @ https://github.com/BaikalOS-Devices/</string>
+    <string name="share_chooser_title">Comparteix BaikalOS</string>
     <!-- Sites crDroid -->
     <string name="crdroid_source_title">GitHub</string>
     <string name="crdroid_source_summary">Ens encanta el programari lliure, fes-nos una ullada</string>
-    <string name="crdroid_telegram_title">Comunitat crDroid</string>
+    <string name="crdroid_telegram_title">Comunitat BaikalOS</string>
     <string name="crdroid_telegram_summary">Estem a Telegram. Uneix-te!</string>
     <string name="crdroid_telegram_channel_title">Canal d\'actualitzacions</string>
     <string name="crdroid_telegram_channel_summary">Rep notificacions de noves versions a Telegram</string>
@@ -961,7 +961,7 @@
     <string name="status_bar_logo_summary">Mostra un logotip personalitzat a la part dreta o esquerra de la barra d\'estat</string>
     <string name="status_bar_logo_position_title">Posició del logotip</string>
     <string name="status_bar_logo_style_title">Estil del logotip</string>
-    <string name="status_bar_logo_style_crdroid">CrDroid</string>
+    <string name="status_bar_logo_style_crdroid">BaikalOS</string>
     <string name="status_bar_logo_style_android">Android</string>
     <string name="status_bar_logo_style_adidas">Adidas</string>
     <string name="status_bar_logo_style_alien">Alienígena</string>
