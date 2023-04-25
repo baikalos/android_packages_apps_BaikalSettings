@@ -52,13 +52,13 @@ public class SmartCharging extends SettingsPreferenceFragment {
     public static void reset(Context mContext) {
         ContentResolver resolver = mContext.getContentResolver();
         Settings.System.putIntForUser(resolver,
-                Settings.System.SMART_CHARGING, 0, UserHandle.USER_CURRENT);
+                Settings.System.BAIKALOS_SMART_CHARGING, 0, UserHandle.USER_CURRENT);
         Settings.System.putIntForUser(resolver,
-                Settings.System.SMART_CHARGING_RESET_STATS, 0, UserHandle.USER_CURRENT);
+                Settings.System.BAIKALOS_SMART_CHARGING_RESET_STATS, 0, UserHandle.USER_CURRENT);
         Settings.System.putIntForUser(resolver,
-                Settings.System.SMART_CHARGING_LEVEL, 80, UserHandle.USER_CURRENT);
+                Settings.System.BAIKALOS_SMART_CHARGING_LEVEL, 80, UserHandle.USER_CURRENT);
         Settings.System.putIntForUser(resolver,
-                Settings.System.SMART_CHARGING_RESUME_LEVEL, 60, UserHandle.USER_CURRENT);
+                Settings.System.BAIKALOS_SMART_CHARGING_RESUME_LEVEL, 60, UserHandle.USER_CURRENT);
     }
 
     @Override
