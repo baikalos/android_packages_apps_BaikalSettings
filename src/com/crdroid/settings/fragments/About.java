@@ -95,7 +95,7 @@ public class About extends SettingsPreferenceFragment {
             launchUrl("https://t.me/baikalos");
         } else if (preference == mSponsor) {
             launchUrl("https://www.baikalos.net");
-        }
+        } 
 
         return super.onPreferenceTreeClick(preference);
     }
