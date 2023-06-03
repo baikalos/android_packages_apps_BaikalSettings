@@ -160,6 +160,8 @@
     	<item>Default</item>                <!-- 0 -->
     	<item>Poco X3 India</item>          <!-- 1 -->
     	<item>Poco X3 NFC Global</item>     <!-- 2 -->
+    	<item>Poco X3 Pro</item>            <!-- 19 -->
+    	<item>Poco F4 Global</item>         <!-- 29 -->
         <item>Pixel XL</item>               <!-- 22 -->
     	<item>Pixel 3</item>                <!-- 3 -->
     	<item>Pixel 3 XL</item>             <!-- 4 -->
@@ -168,25 +170,31 @@
     	<item>Pixel 4a</item>               <!-- 7 -->
     	<item>Pixel 5</item>                <!-- 8 -->
     	<item>Pixel 6 Pro</item>            <!-- 17 -->
-    	<item>Nvidia Shield TV 2019 Pro</item>  <!-- 9 -->
+    	<item>Pixel 7 Pro</item>           <!-- 24 -->
     	<item>OnePlus 8T</item>             <!-- 10 -->
     	<item>OnePlus 8 Pro</item>          <!-- 11 -->
+    	<item>OnePlus 9R</item>          <!-- 28 -->
+    	<item>Oppo R11 Plus</item>          <!-- 21 -->
+    	<item>ASUS ROG Phone</item>       <!-- 26 -->
+    	<item>ASUS ROG Phone 3</item>       <!-- 27 -->
     	<item>ASUS ROG Phone 5</item>       <!-- 12 -->
     	<item>Sony Xperia 10 II Dual</item> <!-- 13 -->
     	<item>Sony Xperia 2 5G</item>       <!-- 14 -->
+    	<item>Sony Xperia 5</item>       <!-- 25 -->
     	<item>Samsung S21</item>            <!-- 15 -->
-    	<item>Xiaomi MI 10 Pro</item>       <!-- 16 -->
     	<item>Xiaomi MI 8</item>            <!-- 18 -->
-    	<item>Poco X3 Pro</item>            <!-- 19 -->
+    	<item>Xiaomi MI 10 Pro</item>       <!-- 16 -->
     	<item>Xiaomi Mi 11T</item>          <!-- 20 -->
-    	<item>Oppo R11 Plus</item>          <!-- 21 -->
     	<item>Xiaomi Mi 11</item>           <!-- 23 -->
+    	<item>Nvidia Shield TV 2019 Pro</item>  <!-- 9 -->
      </string-array>
 
      <string-array name="spoof_listvalues">
     	<item>0</item>
     	<item>1</item>
     	<item>2</item>
+    	<item>19</item>
+    	<item>29</item>
         <item>22</item>
     	<item>3</item>
     	<item>4</item>
@@ -195,19 +203,23 @@
     	<item>7</item>
     	<item>8</item>
     	<item>17</item>
-    	<item>9</item>
+    	<item>24</item>
     	<item>10</item>
     	<item>11</item>
+    	<item>28</item>
+    	<item>21</item>
+    	<item>26</item>
+    	<item>27</item>
     	<item>12</item>
     	<item>13</item>
     	<item>14</item>
+    	<item>25</item>
     	<item>15</item>
-    	<item>16</item>
     	<item>18</item>
-    	<item>19</item>
+    	<item>16</item>
     	<item>20</item>
-    	<item>21</item>
     	<item>23</item>
+    	<item>9</item>
     </string-array>
 
     <string-array name="location_listentries">

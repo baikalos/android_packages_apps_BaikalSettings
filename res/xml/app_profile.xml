@@ -60,11 +60,11 @@
             android:summary="@string/app_profile_disable_jobs_summary"
             android:defaultValue="false" / -->
 
-        <!-- SwitchPreference
+        <SwitchPreference
             android:key="app_profile_freezer"
             android:title="@string/app_profile_freezer_title"
             android:summary="@string/app_profile_freezer_summary"
-            android:defaultValue="false" / -->
+            android:defaultValue="false" />
 
         <SwitchPreference
             android:key="app_profile_idle_network"
@@ -236,7 +236,7 @@
             android:defaultValue="-99999"/ -->
 
 
-        <!-- SwitchPreference
+        <SwitchPreference
             android:key="app_profile_block_focus_recv"
             android:title="@string/app_profile_block_focus_recv_title"
             android:summary="@string/app_profile_block_focus_recv_summary"
@@ -246,7 +246,7 @@
             android:key="app_profile_block_focus_send"
             android:title="@string/app_profile_block_focus_send_title"
             android:summary="@string/app_profile_block_focus_send_summary"
-            android:defaultValue="false" / -->
+            android:defaultValue="false" />
 
         <!-- SwitchPreference
             android:key="app_profile_force_sonification"

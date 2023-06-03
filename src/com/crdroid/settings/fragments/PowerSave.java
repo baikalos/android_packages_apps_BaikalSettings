@@ -16,6 +16,7 @@
 
 package com.crdroid.settings.fragments;
 
+import android.app.ActivityManager;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
@@ -24,6 +25,7 @@ import android.os.Bundle;
 import android.os.UserHandle;
 import android.os.UserManager;
 import android.os.SystemProperties;
+import android.os.RemoteException;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
@@ -57,8 +59,11 @@ public class PowerSave extends SettingsPreferenceFragment {
     private static final String APP_PROFILE_PERF = "default_profile_performance";
     private static final String APP_PROFILE_THERM = "default_profile_thermal";
 
+    private static final String APP_FREEZER = "cached_apps_freezer";
+
     private ListPreference mAppPerfProfile;
     private ListPreference mAppThermProfile;
+    private SwitchPreference mAppFreezer;
 
     private Context mContext;
 
@@ -73,6 +78,14 @@ public class PowerSave extends SettingsPreferenceFragment {
 
         boolean perfProf  = (perfProfiles !=null && perfProfiles.length > 1);
         boolean thermProf  = (thermProfiles !=null && thermProfiles.length > 1);
+        boolean appFreezer = false;
+
+        try {
+             appFreezer = ActivityManager.getService().isAppFreezerSupported();
+            
+        } catch (RemoteException e) {
+            Log.w(TAG, "Unable to obtain freezer support status from ActivityManager");
+        }
 
         if( !BaikalConstants.isKernelCompatible() ) {
             Log.e(TAG, "profiles : incompatible kernel");
@@ -88,6 +101,9 @@ public class PowerSave extends SettingsPreferenceFragment {
         final PreferenceScreen screen = getPreferenceScreen();
 
         try {
+            mAppFreezer = (SwitchPreference) findPreference(APP_FREEZER);
+            if( mAppFreezer != null && !appFreezer ) mAppFreezer.setVisible(false);
+
             mAppPerfProfile = (ListPreference) findPreference(APP_PROFILE_PERF);
             if( mAppPerfProfile != null ) { 
                 if(!perfProf) {

@@ -55,4 +55,17 @@
         <item>2</item>
     </string-array>
 
+    <string-array name="brightness_curve_entries">
+    	<item>@string/brightness_curve_default</item>
+    	<item>@string/brightness_curve_darker</item>
+    	<item>@string/brightness_curve_lighter</item>
+     </string-array>
+
+     <string-array name="brightness_curve_values">
+    	<item>0</item>
+    	<item>1</item>
+    	<item>2</item>
+    </string-array>
+
+
 </resources>

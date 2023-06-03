@@ -134,6 +134,13 @@
         android:defaultValue="false" />
 
     <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+        android:key="baikalos_allow_downgrade"
+        android:icon="@drawable/ic_storage"
+        android:title="@string/allow_downgrade_title"
+        android:summary="@string/allow_downgrade_summary"
+        android:defaultValue="false" />
+
+    <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
         android:key="baikalos_disable_autorevoke"
         android:icon="@drawable/ic_settings_security"
         android:title="@string/disable_autorevoke_title"

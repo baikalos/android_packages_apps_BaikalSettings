@@ -127,4 +127,22 @@
 
     <string name="app_sound_sonif_a2dp_title">App sound</string>
 
+    <string name="baikalos_freeze_cached_title">Cached Apps Freezer</string>
+    <string name="baikalos_freeze_cached_summary">Enable Cached Apps Freezer</string>
+
+    <string name="disable_inband_ringing_title">Disable Inband Ringing</string>
+    <string name="disable_inband_ringing_summary">Disable inband ringtone playback on bluetooth handsfree</string>
+
+    <string name="brightness_curve_default">Default</string>
+    <string name="brightness_curve_darker">Darker</string>
+    <string name="brightness_curve_lighter">Lighter</string>
+    <string name="brightness_curve_darkest">Darkest</string>
+    <string name="brightness_curve_lightest">Lightest</string>
+
+    <string name="baikalos_reduced_brightness_title">Reduced brightness</string>
+    <string name="baikalos_reduced_brightness_summary">Reduced brightness in moderate ambient light</string>
+
+    <string name="allow_downgrade_title">Allow downgrade</string>
+    <string name="allow_downgrade_summary">Allow app downgrade. CAUTION!!! Downgrading may break the application. Application data may be completely corrupted.</string>
+
 </resources>

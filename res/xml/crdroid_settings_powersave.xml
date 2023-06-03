@@ -48,6 +48,13 @@
         />
 
         <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+            android:key="cached_apps_freezer"
+            android:defaultValue="true"
+            android:title="@string/baikalos_freeze_cached_title"
+            android:summary="@string/baikalos_freeze_cached_summary"
+        />
+
+        <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
             android:key="baikalos_extreme_idle"
             android:defaultValue="false"
             android:title="@string/baikalos_extreme_idle_title"
@@ -91,6 +98,14 @@
             android:title="@string/baikalos_unrestricted_net_title"
             android:summary="@string/baikalos_unrestricted_net_summary"
         />
+
+        <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+            android:key="baikalos_brightness_curve"
+            android:defaultValue="false"
+            android:title="@string/baikalos_reduced_brightness_title"
+            android:summary="@string/baikalos_reduced_brightness_summary"
+        />
+
 
         <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
             android:key="baikalos_boost_interaction_disable"

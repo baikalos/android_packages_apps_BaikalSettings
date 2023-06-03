@@ -62,6 +62,7 @@ public class Sound extends SettingsPreferenceFragment {
     private static final String KEY_VOLUME_PANEL_LEFT = "volume_panel_on_left";
 
     private static final String SONIF_A2DP_PREF = "sonif_a2dp_pref";
+    private static final String DISABLE_INBAND_RINGING = "disable_inband_ringing";
 
     private static final String AUDIO_TWEAKS_A2DP_LAST_CODEC = "audio_tweaks_a2dp_last_codec";
     private static final String AUDIO_TWEAKS_A2DP_LAST_BITRATE = "audio_tweaks_a2dp_last_bitrate";
@@ -69,7 +70,11 @@ public class Sound extends SettingsPreferenceFragment {
     private static final String SYSTEM_PROPERTY_A2DP_LAST_CODEC = "baikal.last.a2dp_codec";
     private static final String SYSTEM_PROPERTY_A2DP_LAST_BITRATE = "baikal.last.a2dp_bitrate";
 
+    private static final String DISABLE_INBAND_RINGING_PROPERTY =
+            "persist.bluetooth.disableinbandringing";
+
     private SwitchPreference mVolumePanelLeft;
+    private SwitchPreference mInband;
     private ListPreference mSonifA2dp;
 
     @Override
@@ -110,7 +115,7 @@ public class Sound extends SettingsPreferenceFragment {
                   public boolean onPreferenceChange(Preference preference, Object newValue) {
                     try {
                         SystemProperties.set("persist.baikal.sonif_a2dp", newValue.toString());
-                        Log.e(TAG, "mSonifA2dp: fps=" + newValue.toString());
+                        Log.e(TAG, "mSonifA2dp: val=" + newValue.toString());
                     } catch(Exception re) {
                         Log.e(TAG, "onCreate: mSonifA2dp Fatal! exception", re );
                     }
@@ -121,6 +126,31 @@ public class Sound extends SettingsPreferenceFragment {
         } catch(Exception e2) {
         }
 
+        try {
+            boolean inband = false;
+            try {
+                inband = "1".equals(SystemProperties.get(DISABLE_INBAND_RINGING_PROPERTY, "0"));
+            } catch(Exception e1) {
+            }
+
+	        mInband = (SwitchPreference) findPreference(DISABLE_INBAND_RINGING);
+      	    if( mInband != null ) { 
+                Log.i(TAG, "mInband: val=" + inband);
+                mInband.setChecked(inband);
+                mInband.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                  public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    try {
+                        SystemProperties.set(DISABLE_INBAND_RINGING_PROPERTY, ((Boolean)newValue) ? "1" : "0");
+                        Log.e(TAG, "mInband: val=" + newValue.toString());
+                    } catch(Exception re) {
+                        Log.e(TAG, "onCreate: mInband Fatal! exception", re );
+                    }
+                    return true;
+                  }
+                });
+            }
+        } catch(Exception e3) {
+        }
 
         Preference  codec = (Preference) findPreference(AUDIO_TWEAKS_A2DP_LAST_CODEC);
         Preference  bitrate = (Preference) findPreference(AUDIO_TWEAKS_A2DP_LAST_BITRATE);

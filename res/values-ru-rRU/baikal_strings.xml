@@ -108,4 +108,19 @@
 
     <string name="app_sound_sonif_a2dp_title">Звук приложения</string>
 
+    <string name="baikalos_freeze_cached_title">Заморозка приложений</string>
+    <string name="baikalos_freeze_cached_summary">Включает режим заморозки кэшированных приложений</string>
+
+    <string name="disable_inband_ringing_title">Отключить Рингтон</string>
+    <string name="disable_inband_ringing_summary">Отключить проигрывание рингтона в беспроводное устройство</string>
+
+    <string name="disable_autorevoke_title">Отключить автоотзыв</string>
+    <string name="disable_autorevoke_summary">Отключить автоматический отзыв разрешений. Требуется перезагрузка!</string>
+
+    <string name="baikalos_reduced_brightness_title">Уменьшенная яркость</string>
+    <string name="baikalos_reduced_brightness_summary">Уменьшенная яркость в условиях умеренной освещенности</string>
+
+    <string name="allow_downgrade_title">Понижение версии</string>
+    <string name="allow_downgrade_summary">Разрешить установку приложений более ранних версий. ВНИМАНИЕ!!! Понижение версии может полностью сломать приложение. Данные приложения могут быть полностью уничтожены.</string>
+
 </resources>

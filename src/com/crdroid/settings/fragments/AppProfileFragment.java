@@ -16,6 +16,7 @@
 
 package com.crdroid.settings.fragments;
 
+import android.app.ActivityManager;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
@@ -137,6 +138,7 @@ public class AppProfileFragment extends SettingsPreferenceFragment
     private SwitchPreference mAppDisableBoot;
     private SwitchPreference mAppDisableWakeup;
     private SwitchPreference mAppDisableJobs;
+    private SwitchPreference mAppDisableFreezer;
     private SwitchPreference mBlockFocusRecv;
     private SwitchPreference mBlockFocusSend;
     private SwitchPreference mBypassCharging;
@@ -209,6 +211,15 @@ public class AppProfileFragment extends SettingsPreferenceFragment
 
         Log.e(TAG, "perf profiles : perfProfiles=" + perfProfiles);
         Log.e(TAG, "perf profiles : perfProfiles.length=" + perfProfiles.length);
+
+        boolean appFreezer = false;
+
+        try {
+             appFreezer = ActivityManager.getService().isAppFreezerSupported();
+            
+        } catch (RemoteException e) {
+            Log.w(TAG, "Unable to obtain freezer support status from ActivityManager");
+        }
 
         mAppSettings = AppProfileSettings.getInstance(new Handler(),mContext);
         mAppSettings.registerObserver(false);
@@ -297,6 +308,29 @@ public class AppProfileFragment extends SettingsPreferenceFragment
                         return true;
                     }
                 });
+            }
+
+            mAppDisableFreezer = (SwitchPreference) findPreference(APP_PROFILE_FREEZER);
+            if( mAppDisableFreezer != null ) {
+                if( !appFreezer ) {
+                    mAppDisableFreezer.setVisible(false);
+                } else {
+                    mAppDisableFreezer.setChecked(mProfile.mDisableFreezer);
+                    Log.e(TAG, "mAppDisableFreezer: mPackageName=" + mPackageName + ",mDisableFreezer=" + mProfile.mDisableFreezer);
+                    mAppDisableFreezer.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                        public boolean onPreferenceChange(Preference preference, Object newValue) {
+                            try {
+                                mProfile.mDisableFreezer = ((Boolean)newValue);
+                                mAppSettings.updateProfile(mProfile);
+                                mAppSettings.save();
+                                Log.e(TAG, "mAppDisableFreezer: mPackageName=" + mPackageName + ", mDisableFreezer=" + (Boolean)newValue);
+                            } catch(Exception re) {
+                                Log.e(TAG, "onCreate: mAppDisableFreezer Fatal! exception", re );
+                            }
+                            return true;
+                        }
+                    });
+                }
             }
 
             mAppAllowIdleNetwork = (SwitchPreference) findPreference(APP_PROFILE_ALLOW_IDLE_NETWORK);

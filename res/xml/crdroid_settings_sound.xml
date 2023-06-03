@@ -62,6 +62,14 @@
         android:defaultValue="0"
         android:summary="%s" />
 
+    <SwitchPreference
+        android:key="disable_inband_ringing"
+        android:icon="@drawable/ic_settings_sound"
+        android:title="@string/disable_inband_ringing_title"
+        android:summary="@string/disable_inband_ringing_summary"
+        android:defaultValue="false" />
+
+
     <!-- Volume panel -->
     <PreferenceCategory
         android:key="volume_panel"
