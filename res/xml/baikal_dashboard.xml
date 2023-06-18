@@ -61,7 +61,6 @@
             android:icon="@drawable/ic_settings_statusbar"
             android:fragment="com.crdroid.settings.fragments.StatusBar" />
 
-
         <PreferenceScreen
             android:title="@string/quicksettings_title"
             android:summary="@string/quicksettings_summary"

@@ -121,14 +121,14 @@
             android:summary="@string/baikalos_rendering_boost_summary"
         />
 
-        <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
-            android:key="baikalos_boost_display_update_imminent_disable"
+        <!-- com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+             android:key="baikalos_boost_display_update_imminent_disable"
             android:defaultValue="true"
             android:title="@string/baikalos_display_boost_title"
             android:summary="@string/baikalos_display_boost_summary"
-        />
+        / -->
 
-        <com.crdroid.settings.preferences.GlobalSettingSeekBarPreference
+        <!-- com.crdroid.settings.preferences.GlobalSettingSeekBarPreference
             android:key="baikalos_boost_override_silver"
             android:title="@string/boost_override_silver_title"
             android:max="100"
@@ -142,7 +142,7 @@
             android:max="100"
             settings:min="-1"
             settings:units="%"
-            android:defaultValue="-1"/>
+            android:defaultValue="-1"/ -->
 
         <!-- com.crdroid.settings.preferences.GlobalSettingSeekBarPreference
             android:key="baikalos_boost_override_platinum"
@@ -151,5 +151,11 @@
             settings:min="-1"
             settings:units="%"
             android:defaultValue="-1"/ -->
+
+        <PreferenceScreen
+            android:title="@string/baikalos_profile_edit_title"
+            android:summary="@string/baikalos_profile_edit_summary"
+            android:fragment="com.crdroid.settings.fragments.PerformanceProfileEditor" />
+
 
 </PreferenceScreen>

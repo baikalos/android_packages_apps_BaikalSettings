@@ -99,6 +99,8 @@ public class AppProfileFragment extends SettingsPreferenceFragment
 //    private static final String APP_PROFILE_RESTRICTED = "app_profile_restricted";
     private static final String APP_PROFILE_BACKGROUND = "app_profile_background";
     private static final String APP_PROFILE_FREEZER = "app_profile_freezer";
+    private static final String APP_PROFILE_HEAVY_MEMORY = "app_profile_heavy_memory";
+    private static final String APP_PROFILE_HEAVY_CPU = "app_profile_heavy_cpu";
 //    private static final String APP_PROFILE_DISABLE_TWL = "app_profile_disable_twl";
     private static final String VOLUME_SCALE = "app_profile_volume_scale";
 
@@ -133,6 +135,8 @@ public class AppProfileFragment extends SettingsPreferenceFragment
     private SwitchPreference mAppReader;
     private SwitchPreference mAppPinned;
     private SwitchPreference mAppFreezer;
+    private SwitchPreference mAppHeavyMemory;
+    private SwitchPreference mAppHeavyCPU;
     private SwitchPreference mAppStamina;
     private SwitchPreference mAppRequireGms;
     private SwitchPreference mAppDisableBoot;
@@ -333,6 +337,44 @@ public class AppProfileFragment extends SettingsPreferenceFragment
                 }
             }
 
+            mAppHeavyMemory = (SwitchPreference) findPreference(APP_PROFILE_HEAVY_MEMORY);
+            if( mAppHeavyMemory != null ) {
+                mAppHeavyMemory.setChecked(mProfile.mHeavyMemory);
+                Log.e(TAG, "mAppHeavyMemory: mPackageName=" + mPackageName + ",mAppHeavyMemory=" + mProfile.mHeavyMemory);
+                mAppHeavyMemory.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                    public boolean onPreferenceChange(Preference preference, Object newValue) {
+                        try {
+                            mProfile.mHeavyMemory = ((Boolean)newValue);
+                            mAppSettings.updateProfile(mProfile);
+                            mAppSettings.save();
+                            Log.e(TAG, "mAppHeavyMemory: mPackageName=" + mPackageName + ", mAppHeavyMemory=" + (Boolean)newValue);
+                        } catch(Exception re) {
+                            Log.e(TAG, "onCreate: mAppHeavyMemory Fatal! exception", re );
+                        }
+                        return true;
+                    }
+                });
+            }
+
+            mAppHeavyCPU = (SwitchPreference) findPreference(APP_PROFILE_HEAVY_CPU);
+            if( mAppHeavyCPU != null ) {
+                mAppHeavyCPU.setChecked(mProfile.mHeavyCPU);
+                Log.e(TAG, "mAppHeavyMemory: mPackageName=" + mPackageName + ",mAppHeavyMemory=" + mProfile.mHeavyCPU);
+                mAppHeavyCPU.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                    public boolean onPreferenceChange(Preference preference, Object newValue) {
+                        try {
+                            mProfile.mHeavyCPU = ((Boolean)newValue);
+                            mAppSettings.updateProfile(mProfile);
+                            mAppSettings.save();
+                            Log.e(TAG, "mAppHeavyCPU: mPackageName=" + mPackageName + ", mAppHeavyCPU=" + (Boolean)newValue);
+                        } catch(Exception re) {
+                            Log.e(TAG, "onCreate: mAppHeavyCPU Fatal! exception", re );
+                        }
+                        return true;
+                    }
+                });
+            }
+
             mAppAllowIdleNetwork = (SwitchPreference) findPreference(APP_PROFILE_ALLOW_IDLE_NETWORK);
             if( mAppAllowIdleNetwork != null ) {
                 mAppAllowIdleNetwork.setChecked(mProfile.mAllowIdleNetwork);
@@ -471,7 +513,7 @@ public class AppProfileFragment extends SettingsPreferenceFragment
                     mAppMaxFpsProfile.setEntryValues(values.toArray(new String[values.size()]));
 
                     int fps = mProfile.mMaxFrameRate;
-                    Log.e(TAG, "setAppFps: mPackageName=" + mPackageName + ", max_fps=" + fps);
+                    Log.e(TAG, "mAppMaxFpsProfile: mPackageName=" + mPackageName + ", max_fps=" + fps);
                     mAppMaxFpsProfile.setValue(Integer.toString(fps));
                     mAppMaxFpsProfile.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
                       public boolean onPreferenceChange(Preference preference, Object newValue) {
@@ -480,7 +522,7 @@ public class AppProfileFragment extends SettingsPreferenceFragment
                             mProfile.mMaxFrameRate = val;
                             mAppSettings.updateProfile(mProfile);
                             mAppSettings.save();
-                            Log.e(TAG, "setAppFps: mPackageName=" + mPackageName + ", max_fps=" + val);
+                            Log.e(TAG, "mAppMaxFpsProfile: set mPackageName=" + mPackageName + ", max_fps=" + val);
                         } catch(Exception re) {
                             Log.e(TAG, "onCreate: setAppFps Fatal! exception", re );
                         }
@@ -527,7 +569,7 @@ public class AppProfileFragment extends SettingsPreferenceFragment
                             mProfile.mMinFrameRate = val;
                             mAppSettings.updateProfile(mProfile);
                             mAppSettings.save();
-                            Log.e(TAG, "mAppMinFpsProfile: mPackageName=" + mPackageName + ", min_fps=" + val);
+                            Log.e(TAG, "mAppMinFpsProfile: set mPackageName=" + mPackageName + ", min_fps=" + val);
                         } catch(Exception re) {
                             Log.e(TAG, "onCreate: mAppMinFpsProfile Fatal! exception", re );
                         }

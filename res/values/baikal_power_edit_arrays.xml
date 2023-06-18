@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string-array name="baikalos_little_cluster_entries">
+    	<item>Default</item>
+    	<item>300000</item>
+    	<item>576000</item>
+    	<item>768000</item>
+    	<item>1017600</item>
+    	<item>1248000</item>
+    	<item>1324800</item>
+    	<item>1497600</item>
+    	<item>1612800</item>
+    	<item>1708800</item>
+    	<item>Max</item>
+    </string-array>
+
+    <string-array name="baikalos_little_cluster_values">
+    	<item>-99999</item>
+    	<item>9</item>
+    	<item>8</item>
+    	<item>7</item>
+    	<item>6</item>
+    	<item>5</item>
+    	<item>4</item>
+    	<item>3</item>
+    	<item>2</item>
+    	<item>1</item>
+    	<item>0</item>
+    </string-array>
+
+    <string-array name="baikalos_big_cluster_entries">
+    	<item>Default</item>
+    	<item>300000</item>
+    	<item>652800</item>
+    	<item>806400</item>
+    	<item>979200</item>
+    	<item>1094400</item>
+    	<item>1209600</item>
+    	<item>1324800</item>
+    	<item>1555200</item>
+    	<item>1708800</item>
+    	<item>1843200</item>
+    	<item>1939200</item>
+    	<item>2169600</item>
+    	<item>2208000</item>
+    	<item>Max</item>
+    </string-array>
+
+    <string-array name="baikalos_big_cluster_values">
+    	<item>-99999</item>
+    	<item>13</item>
+    	<item>12</item>
+    	<item>11</item>
+    	<item>10</item>
+    	<item>9</item>
+    	<item>8</item>
+    	<item>7</item>
+    	<item>6</item>
+    	<item>5</item>
+    	<item>4</item>
+    	<item>3</item>
+    	<item>2</item>
+    	<item>1</item>
+    	<item>0</item>
+    </string-array>
+
+    <string-array name="baikalos_gpu_entries">
+    	<item>Default</item>
+    	<item>180</item>
+    	<item>267</item>
+    	<item>355</item>
+    	<item>430</item>
+    	<item>565</item>
+    	<item>650</item>
+    	<item>Max</item>
+    </string-array>
+
+    <string-array name="baikalos_gpu_values">
+    	<item>-99999</item>
+    	<item>6</item>
+    	<item>5</item>
+    	<item>4</item>
+    	<item>3</item>
+    	<item>2</item>
+    	<item>1</item>
+    	<item>0</item>
+    </string-array>
+
+    <string-array name="baikalos_boost_entries">
+    	<item>Default</item>
+    	<item>0</item>
+    	<item>1</item>
+    	<item>2</item>
+    	<item>3</item>
+    	<item>4</item>
+    	<item>5</item>
+    	<item>6</item>
+    	<item>7</item>
+    	<item>8</item>
+    	<item>9</item>
+    	<item>10</item>
+    	<item>15</item>
+    	<item>20</item>
+    	<item>25</item>
+    	<item>30</item>
+    	<item>35</item>
+    	<item>40</item>
+    	<item>45</item>
+    	<item>50</item>
+    </string-array>
+
+    <string-array name="baikalos_boost_values">
+    	<item>-99999</item>
+    	<item>18</item>
+    	<item>17</item>
+    	<item>16</item>
+    	<item>15</item>
+    	<item>14</item>
+    	<item>13</item>
+    	<item>12</item>
+    	<item>11</item>
+    	<item>10</item>
+    	<item>9</item>
+    	<item>8</item>
+    	<item>7</item>
+    	<item>6</item>
+    	<item>5</item>
+    	<item>4</item>
+    	<item>3</item>
+    	<item>2</item>
+    	<item>1</item>
+    	<item>0</item>
+    </string-array>
+
+    <string-array name="baikalos_core_ctl_entries">
+    	<item>Default</item>
+    	<item>Off</item>
+    	<item>On</item>
+    </string-array>
+
+    <string-array name="baikalos_core_ctl_values">
+    	<item>-99999</item>
+    	<item>0</item>
+    	<item>1</item>
+    </string-array>
+
+
+</resources>

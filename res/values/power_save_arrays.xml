@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string-array name="default_thermal_listentries">
+    	<item>@string/thermal_balance</item>
+    	<!--item>@string/thermal_gaming</item>
+    	<item>@string/thermal_gaming2</item>
+    	<item>@string/thermal_nolimits</item>
+    	<item>@string/thermal_high</item>
+    	<item>@string/thermal_cool</item>
+    	<item>@string/thermal_cold</item>
+    	<item>@string/thermal_camera</item>
+    	<item>@string/thermal_incall</item>
+    	<item>@string/thermal_vr</item-->
+     </string-array>
+     <string-array name="default_thermal_listvalues">
+    	<item>1</item>
+    	<!--item>gaming</item>
+    	<item>gaming2</item>
+    	<item>nolimits</item>
+    	<item>high</item>
+    	<item>cool</item>
+    	<item>cold</item>
+    	<item>camera</item>
+    	<item>incall</item>
+    	<item>vr</item-->
+    </string-array>
+
+</resources>

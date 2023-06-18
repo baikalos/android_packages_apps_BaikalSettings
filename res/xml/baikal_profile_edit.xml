@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * Copyright (C) 2023 BaikalOS
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+-->
+
+<PreferenceScreen 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+    xmlns:lineage="http://schemas.android.com/apk/res-auto"
+    android:title="@string/baikalos_profile_edit_title">
+
+    <PreferenceCategory
+        android:title="Interaction Boost">
+
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.boost.CPULittleClusterMaxFreq"
+            android:title="Little cluster max freq"
+            android:dialogTitle="Little cluster max freq"
+            android:entries="@array/baikalos_little_cluster_entries"
+            android:entryValues="@array/baikalos_little_cluster_values"
+            android:defaultValue="-99999" />
+
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.boost.CPUBigClusterMaxFreq"
+            android:title="Big cluster max freq"
+            android:dialogTitle="Big cluster max freq"
+            android:entries="@array/baikalos_big_cluster_entries"
+            android:entryValues="@array/baikalos_big_cluster_values"
+            android:defaultValue="-99999" />
+
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.boost.CPULittleClusterMinFreq"
+            android:title="Little cluster min freq"
+            android:dialogTitle="Little cluster min freq"
+            android:entries="@array/baikalos_little_cluster_entries"
+            android:entryValues="@array/baikalos_little_cluster_values"
+            android:defaultValue="-99999" />
+
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.boost.CPUBigClusterMinFreq"
+            android:title="Big cluster min freq"
+            android:dialogTitle="Big cluster min freq"
+            android:entries="@array/baikalos_big_cluster_entries"
+            android:entryValues="@array/baikalos_big_cluster_values"
+            android:defaultValue="-99999" />
+
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.boost.GPUMaxFreq"
+            android:title="GPU max freq"
+            android:dialogTitle="GPU max freq"
+            android:entries="@array/baikalos_gpu_entries"
+            android:entryValues="@array/baikalos_gpu_values"
+            android:defaultValue="-99999" />
+
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.boost.GPUMinFreq"
+            android:title="GPU min freq"
+            android:dialogTitle="GPU min freq"
+            android:entries="@array/baikalos_gpu_entries"
+            android:entryValues="@array/baikalos_gpu_values"
+            android:defaultValue="-99999" />
+
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.boost.TASchedtuneBoost"
+            android:title="Task boost"
+            android:dialogTitle="Task boost"
+            android:entries="@array/baikalos_boost_entries"
+            android:entryValues="@array/baikalos_boost_values"
+            android:defaultValue="-99999" />
+
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.boost.TASilverBoost"
+            android:title="Little cluster boost"
+            android:dialogTitle="Little cluster boost"
+            android:entries="@array/baikalos_boost_entries"
+            android:entryValues="@array/baikalos_boost_values"
+            android:defaultValue="-99999" />
+
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.boost.TAGoldBoost"
+            android:title="Big cluster boost"
+            android:dialogTitle="Big cluster boost"
+            android:entries="@array/baikalos_boost_entries"
+            android:entryValues="@array/baikalos_boost_values"
+            android:defaultValue="-99999" />
+
+    </PreferenceCategory>
+
+
+    <PreferenceCategory
+        android:title="Rendering Boost">
+
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.render.CPULittleClusterMaxFreq"
+            android:title="Little cluster max freq"
+            android:dialogTitle="Little cluster max freq"
+            android:entries="@array/baikalos_little_cluster_entries"
+            android:entryValues="@array/baikalos_little_cluster_values"
+            android:defaultValue="-99999" />
+
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.render.CPUBigClusterMaxFreq"
+            android:title="Big cluster max freq"
+            android:dialogTitle="Big cluster max freq"
+            android:entries="@array/baikalos_big_cluster_entries"
+            android:entryValues="@array/baikalos_big_cluster_values"
+            android:defaultValue="-99999" />
+
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.render.CPULittleClusterMinFreq"
+            android:title="Little cluster min freq"
+            android:dialogTitle="Little cluster min freq"
+            android:entries="@array/baikalos_little_cluster_entries"
+            android:entryValues="@array/baikalos_little_cluster_values"
+            android:defaultValue="-99999" />
+
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.render.CPUBigClusterMinFreq"
+            android:title="Big cluster min freq"
+            android:dialogTitle="Big cluster min freq"
+            android:entries="@array/baikalos_big_cluster_entries"
+            android:entryValues="@array/baikalos_big_cluster_values"
+            android:defaultValue="-99999" />
+
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.render.GPUMaxFreq"
+            android:title="GPU max freq"
+            android:dialogTitle="GPU max freq"
+            android:entries="@array/baikalos_gpu_entries"
+            android:entryValues="@array/baikalos_gpu_values"
+            android:defaultValue="-99999" />
+
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.render.GPUMinFreq"
+            android:title="GPU min freq"
+            android:dialogTitle="GPU min freq"
+            android:entries="@array/baikalos_gpu_entries"
+            android:entryValues="@array/baikalos_gpu_values"
+            android:defaultValue="-99999" />
+
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.render.TASchedtuneBoost"
+            android:title="Task boost"
+            android:dialogTitle="Task boost"
+            android:entries="@array/baikalos_boost_entries"
+            android:entryValues="@array/baikalos_boost_values"
+            android:defaultValue="-99999" />
+
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.render.TASilverBoost"
+            android:title="Little cluster boost"
+            android:dialogTitle="Little cluster boost"
+            android:entries="@array/baikalos_boost_entries"
+            android:entryValues="@array/baikalos_boost_values"
+            android:defaultValue="-99999" />
+
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.render.TAGoldBoost"
+            android:title="Big cluster boost"
+            android:dialogTitle="Big cluster boost"
+            android:entries="@array/baikalos_boost_entries"
+            android:entryValues="@array/baikalos_boost_values"
+            android:defaultValue="-99999" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Balanced">
+
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.inter.CPULittleClusterMaxFreq"
+            android:title="Little cluster max freq"
+            android:dialogTitle="Little cluster max freq"
+            android:entries="@array/baikalos_little_cluster_entries"
+            android:entryValues="@array/baikalos_little_cluster_values"
+            android:defaultValue="-99999" />
+
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.inter.CPUBigClusterMaxFreq"
+            android:title="Big cluster max freq"
+            android:dialogTitle="Big cluster max freq"
+            android:entries="@array/baikalos_big_cluster_entries"
+            android:entryValues="@array/baikalos_big_cluster_values"
+            android:defaultValue="-99999" />
+
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.inter.CPULittleClusterMinFreq"
+            android:title="Little cluster min freq"
+            android:dialogTitle="Little cluster min freq"
+            android:entries="@array/baikalos_little_cluster_entries"
+            android:entryValues="@array/baikalos_little_cluster_values"
+            android:defaultValue="-99999" />
+
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.inter.CPUBigClusterMinFreq"
+            android:title="Big cluster min freq"
+            android:dialogTitle="Big cluster min freq"
+            android:entries="@array/baikalos_big_cluster_entries"
+            android:entryValues="@array/baikalos_big_cluster_values"
+            android:defaultValue="-99999" />
+
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.inter.GPUMaxFreq"
+            android:title="GPU max freq"
+            android:dialogTitle="GPU max freq"
+            android:entries="@array/baikalos_gpu_entries"
+            android:entryValues="@array/baikalos_gpu_values"
+            android:defaultValue="-99999" />
+
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.inter.GPUMinFreq"
+            android:title="GPU min freq"
+            android:dialogTitle="GPU min freq"
+            android:entries="@array/baikalos_gpu_entries"
+            android:entryValues="@array/baikalos_gpu_values"
+            android:defaultValue="-99999" />
+
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.inter.TASchedtuneBoost"
+            android:title="Task boost"
+            android:dialogTitle="Task boost"
+            android:entries="@array/baikalos_boost_entries"
+            android:entryValues="@array/baikalos_boost_values"
+            android:defaultValue="-99999" />
+
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.inter.TASilverBoost"
+            android:title="Little cluster boost"
+            android:dialogTitle="Little cluster boost"
+            android:entries="@array/baikalos_boost_entries"
+            android:entryValues="@array/baikalos_boost_values"
+            android:defaultValue="-99999" />
+
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.inter.TAGoldBoost"
+            android:title="Big cluster boost"
+            android:dialogTitle="Big cluster boost"
+            android:entries="@array/baikalos_boost_entries"
+            android:entryValues="@array/baikalos_boost_values"
+            android:defaultValue="-99999" />
+
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.inter.CPULittleClusterCoreCtl"
+            android:title="Little cluster core control"
+            android:dialogTitle="Little cluster core control"
+            android:entries="@array/baikalos_core_ctl_entries"
+            android:entryValues="@array/baikalos_core_ctl_values"
+            android:defaultValue="-99999" />
+
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.inter.CPUBigClusterCoreCtl"
+            android:title="Big cluster core control"
+            android:dialogTitle="Big cluster core control"
+            android:entries="@array/baikalos_core_ctl_entries"
+            android:entryValues="@array/baikalos_core_ctl_values"
+            android:defaultValue="-99999" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Sustained Performance">
+
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.sustain.CPULittleClusterMaxFreq"
+            android:title="Little cluster max freq"
+            android:dialogTitle="Little cluster max freq"
+            android:entries="@array/baikalos_little_cluster_entries"
+            android:entryValues="@array/baikalos_little_cluster_values"
+            android:defaultValue="-99999" />
+
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.sustain.CPUBigClusterMaxFreq"
+            android:title="Big cluster max freq"
+            android:dialogTitle="Big cluster max freq"
+            android:entries="@array/baikalos_big_cluster_entries"
+            android:entryValues="@array/baikalos_big_cluster_values"
+            android:defaultValue="-99999" />
+
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.sustain.CPULittleClusterMinFreq"
+            android:title="Little cluster min freq"
+            android:dialogTitle="Little cluster min freq"
+            android:entries="@array/baikalos_little_cluster_entries"
+            android:entryValues="@array/baikalos_little_cluster_values"
+            android:defaultValue="-99999" />
+
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.sustain.CPUBigClusterMinFreq"
+            android:title="Big cluster min freq"
+            android:dialogTitle="Big cluster min freq"
+            android:entries="@array/baikalos_big_cluster_entries"
+            android:entryValues="@array/baikalos_big_cluster_values"
+            android:defaultValue="-99999" />
+
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.sustain.GPUMaxFreq"
+            android:title="GPU max freq"
+            android:dialogTitle="GPU max freq"
+            android:entries="@array/baikalos_gpu_entries"
+            android:entryValues="@array/baikalos_gpu_values"
+            android:defaultValue="-99999" />
+
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.sustain.GPUMinFreq"
+            android:title="GPU min freq"
+            android:dialogTitle="GPU min freq"
+            android:entries="@array/baikalos_gpu_entries"
+            android:entryValues="@array/baikalos_gpu_values"
+            android:defaultValue="-99999" />
+
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.sustain.TASchedtuneBoost"
+            android:title="Task boost"
+            android:dialogTitle="Task boost"
+            android:entries="@array/baikalos_boost_entries"
+            android:entryValues="@array/baikalos_boost_values"
+            android:defaultValue="-99999" />
+
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.sustain.TASilverBoost"
+            android:title="Little cluster boost"
+            android:dialogTitle="Little cluster boost"
+            android:entries="@array/baikalos_boost_entries"
+            android:entryValues="@array/baikalos_boost_values"
+            android:defaultValue="-99999" />
+
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.sustain.TAGoldBoost"
+            android:title="Big cluster boost"
+            android:dialogTitle="Big cluster boost"
+            android:entries="@array/baikalos_boost_entries"
+            android:entryValues="@array/baikalos_boost_values"
+            android:defaultValue="-99999" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Fixed Performance">
+
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.fixed.CPULittleClusterMaxFreq"
+            android:title="Little cluster max freq"
+            android:dialogTitle="Little cluster max freq"
+            android:entries="@array/baikalos_little_cluster_entries"
+            android:entryValues="@array/baikalos_little_cluster_values"
+            android:defaultValue="-99999" />
+
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.fixed.CPUBigClusterMaxFreq"
+            android:title="Big cluster max freq"
+            android:dialogTitle="Big cluster max freq"
+            android:entries="@array/baikalos_big_cluster_entries"
+            android:entryValues="@array/baikalos_big_cluster_values"
+            android:defaultValue="-99999" />
+
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.fixed.CPULittleClusterMinFreq"
+            android:title="Little cluster min freq"
+            android:dialogTitle="Little cluster min freq"
+            android:entries="@array/baikalos_little_cluster_entries"
+            android:entryValues="@array/baikalos_little_cluster_values"
+            android:defaultValue="-99999" />
+
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.fixed.CPUBigClusterMinFreq"
+            android:title="Big cluster min freq"
+            android:dialogTitle="Big cluster min freq"
+            android:entries="@array/baikalos_big_cluster_entries"
+            android:entryValues="@array/baikalos_big_cluster_values"
+            android:defaultValue="-99999" />
+
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.fixed.GPUMaxFreq"
+            android:title="GPU max freq"
+            android:dialogTitle="GPU max freq"
+            android:entries="@array/baikalos_gpu_entries"
+            android:entryValues="@array/baikalos_gpu_values"
+            android:defaultValue="-99999" />
+
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.fixed.GPUMinFreq"
+            android:title="GPU min freq"
+            android:dialogTitle="GPU min freq"
+            android:entries="@array/baikalos_gpu_entries"
+            android:entryValues="@array/baikalos_gpu_values"
+            android:defaultValue="-99999" />
+
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.fixed.TASchedtuneBoost"
+            android:title="Task boost"
+            android:dialogTitle="Task boost"
+            android:entries="@array/baikalos_boost_entries"
+            android:entryValues="@array/baikalos_boost_values"
+            android:defaultValue="-99999" />
+
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.fixed.TASilverBoost"
+            android:title="Little cluster boost"
+            android:dialogTitle="Little cluster boost"
+            android:entries="@array/baikalos_boost_entries"
+            android:entryValues="@array/baikalos_boost_values"
+            android:defaultValue="-99999" />
+
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.fixed.TAGoldBoost"
+            android:title="Big cluster boost"
+            android:dialogTitle="Big cluster boost"
+            android:entries="@array/baikalos_boost_entries"
+            android:entryValues="@array/baikalos_boost_values"
+            android:defaultValue="-99999" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Low Power">
+
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.low.CPULittleClusterMaxFreq"
+            android:title="Little cluster max freq"
+            android:dialogTitle="Little cluster max freq"
+            android:entries="@array/baikalos_little_cluster_entries"
+            android:entryValues="@array/baikalos_little_cluster_values"
+            android:defaultValue="-99999" />
+
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.low.CPUBigClusterMaxFreq"
+            android:title="Big cluster max freq"
+            android:dialogTitle="Big cluster max freq"
+            android:entries="@array/baikalos_big_cluster_entries"
+            android:entryValues="@array/baikalos_big_cluster_values"
+            android:defaultValue="-99999" />
+
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.low.CPULittleClusterMinFreq"
+            android:title="Little cluster min freq"
+            android:dialogTitle="Little cluster min freq"
+            android:entries="@array/baikalos_little_cluster_entries"
+            android:entryValues="@array/baikalos_little_cluster_values"
+            android:defaultValue="-99999" />
+
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.low.CPUBigClusterMinFreq"
+            android:title="Big cluster min freq"
+            android:dialogTitle="Big cluster min freq"
+            android:entries="@array/baikalos_big_cluster_entries"
+            android:entryValues="@array/baikalos_big_cluster_values"
+            android:defaultValue="-99999" />
+
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.low.GPUMaxFreq"
+            android:title="GPU max freq"
+            android:dialogTitle="GPU max freq"
+            android:entries="@array/baikalos_gpu_entries"
+            android:entryValues="@array/baikalos_gpu_values"
+            android:defaultValue="-99999" />
+
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.low.GPUMinFreq"
+            android:title="GPU min freq"
+            android:dialogTitle="GPU min freq"
+            android:entries="@array/baikalos_gpu_entries"
+            android:entryValues="@array/baikalos_gpu_values"
+            android:defaultValue="-99999" />
+
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.low.TASchedtuneBoost"
+            android:title="Task boost"
+            android:dialogTitle="Task boost"
+            android:entries="@array/baikalos_boost_entries"
+            android:entryValues="@array/baikalos_boost_values"
+            android:defaultValue="-99999" />
+
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.low.TASilverBoost"
+            android:title="Little cluster boost"
+            android:dialogTitle="Little cluster boost"
+            android:entries="@array/baikalos_boost_entries"
+            android:entryValues="@array/baikalos_boost_values"
+            android:defaultValue="-99999" />
+
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.low.TAGoldBoost"
+            android:title="Big cluster boost"
+            android:dialogTitle="Big cluster boost"
+            android:entries="@array/baikalos_boost_entries"
+            android:entryValues="@array/baikalos_boost_values"
+            android:defaultValue="-99999" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Device Idle">
+
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.idle.CPULittleClusterMaxFreq"
+            android:title="Little cluster max freq"
+            android:dialogTitle="Little cluster max freq"
+            android:entries="@array/baikalos_little_cluster_entries"
+            android:entryValues="@array/baikalos_little_cluster_values"
+            android:defaultValue="-99999" />
+
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.idle.CPUBigClusterMaxFreq"
+            android:title="Big cluster max freq"
+            android:dialogTitle="Big cluster max freq"
+            android:entries="@array/baikalos_big_cluster_entries"
+            android:entryValues="@array/baikalos_big_cluster_values"
+            android:defaultValue="-99999" />
+
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.idle.CPULittleClusterMinFreq"
+            android:title="Little cluster min freq"
+            android:dialogTitle="Little cluster min freq"
+            android:entries="@array/baikalos_little_cluster_entries"
+            android:entryValues="@array/baikalos_little_cluster_values"
+            android:defaultValue="-99999" />
+
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.idle.CPUBigClusterMinFreq"
+            android:title="Big cluster min freq"
+            android:dialogTitle="Big cluster min freq"
+            android:entries="@array/baikalos_big_cluster_entries"
+            android:entryValues="@array/baikalos_big_cluster_values"
+            android:defaultValue="-99999" />
+
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.idle.GPUMaxFreq"
+            android:title="GPU max freq"
+            android:dialogTitle="GPU max freq"
+            android:entries="@array/baikalos_gpu_entries"
+            android:entryValues="@array/baikalos_gpu_values"
+            android:defaultValue="-99999" />
+
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.idle.GPUMinFreq"
+            android:title="GPU min freq"
+            android:dialogTitle="GPU min freq"
+            android:entries="@array/baikalos_gpu_entries"
+            android:entryValues="@array/baikalos_gpu_values"
+            android:defaultValue="-99999" />
+
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.idle.TASchedtuneBoost"
+            android:title="Task boost"
+            android:dialogTitle="Task boost"
+            android:entries="@array/baikalos_boost_entries"
+            android:entryValues="@array/baikalos_boost_values"
+            android:defaultValue="-99999" />
+
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.idle.TASilverBoost"
+            android:title="Little cluster boost"
+            android:dialogTitle="Little cluster boost"
+            android:entries="@array/baikalos_boost_entries"
+            android:entryValues="@array/baikalos_boost_values"
+            android:defaultValue="-99999" />
+
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.idle.TAGoldBoost"
+            android:title="Big cluster boost"
+            android:dialogTitle="Big cluster boost"
+            android:entries="@array/baikalos_boost_entries"
+            android:entryValues="@array/baikalos_boost_values"
+            android:defaultValue="-99999" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

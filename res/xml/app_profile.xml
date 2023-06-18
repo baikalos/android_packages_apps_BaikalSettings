@@ -80,6 +80,17 @@
             android:defaultValue="default"
             android:summary="%s"/>
 
+        <SwitchPreference
+            android:key="app_profile_heavy_memory"
+            android:title="@string/app_profile_heavy_memory_title"
+            android:summary="@string/app_profile_heavy_memory_summary"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="app_profile_heavy_cpu"
+            android:title="@string/app_profile_heavy_cpu_title"
+            android:summary="@string/app_profile_heavy_cpu_summary"
+            android:defaultValue="false" />
 
         <ListPreference
             android:key="app_profile_performance"

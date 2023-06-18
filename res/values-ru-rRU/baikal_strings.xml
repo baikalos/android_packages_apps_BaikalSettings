@@ -123,4 +123,16 @@
     <string name="allow_downgrade_title">Понижение версии</string>
     <string name="allow_downgrade_summary">Разрешить установку приложений более ранних версий. ВНИМАНИЕ!!! Понижение версии может полностью сломать приложение. Данные приложения могут быть полностью уничтожены.</string>
 
+    <string name="baikalos_profile_edit_title">Редактор Профилей</string>
+    <string name="baikalos_profile_edit_summary">Изменить значения профилей производительности</string>
+
+    <string name="baikalos_ignore_zero_battery_title">Игнорировать 0 заряд</string>
+    <string name="baikalos_ignore_zero_battery_summary">Не отключать при достижении 0 заряда. Возможна потеря данных! Телефон будет отключен контроллером батареи</string>
+
+    <string name="app_profile_heavy_memory_title">Много памяти</string>
+    <string name="app_profile_heavy_memory_summary">Приложение требует много памяти. Закрыть вcе неважные фоновые приложения.</string>
+
+    <string name="app_profile_heavy_cpu_title">Много CPU</string>
+    <string name="app_profile_heavy_cpu_summary">Приложение требует полной мощности CPU. Понизить приоритет всем фоновым приложениям.</string>
+
 </resources>

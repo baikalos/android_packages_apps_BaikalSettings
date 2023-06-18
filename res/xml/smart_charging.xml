@@ -19,6 +19,12 @@
     android:title="@string/smart_charging_title">
 
     <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+        android:key="baikalos_ignore_zero_battery"
+        android:defaultValue="false"
+        android:title="@string/baikalos_ignore_zero_battery_title"
+        android:summary="@string/baikalos_ignore_zero_battery_summary"/>
+
+    <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
         android:key="baikalos_limited_charge_screen_on"
         android:defaultValue="false"
         android:title="@string/baikalos_limited_charge_screen_on_title"

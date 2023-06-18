@@ -145,4 +145,16 @@
     <string name="allow_downgrade_title">Allow downgrade</string>
     <string name="allow_downgrade_summary">Allow app downgrade. CAUTION!!! Downgrading may break the application. Application data may be completely corrupted.</string>
 
+    <string name="baikalos_profile_edit_title">Profile Editor</string>
+    <string name="baikalos_profile_edit_summary">Edit Performance profile values</string>
+
+    <string name="baikalos_ignore_zero_battery_title">Ignore Zero Battery</string>
+    <string name="baikalos_ignore_zero_battery_summary">Do not shutdown on 0 battery level. Data loss warning! Phone will be shutdown by battery controller</string>
+
+    <string name="app_profile_heavy_memory_title">Heavy memory</string>
+    <string name="app_profile_heavy_memory_summary">This app uses a lot of memory. Close all unimportant background apps.</string>
+
+    <string name="app_profile_heavy_cpu_title">Heavy CPU</string>
+    <string name="app_profile_heavy_cpu_summary">This app uses a lot of CPU. Drop down priority of any background app.</string>
+
 </resources>

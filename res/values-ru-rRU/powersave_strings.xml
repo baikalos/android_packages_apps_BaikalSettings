@@ -4,11 +4,11 @@
     <string name="powersave_title">Энергосбережение</string>
     <string name="powersave_summary">Энергосбережение</string>
 
-    <string name="baikalos_aggressive_idle_title">Агрессивный сон</string>
-    <string name="baikalos_aggressive_idle_summary">Агрессивно ограничивать фоновую активность. Закрывать приложения через среднее время.</string>
+    <string name="baikalos_aggressive_idle_title">Энергосбережение</string>
+    <string name="baikalos_aggressive_idle_summary">Включить энергосбережение BaikalOS.</string>
 
-    <string name="baikalos_extreme_idle_title">Экстремальный режим</string>
-    <string name="baikalos_extreme_idle_summary">Экстремально ограничивать фоновую активность. Закрывать приложения через короткое время.</string>
+    <string name="baikalos_extreme_idle_title">Агрессивный режим</string>
+    <string name="baikalos_extreme_idle_summary">Агрессивно ограничивать фоновую активность.</string>
 
     <string name="baikalos_aggressive_device_idle_title">Быстрый Глубокий Сон</string>
     <string name="baikalos_aggressive_device_idle_summary">Переходить в режим глубокого сна через 30 секунд после отключения экрана. Игнорировать движение</string>

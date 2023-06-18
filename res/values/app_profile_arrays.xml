@@ -186,6 +186,7 @@
     	<item>Xiaomi MI 10 Pro</item>       <!-- 16 -->
     	<item>Xiaomi Mi 11T</item>          <!-- 20 -->
     	<item>Xiaomi Mi 11</item>           <!-- 23 -->
+    	<item>Redmi K30 Ultra</item>        <!-- 30 -->
     	<item>Nvidia Shield TV 2019 Pro</item>  <!-- 9 -->
      </string-array>
 
@@ -219,6 +220,7 @@
     	<item>16</item>
     	<item>20</item>
     	<item>23</item>
+    	<item>30</item>
     	<item>9</item>
     </string-array>
 
