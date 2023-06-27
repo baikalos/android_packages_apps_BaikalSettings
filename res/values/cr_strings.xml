@@ -807,20 +807,29 @@
     <string name="app_volume_title">Per-app volume control</string>
     <string name="app_volume_summary">Show per-app volume button into volume dialog</string>
 
-    <!-- Cloudflare DNS Option -->
-    <string name="private_dns_mode_cloudflare" translatable="false">Cloudflare DNS</string>
-
     <!-- AdGuard DNS Option -->
     <string name="private_dns_mode_adguard" translatable="false">AdGuard DNS</string>
+
+    <!-- AdGuard DNS hostname -->
+    <string name="private_dns_hostname_adguard" translatable="false">dns.adguard.com</string>
 
     <!-- Open DNS Option -->
     <string name="private_dns_mode_open_dns" translatable="false">Open DNS</string>
 
+    <!-- Open DNS hostname -->
+    <string name="private_dns_hostname_open_dns" translatable="false">dns.opendns.com</string>
+
     <!-- Cleanbrowsing DNS Option -->
     <string name="private_dns_mode_cleanbrowsing" translatable="false">Cleanbrowsing DNS</string>
 
+    <!-- Cleanbrowsing DNS hostname -->
+    <string name="private_dns_hostname_cleanbrowsing" translatable="false">security-filter-dns.cleanbrowsing.org</string>
+
     <!-- Quad9 DNS Option -->
     <string name="private_dns_mode_quad9" translatable="false">Quad9 DNS</string>
+
+    <!-- Quad9 DNS hostname -->
+    <string name="private_dns_hostname_quad9" translatable="false">dns.quad9.net</string>
 
     <!-- Alert Slider Notifications (OnePlus devices) -->
     <string name="alert_slider_notifications_title">Alert slider notifications</string>
@@ -1269,7 +1278,4 @@
     <string name="kg_custom_clock_top_margin_title">Double-line clock position</string>
     <string name="kg_small_clock_text_size_title">Small clock size</string>
     <string name="kg_large_clock_text_size_title">Double-line clock size</string>
-
-    <!-- Location settings screen, setting summary for Assisted GPS switch -->
-    <string name="assisted_gps_summary">Download satellite assistance data from the internet which can greatly improve the GPS startup performance. For emergency calls, assisted GPS is always allowed.</string>
 </resources>

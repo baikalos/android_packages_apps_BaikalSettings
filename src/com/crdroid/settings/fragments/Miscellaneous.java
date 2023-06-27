@@ -37,7 +37,6 @@ import com.android.settingslib.search.SearchIndexable;
 
 //import com.crdroid.settings.fragments.misc.GmsSwitch;
 import com.crdroid.settings.fragments.misc.SensorBlock;
-import com.crdroid.settings.fragments.misc.SmartCharging;
 
 import java.util.List;
 
@@ -51,13 +50,11 @@ public class Miscellaneous extends SettingsPreferenceFragment implements
 
     public static final String TAG = "Miscellaneous";
 
-    private static final String SMART_CHARGING = "smart_charging";
     private static final String POCKET_JUDGE = "pocket_judge";
     private static final String SYS_GAMES_SPOOF = "persist.sys.pixelprops.games";
     private static final String SYS_PHOTOS_SPOOF = "persist.sys.pixelprops.gphotos";
     private static final String SYS_NETFLIX_SPOOF = "persist.sys.pixelprops.netflix";
 
-    private Preference mSmartCharging;
     private Preference mPocketJudge;
 
     private ListPreference mCaptivePortal;
@@ -143,7 +140,6 @@ public class Miscellaneous extends SettingsPreferenceFragment implements
         //SystemProperties.set(SYS_NETFLIX_SPOOF, "false");
         //GmsSwitch.reset(mContext);
         SensorBlock.reset(mContext);
-        SmartCharging.reset(mContext);
     }
 
     @Override
