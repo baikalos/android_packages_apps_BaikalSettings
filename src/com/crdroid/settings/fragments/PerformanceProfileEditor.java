@@ -18,11 +18,16 @@ package com.crdroid.settings.fragments;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.SystemProperties;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
+import androidx.preference.PreferenceCategory;
+
+
 
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.SettingsPreferenceFragment;
@@ -30,6 +35,8 @@ import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.SearchIndexable;
 
 import com.android.settings.R;
+
+import com.crdroid.settings.preferences.SystemPropertiesListPreference;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -43,6 +50,16 @@ public class PerformanceProfileEditor extends SettingsPreferenceFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.baikal_profile_edit);
+
+
+        createProfileEditorCategory("boost","Interaction Boost");
+        createProfileEditorCategory("render","Rendering Boost");
+        createProfileEditorCategory("inter","Balanced");
+        createProfileEditorCategory("sustain","Sustained Performance");
+        createProfileEditorCategory("fixed","Fixed Performance");
+        createProfileEditorCategory("low","Low Power");
+        createProfileEditorCategory("idle","Device Idle");
+
     }
 
     @Override
@@ -53,6 +70,81 @@ public class PerformanceProfileEditor extends SettingsPreferenceFragment {
     @Override
     public int getMetricsCategory() {
         return MetricsProto.MetricsEvent.CRDROID_SETTINGS;
+    }
+
+    private PreferenceCategory createProfileEditorCategory(String profile, String name) {
+
+        PreferenceCategory category = new PreferenceCategory(getActivity());
+        category.setTitle(name);
+
+        final PreferenceScreen screen = getPreferenceScreen();
+        screen.addPreference(category);
+
+        addProfileEditorListPreference(category,"CPULittleClusterMaxFreq",profile,
+                R.array.baikalos_little_cluster_entries,R.array.baikalos_little_cluster_values,R.string.baikalos_little_freq_max_title);
+
+        addProfileEditorListPreference(category,"CPUBigClusterMaxFreq",profile,
+                R.array.baikalos_big_cluster_entries,R.array.baikalos_big_cluster_values,R.string.baikalos_big_freq_max_title);
+
+        addProfileEditorListPreference(category,"CPUBigPlusClusterMaxFreq",profile,
+                R.array.baikalos_bigplus_cluster_entries,R.array.baikalos_bigplus_cluster_values,R.string.baikalos_bigplus_freq_max_title);
+
+        addProfileEditorListPreference(category,"CPUBigClusterMinFreq",profile,
+                R.array.baikalos_little_cluster_entries,R.array.baikalos_little_cluster_values,R.string.baikalos_little_freq_min_title);
+
+        addProfileEditorListPreference(category,"CPUBigClusterMinFreq",profile,
+                R.array.baikalos_big_cluster_entries,R.array.baikalos_big_cluster_values,R.string.baikalos_big_freq_min_title);
+
+        addProfileEditorListPreference(category,"CPUBigPlusClusterMinFreq",profile,
+                R.array.baikalos_bigplus_cluster_entries,R.array.baikalos_bigplus_cluster_values,R.string.baikalos_bigplus_freq_min_title);
+
+        addProfileEditorListPreference(category,"GPUMaxFreq",profile,
+                R.array.baikalos_gpu_entries,R.array.baikalos_gpu_values,R.string.baikalos_gpu_max_title);
+
+        addProfileEditorListPreference(category,"GPUMinFreq",profile,
+                R.array.baikalos_gpu_entries,R.array.baikalos_gpu_values,R.string.baikalos_gpu_min_title);
+
+        addProfileEditorListPreference(category,"TASchedtuneBoost",profile,
+                R.array.baikalos_boost_entries,R.array.baikalos_boost_values,R.string.baikalos_task_boost_title);
+
+        addProfileEditorListPreference(category,"TASilverBoost",profile,
+                R.array.baikalos_boost_entries,R.array.baikalos_boost_values,R.string.baikalos_silver_boost_title);
+
+        addProfileEditorListPreference(category,"TAGoldBoost",profile,
+                R.array.baikalos_boost_entries,R.array.baikalos_boost_values,R.string.baikalos_gold_boost_title);
+
+        addProfileEditorListPreference(category,"TAPlusBoost",profile,
+                R.array.baikalos_boost_entries,R.array.baikalos_boost_values,R.string.baikalos_plus_boost_title);
+
+        addProfileEditorListPreference(category,"CPULittleClusterCoreCtl",profile,
+                R.array.baikalos_core_ctl_entries,R.array.baikalos_core_ctl_values,R.string.baikalos_little_core_ctl_title);
+
+        addProfileEditorListPreference(category,"CPUBigClusterCoreCtl",profile,
+                R.array.baikalos_core_ctl_entries,R.array.baikalos_core_ctl_values,R.string.baikalos_big_core_ctl_title);
+
+        addProfileEditorListPreference(category,"CPUBigPlusClusterCoreCtl",profile,
+                R.array.baikalos_core_ctl_entries,R.array.baikalos_core_ctl_values,R.string.baikalos_plus_core_ctl_title);
+
+        return category;
+    }
+
+    private void addProfileEditorListPreference(PreferenceCategory category, String key, String profile, int entries, int values, int title) {
+        String property_key = "persist.baikal." + profile + "." + key;
+        if( !isPropertySupported(property_key) ) return;
+
+        SystemPropertiesListPreference pref = new SystemPropertiesListPreference(getActivity());
+        Resources res = getResources();
+        pref.setKey(property_key);
+        pref.setTitle(res.getString(title));
+        pref.setEntries(res.getStringArray(entries));
+        pref.setEntryValues(res.getStringArray(values));
+        pref.setDefaultValue("-99999");
+        category.addPreference(pref);
+    }
+
+    private boolean isPropertySupported(String key) {
+        if( "DEADBEEF".equals(SystemProperties.get(key,"DEADBEEF")) ) return false;
+        return true;        
     }
 
     /**
