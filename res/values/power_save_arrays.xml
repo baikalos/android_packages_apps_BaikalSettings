@@ -27,4 +27,20 @@
     	<item>vr</item-->
     </string-array>
 
+    <string-array name="powesaver_listentries">
+    	<item>@string/powesaver_default</item>
+    	<item>@string/powesaver_low</item>
+    	<item>@string/powesaver_moderate</item>
+    	<item>@string/powesaver_aggressive</item>
+    	<item>@string/powesaver_extreme</item>
+    </string-array>
+    <string-array name="powesaver_listvalues">
+    	<item>0</item>
+    	<item>1</item>
+    	<item>2</item>
+    	<item>3</item>
+    	<item>4</item>
+    </string-array>
+
+
 </resources>

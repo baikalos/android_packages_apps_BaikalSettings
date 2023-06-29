@@ -59,11 +59,19 @@ public class PowerSave extends SettingsPreferenceFragment {
     private static final String APP_PROFILE_PERF = "default_profile_performance";
     private static final String APP_PROFILE_THERM = "default_profile_thermal";
 
+    private static final String POWERSAVER_SCREENON = "powesaver_screenon";
+    private static final String POWERSAVER_STANDBY = "powesaver_standby";
+    private static final String POWERSAVER_IDLE = "powesaver_idle";
+
     private static final String APP_FREEZER = "cached_apps_freezer";
 
     private ListPreference mAppPerfProfile;
     private ListPreference mAppThermProfile;
     private SwitchPreference mAppFreezer;
+
+    private ListPreference mPowersaverScreenon;
+    private ListPreference mPowersaverStandby;
+    private ListPreference mPowersaverIdle;
 
     private Context mContext;
 
@@ -149,6 +157,64 @@ public class PowerSave extends SettingsPreferenceFragment {
                     });
                 }
             }
+
+            mPowersaverScreenon = (ListPreference) findPreference(POWERSAVER_SCREENON);
+            if( mPowersaverScreenon != null ) { 
+                int profile = Settings.Global.getInt(resolver,Settings.Global.BAIKALOS_POWER_LEVEL_ON, 0);
+                if( profile == -1 ) profile = 7;
+                Log.e(TAG, "mPowersaverScreenon: getProfile=" + profile);
+                try { mPowersaverScreenon.setValue(Integer.toString(profile)); } catch (Exception rre) { }
+                mPowersaverScreenon.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                    public boolean onPreferenceChange(Preference preference, Object newValue) {
+                        try {
+                            Settings.Global.putInt(resolver,Settings.Global.BAIKALOS_POWER_LEVEL_ON, Integer.parseInt(newValue.toString()));
+                            Log.e(TAG, "mPowersaverScreenon: setProfile=" + newValue.toString());
+                        } catch(Exception re) {
+                            Log.e(TAG, "onCreate: mPowersaverScreenon Fatal! exception", re );
+                        }
+                        return true;
+                    }
+                });
+            }
+
+            mPowersaverStandby = (ListPreference) findPreference(POWERSAVER_STANDBY);
+            if( mPowersaverStandby != null ) { 
+                int profile = Settings.Global.getInt(resolver,Settings.Global.BAIKALOS_POWER_LEVEL_STANDBY, 0);
+                if( profile == -1 ) profile = 7;
+                Log.e(TAG, "mPowersaverStandby: getProfile=" + profile);
+                try { mPowersaverStandby.setValue(Integer.toString(profile)); } catch (Exception rre) { }
+                mPowersaverStandby.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                    public boolean onPreferenceChange(Preference preference, Object newValue) {
+                        try {
+                            Settings.Global.putInt(resolver,Settings.Global.BAIKALOS_POWER_LEVEL_STANDBY, Integer.parseInt(newValue.toString()));
+                            Log.e(TAG, "mPowersaverStandby: setProfile=" + newValue.toString());
+                        } catch(Exception re) {
+                            Log.e(TAG, "onCreate: mPowersaverStandby Fatal! exception", re );
+                        }
+                        return true;
+                    }
+                });
+            }
+
+            mPowersaverIdle = (ListPreference) findPreference(POWERSAVER_IDLE);
+            if( mPowersaverIdle != null ) { 
+                int profile = Settings.Global.getInt(resolver,Settings.Global.BAIKALOS_POWER_LEVEL_IDLE, 0);
+                if( profile == -1 ) profile = 7;
+                Log.e(TAG, "mPowersaverIdle: getProfile=" + profile);
+                try { mPowersaverIdle.setValue(Integer.toString(profile)); } catch (Exception rre) { }
+                mPowersaverIdle.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                    public boolean onPreferenceChange(Preference preference, Object newValue) {
+                        try {
+                            Settings.Global.putInt(resolver,Settings.Global.BAIKALOS_POWER_LEVEL_IDLE, Integer.parseInt(newValue.toString()));
+                            Log.e(TAG, "mPowersaverIdle: setProfile=" + newValue.toString());
+                        } catch(Exception re) {
+                            Log.e(TAG, "onCreate: mPowersaverIdle Fatal! exception", re );
+                        }
+                        return true;
+                    }
+                });
+            }
+
         } catch(Exception e) {
             Log.e(TAG, "onCreate: PowerSave Fatal! exception", e );
         }

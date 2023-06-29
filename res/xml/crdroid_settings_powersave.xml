@@ -24,6 +24,9 @@
     android:title="@string/powersave_title"
     >
 
+    <PreferenceCategory
+        android:title="@string/device_profiles_title">
+
         <ListPreference
             android:key="default_profile_performance"
             android:title="@string/app_profile_performance_title"
@@ -40,6 +43,40 @@
             android:defaultValue="default"
             android:summary="%s" />
 
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/powesaver_profiles_title">
+
+        <ListPreference
+            android:key="powesaver_screenon"
+            android:title="@string/powesaver_screenon_title"
+            android:entries="@array/powesaver_listentries"
+            android:entryValues="@array/powesaver_listvalues" 
+            android:defaultValue="0"
+            android:summary="%s"/>
+
+        <ListPreference
+            android:key="powesaver_standby"
+            android:title="@string/powesaver_standby_title"
+            android:entries="@array/powesaver_listentries"
+            android:entryValues="@array/powesaver_listvalues" 
+            android:defaultValue="0"
+            android:summary="%s"/>
+
+        <ListPreference
+            android:key="powesaver_idle"
+            android:title="@string/powesaver_idle_title"
+            android:entries="@array/powesaver_listentries"
+            android:entryValues="@array/powesaver_listvalues" 
+            android:defaultValue="0"
+            android:summary="%s"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/powersave_title">
+
         <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
             android:key="baikalos_aggressive_idle"
             android:defaultValue="false"
@@ -53,22 +90,6 @@
             android:title="@string/baikalos_freeze_cached_title"
             android:summary="@string/baikalos_freeze_cached_summary"
         />
-
-        <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
-            android:key="baikalos_extreme_idle"
-            android:defaultValue="false"
-            android:title="@string/baikalos_extreme_idle_title"
-            android:summary="@string/baikalos_extreme_idle_summary"
-            android:dependency="baikalos_aggressive_idle"
-        />
-
-        <!-- com.crdroid.settings.preferences.GlobalSettingSwitchPreference
-            android:key="baikalos_alarms_nowake"
-            android:defaultValue="false"
-            android:title="@string/baikalos_alarms_nowake_title"
-            android:summary="@string/baikalos_alarms_nowake_summary"
-            android:dependency="baikalos_aggressive_idle"
-        / -->
 
         <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
             android:key="baikalos_kill_in_background"
@@ -85,13 +106,6 @@
             android:summary="@string/baikalos_aggressive_device_idle_summary"
         />
 
-        <!-- com.crdroid.settings.preferences.GlobalSettingSwitchPreference
-            android:key="baikalos_stamina_enabled"
-            android:defaultValue="false"
-            android:title="@string/baikalos_stamina_title"
-            android:summary="@string/baikalos_stamina_summary"
-        / -->
-
         <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
             android:key="baikalos_unrestricted_net"
             android:defaultValue="false"
@@ -105,7 +119,6 @@
             android:title="@string/baikalos_reduced_brightness_title"
             android:summary="@string/baikalos_reduced_brightness_summary"
         />
-
 
         <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
             android:key="baikalos_boost_interaction_disable"
@@ -121,41 +134,33 @@
             android:summary="@string/baikalos_rendering_boost_summary"
         />
 
-        <!-- com.crdroid.settings.preferences.GlobalSettingSwitchPreference
-             android:key="baikalos_boost_display_update_imminent_disable"
-            android:defaultValue="true"
-            android:title="@string/baikalos_display_boost_title"
-            android:summary="@string/baikalos_display_boost_summary"
-        / -->
-
-        <!-- com.crdroid.settings.preferences.GlobalSettingSeekBarPreference
-            android:key="baikalos_boost_override_silver"
-            android:title="@string/boost_override_silver_title"
-            android:max="100"
-            settings:min="-1"
-            settings:units="%"
-            android:defaultValue="-1"/>
-
-        <com.crdroid.settings.preferences.GlobalSettingSeekBarPreference
-            android:key="baikalos_boost_override_gold"
-            android:title="@string/boost_override_gold_title"
-            android:max="100"
-            settings:min="-1"
-            settings:units="%"
-            android:defaultValue="-1"/ -->
-
-        <!-- com.crdroid.settings.preferences.GlobalSettingSeekBarPreference
-            android:key="baikalos_boost_override_platinum"
-            android:title="@string/boost_override_platinum_title"
-            android:max="100"
-            settings:min="-1"
-            settings:units="%"
-            android:defaultValue="-1"/ -->
+    </PreferenceCategory>
 
         <PreferenceScreen
             android:title="@string/baikalos_profile_edit_title"
             android:summary="@string/baikalos_profile_edit_summary"
             android:fragment="com.crdroid.settings.fragments.PerformanceProfileEditor" />
 
+        <!-- com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+            android:key="baikalos_extreme_idle"
+            android:defaultValue="false"
+            android:title="@string/baikalos_extreme_idle_title"
+            android:summary="@string/baikalos_extreme_idle_summary"
+            android:dependency="baikalos_aggressive_idle"
+        / -->
+
+        <!-- com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+            android:key="baikalos_stamina_enabled"
+            android:defaultValue="false"
+            android:title="@string/baikalos_stamina_title"
+            android:summary="@string/baikalos_stamina_summary"
+        / -->
+
+        <!-- com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+             android:key="baikalos_boost_display_update_imminent_disable"
+            android:defaultValue="true"
+            android:title="@string/baikalos_display_boost_title"
+            android:summary="@string/baikalos_display_boost_summary"
+        / -->
 
 </PreferenceScreen>

@@ -75,4 +75,20 @@
     <string name="baikalos_alarms_nowake_title">Disable Wakeups</string>
     <string name="baikalos_alarms_nowake_summary">Disable wakeups from user apps by default</string>
 
+
+    <string name="device_profiles_title">Device profiles</string>
+    <string name="powesaver_title">Power Saver</string>
+
+    <string name="powesaver_profiles_title">Power Saver profiles</string>
+    <string name="powesaver_screenon_title">Active</string>
+    <string name="powesaver_standby_title">Screen off</string>
+    <string name="powesaver_idle_title">Device Idle</string>
+
+    <string name="powesaver_default">Default</string>
+    <string name="powesaver_low">Low</string>
+    <string name="powesaver_moderate">Moderate</string>
+    <string name="powesaver_aggressive">Aggressive</string>
+    <string name="powesaver_extreme">Extreme</string>
+
+
 </resources>

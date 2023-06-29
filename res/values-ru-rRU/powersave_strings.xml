@@ -70,4 +70,19 @@
     <string name="baikalos_alarms_nowake_title">Запретить Пробуждения</string>
     <string name="baikalos_alarms_nowake_summary">Запретить пробуждения от пользовательских приложений по умолчанию</string>
 
+    <string name="device_profiles_title">Профили устройства</string>
+    <string name="powesaver_title">Энергосбережение</string>
+
+    <string name="powesaver_profiles_title">Профили Энергосбережения</string>
+    <string name="powesaver_screenon_title">Активный</string>
+    <string name="powesaver_standby_title">Выключенный экран</string>
+    <string name="powesaver_idle_title">Глубокий сон</string>
+
+    <string name="powesaver_default">По умолчанию</string>
+    <string name="powesaver_low">Слегка</string>
+    <string name="powesaver_moderate">Умеренно</string>
+    <string name="powesaver_aggressive">Агрессивно</string>
+    <string name="powesaver_extreme">Экстремально</string>
+
+
 </resources>
