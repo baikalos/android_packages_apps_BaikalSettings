@@ -137,6 +137,7 @@
     </PreferenceCategory>
 
         <PreferenceScreen
+            android:key="baikalos_profile_editor"
             android:title="@string/baikalos_profile_edit_title"
             android:summary="@string/baikalos_profile_edit_summary"
             android:fragment="com.crdroid.settings.fragments.PerformanceProfileEditor" />

@@ -174,6 +174,9 @@ public class AppProfileFragment extends SettingsPreferenceFragment
     private AppProfileSettings mAppSettings;
     private AppProfile mProfile;
 
+
+    private boolean isKernelIncompatible = false;
+
     public AppProfileFragment() {
         //mPackageName = packageName; 
         //mUid = uid;
@@ -211,6 +214,7 @@ public class AppProfileFragment extends SettingsPreferenceFragment
             Log.e(TAG, "profiles : incompatible kernel");
             thermProf = false;
             perfProf = false;
+            isKernelIncompatible = true;
         }
 
         Log.e(TAG, "perf profiles : perfProfiles=" + perfProfiles);
@@ -315,6 +319,12 @@ public class AppProfileFragment extends SettingsPreferenceFragment
             }
 
             mAppDisableFreezer = (SwitchPreference) findPreference(APP_PROFILE_FREEZER);
+
+            if( isKernelIncompatible ) {
+                mAppDisableFreezer.setVisible(false);
+                mAppDisableFreezer = null;
+            }
+
             if( mAppDisableFreezer != null ) {
                 if( !appFreezer ) {
                     mAppDisableFreezer.setVisible(false);
@@ -338,6 +348,12 @@ public class AppProfileFragment extends SettingsPreferenceFragment
             }
 
             mAppHeavyMemory = (SwitchPreference) findPreference(APP_PROFILE_HEAVY_MEMORY);
+
+            if( isKernelIncompatible ) {
+                mAppHeavyMemory.setVisible(false);
+                mAppHeavyMemory = null;
+            }
+
             if( mAppHeavyMemory != null ) {
                 mAppHeavyMemory.setChecked(mProfile.mHeavyMemory);
                 Log.e(TAG, "mAppHeavyMemory: mPackageName=" + mPackageName + ",mAppHeavyMemory=" + mProfile.mHeavyMemory);
@@ -357,6 +373,12 @@ public class AppProfileFragment extends SettingsPreferenceFragment
             }
 
             mAppHeavyCPU = (SwitchPreference) findPreference(APP_PROFILE_HEAVY_CPU);
+
+            if( isKernelIncompatible ) {
+                mAppHeavyCPU.setVisible(false);
+                mAppHeavyCPU = null;
+            }
+
             if( mAppHeavyCPU != null ) {
                 mAppHeavyCPU.setChecked(mProfile.mHeavyCPU);
                 Log.e(TAG, "mAppHeavyMemory: mPackageName=" + mPackageName + ",mAppHeavyMemory=" + mProfile.mHeavyCPU);
@@ -639,6 +661,12 @@ public class AppProfileFragment extends SettingsPreferenceFragment
 
 
             mAppPinned = (SwitchPreference) findPreference(APP_PROFILE_PINNED);
+
+            if( isKernelIncompatible ) {
+                mAppPinned.setVisible(false);
+                mAppPinned = null;
+            }
+
             if( mAppPinned != null ) {
                 mAppPinned.setChecked(mProfile.mPinned);
                 Log.e(TAG, "mAppPinned: mPackageName=" + mPackageName + ",mPinned=" + mProfile.mPinned);
@@ -861,6 +889,12 @@ public class AppProfileFragment extends SettingsPreferenceFragment
             }
 
             mBypassCharging = (SwitchPreference) findPreference(APP_PROFILE_BYPASS_CHARGING);
+
+            if( isKernelIncompatible ) {
+                mBypassCharging.setVisible(false);
+                mBypassCharging = null;
+            }
+
             if( mBypassCharging != null ) {
                 boolean bypassCharging = mProfile.mBypassCharging;
                 Log.e(TAG, "mBypassCharging: mPackageName=" + mPackageName + ", mBypassCharging=" + bypassCharging);

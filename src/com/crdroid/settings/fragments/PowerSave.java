@@ -75,6 +75,8 @@ public class PowerSave extends SettingsPreferenceFragment {
 
     private Context mContext;
 
+    private boolean isKernelIncompatible = false;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -99,6 +101,7 @@ public class PowerSave extends SettingsPreferenceFragment {
             Log.e(TAG, "profiles : incompatible kernel");
             thermProf = false;
             perfProf = false;
+            isKernelIncompatible = true;
         }
 
 	    addPreferencesFromResource(R.xml.crdroid_settings_powersave);
@@ -110,7 +113,10 @@ public class PowerSave extends SettingsPreferenceFragment {
 
         try {
             mAppFreezer = (SwitchPreference) findPreference(APP_FREEZER);
-            if( mAppFreezer != null && !appFreezer ) mAppFreezer.setVisible(false);
+            if( mAppFreezer != null && (!appFreezer || isKernelIncompatible) ) mAppFreezer.setVisible(false);
+
+            PreferenceScreen prefEditor = (PreferenceScreen) findPreference("baikalos_profile_editor");
+            if( prefEditor != null && isKernelIncompatible ) prefEditor.setVisible(false);
 
             mAppPerfProfile = (ListPreference) findPreference(APP_PROFILE_PERF);
             if( mAppPerfProfile != null ) { 
