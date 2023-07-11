@@ -38,6 +38,9 @@ import com.android.settings.R;
 
 import com.crdroid.settings.preferences.SystemPropertiesListPreference;
 
+import com.android.internal.baikalos.BaikalConstants;
+
+
 import java.util.List;
 import java.util.ArrayList;
 
@@ -49,8 +52,12 @@ public class PerformanceProfileEditor extends SettingsPreferenceFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        addPreferencesFromResource(R.xml.baikal_profile_edit);
 
+        if( !BaikalConstants.isKernelCompatible() ) {
+            return;
+        }
+
+        addPreferencesFromResource(R.xml.baikal_profile_edit);
 
         createProfileEditorCategory("boost","Interaction Boost");
         createProfileEditorCategory("render","Rendering Boost");
@@ -89,7 +96,7 @@ public class PerformanceProfileEditor extends SettingsPreferenceFragment {
         addProfileEditorListPreference(category,"CPUBigPlusClusterMaxFreq",profile,
                 R.array.baikalos_bigplus_cluster_entries,R.array.baikalos_bigplus_cluster_values,R.string.baikalos_bigplus_freq_max_title);
 
-        addProfileEditorListPreference(category,"CPUBigClusterMinFreq",profile,
+        addProfileEditorListPreference(category,"CPULittleClusterMinFreq",profile,
                 R.array.baikalos_little_cluster_entries,R.array.baikalos_little_cluster_values,R.string.baikalos_little_freq_min_title);
 
         addProfileEditorListPreference(category,"CPUBigClusterMinFreq",profile,
