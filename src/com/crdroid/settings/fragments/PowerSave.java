@@ -59,6 +59,9 @@ public class PowerSave extends SettingsPreferenceFragment {
     private static final String APP_PROFILE_PERF = "default_profile_performance";
     private static final String APP_PROFILE_THERM = "default_profile_thermal";
 
+    private static final String APP_IDLE_PERF = "default_idle_performance";
+    private static final String APP_IDLE_THERM = "default_idle_thermal";
+
     private static final String POWERSAVER_SCREENON = "powesaver_screenon";
     private static final String POWERSAVER_STANDBY = "powesaver_standby";
     private static final String POWERSAVER_IDLE = "powesaver_idle";
@@ -67,6 +70,9 @@ public class PowerSave extends SettingsPreferenceFragment {
 
     private ListPreference mAppPerfProfile;
     private ListPreference mAppThermProfile;
+    private ListPreference mAppIdlePerfProfile;
+    private ListPreference mAppIdleThermProfile;
+
     private SwitchPreference mAppFreezer;
 
     private ListPreference mPowersaverScreenon;
@@ -157,6 +163,52 @@ public class PowerSave extends SettingsPreferenceFragment {
                                 Log.e(TAG, "getThermProfile: setProfile=" + newValue.toString());
                             } catch(Exception re) {
                                 Log.e(TAG, "onCreate: mAppThermProfile Fatal! exception", re );
+                            }
+                            return true;
+                        }
+                    });
+                }
+            }
+
+            mAppIdlePerfProfile = (ListPreference) findPreference(APP_IDLE_PERF);
+            if( mAppIdlePerfProfile != null ) { 
+                if(!perfProf) {
+                    mAppIdlePerfProfile.setVisible(false);
+                } else {
+                    int profile = Settings.Global.getInt(resolver,Settings.Global.BAIKALOS_DEFAULT_IDLE_PERFORMANCE, -1);
+                    if( profile == -1 ) profile = 7;
+                    Log.e(TAG, "mAppIdlePerfProfile: getProfile=" + profile);
+                    try { mAppIdlePerfProfile.setValue(Integer.toString(profile)); } catch (Exception rre) { }
+                    mAppIdlePerfProfile.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                        public boolean onPreferenceChange(Preference preference, Object newValue) {
+                            try {
+                                Settings.Global.putInt(resolver,Settings.Global.BAIKALOS_DEFAULT_IDLE_PERFORMANCE, Integer.parseInt(newValue.toString()));
+                                Log.e(TAG, "mAppIdlePerfProfile: setProfile=" + newValue.toString());
+                            } catch(Exception re) {
+                                Log.e(TAG, "onCreate: mAppIdlePerfProfile Fatal! exception", re );
+                            }
+                            return true;
+                        }
+                    });
+                }
+            }
+
+            mAppIdleThermProfile = (ListPreference) findPreference(APP_IDLE_THERM);
+            if( mAppIdleThermProfile != null ) {
+                if(!thermProf) {
+                    mAppIdleThermProfile.setVisible(false);
+                } else {
+                    int profile = Settings.Global.getInt(resolver,Settings.Global.BAIKALOS_DEFAULT_IDLE_THERMAL, -1);
+                    if( profile == -1 ) profile = 1;
+                    Log.e(TAG, "mAppIdleThermProfile: getProfile=" + profile);
+                    try { mAppIdleThermProfile.setValue(Integer.toString(profile)); } catch (Exception rre) { }
+                    mAppIdleThermProfile.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                        public boolean onPreferenceChange(Preference preference, Object newValue) {
+                            try {
+                                Settings.Global.putInt(resolver,Settings.Global.BAIKALOS_DEFAULT_IDLE_THERMAL, Integer.parseInt(newValue.toString()));
+                                Log.e(TAG, "mAppIdleThermProfile: setProfile=" + newValue.toString());
+                            } catch(Exception re) {
+                                Log.e(TAG, "onCreate: mAppIdleThermProfile Fatal! exception", re );
                             }
                             return true;
                         }

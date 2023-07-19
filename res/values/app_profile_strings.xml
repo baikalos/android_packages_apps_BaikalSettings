@@ -8,6 +8,8 @@
     <string name="app_profile_thermal_title">Thermal profile</string>
     <string name="app_profile_brightness_title">Screen Brightness</string>
     <string name="app_profile_rotation_title">Screen Rotation</string>
+    <string name="app_idle_performance_title">Idle Performance profile</string>
+    <string name="app_idle_thermal_title">Idle Thermal profile</string>
 
     <string name="app_profile_camera_hal1_title">Camera API 1</string>
     <string name="app_profile_camera_hal1_summary">Force using camera API V1 for this app</string>

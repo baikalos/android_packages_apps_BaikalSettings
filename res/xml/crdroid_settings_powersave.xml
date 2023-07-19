@@ -43,6 +43,22 @@
             android:defaultValue="default"
             android:summary="%s" />
 
+        <ListPreference
+            android:key="default_idle_performance"
+            android:title="@string/app_idle_performance_title"
+            android:entries="@array/performance_listentries"
+            android:entryValues="@array/performance_listvalues" 
+            android:defaultValue="default"
+            android:summary="%s"/>
+
+        <ListPreference
+            android:key="default_idle_thermal"
+            android:title="@string/app_idle_thermal_title"
+            android:entries="@array/thermal_listentries"
+            android:entryValues="@array/thermal_listvalues"
+            android:defaultValue="default"
+            android:summary="%s" />
+
     </PreferenceCategory>
 
     <PreferenceCategory

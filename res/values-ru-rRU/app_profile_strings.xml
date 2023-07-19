@@ -3,6 +3,10 @@
     <string name="app_profile_title">Профиль приложения</string>
     <string name="app_profile_performance_title">Профиль производительности</string>
     <string name="app_profile_thermal_title">Профиль температурного режима</string>
+
+    <string name="app_idle_performance_title">Профиль производительности во сне</string>
+    <string name="app_idle_thermal_title">Профиль температурного режима во сне</string>
+
     <string name="app_profile_brightness_title">Яркость экрана</string>
     <string name="app_profile_rotation_title">Поворот экрана</string>
     <string name="app_profile_camera_hal1_title">Camera API 1</string>
