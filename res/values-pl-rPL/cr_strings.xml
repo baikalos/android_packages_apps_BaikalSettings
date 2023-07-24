@@ -65,8 +65,8 @@
     <string name="about_device_name">Urządzenie</string>
     <!-- Share crDroid -->
     <string name="share_crdroid_title">Udostępnij BaikalOS</string>
-    <string name="share_crdroid_summary">Powiadom innych o BaikalOS</string>
-    <string name="share_message">Sprawdź, czy #BaikalOS jest dostępny dla twojego urządzenia @ https://github.com/BaikalOS-Devices/</string>
+    <string name="share_crdroid_summary">Powiadom innych o BaikalOS </string>
+    <string name="share_message">Sprawdź, czy #BaikalOS jest dostępny dla twojego urządzenia @ https://github.com/BaikalOS</string>
     <string name="share_chooser_title">Udostępnij BaikalOS</string>
     <!-- Sites crDroid -->
     <string name="crdroid_source_title">GitHub</string>
