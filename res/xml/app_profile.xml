@@ -29,6 +29,12 @@
             android:defaultValue="false" />
 
         <SwitchPreference
+            android:key="app_profile_donotclose"
+            android:title="@string/app_profile_donotclose_title"
+            android:summary="@string/app_profile_donotclose_summary"
+            android:defaultValue="false" />
+
+        <SwitchPreference
             android:key="app_profile_disable_boot"
             android:title="@string/app_profile_disable_title"
             android:summary="@string/app_profile_disable_summary"

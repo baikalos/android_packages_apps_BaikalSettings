@@ -94,6 +94,7 @@ public class AppProfileFragment extends SettingsPreferenceFragment
     private static final String APP_PROFILE_OVERRIDE_FONTS = "app_profile_override_fonts";
 //    private static final String APP_PROFILE_CAMERA_HAL1 = "app_profile_camera_hal1";
     private static final String APP_PROFILE_PINNED = "app_profile_pinned";
+    private static final String APP_PROFILE_DONOTCLOSE = "app_profile_donotclose";
     private static final String APP_PROFILE_STAMINA = "app_profile_stamina";
     private static final String APP_PROFILE_REQUIRE_GMS = "app_profile_require_gms";
 //    private static final String APP_PROFILE_RESTRICTED = "app_profile_restricted";
@@ -134,6 +135,7 @@ public class AppProfileFragment extends SettingsPreferenceFragment
     private SwitchPreference mAppDebug;
     private SwitchPreference mAppReader;
     private SwitchPreference mAppPinned;
+    private SwitchPreference mAppDoNotClose;
     private SwitchPreference mAppFreezer;
     private SwitchPreference mAppHeavyMemory;
     private SwitchPreference mAppHeavyCPU;
@@ -679,6 +681,31 @@ public class AppProfileFragment extends SettingsPreferenceFragment
                             Log.e(TAG, "mAppPinned: mPackageName=" + mPackageName + ",mPinned=" + (Boolean)newValue);
                         } catch(Exception re) {
                             Log.e(TAG, "onCreate: mAppPinned Fatal! exception", re );
+                        }
+                        return true;
+                    }
+                });
+            }
+
+            mAppDoNotClose = (SwitchPreference) findPreference(APP_PROFILE_DONOTCLOSE);
+
+            if( isKernelIncompatible ) {
+                mAppDoNotClose.setVisible(false);
+                mAppDoNotClose = null;
+            }
+
+            if( mAppDoNotClose != null ) {
+                mAppDoNotClose.setChecked(mProfile.mDoNotClose);
+                Log.e(TAG, "mAppDoNotClose: mPackageName=" + mPackageName + ",mAppDoNotClose=" + mProfile.mDoNotClose);
+                mAppDoNotClose.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                    public boolean onPreferenceChange(Preference preference, Object newValue) {
+                        try {
+                            mProfile.mDoNotClose = ((Boolean)newValue);
+                            mAppSettings.updateProfile(mProfile);
+                            mAppSettings.save();
+                            Log.e(TAG, "mAppDoNotClose: mPackageName=" + mPackageName + ",mAppDoNotClose=" + (Boolean)newValue);
+                        } catch(Exception re) {
+                            Log.e(TAG, "onCreate: mAppDoNotClose Fatal! exception", re );
                         }
                         return true;
                     }

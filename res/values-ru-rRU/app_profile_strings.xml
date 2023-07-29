@@ -58,7 +58,10 @@
     <string name="background_restrictions_disabled">Отключено</string>
 
     <string name="app_profile_pinned_title">Закрепить</string>
-    <string name="app_profile_pinned_summary">Менеджер памяти не будет закрывать приложение по неактивности</string>
+    <string name="app_profile_pinned_summary">Защитить приложение от закрытия системой</string>
+
+    <string name="app_profile_donotclose_title">Не закрывать</string>
+    <string name="app_profile_donotclose_summary">Не закрывать приложение при работе агрессивного менеджера памяти</string>
 
     <string name="app_profile_disable_title">Запретить Автозагрузку</string>
     <string name="app_profile_disable_summary">Запретить автозагрузку приложения во время загрузки устройства</string>
