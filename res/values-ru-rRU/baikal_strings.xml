@@ -135,4 +135,7 @@
     <string name="app_profile_heavy_cpu_title">Много CPU</string>
     <string name="app_profile_heavy_cpu_summary">Приложение требует полной мощности CPU. Понизить приоритет всем фоновым приложениям.</string>
 
+    <string name="restricted_networking_mode_title">Ограничения сети</string>
+    <string name="restricted_networking_mode_summary">Разрешить ограничения доступа к сети отдельных приложений</string>
+
 </resources>

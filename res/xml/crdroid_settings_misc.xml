@@ -116,6 +116,14 @@
             android:targetPackage="org.omnirom.omnijaws"
             android:targetClass="org.omnirom.omnijaws.SettingsActivity" />
     </Preference>
+RESTRICTED_NETWORKING_MODE
+
+    <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+        android:key="restricted_networking_mode"
+        android:icon="@drawable/ic_network"
+        android:title="@string/restricted_networking_mode_title"
+        android:summary="@string/restricted_networking_mode_summary"
+        android:defaultValue="true" />
 
     <ListPreference
  	    android:key="system_captive_portal"

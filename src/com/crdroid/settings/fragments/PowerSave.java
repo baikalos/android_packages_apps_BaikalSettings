@@ -105,8 +105,8 @@ public class PowerSave extends SettingsPreferenceFragment {
 
         if( !BaikalConstants.isKernelCompatible() ) {
             Log.e(TAG, "profiles : incompatible kernel");
-            thermProf = false;
-            perfProf = false;
+            //thermProf = false;
+            //perfProf = false;
             isKernelIncompatible = true;
         }
 
@@ -119,15 +119,18 @@ public class PowerSave extends SettingsPreferenceFragment {
 
         try {
             mAppFreezer = (SwitchPreference) findPreference(APP_FREEZER);
-            if( mAppFreezer != null && (!appFreezer || isKernelIncompatible) ) mAppFreezer.setVisible(false);
+            if( mAppFreezer != null && !appFreezer ) mAppFreezer.setVisible(false);
+            else if( isKernelIncompatible ) mAppFreezer.setEnabled(false);
 
             PreferenceScreen prefEditor = (PreferenceScreen) findPreference("baikalos_profile_editor");
-            if( prefEditor != null && isKernelIncompatible ) prefEditor.setVisible(false);
+            if( prefEditor != null && isKernelIncompatible ) prefEditor.setEnabled(false);
 
             mAppPerfProfile = (ListPreference) findPreference(APP_PROFILE_PERF);
             if( mAppPerfProfile != null ) { 
                 if(!perfProf) {
                     mAppPerfProfile.setVisible(false);
+                } else if( isKernelIncompatible ) {
+                    mAppPerfProfile.setEnabled(false);
                 } else {
                     int profile = Settings.Global.getInt(resolver,Settings.Global.BAIKALOS_DEFAULT_PERFORMANCE, -1);
                     if( profile == -1 ) profile = 7;
@@ -151,6 +154,8 @@ public class PowerSave extends SettingsPreferenceFragment {
             if( mAppThermProfile != null ) {
                 if(!thermProf) {
                     mAppThermProfile.setVisible(false);
+                } else if( isKernelIncompatible ) {
+                    mAppThermProfile.setEnabled(false);
                 } else {
                     int profile = Settings.Global.getInt(resolver,Settings.Global.BAIKALOS_DEFAULT_THERMAL, -1);
                     if( profile == -1 ) profile = 1;
@@ -174,6 +179,8 @@ public class PowerSave extends SettingsPreferenceFragment {
             if( mAppIdlePerfProfile != null ) { 
                 if(!perfProf) {
                     mAppIdlePerfProfile.setVisible(false);
+                } else if( isKernelIncompatible ) {
+                    mAppIdlePerfProfile.setEnabled(false);
                 } else {
                     int profile = Settings.Global.getInt(resolver,Settings.Global.BAIKALOS_DEFAULT_IDLE_PERFORMANCE, -1);
                     if( profile == -1 ) profile = 7;
@@ -197,6 +204,8 @@ public class PowerSave extends SettingsPreferenceFragment {
             if( mAppIdleThermProfile != null ) {
                 if(!thermProf) {
                     mAppIdleThermProfile.setVisible(false);
+                } else if( isKernelIncompatible ) {
+                    mAppIdleThermProfile.setEnabled(false);
                 } else {
                     int profile = Settings.Global.getInt(resolver,Settings.Global.BAIKALOS_DEFAULT_IDLE_THERMAL, -1);
                     if( profile == -1 ) profile = 1;

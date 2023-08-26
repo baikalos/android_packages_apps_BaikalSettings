@@ -75,11 +75,15 @@ public class Miscellaneous extends SettingsPreferenceFragment implements
         boolean mSmartChargingSupported = res.getBoolean(
                 com.android.internal.R.bool.config_bypassChargingAvailable);
 
-        if( !BaikalConstants.isKernelCompatible() ) mSmartChargingSupported = false;
+        //if( !BaikalConstants.isKernelCompatible() ) mSmartChargingSupported = false;
 
         if (!mSmartChargingSupported && mSmartCharging != null)
         if (!mSmartChargingSupported)
             prefScreen.removePreference(mSmartCharging);
+
+        if( !BaikalConstants.isKernelCompatible() ) {
+            mSmartCharging.setEnabled(false);
+        }
 
         mPocketJudge = (Preference) prefScreen.findPreference(POCKET_JUDGE);
         boolean mPocketJudgeSupported = res.getBoolean(

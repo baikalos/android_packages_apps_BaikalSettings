@@ -96,6 +96,9 @@
 
     <string name="background_blur_type_title">Blur type</string>
 
+    <string name="restricted_networking_mode_title">Restricted networking</string>
+    <string name="restricted_networking_mode_summary">Enable LineageOS options to control per-app networks access</string>
+
     <string name="disable_autorevoke_title">Disable Auto Revoke</string>
     <string name="disable_autorevoke_summary">Disable permissions auto revoke globally. Reboot required!</string>
 
