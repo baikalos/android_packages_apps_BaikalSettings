@@ -152,11 +152,33 @@
 
     </PreferenceCategory>
 
+
+    <PreferenceCategory
+        android:title="@string/profile_management_title">
+
+        <Preference
+            android:key="app_setings_backup"
+            android:title="@string/app_setings_backup_title"
+            android:summary="@string/app_setings_backup_summary" />
+
+        <Preference
+            android:key="app_setings_restore"
+            android:title="@string/app_setings_restore_title"
+            android:summary="@string/app_setings_restore_summary" />
+
+        <Preference
+            android:key="app_setings_reset"
+            android:title="@string/app_setings_reset_title"
+            android:summary="@string/app_setings_reset_summary" />
+
+    </PreferenceCategory>
+
         <PreferenceScreen
             android:key="baikalos_profile_editor"
             android:title="@string/baikalos_profile_edit_title"
             android:summary="@string/baikalos_profile_edit_summary"
             android:fragment="com.crdroid.settings.fragments.PerformanceProfileEditor" />
+
 
         <!-- com.crdroid.settings.preferences.GlobalSettingSwitchPreference
             android:key="baikalos_extreme_idle"

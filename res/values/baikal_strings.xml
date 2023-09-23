@@ -160,6 +160,11 @@
     <string name="app_profile_heavy_cpu_title">Heavy CPU</string>
     <string name="app_profile_heavy_cpu_summary">This app uses a lot of CPU. Drop down priority of any background app.</string>
 
+    <string name="purge_package_cache_title">Purge package cache</string>
+    <string name="purge_package_cache_summary">Purge package cache on next system boot</string>
+
+    <string name="profile_management_title">Manage App Profiles</string>
+
     <string name="baikalos_little_freq_max_title">Little cluster max freq</string>
     <string name="baikalos_little_freq_min_title">Little cluster min freq</string>
 
@@ -181,5 +186,6 @@
     <string name="baikalos_little_core_ctl_title">Little cluster core control</string>
     <string name="baikalos_big_core_ctl_title">Big cluster core control</string>
     <string name="baikalos_plus_core_ctl_title">Big+ core control</string>
+
 
 </resources>

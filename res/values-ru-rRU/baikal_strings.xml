@@ -138,4 +138,9 @@
     <string name="restricted_networking_mode_title">Ограничения сети</string>
     <string name="restricted_networking_mode_summary">Разрешить ограничения доступа к сети отдельных приложений</string>
 
+    <string name="purge_package_cache_title">Очистить кеш пакетов</string>
+    <string name="purge_package_cache_summary">Очистить кеш пакетов установленных приложений при следующей загрузке</string>
+
+    <string name="profile_management_title">Профили Приложений</string>
+
 </resources>

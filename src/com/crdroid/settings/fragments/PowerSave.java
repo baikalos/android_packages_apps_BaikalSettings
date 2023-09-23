@@ -36,7 +36,13 @@ import android.provider.Settings;
 import android.view.View;
 import android.util.Log;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+
 import android.content.res.Resources;
+
+import android.baikalos.AppProfile;
+import com.android.internal.baikalos.AppProfileSettings;
 
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.internal.util.crdroid.Utils;
@@ -79,6 +85,10 @@ public class PowerSave extends SettingsPreferenceFragment {
     private ListPreference mPowersaverStandby;
     private ListPreference mPowersaverIdle;
 
+    private Preference mBackup;
+    private Preference mRestore;
+    private Preference mReset;
+
     private Context mContext;
 
     private boolean isKernelIncompatible = false;
@@ -95,6 +105,8 @@ public class PowerSave extends SettingsPreferenceFragment {
         boolean perfProf  = (perfProfiles !=null && perfProfiles.length > 1);
         boolean thermProf  = (thermProfiles !=null && thermProfiles.length > 1);
         boolean appFreezer = false;
+
+
 
         try {
              appFreezer = ActivityManager.getService().isAppFreezerSupported();
@@ -116,6 +128,11 @@ public class PowerSave extends SettingsPreferenceFragment {
         final Resources res = getActivity().getResources();
 
         final PreferenceScreen screen = getPreferenceScreen();
+
+        mBackup = (Preference) findPreference("app_setings_backup");
+        mRestore = (Preference) findPreference("app_setings_restore");
+        mReset = (Preference) findPreference("app_setings_reset");
+
 
         try {
             mAppFreezer = (SwitchPreference) findPreference(APP_FREEZER);
@@ -313,8 +330,73 @@ public class PowerSave extends SettingsPreferenceFragment {
         SystemProperties.set(key, text);
     }
 
+    @Override
+    public boolean onPreferenceTreeClick(Preference preference) {
+        Log.e(TAG, "onPreferenceTreeClick: preference=" + preference);
+        if (preference == mBackup) {
+            profileBackup();
+            return true;
+        } else if (preference == mRestore) {
+            profileRestore();
+            return true;
+        } else if (preference == mReset) {
+            profileReset();
+            return true;
+        } else {
+            Log.e(TAG, "onPreferenceTreeClick: not profile management preference: mBackup=" + mBackup + ", mRestore=" + mRestore + ", mReset=" + mReset);
+            return super.onPreferenceTreeClick(preference);
+        }
+    }
+
+    public void profileBackup() {
+        Log.e(TAG, "profileBackup");
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        builder.setTitle(R.string.app_setings_backup_title);
+        builder.setMessage(R.string.app_setings_backup_summary);
+        builder.setPositiveButton(R.string.app_setings_backup_ok, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface arg0, int arg1) {
+                AppProfileSettings.saveBackup(PowerSave.this.getActivity().getContentResolver());
+            }
+        });
+
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
+    }
+
+    public void profileRestore() {
+        Log.e(TAG, "profileRestore");
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        builder.setTitle(R.string.app_setings_restore_title);
+        builder.setMessage(R.string.app_setings_restore_summary);
+        builder.setPositiveButton(R.string.app_setings_restore_ok, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface arg0, int arg1) {
+                AppProfileSettings.restoreBackup(PowerSave.this.getActivity().getContentResolver());
+            }
+        });
+
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
+    }
+
+    public void profileReset() {
+        Log.e(TAG, "profileReset");
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        builder.setTitle(R.string.app_setings_reset_title);
+        builder.setMessage(R.string.app_setings_reset_summary);
+        builder.setPositiveButton(R.string.app_setings_reset_ok, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface arg0, int arg1) {
+                AppProfileSettings.resetAll(PowerSave.this.getActivity().getContentResolver());
+            }
+        });
+
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
+    }
+
     public static void reset(Context mContext) {
-        
     }
 
     @Override

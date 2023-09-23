@@ -155,4 +155,11 @@ RESTRICTED_NETWORKING_MODE
         android:summary="@string/disable_autorevoke_summary"
         android:defaultValue="false" />
 
+    <com.crdroid.settings.preferences.SystemPropertySwitchPreference
+        android:key="persist.baikal.purge_package_cache"
+        android:icon="@drawable/ic_storage"
+        android:title="@string/purge_package_cache_title"
+        android:summary="@string/purge_package_cache_summary"
+        android:defaultValue="false" />
+
 </PreferenceScreen>
