@@ -130,6 +130,13 @@
         android:summary="@string/floating_rotation_button_summary"
         android:defaultValue="true" />
 
+    <com.crdroid.settings.preferences.SystemPropertySwitchPreference
+        android:key="persist.flags.new_back_affordance"
+        android:icon="@drawable/ic_gesture_play_button"
+        android:title="@string/ui_use_new_back_gesturu_title"
+        android:summary="@string/ui_use_new_back_gesturu_summary"
+        android:defaultValue="false" />
+
     <!-- com.crdroid.settings.preferences.SystemSettingSeekBarPreference
         android:key="background_blur_radius"
         android:icon="@drawable/ic_blur"

@@ -163,6 +163,9 @@
     <string name="purge_package_cache_title">Purge package cache</string>
     <string name="purge_package_cache_summary">Purge package cache on next system boot</string>
 
+    <string name="ui_use_new_back_gesturu_title">Back gesture UI</string>
+    <string name="ui_use_new_back_gesturu_summary">Use new back gesture UI</string>
+
     <string name="profile_management_title">Manage App Profiles</string>
 
     <string name="baikalos_little_freq_max_title">Little cluster max freq</string>
