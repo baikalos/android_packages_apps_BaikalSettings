@@ -171,6 +171,8 @@
     	<item>Pixel 5</item>                <!-- 8 -->
     	<item>Pixel 6 Pro</item>            <!-- 17 -->
     	<item>Pixel 7 Pro</item>           <!-- 24 -->
+    	<item>Pixel Tablet</item>           <!-- 31 -->
+    	<item>Pixel Fold</item>           <!-- 32 -->
     	<item>OnePlus 8T</item>             <!-- 10 -->
     	<item>OnePlus 8 Pro</item>          <!-- 11 -->
     	<item>OnePlus 9R</item>          <!-- 28 -->
@@ -205,6 +207,8 @@
     	<item>8</item>
     	<item>17</item>
     	<item>24</item>
+    	<item>31</item>
+    	<item>32</item>
     	<item>10</item>
     	<item>11</item>
     	<item>28</item>
