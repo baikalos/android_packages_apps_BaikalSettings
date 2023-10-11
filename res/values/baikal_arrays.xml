@@ -55,6 +55,17 @@
         <item>2</item>
     </string-array>
 
+    <string-array name="app_sonif_a2dp_listentries" translatable="false">
+        <item>@string/sonif_a2dp_default</item>
+        <item>@string/sonif_a2dp_force_speaker</item>
+    </string-array>
+
+
+    <string-array name="app_sonif_a2dp_listvalues" translatable="false">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
     <string-array name="brightness_curve_entries">
     	<item>@string/brightness_curve_default</item>
     	<item>@string/brightness_curve_darker</item>
