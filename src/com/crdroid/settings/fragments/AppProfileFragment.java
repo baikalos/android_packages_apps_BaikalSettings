@@ -89,6 +89,7 @@ public class AppProfileFragment extends SettingsPreferenceFragment
     private static final String APP_PROFILE_ROTATION = "app_profile_rotation";
     private static final String APP_PROFILE_MAX_FPS = "app_profile_max_fps";
     private static final String APP_PROFILE_MIN_FPS = "app_profile_min_fps";
+    private static final String APP_PROFILE_READER = "app_profile_reader";
     private static final String APP_PROFILE_KEEP_ON = "app_profile_keep_on";
     private static final String APP_PROFILE_FULL_SCREEN = "app_profile_full_screen";
     private static final String APP_PROFILE_OVERRIDE_FONTS = "app_profile_override_fonts";
@@ -631,6 +632,26 @@ public class AppProfileFragment extends SettingsPreferenceFragment
                     }
                 });
             }
+
+            mAppReader = (SwitchPreference) findPreference(APP_PROFILE_READER);
+            if( mAppReader != null ) {
+                mAppReader.setChecked(mProfile.mReader);
+                Log.e(TAG, "mAppReader: mPackageName=" + mPackageName + ",mReader=" + mProfile.mReader);
+                mAppReader.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                    public boolean onPreferenceChange(Preference preference, Object newValue) {
+                        try {
+                            mProfile.mReader = ((Boolean)newValue);
+                            mAppSettings.updateProfile(mProfile);
+                            mAppSettings.save();
+                            Log.e(TAG, "mAppReader: mPackageName=" + mPackageName + ",mReader=" + (Boolean)newValue);
+                        } catch(Exception re) {
+                            Log.e(TAG, "onCreate: mAppReader Fatal! exception", re );
+                        }
+                        return true;
+                    }
+                });
+            }
+
 
             mAppFullScreen = (SwitchPreference) findPreference(APP_PROFILE_FULL_SCREEN);
             if( mAppFullScreen != null ) {

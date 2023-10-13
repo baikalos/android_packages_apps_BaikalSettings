@@ -161,6 +161,12 @@
             android:defaultValue="false" / -->
 
         <SwitchPreference
+            android:key="app_profile_reader"
+            android:title="@string/app_profile_reader_title"
+            android:summary="@string/app_profile_reader_summary"
+            android:persistent="false" />
+
+        <SwitchPreference
             android:key="app_profile_keep_on"
             android:title="@string/app_profile_keep_on_title"
             android:summary="@string/app_profile_keep_on_summary"
@@ -231,11 +237,6 @@
             android:persistent="false" />
 
 
-        <!-- SwitchPreference
-            android:key="app_profile_reader"
-            android:title="@string/app_profile_reader_title"
-            android:summary="@string/app_profile_reader_summary"
-            android:persistent="false" / -->
 
         <SwitchPreference
             android:key="app_profile_forced_screenshot"

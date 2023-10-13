@@ -102,6 +102,8 @@ public class PowerSave extends SettingsPreferenceFragment {
         String[] perfProfiles = getResources().getStringArray(R.array.performance_listvalues);
         String[] thermProfiles = getResources().getStringArray(R.array.thermal_listvalues);
 
+
+
         boolean perfProf  = (perfProfiles !=null && perfProfiles.length > 1);
         boolean thermProf  = (thermProfiles !=null && thermProfiles.length > 1);
         boolean appFreezer = false;
@@ -127,6 +129,10 @@ public class PowerSave extends SettingsPreferenceFragment {
         mContext = (Context) getActivity();
         final Resources res = getActivity().getResources();
 
+        boolean isSuperSaverAvailable = mContext.getResources().
+                getBoolean(com.android.internal.R.bool.config_superSaverAvailable);
+
+
         final PreferenceScreen screen = getPreferenceScreen();
 
         mBackup = (Preference) findPreference("app_setings_backup");
@@ -135,6 +141,12 @@ public class PowerSave extends SettingsPreferenceFragment {
 
 
         try {
+
+            if( !isSuperSaverAvailable ) {
+                SwitchPreference superSaver = (SwitchPreference) findPreference("baikalos_super_saver");
+                if( superSaver != null ) superSaver.setVisible(false);
+            }
+
             mAppFreezer = (SwitchPreference) findPreference(APP_FREEZER);
             if( mAppFreezer != null && !appFreezer ) mAppFreezer.setVisible(false);
             else if( isKernelIncompatible ) mAppFreezer.setEnabled(false);

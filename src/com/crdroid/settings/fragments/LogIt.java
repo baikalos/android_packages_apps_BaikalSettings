@@ -133,6 +133,7 @@ public class LogIt extends SettingsPreferenceFragment implements Preference.OnPr
 
     SwitchPreference mDEBUG_MASK_POWER;
     SwitchPreference mDEBUG_MASK_JOBS;
+    SwitchPreference mDEBUG_MASK_WAKELOCKS;
 
     private String sharingIntentString;
 
@@ -200,6 +201,7 @@ public class LogIt extends SettingsPreferenceFragment implements Preference.OnPr
             mDEBUG_MASK_POWERHAL=initDebugPref("BAIKAL_DEBUG_POWERHAL", BaikalConstants.DEBUG_MASK_POWERHAL);
             mDEBUG_MASK_POWER=initDebugPref("BAIKAL_DEBUG_POWER", BaikalConstants.DEBUG_MASK_POWER);
             mDEBUG_MASK_JOBS=initDebugPref("BAIKAL_DEBUG_JOBS", BaikalConstants.DEBUG_MASK_JOBS);
+            mDEBUG_MASK_WAKELOCKS=initDebugPref("BAIKAL_DEBUG_WAKELOCKS", BaikalConstants.DEBUG_MASK_WAKELOCKS);
         } catch(Exception re) {
             Log.e(TAG, "onCreate: Fatal! exception", re );
         }

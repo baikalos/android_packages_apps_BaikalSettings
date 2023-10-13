@@ -160,4 +160,9 @@
             android:title="Jobs"
             android:defaultValue="false" />
 
+        <SwitchPreference
+            android:key="baikal_debug_wakelocks"
+            android:title="Wakelocks"
+            android:defaultValue="false" />
+
 </PreferenceScreen>

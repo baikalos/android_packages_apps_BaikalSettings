@@ -101,6 +101,14 @@
         />
 
         <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+            android:key="baikalos_super_saver"
+            android:defaultValue="false"
+            android:title="@string/baikalos_super_saver_title"
+            android:summary="@string/baikalos_super_saver_summary"
+        />
+
+
+        <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
             android:key="cached_apps_freezer"
             android:defaultValue="true"
             android:title="@string/baikalos_freeze_cached_title"
@@ -112,7 +120,6 @@
             android:defaultValue="false"
             android:title="@string/baikalos_kill_in_background_title"
             android:summary="@string/baikalos_kill_in_background_summary"
-            android:dependency="baikalos_aggressive_idle"
         />
 
         <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
