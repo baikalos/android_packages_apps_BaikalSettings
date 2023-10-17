@@ -74,7 +74,7 @@
 
     <string name="app_profile_disable_twl_title">Отключить временный белый список</string>
     <string name="app_profile_disable_twl_summary">Не помещать приложение в белый список по получению уведомлений для экономии энергии</string>
-    <string name="app_profile_reader_title">Режим чтения</string>
+    <string name="app_profile_reader_title">Супер Сберегалка</string>
     <string name="app_profile_reader_summary">Разрешить ЦП переходить в режим глубокого сна во время работы этого приложения</string>
 
     <string name="app_profile_max_fps_title">Максимальная частота обновления экрана</string>
@@ -229,5 +229,9 @@
 
     <string name="app_profile_debug_title">Отладка</string>
     <string name="app_profile_debug_summary">Включить подробный лог для приложения. Не включайте без причины. Расходует ресурсы, увеличивает потребление.</string>
+
+    <string name="super_saver_default">По умолчанию</string>
+    <string name="super_saver_disabled">Запрещен</string>
+    <string name="super_saver_forced">Включен</string>
 
 </resources>

@@ -322,4 +322,16 @@
     	<item>"ru"</item>
     </string-array>
 
+    <string-array name="super_saver_listentries">
+    	<item>@string/super_saver_default</item>
+    	<item>@string/super_saver_disabled</item>
+    	<item>@string/super_saver_forced</item>
+    </string-array>
+
+    <string-array name="super_saver_listvalues">
+    	<item>0</item>
+    	<item>-1</item>
+    	<item>1</item>
+    </string-array>
+
 </resources>

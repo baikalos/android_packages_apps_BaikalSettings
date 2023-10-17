@@ -134,7 +134,6 @@ public class AppProfileFragment extends SettingsPreferenceFragment
     private Context mContext;
 
     private SwitchPreference mAppDebug;
-    private SwitchPreference mAppReader;
     private SwitchPreference mAppPinned;
     private SwitchPreference mAppDoNotClose;
     private SwitchPreference mAppFreezer;
@@ -158,6 +157,7 @@ public class AppProfileFragment extends SettingsPreferenceFragment
     private SwitchPreference mAppAllowIdleNetwork;
     private SwitchPreference mAppForcedScreenshot;
 
+    private ListPreference mAppReader;
     private ListPreference mForceSonification;
     private ListPreference mAppPerfProfile;
     private ListPreference mAppThermProfile;
@@ -208,6 +208,10 @@ public class AppProfileFragment extends SettingsPreferenceFragment
         String[] thermProfiles = getResources().getStringArray(R.array.thermal_listvalues);
         String[] refreshRates = getResources().getStringArray(R.array.max_fps_listvalues);
         String[] cpuLimits = getResources().getStringArray(R.array.cpu_resources_listentries);
+
+        boolean isSuperSaverAvailable = getResources().
+                getBoolean(com.android.internal.R.bool.config_superSaverAvailable);
+
 
         boolean perfProf  = (perfProfiles !=null && perfProfiles.length > 1);
         boolean thermProf  = (thermProfiles !=null && thermProfiles.length > 1);
@@ -633,23 +637,30 @@ public class AppProfileFragment extends SettingsPreferenceFragment
                 });
             }
 
-            mAppReader = (SwitchPreference) findPreference(APP_PROFILE_READER);
+            mAppReader = (ListPreference) findPreference(APP_PROFILE_READER);
+
             if( mAppReader != null ) {
-                mAppReader.setChecked(mProfile.mReader);
-                Log.e(TAG, "mAppReader: mPackageName=" + mPackageName + ",mReader=" + mProfile.mReader);
-                mAppReader.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
-                    public boolean onPreferenceChange(Preference preference, Object newValue) {
-                        try {
-                            mProfile.mReader = ((Boolean)newValue);
-                            mAppSettings.updateProfile(mProfile);
-                            mAppSettings.save();
-                            Log.e(TAG, "mAppReader: mPackageName=" + mPackageName + ",mReader=" + (Boolean)newValue);
-                        } catch(Exception re) {
-                            Log.e(TAG, "onCreate: mAppReader Fatal! exception", re );
+
+                if( !isSuperSaverAvailable ) {
+                    mAppReader.setVisible(false);
+                } else {
+                    mAppReader.setValue(Integer.toString(mProfile.mReader));
+                    Log.e(TAG, "mAppReader: mPackageName=" + mPackageName + ",mReader=" + mProfile.mReader);
+                    mAppReader.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                        public boolean onPreferenceChange(Preference preference, Object newValue) {
+                            try {
+                                int val = Integer.parseInt(newValue.toString());
+                                mProfile.mReader = val;
+                                mAppSettings.updateProfile(mProfile);
+                                mAppSettings.save();
+                                Log.e(TAG, "mAppReader: mPackageName=" + mPackageName + ",mReader=" + val);
+                            } catch(Exception re) {
+                                Log.e(TAG, "onCreate: mAppReader Fatal! exception", re );
+                            }
+                            return true;
                         }
-                        return true;
-                    }
-                });
+                    });
+                }
             }
 
 

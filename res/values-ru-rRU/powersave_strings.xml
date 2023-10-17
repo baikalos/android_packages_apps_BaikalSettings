@@ -8,7 +8,7 @@
     <string name="baikalos_aggressive_idle_summary">Включить энергосбережение BaikalOS.</string>
 
     <string name="baikalos_super_saver_title">Супер Сберегалка</string>
-    <string name="baikalos_super_saver_summary">Не сообщайте о лагах в этом режиме! Они тут по дизайну.</string>
+    <string name="baikalos_super_saver_summary">Резрешать переводить ЦПУ в режим глубокого сна при включенном экране. Не сообщайте о лагах в этом режиме! Они тут по дизайну.</string>
 
     <string name="baikalos_extreme_idle_title">Агрессивный режим</string>
     <string name="baikalos_extreme_idle_summary">Агрессивно ограничивать фоновую активность.</string>

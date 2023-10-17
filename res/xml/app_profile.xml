@@ -160,10 +160,13 @@
             android:summary="@string/app_profile_require_gms_summary"
             android:defaultValue="false" / -->
 
-        <SwitchPreference
+        <ListPreference
             android:key="app_profile_reader"
             android:title="@string/app_profile_reader_title"
             android:summary="@string/app_profile_reader_summary"
+            android:entries="@array/super_saver_listentries"
+            android:entryValues="@array/super_saver_listvalues"
+            android:defaultValue="0"
             android:persistent="false" />
 
         <SwitchPreference

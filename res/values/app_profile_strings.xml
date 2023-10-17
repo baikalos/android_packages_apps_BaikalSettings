@@ -96,8 +96,8 @@
     <string name="app_profile_disable_twl_title">Disable temp whitelisting</string>
     <string name="app_profile_disable_twl_summary">Disable temp whitelisting on incoming notifications</string>
 
-    <string name="app_profile_reader_title">Reader Mode</string>
-    <string name="app_profile_reader_summary">Allow CPU to sleep while this app is running</string>
+    <string name="app_profile_reader_title">Super Saver</string>
+    <string name="app_profile_reader_summary">Allow the system to go into deep sleep while this app is running</string>
 
     <string name="app_profile_max_fps_title">Maximum Refresh Rate</string>
     <string name="app_profile_min_fps_title">Minimum Refresh Rate</string>
@@ -268,5 +268,9 @@
 
     <string name="app_profile_debug_title">Debug</string>
     <string name="app_profile_debug_summary">Enable verbose debug logging for the app. Do not enable without a reason. It will significantly hit the performance.</string>
+
+    <string name="super_saver_default">Default</string>
+    <string name="super_saver_disabled">Disabled</string>
+    <string name="super_saver_forced">Forced</string>
 
 </resources>
