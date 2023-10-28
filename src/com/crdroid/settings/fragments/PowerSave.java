@@ -145,6 +145,8 @@ public class PowerSave extends SettingsPreferenceFragment {
             if( !isSuperSaverAvailable ) {
                 SwitchPreference superSaver = (SwitchPreference) findPreference("baikalos_super_saver");
                 if( superSaver != null ) superSaver.setVisible(false);
+                SwitchPreference superSaverDraw = (SwitchPreference) findPreference("baikalos_super_saver_draw");
+                if( superSaverDraw != null ) superSaver.setVisible(false);
             }
 
             mAppFreezer = (SwitchPreference) findPreference(APP_FREEZER);

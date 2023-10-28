@@ -10,6 +10,8 @@
     <string name="baikalos_super_saver_title">Super Saver</string>
     <string name="baikalos_super_saver_summary">Allow the system to go into deep sleep with screen on. Do not report lags in this mode! It\'s by design</string>
 
+    <string name="baikalos_super_saver_draw_title">Disable on Draw</string>
+    <string name="baikalos_super_saver_draw_summary">Disable Super Saver on frame draw</string>
 
     <string name="baikalos_extreme_idle_title">Aggressive Mode</string>
     <string name="baikalos_extreme_idle_summary">Aggressively restrict background processes.</string>

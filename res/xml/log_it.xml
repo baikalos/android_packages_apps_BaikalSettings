@@ -47,6 +47,11 @@
         android:title="@string/dmesg_title"
         android:defaultValue="false" />
 
+    <CheckBoxPreference
+        android:key="dumpsys"
+        android:title="@string/dumpsys_title"
+        android:defaultValue="false" />
+
     <Preference
         android:key="baikalos_log_it_now"
         android:title="@string/log_it_now_title"

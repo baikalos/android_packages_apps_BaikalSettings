@@ -70,6 +70,7 @@ public class LogIt extends SettingsPreferenceFragment implements Preference.OnPr
     private static final String PREF_LOGCAT_RADIO = "logcat_radio";
     private static final String PREF_KMSG = "kmseg";
     private static final String PREF_DMESG = "dmesg";
+    private static final String PREF_DUMPSYS = "dumpsys";
     private static final String PREF_BAIKALOS_LOG_IT = "baikalos_log_it_now";
     private static final String PREF_SHARE_TYPE = "baikalos_log_share_type";
 
@@ -80,12 +81,14 @@ public class LogIt extends SettingsPreferenceFragment implements Preference.OnPr
     private static final String LOGCAT_RADIO_FILE = new File(BAIKALOS_ROOT, "baikalos_radiolog.txt").getAbsolutePath();
     private static final String KMSG_FILE = new File(BAIKALOS_ROOT, "baikalos_kmsg.txt").getAbsolutePath();
     private static final String DMESG_FILE = new File(BAIKALOS_ROOT, "baikalos_dmesg.txt").getAbsolutePath();
+    private static final String DUMPSYS_FILE = new File(BAIKALOS_ROOT, "baikalos_dumpsys.txt").getAbsolutePath();
 
     private static final String HASTE_LOGCAT_KEY = new File(BAIKALOS_ROOT, "baikalos_haste_logcat_key").getAbsolutePath();
     private static final String HASTE_LOGCAT_LAST_KEY = new File(BAIKALOS_ROOT, "baikalos_haste_logcat_last_key").getAbsolutePath();
     private static final String HASTE_LOGCAT_RADIO_KEY = new File(BAIKALOS_ROOT, "baikalos_haste_logcat_radio_key").getAbsolutePath();
     private static final String HASTE_KMSG_KEY = new File(BAIKALOS_ROOT, "baikalos_haste_kmsg_key").getAbsolutePath();
     private static final String HASTE_DMESG_KEY = new File(BAIKALOS_ROOT, "baikalos_haste_dmesg_key").getAbsolutePath();
+    private static final String HASTE_DUMPSYS_KEY = new File(BAIKALOS_ROOT, "baikalos_haste_dumpsys_key").getAbsolutePath();
 
     private static final String BAIKALOS_HASTE = "https://hastebin.com/documents";
     //private static final File sdCardDirectory = Environment.getExternalStorageDirectory();
@@ -96,7 +99,9 @@ public class LogIt extends SettingsPreferenceFragment implements Preference.OnPr
     private static final File logcatRadioFile = new File(BAIKALOS_ROOT, "baikalos_radiolog.txt");
     private static final File logcatRadioHasteKey = new File(BAIKALOS_ROOT, "baikalos_haste_logcat_radio_key");
     private static final File dmesgFile = new File(BAIKALOS_ROOT, "baikalos_dmesg.txt");
+    private static final File dumpsysFile = new File(BAIKALOS_ROOT, "baikalos_dumpsys.txt");
     private static final File dmesgHasteKey = new File(BAIKALOS_ROOT, "baikalos_haste_dmesg_key");
+    private static final File dumpsysHasteKey = new File(BAIKALOS_ROOT, "baikalos_haste_dumpsys_key");
     private static final File kmsgFile = new File(BAIKALOS_ROOT, "baikalos_kmsg.txt");
     private static final File kmsgHasteKey = new File(BAIKALOS_ROOT, "baikalos_haste_kmsg_key");
     private static final File shareZipFile = new File(BAIKALOS_ROOT, "baikalos_logs.zip");
@@ -107,6 +112,7 @@ public class LogIt extends SettingsPreferenceFragment implements Preference.OnPr
     private CheckBoxPreference mLogcatRadio;
     private CheckBoxPreference mKmsg;
     private CheckBoxPreference mDmesg;
+    private CheckBoxPreference mDumpsys;
     private Preference mBaikalOSLogIt;
     private ListPreference mShareType;
 
@@ -170,6 +176,8 @@ public class LogIt extends SettingsPreferenceFragment implements Preference.OnPr
         mKmsg.setOnPreferenceChangeListener(this);
         mDmesg = (CheckBoxPreference) findPreference(PREF_DMESG);
         mDmesg.setOnPreferenceChangeListener(this);
+        mDumpsys = (CheckBoxPreference) findPreference(PREF_DUMPSYS);
+        mDumpsys.setOnPreferenceChangeListener(this);
         mBaikalOSLogIt = findPreference(PREF_BAIKALOS_LOG_IT);
         mShareType = (ListPreference) findPreference(PREF_SHARE_TYPE);
         mShareType.setOnPreferenceChangeListener(this);
@@ -239,7 +247,8 @@ public class LogIt extends SettingsPreferenceFragment implements Preference.OnPr
         if (preference == mLogcat
             || preference == mLogcatRadio
             || preference == mKmsg
-            || preference == mDmesg) {
+            || preference == mDmesg 
+            || preference == mDumpsys) {
             updateEnabledState((CheckBoxPreference) preference, (Boolean) newValue);
             return true;
         } else if (preference == mShareType) {
@@ -263,7 +272,7 @@ public class LogIt extends SettingsPreferenceFragment implements Preference.OnPr
     }
 
     protected void updateEnabledState(CheckBoxPreference changedPref, boolean newValue) {
-        final CheckBoxPreference logSelectors[] = {mLogcat, mLogcatRadio, mKmsg, mDmesg,};
+        final CheckBoxPreference logSelectors[] = {mLogcat, mLogcatRadio, mKmsg, mDmesg, mDumpsys,};
         boolean enabled = newValue;
         // Enabled if any checkbox is checked
         if (!enabled) {
@@ -285,7 +294,7 @@ public class LogIt extends SettingsPreferenceFragment implements Preference.OnPr
     public boolean onPreferenceTreeClick(Preference preference) {
         if (preference == mBaikalOSLogIt) {
             new CreateLogTask().execute(mLogcat.isChecked(), mLogcatRadio.isChecked(),
-                    mKmsg.isChecked(), mDmesg.isChecked());
+                    mKmsg.isChecked(), mDmesg.isChecked(), mDumpsys.isChecked());
             return true;
         } else {
             return super.onPreferenceTreeClick(preference);
@@ -424,7 +433,36 @@ public class LogIt extends SettingsPreferenceFragment implements Preference.OnPr
         SuShell.runWithShellCheck(command);
     }
 
-    private void createShareZip(boolean logcat, boolean logcatRadio, boolean kmsg, boolean dmesg)
+    public void makeDumpsys() throws SuShell.SuDeniedException, IOException {
+
+        if( shareHaste ) return; // we do not support dumpsys on haste
+
+        String rmCommand = "rm " + DUMPSYS_FILE;
+        SuShell.runWithShellCheck(rmCommand);
+
+        String command = "dumpsys power";
+        command += " > " + DUMPSYS_FILE;
+        SuShell.runWithShellCheck(command);
+
+        command = "dumpsys suspend_control_internal -a";
+        command += " >> " + DUMPSYS_FILE;
+        SuShell.runWithShellCheck(command);
+
+        command = "dumpsys alarm";
+        command += " >> " + DUMPSYS_FILE;
+        SuShell.runWithShellCheck(command);
+
+        command = "dumpsys battery";
+        command += " >> " + DUMPSYS_FILE;
+        SuShell.runWithShellCheck(command);
+
+        command = "dumpsys batterystats";
+        command += " >> " + DUMPSYS_FILE;
+        SuShell.runWithShellCheck(command);
+
+    }
+
+    private void createShareZip(boolean logcat, boolean logcatRadio, boolean kmsg, boolean dmesg, boolean dumpsys)
                                 throws IOException {
 
         ZipOutputStream out = null;
@@ -445,6 +483,9 @@ public class LogIt extends SettingsPreferenceFragment implements Preference.OnPr
             }
             if (kmsg) {
                 writeToZip(kmsgFile, out);
+            }
+            if (dumpsys) {
+                writeToZip(dumpsysFile, out);
             }
         } finally {
             if (out != null) out.close();
@@ -483,7 +524,7 @@ public class LogIt extends SettingsPreferenceFragment implements Preference.OnPr
         @Override
         protected String doInBackground(Boolean... params) {
             String sharingIntentString = "";
-            if (params.length != 4) {
+            if (params.length != 5) {
                 Log.e(TAG, "CreateLogTask: invalid argument count");
                 return sharingIntentString;
             }
@@ -521,8 +562,11 @@ public class LogIt extends SettingsPreferenceFragment implements Preference.OnPr
                                 Util.readStringFromFile(dmesgHasteKey);
                     }
                 }
+                if (params[4]) {
+                    makeDumpsys();
+                }
                 if (shareZip) {
-                    createShareZip(params[0], params[1], params[2], params[3]);
+                    createShareZip(params[0], params[1], params[2], params[3], params[4]);
                 }
             } catch (SuShell.SuDeniedException e) {
                 mException = e;
@@ -552,6 +596,7 @@ public class LogIt extends SettingsPreferenceFragment implements Preference.OnPr
         mLogcatRadio.setChecked(false);
         mKmsg.setChecked(false);
         mDmesg.setChecked(false);
+        mDumpsys.setChecked(false);
         mBaikalOSLogIt.setEnabled(false);
         mShareType.setValue("1");
         mShareType.setSummary(mShareType.getEntry());

@@ -2,12 +2,13 @@
 <resources>
 
     <string name="log_it_title">Save Logs</string>
-    <string name="log_it_summary">Logcat, kmesg, dmesg</string>
+    <string name="log_it_summary">Logcat, kmesg, dmesg, dumpsys</string>
 
     <string name="logcat_title">Logcat</string>
     <string name="logcat_radio_title">Radio log</string>
     <string name="kmesg_title">Kmesg</string>
     <string name="dmesg_title">Dmesg</string>
+    <string name="dumpsys_title">Dumpsys</string>
     <string name="log_it_now_title">Save</string>
     <string name="log_it_dialog_title">Save</string>
     <string name="logcat_warning">Share it</string>
@@ -183,12 +184,12 @@
 
     <string name="baikalos_task_boost_title">Task boost</string>
     <string name="baikalos_silver_boost_title">Little cluster boost</string>
-    <string name="baikalos_gold_boost_title">Big cluster boost boost</string>
-    <string name="baikalos_plus_boost_title">Big+ core boost</string>
+    <string name="baikalos_gold_boost_title">Big cluster boost</string>
+    <string name="baikalos_plus_boost_title">Big+ cluster boost</string>
 
     <string name="baikalos_little_core_ctl_title">Little cluster core control</string>
     <string name="baikalos_big_core_ctl_title">Big cluster core control</string>
-    <string name="baikalos_plus_core_ctl_title">Big+ core control</string>
+    <string name="baikalos_plus_core_ctl_title">Big+ cluster core control</string>
 
 
 </resources>
