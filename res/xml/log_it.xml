@@ -170,4 +170,9 @@
             android:title="Wakelocks"
             android:defaultValue="false" />
 
+        <SwitchPreference
+            android:key="baikal_debug_idle"
+            android:title="Device Idle"
+            android:defaultValue="false" />
+
 </PreferenceScreen>

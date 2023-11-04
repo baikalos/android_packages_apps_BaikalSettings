@@ -234,4 +234,7 @@
     <string name="super_saver_disabled">Запрещен</string>
     <string name="super_saver_forced">Включен</string>
 
+    <string name="app_profile_block_overlays_title">Блокировать Инфопанели</string>
+    <string name="app_profile_block_overlays_summary">Блокировать наэкранные инфопанели (CPU, FPS инфо)</string>
+
 </resources>

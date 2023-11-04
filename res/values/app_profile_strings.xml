@@ -273,4 +273,7 @@
     <string name="super_saver_disabled">Disabled</string>
     <string name="super_saver_forced">Forced</string>
 
+    <string name="app_profile_block_overlays_title">Block Overlays</string>
+    <string name="app_profile_block_overlays_summary">Don\'t show onscreen overlays (CPU, FPS info)</string>
+
 </resources>

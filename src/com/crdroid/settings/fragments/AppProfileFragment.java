@@ -103,6 +103,7 @@ public class AppProfileFragment extends SettingsPreferenceFragment
     private static final String APP_PROFILE_FREEZER = "app_profile_freezer";
     private static final String APP_PROFILE_HEAVY_MEMORY = "app_profile_heavy_memory";
     private static final String APP_PROFILE_HEAVY_CPU = "app_profile_heavy_cpu";
+    private static final String APP_PROFILE_BLOCK_OVERLAYS = "app_profile_block_overlays";
 //    private static final String APP_PROFILE_DISABLE_TWL = "app_profile_disable_twl";
     private static final String VOLUME_SCALE = "app_profile_volume_scale";
 
@@ -156,6 +157,7 @@ public class AppProfileFragment extends SettingsPreferenceFragment
     private SwitchPreference mAppDevModeProfile;
     private SwitchPreference mAppAllowIdleNetwork;
     private SwitchPreference mAppForcedScreenshot;
+    private SwitchPreference mAppBlockOverlaysProfile;
 
     private ListPreference mAppReader;
     private ListPreference mForceSonification;
@@ -1103,6 +1105,29 @@ public class AppProfileFragment extends SettingsPreferenceFragment
                   }
                 });
             }
+
+            mAppBlockOverlaysProfile = (SwitchPreference) findPreference(APP_PROFILE_BLOCK_OVERLAYS);
+            if( mAppBlockOverlaysProfile != null ) {
+                boolean blockOverlays = mProfile.mBlockOverlays;
+                Log.e(TAG, "mAppBlockOverlaysProfile: mPackageName=" + mPackageName + ", mBlockOverlays=" + blockOverlays);
+                mAppBlockOverlaysProfile.setChecked(blockOverlays);
+                mAppBlockOverlaysProfile.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                  public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    try {
+                        mProfile.mBlockOverlays = ((Boolean)newValue);
+                        mAppSettings.updateProfile(mProfile);
+                        mAppSettings.save();
+                        Log.e(TAG, "mAppBlockOverlaysProfile: mPackageName=" + mPackageName + ", mBlockOverlays=" + mProfile.mBlockOverlays);
+                    } catch(Exception re) {
+                        Log.e(TAG, "onCreate: mAppBlockOverlaysProfile Fatal! exception", re );
+                    }
+                    return true;
+                  }
+                });
+            }
+
+
+
        } catch(Exception re) {
            Log.e(TAG, "onCreate: Fatal! exception", re );
        }

@@ -284,6 +284,12 @@
             android:summary="%s" />
 
         <SwitchPreference
+            android:key="app_profile_block_overlays"
+            android:title="@string/app_profile_block_overlays_title"
+            android:summary="@string/app_profile_block_overlays_summary"
+            android:defaultValue="false" />
+
+        <SwitchPreference
             android:key="app_profile_debug"
             android:title="@string/app_profile_debug_title"
             android:summary="@string/app_profile_debug_summary"
