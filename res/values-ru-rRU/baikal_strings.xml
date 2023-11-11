@@ -147,4 +147,7 @@
 
     <string name="profile_management_title">Профили Приложений</string>
 
+    <string name="fuse_passthrough_title">FUSE passthrough</string>
+    <string name="fuse_passthrough_summary">Использовать FUSE passthrough если доступен. Требуется перезагрузка.</string>
+
 </resources>

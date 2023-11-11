@@ -156,6 +156,15 @@ RESTRICTED_NETWORKING_MODE
         android:defaultValue="false" />
 
     <com.crdroid.settings.preferences.SystemPropertySwitchPreference
+        android:key="persist.sys.fuse.passthrough.enable"
+        android:icon="@drawable/ic_storage"
+        android:title="@string/fuse_passthrough_title"
+        android:summary="@string/fuse_passthrough_summary"
+        android:defaultValue="false"
+        settings:requiresProperty="baikalos.fuse.passthrough" />
+
+
+    <com.crdroid.settings.preferences.SystemPropertySwitchPreference
         android:key="persist.baikal.purge_package_cache"
         android:icon="@drawable/ic_storage"
         android:title="@string/purge_package_cache_title"

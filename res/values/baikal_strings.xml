@@ -191,5 +191,8 @@
     <string name="baikalos_big_core_ctl_title">Big cluster core control</string>
     <string name="baikalos_plus_core_ctl_title">Big+ cluster core control</string>
 
+    <string name="fuse_passthrough_title">Enable FUSE passthrough</string>
+    <string name="fuse_passthrough_summary">Use FUSE passthrough if available. Reboot required.</string>
+
 
 </resources>
