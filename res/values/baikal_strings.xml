@@ -194,5 +194,8 @@
     <string name="fuse_passthrough_title">Enable FUSE passthrough</string>
     <string name="fuse_passthrough_summary">Use FUSE passthrough if available. Reboot required.</string>
 
+    <string name="baikalos_enable_optional_components_title">Optional Services</string>
+    <string name="baikalos_enable_optional_components_summary">Enable some optional services, like Nearby Discovery, etc... Reboot required</string>
+
 
 </resources>

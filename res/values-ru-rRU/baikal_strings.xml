@@ -150,4 +150,7 @@
     <string name="fuse_passthrough_title">FUSE passthrough</string>
     <string name="fuse_passthrough_summary">Использовать FUSE passthrough если доступен. Требуется перезагрузка.</string>
 
+    <string name="baikalos_enable_optional_components_title">Опциональные сервисы</string>
+    <string name="baikalos_enable_optional_components_summary">Включить некоторые необязательные сервисы, такие как Nearby Discovery и т.д. Требуется перезагрузка</string>
+
 </resources>

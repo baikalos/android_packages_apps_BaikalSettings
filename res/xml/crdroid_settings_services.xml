@@ -19,6 +19,13 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/services_title"
     >
+
+    <com.crdroid.settings.preferences.SystemPropertySwitchPreference
+        android:key="persist.baikal.opt.srv"
+        android:title="@string/baikalos_enable_optional_components_title"
+        android:summary="@string/baikalos_enable_optional_components_summary"
+        android:defaultValue="false" />
+
     <!-- Google services android:icon="@drawable/ic_google" -->
     <Preference
         android:key="gms_enabled_settings"
