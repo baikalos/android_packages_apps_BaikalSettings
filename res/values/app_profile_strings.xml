@@ -276,4 +276,13 @@
     <string name="app_profile_block_overlays_title">Block Overlays</string>
     <string name="app_profile_block_overlays_summary">Don\'t show onscreen overlays (CPU, FPS info)</string>
 
+    <string name="app_profile_hide_hms_title">Hide HMS</string>
+    <string name="app_profile_hide_hms_summary">Hide Huawei Mobile Services from this app</string>
+
+    <string name="app_profile_hide_gms_title">Hide GMS</string>
+    <string name="app_profile_hide_gms_summary">Hide Google Play Services from this app</string>
+
+    <string name="app_profile_hide_3p_title">Hide 3P</string>
+    <string name="app_profile_hide_3p_summary">Hide all 3rd party apps from this app</string>
+
 </resources>

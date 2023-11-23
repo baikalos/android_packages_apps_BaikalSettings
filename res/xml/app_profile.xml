@@ -290,6 +290,24 @@
             android:defaultValue="false" />
 
         <SwitchPreference
+            android:key="app_profile_hide_hms"
+            android:title="@string/app_profile_hide_hms_title"
+            android:summary="@string/app_profile_hide_hms_summary"
+            android:defaultValue="false"/>
+
+        <SwitchPreference
+            android:key="app_profile_hide_gms"
+            android:title="@string/app_profile_hide_gms_title"
+            android:summary="@string/app_profile_hide_gms_summary"
+            android:defaultValue="false"/>
+
+        <!--SwitchPreference
+            android:key="app_profile_hide_3p"
+            android:title="@string/app_profile_hide_3p_title"
+            android:summary="@string/app_profile_hide_3p_summary"
+            android:defaultValue="false"/-->
+
+        <SwitchPreference
             android:key="app_profile_debug"
             android:title="@string/app_profile_debug_title"
             android:summary="@string/app_profile_debug_summary"

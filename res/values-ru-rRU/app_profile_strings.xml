@@ -237,4 +237,13 @@
     <string name="app_profile_block_overlays_title">Блокировать Инфопанели</string>
     <string name="app_profile_block_overlays_summary">Блокировать наэкранные инфопанели (CPU, FPS инфо)</string>
 
+    <string name="app_profile_hide_hms_title">Скрыть HMS</string>
+    <string name="app_profile_hide_hms_summary">Скрыть Huawei Mobile Services от этого приложения</string>
+
+    <string name="app_profile_hide_gms_title">Скрыть GMS</string>
+    <string name="app_profile_hide_gms_summary">Скрыть Google Play Services от этого приложения</string>
+
+    <string name="app_profile_hide_3p_title">Скрыть сторонние</string>
+    <string name="app_profile_hide_3p_summary">Скрыть все сторонние приложения от этого приложения</string>
+
 </resources>

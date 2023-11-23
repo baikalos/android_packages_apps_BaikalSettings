@@ -52,6 +52,8 @@ import com.android.internal.baikalos.PowerWhitelistBackend;
 import com.android.internal.baikalos.BaikalSpoofer;
 import com.android.internal.baikalos.BaikalConstants;
 
+import com.android.internal.util.crdroid.Utils;
+
 //import com.crdroid.settings.R;
 
 import com.android.internal.logging.nano.MetricsProto;
@@ -104,6 +106,9 @@ public class AppProfileFragment extends SettingsPreferenceFragment
     private static final String APP_PROFILE_HEAVY_MEMORY = "app_profile_heavy_memory";
     private static final String APP_PROFILE_HEAVY_CPU = "app_profile_heavy_cpu";
     private static final String APP_PROFILE_BLOCK_OVERLAYS = "app_profile_block_overlays";
+    private static final String APP_PROFILE_HIDE_HMS = "app_profile_hide_hms";
+    private static final String APP_PROFILE_HIDE_GMS = "app_profile_hide_gms";
+    private static final String APP_PROFILE_HIDE_3P = "app_profile_hide_3p";
 //    private static final String APP_PROFILE_DISABLE_TWL = "app_profile_disable_twl";
     private static final String VOLUME_SCALE = "app_profile_volume_scale";
 
@@ -158,6 +163,9 @@ public class AppProfileFragment extends SettingsPreferenceFragment
     private SwitchPreference mAppAllowIdleNetwork;
     private SwitchPreference mAppForcedScreenshot;
     private SwitchPreference mAppBlockOverlaysProfile;
+    private SwitchPreference mAppHideHMS;
+    private SwitchPreference mAppHideGMS;
+    private SwitchPreference mAppHide3P;
 
     private ListPreference mAppReader;
     private ListPreference mForceSonification;
@@ -1127,6 +1135,76 @@ public class AppProfileFragment extends SettingsPreferenceFragment
             }
 
 
+            
+
+            mAppHideHMS = (SwitchPreference) findPreference(APP_PROFILE_HIDE_HMS);
+            if( mAppHideHMS != null ) {
+                if( !Utils.isPackageInstalled(mContext, "com.huawei.hwid")) {
+                    mAppHideHMS.setVisible(false);                    
+                } else {
+                    boolean hide = mProfile.mHideHMS;
+                    Log.e(TAG, "mAppHideHMS: mPackageName=" + mPackageName + ", mAppHideHMS=" + hide);
+                    mAppHideHMS.setChecked(hide);
+                    mAppHideHMS.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                      public boolean onPreferenceChange(Preference preference, Object newValue) {
+                        try {
+                            mProfile.mHideHMS = ((Boolean)newValue);
+                            mAppSettings.updateProfile(mProfile);
+                            mAppSettings.save();
+                            Log.e(TAG, "mAppHideHMS: mPackageName=" + mPackageName + ", mAppHideHMS=" + mProfile.mHideHMS);
+                        } catch(Exception re) {
+                            Log.e(TAG, "onCreate: mAppHideHMS Fatal! exception", re );
+                        }
+                        return true;
+                      }
+                    });
+                }
+            }
+
+
+            mAppHideGMS = (SwitchPreference) findPreference(APP_PROFILE_HIDE_GMS);
+            if( mAppHideGMS != null ) {
+                if( !Utils.isPackageInstalled(mContext, "com.google.android.gms")) {
+                    mAppHideGMS.setVisible(false);                    
+                } else {
+                    boolean hide = mProfile.mHideGMS;
+                    Log.e(TAG, "mAppHideGMS: mPackageName=" + mPackageName + ", mAppHideGMS=" + hide);
+                    mAppHideGMS.setChecked(hide);
+                    mAppHideGMS.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                      public boolean onPreferenceChange(Preference preference, Object newValue) {
+                        try {
+                            mProfile.mHideGMS = ((Boolean)newValue);
+                            mAppSettings.updateProfile(mProfile);
+                            mAppSettings.save();
+                            Log.e(TAG, "mAppHideGMS: mPackageName=" + mPackageName + ", mAppHideGMS=" + mProfile.mHideGMS);
+                        } catch(Exception re) {
+                            Log.e(TAG, "onCreate: mAppHideGMS Fatal! exception", re );
+                            }
+                        return true;
+                      }
+                    });
+                }
+            }
+
+            mAppHide3P = (SwitchPreference) findPreference(APP_PROFILE_HIDE_3P);
+            if( mAppHide3P != null ) {
+                boolean hide = mProfile.mHide3P;
+                Log.e(TAG, "mAppHideHMS: mPackageName=" + mPackageName + ", mAppHide3P=" + hide);
+                mAppHide3P.setChecked(hide);
+                mAppHide3P.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                  public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    try {
+                        mProfile.mHideHMS = ((Boolean)newValue);
+                        mAppSettings.updateProfile(mProfile);
+                        mAppSettings.save();
+                        Log.e(TAG, "mAppHide3P: mPackageName=" + mPackageName + ", mAppHide3P=" + mProfile.mHide3P);
+                    } catch(Exception re) {
+                        Log.e(TAG, "onCreate: mAppHide3P Fatal! exception", re );
+                    }
+                    return true;
+                  }
+                });
+            }
 
        } catch(Exception re) {
            Log.e(TAG, "onCreate: Fatal! exception", re );
