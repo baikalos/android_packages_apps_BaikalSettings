@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * Copyright (C) 2023 BaikalOS
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+-->
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+    xmlns:lineage="http://schemas.android.com/apk/res-auto" >
+
+        <SwitchPreference
+            android:key="ps_profile_AdvertiseIsEnabled"
+            android:title="@string/ps_profile_AdvertiseIsEnabled_title"
+            android:summary="@string/ps_profile_AdvertiseIsEnabled_summary"
+            android:defaultValue="false" />
+
+        <ListPreference
+            android:key="ps_profile_AdjustBrightnessFactor"
+            android:title="@string/ps_profile_AdjustBrightnessFactor_title"
+            android:entries="@array/ps_profile_AdjustBrightnessFactor_listentries"
+            android:entryValues="@array/ps_profile_AdjustBrightnessFactor_listvalues"
+            android:defaultValue="100"
+            android:summary="%s" />
+
+        <SwitchPreference
+            android:key="ps_profile_EnableFullBackup"
+            android:title="@string/ps_profile_EnableFullBackup_title"
+            android:summary="@string/ps_profile_EnableFullBackup_summary"
+            android:defaultValue="true" />
+
+        <SwitchPreference
+            android:key="ps_profile_EnableKeyValueBackup"
+            android:title="@string/ps_profile_EnableKeyValueBackup_title"
+            android:summary="@string/ps_profile_EnableKeyValueBackup_summary"
+            android:defaultValue="true" />
+
+        <SwitchPreference
+            android:key="ps_profile_EnableAnimation"
+            android:title="@string/ps_profile_EnableAnimation_title"
+            android:summary="@string/ps_profile_EnableAnimation_summary"
+            android:defaultValue="true" />
+
+        <SwitchPreference
+            android:key="ps_profile_EnableAod"
+            android:title="@string/ps_profile_EnableAod_title"
+            android:summary="@string/ps_profile_EnableAod_summary"
+            android:defaultValue="true" />
+
+        <SwitchPreference
+            android:key="ps_profile_EnableLaunchBoost"
+            android:title="@string/ps_profile_EnableLaunchBoost_title"
+            android:summary="@string/ps_profile_EnableLaunchBoost_summary"
+            android:defaultValue="true" />
+
+        <SwitchPreference
+            android:key="ps_profile_EnableOptionalSensors"
+            android:title="@string/ps_profile_EnableOptionalSensors_title"
+            android:summary="@string/ps_profile_EnableOptionalSensors_summary"
+            android:defaultValue="true" />
+
+        <SwitchPreference
+            android:key="ps_profile_EnableVibration"
+            android:title="@string/ps_profile_EnableVibration_title"
+            android:summary="@string/ps_profile_EnableVibration_summary"
+            android:defaultValue="true" />
+
+        <SwitchPreference
+            android:key="ps_profile_EnableAdjustBrightness"
+            android:title="@string/ps_profile_EnableAdjustBrightness_title"
+            android:summary="@string/ps_profile_EnableAdjustBrightness_summary"
+            android:defaultValue="true" />
+
+        <SwitchPreference
+            android:key="ps_profile_EnableDataSaver"
+            android:title="@string/ps_profile_EnableDataSaver_title"
+            android:summary="@string/ps_profile_EnableDataSaver_summary"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="ps_profile_EnableFirewall"
+            android:title="@string/ps_profile_EnableFirewall_title"
+            android:summary="@string/ps_profile_EnableFirewall_summary"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="ps_profile_EnableNightMode"
+            android:title="@string/ps_profile_EnableNightMode_title"
+            android:summary="@string/ps_profile_EnableNightMode_summary"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="ps_profile_EnableQuickDoze"
+            android:title="@string/ps_profile_EnableQuickDoze_title"
+            android:summary="@string/ps_profile_EnableQuickDoze_summary"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="ps_profile_ForceAllAppsStandby"
+            android:title="@string/ps_profile_ForceAllAppsStandby_title"
+            android:summary="@string/ps_profile_ForceAllAppsStandby_summary"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="ps_profile_ForceBackgroundCheck"
+            android:title="@string/ps_profile_ForceBackgroundCheck_title"
+            android:summary="@string/ps_profile_ForceBackgroundCheck_summary"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="ps_profile_KillInBackground"
+            android:title="@string/ps_profile_KillInBackground_title"
+            android:summary="@string/ps_profile_KillInBackground_summary"
+            android:defaultValue="false" />
+
+        <ListPreference
+            android:key="ps_profile_SoundTriggerMode"
+            android:title="@string/ps_profile_SoundTriggerMode_title"
+            android:entries="@array/ps_profile_SoundTriggerMode_listentries"
+            android:entryValues="@array/ps_profile_SoundTriggerMode_listvalues"
+            android:defaultValue="0"
+            android:summary="%s" />
+
+        <ListPreference
+            android:key="ps_profile_LocationMode"
+            android:title="@string/ps_profile_LocationMode_title"
+            android:entries="@array/ps_profile_LocationMode_listentries"
+            android:entryValues="@array/ps_profile_LocationMode_listvalues"
+            android:defaultValue="0"
+            android:summary="%s" />
+
+        <ListPreference
+            android:key="ps_profile_CacheAppTimeout"
+            android:title="@string/ps_profile_CacheAppTimeout_title"
+            android:entries="@array/ps_profile_CacheAppTimeout_listentries"
+            android:entryValues="@array/ps_profile_CacheAppTimeout_listvalues"
+            android:defaultValue="600"
+            android:summary="%s" />
+
+</PreferenceScreen>

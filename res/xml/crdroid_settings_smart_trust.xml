@@ -37,6 +37,13 @@
             android:summary="@string/trust_always_summary"
             android:dependency="baikalos_trust_enabled" />
 
+        <!-- com.crdroid.settings.preferences.SecureSettingSwitchPreference
+            android:key="baikalos_trust_incall"
+            android:defaultValue="false"
+            android:title="@string/trust_incall_title"
+            android:summary="@string/trust_incall_summary"
+            android:dependency="baikalos_trust_enabled" / -->
+
         <PreferenceCategory 
             android:key="trust_bluetooth_devices"
             android:title="@string/trust_bt_dev_title"

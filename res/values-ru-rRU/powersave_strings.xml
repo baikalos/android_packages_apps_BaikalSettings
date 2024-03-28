@@ -90,5 +90,29 @@
     <string name="powesaver_aggressive">Агрессивно</string>
     <string name="powesaver_extreme">Экстремально</string>
 
+    <string name="baikalos_auto_limit_title">Автоограничение</string>
+    <string name="baikalos_auto_limit_summary">По умолчанию ограничивать фоновую активность приложений в Умеренном, Агрессивном и Экстремальном профилях энергосбережения</string>
+
+
+    <string name="ps_none_title">По умолчанию</string>
+    <string name="ps_none_summary"></string>
+    <string name="ps_low_title">Слегка</string>
+    <string name="ps_low_summary"></string>
+    <string name="ps_moderate_title">Умеренный</string>
+    <string name="ps_moderate_summary"></string>
+    <string name="ps_aggressive_title">Агрессивный</string>
+    <string name="ps_aggressive_summary"></string>
+    <string name="ps_extreme_title">Экстремальный</string>
+    <string name="ps_extreme_summary"></string>
+    <string name="ps_bs_title">Сохранение энергии</string>
+    <string name="ps_bs_summary"></string>
+    <string name="ps_stamina_title">Стамина</string>
+    <string name="ps_stamina_summary"></string>
+
+    <string name="baikalos_power_profiles_editor_title">Профили энергосбережения</string>
+    <string name="baikalos_power_profiles_editor_summary">Настройки профилей энергосбережения</string>
+
+    <string name="baikalos_ps_editor_title">Профиль энергосбережения</string>
+
 
 </resources>

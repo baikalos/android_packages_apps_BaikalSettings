@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="ps_policies_title">Профили энергосбережения</string>
+
+    <string name="ps_profile_SoundTriggerMode_Enabled">Разрешен</string>
+    <string name="ps_profile_SoundTriggerMode_CriticalOnly">Только критический</string>
+    <string name="ps_profile_SoundTriggerMode_Disabled">Запрещен</string>
+
+    <string name="ps_profile_LocationMode_Default">По умолчанию</string>
+    <string name="ps_profile_LocationMode_ForegroundNetworkOnly">Разрешено активному + Только сеть для фона</string>
+    <string name="ps_profile_LocationMode_ForegroundOnly">Только активное приложение</string>
+    <string name="ps_profile_LocationMode_NetworkOnly">Только по сети</string>
+    <string name="ps_profile_LocationMode_Disabled">Запрещено</string>
+
+    <string name="ps_profile_AdvertiseIsEnabled_title">Анонсировать</string>
+    <string name="ps_profile_AdvertiseIsEnabled_summary">Анонсировать режим энергосбережения для системы и других приложений</string>
+
+    <string name="ps_profile_AdjustBrightnessFactor_title">Яркость</string>
+    <string name="ps_profile_AdjustBrightnessFactor_summary">Изменять яркость</string>
+
+    <string name="ps_profile_EnableFullBackup_title">Полный бэкап</string>
+    <string name="ps_profile_EnableFullBackup_summary">Разрешить полный бэкап системы</string>
+
+    <string name="ps_profile_EnableKeyValueBackup_title">Бэкап настроек</string>
+    <string name="ps_profile_EnableKeyValueBackup_summary">Разрешить бэкап настроек</string>
+
+    <string name="ps_profile_EnableAnimation_title">Анимации</string>
+    <string name="ps_profile_EnableAnimation_summary">Разрешить анимации</string>
+
+    <string name="ps_profile_EnableAod_title">Экран событий (AOD)</string>
+    <string name="ps_profile_EnableAod_summary">Разрешить Экран событий</string>
+
+    <string name="ps_profile_EnableLaunchBoost_title">Буст запуска приложения</string>
+    <string name="ps_profile_EnableLaunchBoost_summary">Разрешить буст производительности при запуске приложения</string>
+
+    <string name="ps_profile_EnableOptionalSensors_title">Дополнительные датчики</string>
+    <string name="ps_profile_EnableOptionalSensors_summary">Разрешить использование неосновных датчиков</string>
+
+    <string name="ps_profile_EnableVibration_title">Вибрация</string>
+    <string name="ps_profile_EnableVibration_summary">Разрешить вибрацию</string>
+
+    <string name="ps_profile_EnableAdjustBrightness_title">Авто яркость</string>
+    <string name="ps_profile_EnableAdjustBrightness_summary">Разрешить автоматическое изменения яркости</string>
+
+    <string name="ps_profile_EnableDataSaver_title">Экономия траффика</string>
+    <string name="ps_profile_EnableDataSaver_summary">Включить режим экономии траффика</string>
+
+    <string name="ps_profile_EnableFirewall_title">Сетевой экран</string>
+    <string name="ps_profile_EnableFirewall_summary">Включить режим сетевого экрана</string>
+
+    <string name="ps_profile_EnableNightMode_title">Ночной режим</string>
+    <string name="ps_profile_EnableNightMode_summary">Включить ночной режим</string>
+
+    <string name="ps_profile_EnableQuickDoze_title">QuickDoze</string>
+    <string name="ps_profile_EnableQuickDoze_summary">Включить QuickDoze</string>
+
+    <string name="ps_profile_ForceAllAppsStandby_title">Режим ожидания приложений</string>
+    <string name="ps_profile_ForceAllAppsStandby_summary">Принудительно переводить фоновые приложения в режим ожидания</string>
+
+    <string name="ps_profile_ForceBackgroundCheck_title">Фоновые проверки</string>
+    <string name="ps_profile_ForceBackgroundCheck_summary">Доплнительно проверять разрешения сервисов на работу в фоновом режиме</string>
+
+    <string name="ps_profile_SoundTriggerMode_title">Звуковой триггер</string>
+    <string name="ps_profile_LocationMode_title">Режим местоположения</string>
+    <string name="ps_profile_CacheAppTimeout_title">Таймаут для кешированных приложений</string>
+
+    <string name="ps_profile_KillInBackground_title">Закрывать простаивающие</string>
+    <string name="ps_profile_KillInBackground_summary">Закрывать простаивающие фоновые приложения</string>
+
+</resources>

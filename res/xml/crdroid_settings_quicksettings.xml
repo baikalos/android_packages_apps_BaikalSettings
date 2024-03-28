@@ -197,7 +197,7 @@
             android:key="qs_layout_columns"
             android:icon="@drawable/ic_qs_tile"
             android:title="@string/qs_columns_portrait_title"
-            android:max="5"
+            android:max="6"
             settings:min="2"
             settings:interval="1"
             android:defaultValue="2" />
@@ -206,7 +206,7 @@
             android:key="qs_layout_columns_landscape"
             android:icon="@drawable/ic_qs_tile"
             android:title="@string/qs_columns_landscape_title"
-            android:max="5"
+            android:max="6"
             settings:min="2"
             settings:interval="1"
             android:defaultValue="2" />
@@ -215,7 +215,7 @@
             android:key="qqs_layout_rows"
             android:icon="@drawable/ic_qs_tile"
             android:title="@string/qqs_rows_portrait_title"
-            android:max="3"
+            android:max="4"
             settings:min="1"
             settings:interval="1"
             android:defaultValue="2" />

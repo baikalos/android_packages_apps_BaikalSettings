@@ -205,6 +205,9 @@
     <string name="app_profile_idle_network_title">Сеть во сне</string>
     <string name="app_profile_idle_network_summary">Разрешить доступ к сети в режиме глубокого сна</string>
 
+    <string name="app_profile_hide_idle_title">Скрыть сон</string>
+    <string name="app_profile_hide_idle_summary">Скрыть переход в режим глубокого сна от этого приложения</string>
+
     <string name="file_access_title">Доступ к памяти</string>
     <string name="file_access_summary">Переопределить уровень доступа к памяти устройства</string>
 
@@ -245,5 +248,16 @@
 
     <string name="app_profile_hide_3p_title">Скрыть сторонние</string>
     <string name="app_profile_hide_3p_summary">Скрыть все сторонние приложения от этого приложения</string>
+
+    <string name="app_profile_allowwhileidle_title">Разрешить при Энергосбережении</string>
+    <string name="app_profile_allowwhileidle_summary">Не блокировать фоновую активность в режиме Энергосбережения</string>
+
+    <string name="app_profile_installer_title">Источник</string>
+    <string name="app_profile_installer_summary">Подменить источник установки приложения</string>
+
+    <string name="app_profile_scalefactor_title">Масштаб</string>
+
+    <string name="app_profile_old_links_title">A11 cсылки в приложении</string>
+    <string name="app_profile_old_links_summary">Использовать старое поведения при открытии ссылок этим приложением</string>
 
 </resources>

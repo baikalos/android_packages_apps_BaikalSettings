@@ -203,6 +203,13 @@
             android:summary="@string/status_bar_battery_text_charging_summary"
             android:defaultValue="true" />
 
+        <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+            android:key="baikalos_power_level_ind"
+            android:icon="@drawable/ic_settings_powersave"
+            android:title="@string/baikalos_power_level_ind_title"
+            android:summary="@string/baikalos_power_level_ind_summary"
+            android:defaultValue="false" />
+
         <Preference
             android:key="batterybar"
             android:icon="@drawable/ic_car_battery"

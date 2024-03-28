@@ -107,12 +107,20 @@
             android:summary="@string/baikalos_freeze_cached_summary"
         />
 
-        <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+        <!-- com.crdroid.settings.preferences.GlobalSettingSwitchPreference
             android:key="baikalos_kill_in_background"
             android:defaultValue="false"
             android:title="@string/baikalos_kill_in_background_title"
             android:summary="@string/baikalos_kill_in_background_summary"
-        />
+        / -->
+
+
+        <!-- com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+            android:key="baikalos_auto_limit"
+            android:defaultValue="false"
+            android:title="@string/baikalos_auto_limit_title"
+            android:summary="@string/baikalos_auto_limit_summary"
+        / -->
 
         <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
             android:key="baikalos_aggressive_device_idle"
@@ -186,12 +194,18 @@
 
     </PreferenceCategory>
 
-        <PreferenceScreen
+        <Preference
             android:key="baikalos_profile_editor"
             android:title="@string/baikalos_profile_edit_title"
             android:summary="@string/baikalos_profile_edit_summary"
             android:fragment="com.crdroid.settings.fragments.PerformanceProfileEditor" />
 
+
+        <Preference
+            android:key="baikalos_power_profiles_editor"
+            android:title="@string/baikalos_power_profiles_editor_title"
+            android:summary="@string/baikalos_power_profiles_editor_summary"
+            android:fragment="com.crdroid.settings.fragments.PowerProfilesEditor" />
 
         <!-- com.crdroid.settings.preferences.GlobalSettingSwitchPreference
             android:key="baikalos_extreme_idle"

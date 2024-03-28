@@ -21,6 +21,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
+import android.os.Handler;
 import android.os.UserHandle;
 import android.os.UserManager;
 import android.os.SystemProperties;
@@ -46,6 +47,8 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.SearchIndexable;
 
+import com.android.internal.baikalos.AppProfileBackend;
+
 import java.util.List;
 import java.util.ArrayList;
 
@@ -55,6 +58,7 @@ public class BaikalSettingsLayout extends SettingsPreferenceFragment {
     private static final String TAG = "BaikalExtras";
 
     private Context mContext;
+    private AppProfileBackend mAppProfileSettings;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -66,6 +70,7 @@ public class BaikalSettingsLayout extends SettingsPreferenceFragment {
         final Resources res = getActivity().getResources();
 
         final PreferenceScreen screen = getPreferenceScreen();
+        mAppProfileSettings = AppProfileBackend.getInstance(new Handler(),mContext);
     }
 
     @Override

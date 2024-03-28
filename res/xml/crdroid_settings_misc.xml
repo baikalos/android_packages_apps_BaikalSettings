@@ -163,6 +163,21 @@ RESTRICTED_NETWORKING_MODE
         android:defaultValue="false"
         settings:requiresProperty="baikalos.fuse.passthrough" />
 
+    <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+        android:key="baikalos_old_links"
+        android:icon="@drawable/ic_settings_security"
+        android:title="@string/old_links_title"
+        android:summary="@string/old_links_summary"
+        android:defaultValue="false" />
+
+
+    <com.crdroid.settings.preferences.SystemPropertySwitchPreference
+        android:key="persist.baikal.use"
+        android:icon="@drawable/ic_backup"
+        android:title="@string/art_inc_max_title"
+        android:summary="@string/art_inc_max_summary"
+        android:defaultValue="false" />
+
 
     <com.crdroid.settings.preferences.SystemPropertySwitchPreference
         android:key="persist.baikal.purge_package_cache"
@@ -170,5 +185,6 @@ RESTRICTED_NETWORKING_MODE
         android:title="@string/purge_package_cache_title"
         android:summary="@string/purge_package_cache_summary"
         android:defaultValue="false" />
+
 
 </PreferenceScreen>

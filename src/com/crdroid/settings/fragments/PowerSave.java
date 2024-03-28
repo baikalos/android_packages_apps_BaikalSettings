@@ -22,6 +22,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
+import android.os.Handler;
 import android.os.UserHandle;
 import android.os.UserManager;
 import android.os.SystemProperties;
@@ -42,7 +43,7 @@ import android.content.DialogInterface;
 import android.content.res.Resources;
 
 import android.baikalos.AppProfile;
-import com.android.internal.baikalos.AppProfileSettings;
+import com.android.internal.baikalos.AppProfileBackend;
 
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.internal.util.crdroid.Utils;
@@ -94,21 +95,24 @@ public class PowerSave extends SettingsPreferenceFragment {
     private boolean isKernelIncompatible = false;
 
     @Override
+    public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
+        Log.i(TAG, "PowerSave : onCreatePreferences:" + rootKey);
+    }
+
+
+    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
 
         ContentResolver resolver = getContentResolver();
 
         String[] perfProfiles = getResources().getStringArray(R.array.performance_listvalues);
         String[] thermProfiles = getResources().getStringArray(R.array.thermal_listvalues);
 
-
-
         boolean perfProf  = (perfProfiles !=null && perfProfiles.length > 1);
         boolean thermProf  = (thermProfiles !=null && thermProfiles.length > 1);
         boolean appFreezer = false;
-
-
 
         try {
              appFreezer = ActivityManager.getService().isAppFreezerSupported();
@@ -119,8 +123,6 @@ public class PowerSave extends SettingsPreferenceFragment {
 
         if( !BaikalConstants.isKernelCompatible() ) {
             Log.e(TAG, "profiles : incompatible kernel");
-            //thermProf = false;
-            //perfProf = false;
             isKernelIncompatible = true;
         }
 
@@ -134,6 +136,8 @@ public class PowerSave extends SettingsPreferenceFragment {
 
 
         final PreferenceScreen screen = getPreferenceScreen();
+
+        Log.i(TAG, "PowerSave : onCreate:" + screen.getKey());
 
         mBackup = (Preference) findPreference("app_setings_backup");
         mRestore = (Preference) findPreference("app_setings_restore");
@@ -150,11 +154,16 @@ public class PowerSave extends SettingsPreferenceFragment {
             }
 
             mAppFreezer = (SwitchPreference) findPreference(APP_FREEZER);
-            if( mAppFreezer != null && !appFreezer ) mAppFreezer.setVisible(false);
-            else if( isKernelIncompatible ) mAppFreezer.setEnabled(false);
+            if( mAppFreezer != null ) { 
+                if( !appFreezer ) mAppFreezer.setVisible(false);
+                else if( isKernelIncompatible ) mAppFreezer.setEnabled(false);
+            }
 
-            PreferenceScreen prefEditor = (PreferenceScreen) findPreference("baikalos_profile_editor");
+            Preference prefEditor = (Preference) findPreference("baikalos_profile_editor");
             if( prefEditor != null && isKernelIncompatible ) prefEditor.setEnabled(false);
+
+            Preference prefPowerProfilesEditor = (Preference) findPreference("baikalos_power_profiles_editor");
+            if( prefPowerProfilesEditor != null && isKernelIncompatible ) prefPowerProfilesEditor.setEnabled(false);
 
             mAppPerfProfile = (ListPreference) findPreference(APP_PROFILE_PERF);
             if( mAppPerfProfile != null ) { 
@@ -370,7 +379,7 @@ public class PowerSave extends SettingsPreferenceFragment {
         builder.setPositiveButton(R.string.app_setings_backup_ok, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface arg0, int arg1) {
-                AppProfileSettings.saveBackup(PowerSave.this.getActivity().getContentResolver());
+                AppProfileBackend.getInstance(new Handler(),mContext).saveBackup(PowerSave.this.getActivity().getContentResolver());
             }
         });
 
@@ -386,7 +395,8 @@ public class PowerSave extends SettingsPreferenceFragment {
         builder.setPositiveButton(R.string.app_setings_restore_ok, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface arg0, int arg1) {
-                AppProfileSettings.restoreBackup(PowerSave.this.getActivity().getContentResolver());
+                AppProfileBackend.getInstance(new Handler(),mContext).restoreBackup(PowerSave.this.getActivity().getContentResolver());
+                AppProfileBackend.getInstance().loadProfiles();
             }
         });
 
@@ -402,7 +412,8 @@ public class PowerSave extends SettingsPreferenceFragment {
         builder.setPositiveButton(R.string.app_setings_reset_ok, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface arg0, int arg1) {
-                AppProfileSettings.resetAll(PowerSave.this.getActivity().getContentResolver());
+                AppProfileBackend.getInstance(new Handler(),mContext).resetAll(PowerSave.this.getActivity().getContentResolver());
+                AppProfileBackend.getInstance().loadProfiles();
             }
         });
 

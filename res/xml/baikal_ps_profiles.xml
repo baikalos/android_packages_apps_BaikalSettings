@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * Copyright (C) 2023 BaikalOS
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+-->
+<PreferenceScreen 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/ps_policies_title">
+
+
+        <Preference
+            android:key="ps_edit_0"
+            android:title="@string/ps_none_title"
+            android:summary="@string/ps_none_summary">
+            <intent android:action="android.intent.action.MAIN"
+                 android:targetPackage="com.android.settings"
+                 android:targetClass="com.crdroid.settings.fragments.PowerSaverProfileEditorActivity">
+                 <extra
+                    android:name="type"
+                    android:value="0" /> 
+                 <extra
+                    android:name="name"
+                    android:value="Default" /> 
+                 <extra
+                    android:name="ps_name"
+                    android:value="@string/ps_none_title" /> 
+            </intent>
+        </Preference>
+
+        <Preference
+            android:key="ps_edit_1"
+            android:title="@string/ps_low_title"
+            android:summary="@string/ps_low_summary">
+            <intent android:action="android.intent.action.MAIN"
+                 android:targetPackage="com.android.settings"
+                 android:targetClass="com.crdroid.settings.fragments.PowerSaverProfileEditorActivity">
+                 <extra
+                    android:name="ps_name"
+                    android:value="@string/ps_low_title" /> 
+                 <extra
+                    android:name="name"
+                    android:value="Low" /> 
+                 <extra
+                    android:name="type"
+                    android:value="1" /> 
+            </intent>
+        </Preference>
+
+        <Preference
+            android:key="ps_edit_2"
+            android:title="@string/ps_moderate_title"
+            android:summary="@string/ps_moderate_summary">
+            <intent android:action="android.intent.action.MAIN"
+                 android:targetPackage="com.android.settings"
+                 android:targetClass="com.crdroid.settings.fragments.PowerSaverProfileEditorActivity">
+                 <extra
+                    android:name="ps_name"
+                    android:value="@string/ps_moderate_title" /> 
+                 <extra
+                    android:name="type"
+                    android:value="2" /> 
+                 <extra
+                    android:name="name"
+                    android:value="Moderate" /> 
+            </intent>
+        </Preference>
+
+        <Preference
+            android:key="ps_edit_3"
+            android:title="@string/ps_aggressive_title"
+            android:summary="@string/ps_aggressive_summary">
+            <intent android:action="android.intent.action.MAIN"
+                 android:targetPackage="com.android.settings"
+                 android:targetClass="com.crdroid.settings.fragments.PowerSaverProfileEditorActivity">
+                 <extra
+                    android:name="type"
+                    android:value="3" /> 
+                 <extra
+                    android:name="name"
+                    android:value="Aggressive" /> 
+                 <extra
+                    android:name="ps_name"
+                    android:value="@string/ps_aggressive_title" /> 
+            </intent>
+        </Preference>
+
+        <Preference
+            android:key="ps_edit_4"
+            android:title="@string/ps_extreme_title"
+            android:summary="@string/ps_extreme_summary">
+            <intent android:action="android.intent.action.MAIN"
+                 android:targetPackage="com.android.settings"
+                 android:targetClass="com.crdroid.settings.fragments.PowerSaverProfileEditorActivity">
+                 <extra
+                    android:name="type"
+                    android:value="4" /> 
+                 <extra
+                    android:name="name"
+                    android:value="Extreme" /> 
+                 <extra
+                    android:name="ps_name"
+                    android:value="@string/ps_extreme_title" /> 
+            </intent>
+        </Preference>
+
+        <Preference
+            android:key="ps_edit_5"
+            android:title="@string/ps_bs_title"
+            android:summary="@string/ps_bs_summary">
+            <intent android:action="android.intent.action.MAIN"
+                 android:targetPackage="com.android.settings"
+                 android:targetClass="com.crdroid.settings.fragments.PowerSaverProfileEditorActivity">
+                 <extra
+                    android:name="type"
+                    android:value="5" /> 
+                 <extra
+                    android:name="name"
+                    android:value="Battery Saver" /> 
+                 <extra
+                    android:name="ps_name"
+                    android:value="@string/ps_bs_title" /> 
+            </intent>
+        </Preference>
+
+        <Preference
+            android:key="ps_edit_6"
+            android:title="@string/ps_stamina_title"
+            android:summary="@string/ps_stamina_summary">
+            <intent android:action="android.intent.action.MAIN"
+                 android:targetPackage="com.android.settings"
+                 android:targetClass="com.crdroid.settings.fragments.PowerSaverProfileEditorActivity">
+                 <extra
+                    android:name="type"
+                    android:value="6" /> 
+                 <extra
+                    android:name="name"
+                    android:value="Stamina" /> 
+                 <extra
+                    android:name="ps_name"
+                    android:value="@string/ps_stamina_title" /> 
+            </intent>
+        </Preference>
+
+</PreferenceScreen>

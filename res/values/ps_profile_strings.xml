@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="ps_policies_title">Power Saver Profiles</string>
+
+    <string name="ps_profile_SoundTriggerMode_Enabled">Enabled</string>
+    <string name="ps_profile_SoundTriggerMode_CriticalOnly">Critical Only</string>
+    <string name="ps_profile_SoundTriggerMode_Disabled">Disabled</string>
+
+    <string name="ps_profile_LocationMode_Default">Default</string>
+    <string name="ps_profile_LocationMode_ForegroundNetworkOnly">Foreground + Network only bg</string>
+    <string name="ps_profile_LocationMode_ForegroundOnly">Foreground only</string>
+    <string name="ps_profile_LocationMode_NetworkOnly">Network only</string>
+    <string name="ps_profile_LocationMode_Disabled">Disabled</string>
+
+    <string name="ps_profile_AdvertiseIsEnabled_title">Advertise</string>
+    <string name="ps_profile_AdvertiseIsEnabled_summary">Advertise Power Save Mode to the system and other apps</string>
+
+    <string name="ps_profile_AdjustBrightnessFactor_title">Adjust Brightness</string>
+    <string name="ps_profile_AdjustBrightnessFactor_summary">Adjust Brightness Factor</string>
+
+    <string name="ps_profile_EnableFullBackup_title">Full Backup</string>
+    <string name="ps_profile_EnableFullBackup_summary">Enable Full system backup</string>
+
+    <string name="ps_profile_EnableKeyValueBackup_title">Settings Backup</string>
+    <string name="ps_profile_EnableKeyValueBackup_summary">Enable system settings backup</string>
+
+    <string name="ps_profile_EnableAnimation_title">Animation</string>
+    <string name="ps_profile_EnableAnimation_summary">Enable Animation</string>
+
+    <string name="ps_profile_EnableAod_title">AOD</string>
+    <string name="ps_profile_EnableAod_summary">Enable AOD</string>
+
+    <string name="ps_profile_EnableLaunchBoost_title">Launch Boost</string>
+    <string name="ps_profile_EnableLaunchBoost_summary">Enable Launch Boost</string>
+
+    <string name="ps_profile_EnableOptionalSensors_title">Optional Sensors</string>
+    <string name="ps_profile_EnableOptionalSensors_summary">Enable Optional Sensors</string>
+
+    <string name="ps_profile_EnableVibration_title">Vibration</string>
+    <string name="ps_profile_EnableVibration_summary">Enable Vibration</string>
+
+    <string name="ps_profile_EnableAdjustBrightness_title">Adjust Brightness</string>
+    <string name="ps_profile_EnableAdjustBrightness_summary">Enable Brightness Adjustment</string>
+
+    <string name="ps_profile_EnableDataSaver_title">Data Saver</string>
+    <string name="ps_profile_EnableDataSaver_summary">Enable Data Saver</string>
+
+    <string name="ps_profile_EnableFirewall_title">Firewall</string>
+    <string name="ps_profile_EnableFirewall_summary">Enable Firewall</string>
+
+    <string name="ps_profile_EnableNightMode_title">Night Mode</string>
+    <string name="ps_profile_EnableNightMode_summary">Switch to Night Mode</string>
+
+    <string name="ps_profile_EnableQuickDoze_title">QuickDoze</string>
+    <string name="ps_profile_EnableQuickDoze_summary">Enable QuickDoze</string>
+
+    <string name="ps_profile_ForceAllAppsStandby_title">App Standby</string>
+    <string name="ps_profile_ForceAllAppsStandby_summary">Force All Apps Standby</string>
+
+    <string name="ps_profile_ForceBackgroundCheck_title">Background Check</string>
+    <string name="ps_profile_ForceBackgroundCheck_summary">Force Background Check</string>
+
+    <string name="ps_profile_SoundTriggerMode_title">Sound trigger mode</string>
+    <string name="ps_profile_LocationMode_title">Location mode</string>
+    <string name="ps_profile_CacheAppTimeout_title">Cached app timeout</string>
+
+    <string name="ps_profile_KillInBackground_title">Kill idle apps</string>
+    <string name="ps_profile_KillInBackground_summary">Kill apps idle in background</string>
+
+</resources>

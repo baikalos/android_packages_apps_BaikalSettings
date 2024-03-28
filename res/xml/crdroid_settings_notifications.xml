@@ -55,6 +55,14 @@
         android:title="@string/notification_guts_kill_app_button_title"
         android:summary="@string/notification_guts_kill_app_button_summary" />
 
+    <!-- Show clipboard overlay -->
+    <com.crdroid.settings.preferences.SecureSettingSwitchPreference
+        android:key="baikalos_expand_all_notifications"
+        android:icon="@drawable/ic_clipboard_alert"
+        android:title="@string/baikalos_expand_all_notifications_title"
+        android:summary="@string/baikalos_expand_all_notifications_summary"
+        android:defaultValue="false"/>
+
     <PreferenceCategory
         android:key="heads_up"
         android:title="@string/notification_heads_up_title">

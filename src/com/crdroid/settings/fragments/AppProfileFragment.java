@@ -46,7 +46,7 @@ import android.os.RemoteException;
 import android.content.res.Resources;
 
 import android.baikalos.AppProfile;
-import com.android.internal.baikalos.AppProfileSettings;
+import com.android.internal.baikalos.AppProfileBackend;
 
 import com.android.internal.baikalos.PowerWhitelistBackend;
 import com.android.internal.baikalos.BaikalSpoofer;
@@ -80,11 +80,13 @@ public class AppProfileFragment extends SettingsPreferenceFragment
     public static final String ARG_PACKAGE_NAME = "package";
     public static final String ARG_PACKAGE_UID = "uid";
 
+    private static final String APP_PROFILE_OLD_LINKS = "app_profile_old_links";
     private static final String APP_PROFILE_DEBUG = "app_profile_debug";
     private static final String APP_PROFILE_DISABLE_BOOT = "app_profile_disable_boot";
     private static final String APP_PROFILE_DISABLE_WAKEUP = "app_profile_disable_wakeup";
     private static final String APP_PROFILE_DISABLE_JOBS = "app_profile_disable_jobs";
     private static final String APP_PROFILE_ALLOW_IDLE_NETWORK = "app_profile_idle_network";
+    private static final String APP_PROFILE_HIDE_IDLE = "app_profile_hide_idle";
     private static final String APP_PROFILE_PERF = "app_profile_performance";
     private static final String APP_PROFILE_THERM = "app_profile_thermal";
     private static final String APP_PROFILE_BRIGHTNESS = "app_profile_brightness";
@@ -99,6 +101,7 @@ public class AppProfileFragment extends SettingsPreferenceFragment
     private static final String APP_PROFILE_PINNED = "app_profile_pinned";
     private static final String APP_PROFILE_DONOTCLOSE = "app_profile_donotclose";
     private static final String APP_PROFILE_STAMINA = "app_profile_stamina";
+    private static final String APP_PROFILE_ALLOWWHILEIDLE = "app_profile_allowwhileidle";
     private static final String APP_PROFILE_REQUIRE_GMS = "app_profile_require_gms";
 //    private static final String APP_PROFILE_RESTRICTED = "app_profile_restricted";
     private static final String APP_PROFILE_BACKGROUND = "app_profile_background";
@@ -117,6 +120,8 @@ public class AppProfileFragment extends SettingsPreferenceFragment
     private static final String APP_PROFILE_BLOCK_FOCUS_RECV = "app_profile_block_focus_recv";
     private static final String APP_PROFILE_BLOCK_FOCUS_SEND = "app_profile_block_focus_send";
     private static final String APP_PROFILE_FORCE_SONIFICATION = "app_profile_force_sonification";
+    private static final String APP_PROFILE_INSTALLER = "app_profile_installer";
+    private static final String APP_PROFILE_SCALEFACTOR = "app_profile_scalefactor";
 
     private static final String APP_PROFILE_BYPASS_CHARGING = "app_profile_bypass_charging";
 
@@ -139,6 +144,7 @@ public class AppProfileFragment extends SettingsPreferenceFragment
     private int mUid;
     private Context mContext;
 
+    private SwitchPreference mAppOldLinks;
     private SwitchPreference mAppDebug;
     private SwitchPreference mAppPinned;
     private SwitchPreference mAppDoNotClose;
@@ -146,6 +152,7 @@ public class AppProfileFragment extends SettingsPreferenceFragment
     private SwitchPreference mAppHeavyMemory;
     private SwitchPreference mAppHeavyCPU;
     private SwitchPreference mAppStamina;
+    private SwitchPreference mAppAllowWhileIdle;
     private SwitchPreference mAppRequireGms;
     private SwitchPreference mAppDisableBoot;
     private SwitchPreference mAppDisableWakeup;
@@ -161,6 +168,7 @@ public class AppProfileFragment extends SettingsPreferenceFragment
     private SwitchPreference mAppPhkaProfile;
     private SwitchPreference mAppDevModeProfile;
     private SwitchPreference mAppAllowIdleNetwork;
+    private SwitchPreference mAppHideIdle;
     private SwitchPreference mAppForcedScreenshot;
     private SwitchPreference mAppBlockOverlaysProfile;
     private SwitchPreference mAppHideHMS;
@@ -169,6 +177,8 @@ public class AppProfileFragment extends SettingsPreferenceFragment
 
     private ListPreference mAppReader;
     private ListPreference mForceSonification;
+    private ListPreference mInstaller;
+    private ListPreference mScaleFactor;
     private ListPreference mAppPerfProfile;
     private ListPreference mAppThermProfile;
     private ListPreference mAppBrightnessProfile;
@@ -184,7 +194,7 @@ public class AppProfileFragment extends SettingsPreferenceFragment
     private ListPreference mPerformanceScale;
     private ListPreference mAppLanguageProfile;
 
-    private AppProfileSettings mAppSettings;
+    private AppProfileBackend mAppSettings;
     private AppProfile mProfile;
 
 
@@ -195,10 +205,10 @@ public class AppProfileFragment extends SettingsPreferenceFragment
         //mUid = uid;
     }
 
-    public AppProfileFragment(String packageName, int uid) {
+    /*public AppProfileFragment(String packageName, int uid) {
         mPackageName = packageName; 
         mUid = uid;
-    }
+    }*/
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -246,23 +256,47 @@ public class AppProfileFragment extends SettingsPreferenceFragment
             Log.w(TAG, "Unable to obtain freezer support status from ActivityManager");
         }
 
-        mAppSettings = AppProfileSettings.getInstance(new Handler(),mContext);
-        mAppSettings.registerObserver(false);
+        mAppSettings = AppProfileBackend.getInstance(new Handler(),mContext);
+        //mAppSettings.registerObserver(false);
 
+        mAppSettings.loadProfiles();
         mProfile = mAppSettings.getProfile(mPackageName);
         if( mProfile == null ) { 
-            mProfile = new AppProfile();
-            mProfile.mPackageName = mPackageName;
+            mProfile = new AppProfile(mPackageName,-1);
         }
 
-        mProfile = mAppSettings.updateProfileFromSystemSettings(mProfile);
+        //mProfile = mAppSettings.updateProfileFromSystemSettings(mProfile);
+
+
     
         try {
 
+            PowerWhitelistBackend mBackend = PowerWhitelistBackend.getInstance(getContext());
+            mBackend.refreshList();
+
+            mAppOldLinks = (SwitchPreference) findPreference(APP_PROFILE_OLD_LINKS);
+            if( mAppOldLinks != null ) {
+                mAppOldLinks.setChecked(mProfile.mOldLinks);
+                Log.e(TAG, "mAppOldLinks: mPackageName=" + mPackageName + ", mOldLinks=" + mProfile.mOldLinks);
+                mAppOldLinks.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                    public boolean onPreferenceChange(Preference preference, Object newValue) {
+                        try {
+                            mProfile.mOldLinks = ((Boolean)newValue);
+                            mAppSettings.updateProfile(mProfile);
+                            mAppSettings.save();
+                            Log.e(TAG, "mAppOldLinks: mPackageName=" + mPackageName + ", mOldLinks=" + (Boolean)newValue);
+                        } catch(Exception re) {
+                            Log.e(TAG, "onCreate: mOldLinks Fatal! exception", re );
+                        }
+                        return true;
+                    }
+                });
+            }
+        
             mAppDebug = (SwitchPreference) findPreference(APP_PROFILE_DEBUG);
             if( mAppDebug != null ) {
                 mAppDebug.setChecked(mProfile.mDebug);
-                Log.e(TAG, "mAppDebug: mPackageName=" + mPackageName + ",mDebug=" + mProfile.mBootDisabled);
+                Log.e(TAG, "mAppDebug: mPackageName=" + mPackageName + ", mDebug=" + mProfile.mDebug);
                 mAppDebug.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
                     public boolean onPreferenceChange(Preference preference, Object newValue) {
                         try {
@@ -432,6 +466,25 @@ public class AppProfileFragment extends SettingsPreferenceFragment
                             Log.e(TAG, "mAppAllowIdleNetwork: mPackageName=" + mPackageName + ", mAppAllowIdleNetwork=" + (Boolean)newValue);
                         } catch(Exception re) {
                             Log.e(TAG, "onCreate: mAppAllowIdleNetwork Fatal! exception", re );
+                        }
+                        return true;
+                    }
+                });
+            }
+
+            mAppHideIdle = (SwitchPreference) findPreference(APP_PROFILE_HIDE_IDLE);
+            if( mAppHideIdle != null ) {
+                mAppHideIdle.setChecked(mProfile.mHideIdle);
+                Log.e(TAG, "mAppHideIdle: mPackageName=" + mPackageName + ", mAppHideIdle=" + mProfile.mHideIdle);
+                mAppHideIdle.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                    public boolean onPreferenceChange(Preference preference, Object newValue) {
+                        try {
+                            mProfile.mHideIdle = ((Boolean)newValue);
+                            mAppSettings.updateProfile(mProfile);
+                            mAppSettings.save();
+                            Log.e(TAG, "mAppHideIdle: mPackageName=" + mPackageName + ", mAppHideIdle=" + (Boolean)newValue);
+                        } catch(Exception re) {
+                            Log.e(TAG, "onCreate: mAppHideIdle Fatal! exception", re );
                         }
                         return true;
                     }
@@ -761,12 +814,10 @@ public class AppProfileFragment extends SettingsPreferenceFragment
                 }
             }
 
-            PowerWhitelistBackend mBackend = PowerWhitelistBackend.getInstance(getContext());
-            mBackend.refreshList();
 
             mAppStamina = (SwitchPreference) findPreference(APP_PROFILE_STAMINA);
             if( mAppStamina != null ) {
-                if( isStaminaWl() || mBackend.isSysWhitelisted(mPackageName) ) {
+                if( isStaminaWl() ) {
                     mAppStamina.setChecked(true);
                     mAppStamina.setEnabled(false);
 
@@ -775,6 +826,9 @@ public class AppProfileFragment extends SettingsPreferenceFragment
                         mAppSettings.updateProfile(mProfile);
                         mAppSettings.save();
                     }
+                } else if( mBackend.isSysWhitelisted(mPackageName) || isStaminaImportant() ) {
+                    mAppStamina.setChecked(true);
+                    mAppStamina.setEnabled(false);
                 } else {
                     mAppStamina.setChecked(mProfile.mStamina);
                     Log.e(TAG, "mAppStamina: mPackageName=" + mPackageName + ",mStamina=" + mProfile.mStamina);
@@ -784,9 +838,30 @@ public class AppProfileFragment extends SettingsPreferenceFragment
                                 mProfile.mStamina = ((Boolean)newValue);
                                 mAppSettings.updateProfile(mProfile);
                                 mAppSettings.save();
-                                Log.e(TAG, "mAppStamina: mPackageName=" + mPackageName + ",mStamina=" + (Boolean)newValue);
+                                Log.e(TAG, "mAppStamina: mPackageName=" + mPackageName + ", mStamina=" + (Boolean)newValue);
                             } catch(Exception re) {
                                 Log.e(TAG, "onCreate: mAppStamina Fatal! exception", re );
+                            }
+                            return true;
+                        }
+                    });
+                }
+            }
+
+            mAppAllowWhileIdle = (SwitchPreference) findPreference(APP_PROFILE_ALLOWWHILEIDLE);
+            if( mAppAllowWhileIdle != null ) {
+                {
+                    mAppAllowWhileIdle.setChecked(mProfile.mAllowWhileIdle);
+                    Log.e(TAG, "mAppAllowWhileIdle: mPackageName=" + mPackageName + ",mAllowWhileIdle=" + mProfile.mAllowWhileIdle);
+                    mAppAllowWhileIdle.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                        public boolean onPreferenceChange(Preference preference, Object newValue) {
+                            try {
+                                mProfile.mAllowWhileIdle = ((Boolean)newValue);
+                                mAppSettings.updateProfile(mProfile);
+                                mAppSettings.save();
+                                Log.e(TAG, "mAppAllowWhileIdle: mPackageName=" + mPackageName + ", mAllowWhileIdle=" + (Boolean)newValue);
+                            } catch(Exception re) {
+                                Log.e(TAG, "onCreate: mAppAllowWhileIdle Fatal! exception", re );
                             }
                             return true;
                         }
@@ -798,23 +873,23 @@ public class AppProfileFragment extends SettingsPreferenceFragment
             if( mAppBackgroundProfile != null ) {
 
                 if( mBackend.isSysWhitelisted(mPackageName) ) {
-                    Log.e(TAG, "getAppBackground: mPackageName=" + mPackageName + ", forced background=-1");
-                    mAppBackgroundProfile.setValue("-1");
+                    Log.e(TAG, "getAppBackground: mPackageName=" + mPackageName + ", isSysWhitelisted=true");
                     mAppBackgroundProfile.setEnabled(false);
-                    if( mProfile.mBackground != -1 ) {
-                        mProfile.mBackground = -1;
+                    if( mProfile.mBackgroundMode >= 0 ) {
+                        mAppBackgroundProfile.setValue("-1");
+                        mProfile.mBackgroundMode = -1;
                         mAppSettings.updateProfile(mProfile);
                         mAppSettings.save();
                     }
                 } else {
-                    int background = mProfile.mBackground;
+                    int background = mProfile.mBackgroundMode;
                     Log.e(TAG, "getAppBackground: mPackageName=" + mPackageName + ", background=" + background);
                     mAppBackgroundProfile.setValue(Integer.toString(background));
                     mAppBackgroundProfile.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
                       public boolean onPreferenceChange(Preference preference, Object newValue) {
                         try {
                             int val = Integer.parseInt(newValue.toString());
-                            mProfile.mBackground = val;
+                            mProfile.mBackgroundMode = val;
                             mAppSettings.updateProfile(mProfile);
                             mAppSettings.save();
                             Log.e(TAG, "setAppBackground: mPackageName=" + mPackageName + ",background=" + val);
@@ -958,6 +1033,48 @@ public class AppProfileFragment extends SettingsPreferenceFragment
                         Log.e(TAG, "mForceSonification: mPackageName=" + mPackageName + ", mSonification=" + mProfile.mSonification);
                     } catch(Exception re) {
                         Log.e(TAG, "onCreate: mForceSonification Fatal! exception", re );
+                    }
+                    return true;
+                  }
+                });
+            }
+
+            mInstaller = (ListPreference) findPreference(APP_PROFILE_INSTALLER);
+            if( mInstaller != null ) {
+                int installer = mProfile.mInstaller;
+                mInstaller.setValue(Integer.toString(installer));
+                Log.e(TAG, "mInstaller: mPackageName=" + mPackageName + ", mInstaller=" + installer);
+                mInstaller.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                  public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    try {
+                        int val = Integer.parseInt(newValue.toString());
+                        mProfile.mInstaller = val;
+                        mAppSettings.updateProfile(mProfile);
+                        mAppSettings.save();
+                        Log.e(TAG, "mInstaller: mPackageName=" + mPackageName + ", mInstaller=" + mProfile.mInstaller);
+                    } catch(Exception re) {
+                        Log.e(TAG, "onCreate: mInstaller Fatal! exception", re );
+                    }
+                    return true;
+                  }
+                });
+            }
+
+            mScaleFactor = (ListPreference) findPreference(APP_PROFILE_SCALEFACTOR);
+            if( mScaleFactor != null ) {
+                int scaleFactor = mProfile.mScaleFactor;
+                mScaleFactor.setValue(Integer.toString(scaleFactor));
+                Log.e(TAG, "mScaleFactor: mPackageName=" + mPackageName + ", mScaleFactor=" + scaleFactor);
+                mScaleFactor.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                  public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    try {
+                        int val = Integer.parseInt(newValue.toString());
+                        mProfile.mScaleFactor = val;
+                        mAppSettings.updateProfile(mProfile);
+                        mAppSettings.save();
+                        Log.e(TAG, "mScaleFactor: mPackageName=" + mPackageName + ", mScaleFactor=" + mProfile.mScaleFactor);
+                    } catch(Exception re) {
+                        Log.e(TAG, "onCreate: mScaleFactor Fatal! exception", re );
                     }
                     return true;
                   }
@@ -1194,7 +1311,7 @@ public class AppProfileFragment extends SettingsPreferenceFragment
                 mAppHide3P.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
                   public boolean onPreferenceChange(Preference preference, Object newValue) {
                     try {
-                        mProfile.mHideHMS = ((Boolean)newValue);
+                        mProfile.mHide3P = ((Boolean)newValue);
                         mAppSettings.updateProfile(mProfile);
                         mAppSettings.save();
                         Log.e(TAG, "mAppHide3P: mPackageName=" + mPackageName + ", mAppHide3P=" + mProfile.mHide3P);
@@ -1293,8 +1410,8 @@ public class AppProfileFragment extends SettingsPreferenceFragment
 
 
     private boolean isStaminaWl() {
-        if( mUid < Process.FIRST_APPLICATION_UID )  return true;
-        if( mPackageName == null ) return true;
+        if( mUid < Process.FIRST_APPLICATION_UID ) return true;
+        if( mPackageName == null ) return false;
         if( mPackageName.startsWith("com.android.service.ims") ) return true;
         if( mPackageName.startsWith("com.android.launcher3") ) return true;
         if( mPackageName.startsWith("com.android.systemui") ) return true;
@@ -1312,6 +1429,10 @@ public class AppProfileFragment extends SettingsPreferenceFragment
         if( mPackageName.startsWith("com.google.android.calendar") ) return true;
         if( mPackageName.startsWith("com.google.android.ims") ) return true;
         if( mPackageName.startsWith("com.google.android.ext.shared") ) return true;
+        return false;
+    }
+
+    private boolean isStaminaImportant() {
         try {
             if( SystemProperties.get("baikal.dialer","").equals(mPackageName) ) return true; 
             if( SystemProperties.get("baikal.sms","").equals(mPackageName) ) return true; 
@@ -1320,7 +1441,6 @@ public class AppProfileFragment extends SettingsPreferenceFragment
         }
         return false;
     }
-
 
 
     @Override

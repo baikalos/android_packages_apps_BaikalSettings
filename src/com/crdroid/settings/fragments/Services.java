@@ -54,11 +54,13 @@ public class Services extends SettingsPreferenceFragment implements
     private static final String DOLBY_PREF = "dolby_enabled_settings";
     private static final String JDSP_PREF = "jdsp_enabled_settings";
     private static final String AFX_PREF = "afx_enabled_settings";
+    private static final String FU_PREF = "fi_enabled_settings";
 
 
     private static final String GMS_PACKAGE = "com.google.android.gms";
     private static final String MGMS_PACKAGE = "com.mgoogle.android.gms";
     private static final String HMS_PACKAGE = "com.huawei.hwid";
+    private static final String FU_PACKAGE = "com.crdroid.faceunlock";
 
     private static final String DOLBY_PACKAGE = "com.dolby.daxservice";
     private static final String JDSP_PACKAGE = "james.dsp";
@@ -90,6 +92,14 @@ public class Services extends SettingsPreferenceFragment implements
                 PackageManager.MATCH_DISABLED_COMPONENTS | 
                 PackageManager.MATCH_DISABLED_UNTIL_USED_COMPONENTS) )  {
            hmsPreference.setVisible(false); 
+        }
+
+        Preference fuPreference = (Preference) findPreference(FU_PREF);
+        if (fuPreference != null &&
+            !PackageManagerUtils.isAppInstalled(getContext(), FU_PACKAGE, 
+                PackageManager.MATCH_DISABLED_COMPONENTS | 
+                PackageManager.MATCH_DISABLED_UNTIL_USED_COMPONENTS) )  {
+           fuPreference.setVisible(false); 
         }
 
         Preference dolbyPreference = (Preference) findPreference(DOLBY_PREF);

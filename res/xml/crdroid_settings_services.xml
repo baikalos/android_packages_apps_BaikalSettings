@@ -75,4 +75,11 @@
         android:summary="@string/afx_enabled_summary"
         android:fragment="com.crdroid.settings.fragments.services.AfxSwitch" />
 
+    <!-- Face Unlock services android:icon="@drawable/ic_google" -->
+    <Preference
+        android:key="fu_enabled_settings"
+        android:title="@string/fu_enabled_title"
+        android:summary="@string/fu_enabled_summary"
+        android:fragment="com.crdroid.settings.fragments.services.FuSwitch" />
+
 </PreferenceScreen>

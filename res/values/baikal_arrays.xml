@@ -66,6 +66,26 @@
         <item>1</item>
     </string-array>
 
+    <string-array name="app_installer_listentries" translatable="false">
+        <item>@string/installer_default</item>
+        <item>@string/installer_none</item>
+        <item>@string/installer_googleplay</item>
+        <item>@string/installer_appgallery</item>
+        <item>@string/installer_rustore</item>
+        <item>@string/installer_aosp_pi</item>
+        <item>@string/installer_google_pi</item>
+    </string-array>
+
+    <string-array name="app_installer_listvalues" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+
     <string-array name="brightness_curve_entries">
     	<item>@string/brightness_curve_default</item>
     	<item>@string/brightness_curve_darker</item>
@@ -76,6 +96,34 @@
     	<item>0</item>
     	<item>1</item>
     	<item>2</item>
+    </string-array>
+
+    <string-array name="app_scalefactor_listentries" translatable="false">
+        <item>150%</item>
+        <item>140%</item>
+        <item>130%</item>
+        <item>120%</item>
+        <item>110%</item>
+        <item>100%</item>
+        <item>90%</item>
+        <item>80%</item>
+        <item>70%</item>
+        <item>60%</item>
+        <item>50%</item>
+    </string-array>
+
+    <string-array name="app_scalefactor_listvalues" translatable="false">
+        <item>150</item>
+        <item>140</item>
+        <item>130</item>
+        <item>120</item>
+        <item>110</item>
+        <item>0</item>
+        <item>90</item>
+        <item>80</item>
+        <item>70</item>
+        <item>60</item>
+        <item>50</item>
     </string-array>
 
 

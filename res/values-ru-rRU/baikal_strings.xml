@@ -57,7 +57,7 @@
     <string name="notifications_summary">Надоедалки</string>
     <string name="quicksettings_summary">Попытаемся сделать этот ужас чуть более удобным</string>
     <string name="sound_summary">They Said To Play It Louder Than Hell</string>
-    <string name="statusbar_summary">Строка, состояния, иконки уведлмление, связи и батареи</string>
+    <string name="statusbar_summary">Строка состояния, иконки уведомлений, связи и батареи</string>
     <string name="display_summary">Display</string>
     <string name="ui_summary">Дополнительные настройки пользовательского интерфейса</string>
     <string name="about_summary">Все про BaikalOS</string>
@@ -82,6 +82,10 @@
 
     <string name="services_title">Дополнительные Сервисы</string>
     <string name="services_summary">Google, Huawei, Fdroid, etc...</string>
+
+    <!-- Face Unlock services -->
+    <string name="fu_enabled_title">Фейсконтроль</string>
+    <string name="fu_enabled_summary">Управление сервисом Фейсконтроля. Требуется перезагрузка!</string>
 
     <string name="audio_tweaks_a2dp_last_codec_title">Последний использованный кодек</string>
     <string name="audio_tweaks_a2dp_last_bitrate_title">Последний использованный битрейт</string>
@@ -108,6 +112,12 @@
     <string name="sonif_a2dp_duplicate_speaker">Дублировать на динамик</string>
 
     <string name="app_sound_sonif_a2dp_title">Звук приложения</string>
+
+    <string name="installer_default">По умолчанию</string>
+    <string name="installer_none">Отсутствует</string>
+    <string name="installer_googleplay">Google Play</string>
+    <string name="installer_appgallery">App Gallery</string>
+    <string name="installer_rustore">Rustore</string>
 
     <string name="baikalos_freeze_cached_title">Заморозка приложений</string>
     <string name="baikalos_freeze_cached_summary">Включает режим заморозки кэшированных приложений</string>
@@ -152,5 +162,23 @@
 
     <string name="baikalos_enable_optional_components_title">Опциональные сервисы</string>
     <string name="baikalos_enable_optional_components_summary">Включить некоторые необязательные сервисы, такие как Nearby Discovery и т.д. Требуется перезагрузка</string>
+
+    <string name="baikalos_interaction_boost_title">Буст при касании</string>
+    <string name="baikalos_interaction_boost_summary">Включить буст при касании экрана</string>
+
+    <string name="baikalos_rendering_boost_title">Буст отрисовки</string>
+    <string name="baikalos_rendering_boost_summary">Включить буст при отрисовке сложных сцен</string>
+
+    <string name="art_inc_max_title">Увеличить лимиты ART</string>
+    <string name="art_inc_max_summary">Увеличить лимиты использования памяти и регистров ART компилятором</string>
+
+    <string name="old_links_title">A11 cсылки в приложениях</string>
+    <string name="old_links_summary">Использовать старое поведения при открытии ссылок приложениями</string>
+
+    <string name="baikalos_power_level_ind_title">Цветовая индикация</string>
+    <string name="baikalos_power_level_ind_summary">Использовать цвет текста процента заряда для индикации установленного профиля энергосбережения</string>
+
+    <string name="baikalos_expand_all_notifications_title">Раскрывать все</string>
+    <string name="baikalos_expand_all_notifications_summary">Показывать все несгруппированные сообщения раскрытыми</string>
 
 </resources>

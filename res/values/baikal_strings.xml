@@ -81,6 +81,14 @@
     <string name="services_title">Optional Services</string>
     <string name="services_summary">Google, Huawei, Fdroid, etc...</string>
 
+    <!-- Face Unlock services -->
+    <string name="fu_enabled_title">Face Unlock Service</string>
+    <string name="fu_enabled_summary">Control Face Unlock Service. Reboot required for changes to take effect!</string>
+
+    <!-- Nfc services -->
+    <string name="nfc_enabled_title">NFC Service</string>
+    <string name="nfc_enabled_summary">Control NFC Service</string>
+
     <string name="audio_tweaks_a2dp_last_codec_title">Last used codec</string>
     <string name="audio_tweaks_a2dp_last_bitrate_title">Last used bitrate</string>
 
@@ -130,6 +138,14 @@
     <string name="sonif_a2dp_duplicate_speaker">Duplicate on speaker</string>
 
     <string name="app_sound_sonif_a2dp_title">App sound</string>
+
+    <string name="installer_default">Default</string>
+    <string name="installer_none">None</string>
+    <string name="installer_googleplay">Google Play</string>
+    <string name="installer_appgallery">App Gallery</string>
+    <string name="installer_rustore">Rustore</string>
+    <string name="installer_aosp_pi">AOSP Package Installer</string>
+    <string name="installer_google_pi">Google Package Installer</string>
 
     <string name="baikalos_freeze_cached_title">Cached Apps Freezer</string>
     <string name="baikalos_freeze_cached_summary">Enable Cached Apps Freezer</string>
@@ -197,5 +213,16 @@
     <string name="baikalos_enable_optional_components_title">Optional Services</string>
     <string name="baikalos_enable_optional_components_summary">Enable some optional services, like Nearby Discovery, etc... Reboot required</string>
 
+    <string name="art_inc_max_title">Increase ART limits</string>
+    <string name="art_inc_max_summary">Increase ART compiler memory and registers usage limits</string>
+
+    <string name="old_links_title">A11 in-app links</string>
+    <string name="old_links_summary">Use old A11 in-app links behavior</string>
+
+    <string name="baikalos_power_level_ind_title">Color Indication</string>
+    <string name="baikalos_power_level_ind_summary">Use colored percentage text to indicate current powersaving profile</string>
+
+    <string name="baikalos_expand_all_notifications_title">Expand all</string>
+    <string name="baikalos_expand_all_notifications_summary">Expand all non-group notifications by default</string>
 
 </resources>

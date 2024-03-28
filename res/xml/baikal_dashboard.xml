@@ -104,6 +104,7 @@
             android:fragment="com.crdroid.settings.fragments.Sound" />
 
         <PreferenceScreen
+            android:key="powersave_pref"
             android:title="@string/powersave_title"
             android:summary="@string/powersave_summary"
             android:icon="@drawable/ic_settings_powersave"

@@ -175,4 +175,9 @@
             android:title="Device Idle"
             android:defaultValue="false" />
 
+        <SwitchPreference
+            android:key="baikal_debug_network"
+            android:title="Network"
+            android:defaultValue="false" />
+
 </PreferenceScreen>

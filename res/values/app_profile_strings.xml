@@ -181,6 +181,11 @@
     <string name="app_profile_force_sonification_title">Force on Speaker</string>
     <string name="app_profile_force_sonification_summary">Force app sound to device speaker</string>
 
+    <string name="app_profile_installer_title">App Source</string>
+    <string name="app_profile_installer_summary">Force application source</string>
+
+    <string name="app_profile_scalefactor_title">Display Scale</string>
+
     <string name="app_profile_bypass_charging_title">Bypass Charging</string>
     <string name="app_profile_bypass_charging_summary">Do not charge the battery while this app is running. Power device directly from charger.</string>
 
@@ -242,6 +247,9 @@
     <string name="app_profile_idle_network_title">Network on Idle</string>
     <string name="app_profile_idle_network_summary">Allow network access in Idle Mode</string>
 
+    <string name="app_profile_hide_idle_title">Hide Idle</string>
+    <string name="app_profile_hide_idle_summary">Hide Idle mode from this app</string>
+
     <string name="file_access_title">Internal Memory Access</string>
     <string name="file_access_summary">Override internal memory access level</string>
 
@@ -284,5 +292,11 @@
 
     <string name="app_profile_hide_3p_title">Hide 3P</string>
     <string name="app_profile_hide_3p_summary">Hide all 3rd party apps from this app</string>
+
+    <string name="app_profile_allowwhileidle_title">Allow in Power Saver</string>
+    <string name="app_profile_allowwhileidle_summary">Do not block this app background activities in Power Saver</string>
+
+    <string name="app_profile_old_links_title">A11 in-app links</string>
+    <string name="app_profile_old_links_summary">Use old A11 in-app links behavior for this app</string>
 
 </resources>
