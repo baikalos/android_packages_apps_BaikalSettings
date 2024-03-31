@@ -181,4 +181,7 @@
     <string name="baikalos_expand_all_notifications_title">Раскрывать все</string>
     <string name="baikalos_expand_all_notifications_summary">Показывать все несгруппированные сообщения раскрытыми</string>
 
+    <string name="baikalos_pulse_duration_tile">Длительность уведомления</string>
+    <string name="baikalos_pulse_duration_summary">Время удержания экрана при показе пульсирующих уведомлений</string>
+
 </resources>

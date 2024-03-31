@@ -225,4 +225,13 @@
     <string name="baikalos_expand_all_notifications_title">Expand all</string>
     <string name="baikalos_expand_all_notifications_summary">Expand all non-group notifications by default</string>
 
+    <string name="baikalos_pulse_duration_tile">Pulsing duraion</string>
+    <string name="baikalos_pulse_duration_summary"></string>
+
+    <string name="baikalos_pulse_duration_in_tile">Pulsing In duration</string>
+    <string name="baikalos_pulse_duration_in_summary"></string>
+
+    <string name="baikalos_pulse_duration_out_tile">Pulsing Out duration</string>
+    <string name="baikalos_pulse_duration_out_summary"></string>
+
 </resources>
