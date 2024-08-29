@@ -83,6 +83,7 @@
     <string name="powesaver_screenon_title">Активный</string>
     <string name="powesaver_standby_title">Выключенный экран</string>
     <string name="powesaver_idle_title">Глубокий сон</string>
+    <string name="powesaver_screenon_charger_title">Зарядка</string>
 
     <string name="powesaver_default">По умолчанию</string>
     <string name="powesaver_low">Слегка</string>

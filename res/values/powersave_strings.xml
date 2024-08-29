@@ -87,6 +87,7 @@
     <string name="powesaver_screenon_title">Active</string>
     <string name="powesaver_standby_title">Screen off</string>
     <string name="powesaver_idle_title">Device Idle</string>
+    <string name="powesaver_screenon_charger_title">Charging</string>
 
     <string name="powesaver_default">Default</string>
     <string name="powesaver_low">Low</string>

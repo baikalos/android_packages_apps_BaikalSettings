@@ -114,6 +114,12 @@
             android:defaultValue="false" />
     </PreferenceCategory>
 
+    <!-- com.crdroid.settings.preferences.SystemPropertySwitchPreference
+        android:key="persist.baikal.a2dp_ignore_call_state"
+        android:title="@string/baikalos_a2dp_ignore_call_state_title"
+        android:summary="@string/baikalos_a2dp_ignore_call_state_summary"
+        android:defaultValue="false" / -->
+
 
     <Preference
             android:key="audio_tweaks_a2dp_last_codec"
@@ -126,6 +132,5 @@
             android:summary="%s"
             android:title="@string/audio_tweaks_a2dp_last_bitrate_title"
             android:selectable="false" />
-
 
 </PreferenceScreen>

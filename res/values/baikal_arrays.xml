@@ -58,12 +58,14 @@
     <string-array name="app_sonif_a2dp_listentries" translatable="false">
         <item>@string/sonif_a2dp_default</item>
         <item>@string/sonif_a2dp_force_speaker</item>
+        <item>@string/sonif_a2dp_duplicate_speaker</item>
     </string-array>
 
 
     <string-array name="app_sonif_a2dp_listvalues" translatable="false">
         <item>0</item>
         <item>1</item>
+        <item>2</item>
     </string-array>
 
     <string-array name="app_installer_listentries" translatable="false">
@@ -126,5 +128,60 @@
         <item>50</item>
     </string-array>
 
+    <string-array name="baikalos_audio_content_type_entries" translatable="false">
+        <item>UNKNOWN</item>
+        <item>SPEECH</item>
+        <item>MUSIC</item>
+        <item>MOVIE</item>
+        <item>SONIFICATION</item>
+    </string-array>
+
+    <string-array name="baikalos_audio_content_type_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+    <string-array name="baikalos_audio_usage_entries" translatable="false">
+        <item>UNKNOWN</item>
+        <item>MEDIA</item>
+        <item>VOICE_COMMUNICATION</item>
+        <item>VOICE_COMMUNICATION_SIGNALLING</item>
+        <item>ALARM</item>
+        <item>NOTIFICATION</item>
+        <item>NOTIFICATION_RINGTONE</item>
+        <item>NOTIFICATION_COMMUNICATION_REQUEST</item>
+        <item>NOTIFICATION_COMMUNICATION_INSTANT</item>
+        <item>NOTIFICATION_COMMUNICATION_DELAYED</item>
+        <item>NOTIFICATION_EVENT</item>
+        <item>ASSISTANCE_ACCESSIBILITY</item>
+        <item>ASSISTANCE_NAVIGATION_GUIDANCE</item>
+        <item>ASSISTANCE_SONIFICATION</item>
+        <item>GAME</item>
+        <item>VIRTUAL_SOURCE</item>
+        <item>ASSISTANT</item>
+    </string-array>
+
+    <string-array name="baikalos_audio_usage_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+    </string-array>
 
 </resources>

@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2016-2023 crDroid Android Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+    xmlns:lineage="http://schemas.android.com/apk/res-auto"
+    android:title="@string/experimental_title"
+    >
+
+    <PreferenceCategory
+        android:key="audio_route_catergory_1"
+        android:title="@string/audio_route_speaker_title" >
+
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.audio_usage_1"
+            android:title="Audio Usage"
+            android:dialogTitle="Audio Usage"
+            android:entries="@array/baikalos_audio_usage_entries"
+            android:entryValues="@array/baikalos_audio_usage_values"
+            android:defaultValue="0" />
+
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.content_type_1"
+            android:title="Audio Content Type"
+            android:dialogTitle="Audio Content Type"
+            android:entries="@array/baikalos_audio_content_type_entries"
+            android:entryValues="@array/baikalos_audio_content_type_values"
+            android:defaultValue="4" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="audio_route_catergory_2"
+        android:title="@string/audio_route_duplicate_title" >
+
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.audio_usage_2"
+            android:title="Audio Usage"
+            android:dialogTitle="Audio Usage"
+            android:entries="@array/baikalos_audio_usage_entries"
+            android:entryValues="@array/baikalos_audio_usage_values"
+            android:defaultValue="5" />
+
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.content_type_2"
+            android:title="Audio Content Type"
+            android:dialogTitle="Audio Content Type"
+            android:entries="@array/baikalos_audio_content_type_entries"
+            android:entryValues="@array/baikalos_audio_content_type_values"
+            android:defaultValue="4" />
+
+    </PreferenceCategory>
+
+    <com.crdroid.settings.preferences.SystemPropertySwitchPreference
+        android:key="persist.baikal.force_ad_enable"
+        android:title="@string/baikalos_enable_force_speaker_title"
+        android:summary="@string/baikalos_enable_force_speaker_summary"
+        android:defaultValue="false" />
+
+        <!--com.crdroid.settings.preferences.SystemPropertySwitchPreference
+            android:key="persist.flags.simplified_appear_fraction"
+            android:icon="@drawable/ic_settings_main"
+            android:title="simplified_appear_fraction"
+            android:defaultValue="false" />
+
+        <com.crdroid.settings.preferences.SystemPropertySwitchPreference
+            android:key="persist.flags.n_group_dismissal_animation"
+            android:icon="@drawable/ic_settings_main"
+            android:title="n_group_dismissal_animation"
+            android:defaultValue="false" />
+
+        <com.crdroid.settings.preferences.SystemPropertySwitchPreference
+            android:key="persist.flags.n_inline_reply_animation"
+            android:icon="@drawable/ic_settings_main"
+            android:title="n_inline_reply_animation"
+            android:defaultValue="false" />
+
+        <com.crdroid.settings.preferences.SystemPropertySwitchPreference
+            android:key="persist.flags.persist.flags.n_animate_big_picture"
+            android:icon="@drawable/ic_settings_main"
+            android:title="n_animate_big_picture"
+            android:defaultValue="false" />
+
+        <com.crdroid.settings.preferences.SystemPropertySwitchPreference
+            android:key="persist.flags.animated_n_shade_insets"
+            android:icon="@drawable/ic_settings_main"
+            android:title="animated_n_shade_insets"
+            android:defaultValue="false" />
+
+        <com.crdroid.settings.preferences.SystemPropertySwitchPreference
+            android:key="persist.flags.new_unlock_swipe_animation"
+            android:icon="@drawable/ic_settings_main"
+            android:title="new_unlock_swipe_animation"
+            android:defaultValue="false" />
+
+        <com.crdroid.settings.preferences.SystemPropertySwitchPreference
+            android:key="persist.flags.step_clock_animation"
+            android:icon="@drawable/ic_settings_main"
+            android:title="step_clock_animation"
+            android:defaultValue="true" />
+
+
+        <com.crdroid.settings.preferences.SystemPropertySwitchPreference
+            android:key="persist.wm.debug.predictive_back"
+            android:icon="@drawable/ic_settings_main"
+            android:title="predictive_back"
+            android:defaultValue="true" />
+
+        <com.crdroid.settings.preferences.SystemPropertySwitchPreference
+            android:key="persist.wm.debug.predictive_back_anim"
+            android:icon="@drawable/ic_settings_main"
+            android:title="predictive_back_anim"
+            android:defaultValue="true" />
+
+        <com.crdroid.settings.preferences.SystemPropertySwitchPreference
+            android:key="persist.wm.debug.predictive_back_always_enforce"
+            android:icon="@drawable/ic_settings_main"
+            android:title="predictive_back_always_enforce"
+            android:defaultValue="false" />
+
+        <com.crdroid.settings.preferences.SystemPropertySwitchPreference
+            android:key="persist.flags.new_back_affordance"
+            android:icon="@drawable/ic_settings_main"
+            android:title="new_back_affordance"
+            android:defaultValue="false" />
+
+        <com.crdroid.settings.preferences.SystemPropertySwitchPreference
+            android:key="persist.wm.debug.predictive_back_sysui_enable"
+            android:icon="@drawable/ic_settings_main"
+            android:title="predictive_back_sysui_enable"
+            android:defaultValue="true" />
+
+        <com.crdroid.settings.preferences.SystemPropertySwitchPreference
+            android:key="persist.wm.debug.predictive_back_bouncer_anim"
+            android:icon="@drawable/ic_settings_main"
+            android:title="predictive_back_bouncer_anim"
+            android:defaultValue="true" />
+
+        <com.crdroid.settings.preferences.SystemPropertySwitchPreference
+            android:key="persist.wm.debug.shade_allow_back_gesture"
+            android:icon="@drawable/ic_settings_main"
+            android:title="shade_allow_back_gesture"
+            android:defaultValue="false" />
+
+        <com.crdroid.settings.preferences.SystemPropertySwitchPreference
+            android:key="persist.wm.debug.shade_animate_back_gesture"
+            android:icon="@drawable/ic_settings_main"
+            android:title="shade_animate_back_gesture"
+            android:defaultValue="false" />
+
+        <com.crdroid.settings.preferences.SystemPropertySwitchPreference
+            android:key="persist.wm.debug.predictive_back_qs_dialog_anim"
+            android:icon="@drawable/ic_settings_main"
+            android:title="predictive_back_qs_dialog_anim"
+            android:defaultValue="true" />
+
+        <com.crdroid.settings.preferences.SystemPropertySwitchPreference
+            android:key="persist.flags.dual_shade"
+            android:icon="@drawable/ic_settings_main"
+            android:title="dual_shade"
+            android:defaultValue="false" /-->
+
+        <com.crdroid.settings.preferences.SystemPropertySwitchPreference
+            android:key="persist.flags.output_switcher_advanced_layout"
+            android:title="output_switcher_advanced_layout"
+            android:defaultValue="false" />
+
+        <com.crdroid.settings.preferences.SystemPropertySwitchPreference
+            android:key="persist.flags.output_switcher_routes_processing"
+            android:title="output_switcher_routes_processing"
+            android:defaultValue="false" />
+
+        <com.crdroid.settings.preferences.SystemPropertySwitchPreference
+            android:key="persist.flags.output_switcher_device_status"
+            android:title="output_switcher_device_status"
+            android:defaultValue="false" />
+
+
+        <!-- com.crdroid.settings.preferences.SystemPropertySwitchPreference
+            android:key="persist.flags.large_shade_interpolation"
+            android:icon="@drawable/ic_settings_main"
+            android:title="large_shade_interpolation"
+            android:defaultValue="true" /-->
+
+        <com.crdroid.settings.preferences.SystemPropertySwitchPreference
+            android:key="persist.sysui.ss.dw_decoupled"
+            android:title="dw_decoupled"
+            android:defaultValue="false" />
+
+
+
+</PreferenceScreen>

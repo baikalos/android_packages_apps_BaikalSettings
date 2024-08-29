@@ -88,6 +88,15 @@
             android:defaultValue="0"
             android:summary="%s"/>
 
+        <ListPreference
+            android:key="powesaver_screenon_charger"
+            android:title="@string/powesaver_screenon_charger_title"
+            android:entries="@array/powesaver_listentries"
+            android:entryValues="@array/powesaver_listvalues" 
+            android:defaultValue="0"
+            android:summary="%s"/>
+
+
     </PreferenceCategory>
 
     <PreferenceCategory

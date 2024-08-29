@@ -129,10 +129,23 @@
             android:fragment="com.crdroid.settings.fragments.Services" />
 
         <PreferenceScreen
+            android:title="@string/device_title"
+            android:summary="@string/device_summary"
+            android:icon="@drawable/ic_settings_misc"
+            android:fragment="com.crdroid.settings.fragments.Device" />
+
+
+        <PreferenceScreen
             android:title="@string/about_crdroid"
             android:summary="@string/about_summary"
             android:icon="@drawable/ic_settings_about"
             android:fragment="com.crdroid.settings.fragments.About" />
+
+        <PreferenceScreen
+            android:title="@string/experimental_crdroid"
+            android:summary="@string/experimental_summary"
+            android:icon="@drawable/ic_settings_device"
+            android:fragment="com.crdroid.settings.fragments.Experimental" />
 
         <!--PreferenceScreen
             android:title="@string/system_behaviour_title"

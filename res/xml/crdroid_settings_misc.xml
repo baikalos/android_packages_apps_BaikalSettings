@@ -116,7 +116,6 @@
             android:targetPackage="org.omnirom.omnijaws"
             android:targetClass="org.omnirom.omnijaws.SettingsActivity" />
     </Preference>
-RESTRICTED_NETWORKING_MODE
 
     <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
         android:key="restricted_networking_mode"
@@ -124,6 +123,13 @@ RESTRICTED_NETWORKING_MODE
         android:title="@string/restricted_networking_mode_title"
         android:summary="@string/restricted_networking_mode_summary"
         android:defaultValue="true" />
+
+    <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+        android:key="baikalos_full_data_saver"
+        android:icon="@drawable/ic_network"
+        android:title="@string/baikalos_full_data_saver_title"
+        android:summary="@string/baikalos_full_data_saver_summary"
+        android:defaultValue="false" />
 
     <ListPreference
  	    android:key="system_captive_portal"
@@ -170,14 +176,19 @@ RESTRICTED_NETWORKING_MODE
         android:summary="@string/old_links_summary"
         android:defaultValue="false" />
 
-
     <com.crdroid.settings.preferences.SystemPropertySwitchPreference
-        android:key="persist.baikal.use"
+        android:key="persist.baikal.art.inc_max"
         android:icon="@drawable/ic_backup"
         android:title="@string/art_inc_max_title"
         android:summary="@string/art_inc_max_summary"
         android:defaultValue="false" />
 
+    <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+        android:key="baikalos_reset_persistent_mac"
+        android:icon="@drawable/ic_network"
+        android:title="@string/reset_persistent_mac_title"
+        android:summary="@string/reset_persistent_mac_summary"
+        android:defaultValue="false" />
 
     <com.crdroid.settings.preferences.SystemPropertySwitchPreference
         android:key="persist.baikal.purge_package_cache"

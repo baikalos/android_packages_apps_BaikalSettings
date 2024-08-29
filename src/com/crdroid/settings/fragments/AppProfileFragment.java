@@ -112,6 +112,8 @@ public class AppProfileFragment extends SettingsPreferenceFragment
     private static final String APP_PROFILE_HIDE_HMS = "app_profile_hide_hms";
     private static final String APP_PROFILE_HIDE_GMS = "app_profile_hide_gms";
     private static final String APP_PROFILE_HIDE_3P = "app_profile_hide_3p";
+    private static final String APP_PROFILE_PRIV_PHONE_STATE = "app_profile_priv_phone_state";
+
 //    private static final String APP_PROFILE_DISABLE_TWL = "app_profile_disable_twl";
     private static final String VOLUME_SCALE = "app_profile_volume_scale";
 
@@ -174,6 +176,7 @@ public class AppProfileFragment extends SettingsPreferenceFragment
     private SwitchPreference mAppHideHMS;
     private SwitchPreference mAppHideGMS;
     private SwitchPreference mAppHide3P;
+    private SwitchPreference mAppPrivPhoneState;
 
     private ListPreference mAppReader;
     private ListPreference mForceSonification;
@@ -817,16 +820,10 @@ public class AppProfileFragment extends SettingsPreferenceFragment
 
             mAppStamina = (SwitchPreference) findPreference(APP_PROFILE_STAMINA);
             if( mAppStamina != null ) {
-                if( isStaminaWl() ) {
-                    mAppStamina.setChecked(true);
-                    mAppStamina.setEnabled(false);
-
-                    if( !mProfile.mStamina ) {
-                        mProfile.mStamina = true;
-                        mAppSettings.updateProfile(mProfile);
-                        mAppSettings.save();
-                    }
-                } else if( mBackend.isSysWhitelisted(mPackageName) || isStaminaImportant() ) {
+                if( isStaminaWl() && !mProfile.mStamina ) {
+                        mAppStamina.setChecked(true);
+                        mAppStamina.setEnabled(false);
+                } else if( !mProfile.mStamina && (mBackend.isSysWhitelisted(mPackageName) || isStaminaImportant() || mProfile.mStaminaEnforced) ) {
                     mAppStamina.setChecked(true);
                     mAppStamina.setEnabled(false);
                 } else {
@@ -1107,6 +1104,28 @@ public class AppProfileFragment extends SettingsPreferenceFragment
                 }
             }
 
+
+            mAppLocation = (ListPreference) findPreference(APP_PROFILE_LOCATION);
+            if( mAppLocation != null ) {
+                int level = mProfile.mLocationLevel;
+                Log.e(TAG, "mAppLocation: mPackageName=" + mPackageName + ", level=" + level);
+                mAppLocation.setValue(Integer.toString(level));
+                mAppLocation.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                    public boolean onPreferenceChange(Preference preference, Object newValue) {
+                        try {
+                            int val = Integer.parseInt(newValue.toString());
+                            mProfile.mLocationLevel = val;
+                            mAppSettings.updateProfile(mProfile);
+                            mAppSettings.save();
+                            Log.e(TAG, "mAppLocation: mPackageName=" + mPackageName + ", level=" + val);
+                        } catch(Exception re) {
+                            Log.e(TAG, "onCreate: mAppLocation Fatal! exception", re );
+                        }
+                        return true;
+                      }
+                    });
+            }
+
             mAppCamera = (ListPreference) findPreference(APP_PROFILE_CAMERA);
             if( mAppCamera != null ) {
                     int level = mProfile.mCamera;
@@ -1306,7 +1325,7 @@ public class AppProfileFragment extends SettingsPreferenceFragment
             mAppHide3P = (SwitchPreference) findPreference(APP_PROFILE_HIDE_3P);
             if( mAppHide3P != null ) {
                 boolean hide = mProfile.mHide3P;
-                Log.e(TAG, "mAppHideHMS: mPackageName=" + mPackageName + ", mAppHide3P=" + hide);
+                Log.e(TAG, "mAppHide3P: mPackageName=" + mPackageName + ", mAppHide3P=" + hide);
                 mAppHide3P.setChecked(hide);
                 mAppHide3P.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
                   public boolean onPreferenceChange(Preference preference, Object newValue) {
@@ -1317,6 +1336,26 @@ public class AppProfileFragment extends SettingsPreferenceFragment
                         Log.e(TAG, "mAppHide3P: mPackageName=" + mPackageName + ", mAppHide3P=" + mProfile.mHide3P);
                     } catch(Exception re) {
                         Log.e(TAG, "onCreate: mAppHide3P Fatal! exception", re );
+                    }
+                    return true;
+                  }
+                });
+            }
+
+            mAppPrivPhoneState = (SwitchPreference) findPreference(APP_PROFILE_PRIV_PHONE_STATE);
+            if( mAppPrivPhoneState != null ) {
+                boolean hide = mProfile.mPriviledgedPhoneState;
+                Log.e(TAG, "mAppPrivPhoneState: mPackageName=" + mPackageName + ", mAppPrivPhoneState=" + hide);
+                mAppPrivPhoneState.setChecked(hide);
+                mAppPrivPhoneState.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                  public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    try {
+                        mProfile.mPriviledgedPhoneState = ((Boolean)newValue);
+                        mAppSettings.updateProfile(mProfile);
+                        mAppSettings.save();
+                        Log.e(TAG, "mAppPrivPhoneState: mPackageName=" + mPackageName + ", mAppPrivPhoneState=" + mProfile.mPriviledgedPhoneState);
+                    } catch(Exception re) {
+                        Log.e(TAG, "onCreate: mAppPrivPhoneState Fatal! exception", re );
                     }
                     return true;
                   }

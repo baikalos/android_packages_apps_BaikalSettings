@@ -45,6 +45,9 @@ import java.util.concurrent.Semaphore;
 public class JdspSwitch extends SettingsPreferenceFragment {
 
     private static final String TAG = "JdspSwitch";
+
+    private static final String DOLBY_ENABLED = "dolby_enabled";
+    private static final String AFX_ENABLED = "afx_enabled";
     private static final String JDSP_ENABLED = "jdsp_enabled";
 
     private boolean mConfirmed = false;
@@ -71,6 +74,10 @@ public class JdspSwitch extends SettingsPreferenceFragment {
                 public boolean onPreferenceChange(Preference preference, Object newValue) {
                     try {
                         if( mEnabled == (Boolean)newValue ) return false;
+
+                        if( (Boolean) newValue ) Settings.Secure.putIntForUser(mResolver, AFX_ENABLED, 0, UserHandle.USER_CURRENT);
+                        if( (Boolean) newValue ) Settings.Secure.putIntForUser(mResolver, DOLBY_ENABLED, 0, UserHandle.USER_CURRENT);
+
                         Settings.Secure.putIntForUser(mResolver, JDSP_ENABLED, (Boolean) newValue ? 1:0, UserHandle.USER_CURRENT);
                         mEnabled = (Boolean)newValue;
                         Log.e(TAG, "mSwitchEnable: " + JDSP_ENABLED + "=" + mEnabled);

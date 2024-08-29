@@ -314,4 +314,5 @@
             android:summary="@string/notification_material_dismiss_summary" />
 
     </PreferenceCategory>
+
 </PreferenceScreen>

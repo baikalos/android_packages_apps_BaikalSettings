@@ -299,4 +299,7 @@
     <string name="app_profile_old_links_title">A11 in-app links</string>
     <string name="app_profile_old_links_summary">Use old A11 in-app links behavior for this app</string>
 
+    <string name="app_profile_priv_phone_state_title">Privileged Phone State</string>
+    <string name="app_profile_priv_phone_state_summary">Allow this app to read privileged phone state information (deviceid, IMEI, etc...)</string>
+
 </resources>

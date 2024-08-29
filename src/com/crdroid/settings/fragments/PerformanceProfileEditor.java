@@ -16,6 +16,7 @@
 package com.crdroid.settings.fragments;
 
 import android.app.Activity;
+import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
@@ -23,10 +24,12 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.SystemProperties;
+import android.provider.Settings;
+import android.util.Log;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.PreferenceCategory;
-
+import androidx.preference.Preference.OnPreferenceChangeListener;
 
 
 import com.android.internal.logging.nano.MetricsProto;
@@ -49,6 +52,8 @@ public class PerformanceProfileEditor extends SettingsPreferenceFragment {
 
     public static final String TAG = "PerformanceProfileEditor";
 
+    private ContentResolver mResolver;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,6 +63,8 @@ public class PerformanceProfileEditor extends SettingsPreferenceFragment {
         }
 
         addPreferencesFromResource(R.xml.baikal_profile_edit);
+
+        mResolver = getActivity().getContentResolver();
 
         createProfileEditorCategory("boost","Interaction Boost");
         createProfileEditorCategory("render","Rendering Boost");
@@ -147,6 +154,18 @@ public class PerformanceProfileEditor extends SettingsPreferenceFragment {
         pref.setEntryValues(res.getStringArray(values));
         pref.setDefaultValue("-99999");
         category.addPreference(pref);
+                    
+        pref.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+            public boolean onPreferenceChange(Preference preference, Object newValue) {
+                try {
+                    Settings.Global.putInt(mResolver,Settings.Global.BAIKALOS_PROFILE_MANAGER_REFRESH, 1);
+                    Log.e(TAG, "getPerfProfile: setForceReload");
+                } catch(Exception re) {
+                    Log.e(TAG, "onCreate: addProfileEditorListPreference " + key + ". Fatal! exception", re );
+                }
+                return true;
+            }
+        });
     }
 
     private boolean isPropertySupported(String key) {

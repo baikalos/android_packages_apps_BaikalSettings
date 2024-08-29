@@ -53,6 +53,8 @@ import com.crdroid.settings.fragments.SmartTrust;
 import com.crdroid.settings.fragments.Sound;
 import com.crdroid.settings.fragments.StatusBar;
 import com.crdroid.settings.fragments.UserInterface;
+import com.crdroid.settings.fragments.Experimental;
+import com.crdroid.settings.fragments.Device;
 
 public class crDroidSettingsLayout extends SettingsPreferenceFragment {
 
@@ -145,6 +147,7 @@ public class crDroidSettingsLayout extends SettingsPreferenceFragment {
             Sound.reset(rContext);
             StatusBar.reset(rContext);
             UserInterface.reset(rContext);
+            Device.reset(rContext);
             finish();
             startActivity(getIntent());
             return null;
@@ -180,7 +183,8 @@ public class crDroidSettingsLayout extends SettingsPreferenceFragment {
             frags[8] = new PowerSave();
             frags[9] = new SmartTrust();
             frags[10] = new Miscellaneous();
-            frags[11] = new About();
+            frags[11] = new Device();
+            frags[12] = new About();
         }
 
         @Override
@@ -213,7 +217,8 @@ public class crDroidSettingsLayout extends SettingsPreferenceFragment {
             getString(R.string.powersave_title),
             getString(R.string.smart_trust_title),
             getString(R.string.misc_title),
-            getString(R.string.about_crdroid)
+            getString(R.string.about_crdroid),
+            getString(R.string.device_title)
         };
         return titleString;
     }

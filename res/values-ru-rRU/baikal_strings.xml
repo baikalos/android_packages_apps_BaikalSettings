@@ -129,7 +129,7 @@
     <string name="disable_autorevoke_summary">Отключить автоматический отзыв разрешений. Требуется перезагрузка!</string>
 
     <string name="baikalos_reduced_brightness_title">Уменьшенная яркость</string>
-    <string name="baikalos_reduced_brightness_summary">Уменьшенная яркость в условиях умеренной освещенности</string>
+    <string name="baikalos_reduced_brightness_summary">Уменьшенная яркость в условиях умеренной освещенности. Требуется перезагрузка.</string>
 
     <string name="allow_downgrade_title">Понижение версии</string>
     <string name="allow_downgrade_summary">Разрешить установку приложений более ранних версий. ВНИМАНИЕ!!! Понижение версии может полностью сломать приложение. Данные приложения могут быть полностью уничтожены.</string>
@@ -148,6 +148,12 @@
 
     <string name="restricted_networking_mode_title">Ограничения сети</string>
     <string name="restricted_networking_mode_summary">Разрешить ограничения доступа к сети отдельных приложений</string>
+
+    <string name="baikalos_full_data_saver_title">Полная экономия данных</string>
+    <string name="baikalos_full_data_saver_summary">Отключить передачу данных для активных приложений по тарифицируемой сети в режиме экономии данных</string>
+
+    <string name="reset_persistent_mac_title">Обновить случайный MAC</string>
+    <string name="reset_persistent_mac_summary">Обновить случайный WiFi MAC адрес при следующем подключении к WiFi сети</string>
 
     <string name="purge_package_cache_title">Очистить кеш пакетов</string>
     <string name="purge_package_cache_summary">Очистить кеш пакетов установленных приложений при следующей загрузке</string>
@@ -183,5 +189,12 @@
 
     <string name="baikalos_pulse_duration_tile">Длительность уведомления</string>
     <string name="baikalos_pulse_duration_summary">Время удержания экрана при показе пульсирующих уведомлений</string>
+
+    <string name="baikalos_disable_gms_spoof_title">Запретить спуфинг GMS</string>
+    <string name="baikalos_disable_gms_spoof_summary">Запретить встроенную подмену идентификатора устройства для Сервисов Гугл</string>
+
+    <string name="baikalos_disable_certificate_spoof_title">Запретить спуфинг сертификатов</string>
+    <string name="baikalos_disable_certificate_spoof_summary">Запретить встроенную подмену сертификатов устройства для Сервисов Гугл</string>
+
 
 </resources>

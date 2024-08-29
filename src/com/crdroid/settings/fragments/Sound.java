@@ -48,6 +48,8 @@ import com.crdroid.settings.utils.TelephonyUtils;
 import java.util.List;
 import java.util.ArrayList;
 
+import com.android.internal.baikalos.BaikalSpoofer;
+
 import lineageos.providers.LineageSettings;
 
 @SearchIndexable

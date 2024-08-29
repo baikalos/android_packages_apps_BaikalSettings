@@ -72,6 +72,7 @@ public class PowerSave extends SettingsPreferenceFragment {
     private static final String POWERSAVER_SCREENON = "powesaver_screenon";
     private static final String POWERSAVER_STANDBY = "powesaver_standby";
     private static final String POWERSAVER_IDLE = "powesaver_idle";
+    private static final String POWERSAVER_SCREENON_CHARGER = "powesaver_screenon_charger";
 
     private static final String APP_FREEZER = "cached_apps_freezer";
 
@@ -85,6 +86,7 @@ public class PowerSave extends SettingsPreferenceFragment {
     private ListPreference mPowersaverScreenon;
     private ListPreference mPowersaverStandby;
     private ListPreference mPowersaverIdle;
+    private ListPreference mPowersaverScreenonCharger;
 
     private Preference mBackup;
     private Preference mRestore;
@@ -278,6 +280,25 @@ public class PowerSave extends SettingsPreferenceFragment {
                             Log.e(TAG, "mPowersaverScreenon: setProfile=" + newValue.toString());
                         } catch(Exception re) {
                             Log.e(TAG, "onCreate: mPowersaverScreenon Fatal! exception", re );
+                        }
+                        return true;
+                    }
+                });
+            }
+
+            mPowersaverScreenonCharger = (ListPreference) findPreference(POWERSAVER_SCREENON_CHARGER);
+            if( mPowersaverScreenonCharger != null ) { 
+                int profile = Settings.Global.getInt(resolver,Settings.Global.BAIKALOS_POWER_LEVEL_ON_CHARGER, 0);
+                if( profile == -1 ) profile = 7;
+                Log.e(TAG, "mPowersaverScreenonCharger: getProfile=" + profile);
+                try { mPowersaverScreenonCharger.setValue(Integer.toString(profile)); } catch (Exception rre) { }
+                mPowersaverScreenonCharger.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                    public boolean onPreferenceChange(Preference preference, Object newValue) {
+                        try {
+                            Settings.Global.putInt(resolver,Settings.Global.BAIKALOS_POWER_LEVEL_ON_CHARGER, Integer.parseInt(newValue.toString()));
+                            Log.e(TAG, "mPowersaverScreenonCharger: setProfile=" + newValue.toString());
+                        } catch(Exception re) {
+                            Log.e(TAG, "onCreate: mPowersaverScreenonCharger Fatal! exception", re );
                         }
                         return true;
                     }

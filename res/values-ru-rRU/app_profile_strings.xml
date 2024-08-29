@@ -260,4 +260,7 @@
     <string name="app_profile_old_links_title">A11 cсылки в приложении</string>
     <string name="app_profile_old_links_summary">Использовать старое поведения при открытии ссылок этим приложением</string>
 
+    <string name="app_profile_priv_phone_state_title">Привилегированный доступ</string>
+    <string name="app_profile_priv_phone_state_summary">Разрешить этому приложению доступ к привилегированной информации (deviceid, IMEI, etc...)</string>
+
 </resources>

@@ -4,6 +4,12 @@
     <string name="log_it_title">Save Logs</string>
     <string name="log_it_summary">Logcat, kmesg, dmesg, dumpsys</string>
 
+    <string name="experimental_title">Experimental</string>
+    <string name="experimental_summary">Experimental system settings and flags</string>
+
+    <string name="experimental_crdroid">Experimental</string>
+    
+
     <string name="logcat_title">Logcat</string>
     <string name="logcat_radio_title">Radio log</string>
     <string name="kmesg_title">Kmesg</string>
@@ -108,6 +114,9 @@
     <string name="restricted_networking_mode_title">Restricted networking</string>
     <string name="restricted_networking_mode_summary">Enable LineageOS options to control per-app networks access</string>
 
+    <string name="baikalos_full_data_saver_title">Full Datasaver</string>
+    <string name="baikalos_full_data_saver_summary">Disable metered data acces for foreground apps in Data Saver mode</string>
+
     <string name="disable_autorevoke_title">Disable Auto Revoke</string>
     <string name="disable_autorevoke_summary">Disable permissions auto revoke globally. Reboot required!</string>
 
@@ -160,7 +169,7 @@
     <string name="brightness_curve_lightest">Lightest</string>
 
     <string name="baikalos_reduced_brightness_title">Reduced brightness</string>
-    <string name="baikalos_reduced_brightness_summary">Reduced brightness in moderate ambient light</string>
+    <string name="baikalos_reduced_brightness_summary">Reduced brightness in moderate ambient light. Require reboot.</string>
 
     <string name="allow_downgrade_title">Allow downgrade</string>
     <string name="allow_downgrade_summary">Allow app downgrade. CAUTION!!! Downgrading may break the application. Application data may be completely corrupted.</string>
@@ -176,6 +185,9 @@
 
     <string name="app_profile_heavy_cpu_title">Heavy CPU</string>
     <string name="app_profile_heavy_cpu_summary">This app uses a lot of CPU. Drop down priority of any background app.</string>
+
+    <string name="reset_persistent_mac_title">Renew random MAC</string>
+    <string name="reset_persistent_mac_summary">Renew randomized WiFi MAC address on a next connect attempt</string>
 
     <string name="purge_package_cache_title">Purge package cache</string>
     <string name="purge_package_cache_summary">Purge package cache on next system boot</string>
@@ -233,5 +245,35 @@
 
     <string name="baikalos_pulse_duration_out_tile">Pulsing Out duration</string>
     <string name="baikalos_pulse_duration_out_summary"></string>
+
+    <string name="baikalos_a2dp_ignore_call_state_title">Ignore Call State</string>
+    <string name="baikalos_a2dp_ignore_call_state_summary">Igore Call State for A2DP service</string>
+
+    <string name="baikalos_disable_gms_spoof_title">Disable GMS spoofing</string>
+    <string name="baikalos_disable_gms_spoof_summary">Disable DeviceID spoofing for Google Services</string>
+
+    <string name="baikalos_disable_certificate_spoof_title">Disable Certificate spoofing</string>
+    <string name="baikalos_disable_certificate_spoof_summary">Disable Certificate spoofing for Google Services</string>
+
+    <string name="device_title">Device ID</string>
+    <string name="device_summary">Device ID for GMS spoofing</string>
+
+    <string name="baikalos_spoof_manufacturer_title">MANUFACTURER</string>
+    <string name="baikalos_spoof_brand_title">BRAND</string>
+    <string name="baikalos_spoof_product_title">PRODUCT</string>
+    <string name="baikalos_spoof_model_title">MODEL</string>
+    <string name="baikalos_spoof_device_title">DEVICE</string>
+    <string name="baikalos_spoof_fingerprint_title">FINGERPRINT</string>
+    <string name="baikalos_spoof_id_title">ID</string>
+    <string name="baikalos_spoof_sp_title">SECURITY PATCH</string>
+    <string name="baikalos_spoof_first_api_level_title">First API Level</string>
+
+    <string name="spoof_setings_reset_summary">Reset to system default values</string>
+    <string name="spoof_setings_reset_title">Reset</string>
+
+    <string name="audio_route_speaker_title">Force to speaker</string>
+    <string name="audio_route_duplicate_title">Duplicate to speaker</string>
+    <string name="baikalos_enable_force_speaker_title">Enforce speaker</string>
+    <string name="baikalos_enable_force_speaker_summary">Enforce speaker usage. This will override above values and break duplication.</string>
 
 </resources>
