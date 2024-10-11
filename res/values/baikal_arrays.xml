@@ -58,14 +58,14 @@
     <string-array name="app_sonif_a2dp_listentries" translatable="false">
         <item>@string/sonif_a2dp_default</item>
         <item>@string/sonif_a2dp_force_speaker</item>
-        <item>@string/sonif_a2dp_duplicate_speaker</item>
+        <!-- item>@string/sonif_a2dp_duplicate_speaker</item -->
     </string-array>
 
 
     <string-array name="app_sonif_a2dp_listvalues" translatable="false">
         <item>0</item>
         <item>1</item>
-        <item>2</item>
+        <!-- item>2</item -->
     </string-array>
 
     <string-array name="app_installer_listentries" translatable="false">
@@ -182,6 +182,24 @@
         <item>14</item>
         <item>15</item>
         <item>16</item>
+    </string-array>
+
+    <string-array name="baikalos_zram_entries" translatable="false">
+        <item>Disabled</item>
+        <item>512M</item>
+        <item>1024M</item>
+        <item>2048M</item>
+        <item>3072M</item>
+        <item>4096M</item>
+    </string-array>
+
+    <string-array name="baikalos_zram_values" translatable="false">
+        <item>0</item>
+        <item>512</item>
+        <item>1024</item>
+        <item>2048</item>
+        <item>3072</item>
+        <item>4096</item>
     </string-array>
 
 </resources>

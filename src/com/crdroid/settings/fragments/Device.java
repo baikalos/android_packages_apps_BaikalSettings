@@ -66,6 +66,13 @@ public class Device extends SettingsPreferenceFragment {
         mContext = getActivity().getApplicationContext();
         final PreferenceScreen prefScreen = getPreferenceScreen();
 
+        boolean isCertificateSpooferAvailable = mContext.getResources().
+                getBoolean(com.android.internal.R.bool.config_certificateSpooferAvailable);
+
+        if (!isCertificateSpooferAvailable) {
+            ((Preference) findPreference("baikalos_disable_certificate_spoof")).setVisible(false);
+        }
+
         mReset = (Preference) findPreference("spoof_setings_reset");
         fill();
     }
@@ -114,6 +121,8 @@ public class Device extends SettingsPreferenceFragment {
         SystemProperties.set("persist.spoof.product", "");
         SystemProperties.set("persist.spoof.device", "");
         SystemProperties.set("persist.spoof.id", "");
+        SystemProperties.set("persist.spoof.release", "");
+        SystemProperties.set("persist.spoof.incremental", "");
         SystemProperties.set("persist.spoof.security_patch", "");
         SystemProperties.set("persist.spoof.firs_api_level", "");
         fill();
@@ -127,6 +136,8 @@ public class Device extends SettingsPreferenceFragment {
             fill("persist.spoof.product", BaikalSpoofer.PRODUCT);
             fill("persist.spoof.device", BaikalSpoofer.DEVICE);
             fill("persist.spoof.id", BaikalSpoofer.ID);
+            fill("persist.spoof.release", BaikalSpoofer.RELEASE);
+            fill("persist.spoof.incremental", BaikalSpoofer.INCREMENTAL);
             fill("persist.spoof.security_patch", BaikalSpoofer.SECURITY_PATCH);
             fill("persist.spoof.firs_api_level", String.valueOf(BaikalSpoofer.FIRST_API_LEVEL));
     }

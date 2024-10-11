@@ -869,24 +869,29 @@ public class AppProfileFragment extends SettingsPreferenceFragment
             mAppBackgroundProfile = (ListPreference) findPreference(APP_PROFILE_BACKGROUND);
             if( mAppBackgroundProfile != null ) {
 
-                if( mBackend.isSysWhitelisted(mPackageName) ) {
+                boolean isSystemWhitelisted = mBackend.isSysWhitelisted(mPackageName);
+                if( isSystemWhitelisted ) {
                     Log.e(TAG, "getAppBackground: mPackageName=" + mPackageName + ", isSysWhitelisted=true");
                     mAppBackgroundProfile.setEnabled(false);
-                    if( mProfile.mBackgroundMode >= 0 ) {
+                    if( mProfile.mBackgroundModeConfig >= 0 ) {
                         mAppBackgroundProfile.setValue("-1");
-                        mProfile.mBackgroundMode = -1;
+                        mProfile.mBackgroundModeConfig = -1;
                         mAppSettings.updateProfile(mProfile);
                         mAppSettings.save();
                     }
                 } else {
-                    int background = mProfile.mBackgroundMode;
+                    int background = mProfile.mBackgroundModeConfig;
                     Log.e(TAG, "getAppBackground: mPackageName=" + mPackageName + ", background=" + background);
                     mAppBackgroundProfile.setValue(Integer.toString(background));
                     mAppBackgroundProfile.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
                       public boolean onPreferenceChange(Preference preference, Object newValue) {
                         try {
                             int val = Integer.parseInt(newValue.toString());
-                            mProfile.mBackgroundMode = val;
+                            if( isSystemWhitelisted && val >= 0 ) {
+                                Log.e(TAG, "setAppBackground: ignore limited background mode for system whitelisted app mPackageName=" + mPackageName + ",background=" + val);
+                                return false;
+                            }
+                            mProfile.mBackgroundModeConfig = val;
                             mAppSettings.updateProfile(mProfile);
                             mAppSettings.save();
                             Log.e(TAG, "setAppBackground: mPackageName=" + mPackageName + ",background=" + val);

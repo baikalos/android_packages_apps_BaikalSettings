@@ -52,6 +52,7 @@
     <string name="rotation_auto">Автоматически</string>
     <string name="background_restrictions_super">Супер</string>
     <string name="background_restrictions_unlimited">Неограниченный</string>
+    <string name="background_restrictions_auto">Автоматически</string>
     <string name="background_restrictions_default">По умолчанию</string>
     <string name="background_restrictions_limited">Ограниченный</string>
     <string name="background_restrictions_restricted">Заблокированный</string>

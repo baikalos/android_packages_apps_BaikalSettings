@@ -69,4 +69,10 @@
     <string name="ps_profile_KillInBackground_title">Kill idle apps</string>
     <string name="ps_profile_KillInBackground_summary">Kill apps idle in background</string>
 
+    <string name="ps_profile_lessRestrictiveBackgroundPolicy_title">Less restrictions</string>
+    <string name="ps_profile_lessRestrictiveBackgroundPolicy_summary">Less restrictive background limiter</string>
+
+    <string name="ps_profile_disableBackgroundByDefault_title">Disable by default</string>
+    <string name="ps_profile_disableBackgroundByDefault_summary">Disable background execution by default</string>
+
 </resources>

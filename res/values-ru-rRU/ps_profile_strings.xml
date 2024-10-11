@@ -69,4 +69,10 @@
     <string name="ps_profile_KillInBackground_title">Закрывать простаивающие</string>
     <string name="ps_profile_KillInBackground_summary">Закрывать простаивающие фоновые приложения</string>
 
+    <string name="ps_profile_lessRestrictiveBackgroundPolicy_title">Меньше ограничений</string>
+    <string name="ps_profile_lessRestrictiveBackgroundPolicy_summary">Меньше ограничений фоновой активности</string>
+
+    <string name="ps_profile_disableBackgroundByDefault_title">Отключить по умолчанию</string>
+    <string name="ps_profile_disableBackgroundByDefault_summary">Отключить фоновое исполнение по умолчанию</string>
+
 </resources>

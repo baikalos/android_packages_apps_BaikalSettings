@@ -75,8 +75,8 @@ public class JdspSwitch extends SettingsPreferenceFragment {
                     try {
                         if( mEnabled == (Boolean)newValue ) return false;
 
-                        if( (Boolean) newValue ) Settings.Secure.putIntForUser(mResolver, AFX_ENABLED, 0, UserHandle.USER_CURRENT);
-                        if( (Boolean) newValue ) Settings.Secure.putIntForUser(mResolver, DOLBY_ENABLED, 0, UserHandle.USER_CURRENT);
+                        //if( (Boolean) newValue ) Settings.Secure.putIntForUser(mResolver, AFX_ENABLED, 0, UserHandle.USER_CURRENT);
+                        //if( (Boolean) newValue ) Settings.Secure.putIntForUser(mResolver, DOLBY_ENABLED, 0, UserHandle.USER_CURRENT);
 
                         Settings.Secure.putIntForUser(mResolver, JDSP_ENABLED, (Boolean) newValue ? 1:0, UserHandle.USER_CURRENT);
                         mEnabled = (Boolean)newValue;

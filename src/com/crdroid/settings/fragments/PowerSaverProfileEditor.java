@@ -434,6 +434,44 @@ public class PowerSaverProfileEditor extends SettingsPreferenceFragment {
                 });
             }
 
+            switchPreference = (SwitchPreference) findPreference("ps_profile_lessRestrictiveBackgroundPolicy");
+            if( switchPreference != null ) {
+                switchPreference.setChecked(mPolicy.lessRestrictiveBackgroundPolicy);
+                Log.e(TAG, "ps_profile_lessRestrictiveBackgroundPolicy: mName=" + mName + ", value=" + mPolicy.lessRestrictiveBackgroundPolicy);
+                switchPreference.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                    public boolean onPreferenceChange(Preference preference, Object newValue) {
+                        try {
+                            mPolicy.lessRestrictiveBackgroundPolicy = ((Boolean)newValue);
+                            mPowerSaverSettings.updatePolicy(mPolicy);
+                            mPowerSaverSettings.save();
+                            Log.e(TAG, "ps_profile_lessRestrictiveBackgroundPolicy: mName=" + mName + ", value=" + (Boolean)newValue);
+                        } catch(Exception re) {
+                            Log.e(TAG, "onCreate: ps_profile_lessRestrictiveBackgroundPolicy Fatal! exception", re );
+                        }
+                        return true;
+                    }
+                });
+            }
+
+            switchPreference = (SwitchPreference) findPreference("ps_profile_disableBackgroundByDefault");
+            if( switchPreference != null ) {
+                switchPreference.setChecked(mPolicy.disableBackgroundByDefault);
+                Log.e(TAG, "ps_profile_disableBackgroundByDefault: mName=" + mName + ", value=" + mPolicy.disableBackgroundByDefault);
+                switchPreference.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                    public boolean onPreferenceChange(Preference preference, Object newValue) {
+                        try {
+                            mPolicy.disableBackgroundByDefault = ((Boolean)newValue);
+                            mPowerSaverSettings.updatePolicy(mPolicy);
+                            mPowerSaverSettings.save();
+                            Log.e(TAG, "ps_profile_disableBackgroundByDefault: mName=" + mName + ", value=" + (Boolean)newValue);
+                        } catch(Exception re) {
+                            Log.e(TAG, "onCreate: ps_profile_disableBackgroundByDefault Fatal! exception", re );
+                        }
+                        return true;
+                    }
+                });
+            }
+
             listPreference = (ListPreference) findPreference("ps_profile_SoundTriggerMode");
             if( listPreference != null ) {
                 int value = mPolicy.soundTriggerMode;

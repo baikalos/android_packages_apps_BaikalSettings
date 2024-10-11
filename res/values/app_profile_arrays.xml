@@ -5,6 +5,7 @@
     <string-array name="background_restrictions_entries">
     	<item>@string/background_restrictions_super</item>
     	<item>@string/background_restrictions_unlimited</item>
+    	<item>@string/background_restrictions_auto</item>
     	<item>@string/background_restrictions_default</item>
     	<item>@string/background_restrictions_limited</item>
     	<item>@string/background_restrictions_disabled</item>
@@ -14,6 +15,7 @@
     	<item>-2</item>
     	<item>-1</item>
     	<item>0</item>
+    	<item>100</item>
     	<item>1</item>
     	<item>2</item>
     </string-array>

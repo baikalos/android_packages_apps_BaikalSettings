@@ -70,6 +70,16 @@
         />
 
     <com.crdroid.settings.preferences.SystemPropertiesEditTextPreference
+        android:key="persist.spoof.incremental"
+        android:title="@string/baikalos_spoof_incremental_title"
+        />
+
+    <com.crdroid.settings.preferences.SystemPropertiesEditTextPreference
+        android:key="persist.spoof.release"
+        android:title="@string/baikalos_spoof_release_title"
+        />
+
+    <com.crdroid.settings.preferences.SystemPropertiesEditTextPreference
         android:key="persist.spoof.security_patch"
         android:title="@string/baikalos_spoof_sp_title"
         />

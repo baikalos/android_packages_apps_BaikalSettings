@@ -21,7 +21,7 @@
     android:title="@string/experimental_title"
     >
 
-    <PreferenceCategory
+    <!-- PreferenceCategory
         android:key="audio_route_catergory_1"
         android:title="@string/audio_route_speaker_title" >
 
@@ -31,7 +31,7 @@
             android:dialogTitle="Audio Usage"
             android:entries="@array/baikalos_audio_usage_entries"
             android:entryValues="@array/baikalos_audio_usage_values"
-            android:defaultValue="0" />
+            android:defaultValue="13" />
 
         <com.crdroid.settings.preferences.SystemPropertiesListPreference
             android:key="persist.baikal.content_type_1"
@@ -53,7 +53,7 @@
             android:dialogTitle="Audio Usage"
             android:entries="@array/baikalos_audio_usage_entries"
             android:entryValues="@array/baikalos_audio_usage_values"
-            android:defaultValue="5" />
+            android:defaultValue="4" />
 
         <com.crdroid.settings.preferences.SystemPropertiesListPreference
             android:key="persist.baikal.content_type_2"
@@ -61,9 +61,9 @@
             android:dialogTitle="Audio Content Type"
             android:entries="@array/baikalos_audio_content_type_entries"
             android:entryValues="@array/baikalos_audio_content_type_values"
-            android:defaultValue="4" />
+            android:defaultValue="0" />
 
-    </PreferenceCategory>
+    </PreferenceCategory -->
 
     <com.crdroid.settings.preferences.SystemPropertySwitchPreference
         android:key="persist.baikal.force_ad_enable"

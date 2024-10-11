@@ -161,7 +161,7 @@ public class Sound extends SettingsPreferenceFragment {
         String sBitrate = SystemProperties.get(SYSTEM_PROPERTY_A2DP_LAST_BITRATE,"");
 
 
-        if( sCodec != null && sCodec.startsWith("SBC HD") ) {
+        if( sCodec != null && (sCodec.startsWith("SBC HD") || sCodec.startsWith("LHDC")) ) {
             codec.setVisible(true);
             codec.setSummary(sCodec);
             bitrate.setVisible(true);

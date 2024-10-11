@@ -265,6 +265,8 @@
     <string name="baikalos_spoof_device_title">DEVICE</string>
     <string name="baikalos_spoof_fingerprint_title">FINGERPRINT</string>
     <string name="baikalos_spoof_id_title">ID</string>
+    <string name="baikalos_spoof_incremental_title">INCREMENTAL</string>
+    <string name="baikalos_spoof_release_title">RELEASE</string>
     <string name="baikalos_spoof_sp_title">SECURITY PATCH</string>
     <string name="baikalos_spoof_first_api_level_title">First API Level</string>
 
@@ -275,5 +277,7 @@
     <string name="audio_route_duplicate_title">Duplicate to speaker</string>
     <string name="baikalos_enable_force_speaker_title">Enforce speaker</string>
     <string name="baikalos_enable_force_speaker_summary">Enforce speaker usage. This will override above values and break duplication.</string>
+
+    <string name="baikalos_power_zram_title">ZRAM</string>
 
 </resources>

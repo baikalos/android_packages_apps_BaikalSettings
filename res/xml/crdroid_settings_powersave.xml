@@ -238,4 +238,12 @@
             android:summary="@string/baikalos_display_boost_summary"
         / -->
 
+        <com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.zramsize"
+            android:title="@string/baikalos_power_zram_title"
+            android:dialogTitle="@string/baikalos_power_zram_title"
+            android:entries="@array/baikalos_zram_entries"
+            android:entryValues="@array/baikalos_zram_values"
+            android:defaultValue="2048" />
+
 </PreferenceScreen>

@@ -190,6 +190,9 @@
     <string name="baikalos_pulse_duration_tile">Длительность уведомления</string>
     <string name="baikalos_pulse_duration_summary">Время удержания экрана при показе пульсирующих уведомлений</string>
 
+    <string name="device_title">Идентификация Устройства</string>
+    <string name="device_summary">Идентификаторы устройства для Сервисов гугл</string>
+
     <string name="baikalos_disable_gms_spoof_title">Запретить спуфинг GMS</string>
     <string name="baikalos_disable_gms_spoof_summary">Запретить встроенную подмену идентификатора устройства для Сервисов Гугл</string>
 

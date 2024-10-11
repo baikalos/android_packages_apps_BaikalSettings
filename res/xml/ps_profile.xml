@@ -120,6 +120,18 @@
             android:defaultValue="false" />
 
         <SwitchPreference
+            android:key="ps_profile_lessRestrictiveBackgroundPolicy"
+            android:title="@string/ps_profile_lessRestrictiveBackgroundPolicy_title"
+            android:summary="@string/ps_profile_lessRestrictiveBackgroundPolicy_summary"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="ps_profile_disableBackgroundByDefault"
+            android:title="@string/ps_profile_disableBackgroundByDefault_title"
+            android:summary="@string/ps_profile_disableBackgroundByDefault_summary"
+            android:defaultValue="false" />
+
+        <SwitchPreference
             android:key="ps_profile_KillInBackground"
             android:title="@string/ps_profile_KillInBackground_title"
             android:summary="@string/ps_profile_KillInBackground_summary"
