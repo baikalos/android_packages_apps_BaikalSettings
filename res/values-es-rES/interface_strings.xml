@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+    <!-- Power Save -->
+    <string name="interface_title">Interfaz</string>
+    <string name="interface_summary">Ajustes de la interfaz</string>
+
+    <string name="system_tweaks_sec_hwc_title">Desactivar HWC secundario</string>
+    <string name="system_tweaks_sec_hwc_summary">Desactiva la superposición de hardware en la pantalla secundaria. Soluciona el parpadeo en Android Auto y WFD.\n¡REINICIO REQUERIDO!</string>
+
+    <string name="baikalos_dlsb_enabled_title">Barra de estado de dos líneas</string>
+    <string name="baikalos_dlsb_enabled_summary">Activa la barra de estado de dos líneas. ¡Es necesario reiniciar!</string>
+
+    <!-- Old mobile type icons -->
+    <string name="use_old_mobiletype_title">Ícono pequeño de tipo móvil</string>
+    <string name="use_old_mobiletype_summary">Muestra el icono de tipo móvil en la parte superior del indicador de señal</string>
+
+    <string name="doze_title">Despertar pantalla para notificaciones</string>
+    <string name="doze_summary">Cuando la pantalla está oscura, se enciende para recibir nuevas notificaciones</string>
+
+    <string name="baikalos_headsup_incall_title">Aviso de llamada</string>
+    <string name="baikalos_headsup_incall_summary">No utiliza notificación emergente para la llamada entrante</string>
+    <string name="baikalos_headsup_force_sms_title">Forzar SMS</string>
+    <string name="baikalos_headsup_force_sms_summary">Fuerza las notificaciones emergentes para la aplicación predeterminada de SMS</string>
+
+    <string name="fp_wake_unlock_title">Activar despertador de huella</string>
+    <string name="fp_wake_unlock_summary">Despierta el dispositivo al tocar el escáner de huella dactilar</string>
+
+    <string name="baikalos_statusbar_color_icons_title">Iconos de color</string>
+    <string name="baikalos_statusbar_color_icons_summary">Utiliza iconos de color de estilo antiguo para el área de notificación de la barra de estado</string>
+
+    <string name="baikalos_keep_pinned_in_recents_title">Mantener fijado en recientes</string>
+    <string name="baikalos_keep_pinned_in_recents_summary">Mantiene las aplicaciones fijadas en la lista de recientes</string>
+
+    <string name="trust_enable_title">Smart Trust</string>
+    <string name="trust_enable_summary">Activa Smart Trust de BaikalOS</string>
+
+    <string name="trust_always_title">Confiar siempre</string>
+    <string name="trust_always_summary">Mantiene el dispositivo desbloqueado hasta que se bloquee manualmente o se agote el tiempo de confianza (4 horas)</string>
+
+    <string name="trust_bt_dev_title">Dispositivos Bluetooth</string>
+    <string name="trust_bt_dev_summary">Dispositivos Bluetooth para mantener el dispositivo desbloqueado</string>
+
+    <string name="baikalos_proximity_disable_title">Desactivar proximidad</string>
+    <string name="baikalos_proximity_disable_summary">Desactiva el sensor de proximidad</string>
+
+</resources>
