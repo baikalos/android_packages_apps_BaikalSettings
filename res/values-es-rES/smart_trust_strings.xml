@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+
+    <string name="smart_trust_title">Smart Trust</string>
+    <string name="smart_trust_summary">Ajustes de Smart Trust de BaikalOS</string>
+
+    <string name="trust_enable_title">Smart Trust</string>
+    <string name="trust_enable_summary">Activa Smart Trust de BaikalOS</string>
+
+    <string name="trust_always_title">Confiar siempre</string>
+    <string name="trust_always_summary">Mantiene el dispositivo desbloqueado hasta que se bloquee manualmente o se agote el tiempo de confianza (4 horas)</string>
+
+    <string name="trust_incall_title">Confiar en llamada</string>
+    <string name="trust_incall_summary">Mantiene el dispositivo desbloqueado mientras hay una llamada activa</string>
+
+    <string name="trust_bt_dev_title">Dispositivos Bluetooth</string>
+    <string name="trust_bt_dev_summary">Dispositivos Bluetooth para mantener el dispositivo desbloqueado</string>
+
+</resources>
