@@ -1,0 +1,283 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+
+    <string name="log_it_title">Guardar registros</string>
+    <string name="log_it_summary">Logcat, kmesg, dmesg, dumpsys</string>
+
+    <string name="experimental_title">Experimental</string>
+    <string name="experimental_summary">Ajustes y banderas experimentales del sistema</string>
+
+    <string name="experimental_crdroid">Experimental</string>
+    
+
+    <string name="logcat_title">Logcat</string>
+    <string name="logcat_radio_title">Radio log</string>
+    <string name="kmesg_title">Kmesg</string>
+    <string name="dmesg_title">Dmesg</string>
+    <string name="dumpsys_title">Dumpsys</string>
+    <string name="log_it_now_title">Guardar</string>
+    <string name="log_it_dialog_title">Guardar</string>
+    <string name="logcat_warning">Compartirlo</string>
+    <string name="share_title">Compartir...</string>
+    <string name="log_it_share_subject">Registros de BaikalOS</string>
+    <string name="log_it_now_summary">Espere a que se creen los registros</string>
+    <string name="log_it_logs_in_progress">Se están creando los registros…</string>
+    <string name="log_it_share_type_title">Método de compartir</string>
+    <string name="log_it_share_type_zip">Archivo ZIP</string>
+    <string name="log_it_share_type_haste">Subir a BaikalOS Haste</string>
+    <string name="log_it_share_via">Compartir vía</string>
+
+    <string name="baikalos_debug_title">Registro detallado</string>
+    <string name="baikalos_debug_summary">Activa el registro detallado. No activar sin motivo</string>
+
+
+    <!-- Device parts -->
+    <string name="device_part_title">Características del dispositivo</string>
+    <string name="device_part_category">Dispositivo</string>
+
+    <string name="user_interface_category">Interfaz de usuario</string>
+    <string name="system_category">Ajustes de BaikalOS</string>
+    <string name="other_category">Otros</string>
+
+    <!-- Display cutout -->
+    <string name="status_bar_notch_category_title">Recorte de pantalla</string>
+    <string name="display_hide_notch_title">Ocultar recorte de pantalla</string>
+    <string name="display_hide_notch_summary">Desactiva el relleno negro para el recorte de la pantalla</string>
+
+    <!-- Personalization Categories -->
+    <string name="button_summary">Teclas de hardware, menú de encendido</string>
+    <string name="lockscreen_summary">Ajustes de la pantalla de bloqueo</string>
+    <string name="misc_summary">Todo lo que no se sabe dónde colocar</string>
+    <string name="navigation_summary">¡Ponte en marcha, Jack!</string>
+    <string name="notifications_summary">Molestadores</string>
+    <string name="quicksettings_summary">Vamos a tratar de hacer esto un poco más utilizable</string>
+    <string name="sound_summary">Dijeron que tocara más fuerte que el infierno</string>
+    <string name="statusbar_summary">Barra de estado, iconos, etc...</string>
+    <string name="display_title">Visualización</string>
+    <string name="ui_summary">Ajustes de la interfaz de usuario</string>
+    <string name="about_summary">Bits de BaikalOS</string>
+
+    <!-- Google services -->
+    <string name="gms_enabled_title">Servicios móviles de Google</string>
+    <string name="gms_enabled_summary">Controla los servicios de Google y las aplicaciones principales</string>
+    <string name="gms_enabled_footer">Antes de desactivar los servicios de Google y las aplicaciones principales, debes desactivar "Encontrar mi dispositivo" y la verificación en dos pasos en tu cuenta de Google. Se recomienda encarecidamente mantener esta configuración activada, de lo contrario, las aplicaciones que dependen de los componentes de Google se verán afectadas. Si encuentras algún problema después de cambiar esta configuración, realiza un restablecimiento de fábrica.</string>
+    <string name="gms_disable_confirmation">Configuración de servicios de Google</string>
+
+    <!-- Huawei services -->
+    <string name="hms_enabled_title">Servicios móviles de Huawei</string>
+    <string name="hms_enabled_summary">Controla los servicios móviles y AppGallery de Huawei</string>
+
+    <!-- F-Droid services -->
+    <string name="fdroid_enabled_title">Tienda de apps F-Droid</string>
+    <string name="fdroid_enabled_summary">Controla la tienda de apps F-Droid</string>
+
+    <!-- Aurora services -->
+    <string name="aurora_enabled_title">Aurora Store</string>
+    <string name="aurora_enabled_summary">Controla Aurora Store</string>
+
+    <string name="dolby_enabled_title">Dolby</string>
+    <string name="dolby_enabled_summary">Servicio de audio Dolby. ¡Es necesario reiniciar para que los cambios surtan efecto!</string>
+
+    <string name="jdsp_enabled_title">DSP James</string>
+    <string name="jdsp_enabled_summary">Procesador de audio del DSP James</string>
+
+    <string name="afx_enabled_title">DSP AudioFX</string>
+    <string name="afx_enabled_summary">Procesador de audio AOSP AudioFX</string>
+
+    <string name="services_title">Servicios opcionales</string>
+    <string name="services_summary">Google, Huawei, Fdroid, etc...</string>
+
+    <!-- Face Unlock services -->
+    <string name="fu_enabled_title">Servicio de desbloqueo facial</string>
+    <string name="fu_enabled_summary">Controlar el servicio de desbloqueo facial. ¡Es necesario reiniciar para que los cambios surtan efecto!</string>
+
+    <!-- Nfc services -->
+    <string name="nfc_enabled_title">Servicio NFC</string>
+    <string name="nfc_enabled_summary">Controlar el servicio NFC</string>
+
+    <string name="audio_tweaks_a2dp_last_codec_title">Último códec utilizado</string>
+    <string name="audio_tweaks_a2dp_last_bitrate_title">Última tasa de bits utilizada</string>
+
+    <string name="captive_portal_title">Servidor de monitoreo de red</string>
+    <string name="captive_portal_default">Por defecto (Google)</string>
+    <string name="captive_portal_apple">Apple</string>
+    <string name="captive_portal_yandex">Yandex</string>
+
+    <string name="r_secure_title">Almacenamiento sin restricciones</string>
+    <string name="r_secure_summary">Desactiva las restricciones introducidas por Android 11 en el acceso a algunas carpetas del almacenamiento externo</string>
+
+    <string name="background_blur_radius_title">Desenfoque de fondo</string>
+    <string name="blur_behind_radius_title">Desenfoque por detrás</string>
+
+    <string name="background_blur_type_title">Tipo de desenfoque</string>
+
+    <string name="restricted_networking_mode_title">Red restringida</string>
+    <string name="restricted_networking_mode_summary">Activa las opciones de LineageOS para controlar el acceso a redes por aplicación</string>
+
+    <string name="baikalos_full_data_saver_title">Ahorro de datos completo</string>
+    <string name="baikalos_full_data_saver_summary">Desactiva el acceso a datos medidos para aplicaciones en primer plano en el modo de ahorro de datos</string>
+
+    <string name="disable_autorevoke_title">Desactivar revocación automática</string>
+    <string name="disable_autorevoke_summary">Desactiva la revocación automática de permisos a nivel global. ¡Es necesario reiniciar!</string>
+
+    <string name="baikalos_interaction_boost_title">Potenciador de interacción</string>
+    <string name="baikalos_interaction_boost_summary">Activa el potenciador de interacción</string>
+
+    <string name="baikalos_rendering_boost_title">Potenciador de renderización</string>
+    <string name="baikalos_rendering_boost_summary">Activa el potenciador de renderización</string>
+
+    <string name="boost_override_silver_title">Potenciador de clúster plateado</string>
+    <string name="boost_override_gold_title">Potenciador de clúster dorado</string>
+    <string name="boost_override_platinum_title">Potenciador de clúster platino</string>
+
+    <string name="baikalos_display_boost_title">Potenciador de visualización</string>
+    <string name="baikalos_display_boost_summary">Activa el potenciador al actualizar la pantalla</string>
+
+    <string name="baikalos_limited_charge_screen_on_title">Limitar en pantalla encendida</string>
+    <string name="baikalos_limited_charge_screen_on_summary">Limita la carga con la pantalla encendida</string>
+    <string name="baikalos_bpcharge_screen_on_title">Omitir en pantalla encendida</string>
+    <string name="baikalos_bpcharge_screen_on_summary">Activa la carga directa con la pantalla encendida</string>
+
+    <string name="baikalos_aod_on_charger_title">AOD al cargar</string>
+    <string name="baikalos_aod_on_charger_summary">Activa Always On Display al cargar</string>
+
+    <string name="sound_sonif_a2dp_title">Sonido de notificación</string>
+    <string name="sonif_a2dp_default">Por defecto</string>
+    <string name="sonif_a2dp_force_speaker">Forzar en altavoz</string>
+    <string name="sonif_a2dp_duplicate_speaker">Duplicar en altavoz</string>
+
+    <string name="app_sound_sonif_a2dp_title">Sonido de aplicación</string>
+
+    <string name="installer_default">Por defecto</string>
+    <string name="installer_none">Ninguno</string>
+    <string name="installer_googleplay">Google Play</string>
+    <string name="installer_appgallery">App Gallery</string>
+    <string name="installer_rustore">Rustore</string>
+    <string name="installer_aosp_pi">Instalador de paquetes de AOSP</string>
+    <string name="installer_google_pi">Instalador de paquetes de Google</string>
+
+    <string name="baikalos_freeze_cached_title">Congelador de apps en caché</string>
+    <string name="baikalos_freeze_cached_summary">Activa el congelador de apps en caché</string>
+
+    <string name="disable_inband_ringing_title">Desactivar timbre en banda</string>
+    <string name="disable_inband_ringing_summary">Desactiva la reproducción del tono de llamada en el manos libres bluetooth</string>
+
+    <string name="brightness_curve_default">Por defecto</string>
+    <string name="brightness_curve_darker">Más oscuro</string>
+    <string name="brightness_curve_lighter">Más claro</string>
+    <string name="brightness_curve_darkest">Lo más oscuro</string>
+    <string name="brightness_curve_lightest">Lo más claro</string>
+
+    <string name="baikalos_reduced_brightness_title">Brillo reducido</string>
+    <string name="baikalos_reduced_brightness_summary">Brillo reducido en luz ambiental moderada. Requiere reinicio.</string>
+
+    <string name="allow_downgrade_title">Permitir downgrade</string>
+    <string name="allow_downgrade_summary">Permite volver a una versión anterior de la app. ¡¡¡ATENCIÓN!!! El downgrade puede romper la app. Los datos de la app pueden quedar completamente dañados.</string>
+
+    <string name="baikalos_profile_edit_title">Editor de perfiles</string>
+    <string name="baikalos_profile_edit_summary">Edita los valores de los perfiles de rendimiento</string>
+
+    <string name="baikalos_ignore_zero_battery_title">Ignorar batería cero</string>
+    <string name="baikalos_ignore_zero_battery_summary">No apagar con nivel de batería 0. ¡Advertencia de pérdida de datos! El teléfono se apagará por el controlador de la batería</string>
+
+    <string name="app_profile_heavy_memory_title">Memoria pesada</string>
+    <string name="app_profile_heavy_memory_summary">Esta aplicación utiliza mucha memoria. Cerrar todas las aplicaciones en segundo plano no importantes.</string>
+
+    <string name="app_profile_heavy_cpu_title">CPU pesada</string>
+    <string name="app_profile_heavy_cpu_summary">Esta aplicación utiliza mucha CPU. Reducir la prioridad de cualquier aplicación en segundo plano.</string>
+
+    <string name="reset_persistent_mac_title">Renovar MAC aleatorio</string>
+    <string name="reset_persistent_mac_summary">Renueva la dirección MAC de WiFi de forma aleatoria en el próximo intento de conexión</string>
+
+    <string name="purge_package_cache_title">Limpiar caché de paquetes</string>
+    <string name="purge_package_cache_summary">Limpia la caché de los paquetes en el próximo inicio del sistema</string>
+
+    <string name="ui_use_new_back_gesturu_title">Interfaz de gesto de retroceso</string>
+    <string name="ui_use_new_back_gesturu_summary">Utiliza la nueva interfaz de usuario del gesto de retroceso</string>
+
+    <string name="profile_management_title">Gestionar perfiles de apps</string>
+
+    <string name="baikalos_little_freq_max_title">Frec. max. de clúster pequeño</string>
+    <string name="baikalos_little_freq_min_title">Frec. min. de clúster pequeño</string>
+
+    <string name="baikalos_big_freq_max_title">Frec. max. de clúster grande</string>
+    <string name="baikalos_big_freq_min_title">Frec. min. de clúster grande</string>
+
+    <string name="baikalos_bigplus_freq_max_title">Frec. max. de clúster más grande</string>
+    <string name="baikalos_bigplus_freq_min_title">Frec. min. de clúster más grande</string>
+
+    <string name="baikalos_gpu_max_title">Frec. max. de GPU</string>
+    <string name="baikalos_gpu_min_title">Frec. min. de GPU</string>
+
+
+    <string name="baikalos_task_boost_title">Potenciador de tareas</string>
+    <string name="baikalos_silver_boost_title">Potenciador de clúster pequeño</string>
+    <string name="baikalos_gold_boost_title">Potenciador de clúster grande</string>
+    <string name="baikalos_plus_boost_title">Potenciador de clúster más grande</string>
+
+    <string name="baikalos_little_core_ctl_title">Control del núcleo del clúster pequeño</string>
+    <string name="baikalos_big_core_ctl_title">Control del nucleo del clúster grande</string>
+    <string name="baikalos_plus_core_ctl_title">Control del núcleo del clúster más grande</string>
+
+    <string name="fuse_passthrough_title">Activar traspaso FUSE</string>
+    <string name="fuse_passthrough_summary">Utiliza el traspaso FUSE si está disponible. Reinicio necesario.</string>
+
+    <string name="baikalos_enable_optional_components_title">Servicios opcionales</string>
+    <string name="baikalos_enable_optional_components_summary">Activa algunos servicios opcionales, como el descubrimiento cercano, etc... Se requiere reiniciar</string>
+
+    <string name="art_inc_max_title">Aumentar límites ART</string>
+    <string name="art_inc_max_summary">Aumenta los límites de memoria y uso de registros del compilador de ART</string>
+
+    <string name="old_links_title">Enlaces en app A11</string>
+    <string name="old_links_summary">Utiliza el antiguo comportamiento de los enlaces en app de A11</string>
+
+    <string name="baikalos_power_level_ind_title">Indicación coloreada</string>
+    <string name="baikalos_power_level_ind_summary">Utiliza un texto de porcentaje coloreado para indicar el perfil de ahorro de energía actual</string>
+
+    <string name="baikalos_expand_all_notifications_title">Ampliar todo</string>
+    <string name="baikalos_expand_all_notifications_summary">Amplia por defecto todas las notificaciones que no sean de grupo</string>
+
+    <string name="baikalos_pulse_duration_tile">Duración de pulsaciones</string>
+    <string name="baikalos_pulse_duration_summary"></string>
+
+    <string name="baikalos_pulse_duration_in_tile">Pulsación en duración</string>
+    <string name="baikalos_pulse_duration_in_summary"></string>
+
+    <string name="baikalos_pulse_duration_out_tile">Duración de pulsación</string>
+    <string name="baikalos_pulse_duration_out_summary"></string>
+
+    <string name="baikalos_a2dp_ignore_call_state_title">Ignorar estado de llamada</string>
+    <string name="baikalos_a2dp_ignore_call_state_summary">Ignora el estado de la llamada para el servicio A2DP</string>
+
+    <string name="baikalos_disable_gms_spoof_title">Desactivar falsificación de GMS</string>
+    <string name="baikalos_disable_gms_spoof_summary">Desactiva la falsificación del ID del dispositivo para los servicios de Google</string>
+
+    <string name="baikalos_disable_certificate_spoof_title">Desactivar falsificación de certificados</string>
+    <string name="baikalos_disable_certificate_spoof_summary">Desactiva la falsificación de certificados para los servicios de Google</string>
+
+    <string name="device_title">ID del dispositivo</string>
+    <string name="device_summary">ID del dispositivo para la falsificación de GMS</string>
+
+    <string name="baikalos_spoof_manufacturer_title">FABRICANTE</string>
+    <string name="baikalos_spoof_brand_title">MARCA</string>
+    <string name="baikalos_spoof_product_title">PRODUCTO</string>
+    <string name="baikalos_spoof_model_title">MODELO</string>
+    <string name="baikalos_spoof_device_title">DISPOSITIVO</string>
+    <string name="baikalos_spoof_fingerprint_title">HUELLA DIGITAL</string>
+    <string name="baikalos_spoof_id_title">ID</string>
+    <string name="baikalos_spoof_incremental_title">INCREMENTAL</string>
+    <string name="baikalos_spoof_release_title">LANZAMIENTO</string>
+    <string name="baikalos_spoof_sp_title">PARCHE DE SEGURIDAD</string>
+    <string name="baikalos_spoof_first_api_level_title">Primer nivel API</string>
+
+    <string name="spoof_setings_reset_summary">Restablece a los valores predeterminados del sistema</string>
+    <string name="spoof_setings_reset_title">Restablecer</string>
+
+    <string name="audio_route_speaker_title">Forzar al altavoz</string>
+    <string name="audio_route_duplicate_title">Duplicar al altavoz</string>
+    <string name="baikalos_enable_force_speaker_title">Reforzar altavoz</string>
+    <string name="baikalos_enable_force_speaker_summary">Refuerza el uso del altavoz. Esto anulará los valores anteriores y romperá la duplicación.</string>
+
+    <string name="baikalos_power_zram_title">ZRAM</string>
+
+</resources>

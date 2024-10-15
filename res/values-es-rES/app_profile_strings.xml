@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+
+    <string name="app_profile_title">Perfil de aplicación</string>
+    <string name="app_profile_performance_title">Perfil de rendimiento</string>
+    <string name="app_profile_thermal_title">Perfil térmico</string>
+    <string name="app_profile_brightness_title">Brillo de pantalla</string>
+    <string name="app_profile_rotation_title">Rotación de pantalla</string>
+    <string name="app_idle_performance_title">Perfil de rendimiento en reposo</string>
+    <string name="app_idle_thermal_title">Perfil térmico en reposo</string>
+
+    <string name="app_profile_camera_hal1_title">API 1 de cámara</string>
+    <string name="app_profile_camera_hal1_summary">Fuerza el uso de la API V1 de la cámara para esta aplicación</string>
+
+    <string name="performance_default">Por defecto</string>
+    <string name="performance_balance">Equilibrado</string>
+    <string name="performance_limited">Equilibrado (limitado)</string>
+    <string name="performance_battery">Batería</string>
+    <string name="performance_performance">Rendimiento</string>
+    <string name="performance_gaming">Gaming</string>
+    <string name="performance_gaming2">Gaming 2</string>
+    <string name="performance_camera">Cámara</string>
+
+    <string name="performance_low_power">Bajo consumo</string>
+    <string name="performance_sustained_performance">Rendimiento sostenido</string>
+    <string name="performance_fixed_performance">Rendimiento fijo</string>
+    <string name="performance_vr">Realidad virtual</string>
+    <string name="performance_expensive_rendering">Renderizado alto</string>
+    <string name="performance_interactive">Equilibrado</string>
+    <string name="performance_device_idle">Dispositivo en reposo</string>
+    <string name="performance_display_inactive">Pantalla inactiva</string>
+    <string name="performance_game">Juego</string>
+
+    <string name="thermal_default">Por defecto</string>
+    <string name="thermal_balance">Equilibrado</string>
+    <string name="thermal_performance">Rendimiento</string>
+    <string name="thermal_gaming">Gaming</string>
+    <string name="thermal_gaming2">Gaming 2 (PUBG HD)</string>
+    <string name="thermal_nolimits">Sin límites</string>
+    <string name="thermal_high">Alto</string>
+    <string name="thermal_camera">Cámara</string>
+    <string name="thermal_reader">Lector</string>
+    <string name="thermal_cool">Genial</string>
+    <string name="thermal_cold">Frío</string>
+    <string name="thermal_incall">En llamada</string>
+    <string name="thermal_vr">Realidad virtual</string>
+
+    <string name="brightness_default">Por defecto</string>
+    <string name="brightness_enable_ab">Activar brillo automático</string>
+    <string name="brightness_disable_ab">Desactivar brillo automático</string>
+    <string name="brightness_reduced">Reducción automática</string>
+    <string name="brightness_quarter">Un cuarto automático</string>
+    <string name="brightness_full">Completo</string>
+    <string name="brightness_increased">Aumento automático</string>
+    <string name="brightness_10">10\%</string>
+    <string name="brightness_20">20\%</string>
+    <string name="brightness_30">30\%</string>
+    <string name="brightness_40">40\%</string>
+    <string name="brightness_50">50\%</string>
+    <string name="brightness_60">60\%</string>
+    <string name="brightness_70">70\%</string>
+    <string name="brightness_80">80\%</string>
+    <string name="brightness_90">90\%</string>
+
+    <string name="rotation_default">Por defecto</string>
+    <string name="rotation_auto">Automática</string>
+    <string name="rotation_0">0</string>
+    <string name="rotation_90">90</string>
+    <string name="rotation_180">180</string>
+    <string name="rotation_270">270</string>
+
+    <string name="background_restrictions_super">Super</string>
+    <string name="background_restrictions_unlimited">Sin límites</string>
+    <string name="background_restrictions_auto">Automático</string>
+    <string name="background_restrictions_default">Por defecto</string>
+    <string name="background_restrictions_limited">Limitado</string>
+    <string name="background_restrictions_restricted">Restringido</string>
+    <string name="background_restrictions_disabled">Desactivado</string>
+
+    <string name="app_profile_pinned_title">Fijado</string>
+    <string name="app_profile_pinned_summary">Protege una aplicación de ser eliminada por el sistema</string>
+
+    <string name="app_profile_donotclose_title">No cerrar</string>
+    <string name="app_profile_donotclose_summary">No cierra en la gestión agresiva de la memoria</string>
+
+    <string name="app_profile_disable_title">Desactivar inicio automático</string>
+    <string name="app_profile_disable_summary">Desactiva el inicio automático de aplicaciones al arrancar el dispositivo</string>
+
+    <string name="app_profile_disable_wakeup_title">Desactivar despertador</string>
+    <string name="app_profile_disable_wakeup_summary">Desactiva la aplicación para establecer alarmas de despertador</string>
+
+    <string name="app_profile_disable_jobs_title">Desactivar trabajos</string>
+    <string name="app_profile_disable_jobs_summary">Desactiva los trabajos en segundo plano mientras la pantalla está apagada</string>
+
+    <string name="app_profile_disable_twl_title">Desactivar exclusión temporal</string>
+    <string name="app_profile_disable_twl_summary">Desactiva la exclusión temporal en las notificaciones entrantes</string>
+
+    <string name="app_profile_reader_title">Super ahorro</string>
+    <string name="app_profile_reader_summary">Permite que el sistema entre en reposo profundo mientras se ejecuta esta aplicación</string>
+
+    <string name="app_profile_max_fps_title">Frecuencia de actualización máxima</string>
+    <string name="app_profile_min_fps_title">Frecuencia de actualización mínima</string>
+
+    <string name="edit_profile_title">Editar perfil</string>
+
+    <string name="edit_profile_silver_title">CPU - Plata</string>
+    <string name="edit_profile_gold_title">CPU - Oro</string>
+    <string name="edit_profile_gpu_title">GPU</string>
+
+    <string name="edit_profile_max_title">MAX</string>
+    <string name="edit_profile_min_title">MIN</string>
+
+    <string name="edit_profile_corecontrol_title">Control del núcleo</string>
+    <string name="edit_profile_corecontrol_summary">Activa la desconexión/aislamiento del núcleo en reposo</string>
+
+    <string name="edit_profile_sched_boost_title">Potenciador de app principal</string>
+    <string name="edit_profile_back_boost_title">Potenciador de tareas en seg. plano</string>
+    <string name="edit_profile_gpu_boost_title">Potenciador de GPU</string>
+
+    <string name="edit_profile_prefer_idle_title">Preferir reposo</string>
+    <string name="edit_profile_prefer_idle_summary">Prefiere núcleos en reposo para la aplicación principal</string>
+
+    <string name="edit_profile_prefer_highcap_title">Preferir alta capacidad</string>
+    <string name="edit_profile_prefer_highcap_summary">Prefiere núcleos de alta capacidad para la aplicación principal</string>
+
+    <string name="edit_profile_downmigrate_title">Migración baja</string>
+    <string name="edit_profile_upmigrate_title">Migración alta</string>
+
+    <string name="edit_profile_top_min_title">CPU min. de app principal</string>
+    <string name="edit_profile_bg_max_title">CPU max. de app en seg. plano</string>
+    <string name="edit_profile_rct_max_title">CPU max. de app restringida</string>
+
+    <string name="edit_profile_max_temp_title">Temperatura máxima del núcleo</string>
+
+    <string name="app_checkbox_filter_changed_title">Con perfiles</string>
+    <string name="app_checkbox_filter_system_title">Sistema</string>
+    <string name="app_checkbox_filter_wl_title">Excluida</string>
+
+    <string name="app_setings_backup_title">Respaldar</string>
+    <string name="app_setings_backup_summary">Guarda los perfiles actuales de las aplicaciones. ¡Esto sobrescribirá los perfiles respaldados anteriormente!</string>
+    <string name="app_setings_backup_ok">Respaldar</string>
+
+    <string name="app_setings_restore_title">Restaurar</string>
+    <string name="app_setings_restore_summary">Restaura los perfiles respaldados. ¡Atención! Esto sobrescribirá los perfiles actuales de las aplicaciones.</string>
+    <string name="app_setings_restore_ok">Restaurar</string>
+
+    <string name="app_setings_reset_title">Restablecer</string>
+    <string name="app_setings_reset_summary">Restablece los valores por defecto de todos los perfiles de las aplicaciones</string>
+    <string name="app_setings_reset_ok">Restablecer</string>
+
+    <string name="edit_profile_reset_title">Restablecer</string>
+    <string name="edit_profile_reset_summary">Restablece a los valores por defecto.</string>
+    <string name="edit_profile_reset_ok">Restablecer</string>
+
+    <string name="app_profile_stamina_title">Permitir en Stamina</string>
+    <string name="app_profile_stamina_summary">Permite que esta aplicación se inicie en segundo plano en el modo Stamina</string>
+
+    <string name="app_profile_restricted_title">Bloquear en segundo plano</string>
+    <string name="app_profile_restricted_summary">Bloquea el inicio en segundo plano. Podría romper algunas aplicaciones.</string>
+
+    <string name="app_profile_restricted_idle_title">Bloquear en reposo</string>
+    <string name="app_profile_restricted_idle_summary">Bloquea esta aplicación en modo reposo</string>
+
+    <string name="app_profile_background_title">Ejecutar en segundo plano</string>
+
+    <string name="app_profile_require_gms_title">Requerir GMS</string>
+    <string name="app_profile_require_gms_summary">Desactiva las restricciones de GMS mientras se ejecuta esta aplicación</string>
+
+    <string name="app_profile_volume_scale_title">Escala de volumen</string>
+
+    <string name="app_profile_ignore_audio_focus_title">Ignorar enfoque de audio</string>
+    <string name="app_profile_ignore_audio_focus_summary">Ignora la solicitud de cambio de enfoque de audio y sigue reproduciendo audio</string>
+
+    <string name="app_profile_block_focus_recv_title">Ignorar enfoque de audio</string>
+    <string name="app_profile_block_focus_recv_summary">Ignora las solicitudes de enfoque de audio recibidas por esta aplicación</string>
+
+    <string name="app_profile_block_focus_send_title">Bloquear enfoque de audio</string>
+    <string name="app_profile_block_focus_send_summary">Bloquea las solicitudes de enfoque de audio enviadas por esta aplicación</string>
+
+    <string name="app_profile_force_sonification_title">Forzar en altavoz</string>
+    <string name="app_profile_force_sonification_summary">Fuerza el sonido de la aplicación al altavoz del dispositivo</string>
+
+    <string name="app_profile_installer_title">Fuente de la app</string>
+    <string name="app_profile_installer_summary">Fuerza el origen de la aplicación</string>
+
+    <string name="app_profile_scalefactor_title">Escala de visualización</string>
+
+    <string name="app_profile_bypass_charging_title">Carga directa</string>
+    <string name="app_profile_bypass_charging_summary">No carga la batería mientras esta aplicación está en funcionamiento. Alimenta el dispositivo directamente desde el cargador.</string>
+
+    <string name="app_backup_restore_backup_title">Respaldar</string>
+    <string name="app_backup_restore_restore_title">Restaurar</string>
+
+    <string name="app_backup_restore_backup_summary">Respalda los datos de esta aplicación en un almacenamiento externo</string>
+    <string name="app_backup_restore_restore_summary">Restaura los datos de esta aplicación desde un respaldo</string>
+
+    <string name="app_profile_spoof_title">Falsificar modelo de dispositivo</string>
+
+    <string name="app_profile_location_title">Modo de ubicación</string>
+    <string name="app_profile_location_summary">Modo de ubicación</string>
+
+    <string name="app_profile_keep_on_title">Mantener despierto</string>
+    <string name="app_profile_keep_on_summary">Mantiene el dispositivo despierto mientras esta aplicación está activa</string>
+
+    <string name="app_profile_phka_title">Forzar certificación de software</string>
+    <string name="app_profile_phka_summary">Evita la certificación de clave de hardware para esta aplicación. Podría ayudar a solucionar SafetyNet u otras detecciones de ROOT y bootloader desbloqueado.</string>
+
+    <string name="app_profile_devmode_title">Ocultar modo desarrollador</string>
+    <string name="app_profile_devmode_summary">Oculta el modo desarrollador de esta aplicación</string>
+
+    <string name="app_profile_lowres_title">Baja resolución</string>
+    <string name="app_profile_lowres_summary">Reduce la resolución de la pantalla virtual para mejorar el rendimiento de los juegos.</string>
+
+    <string name="app_profile_camera_title">Modo cámara</string>
+    <string name="app_profile_microphone_title">Modo micrófono</string>
+
+    <string name="location_default">Por defecto</string>
+    <string name="location_full">Completa</string>
+    <string name="location_network_fine">Red buena</string>
+    <string name="location_network_coarse">Red gruesa</string>
+    <string name="location_passive">Pasiva</string>
+    <string name="location_none">Ninguna</string>
+ 
+    <string name="camera_default">Por defecto</string>
+    <string name="camera_back_only">Trasera</string>
+    <string name="camera_front_only">Frontal</string>
+    <string name="camera_both">Ambas</string>
+    <string name="camera_disabled">Desactivada</string>
+
+    <string name="microphone_default">Por defecto</string>
+    <string name="microphone_enabled">Activado</string>
+    <string name="microphone_fg_only">Solo primer plano</string>
+    <string name="microphone_disabled">Desactivado</string>
+
+    <string name="app_profile_performance_limit_title">Limitar uso de CPU</string>
+
+    <string name="cpu_resources_default">Por defecto</string>
+    <string name="cpu_resources_full">Potencia máxima</string>
+    <string name="cpu_resources_light">Ligera</string>
+    <string name="cpu_resources_moderate">Moderada</string>
+    <string name="cpu_resources_hard">Dura</string>
+
+    <string name="app_profile_freezer_title">Desactivar congelador</string>
+    <string name="app_profile_freezer_summary">No permite que esta aplicación sea congelada por el congelador de segundo plano</string>
+
+    <string name="app_profile_idle_network_title">Red en reposo</string>
+    <string name="app_profile_idle_network_summary">Permite el acceso a la red en modo reposo</string>
+
+    <string name="app_profile_hide_idle_title">Ocultar reposo</string>
+    <string name="app_profile_hide_idle_summary">Oculta el modo reposo de esta aplicación</string>
+
+    <string name="file_access_title">Acceso a memoria interna</string>
+    <string name="file_access_summary">Sustituye el nivel de acceso a la memoria interna</string>
+
+    <string name="file_access_default">Por defecto</string>
+    <string name="file_access_none">Ninguna</string>
+    <string name="file_access_read">Lectura</string>
+    <string name="file_access_write">Escritura</string>
+    <string name="file_access_full">Completo</string>
+    <string name="file_access_legacy">Heredado</string>
+
+    <string name="app_profile_language_title">Idioma</string>
+
+    <string name="app_profile_forced_screenshot_title">Captura de pantalla no restringida</string>
+    <string name="app_profile_forced_screenshot_summary">Omite las restricciones de la aplicación para hacer una captura de pantalla</string>
+
+    <string name="app_profile_boot_options_title">Opciones de tiempo de arranque</string>
+    <string name="app_profile_boot_options_summary">Las opciones se aplican al reiniciar el sistema. Es necesario reiniciar para que los cambios surtan efecto.</string>
+
+    <string name="app_profile_override_fonts_title">Sustituir fuentes</string>
+    <string name="app_profile_override_fonts_summary">Sustituye las fuentes de la aplicación por las predeterminadas del sistema</string>
+
+    <string name="app_profile_full_screen_title">Pantalla completa</string>
+    <string name="app_profile_full_screen_summary">Fuerza el modo de pantalla completa</string>
+
+    <string name="app_profile_debug_title">Depurar</string>
+    <string name="app_profile_debug_summary">Activa el registro de depuración detallado para la aplicación. No lo actives sin motivo. Afectará significativamente al rendimiento.</string>
+
+    <string name="super_saver_default">Por defecto</string>
+    <string name="super_saver_disabled">Desactivado</string>
+    <string name="super_saver_forced">Forzado</string>
+
+    <string name="app_profile_block_overlays_title">Bloquear superposiciones</string>
+    <string name="app_profile_block_overlays_summary">No muestra superposiciones en pantalla (info. de CPU, FPS)</string>
+
+    <string name="app_profile_hide_hms_title">Ocultar HMS</string>
+    <string name="app_profile_hide_hms_summary">Oculta los servicios móviles de Huawei de esta aplicación</string>
+
+    <string name="app_profile_hide_gms_title">Ocultar GMS</string>
+    <string name="app_profile_hide_gms_summary">Oculta los servicios de Google Play de esta aplicación</string>
+
+    <string name="app_profile_hide_3p_title">Ocultar terceros</string>
+    <string name="app_profile_hide_3p_summary">Oculta todas las aplicaciones de terceros de esta aplicación</string>
+
+    <string name="app_profile_allowwhileidle_title">Permitir en ahorro de energía</string>
+    <string name="app_profile_allowwhileidle_summary">No bloquea las actividades en segundo plano de esta aplicación en ahorro de energía</string>
+
+    <string name="app_profile_old_links_title">Enlaces de apps A11</string>
+    <string name="app_profile_old_links_summary">Utiliza el antiguo comportamiento de los enlaces en apps de A11 para esta aplicación</string>
+
+    <string name="app_profile_priv_phone_state_title">Estado del teléfono privilegiado</string>
+    <string name="app_profile_priv_phone_state_summary">Permite que esta aplicación lea información privilegiada del estado del teléfono (ID del dispositivo, IMEI, etc...)</string>
+
+</resources>

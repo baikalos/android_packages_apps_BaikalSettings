@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+    <!-- Power Save -->
+    <string name="powersave_title">Ahorro de energía</string>
+    <string name="powersave_summary">Ajustes de ahorro de energía</string>
+
+    <string name="baikalos_aggressive_idle_title">Ahorro de energía</string>
+    <string name="baikalos_aggressive_idle_summary">Activa las opciones de ahorro de energía de BaikalOS.</string>
+
+    <string name="baikalos_super_saver_title">Super ahorro</string>
+    <string name="baikalos_super_saver_summary">Permite que el sistema entre en reposo profundo con la pantalla encendida. ¡No reportes lags en este modo! Es por diseño</string>
+
+    <string name="baikalos_super_saver_draw_title">Desactivar al renderizar</string>
+    <string name="baikalos_super_saver_draw_summary">Desactiva el super ahorro al renderizar fotogramas</string>
+
+    <string name="baikalos_extreme_idle_title">Modo agresivo</string>
+    <string name="baikalos_extreme_idle_summary">Restringe agresivamente los procesos en segundo plano.</string>
+
+    <string name="baikalos_aggressive_device_idle_title">Reposo rápido del dispositivo</string>
+    <string name="baikalos_aggressive_device_idle_summary">Entra en modo de reposo del dispositivo 30 segundos después de apagar la pantalla. Ignora el movimiento</string>
+
+    <string name="baikalos_stamina_oi_enabled_title">Stamina en pantalla apagada</string>
+    <string name="baikalos_stamina_oi_enabled_summary">Entra en el modo de stamina mientras la pantalla está apagada. Un modo de emergencia para llegar al enchufe.</string>
+
+    <string name="baikalos_unrestricted_net_title">Red sin restricciones</string>
+    <string name="baikalos_unrestricted_net_summary">No restringe el acceso a la red en estado de reposo. Podría solucionar problemas de notificaciones. ¡Aumenta el consumo de batería!</string>
+
+    <string name="powersave_gms_title">Servicios de Google</string>
+    <string name="powersave_gms_summary">Opciones para los servicios de Google Play</string>
+
+    <string name="powersave_hide_gms_title">Ocultar reposo de GMS</string>
+    <string name="powersave_hide_gms_summary">Oculta el estado de reposo de los servicios de Google Play. Podría solucionar problemas de notificaciones. ¡Aumenta el consumo de batería!</string>
+
+    <string name="powersave_hide_all_title">Ocultar reposo de apps</string>
+    <string name="powersave_hide_all_summary">Oculta el estado de reposo de todas las aplicaciones de usuario. Podría solucionar problemas de notificaciones. ¡Aumenta el consumo de batería!</string>
+
+    <string name="powersave_gms_disabled_title">Desactivar servicios de Google</string>
+    <string name="powersave_gms_disabled_summary">Desactiva los servicios de Google Play en este dispositivo. ¡Es posible que algunas aplicaciones no funcionen!</string>
+
+    <string name="powersave_gms_blocked_title">Bloquear siempre</string>
+    <string name="powersave_gms_blocked_summary">Bloquea siempre la ejecución de los servicios de Google Play. ¡Es posible que algunas aplicaciones no funcionen!</string>
+
+    <string name="powersave_gms_restricted_title">Restringir siempre</string>
+    <string name="powersave_gms_restricted_summary">Restringe siempre los servicios de Google Play en segundo plano. ¡Es posible que algunas aplicaciones no funcionen!</string>
+
+    <string name="powersave_gms_idle_restricted_title">Restringir en reposo</string>
+    <string name="powersave_gms_idle_restricted_summary">Restringe siempre los servicios de Google Play en modo de reposo</string>
+
+    <string name="powersave_gms_stamina_restricted_title">Bloquear en stamina</string>
+    <string name="powersave_gms_stamina_restricted_summary">Bloquea siempre los servicios de Google Play en el modo stamina</string>
+
+    <string name="powersave_gps_restricted_title">Restringir Play Market</string>
+    <string name="powersave_gps_restricted_summary">Restringe la actividad de Play Market en segundo plano</string>
+
+    <string name="powersave_gms_defer_jobs_title">Posponer trabajos</string>
+    <string name="powersave_gms_defer_jobs_summary">Pospone los trabajos en segundo plano de GMS hasta que esté conectado al cargador.</string>
+
+    <!-- Batery whitelist -->
+    <string name="prefs_battery_saver_title">Exclusiones</string>
+    <string name="prefs_battery_saver_summary">Exclusiones del dispositivo</string>
+
+    <string name="cached_apps_freezer_title">Congelador de apps en caché</string>
+    <string name="cached_apps_freezer_summary">Activa el congelador de aplicaciones en caché</string>
+
+    <string name="extreme_freezer_title">Congelador extremo de apps</string>
+    <string name="extreme_freezer_summary">Congela aplicaciones con servicios poco importantes</string>
+
+    <string name="pinned_freezer_title">Congelador de apps fijadas</string>
+    <string name="pinned_freezer_summary">Congela aplicaciones fijadas</string>
+
+    <string name="gms_freezer_title">Congelador de servicios de Google</string>
+    <string name="gms_freezer_summary">Congela los servicios de Google Play que no sean importantes</string>
+
+    <string name="keep_freezed_title">Mantener congelado</string>
+    <string name="keep_freezed_summary">No fuerza el cierre de aplicaciones congeladas en el tiempo de espera</string>
+
+    <string name="baikalos_kill_in_background_title">Cerrar en segundo plano</string>
+    <string name="baikalos_kill_in_background_summary">Cierra agresivamente las aplicaciones en caché después de 3-5 minutos</string>
+
+    <string name="baikalos_alarms_nowake_title">Desactivar despertadores</string>
+    <string name="baikalos_alarms_nowake_summary">Desactiva por defecto los despertadores de las aplicaciones de usuario</string>
+
+    <string name="device_profiles_title">Perfiles de dispositivo</string>
+    <string name="powesaver_title">Ahorro de energía</string>
+
+    <string name="powesaver_profiles_title">Perfiles de ahorro de energía</string>
+    <string name="powesaver_screenon_title">Activo</string>
+    <string name="powesaver_standby_title">Pantalla apagada</string>
+    <string name="powesaver_idle_title">Dispositivo en reposo</string>
+    <string name="powesaver_screenon_charger_title">Cargando</string>
+
+    <string name="powesaver_default">Por defecto</string>
+    <string name="powesaver_low">Bajo</string>
+    <string name="powesaver_moderate">Moderado</string>
+    <string name="powesaver_aggressive">Agresivo</string>
+    <string name="powesaver_extreme">Extremo</string>
+
+    <string name="baikalos_auto_limit_title">Límite automático</string>
+    <string name="baikalos_auto_limit_summary">Limita las actividades de las aplicaciones en segundo plano en los perfiles de ahorro de energía moderado, agresivo y extremo.</string>
+
+    <string name="ps_none_title">Por defecto</string>
+    <string name="ps_none_summary"></string>
+    <string name="ps_low_title">Bajo</string>
+    <string name="ps_low_summary"></string>
+    <string name="ps_moderate_title">Moderado</string>
+    <string name="ps_moderate_summary"></string>
+    <string name="ps_aggressive_title">Agresivo</string>
+    <string name="ps_aggressive_summary"></string>
+    <string name="ps_extreme_title">Extremo</string>
+    <string name="ps_extreme_summary"></string>
+    <string name="ps_bs_title">Ahorro de batería</string>
+    <string name="ps_bs_summary"></string>
+    <string name="ps_stamina_title">Stamina</string>
+    <string name="ps_stamina_summary"></string>
+
+    <string name="baikalos_power_profiles_editor_title">Perfiles de ahorro de energía</string>
+    <string name="baikalos_power_profiles_editor_summary">Personaliza los perfiles de ahorro de energía</string>
+
+    <string name="baikalos_ps_editor_title">Perfil de energía</string>
+
+</resources>

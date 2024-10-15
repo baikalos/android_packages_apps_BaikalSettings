@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="ps_policies_title">Perfiles de ahorro de energía</string>
+
+    <string name="ps_profile_SoundTriggerMode_Enabled">Activado</string>
+    <string name="ps_profile_SoundTriggerMode_CriticalOnly">Solo crítico</string>
+    <string name="ps_profile_SoundTriggerMode_Disabled">Desactivado</string>
+
+    <string name="ps_profile_LocationMode_Default">Por defecto</string>
+    <string name="ps_profile_LocationMode_ForegroundNetworkOnly">Primer plano + red solo en seg. plano</string>
+    <string name="ps_profile_LocationMode_ForegroundOnly">Solo primer plano</string>
+    <string name="ps_profile_LocationMode_NetworkOnly">Solo red</string>
+    <string name="ps_profile_LocationMode_Disabled">Desactivado</string>
+
+    <string name="ps_profile_AdvertiseIsEnabled_title">Anunciar</string>
+    <string name="ps_profile_AdvertiseIsEnabled_summary">Anuncia el modo de ahorro de energía al sistema y a otras aplicaciones</string>
+
+    <string name="ps_profile_AdjustBrightnessFactor_title">Ajustar brillo</string>
+    <string name="ps_profile_AdjustBrightnessFactor_summary">Ajusta el factor de brillo</string>
+
+    <string name="ps_profile_EnableFullBackup_title">Respaldo completo</string>
+    <string name="ps_profile_EnableFullBackup_summary">Activa el respaldo completo del sistema</string>
+
+    <string name="ps_profile_EnableKeyValueBackup_title">Respaldo de ajustes</string>
+    <string name="ps_profile_EnableKeyValueBackup_summary">Activa el respaldo de los ajustes del sistema</string>
+
+    <string name="ps_profile_EnableAnimation_title">Animaciones</string>
+    <string name="ps_profile_EnableAnimation_summary">Activa las animaciones</string>
+
+    <string name="ps_profile_EnableAod_title">AOD</string>
+    <string name="ps_profile_EnableAod_summary">Activa Always On Display</string>
+
+    <string name="ps_profile_EnableLaunchBoost_title">Potenciador de inicio</string>
+    <string name="ps_profile_EnableLaunchBoost_summary">Activa el potenciador de inicio</string>
+
+    <string name="ps_profile_EnableOptionalSensors_title">Sensores opcionales</string>
+    <string name="ps_profile_EnableOptionalSensors_summary">Activa los sensores opcionales</string>
+
+    <string name="ps_profile_EnableVibration_title">Vibración</string>
+    <string name="ps_profile_EnableVibration_summary">Activa la vibración</string>
+
+    <string name="ps_profile_EnableAdjustBrightness_title">Ajustar brillo</string>
+    <string name="ps_profile_EnableAdjustBrightness_summary">Activa el ajuste de brillo</string>
+
+    <string name="ps_profile_EnableDataSaver_title">Ahorro de datos</string>
+    <string name="ps_profile_EnableDataSaver_summary">Activa el ahorro de datos</string>
+
+    <string name="ps_profile_EnableFirewall_title">Firewall</string>
+    <string name="ps_profile_EnableFirewall_summary">Activa el Firewall</string>
+
+    <string name="ps_profile_EnableNightMode_title">Modo nocturno</string>
+    <string name="ps_profile_EnableNightMode_summary">Cambia al modo nocturno</string>
+
+    <string name="ps_profile_EnableQuickDoze_title">Descanso rápido</string>
+    <string name="ps_profile_EnableQuickDoze_summary">Activa el descanso rápido</string>
+
+    <string name="ps_profile_ForceAllAppsStandby_title">Apps en espera</string>
+    <string name="ps_profile_ForceAllAppsStandby_summary">Fuerza el modo de espera de todas las aplicaciones</string>
+
+    <string name="ps_profile_ForceBackgroundCheck_title">Comprobar segundo plano</string>
+    <string name="ps_profile_ForceBackgroundCheck_summary">Fuerza la comprobación de segundo plano</string>
+
+    <string name="ps_profile_SoundTriggerMode_title">Modo de activación de sonido</string>
+    <string name="ps_profile_LocationMode_title">Modo de ubicación</string>
+    <string name="ps_profile_CacheAppTimeout_title">Tiempo de espera de app en caché</string>
+
+    <string name="ps_profile_KillInBackground_title">Matar apps inactivas</string>
+    <string name="ps_profile_KillInBackground_summary">Mata las apps inactivas en segundo plano</string>
+
+    <string name="ps_profile_lessRestrictiveBackgroundPolicy_title">Menos restricciones</string>
+    <string name="ps_profile_lessRestrictiveBackgroundPolicy_summary">Limitador de segundo plano menos restrictivo</string>
+
+    <string name="ps_profile_disableBackgroundByDefault_title">Desactivado por defecto</string>
+    <string name="ps_profile_disableBackgroundByDefault_summary">Desactiva la ejecución en segundo plano por defecto</string>
+
+</resources>

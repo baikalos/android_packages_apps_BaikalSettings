@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+
+    <string name="baikalos_module_title">Módulos</string>
+    <string name="baikalos_module_summary">Módulos opcionales de BaikalOS</string>
+
+    <string name="baikalos_module_gms_title">Servicios de Google Play</string>
+    <string name="baikalos_module_gms_summary">Servicios de Google Play y Market</string>
+
+    <string name="baikalos_module_gms_aa_title">Android Auto de Google</string>
+    <string name="baikalos_module_gms_aa_summary">Android Auto de Google</string>
+
+    <string name="baikalos_module_gms_assistant_title">Android Auto de Google</string>
+    <string name="baikalos_module_gms_assistant_summary">Android Auto de Google</string>
+
+    <string name="baikalos_module_hms_title">Servicios móviles de Huawei</string>
+    <string name="baikalos_module_hms_summary">Servicios móviles y AppGallery de Huawei</string>
+
+    <string name="baikalos_module_fdroid_title">F-Droid Market</string>
+    <string name="baikalos_module_fdroid_summary">Mercado de aplicaciones F-Droid</string>
+
+    <string name="baikalos_module_aurora_title">Aurora Store</string>
+    <string name="baikalos_module_aurora_summary">Tienda de aplicaciones Aurora</string>
+
+</resources>
