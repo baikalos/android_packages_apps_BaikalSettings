@@ -303,4 +303,17 @@
     <string name="app_profile_priv_phone_state_title">Privileged Phone State</string>
     <string name="app_profile_priv_phone_state_summary">Allow this app to read privileged phone state information (deviceid, IMEI, etc...)</string>
 
+
+    <string name="app_profile_privacy_title">Privacy</string>
+    <string name="app_profile_privacy_summary">Privacy options</string>
+    <string name="app_profile_block_contacts_title">Block Contacts</string>
+    <string name="app_profile_block_contacts_summary"></string>
+    <string name="app_profile_block_calllog_title">Block Calllog</string>
+    <string name="app_profile_block_calllog_summary"></string>
+    <string name="app_profile_block_calendar_title">Block Calendar</string>
+    <string name="app_profile_block_calendar_summary"></string>
+    <string name="app_profile_block_media_title">Block Media</string>
+    <string name="app_profile_block_media_summary"></string>
+
+
 </resources>

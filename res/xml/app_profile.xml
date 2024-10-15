@@ -289,6 +289,38 @@
             android:defaultValue="false" />
 
 
+    <PreferenceCategory
+        android:key="app_profile_privacy"
+        android:title="@string/app_profile_privacy_title"
+        android:summary="@string/app_profile_privacy_summary"
+        >
+
+
+        <SwitchPreference
+            android:key="app_profile_block_contacts"
+            android:title="@string/app_profile_block_contacts_title"
+            android:summary="@string/app_profile_block_contacts_summary"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="app_profile_block_calllog"
+            android:title="@string/app_profile_block_calllog_title"
+            android:summary="@string/app_profile_block_calllog_summary"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="app_profile_block_calendar"
+            android:title="@string/app_profile_block_calendar_title"
+            android:summary="@string/app_profile_block_calendar_summary"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="app_profile_block_media"
+            android:title="@string/app_profile_block_media_title"
+            android:summary="@string/app_profile_block_media_summary"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
 
     <PreferenceCategory
         android:key="app_profile_boot_options"

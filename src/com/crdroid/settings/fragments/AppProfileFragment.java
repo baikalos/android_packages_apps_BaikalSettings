@@ -142,6 +142,12 @@ public class AppProfileFragment extends SettingsPreferenceFragment
 
     private static final String APP_PROFILE_FORCED_SCREENSHOT = "app_profile_forced_screenshot";
 
+    private static final String APP_PROFILE_BLOCK_CONTACTS = "app_profile_block_contacts";
+    private static final String APP_PROFILE_BLOCK_CALLLOG = "app_profile_block_calllog";
+    private static final String APP_PROFILE_BLOCK_CALENDAR = "app_profile_block_calendar";
+    private static final String APP_PROFILE_BLOCK_MEDIA = "app_profile_block_media";
+
+
     private String mPackageName;
     private int mUid;
     private Context mContext;
@@ -176,6 +182,12 @@ public class AppProfileFragment extends SettingsPreferenceFragment
     private SwitchPreference mAppHideHMS;
     private SwitchPreference mAppHideGMS;
     private SwitchPreference mAppHide3P;
+
+    private SwitchPreference mAppBlockContacts;
+    private SwitchPreference mAppBlockCalllog;
+    private SwitchPreference mAppBlockCalendar;
+    private SwitchPreference mAppBlockMedia;
+
     private SwitchPreference mAppPrivPhoneState;
 
     private ListPreference mAppReader;
@@ -1361,6 +1373,87 @@ public class AppProfileFragment extends SettingsPreferenceFragment
                         Log.e(TAG, "mAppPrivPhoneState: mPackageName=" + mPackageName + ", mAppPrivPhoneState=" + mProfile.mPriviledgedPhoneState);
                     } catch(Exception re) {
                         Log.e(TAG, "onCreate: mAppPrivPhoneState Fatal! exception", re );
+                    }
+                    return true;
+                  }
+                });
+            }
+
+            mAppBlockContacts = (SwitchPreference) findPreference(APP_PROFILE_BLOCK_CONTACTS);
+            if( mAppBlockContacts != null ) {
+                boolean block = mProfile.mBlockContacts;
+                Log.e(TAG, "mAppBlockContacts: mPackageName=" + mPackageName + ", mAppBlockContacts=" + block);
+                mAppBlockContacts.setChecked(block);
+                mAppBlockContacts.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                  public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    try {
+                        mProfile.mBlockContacts = ((Boolean)newValue);
+                        mAppSettings.updateProfile(mProfile);
+                        mAppSettings.save();
+                        Log.e(TAG, "mAppBlockContacts: mPackageName=" + mPackageName + ", mAppBlockContacts=" + mProfile.mBlockContacts);
+                    } catch(Exception re) {
+                        Log.e(TAG, "onCreate: mAppBlockContacts Fatal! exception", re );
+                    }
+                    return true;
+                  }
+                });
+            }
+
+            mAppBlockCalllog = (SwitchPreference) findPreference(APP_PROFILE_BLOCK_CALLLOG);
+            if( mAppBlockCalllog != null ) {
+                boolean block = mProfile.mBlockCalllog;
+                Log.e(TAG, "mAppBlockCalllog: mPackageName=" + mPackageName + ", mAppBlockCalllog=" + block);
+                mAppBlockCalllog.setChecked(block);
+                mAppBlockCalllog.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                  public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    try {
+                        mProfile.mBlockCalllog = ((Boolean)newValue);
+                        mAppSettings.updateProfile(mProfile);
+                        mAppSettings.save();
+                        Log.e(TAG, "mAppBlockCalllog: mPackageName=" + mPackageName + ", mAppBlockCalllog=" + mProfile.mBlockCalllog);
+                    } catch(Exception re) {
+                        Log.e(TAG, "onCreate: mAppBlockCalllog Fatal! exception", re );
+                    }
+                    return true;
+                  }
+                });
+            }
+
+
+            mAppBlockCalendar = (SwitchPreference) findPreference(APP_PROFILE_BLOCK_CALENDAR);
+            if( mAppBlockCalendar != null ) {
+                boolean block = mProfile.mBlockCalendar;
+                Log.e(TAG, "mAppBlockCalendar: mPackageName=" + mPackageName + ", mAppBlockCalendar=" + block);
+                mAppBlockCalendar.setChecked(block);
+                mAppBlockCalendar.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                  public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    try {
+                        mProfile.mBlockCalendar = ((Boolean)newValue);
+                        mAppSettings.updateProfile(mProfile);
+                        mAppSettings.save();
+                        Log.e(TAG, "mAppBlockCalendar: mPackageName=" + mPackageName + ", mAppBlockCalendar=" + mProfile.mBlockCalendar);
+                    } catch(Exception re) {
+                        Log.e(TAG, "onCreate: mAppBlockCalendar Fatal! exception", re );
+                    }
+                    return true;
+                  }
+                });
+            }
+
+            mAppBlockMedia = (SwitchPreference) findPreference(APP_PROFILE_BLOCK_MEDIA);
+            if( mAppBlockMedia != null ) {
+                boolean block = mProfile.mBlockMedia;
+                Log.e(TAG, "mAppBlockMedia: mPackageName=" + mPackageName + ", mAppBlockMedia=" + block);
+                mAppBlockMedia.setChecked(block);
+                mAppBlockMedia.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                  public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    try {
+                        mProfile.mBlockMedia = ((Boolean)newValue);
+                        mAppSettings.updateProfile(mProfile);
+                        mAppSettings.save();
+                        Log.e(TAG, "mAppBlockMedia: mPackageName=" + mPackageName + ", mAppBlockMedia=" + mProfile.mBlockMedia);
+                    } catch(Exception re) {
+                        Log.e(TAG, "onCreate: mAppBlockMedia Fatal! exception", re );
                     }
                     return true;
                   }
