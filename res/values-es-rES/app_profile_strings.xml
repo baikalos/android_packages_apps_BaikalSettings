@@ -80,16 +80,16 @@
     <string name="background_restrictions_disabled">Desactivado</string>
 
     <string name="app_profile_pinned_title">Fijado</string>
-    <string name="app_profile_pinned_summary">Protege una aplicación de ser eliminada por el sistema</string>
+    <string name="app_profile_pinned_summary">Protege esta aplicación de ser matada por el sistema</string>
 
     <string name="app_profile_donotclose_title">No cerrar</string>
-    <string name="app_profile_donotclose_summary">No cierra en la gestión agresiva de la memoria</string>
+    <string name="app_profile_donotclose_summary">No cierra esta aplicación en la gestión agresiva de la memoria</string>
 
     <string name="app_profile_disable_title">Desactivar inicio automático</string>
     <string name="app_profile_disable_summary">Desactiva el inicio automático de aplicaciones al arrancar el dispositivo</string>
 
     <string name="app_profile_disable_wakeup_title">Desactivar despertador</string>
-    <string name="app_profile_disable_wakeup_summary">Desactiva la aplicación para establecer alarmas de despertador</string>
+    <string name="app_profile_disable_wakeup_summary">Desactiva esta aplicación para establecer alarmas de despertador</string>
 
     <string name="app_profile_disable_jobs_title">Desactivar trabajos</string>
     <string name="app_profile_disable_jobs_summary">Desactiva los trabajos en segundo plano mientras la pantalla está apagada</string>
@@ -182,7 +182,7 @@
     <string name="app_profile_force_sonification_title">Forzar en altavoz</string>
     <string name="app_profile_force_sonification_summary">Fuerza el sonido de la aplicación al altavoz del dispositivo</string>
 
-    <string name="app_profile_installer_title">Fuente de la app</string>
+    <string name="app_profile_installer_title">Origen de la aplicación</string>
     <string name="app_profile_installer_summary">Fuerza el origen de la aplicación</string>
 
     <string name="app_profile_scalefactor_title">Escala de visualización</string>
@@ -217,11 +217,11 @@
     <string name="app_profile_microphone_title">Modo micrófono</string>
 
     <string name="location_default">Por defecto</string>
-    <string name="location_full">Completa</string>
+    <string name="location_full">Completo</string>
     <string name="location_network_fine">Red buena</string>
     <string name="location_network_coarse">Red gruesa</string>
-    <string name="location_passive">Pasiva</string>
-    <string name="location_none">Ninguna</string>
+    <string name="location_passive">Pasivo</string>
+    <string name="location_none">Ninguno</string>
  
     <string name="camera_default">Por defecto</string>
     <string name="camera_back_only">Trasera</string>
@@ -238,9 +238,9 @@
 
     <string name="cpu_resources_default">Por defecto</string>
     <string name="cpu_resources_full">Potencia máxima</string>
-    <string name="cpu_resources_light">Ligera</string>
-    <string name="cpu_resources_moderate">Moderada</string>
-    <string name="cpu_resources_hard">Dura</string>
+    <string name="cpu_resources_light">Ligero</string>
+    <string name="cpu_resources_moderate">Moderado</string>
+    <string name="cpu_resources_hard">Duro</string>
 
     <string name="app_profile_freezer_title">Desactivar congelador</string>
     <string name="app_profile_freezer_summary">No permite que esta aplicación sea congelada por el congelador de segundo plano</string>
@@ -267,7 +267,7 @@
     <string name="app_profile_forced_screenshot_summary">Omite las restricciones de la aplicación para hacer una captura de pantalla</string>
 
     <string name="app_profile_boot_options_title">Opciones de tiempo de arranque</string>
-    <string name="app_profile_boot_options_summary">Las opciones se aplican al reiniciar el sistema. Es necesario reiniciar para que los cambios surtan efecto.</string>
+    <string name="app_profile_boot_options_summary">Reinicio necesario para que los cambios surtan efecto</string>
 
     <string name="app_profile_override_fonts_title">Sustituir fuentes</string>
     <string name="app_profile_override_fonts_summary">Sustituye las fuentes de la aplicación por las predeterminadas del sistema</string>
@@ -302,5 +302,16 @@
 
     <string name="app_profile_priv_phone_state_title">Estado del teléfono privilegiado</string>
     <string name="app_profile_priv_phone_state_summary">Permite que esta aplicación lea información privilegiada del estado del teléfono (ID del dispositivo, IMEI, etc...)</string>
+
+    <string name="app_profile_privacy_title">Privacidad</string>
+    <string name="app_profile_privacy_summary">Opciones de privacidad</string>
+    <string name="app_profile_block_contacts_title">Bloquear contactos</string>
+    <string name="app_profile_block_contacts_summary"></string>
+    <string name="app_profile_block_calllog_title">Bloquear registro de llamadas</string>
+    <string name="app_profile_block_calllog_summary"></string>
+    <string name="app_profile_block_calendar_title">Bloquear calendario</string>
+    <string name="app_profile_block_calendar_summary"></string>
+    <string name="app_profile_block_media_title">Bloquear medios</string>
+    <string name="app_profile_block_media_summary"></string>
 
 </resources>
