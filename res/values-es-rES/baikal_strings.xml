@@ -78,10 +78,10 @@
     <string name="dolby_enabled_title">Dolby</string>
     <string name="dolby_enabled_summary">Servicio de audio Dolby. ¡Es necesario reiniciar para que los cambios surtan efecto!</string>
 
-    <string name="jdsp_enabled_title">DSP James</string>
-    <string name="jdsp_enabled_summary">Procesador de audio del DSP James</string>
+    <string name="jdsp_enabled_title">James DSP</string>
+    <string name="jdsp_enabled_summary">Procesador de audio James DSP</string>
 
-    <string name="afx_enabled_title">DSP AudioFX</string>
+    <string name="afx_enabled_title">AudioFX DSP</string>
     <string name="afx_enabled_summary">Procesador de audio AOSP AudioFX</string>
 
     <string name="services_title">Servicios opcionales</string>
@@ -178,7 +178,7 @@
     <string name="baikalos_profile_edit_summary">Edita los valores de los perfiles de rendimiento</string>
 
     <string name="baikalos_ignore_zero_battery_title">Ignorar batería cero</string>
-    <string name="baikalos_ignore_zero_battery_summary">No apagar con nivel de batería 0. ¡Advertencia de pérdida de datos! El teléfono se apagará por el controlador de la batería</string>
+    <string name="baikalos_ignore_zero_battery_summary">No apaga con nivel de batería 0. ¡Advertencia de pérdida de datos! El teléfono se apagará por el controlador de la batería</string>
 
     <string name="app_profile_heavy_memory_title">Memoria pesada</string>
     <string name="app_profile_heavy_memory_summary">Esta aplicación utiliza mucha memoria. Cerrar todas las aplicaciones en segundo plano no importantes.</string>
@@ -268,15 +268,15 @@
     <string name="baikalos_spoof_incremental_title">INCREMENTAL</string>
     <string name="baikalos_spoof_release_title">LANZAMIENTO</string>
     <string name="baikalos_spoof_sp_title">PARCHE DE SEGURIDAD</string>
-    <string name="baikalos_spoof_first_api_level_title">Primer nivel API</string>
+    <string name="baikalos_spoof_first_api_level_title">Primer nivel de API</string>
 
-    <string name="spoof_setings_reset_summary">Restablece a los valores predeterminados del sistema</string>
+    <string name="spoof_setings_reset_summary">Restablece a los valores por defecto del sistema</string>
     <string name="spoof_setings_reset_title">Restablecer</string>
 
     <string name="audio_route_speaker_title">Forzar al altavoz</string>
     <string name="audio_route_duplicate_title">Duplicar al altavoz</string>
     <string name="baikalos_enable_force_speaker_title">Reforzar altavoz</string>
-    <string name="baikalos_enable_force_speaker_summary">Refuerza el uso del altavoz. Esto anulará los valores anteriores y romperá la duplicación.</string>
+    <string name="baikalos_enable_force_speaker_summary">Refuerza el uso del altavoz. Esto sustituirá los valores anteriores y romperá la duplicación.</string>
 
     <string name="baikalos_power_zram_title">ZRAM</string>
 
