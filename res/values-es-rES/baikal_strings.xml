@@ -192,6 +192,12 @@
     <string name="purge_package_cache_title">Limpiar caché de paquetes</string>
     <string name="purge_package_cache_summary">Limpia la caché de los paquetes en el próximo inicio del sistema</string>
 
+    <string name="restore_gms_permissions_title">Permisos de GMS</string>
+    <string name="restore_gms_permissions_summary">Restablece los permisos de los servicios de Google en el próximo inicio del sistema</string>
+
+    <string name="restore_system_permissions_title">Permisos de apps del sistema</string>
+    <string name="restore_system_permissions_summary">Restablece todos los permisos de las aplicaciones del sistema en el próximo arranque del sistema</string>
+
     <string name="ui_use_new_back_gesturu_title">Interfaz de gesto de retroceso</string>
     <string name="ui_use_new_back_gesturu_summary">Utiliza la nueva interfaz de usuario del gesto de retroceso</string>
 
@@ -254,6 +260,17 @@
 
     <string name="baikalos_disable_certificate_spoof_title">Desactivar falsificación de certificados</string>
     <string name="baikalos_disable_certificate_spoof_summary">Desactiva la falsificación de certificados para los servicios de Google</string>
+
+    <string name="baikalos_disable_signature_spoof_title">Desactivar falsificación de firma</string>
+    <string name="baikalos_disable_signature_spoof_summary">Desactiva la falsificación de firma del paquete principal para los servicios de Google</string>
+
+    <string name="baikalos_disable_gms_swa_spoof_title">Desactivar atestación por software</string>
+    <string name="baikalos_disable_gms_swa_spoof_summary">Desactiva la aplicación obligatoria de la atestación por software para los servicios de Google</string>
+
+    <string name="baikalos_gms_override_spoof_title">Sustituir propiedades</string>
+    <string name="baikalos_gms_override_spoof_summary">Sustituye las propiedades utilizadas para falsificar los servicios de Google</string>
+
+    <string name="baikalos_gms_props_title">Propiedades del falsificador</string>
 
     <string name="device_title">ID del dispositivo</string>
     <string name="device_summary">ID del dispositivo para la falsificación de GMS</string>
