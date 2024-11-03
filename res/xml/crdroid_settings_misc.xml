@@ -197,5 +197,18 @@
         android:summary="@string/purge_package_cache_summary"
         android:defaultValue="false" />
 
+    <com.crdroid.settings.preferences.SystemPropertySwitchPreference
+        android:key="persist.baikal.restore_gms_permissions"
+        android:icon="@drawable/ic_storage"
+        android:title="@string/restore_gms_permissions_title"
+        android:summary="@string/restore_gms_permissions_summary"
+        android:defaultValue="false" />
+
+    <com.crdroid.settings.preferences.SystemPropertySwitchPreference
+        android:key="persist.baikal.restore_system_permissions"
+        android:icon="@drawable/ic_storage"
+        android:title="@string/restore_system_permissions_title"
+        android:summary="@string/restore_system_permissions_summary"
+        android:defaultValue="false" />
 
 </PreferenceScreen>

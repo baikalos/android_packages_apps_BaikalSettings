@@ -192,6 +192,12 @@
     <string name="purge_package_cache_title">Purge package cache</string>
     <string name="purge_package_cache_summary">Purge package cache on next system boot</string>
 
+    <string name="restore_gms_permissions_title">GMS permissions</string>
+    <string name="restore_gms_permissions_summary">Restore Google Services permissions on a next system boot</string>
+
+    <string name="restore_system_permissions_title">System Apps permissions</string>
+    <string name="restore_system_permissions_summary">Restore all system apps permissions on a next system boot</string>
+
     <string name="ui_use_new_back_gesturu_title">Back gesture UI</string>
     <string name="ui_use_new_back_gesturu_summary">Use new back gesture UI</string>
 
@@ -254,6 +260,17 @@
 
     <string name="baikalos_disable_certificate_spoof_title">Disable Certificate spoofing</string>
     <string name="baikalos_disable_certificate_spoof_summary">Disable Certificate spoofing for Google Services</string>
+
+    <string name="baikalos_disable_signature_spoof_title">Disable Signature spoofing</string>
+    <string name="baikalos_disable_signature_spoof_summary">Disable Core package Signature spoofing for Google Services</string>
+
+    <string name="baikalos_disable_gms_swa_spoof_title">Disable SW attestation</string>
+    <string name="baikalos_disable_gms_swa_spoof_summary">Disable enforcing SW attestation for Google Services</string>
+
+    <string name="baikalos_gms_override_spoof_title">Override properties</string>
+    <string name="baikalos_gms_override_spoof_summary">Override properties used for spoofing Google Services</string>
+
+    <string name="baikalos_gms_props_title">Spoofer properties</string>
 
     <string name="device_title">Device ID</string>
     <string name="device_summary">Device ID for GMS spoofing</string>

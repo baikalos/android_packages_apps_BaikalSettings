@@ -73,6 +73,13 @@ public class Device extends SettingsPreferenceFragment {
             ((Preference) findPreference("baikalos_disable_certificate_spoof")).setVisible(false);
         }
 
+        boolean isSignatureSpooferAvailable = mContext.getResources().
+                getBoolean(com.android.internal.R.bool.config_signatureSpooferAvailable);
+
+        if (!isSignatureSpooferAvailable) {
+            ((Preference) findPreference("baikalos_disable_signature_spoof")).setVisible(false);
+        }
+
         mReset = (Preference) findPreference("spoof_setings_reset");
         fill();
     }

@@ -34,64 +34,93 @@
         android:summary="@string/baikalos_disable_certificate_spoof_summary" 
         android:defaultValue="false" />
 
-    <com.crdroid.settings.preferences.SystemPropertiesEditTextPreference
-        android:key="persist.spoof.manufacturer"
-        android:title="@string/baikalos_spoof_manufacturer_title"
-        />
+    <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+        android:key="baikalos_disable_signature_spoof"
+        android:icon="@drawable/ic_backup"
+        android:title="@string/baikalos_disable_signature_spoof_title"
+        android:summary="@string/baikalos_disable_signature_spoof_summary" 
+        android:defaultValue="false" />
 
-    <com.crdroid.settings.preferences.SystemPropertiesEditTextPreference
-        android:key="persist.spoof.brand"
-        android:title="@string/baikalos_spoof_brand_title"
-        />
+    <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+        android:key="baikalos_disable_gms_swa_spoof"
+        android:icon="@drawable/ic_backup"
+        android:title="@string/baikalos_disable_gms_swa_spoof_title"
+        android:summary="@string/baikalos_disable_gms_swa_spoof_summary" 
+        android:defaultValue="false" />
 
-    <com.crdroid.settings.preferences.SystemPropertiesEditTextPreference
-        android:key="persist.spoof.product"
-        android:title="@string/baikalos_spoof_product_title"
-        />
+    <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+        android:key="baikalos_gms_override_spoof"
+        android:icon="@drawable/ic_backup"
+        android:title="@string/baikalos_gms_override_spoof_title"
+        android:summary="@string/baikalos_gms_override_spoof_summary" 
+        android:defaultValue="false" />
 
-    <com.crdroid.settings.preferences.SystemPropertiesEditTextPreference
-        android:key="persist.spoof.model"
-        android:title="@string/baikalos_spoof_model_title"
-        />
+    <PreferenceCategory
+        android:key="baikalos_gms_props"
+        android:title="@string/baikalos_gms_props_title"
+        android:dependency="baikalos_gms_override_spoof" >
 
-    <com.crdroid.settings.preferences.SystemPropertiesEditTextPreference
-        android:key="persist.spoof.device"
-        android:title="@string/baikalos_spoof_device_title"
-        />
 
-    <com.crdroid.settings.preferences.SystemPropertiesEditTextPreference
-        android:key="persist.spoof.fingerprint"
-        android:title="@string/baikalos_spoof_fingerprint_title"
-        />
+        <com.crdroid.settings.preferences.SystemPropertiesEditTextPreference
+            android:key="persist.spoof.manufacturer"
+            android:title="@string/baikalos_spoof_manufacturer_title"
+            />
 
-    <com.crdroid.settings.preferences.SystemPropertiesEditTextPreference
-        android:key="persist.spoof.id"
-        android:title="@string/baikalos_spoof_id_title"
-        />
+        <com.crdroid.settings.preferences.SystemPropertiesEditTextPreference
+            android:key="persist.spoof.brand"
+            android:title="@string/baikalos_spoof_brand_title"
+            />
 
-    <com.crdroid.settings.preferences.SystemPropertiesEditTextPreference
-        android:key="persist.spoof.incremental"
-        android:title="@string/baikalos_spoof_incremental_title"
-        />
+        <com.crdroid.settings.preferences.SystemPropertiesEditTextPreference
+            android:key="persist.spoof.product"
+            android:title="@string/baikalos_spoof_product_title"
+            />
 
-    <com.crdroid.settings.preferences.SystemPropertiesEditTextPreference
-        android:key="persist.spoof.release"
-        android:title="@string/baikalos_spoof_release_title"
-        />
+        <com.crdroid.settings.preferences.SystemPropertiesEditTextPreference
+            android:key="persist.spoof.model"
+            android:title="@string/baikalos_spoof_model_title"
+            />
 
-    <com.crdroid.settings.preferences.SystemPropertiesEditTextPreference
-        android:key="persist.spoof.security_patch"
-        android:title="@string/baikalos_spoof_sp_title"
-        />
+        <com.crdroid.settings.preferences.SystemPropertiesEditTextPreference
+            android:key="persist.spoof.device"
+            android:title="@string/baikalos_spoof_device_title"
+            />
 
-    <com.crdroid.settings.preferences.SystemPropertiesEditTextPreference
-        android:key="persist.spoof.firs_api_level"
-        android:title="@string/baikalos_spoof_first_api_level_title"
-        />
+        <com.crdroid.settings.preferences.SystemPropertiesEditTextPreference
+            android:key="persist.spoof.fingerprint"
+            android:title="@string/baikalos_spoof_fingerprint_title"
+            />
 
-    <Preference
-        android:key="spoof_setings_reset"
-        android:title="@string/spoof_setings_reset_title"
-        android:summary="@string/spoof_setings_reset_summary" />
+        <com.crdroid.settings.preferences.SystemPropertiesEditTextPreference
+            android:key="persist.spoof.id"
+            android:title="@string/baikalos_spoof_id_title"
+            />
+
+        <com.crdroid.settings.preferences.SystemPropertiesEditTextPreference
+            android:key="persist.spoof.incremental"
+            android:title="@string/baikalos_spoof_incremental_title"
+            />
+
+        <com.crdroid.settings.preferences.SystemPropertiesEditTextPreference
+            android:key="persist.spoof.release"
+            android:title="@string/baikalos_spoof_release_title"
+            />
+
+        <com.crdroid.settings.preferences.SystemPropertiesEditTextPreference
+            android:key="persist.spoof.security_patch"
+            android:title="@string/baikalos_spoof_sp_title"
+            />
+
+        <com.crdroid.settings.preferences.SystemPropertiesEditTextPreference
+            android:key="persist.spoof.firs_api_level"
+            android:title="@string/baikalos_spoof_first_api_level_title"
+            />
+
+        <Preference
+            android:key="spoof_setings_reset"
+            android:title="@string/spoof_setings_reset_title"
+            android:summary="@string/spoof_setings_reset_summary" />
+
+    </PreferenceCategory>
 
 </PreferenceScreen>

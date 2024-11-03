@@ -158,6 +158,12 @@
     <string name="purge_package_cache_title">Очистить кеш пакетов</string>
     <string name="purge_package_cache_summary">Очистить кеш пакетов установленных приложений при следующей загрузке</string>
 
+    <string name="restore_gms_permissions_title">Разрешения GMS</string>
+    <string name="restore_gms_permissions_summary">Восстановить разрешения для Гугл Сервисов при следующей загрузке</string>
+
+    <string name="restore_system_permissions_title">Системные Разрешения</string>
+    <string name="restore_system_permissions_summary">Восстановить разрешения для системных приложений при следующей загрузке</string>
+
     <string name="ui_use_new_back_gesturu_title">Новый вид жеста назад</string>
     <string name="ui_use_new_back_gesturu_summary">Использовать новый внешний вид жеста назад</string>
 
@@ -199,5 +205,18 @@
     <string name="baikalos_disable_certificate_spoof_title">Запретить спуфинг сертификатов</string>
     <string name="baikalos_disable_certificate_spoof_summary">Запретить встроенную подмену сертификатов устройства для Сервисов Гугл</string>
 
+    <string name="baikalos_disable_signature_spoof_title">Запретить спуфинг подписи</string>
+    <string name="baikalos_disable_signature_spoof_summary">Запретить подмену подписи платформы для Сервисов Гугл</string>
+
+    <string name="baikalos_gms_override_spoof_title">Изменить параметры</string>
+    <string name="baikalos_gms_override_spoof_summary">Изменить параметры используемые по умолчанию для подмены Google Services</string>
+
+    <string name="baikalos_disable_gms_swa_spoof_title">Отклчить SW аттестацию</string>
+    <string name="baikalos_disable_gms_swa_spoof_summary">Отключить принудительную SW аттестацию для Google Services</string>
+
+    <string name="baikalos_gms_props_title">Параметры спуфера</string>
+
+    <string name="spoof_setings_reset_title">Сброс</string>
+    <string name="spoof_setings_reset_summary">Сброс параметров к значениям по умолчанию</string>
 
 </resources>
