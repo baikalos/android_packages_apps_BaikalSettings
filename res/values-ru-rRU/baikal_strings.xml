@@ -211,7 +211,7 @@
     <string name="baikalos_gms_override_spoof_title">Изменить параметры</string>
     <string name="baikalos_gms_override_spoof_summary">Изменить параметры используемые по умолчанию для подмены Google Services</string>
 
-    <string name="baikalos_disable_gms_swa_spoof_title">Отклчить SW аттестацию</string>
+    <string name="baikalos_disable_gms_swa_spoof_title">Отключить SW аттестацию</string>
     <string name="baikalos_disable_gms_swa_spoof_summary">Отключить принудительную SW аттестацию для Google Services</string>
 
     <string name="baikalos_gms_props_title">Параметры спуфера</string>
