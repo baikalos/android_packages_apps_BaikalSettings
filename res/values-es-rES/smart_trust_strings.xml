@@ -14,6 +14,6 @@
     <string name="trust_incall_summary">Mantiene el dispositivo desbloqueado mientras hay una llamada activa</string>
 
     <string name="trust_bt_dev_title">Dispositivos Bluetooth</string>
-    <string name="trust_bt_dev_summary">Dispositivos Bluetooth para mantener el dispositivo desbloqueado</string>
+    <string name="trust_bt_dev_summary">Para mantener el dispositivo desbloqueado</string>
 
 </resources>
