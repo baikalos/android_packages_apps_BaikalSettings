@@ -244,6 +244,44 @@ public class PowerSaverProfileEditor extends SettingsPreferenceFragment {
                 });
             }
 
+            switchPreference = (SwitchPreference) findPreference("ps_profile_EnableInteractionBoost");
+            if( switchPreference != null ) {
+                switchPreference.setChecked(mPolicy.enableInteractionBoost);
+                Log.e(TAG, "ps_profile_EnableInteractionBoost: mName=" + mName + ", value=" + mPolicy.enableInteractionBoost);
+                switchPreference.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                    public boolean onPreferenceChange(Preference preference, Object newValue) {
+                        try {
+                            mPolicy.enableInteractionBoost = ((Boolean)newValue);
+                            mPowerSaverSettings.updatePolicy(mPolicy);
+                            mPowerSaverSettings.save();
+                            Log.e(TAG, "ps_profile_EnableInteractionBoost: mName=" + mName + ", value=" + (Boolean)newValue);
+                        } catch(Exception re) {
+                            Log.e(TAG, "onCreate: ps_profile_EnableInteractionBoost Fatal! exception", re );
+                        }
+                        return true;
+                    }
+                });
+            }
+
+            switchPreference = (SwitchPreference) findPreference("ps_profile_EnableRenderingBoost");
+            if( switchPreference != null ) {
+                switchPreference.setChecked(mPolicy.enableRenderingBoost);
+                Log.e(TAG, "ps_profile_EnableRenderingBoost: mName=" + mName + ", value=" + mPolicy.enableRenderingBoost);
+                switchPreference.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                    public boolean onPreferenceChange(Preference preference, Object newValue) {
+                        try {
+                            mPolicy.enableRenderingBoost = ((Boolean)newValue);
+                            mPowerSaverSettings.updatePolicy(mPolicy);
+                            mPowerSaverSettings.save();
+                            Log.e(TAG, "ps_profile_EnableRenderingBoost: mName=" + mName + ", value=" + (Boolean)newValue);
+                        } catch(Exception re) {
+                            Log.e(TAG, "onCreate: ps_profile_EnableRenderingBoost Fatal! exception", re );
+                        }
+                        return true;
+                    }
+                });
+            }
+
             switchPreference = (SwitchPreference) findPreference("ps_profile_EnableOptionalSensors");
             if( switchPreference != null ) {
                 switchPreference.setChecked(mPolicy.enableOptionalSensors);

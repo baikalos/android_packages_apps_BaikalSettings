@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
 
-    <string name="smart_trust_title">Smart Trust</string>
-    <string name="smart_trust_summary">Настройки режимов Smart Trust</string>
+    <string name="smart_trust_title">Хитрая разблокировка</string>
+    <string name="smart_trust_summary">Настройки режимов хитрой разблокировки</string>
 
-    <string name="trust_enable_title">Smart Trust</string>
-    <string name="trust_enable_summary">Включить BaikalOS Smart Trust</string>
+    <string name="trust_enable_title">Хитрая разблокировка</string>
+    <string name="trust_enable_summary">Включить хитрую разблокировку</string>
 
     <string name="trust_always_title">Доверять всегда</string>
     <string name="trust_always_summary">Удерживать устройство разблокированным до ручной блокировки или таймаута 4 часа</string>

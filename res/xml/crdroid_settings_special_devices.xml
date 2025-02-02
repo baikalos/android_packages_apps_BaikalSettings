@@ -21,21 +21,34 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     xmlns:lineage="http://schemas.android.com/apk/res-auto"
-    android:title="@string/smart_trust_title"
+    android:title="@string/special_devices_title"
     >
+baikalos_sd_incall
 
-        <com.crdroid.settings.preferences.SecureSettingSwitchPreference
+        <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+            android:key="baikalos_sd_keep"
+            android:defaultValue="false"
+            android:title="@string/sd_keep_title"
+            android:summary="@string/sd_keep_summary" />
+
+        <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+            android:key="baikalos_sd_incall"
+            android:defaultValue="false"
+            android:title="@string/sd_incall_title"
+            android:summary="@string/sd_incall_summary" />
+
+        <!-- com.crdroid.settings.preferences.SecureSettingSwitchPreference
             android:key="baikalos_trust_enabled"
             android:defaultValue="false"
             android:title="@string/trust_enable_title"
-            android:summary="@string/trust_enable_summary" />
+            android:summary="@string/trust_enable_summary" / -->
 
-        <com.crdroid.settings.preferences.SecureSettingSwitchPreference
+        <!-- com.crdroid.settings.preferences.SecureSettingSwitchPreference
             android:key="baikalos_trust_always"
             android:defaultValue="false"
             android:title="@string/trust_always_title"
             android:summary="@string/trust_always_summary"
-            android:dependency="baikalos_trust_enabled" />
+            android:dependency="baikalos_trust_enabled" / -->
 
         <!-- com.crdroid.settings.preferences.SecureSettingSwitchPreference
             android:key="baikalos_trust_incall"
@@ -45,10 +58,9 @@
             android:dependency="baikalos_trust_enabled" / -->
 
         <PreferenceCategory 
-            android:key="trust_bluetooth_devices"
-            android:title="@string/trust_bt_dev_title"
-            android:summary="@string/trust_bt_dev_summary"
-            android:dependency="baikalos_trust_enabled">
+            android:key="special_bluetooth_devices"
+            android:title="@string/special_bt_dev_title"
+            android:summary="@string/special_bt_dev_summary">
         
         </PreferenceCategory>
 

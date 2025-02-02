@@ -91,6 +91,7 @@ public class AppProfileFragment extends SettingsPreferenceFragment
     private static final String APP_PROFILE_THERM = "app_profile_thermal";
     private static final String APP_PROFILE_BRIGHTNESS = "app_profile_brightness";
     private static final String APP_PROFILE_ROTATION = "app_profile_rotation";
+    private static final String APP_PROFILE_DARKMODE = "app_profile_darkmode";
     private static final String APP_PROFILE_MAX_FPS = "app_profile_max_fps";
     private static final String APP_PROFILE_MIN_FPS = "app_profile_min_fps";
     private static final String APP_PROFILE_READER = "app_profile_reader";
@@ -131,6 +132,7 @@ public class AppProfileFragment extends SettingsPreferenceFragment
     private static final String APP_PROFILE_FILE_ACCESS = "file_access";
     private static final String APP_PROFILE_PHKA = "app_profile_phka";
     private static final String APP_PROFILE_DEVMODE = "app_profile_devmode";
+    private static final String APP_PROFILE_FILTERFS = "app_profile_filterfs";
 
     private static final String APP_PROFILE_LOCATION = "app_profile_location";
     private static final String APP_PROFILE_CAMERA = "app_profile_camera";
@@ -169,12 +171,12 @@ public class AppProfileFragment extends SettingsPreferenceFragment
     private SwitchPreference mBlockFocusRecv;
     private SwitchPreference mBlockFocusSend;
     private SwitchPreference mBypassCharging;
-    private SwitchPreference mAppKeepOn;
     private SwitchPreference mAppFullScreen;
     private SwitchPreference mAppOverrideFonts;
     private SwitchPreference mLowRes;
     private SwitchPreference mAppPhkaProfile;
     private SwitchPreference mAppDevModeProfile;
+    private SwitchPreference mAppFilterFsProfile;
     private SwitchPreference mAppAllowIdleNetwork;
     private SwitchPreference mAppHideIdle;
     private SwitchPreference mAppForcedScreenshot;
@@ -190,6 +192,7 @@ public class AppProfileFragment extends SettingsPreferenceFragment
 
     private SwitchPreference mAppPrivPhoneState;
 
+    private ListPreference mAppKeepOn;
     private ListPreference mAppReader;
     private ListPreference mForceSonification;
     private ListPreference mInstaller;
@@ -198,6 +201,7 @@ public class AppProfileFragment extends SettingsPreferenceFragment
     private ListPreference mAppThermProfile;
     private ListPreference mAppBrightnessProfile;
     private ListPreference mAppRotationProfile;
+    private ListPreference mAppDarkModeProfile;
     private ListPreference mAppMaxFpsProfile;
     private ListPreference mAppMinFpsProfile;
     private ListPreference mAppBackgroundProfile;
@@ -243,6 +247,7 @@ public class AppProfileFragment extends SettingsPreferenceFragment
         String[] thermProfiles = getResources().getStringArray(R.array.thermal_listvalues);
         String[] refreshRates = getResources().getStringArray(R.array.max_fps_listvalues);
         String[] cpuLimits = getResources().getStringArray(R.array.cpu_resources_listentries);
+        String[] boostControlLimits = getResources().getStringArray(R.array.boost_control_listentries);
 
         boolean isSuperSaverAvailable = getResources().
                 getBoolean(com.android.internal.R.bool.config_superSaverAvailable);
@@ -275,15 +280,13 @@ public class AppProfileFragment extends SettingsPreferenceFragment
         //mAppSettings.registerObserver(false);
 
         mAppSettings.loadProfiles();
-        mProfile = mAppSettings.getProfile(mPackageName);
+        mProfile = mAppSettings.getProfileWithNull(mPackageName);
         if( mProfile == null ) { 
             mProfile = new AppProfile(mPackageName,-1);
         }
 
         //mProfile = mAppSettings.updateProfileFromSystemSettings(mProfile);
 
-
-    
         try {
 
             PowerWhitelistBackend mBackend = PowerWhitelistBackend.getInstance(getContext());
@@ -601,6 +604,27 @@ public class AppProfileFragment extends SettingsPreferenceFragment
                 });
             }
 
+            mAppDarkModeProfile = (ListPreference) findPreference(APP_PROFILE_DARKMODE);
+            if( mAppDarkModeProfile != null ) {
+                int darkMode = mProfile.mDarkMode;
+                Log.e(TAG, "mAppDarkModeProfile: mPackageName=" + mPackageName + ", darkMode=" + darkMode);
+                mAppDarkModeProfile.setValue(Integer.toString(darkMode));
+                mAppDarkModeProfile.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                  public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    try {
+                        int val = Integer.parseInt(newValue.toString());
+                        mProfile.mDarkMode = val;
+                        mAppSettings.updateProfile(mProfile);
+                        mAppSettings.save();
+                        Log.e(TAG, "mAppDarkModeProfile: mPackageName=" + mPackageName + ", darkMode=" + val);
+                    } catch(Exception re) {
+                        Log.e(TAG, "onCreate: mAppDarkModeProfile Fatal! exception", re );
+                    }
+                    return true;
+                  }
+                });
+            }
+
             mAppMaxFpsProfile = (ListPreference) findPreference(APP_PROFILE_MAX_FPS);
             if( mAppMaxFpsProfile != null ) {
                 if(!mContext.getResources().getBoolean(R.bool.config_show_peak_refresh_rate_switch)) {
@@ -696,17 +720,18 @@ public class AppProfileFragment extends SettingsPreferenceFragment
             }
 
 
-            mAppKeepOn = (SwitchPreference) findPreference(APP_PROFILE_KEEP_ON);
+            mAppKeepOn = (ListPreference) findPreference(APP_PROFILE_KEEP_ON);
             if( mAppKeepOn != null ) {
-                mAppKeepOn.setChecked(mProfile.mKeepOn);
+                mAppKeepOn.setValue(Integer.toString(mProfile.mKeepOn)); 
                 Log.e(TAG, "mAppKeepOn: mPackageName=" + mPackageName + ",mKeepOn=" + mProfile.mKeepOn);
                 mAppKeepOn.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
                     public boolean onPreferenceChange(Preference preference, Object newValue) {
                         try {
-                            mProfile.mKeepOn = ((Boolean)newValue);
+                            int val = Integer.parseInt(newValue.toString());
+                            mProfile.mKeepOn = val;
                             mAppSettings.updateProfile(mProfile);
                             mAppSettings.save();
-                            Log.e(TAG, "mAppKeepOn: mPackageName=" + mPackageName + ",mKeepOn=" + (Boolean)newValue);
+                            Log.e(TAG, "mAppKeepOn: mPackageName=" + mPackageName + ",mKeepOn=" + val);
                         } catch(Exception re) {
                             Log.e(TAG, "onCreate: mAppKeepOn Fatal! exception", re );
                         }
@@ -991,6 +1016,40 @@ public class AppProfileFragment extends SettingsPreferenceFragment
                 }
             }
 
+            ListPreference listPreference = (ListPreference) findPreference("app_profile_boost_control");
+            if( listPreference != null ) {
+                int num = boostControlLimits != null ? boostControlLimits.length : 0;
+                if( num < 1 ) {
+                    listPreference.setVisible(false);
+                    if( mProfile.mBoostControl != 0 ) {
+                        mProfile.mBoostControl = 0;
+                        mAppSettings.updateProfile(mProfile);
+                        mAppSettings.save();
+                    }
+                } else {
+
+                    int level = mProfile.mBoostControl;
+                    if( level < 0 ) level = 0;
+                    if( level >= num ) level = num-1;
+                    listPreference.setValue(Integer.toString(level));
+                    Log.e(TAG, "mBoostControl: mPackageName=" + mPackageName + ", mBoostControl=" + level);
+                    listPreference.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                        public boolean onPreferenceChange(Preference preference, Object newValue) {
+                            try {
+                                int val = Integer.parseInt(newValue.toString());
+                                mProfile.mBoostControl = val;
+                                mAppSettings.updateProfile(mProfile);
+                                mAppSettings.save();
+                                Log.e(TAG, "mBoostControl: mPackageName=" + mPackageName + ", mBoostControl=" + val);
+                            } catch(Exception re) {
+                                Log.e(TAG, "onCreate: mBoostControl Fatal! exception", re );
+                            }
+                            return true;
+                        }
+                    });
+                }
+            }
+
 
             mBlockFocusRecv = (SwitchPreference) findPreference(APP_PROFILE_BLOCK_FOCUS_RECV);
             if( mBlockFocusRecv != null ) {
@@ -1266,6 +1325,27 @@ public class AppProfileFragment extends SettingsPreferenceFragment
                   }
                 });
             }
+
+            mAppFilterFsProfile = (SwitchPreference) findPreference(APP_PROFILE_FILTERFS);
+            if( mAppFilterFsProfile != null ) {
+                boolean appFilterFsProfile = mProfile.mFilterFS;
+                Log.e(TAG, "mAppFilterFsProfile: mPackageName=" + mPackageName + ", appFilterFsProfile=" + appFilterFsProfile);
+                mAppFilterFsProfile.setChecked(mProfile.mFilterFS);
+                mAppFilterFsProfile.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                  public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    try {
+                        mProfile.mFilterFS = ((Boolean)newValue);
+                        mAppSettings.updateProfile(mProfile);
+                        mAppSettings.save();
+                        Log.e(TAG, "mAppFilterFsProfile: mPackageName=" + mPackageName + ", appFilterFsProfile=" + mProfile.mFilterFS);
+                    } catch(Exception re) {
+                        Log.e(TAG, "onCreate: mAppFilterFsProfile Fatal! exception", re );
+                    }
+                    return true;
+                  }
+                });
+            }
+
 
             mAppBlockOverlaysProfile = (SwitchPreference) findPreference(APP_PROFILE_BLOCK_OVERLAYS);
             if( mAppBlockOverlaysProfile != null ) {

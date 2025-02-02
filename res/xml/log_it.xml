@@ -52,11 +52,22 @@
         android:title="@string/dumpsys_title"
         android:defaultValue="false" />
 
+    <CheckBoxPreference
+        android:key="anr"
+        android:title="@string/anr_title"
+        android:defaultValue="false" />
+
     <Preference
         android:key="baikalos_log_it_now"
         android:title="@string/log_it_now_title"
         android:summary="@string/log_it_now_summary" />
 
+
+    <com.crdroid.settings.preferences.SystemPropertySwitchPreference
+        android:key="persist.baikal.force.warm"
+        android:title="@string/baikalos_force_warm_title"
+        android:summary="@string/baikalos_force_warm_summary"
+        android:defaultValue="false" />
 
     <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
             android:key="baikalos_debug"

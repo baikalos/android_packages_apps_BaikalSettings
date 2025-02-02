@@ -37,6 +37,9 @@
     <string name="baikalos_debug_title">Подробный лог</string>
     <string name="baikalos_debug_summary">Включить подробный лог. Не включайте без причины. Расходует ресурсы, увеличивает потребление.</string>
 
+    <string name="baikalos_force_warm_title">Мягкая перезагрузка</string>
+    <string name="baikalos_force_warm_summary">Форсировать мягкую перезагрузку для записи логов ядра</string>
+
     <!-- Dashboard -->
     <string name="user_interface_category">Интерфейс</string>
     <string name="system_category">Настройки BaikalOS</string>
@@ -97,6 +100,9 @@
 
     <string name="r_secure_title">Неограниченный доступ</string>
     <string name="r_secure_summary">Отключить введенные Android 11 ограничения на доступ к некоторым папкам внешнего хранилища</string>
+
+    <string name="block_if_busy_title">Отклонить если занято</string>
+    <string name="block_if_busy_summary">Отклонять входящие вызовы по мобильной сети если есть активный голосовой вызов (Telegram, WhatsApp, Конференция, и т.д.)</string>
 
     <string name="baikalos_limited_charge_screen_on_title">Ограничить</string>
     <string name="baikalos_limited_charge_screen_on_summary">Ограничить ток заряда при включенном экране</string>
@@ -218,5 +224,50 @@
 
     <string name="spoof_setings_reset_title">Сброс</string>
     <string name="spoof_setings_reset_summary">Сброс параметров к значениям по умолчанию</string>
+
+    <string name="baikalos_color_doze_title">Цвет</string>
+    <string name="baikalos_color_doze_summary">Разрешить использование цвета на экране событий</string>
+
+    <string name="special_devices_title">Специальные сценарии</string>
+    <string name="special_devices_summary">Настройки специальных сценариев</string>
+
+    <string name="special_bt_dev_title">Устройства BT</string>
+    <string name="special_bt_dev_summary">Bluetooth устройства для специальных сценариев</string>
+
+    <string name="sd_incall_title">Включен при разговоре</string>
+    <string name="sd_incall_summary">Удерживать включенным при разговоре и присоединенном устройстве</string>
+
+    <string name="sd_keep_title">Включено</string>
+    <string name="sd_keep_summary">Удерживать включенным при присоединенном устройстве</string>
+
+    <string name="filterfs_enable_title">Фильтр Файловой Системы</string>
+    <string name="filterfs_enable_summary">Включить фильтр файловой системы. Позволяет блокировать доступ к системным папкам и файлам (addon.d/su/и т.д.)</string>
+
+    <string name="filterfs_invert_title">Инвертировать фильтр файловой системы</string>
+    <string name="filterfs_invert_summary">Если выключено, то все приложения, кроме помеченных в профиле имеют доступ. Если включено, только у помеченных есть доступ.</string>
+
+    <string name="filterfs_isolated_title">Фильтр Изолированных</string>
+    <string name="filterfs_isolated_summary">Всегда запрещать доступ изолированным приложениям</string>
+
+    <string name="baikalos_location_mode_title">Приёмник GNSS</string>
+    <string name="baikalos_location_mode_summary">Разрешить использование приемника GNSS</string>
+
+    <string name="front_camera_mode_title">Отключить Фронтальную камеру</string>
+    <string name="front_camera_mode_summary">Отключить доступ приложений к фронтальной камере. Отменяется настройкой в профиле приложения</string>
+
+    <string name="back_camera_mode_title">Отключить Основную камеру</string>
+    <string name="back_camera_mode_summary">Отключить доступ приложений к основной камере. Отменяется настройкой в профиле приложения</string>
+
+    <string name="enable_stationary_throttle_title">Местоположение при неподвижности</string>
+    <string name="enable_stationary_throttle_summary">Снижать частоту запросов местоположения если устройство во сне и непожвижно</string>
+
+    <string name="force_wfc_title">Принудительный WFC</string>
+    <string name="force_wfc_summary">Принудительно разрешать использование VoWiFi даже если это запрещено профилем оператора</string>
+
+    <string name="force_cs_title">Принудительный Cross SIM</string>
+    <string name="force_cs_summary">Принудительно разрешать использование доступа к данным на второй SIM для работы VoWiFi (backup calling)</string>
+
+    <string name="camera_ignore_ir_title">Игнорировать IR камеру</string>
+    <string name="camera_ignore_ir_summary">Использовать обычную фронтальную камеру для распознавания лица</string>
 
 </resources>

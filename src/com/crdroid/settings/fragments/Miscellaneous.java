@@ -85,6 +85,14 @@ public class Miscellaneous extends SettingsPreferenceFragment implements
             mSmartCharging.setEnabled(false);
         }
 
+        boolean irCamAvailable = getResources().getBoolean(com.android.internal.R.bool.config_irCameraAvailable);
+        if( !irCamAvailable ) {
+            Preference mIgnoreIr = (Preference) prefScreen.findPreference("baikalos_camera_ignore_ir"); 
+            if( mIgnoreIr != null ) {
+                mIgnoreIr.setVisible(false);
+            } 
+        }
+
         mPocketJudge = (Preference) prefScreen.findPreference(POCKET_JUDGE);
         boolean mPocketJudgeSupported = res.getBoolean(
                 com.android.internal.R.bool.config_pocketModeSupported);
