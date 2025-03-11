@@ -436,6 +436,20 @@
     <string name="status_bar_battery_text_charging_title">Porcentaje de batería al cargar</string>
     <string name="status_bar_battery_text_charging_summary">Muestra siempre el porcentaje de batería al cargar</string>
 
+    <string name="status_bar_battery_style_icon_rlandscape_style_a">R horizontal estilo A</string>
+    <string name="status_bar_battery_style_icon_landscape_style_a">L horizontal estilo A</string>
+    <string name="status_bar_battery_style_icon_rlandscape_style_b">R horizontal estilo B</string>
+    <string name="status_bar_battery_style_icon_landscape_style_b">L horizontal estilo B</string>
+    <string name="status_bar_battery_style_icon_landscape_pill">Mx vertical</string>
+    <string name="status_bar_battery_style_icon_landscape_line">Lorn horizontal</string>
+    <string name="status_bar_battery_style_icon_landscape_musku">iOS vertical</string>
+    <string name="status_bar_battery_style_icon_landscape_signal">Airoo horizontal</string>
+    <string name="status_bar_battery_style_icon_landscape_buddy">Cápsula horizontal</string>
+    <string name="status_bar_battery_style_icon_landscape_ios15">iOS 15 horizontal</string>
+    <string name="status_bar_battery_style_icon_landscape_ios16">iOS 16 horizontal</string>
+    <string name="status_bar_battery_style_icon_landscape_origami">Origami horizontal</string>
+    <string name="status_bar_battery_style_icon_landscape_miui_pill">Píldora MiUI horizontal</string>
+
     <!-- Status bar - Battery Bar -->
     <string name="battery_bar_title">Barra de batería</string>
     <string name="battery_bar_summary">Mostrar y personalizar barra de batería sobre la barra de estado</string>
@@ -1069,8 +1083,8 @@
     <string name="statusbar_clock_chip_summary">Muestra el chip acentuado detrás del reloj</string>
 
     <!-- Smart charging -->
-    <string name="smart_charging_title">Carga directa inteligente</string>
-    <string name="smart_charging_summary">Permite establecer el nivel máximo de carga</string>
+    <string name="smart_charging_title">Carga</string>
+    <string name="smart_charging_summary">Parámetros de carga</string>
     <string name="smart_charging_switch_title">Activar carga directa inteligente</string>
     <string name="smart_charging_level_title">Nivel de disparo de parada</string>
     <string name="smart_charging_resume_level_title">Nivel de disparo de inicio</string>
@@ -1263,4 +1277,22 @@
     <string name="qs_panel_style_reflected">Reflejado</string>
     <string name="qs_panel_style_surround">Rodeado</string>
     <string name="qs_panel_style_thin">Línea delgada</string>
+
+    <!-- AOD Settings -->
+    <string name="aod_display_category_title">Always-On-Display</string>
+    <string name="aod_pulse_category_title">Impulso/Descanso</string>
+    <!-- AOD custom image -->
+    <string name="lockscreen_custom_image_enabled_title">Imagen AOD</string>
+    <string name="lockscreen_custom_image_title">Seleccionar imagen AOD</string>
+    <string name="lockscreen_custom_image_summary">Establecer imagen AOD personalizada</string>
+    <string name="lockscreen_custom_image_pick_summary">Seleccionar imagen AOD de la galería</string>
+    <string name="custom_aod_image_not_supported">No se admite el estilo de reloj</string>
+    <string name="quick_settings_header_needs_gallery">¡Debes instalar una aplicación de galería!</string>
+
+    <string name="lockscreen_custom_fs_image_enabled_title">Imagen AOD a pantalla completa</string>
+    <string name="lockscreen_custom_fs_image_summary">Dibuja la imagen AOD detrás del contenido</string>
+
+    <string name="lockscreen_custom_aod_notification_enabled_title">Notificaciones en AOD</string>
+    <string name="lockscreen_custom_aod_notification_summary">Muestra las dos últimas notificaciones en AOD</string>
+
 </resources>
