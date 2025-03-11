@@ -73,6 +73,6 @@
     <string name="ps_profile_lessRestrictiveBackgroundPolicy_summary">Limitador de segundo plano menos restrictivo</string>
 
     <string name="ps_profile_disableBackgroundByDefault_title">Desactivado por defecto</string>
-    <string name="ps_profile_disableBackgroundByDefault_summary">Desactiva la ejecución en segundo plano por defecto</string>
+    <string name="ps_profile_disableBackgroundByDefault_summary">Desactiva la ejecución en segundo plano de las aplicaciones con modo de segundo plano \'automático\'</string>
 
 </resources>
