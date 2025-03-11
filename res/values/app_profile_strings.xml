@@ -8,6 +8,7 @@
     <string name="app_profile_thermal_title">Thermal profile</string>
     <string name="app_profile_brightness_title">Screen Brightness</string>
     <string name="app_profile_rotation_title">Screen Rotation</string>
+    <string name="app_profile_darkmode_title">Forced Dark Mode</string>
     <string name="app_idle_performance_title">Idle Performance profile</string>
     <string name="app_idle_thermal_title">Idle Thermal profile</string>
 
@@ -80,13 +81,13 @@
     <string name="background_restrictions_disabled">Disabled</string>
 
     <string name="app_profile_pinned_title">Pinned</string>
-    <string name="app_profile_pinned_summary">Protect an app from been killed by the system</string>
+    <string name="app_profile_pinned_summary">Protect an app from been killed by the system. DO NOT USE if not absolutely sure that you need it!</string>
 
     <string name="app_profile_donotclose_title">Do not close</string>
     <string name="app_profile_donotclose_summary">Do not close on aggressive memory management</string>
 
-    <string name="app_profile_disable_title">Disable Autostart</string>
-    <string name="app_profile_disable_summary">Disable app autostart on device boot</string>
+    <string name="app_profile_disable_boot_title">Disable Autostart</string>
+    <string name="app_profile_disable_boot_summary">Disable app autostart on device boot</string>
 
     <string name="app_profile_disable_wakeup_title">Disable Wakeup</string>
     <string name="app_profile_disable_wakeup_summary">Disable app to set wakeup alarms</string>
@@ -242,6 +243,12 @@
     <string name="cpu_resources_moderate">Moderate</string>
     <string name="cpu_resources_hard">Hard</string>
 
+    <string name="app_profile_boost_control_title">Boost control</string>
+    <string name="boost_control_default">Default</string>
+    <string name="boost_control_full">Full boost</string>
+    <string name="boost_control_interaction">Interaction only</string>
+    <string name="boost_control_disabled">Disabled</string>
+
     <string name="app_profile_freezer_title">Disable freezer</string>
     <string name="app_profile_freezer_summary">Do not allow this app to be freezed by background freezer</string>
 
@@ -315,5 +322,27 @@
     <string name="app_profile_block_media_title">Block Media</string>
     <string name="app_profile_block_media_summary"></string>
 
+    <string name="keep_on_default">No</string>
+    <string name="keep_on_always">Always</string>
+    <string name="keep_on_charger">On Charger</string>
+    <string name="keep_on_bt">BT device</string>
+    <string name="keep_on_bt_and_charger">BT device and Charger</string>
+
+    <string name="app_profile_filterfs_title">Filesystem Filter</string>
+    <string name="app_profile_filterfs_summary">Block or allow (depends on Invert option in Misc) access to some system files like su, addon.d, etc...</string>
+
+    <string name="darkmode_default">Default</string>
+    <string name="darkmode_forced_as_system">Forced as system</string>
+    <string name="darkmode_forced">Forced</string>
+
+    <string name="app_profile_disable_title">Disable</string>
+    <string name="app_profile_disable_summary">Disable appplication</string>
+
+    <string name="app_dsable_confirm_title">Caution!</string>
+    <string name="app_dsable_confirm_summary">This will disable an application. All application specific data will be removed!</string>
+    <string name="app_disable_confirm_ok">Disable</string>
+    <string name="app_disable_confirm_cancel">Cancel</string>
+
+    <string name="app_profile_main_title">Package name</string>
 
 </resources>

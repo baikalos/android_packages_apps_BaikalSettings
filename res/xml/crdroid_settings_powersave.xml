@@ -153,18 +153,18 @@
         />
 
         <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
-            android:key="baikalos_boost_interaction_disable"
+            android:key="baikalos_boost_interaction"
             android:defaultValue="true"
             android:title="@string/baikalos_interaction_boost_title"
             android:summary="@string/baikalos_interaction_boost_summary"
         />
 
-        <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
-            android:key="baikalos_boost_rendering_disable"
+        <!-- com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+            android:key="baikalos_boost_rendering"
             android:defaultValue="true"
             android:title="@string/baikalos_rendering_boost_title"
             android:summary="@string/baikalos_rendering_boost_summary"
-        />
+        /-->
 
         <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
             android:key="baikalos_super_saver"

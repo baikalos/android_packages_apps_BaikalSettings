@@ -38,7 +38,7 @@ import android.util.Log;
 
 import android.content.res.Resources;
 
-import com.crdroid.settings.preferences.BluetoothDeviceSecurePreference;
+import com.crdroid.settings.preferences.BluetoothDeviceGlobalPreference;
 
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.internal.util.crdroid.Utils;
@@ -58,11 +58,11 @@ import java.util.List;
 import java.util.ArrayList;
 
 
-public class SmartTrust extends SettingsPreferenceFragment {
+public class SpecialDevices extends SettingsPreferenceFragment {
 
     private static final String TAG = "BaikalExtras";
 
-    private static final String BLUETOOTH_DEVICES = "trust_bluetooth_devices";
+    private static final String BLUETOOTH_DEVICES = "special_bluetooth_devices";
 
     private Context mContext;
 
@@ -73,7 +73,7 @@ public class SmartTrust extends SettingsPreferenceFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-	    addPreferencesFromResource(R.xml.crdroid_settings_smart_trust);
+	    addPreferencesFromResource(R.xml.crdroid_settings_special_devices);
 
         mContext = (Context) getActivity();
         final Resources res = getActivity().getResources();
@@ -84,7 +84,7 @@ public class SmartTrust extends SettingsPreferenceFragment {
 
         mBluetoothDevices = (PreferenceCategory) findPreference(BLUETOOTH_DEVICES);
 
-        loadBluetoothTrustSettings();
+        loadBluetoothSettings();
         loadBluetoothDevices();
     }
 
@@ -136,16 +136,16 @@ public class SmartTrust extends SettingsPreferenceFragment {
                         mCheckedValues.remove(preference.getSummary());
                     }
                 }
-                saveBluetoothTrustSettings();
+                saveBluetoothSettings();
                 return true;
             }
         });
         parent.addPreference(mPreference);
     }
 
-    private void loadBluetoothTrustSettings() {
-        String btDevices = Settings.Secure.getString(mContext.getContentResolver(),
-                Settings.Secure.BAIKALOS_TRUST_BT_DEV);
+    private void loadBluetoothSettings() {
+        String btDevices = Settings.Global.getString(mContext.getContentResolver(),
+                Settings.Global.BAIKALOS_SD_BT_DEV);
 
         mCheckedValues.clear();
 
@@ -158,7 +158,7 @@ public class SmartTrust extends SettingsPreferenceFragment {
 
     }
 
-    private void saveBluetoothTrustSettings() {
+    private void saveBluetoothSettings() {
         StringBuffer buffer = new StringBuffer();
         Iterator<String> nextItem = mCheckedValues.iterator();
 
@@ -172,7 +172,7 @@ public class SmartTrust extends SettingsPreferenceFragment {
         }
 
         Log.e(TAG, "checked string: " + buffer.toString());
-        Settings.Secure.putStringForUser(mContext.getContentResolver(), Settings.Secure.BAIKALOS_TRUST_BT_DEV,
+        Settings.Global.putStringForUser(mContext.getContentResolver(), Settings.Global.BAIKALOS_SD_BT_DEV,
             buffer.toString(), UserHandle.USER_CURRENT);
     }
     
@@ -187,7 +187,7 @@ public class SmartTrust extends SettingsPreferenceFragment {
      * For search
      */
     public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
-            new BaseSearchIndexProvider(R.xml.crdroid_settings_smart_trust) {
+            new BaseSearchIndexProvider(R.xml.crdroid_settings_special_devices) {
 
                 @Override
                 public List<String> getNonIndexableKeys(Context context) {

@@ -60,7 +60,7 @@
     <string name="ps_profile_ForceAllAppsStandby_summary">Принудительно переводить фоновые приложения в режим ожидания</string>
 
     <string name="ps_profile_ForceBackgroundCheck_title">Фоновые проверки</string>
-    <string name="ps_profile_ForceBackgroundCheck_summary">Доплнительно проверять разрешения сервисов на работу в фоновом режиме</string>
+    <string name="ps_profile_ForceBackgroundCheck_summary">Дополнительно проверять разрешения сервисов на работу в фоновом режиме</string>
 
     <string name="ps_profile_SoundTriggerMode_title">Звуковой триггер</string>
     <string name="ps_profile_LocationMode_title">Режим местоположения</string>
@@ -73,6 +73,6 @@
     <string name="ps_profile_lessRestrictiveBackgroundPolicy_summary">Меньше ограничений фоновой активности</string>
 
     <string name="ps_profile_disableBackgroundByDefault_title">Отключить по умолчанию</string>
-    <string name="ps_profile_disableBackgroundByDefault_summary">Отключить фоновое исполнение по умолчанию</string>
+    <string name="ps_profile_disableBackgroundByDefault_summary">Отключить фоновое исполнение приложений c режимом \'автоматически\'</string>
 
 </resources>

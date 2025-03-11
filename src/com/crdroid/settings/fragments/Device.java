@@ -16,12 +16,14 @@
 package com.crdroid.settings.fragments;
 
 import android.app.Activity;
+import android.app.ActivityManager;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.os.UserHandle;
+import android.os.StrictMode;
 import android.os.SystemProperties;
 import android.os.RemoteException;
 import android.provider.Settings;
@@ -47,7 +49,26 @@ import com.android.settingslib.search.SearchIndexable;
 
 import com.android.internal.baikalos.BaikalSpoofer;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.DataInputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import java.nio.ByteBuffer;
+import java.nio.CharBuffer;
+import java.nio.charset.Charset;
+import java.nio.charset.CharsetDecoder;
+
 
 @SearchIndexable
 public class Device extends SettingsPreferenceFragment {
@@ -55,6 +76,8 @@ public class Device extends SettingsPreferenceFragment {
     public static final String TAG = "Device";
 
     private Preference mReset;
+    private Preference mUpdate;
+    private Preference mRestart;
     private Context mContext;
 
     @Override
@@ -73,7 +96,16 @@ public class Device extends SettingsPreferenceFragment {
             ((Preference) findPreference("baikalos_disable_certificate_spoof")).setVisible(false);
         }
 
+        boolean isSignatureSpooferAvailable = mContext.getResources().
+                getBoolean(com.android.internal.R.bool.config_signatureSpooferAvailable);
+
+        if (!isSignatureSpooferAvailable) {
+            ((Preference) findPreference("baikalos_disable_signature_spoof")).setVisible(false);
+        }
+
         mReset = (Preference) findPreference("spoof_setings_reset");
+        mUpdate = (Preference) findPreference("spoof_setings_update");
+        mRestart = (Preference) findPreference("spoof_restart_gms");
         fill();
     }
 
@@ -92,10 +124,35 @@ public class Device extends SettingsPreferenceFragment {
         if (preference == mReset) {
             settingsReset();
             return true;
-        } 
+        } else if( preference == mUpdate )  {
+            settingsUpdate();
+            return true;
+        } else if( preference == mRestart ) {
+            restartGoogleServices();
+        }
+
         return super.onPreferenceTreeClick(preference);
     }
 
+    private void restartGoogleServices() {
+        ActivityManager mAm = (ActivityManager) getActivity().getSystemService(Context.ACTIVITY_SERVICE);
+        mAm.killBackgroundProcesses("com.google.android.gms");
+    }
+
+    private void settingsUpdate() {
+        Log.e(TAG, "settingsUpdate");
+
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+
+        StrictMode.setThreadPolicy(policy);
+
+        PiItem item = updateFromGoogle();
+        if( item == null ) {
+            Log.e(TAG, "settingsUpdate: can't update");
+            return;
+        }
+        updateFrom(item);
+    }
 
     private void settingsReset() {
         Log.e(TAG, "settingsReset");
@@ -147,6 +204,131 @@ public class Device extends SettingsPreferenceFragment {
         if( preference != null ) preference.setText(BaikalSpoofer.SystemPropertiesGetNotNullOrEmpty(key,def));
     }
 
+    private void updateFrom(PiItem item) {
+
+        SystemProperties.set("persist.spoof.manufacturer",item.MANUFACTURER);
+        SystemProperties.set("persist.spoof.model",item.MODEL);
+        SystemProperties.set("persist.spoof.fingerprint", item.FINGERPRINT);
+        SystemProperties.set("persist.spoof.brand", item.BRAND);
+        SystemProperties.set("persist.spoof.product", item.PRODUCT);
+        SystemProperties.set("persist.spoof.device", item.DEVICE);
+        SystemProperties.set("persist.spoof.id", item.ID);
+        SystemProperties.set("persist.spoof.release", item.RELEASE);
+        SystemProperties.set("persist.spoof.incremental", item.INCREMENTAL);
+        SystemProperties.set("persist.spoof.security_patch", item.SECURITY_PATCH);
+        SystemProperties.set("persist.spoof.firs_api_level", item.DEVICE_INITIAL_SDK_INT);
+
+            fill("persist.spoof.manufacturer", item.MANUFACTURER);
+            fill("persist.spoof.model", item.MODEL);
+            fill("persist.spoof.fingerprint", item.FINGERPRINT);
+            fill("persist.spoof.brand", item.BRAND);
+            fill("persist.spoof.product", item.PRODUCT);
+            fill("persist.spoof.device", item.DEVICE);
+            fill("persist.spoof.id", item.ID);
+            fill("persist.spoof.release", item.RELEASE);
+            fill("persist.spoof.incremental", item.INCREMENTAL);
+            fill("persist.spoof.security_patch", item.SECURITY_PATCH);
+            fill("persist.spoof.firs_api_level", item.DEVICE_INITIAL_SDK_INT);
+    }
+
+    public PiItem updateFromGoogle() {
+        PiItem item = null;
+        try {
+            URL url = new URL("https://raw.githubusercontent.com/crdroidandroid/android_vendor_certification/refs/heads/15.0/gms_certified_props.json");
+            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+            conn.setRequestMethod("GET");
+            conn.setConnectTimeout(3000);
+            conn.setReadTimeout(3000);
+
+            BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+            StringBuilder content = new StringBuilder();
+            String inputLine;
+            while ((inputLine = in.readLine()) != null) {
+                content.append(inputLine);
+            }
+            in.close();
+
+            item = new PiItem();
+            if( !item.update(content.toString()) ) return null;
+            return item;
+        } catch (Exception e) {
+            Log.e(TAG, "updateFromGoogle:",e);
+            return null;
+        }
+    }
+
+    class PiItem {
+        public String MANUFACTURER;
+        public String MODEL;
+        public String FINGERPRINT;
+        public String PRODUCT;
+        public String DEVICE;
+        public String BRAND;
+        public String ID;
+        public String INCREMENTAL;
+        public String RELEASE;
+        public String SECURITY_PATCH;
+        public String DEVICE_INITIAL_SDK_INT;
+
+        public PiItem() {
+        }
+
+        public PiItem(String json) {
+            update(json);
+        }
+
+        public boolean update(String json) {
+            try {
+                JSONObject parsedProps = new JSONObject(json);
+                Iterator<String> keys = parsedProps.keys();
+
+                while (keys.hasNext()) {
+                    String key = keys.next();
+                    String value = parsedProps.getString(key);
+                    Log.e(TAG, "update:" + key + ":" + value);
+                    switch(key) {
+                        case "MANUFACTURER":
+                            MANUFACTURER = value;
+                            break;
+                        case "MODEL":
+                            MODEL = value;
+                            break;
+                        case "FINGERPRINT":
+                            FINGERPRINT = value;
+                            break;
+                        case "PRODUCT":
+                            PRODUCT = value;
+                            break;
+                        case "DEVICE":
+                            DEVICE = value;
+                            break;
+                        case "BRAND":
+                            BRAND = value;
+                            break;
+                        case "ID":
+                            ID = value;
+                            break;
+                        case "VERSION.INCREMENTAL":
+                            INCREMENTAL = value;
+                            break;
+                        case "VERSION.RELEASE":
+                            RELEASE = value;
+                            break;
+                        case "VERSION.SECURITY_PATCH":
+                            SECURITY_PATCH = value;
+                            break;
+                        case "VERSION.DEVICE_INITIAL_SDK_INT":
+                            DEVICE_INITIAL_SDK_INT = value;
+                            break;
+                    }
+                }
+                return true;
+            } catch (Exception e) {
+                Log.e(TAG, "update:",e);
+                return false;
+            }
+        }
+    }
 
     /**
      * For search

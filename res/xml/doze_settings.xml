@@ -33,6 +33,11 @@
         android:title="@string/doze_on_charge_title"
         android:summary="@string/doze_on_charge_summary" />
 
+    <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+        android:key="baikalos_color_doze"
+        android:title="@string/baikalos_color_doze_title"
+        android:summary="@string/baikalos_color_doze_summary" />
+
     <lineageos.preference.RemotePreference
         android:key="doze_device_settings"
         android:title="@string/doze_additional_settings_title"

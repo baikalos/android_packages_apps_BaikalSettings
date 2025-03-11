@@ -439,6 +439,21 @@
     <string name="status_bar_battery_text_charging_title">Battery percentage when charging</string>
     <string name="status_bar_battery_text_charging_summary">Always display battery percentage when charging</string>
 
+    <string name="status_bar_battery_style_icon_rlandscape_style_a">Landscape R Style A</string>
+    <string name="status_bar_battery_style_icon_landscape_style_a">Landscape L Style A</string>
+    <string name="status_bar_battery_style_icon_rlandscape_style_b">Landscape R Style B</string>
+    <string name="status_bar_battery_style_icon_landscape_style_b">Landscape L Style B</string>
+    <string name="status_bar_battery_style_icon_landscape_pill">Portrait Mx</string>
+    <string name="status_bar_battery_style_icon_landscape_line">Landscape Lorn</string>
+    <string name="status_bar_battery_style_icon_landscape_musku">Portrait IOS</string>
+    <string name="status_bar_battery_style_icon_landscape_signal">Landscape Airoo</string>
+    <string name="status_bar_battery_style_icon_landscape_buddy">Landscape Capsule</string>
+    <string name="status_bar_battery_style_icon_landscape_ios15">Landscape iOS 15</string>
+    <string name="status_bar_battery_style_icon_landscape_ios16">Landscape iOS 16</string>
+    <string name="status_bar_battery_style_icon_landscape_origami">Landscape Origami</string>
+    <string name="status_bar_battery_style_icon_landscape_miui_pill">Landscape MiUI Pill</string>
+
+
     <!-- Status bar - Battery Bar -->
     <string name="battery_bar_title">Battery bar</string>
     <string name="battery_bar_summary">Display and customize battery bar above status bar</string>
@@ -1109,8 +1124,8 @@
     <string name="statusbar_clock_chip_summary">Display accented chip behind clock</string>
 
     <!-- Smart charging -->
-    <string name="smart_charging_title">Smart Bypass Charging</string>
-    <string name="smart_charging_summary">Set maximum charging level</string>
+    <string name="smart_charging_title">Charging</string>
+    <string name="smart_charging_summary">Charging parameters</string>
     <string name="smart_charging_switch_title">Enable Smart Bypass Charging</string>
     <string name="smart_charging_level_title">Stop trigger level</string>
     <string name="smart_charging_resume_level_title">Start trigger level</string>
@@ -1304,4 +1319,22 @@
     <string name="qs_panel_style_reflected">Reflected</string>
     <string name="qs_panel_style_surround">Surround</string>
     <string name="qs_panel_style_thin">ThinLine</string>
+
+    <!-- AOD Settings -->
+    <string name="aod_display_category_title">Always-On-Display</string>
+    <string name="aod_pulse_category_title">Pulse/Doze</string>
+    <!-- AOD custom image -->
+    <string name="lockscreen_custom_image_enabled_title">AOD image</string>
+    <string name="lockscreen_custom_image_title">Select AOD image</string>
+    <string name="lockscreen_custom_image_summary">Set custom AOD image</string>
+    <string name="lockscreen_custom_image_pick_summary">Select AOD image from gallery</string>
+    <string name="custom_aod_image_not_supported">Clock style not supported</string>
+    <string name="quick_settings_header_needs_gallery">You must install a gallery app!</string>
+
+    <string name="lockscreen_custom_fs_image_enabled_title">Fullscreen AOD image</string>
+    <string name="lockscreen_custom_fs_image_summary">Draw AOD image behind the content</string>
+
+    <string name="lockscreen_custom_aod_notification_enabled_title">Notifications on AOD</string>
+    <string name="lockscreen_custom_aod_notification_summary">Display last two notifications on AOD</string>
+
 </resources>

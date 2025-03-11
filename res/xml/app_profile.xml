@@ -22,6 +22,18 @@
     xmlns:lineage="http://schemas.android.com/apk/res-auto"
     android:title="@string/app_profile_title">
 
+    <SwitchPreference
+        android:key="app_profile_disable"
+        android:title="@string/app_profile_disable_title"
+        android:summary="@string/app_profile_disable_summary"
+        android:defaultValue="false" />
+
+
+    <PreferenceCategory
+        android:key="app_profile_main"
+        android:title="@string/app_profile_main_title"
+        >
+
         <ListPreference
             android:key="app_profile_performance"
             android:title="@string/app_profile_performance_title"
@@ -108,16 +120,25 @@
             android:summary="@string/app_profile_freezer_summary"
             android:defaultValue="false" />
 
-        <SwitchPreference
+        <!-- SwitchPreference
             android:key="app_profile_keep_on"
             android:title="@string/app_profile_keep_on_title"
             android:summary="@string/app_profile_keep_on_summary"
-            android:defaultValue="false" />
+            android:defaultValue="false" / -->
+
+        <ListPreference
+            android:key="app_profile_keep_on"
+            android:title="@string/app_profile_keep_on_title"
+            android:summary="%s"
+            android:entries="@array/keep_on_listentries"
+            android:entryValues="@array/keep_on_listvalues"
+            android:defaultValue="0"
+            android:persistent="false" />
 
         <ListPreference
             android:key="app_profile_reader"
             android:title="@string/app_profile_reader_title"
-            android:summary="@string/app_profile_reader_summary"
+            android:summary="%s"
             android:entries="@array/super_saver_listentries"
             android:entryValues="@array/super_saver_listvalues"
             android:defaultValue="0"
@@ -125,8 +146,8 @@
 
         <SwitchPreference
             android:key="app_profile_disable_boot"
-            android:title="@string/app_profile_disable_title"
-            android:summary="@string/app_profile_disable_summary"
+            android:title="@string/app_profile_disable_boot_title"
+            android:summary="@string/app_profile_disable_boot_summary"
             android:defaultValue="false" />
 
         <SwitchPreference
@@ -149,6 +170,14 @@
             android:defaultValue="default"
             android:summary="%s"/>
 
+        <ListPreference
+            android:key="app_profile_boost_control"
+            android:title="@string/app_profile_boost_control_title"
+            android:entries="@array/boost_control_listentries"
+            android:entryValues="@array/boost_control_listvalues" 
+            android:defaultValue="default"
+            android:summary="%s"/>
+
         <SwitchPreference
             android:key="app_profile_heavy_memory"
             android:title="@string/app_profile_heavy_memory_title"
@@ -160,6 +189,14 @@
             android:title="@string/app_profile_heavy_cpu_title"
             android:summary="@string/app_profile_heavy_cpu_summary"
             android:defaultValue="false" />
+
+        <ListPreference
+            android:key="app_profile_camera"
+            android:title="@string/app_profile_camera_title"
+            android:entries="@array/camera_listentries"
+            android:entryValues="@array/camera_listvalues"
+            android:defaultValue="0"
+            android:summary="%s" />
 
         <ListPreference
             android:key="app_profile_brightness"
@@ -174,6 +211,14 @@
             android:title="@string/app_profile_rotation_title"
             android:entries="@array/rotation_listentries"
             android:entryValues="@array/rotation_listvalues"
+            android:defaultValue="default"
+            android:summary="%s" />
+
+        <ListPreference
+            android:key="app_profile_darkmode"
+            android:title="@string/app_profile_darkmode_title"
+            android:entries="@array/darkmode_listentries"
+            android:entryValues="@array/darkmode_listvalues"
             android:defaultValue="default"
             android:summary="%s" />
 
@@ -208,6 +253,12 @@
             android:key="app_profile_devmode"
             android:title="@string/app_profile_devmode_title"
             android:summary="@string/app_profile_devmode_summary"
+            android:persistent="false" />
+
+        <SwitchPreference
+            android:key="app_profile_filterfs"
+            android:title="@string/app_profile_filterfs_title"
+            android:summary="@string/app_profile_filterfs_summary"
             android:persistent="false" />
 
         <SwitchPreference
@@ -451,5 +502,5 @@
             aicpextras:unitsRight=""
             android:defaultValue="-99999"/ -->
 
-
+    </PreferenceCategory>
 </PreferenceScreen>

@@ -63,7 +63,7 @@ public class DolbySwitch extends SettingsPreferenceFragment {
 
         mResolver = getContext().getContentResolver();
 
-        mEnabled = Settings.Secure.getIntForUser(mResolver, DOLBY_ENABLED, 1, UserHandle.USER_CURRENT) != 0;
+        mEnabled = Settings.Secure.getIntForUser(mResolver, DOLBY_ENABLED, 0, UserHandle.USER_CURRENT) != 0;
 
         mSwitchEnable = (SwitchPreference) findPreference(DOLBY_ENABLED);
         if( mSwitchEnable != null ) {

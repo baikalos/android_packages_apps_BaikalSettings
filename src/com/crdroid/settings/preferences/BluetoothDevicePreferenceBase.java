@@ -22,18 +22,21 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 
-public class BluetoothDevicePreference extends MultiSelectListPreference implements OnPreferenceChangeListener {
+public abstract class BluetoothDevicePreferenceBase extends MultiSelectListPreference implements OnPreferenceChangeListener {
 
     private static final String TAG = "Baikal.BluetoothDevicePreference";
 
 
     Context mContext;
 
-    public BluetoothDevicePreference(Context context, AttributeSet attrs) {
+    public abstract String readPropertiesFromStore(String key);
+    public abstract void writePropertiesToStore(String key, String val);
+
+    public BluetoothDevicePreferenceBase(Context context, AttributeSet attrs) {
         super(context, attrs);
+        mContext = context;
         Log.e(TAG, "BluetoothDevicePreference: " + attrs);
 
-        mContext = context;
 
         BluetoothAdapter bta = BluetoothAdapter.getDefaultAdapter();
         Set<BluetoothDevice> pairedDevices = bta.getBondedDevices();
@@ -48,7 +51,7 @@ public class BluetoothDevicePreference extends MultiSelectListPreference impleme
         int i = 0;
         for (BluetoothDevice dev : pairedDevices) {
             entries[i] = dev.getName();
-            if (entries[i] == null) entries[i] = "unknown";
+            if (entries[i] == null) entries[i] = "<unknown>";
             entryValues[i] = dev.getAddress();
             checkedValues.add(dev.getAddress());
             i++;
@@ -56,7 +59,7 @@ public class BluetoothDevicePreference extends MultiSelectListPreference impleme
 
         for (BluetoothDevice dev : connectedLEDevices) {
             entries[i] = dev.getName();
-            if (entries[i] == null) entries[i] = "unknown";
+            if (entries[i] == null) entries[i] = "<unknown>";
             entryValues[i] = dev.getAddress();
             i++;
         }
@@ -64,8 +67,10 @@ public class BluetoothDevicePreference extends MultiSelectListPreference impleme
         setEntries(entries);
         setEntryValues(entryValues);
 
-        String btDevices = Settings.Secure.getString(context.getContentResolver(),
-                Settings.Secure.BAIKALOS_TRUST_BT_DEV);
+        String btDevices = readPropertiesFromStore(getKey());
+
+        //Settings.Secure.getString(context.getContentResolver(),
+        //        Settings.Secure.BAIKALOS_TRUST_BT_DEV);
 
         //if( btDevices == null ) return;
 
@@ -80,6 +85,10 @@ public class BluetoothDevicePreference extends MultiSelectListPreference impleme
         Log.e(TAG, "setValues: " + checkedValues);
 
         setOnPreferenceChangeListener(this);
+    }
+
+    public Context getContext() {
+        return mContext;
     }
 
     @Override
@@ -111,14 +120,18 @@ public class BluetoothDevicePreference extends MultiSelectListPreference impleme
         }
 
         Log.e(TAG, "checked string: " + buffer.toString());
-        Settings.Secure.putStringForUser(mContext.getContentResolver(), Settings.Secure.BAIKALOS_TRUST_BT_DEV,
-            buffer.toString(), UserHandle.USER_CURRENT);
+
+
+        writePropertiesToStore(getKey(), buffer.toString());
+
+        //Settings.Secure.putStringForUser(mContext.getContentResolver(), Settings.Secure.BAIKALOS_TRUST_BT_DEV,
+        //    buffer.toString(), UserHandle.USER_CURRENT);
 
         return true;
         
     }
 
-    public BluetoothDevicePreference(Context context) {
+    public BluetoothDevicePreferenceBase(Context context) {
         this(context, null);
     }
 }

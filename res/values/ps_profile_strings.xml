@@ -73,6 +73,6 @@
     <string name="ps_profile_lessRestrictiveBackgroundPolicy_summary">Less restrictive background limiter</string>
 
     <string name="ps_profile_disableBackgroundByDefault_title">Disable by default</string>
-    <string name="ps_profile_disableBackgroundByDefault_summary">Disable background execution by default</string>
+    <string name="ps_profile_disableBackgroundByDefault_summary">Disable background execution for the apps with \'auto\' background mode </string>
 
 </resources>

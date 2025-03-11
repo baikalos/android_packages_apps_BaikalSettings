@@ -15,6 +15,7 @@
     <string name="kmesg_title">Kmesg</string>
     <string name="dmesg_title">Dmesg</string>
     <string name="dumpsys_title">Dumpsys</string>
+    <string name="anr_title">ANR</string>
     <string name="log_it_now_title">Save</string>
     <string name="log_it_dialog_title">Save</string>
     <string name="logcat_warning">Share it</string>
@@ -30,6 +31,8 @@
     <string name="baikalos_debug_title">Verbose log</string>
     <string name="baikalos_debug_summary">Enable verbose logging. Do not enable without a reason</string>
 
+    <string name="baikalos_force_warm_title">Force Warm Reboot</string>
+    <string name="baikalos_force_warm_summary">Force warm reboot on kernel panic to save kmsg logs</string>
 
     <!-- Device parts -->
     <string name="device_part_title">Device features</string>
@@ -102,6 +105,9 @@
     <string name="captive_portal_default">Default (Google)</string>
     <string name="captive_portal_apple">Apple</string>
     <string name="captive_portal_yandex">Yandex</string>
+
+    <string name="block_if_busy_title">Reject if busy</string>
+    <string name="block_if_busy_summary">Reject incoming mobile calls if there is active voice call (Telegram, WhatsApp, Conference, etc ...)</string>
 
     <string name="r_secure_title">Unrestricted Storage</string>
     <string name="r_secure_summary">Disable restrictions introduced by Android 11 on access to some External Storage folders</string>
@@ -192,6 +198,12 @@
     <string name="purge_package_cache_title">Purge package cache</string>
     <string name="purge_package_cache_summary">Purge package cache on next system boot</string>
 
+    <string name="restore_gms_permissions_title">GMS permissions</string>
+    <string name="restore_gms_permissions_summary">Restore Google Services permissions on a next system boot</string>
+
+    <string name="restore_system_permissions_title">System Apps permissions</string>
+    <string name="restore_system_permissions_summary">Restore all system apps permissions on a next system boot</string>
+
     <string name="ui_use_new_back_gesturu_title">Back gesture UI</string>
     <string name="ui_use_new_back_gesturu_summary">Use new back gesture UI</string>
 
@@ -255,6 +267,17 @@
     <string name="baikalos_disable_certificate_spoof_title">Disable Certificate spoofing</string>
     <string name="baikalos_disable_certificate_spoof_summary">Disable Certificate spoofing for Google Services</string>
 
+    <string name="baikalos_disable_signature_spoof_title">Disable Signature spoofing</string>
+    <string name="baikalos_disable_signature_spoof_summary">Disable Core package Signature spoofing for Google Services</string>
+
+    <string name="baikalos_disable_gms_swa_spoof_title">Disable SW attestation</string>
+    <string name="baikalos_disable_gms_swa_spoof_summary">Disable enforcing SW attestation for Google Services</string>
+
+    <string name="baikalos_gms_override_spoof_title">Override properties</string>
+    <string name="baikalos_gms_override_spoof_summary">Override properties used for spoofing Google Services</string>
+
+    <string name="baikalos_gms_props_title">Spoofer properties</string>
+
     <string name="device_title">Device ID</string>
     <string name="device_summary">Device ID for GMS spoofing</string>
 
@@ -273,11 +296,77 @@
     <string name="spoof_setings_reset_summary">Reset to system default values</string>
     <string name="spoof_setings_reset_title">Reset</string>
 
+    <string name="spoof_setings_update_summary">Update settings from crDroid servers</string>
+    <string name="spoof_setings_update_title">Update</string>
+
+    <string name="spoof_restart_gms_summary">Restart Google Play Services</string>
+    <string name="spoof_restart_gms_title">Restart GMS</string>
+
+    <string name="baikalos_gms_spoofer_update_title">Auto update</string>
+    <string name="baikalos_gms_spoofer_update_summary">Periodically check for updated keys on internet</string>
+
     <string name="audio_route_speaker_title">Force to speaker</string>
     <string name="audio_route_duplicate_title">Duplicate to speaker</string>
     <string name="baikalos_enable_force_speaker_title">Enforce speaker</string>
     <string name="baikalos_enable_force_speaker_summary">Enforce speaker usage. This will override above values and break duplication.</string>
 
     <string name="baikalos_power_zram_title">ZRAM</string>
+
+    <string name="baikalos_color_doze_title">Color</string>
+    <string name="baikalos_color_doze_summary">Enable colored content on ambient display</string>
+
+    <string name="special_devices_title">Special Scenarios</string>
+    <string name="special_devices_summary">Special scenarios settings</string>
+
+    <string name="special_bt_dev_title">BT Devices</string>
+    <string name="special_bt_dev_summary">BT Devices used in special scenarios</string>
+
+    <string name="sd_incall_title">Awake in call</string>
+    <string name="sd_incall_summary">Keep device awake if incall and special device connected</string>
+
+    <string name="sd_keep_title">Keep awake</string>
+    <string name="sd_keep_summary">Keep device awake if special device connected</string>
+
+    <string name="filterfs_enable_title">Filesystem Filter</string>
+    <string name="filterfs_enable_summary">Enable per-app file-system filter. Will block or unblock (depened on Invert option) access to some system folders and files to hide them from apps</string>
+
+    <string name="filterfs_invert_title">Invert FS Filter</string>
+    <string name="filterfs_invert_summary">If unchecked all apps except marked in app profile will have access. If cheched only marked apps will have access</string>
+
+    <string name="filterfs_isolated_title">Filter Isolated Apps</string>
+    <string name="filterfs_isolated_summary">Always filter file-system for Isolated Apps</string>
+
+    <string name="baikalos_location_mode_title">GNSS Receiver</string>
+    <string name="baikalos_location_mode_summary">Enable HW GNSS receiver</string>
+
+    <string name="front_camera_mode_title">Disable Front camera</string>
+    <string name="front_camera_mode_summary">Disable front camera by default. Can be overriden by an app profile.</string>
+
+    <string name="back_camera_mode_title">Disable Back camera</string>
+    <string name="back_camera_mode_summary">Disable back camera by default. Can be overriden by an app profile.</string>
+
+    <string name="force_wfc_title">Force WFC</string>
+    <string name="force_wfc_summary">Force VoWiFi availbale regardless of carrier provisioning settings</string>
+
+    <string name="force_cs_title">Force Cross SIM</string>
+    <string name="force_cs_summary">Force Cross SIM (backup calling) availbale regardless of carrier provisioning settings</string>
+
+    <string name="enable_stationary_throttle_title">Stationary Throttle</string>
+    <string name="enable_stationary_throttle_summary">Whether to throttle location when the device is in doze and still.</string>
+
+    <string name="camera_ignore_ir_title">Ignore IR</string>
+    <string name="camera_ignore_ir_summary">Use regular front facing camera for face unlock</string>
+
+    <string name="smart_low_battery_trigger_level_title">Low battery warning level</string>
+    <string name="smart_critical_battery_trigger_level_title">Critical battery warning level</string>
+
+    <string name="baikalos_fp_wake_enabled_title">Wake on Fingerprint</string>
+    <string name="baikalos_fp_wake_enabled_summary">Wakeup device on fingerprint sensor if no fingerprints are enrolled</string>
+
+    <string name="baikalos_airplane_dont_toggle_bt_title">Don\'t toggle BT</string>
+    <string name="baikalos_airplane_dont_toggle_bt_summary">Do not toggle BT on airplain mode</string>
+
+    <string name="baikalos_airplane_dont_toggle_wifi_title">Don\'t toggle WiFi</string>
+    <string name="baikalos_airplane_dont_toggle_wifi_summary">Do not toggle WiFi on airplain mode</string>
 
 </resources>

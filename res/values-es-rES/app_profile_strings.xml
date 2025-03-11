@@ -81,6 +81,7 @@
     <string name="background_restrictions_disabled">Desactivado</string>
 
     <string name="app_profile_pinned_title">Fijado</string>
+
     <string name="app_profile_pinned_summary">Protege esta aplicación de ser cerrada por el sistema. ¡NO USAR si no está absolutamente seguro de que lo necesita!</string>
 
     <string name="app_profile_donotclose_title">No cerrar</string>

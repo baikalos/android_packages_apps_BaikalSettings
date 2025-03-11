@@ -65,7 +65,7 @@ public class AfxSwitch extends SettingsPreferenceFragment {
 
         mResolver = getContext().getContentResolver();
 
-        mEnabled = Settings.Secure.getIntForUser(mResolver, AFX_ENABLED, 0, UserHandle.USER_CURRENT) != 0;
+        mEnabled = Settings.Secure.getIntForUser(mResolver, AFX_ENABLED, 1, UserHandle.USER_CURRENT) != 0;
 
         mSwitchEnable = (SwitchPreference) findPreference(AFX_ENABLED);
         if( mSwitchEnable != null ) {

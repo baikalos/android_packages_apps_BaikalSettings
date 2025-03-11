@@ -20,6 +20,14 @@
     android:title="@string/misc_title"
     >
 
+    <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+        android:key="baikalos_block_if_busy"
+        android:icon="@drawable/ic_phone_ring"
+        android:title="@string/block_if_busy_title"
+        android:summary="@string/block_if_busy_summary"
+        android:defaultValue="false" />
+
+
     <!-- Gaming mode -->
     <Preference
         android:key="gaming_mode"
@@ -75,6 +83,35 @@
         android:summary="@string/smart_charging_summary"
         android:fragment="com.crdroid.settings.fragments.misc.SmartCharging"/>
 
+
+    <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+        android:key="baikalos_location_mode"
+        android:icon="@drawable/ic_map_marker"
+        android:title="@string/baikalos_location_mode_title"
+        android:summary="@string/baikalos_location_mode_summary"
+        android:defaultValue="true" />
+
+    <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+        android:key="baikalos_camera_disable_back"
+        android:icon="@drawable/ic_camera_rear"
+        android:title="@string/back_camera_mode_title"
+        android:summary="@string/back_camera_mode_summary"
+        android:defaultValue="false" />
+
+    <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+        android:key="baikalos_camera_disable_front"
+        android:icon="@drawable/ic_camera"
+        android:title="@string/front_camera_mode_title"
+        android:summary="@string/front_camera_mode_summary"
+        android:defaultValue="false" />
+
+    <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+        android:key="baikalos_camera_ignore_ir"
+        android:icon="@drawable/ic_camera"
+        android:title="@string/camera_ignore_ir_title"
+        android:summary="@string/camera_ignore_ir_summary"
+        android:defaultValue="false" />
+
     <!-- Three-fingers-swipe to screenshot -->
     <com.crdroid.settings.preferences.SystemSettingSwitchPreference
         android:key="three_finger_gesture"
@@ -118,6 +155,20 @@
     </Preference>
 
     <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+        android:key="baikalos_airplane_dont_toggle_bt"
+        android:icon="@drawable/ic_airplane_mode"
+        android:title="@string/baikalos_airplane_dont_toggle_bt_title"
+        android:summary="@string/baikalos_airplane_dont_toggle_bt_summary"
+        android:defaultValue="false" />
+
+    <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+        android:key="baikalos_airplane_dont_toggle_wifi"
+        android:icon="@drawable/ic_airplane_mode"
+        android:title="@string/baikalos_airplane_dont_toggle_wifi_title"
+        android:summary="@string/baikalos_airplane_dont_toggle_wifi_summary"
+        android:defaultValue="false" />
+
+    <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
         android:key="restricted_networking_mode"
         android:icon="@drawable/ic_network"
         android:title="@string/restricted_networking_mode_title"
@@ -139,6 +190,27 @@
    	    android:entryValues="@array/default_captive_portal_listvalues" 
         android:defaultValue="default"
         android:summary="%s"/>
+
+    <com.crdroid.settings.preferences.SystemPropertySwitchPreference
+        android:key="persist.baikal.filterfs_enable"
+        android:icon="@drawable/ic_storage"
+        android:title="@string/filterfs_enable_title"
+        android:summary="@string/filterfs_enable_summary"
+        android:defaultValue="false" />
+
+    <com.crdroid.settings.preferences.SystemPropertySwitchPreference
+        android:key="persist.baikal.filterfs_invert"
+        android:icon="@drawable/ic_storage"
+        android:title="@string/filterfs_invert_title"
+        android:summary="@string/filterfs_invert_summary"
+        android:defaultValue="false" />
+
+    <com.crdroid.settings.preferences.SystemPropertySwitchPreference
+        android:key="persist.baikal.filterfs_isolated"
+        android:icon="@drawable/ic_storage"
+        android:title="@string/filterfs_isolated_title"
+        android:summary="@string/filterfs_isolated_summary"
+        android:defaultValue="false" />
 
     <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
         android:key="baikalos_r_secure"
@@ -177,6 +249,27 @@
         android:defaultValue="false" />
 
     <com.crdroid.settings.preferences.SystemPropertySwitchPreference
+        android:key="persist.baikal.ims.force_wfc"
+        android:icon="@drawable/ic_phone_ring"
+        android:title="@string/force_wfc_title"
+        android:summary="@string/force_wfc_summary"
+        android:defaultValue="false"/>
+
+    <com.crdroid.settings.preferences.SystemPropertySwitchPreference
+        android:key="persist.baikal.ims.force_cs"
+        android:icon="@drawable/ic_phone_ring"
+        android:title="@string/force_cs_title"
+        android:summary="@string/force_cs_summary"
+        android:defaultValue="false"/>
+
+    <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+        android:key="location_enable_stationary_throttle"
+        android:icon="@drawable/ic_map_marker"
+        android:title="@string/enable_stationary_throttle_title"
+        android:summary="@string/enable_stationary_throttle_summary"
+        android:defaultValue="true" />
+
+    <com.crdroid.settings.preferences.SystemPropertySwitchPreference
         android:key="persist.baikal.art.inc_max"
         android:icon="@drawable/ic_backup"
         android:title="@string/art_inc_max_title"
@@ -197,5 +290,18 @@
         android:summary="@string/purge_package_cache_summary"
         android:defaultValue="false" />
 
+    <com.crdroid.settings.preferences.SystemPropertySwitchPreference
+        android:key="persist.baikal.restore_gms_permissions"
+        android:icon="@drawable/ic_storage"
+        android:title="@string/restore_gms_permissions_title"
+        android:summary="@string/restore_gms_permissions_summary"
+        android:defaultValue="false" />
+
+    <com.crdroid.settings.preferences.SystemPropertySwitchPreference
+        android:key="persist.baikal.restore_system_permissions"
+        android:icon="@drawable/ic_storage"
+        android:title="@string/restore_system_permissions_title"
+        android:summary="@string/restore_system_permissions_summary"
+        android:defaultValue="false" />
 
 </PreferenceScreen>

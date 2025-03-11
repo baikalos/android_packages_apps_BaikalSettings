@@ -66,6 +66,18 @@
             android:defaultValue="true" />
 
         <SwitchPreference
+            android:key="ps_profile_EnableInteractionBoost"
+            android:title="@string/baikalos_interaction_boost_title"
+            android:summary="@string/baikalos_interaction_boost_summary"
+            android:defaultValue="true" />
+
+        <SwitchPreference
+            android:key="ps_profile_EnableRenderingBoost"
+            android:title="@string/baikalos_rendering_boost_title"
+            android:summary="@string/baikalos_rendering_boost_summary"
+            android:defaultValue="true" />
+
+        <SwitchPreference
             android:key="ps_profile_EnableOptionalSensors"
             android:title="@string/ps_profile_EnableOptionalSensors_title"
             android:summary="@string/ps_profile_EnableOptionalSensors_summary"
