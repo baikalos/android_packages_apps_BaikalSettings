@@ -8,6 +8,7 @@
     <string name="app_profile_thermal_title">Perfil térmico</string>
     <string name="app_profile_brightness_title">Brillo de pantalla</string>
     <string name="app_profile_rotation_title">Rotación de pantalla</string>
+    <string name="app_profile_darkmode_title">Modo oscuro forzado</string>
     <string name="app_idle_performance_title">Perfil de rendimiento en reposo</string>
     <string name="app_idle_thermal_title">Perfil térmico en reposo</string>
 
@@ -80,13 +81,13 @@
     <string name="background_restrictions_disabled">Desactivado</string>
 
     <string name="app_profile_pinned_title">Fijado</string>
-    <string name="app_profile_pinned_summary">Protege esta aplicación de ser matada por el sistema</string>
+    <string name="app_profile_pinned_summary">Protege esta aplicación de ser cerrada por el sistema. ¡NO USAR si no está absolutamente seguro de que lo necesita!</string>
 
     <string name="app_profile_donotclose_title">No cerrar</string>
     <string name="app_profile_donotclose_summary">No cierra esta aplicación en la gestión agresiva de la memoria</string>
 
-    <string name="app_profile_disable_title">Desactivar inicio automático</string>
-    <string name="app_profile_disable_summary">Desactiva el inicio automático de aplicaciones al arrancar el dispositivo</string>
+    <string name="app_profile_disable_boot_title">Desactivar inicio automático</string>
+    <string name="app_profile_disable_boot_summary">Desactiva el inicio automático de esta aplicación al iniciar el dispositivo</string>
 
     <string name="app_profile_disable_wakeup_title">Desactivar despertador</string>
     <string name="app_profile_disable_wakeup_summary">Desactiva esta aplicación para establecer alarmas de despertador</string>
@@ -242,6 +243,12 @@
     <string name="cpu_resources_moderate">Moderado</string>
     <string name="cpu_resources_hard">Duro</string>
 
+    <string name="app_profile_boost_control_title">Control de potenciador</string>
+    <string name="boost_control_default">Por defecto</string>
+    <string name="boost_control_full">Potenciador completo</string>
+    <string name="boost_control_interaction">Solo interacción</string>
+    <string name="boost_control_disabled">Desactivado</string>
+
     <string name="app_profile_freezer_title">Desactivar congelador</string>
     <string name="app_profile_freezer_summary">No permite que esta aplicación sea congelada por el congelador de segundo plano</string>
 
@@ -313,5 +320,27 @@
     <string name="app_profile_block_calendar_summary"></string>
     <string name="app_profile_block_media_title">Bloquear medios</string>
     <string name="app_profile_block_media_summary"></string>
+
+    <string name="keep_on_default">No</string>
+    <string name="keep_on_always">Siempre</string>
+    <string name="keep_on_charger">Al cargar</string>
+    <string name="keep_on_bt">Dispositivo Bluetooth</string>
+    <string name="keep_on_bt_and_charger">Dispositivo Bluetooth y cargador</string>
+
+    <string name="app_profile_filterfs_title">Filtro del sistema de archivos</string>
+    <string name="app_profile_filterfs_summary">Bloquea o permite (dependiendo de la opción Invertir en Otros) el acceso a ciertos archivos del sistema, como su, addon.d, etc...</string>
+
+    <string name="darkmode_default">Por defecto</string>
+    <string name="darkmode_forced_as_system">Forzado como el sistema</string>
+    <string name="darkmode_forced">Forzado</string>
+    <string name="app_profile_disable_title">Desactivar</string>
+    <string name="app_profile_disable_summary">Desactiva esta aplicación</string>
+
+    <string name="app_dsable_confirm_title">¡Atención!</string>
+    <string name="app_dsable_confirm_summary">Esto desactivará esta aplicación. Se eliminarán todos los datos específicos de esta aplicación.</string>
+    <string name="app_disable_confirm_ok">Desactivar</string>
+    <string name="app_disable_confirm_cancel">Cancelar</string>
+
+    <string name="app_profile_main_title">Nombre del paquete</string>
 
 </resources>
