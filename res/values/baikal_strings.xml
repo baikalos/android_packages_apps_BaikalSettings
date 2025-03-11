@@ -296,6 +296,15 @@
     <string name="spoof_setings_reset_summary">Reset to system default values</string>
     <string name="spoof_setings_reset_title">Reset</string>
 
+    <string name="spoof_setings_update_summary">Update settings from crDroid servers</string>
+    <string name="spoof_setings_update_title">Update</string>
+
+    <string name="spoof_restart_gms_summary">Restart Google Play Services</string>
+    <string name="spoof_restart_gms_title">Restart GMS</string>
+
+    <string name="baikalos_gms_spoofer_update_title">Auto update</string>
+    <string name="baikalos_gms_spoofer_update_summary">Periodically check for updated keys on internet</string>
+
     <string name="audio_route_speaker_title">Force to speaker</string>
     <string name="audio_route_duplicate_title">Duplicate to speaker</string>
     <string name="baikalos_enable_force_speaker_title">Enforce speaker</string>
@@ -347,5 +356,17 @@
 
     <string name="camera_ignore_ir_title">Ignore IR</string>
     <string name="camera_ignore_ir_summary">Use regular front facing camera for face unlock</string>
+
+    <string name="smart_low_battery_trigger_level_title">Low battery warning level</string>
+    <string name="smart_critical_battery_trigger_level_title">Critical battery warning level</string>
+
+    <string name="baikalos_fp_wake_enabled_title">Wake on Fingerprint</string>
+    <string name="baikalos_fp_wake_enabled_summary">Wakeup device on fingerprint sensor if no fingerprints are enrolled</string>
+
+    <string name="baikalos_airplane_dont_toggle_bt_title">Don\'t toggle BT</string>
+    <string name="baikalos_airplane_dont_toggle_bt_summary">Do not toggle BT on airplain mode</string>
+
+    <string name="baikalos_airplane_dont_toggle_wifi_title">Don\'t toggle WiFi</string>
+    <string name="baikalos_airplane_dont_toggle_wifi_summary">Do not toggle WiFi on airplain mode</string>
 
 </resources>

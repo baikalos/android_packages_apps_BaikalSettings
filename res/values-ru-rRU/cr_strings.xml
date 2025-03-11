@@ -950,8 +950,8 @@
     <string name="statusbar_clock_chip_summary">Показывать акцентированный фон позади часов</string>
 
     <!-- Smart charging -->
-    <string name="smart_charging_title">Умная обходная зарядка</string>
-    <string name="smart_charging_summary">Установить максимальный уровень заряда</string>
+    <string name="smart_charging_title">Зарядка</string>
+    <string name="smart_charging_summary">Параметры заряда</string>
     <string name="smart_charging_switch_title">Включить умную обходную зарядку</string>
     <string name="smart_charging_level_title">Уровень остановки зарядки устройства</string>
     <string name="smart_charging_resume_level_title">Уровень возобновления зарядки</string>
@@ -1111,4 +1111,16 @@
     <string name="kg_custom_clock_top_margin_title">Положение вертикальных часов</string>
     <string name="kg_small_clock_text_size_title">Размер маленьких часов</string>
     <string name="kg_large_clock_text_size_title">Размер вертикальных часов</string>
+
+    <string name="lockscreen_custom_image_enabled_title">AOD изображение</string>
+    <string name="lockscreen_custom_image_title">Выберите изображения для AOD</string>
+    <string name="lockscreen_custom_image_summary">Установить пользовательское изображения для AOD</string>
+    <string name="lockscreen_custom_image_pick_summary">Выверите изображение для AOD из галереи</string>
+
+    <string name="lockscreen_custom_fs_image_enabled_title">Полноэкранное изображение на AOD</string>
+    <string name="lockscreen_custom_fs_image_summary">Показывать изображение на AOD в полном экране</string>
+
+    <string name="lockscreen_custom_aod_notification_enabled_title">Уведомления на AOD</string>
+    <string name="lockscreen_custom_aod_notification_summary">Показывать активные уведомления на AOD</string>
+
 </resources>

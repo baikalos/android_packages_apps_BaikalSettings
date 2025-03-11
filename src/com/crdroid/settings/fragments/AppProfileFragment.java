@@ -17,9 +17,13 @@
 package com.crdroid.settings.fragments;
 
 import android.app.ActivityManager;
+import android.app.AlertDialog;
 import android.content.ContentResolver;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.os.Handler;
@@ -67,6 +71,7 @@ import java.io.File;
 
 import java.text.Collator;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
@@ -80,6 +85,8 @@ public class AppProfileFragment extends SettingsPreferenceFragment
     public static final String ARG_PACKAGE_NAME = "package";
     public static final String ARG_PACKAGE_UID = "uid";
 
+    private static final String APP_PROFILE_MAIN = "app_profile_main";
+    private static final String APP_PROFILE_DISABLE = "app_profile_disable";
     private static final String APP_PROFILE_OLD_LINKS = "app_profile_old_links";
     private static final String APP_PROFILE_DEBUG = "app_profile_debug";
     private static final String APP_PROFILE_DISABLE_BOOT = "app_profile_disable_boot";
@@ -153,6 +160,8 @@ public class AppProfileFragment extends SettingsPreferenceFragment
     private String mPackageName;
     private int mUid;
     private Context mContext;
+
+    private SwitchPreference mAppDisable;
 
     private SwitchPreference mAppOldLinks;
     private SwitchPreference mAppDebug;
@@ -289,6 +298,17 @@ public class AppProfileFragment extends SettingsPreferenceFragment
 
         try {
 
+            PreferenceCategory mainCategory = (PreferenceCategory) findPreference(APP_PROFILE_MAIN);
+
+            PreferenceScreen screen = getPreferenceScreen();
+
+            screen.setTitle(getApplicationName(mPackageName));
+            getActivity().setTitle(getApplicationName(mPackageName));
+
+            //mainCategory.setTitle(getApplicationName(mPackageName));
+            mainCategory.setSummary(mPackageName);
+
+
             PowerWhitelistBackend mBackend = PowerWhitelistBackend.getInstance(getContext());
             mBackend.refreshList();
 
@@ -310,6 +330,63 @@ public class AppProfileFragment extends SettingsPreferenceFragment
                     }
                 });
             }
+
+
+
+            mAppDisable = (SwitchPreference) findPreference(APP_PROFILE_DISABLE);
+
+            if( mAppDisable != null ) {
+                int state = getApplicationState(mPackageName);
+                boolean enabled = state == PackageManager.COMPONENT_ENABLED_STATE_ENABLED || state == PackageManager.COMPONENT_ENABLED_STATE_DEFAULT;
+                mAppDisable.setChecked(!enabled);
+                mainCategory.setEnabled(enabled);
+                Log.e(TAG, "mAppDisable: mPackageName=" + mPackageName + ", state=" + state);
+
+                if( isSystemWl() || isAppManagerWl() ) {
+                    mAppDisable.setEnabled(false);
+                } else {
+                    mAppDisable.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                        public boolean onPreferenceChange(Preference preference, Object newValue) {
+                            try {
+                                boolean disabled = ((Boolean)newValue);
+                                if( disabled ) {
+                                    AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                                    builder.setCancelable(false);  
+                                    builder.setTitle(R.string.app_dsable_confirm_title);
+                                    builder.setMessage(R.string.app_dsable_confirm_summary);
+                                    builder.setPositiveButton(R.string.app_disable_confirm_ok, new DialogInterface.OnClickListener() {
+                                        @Override
+                                        public void onClick(DialogInterface arg0, int arg1) {
+                                            int state = PackageManager.COMPONENT_ENABLED_STATE_DISABLED;
+                                            Log.e(TAG, "mAppDisable: mPackageName=" + mPackageName + ",state=" + state);
+                                            setApplicationState(mPackageName, state);
+                                            mainCategory.setEnabled(!disabled);
+                                        }
+                                    });
+                                    builder.setNegativeButton(R.string.app_disable_confirm_cancel, new DialogInterface.OnClickListener() {
+                                        @Override
+                                        public void onClick(DialogInterface arg0, int arg1) {
+                                            mAppDisable.setChecked(false);
+                                        }
+                                    });
+                                    AlertDialog alertDialog = builder.create();
+                                    alertDialog.show();
+                                } else {                              
+                                    int state = disabled ? PackageManager.COMPONENT_ENABLED_STATE_DISABLED : PackageManager.COMPONENT_ENABLED_STATE_ENABLED;
+                                    Log.e(TAG, "mAppDisable: mPackageName=" + mPackageName + ",state=" + state);
+                                    setApplicationState(mPackageName, state);
+                                    mainCategory.setEnabled(!disabled);
+                                }
+                            } catch(Exception re) {
+                                Log.e(TAG, "onCreate: mAppDisable Fatal! exception", re );
+                            }
+                            return true;
+                        }
+                    });
+                }
+            }
+
+            
         
             mAppDebug = (SwitchPreference) findPreference(APP_PROFILE_DEBUG);
             if( mAppDebug != null ) {
@@ -1625,6 +1702,65 @@ public class AppProfileFragment extends SettingsPreferenceFragment
     }
 
 
+    private boolean isSystemWl() {
+        if( mUid < Process.FIRST_APPLICATION_UID ) return true;
+        if( mPackageName == null ) return false;
+        if( mPackageName.startsWith("com.android.service.ims") ) return true;
+        if( mPackageName.startsWith("com.android.launcher3") ) return true;
+        if( mPackageName.startsWith("com.android.systemui") ) return true;
+        if( mPackageName.startsWith("com.android.nfc") ) return true;
+        if( mPackageName.startsWith("com.android.providers") ) return true;
+        if( mPackageName.startsWith("com.android.inputmethod") ) return true;
+        if( mPackageName.startsWith("com.qualcomm.qti.telephonyservice") ) return true;
+        if( mPackageName.startsWith("com.android.phone") ) return true;
+        if( mPackageName.startsWith("com.android.server.telecom") ) return true;
+        if( mPackageName.startsWith("com.android.dialer") ) return true;
+        return false;
+    }
+
+    public static final String[] sAppManagerPackages =
+    {
+        "com.android.vending",
+        "com.google.android.gms",
+        "com.google.android.gms.policy_sidecar_aps",
+        "com.google.android.gsf",
+        "com.google.android.markup",
+        "com.google.android.projection.gearhead",
+        "com.google.android.syncadapters.calendar",
+        "com.google.android.syncadapters.contacts",
+        "com.google.android.syncadapters.contacts",
+        "com.google.android.gm.exchange",
+        "com.google.android.apps.customization.pixel",
+        "com.google.android.apps.restore",
+        "com.google.android.apps.wellbeing",
+        "com.google.android.soundpicker",
+        "com.google.android.settings.intelligence",
+        "com.google.android.setupwizard",
+        "com.google.android.partnersetup",
+        "com.google.android.feedback",
+        "com.google.android.tts",
+        "com.google.android.marvin.talkback",
+        "com.google.android.googlequicksearchbox",
+        "com.huawei.hwid",
+        "com.huawei.appmarket",
+        "com.dolby.daxservice",
+        "com.dolby.daxappui",
+        "james.dsp",
+        "org.lineageos.audiofx",
+        "com.crdroid.faceunlock"
+    };
+
+
+
+    private boolean isAppManagerWl() {
+        if( mUid < Process.FIRST_APPLICATION_UID ) return true;
+        if( mPackageName == null ) return false;
+        if( Arrays.stream(sAppManagerPackages).anyMatch(mPackageName::equals) ) {
+            return true;
+        }
+        return false;
+    }
+
 
     private boolean isStaminaWl() {
         if( mUid < Process.FIRST_APPLICATION_UID ) return true;
@@ -1657,6 +1793,36 @@ public class AppProfileFragment extends SettingsPreferenceFragment
         } catch( Exception e ) {
         }
         return false;
+    }
+
+    private int getApplicationState(String packageName) {
+        try {
+            return getPackageManager().getApplicationEnabledSetting(packageName);
+        } catch (Exception e) {
+            Log.d(TAG, "setApplicationState:", e);
+        }
+        return PackageManager.COMPONENT_ENABLED_STATE_DEFAULT;
+    }
+
+    private void setApplicationState(String packageName, int state) {
+        try {
+            getPackageManager().setApplicationEnabledSetting(packageName,state,0);
+        } catch (Exception e) {
+            Log.d(TAG, "setApplicationState:", e);
+        }
+    }
+
+    private String getApplicationName(String packageName) {
+        final PackageManager pm = getPackageManager();
+        try {
+            PackageInfo info = pm.getPackageInfo(packageName,
+                            PackageManager.GET_META_DATA);
+            CharSequence title = info.applicationInfo.loadLabel(pm);
+            return title != null ? title.toString() : packageName;
+        } catch (Exception e) {
+            Log.d(TAG, "getApplicationName:", e);
+        }
+        return packageName;
     }
 
 

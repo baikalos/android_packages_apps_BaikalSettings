@@ -19,11 +19,16 @@ import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.hardware.fingerprint.FingerprintManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.UserHandle;
+import android.provider.MediaStore;
 import android.provider.SearchIndexableResource;
 import android.provider.Settings;
+import android.util.Log;
+import android.widget.Toast;
 
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
@@ -45,6 +50,8 @@ import com.crdroid.settings.fragments.lockscreen.UdfpsSettings;
 
 import java.util.List;
 
+import com.crdroid.settings.utils.ImageUtils;
+
 import lineageos.providers.LineageSettings;
 
 @SearchIndexable
@@ -61,6 +68,10 @@ public class LockScreen extends SettingsPreferenceFragment
     private static final String KEY_RIPPLE_EFFECT = "enable_ripple_effect";
     private static final String KEY_WEATHER = "lockscreen_weather_enabled";
 
+    private static final String CUSTOM_IMAGE_REQUEST_CODE_KEY = "lockscreen_custom_image";
+    private static final int CUSTOM_IMAGE_REQUEST_CODE = 1001;
+
+    private Preference mCustomImagePreference;
     private Preference mUdfpsSettings;
     private Preference mFingerprintVib;
     private Preference mFingerprintVibErr;
@@ -75,15 +86,46 @@ public class LockScreen extends SettingsPreferenceFragment
 
         addPreferencesFromResource(R.xml.crdroid_settings_lockscreen);
 
+        final Context context = getContext();
+        final ContentResolver resolver = context.getContentResolver();
+        final PreferenceScreen prefScreen = getPreferenceScreen();
+        final Resources resources = context.getResources();
+
+        mCustomImagePreference = findPreference(CUSTOM_IMAGE_REQUEST_CODE_KEY);
+        //int clockStyle = Settings.Secure.getIntForUser(getContext().getContentResolver(), "clock_style", 0, UserHandle.USER_CURRENT);
+        String imagePath = Settings.System.getString(getContext().getContentResolver(), "custom_aod_image_uri");
+        if (imagePath != null /*&& clockStyle > 0*/) {
+            mCustomImagePreference.setSummary(imagePath);
+            mCustomImagePreference.setEnabled(true);
+        } /*else if (clockStyle == 0) {
+            mCustomImagePreference.setSummary(getContext().getString(R.string.custom_aod_image_not_supported));
+            mCustomImagePreference.setEnabled(false);
+        }*/
+
+
         PreferenceCategory interfaceCategory = (PreferenceCategory) findPreference(LOCKSCREEN_INTERFACE_CATEGORY);
         PreferenceCategory gestCategory = (PreferenceCategory) findPreference(LOCKSCREEN_GESTURES_CATEGORY);
 
         FingerprintManager mFingerprintManager = (FingerprintManager)
                 getActivity().getSystemService(Context.FINGERPRINT_SERVICE);
+
         mUdfpsSettings = (Preference) findPreference(KEY_UDFPS_SETTINGS);
         mFingerprintVib = (Preference) findPreference(KEY_FP_SUCCESS_VIBRATE);
         mFingerprintVibErr = (Preference) findPreference(KEY_FP_ERROR_VIBRATE);
         mRippleEffect = (Preference) findPreference(KEY_RIPPLE_EFFECT);
+
+        try {
+            boolean hasEnrolledFingerprints = mFingerprintManager.hasEnrolledFingerprints(UserHandle.myUserId());
+            Log.d(TAG, "hasEnrolledFingerprints:" + hasEnrolledFingerprints);
+
+            if( hasEnrolledFingerprints ) {
+                SwitchPreference pref = (SwitchPreference) findPreference("baikalos_fp_wake_enabled");
+                pref.setChecked(false);
+                pref.setEnabled(false);
+            }
+        } catch(Exception e) {
+            Log.d(TAG, "hasEnrolledFingerprints:", e);
+        }
 
         if (mFingerprintManager == null || !mFingerprintManager.isHardwareDetected()) {
             interfaceCategory.removePreference(mUdfpsSettings);
@@ -152,6 +194,38 @@ public class LockScreen extends SettingsPreferenceFragment
     public void onResume() {
         super.onResume();
         updateWeatherSettings();
+    }
+
+
+    @Override
+    public boolean onPreferenceTreeClick(Preference preference) {
+        if (preference == mCustomImagePreference) {
+            try {
+                Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                intent.setType("image/*");
+                startActivityForResult(intent, CUSTOM_IMAGE_REQUEST_CODE);
+            } catch(Exception e) {
+                Toast.makeText(getContext(), R.string.quick_settings_header_needs_gallery, Toast.LENGTH_LONG).show();
+            }
+            return true;
+        }
+        return super.onPreferenceTreeClick(preference);
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent result) {
+        super.onActivityResult(requestCode, resultCode, result);
+        if (requestCode == CUSTOM_IMAGE_REQUEST_CODE && resultCode == Activity.RESULT_OK && result != null) {
+            Uri imgUri = result.getData();
+            if (imgUri != null) {
+                String savedImagePath = ImageUtils.saveImageToInternalStorage(getContext(), imgUri, "lockscreen_aod_image", "LOCKSCREEN_CUSTOM_AOD_IMAGE");
+                if (savedImagePath != null) {
+                    ContentResolver resolver = getContext().getContentResolver();
+                    Settings.System.putStringForUser(resolver, "custom_aod_image_uri", savedImagePath, UserHandle.USER_CURRENT);
+                    mCustomImagePreference.setSummary(savedImagePath);
+                }
+            }
+        }
     }
 
     @Override

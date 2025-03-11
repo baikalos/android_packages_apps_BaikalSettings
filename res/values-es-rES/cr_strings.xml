@@ -1069,8 +1069,6 @@
     <string name="statusbar_clock_chip_summary">Muestra el chip acentuado detrás del reloj</string>
 
     <!-- Smart charging -->
-    <string name="smart_charging_title">Carga directa inteligente</string>
-    <string name="smart_charging_summary">Permite establecer el nivel máximo de carga</string>
     <string name="smart_charging_switch_title">Activar carga directa inteligente</string>
     <string name="smart_charging_level_title">Nivel de disparo de parada</string>
     <string name="smart_charging_resume_level_title">Nivel de disparo de inicio</string>

@@ -60,13 +60,13 @@
     <string name="background_restrictions_disabled">Отключено</string>
 
     <string name="app_profile_pinned_title">Закрепить</string>
-    <string name="app_profile_pinned_summary">Защитить приложение от закрытия системой</string>
+    <string name="app_profile_pinned_summary">Защитить приложение от закрытия системой. НЕ ИСПОЛЬЗУЙТЕ если не уверены что оно вам нужно!</string>
 
     <string name="app_profile_donotclose_title">Не закрывать</string>
     <string name="app_profile_donotclose_summary">Не закрывать приложение при работе агрессивного менеджера памяти</string>
 
-    <string name="app_profile_disable_title">Запретить Автозагрузку</string>
-    <string name="app_profile_disable_summary">Запретить автозагрузку приложения во время загрузки устройства</string>
+    <string name="app_profile_disable_boot_title">Запретить Автозагрузку</string>
+    <string name="app_profile_disable_boot_summary">Запретить автозагрузку приложения во время загрузки устройства</string>
 
     <string name="app_profile_disable_wakeup_title">Запретить пробуждения</string>
     <string name="app_profile_disable_wakeup_summary">Запретить приложению устанавливать пробуждающие таймеры</string>
@@ -162,8 +162,8 @@
 
     <string name="app_profile_spoof_title">Подстановка Модели Устройства</string>
 
-    <string name="app_profile_keep_on_title">Удерживать включенным</string>
-    <string name="app_profile_keep_on_summary">Удерживать телефон включенным при активности этого приложения</string>
+    <string name="app_profile_keep_on_title">Удерживать экран включенным</string>
+    <string name="app_profile_keep_on_summary">Удерживать экран включенным при активности этого приложения</string>
 
     <string name="app_profile_phka_title">Программная Аттестация</string>
     <string name="app_profile_phka_summary">Заблокировать аппаратную аттестацию устройства. Помогает решить проблемы SafetyNet и других схем детектирования разблокированного загрузчика.</string>
@@ -289,10 +289,20 @@
     <string name="keep_on_bt_and_charger">BT устройство и зарядка</string>
 
     <string name="app_profile_filterfs_title">Фильтр файловой системы</string>
-    <string name="app_profile_filterfs_summary">Блокирует или разрешиат (в засисимости от значения опции Инвертировать в настройках Прочее) доступ к некоторым файлам таким как su, addon.d, и т.д...</string>
+    <string name="app_profile_filterfs_summary">Блокирует или разрешает (в зависимости от значения опции Инвертировать в настройках Прочее) доступ к некоторым файлам таким как su, addon.d, и т.д...</string>
 
     <string name="darkmode_default">По умолчанию</string>
     <string name="darkmode_forced_as_system">Принудительно как в системе</string>
     <string name="darkmode_forced">Принудительно</string>
+
+    <string name="app_profile_disable_title">Отключить</string>
+    <string name="app_profile_disable_summary">Отключить приложение</string>
+
+    <string name="app_dsable_confirm_title">Внимание!</string>
+    <string name="app_dsable_confirm_summary">Это действие отключит приложение. Все данные приложения будут удалены!</string>
+    <string name="app_disable_confirm_ok">Отключить</string>
+    <string name="app_disable_confirm_cancel">Отменить</string>
+
+    <string name="app_profile_main_title">Имя пакета приложения</string>
 
 </resources>

@@ -22,6 +22,34 @@
     >
 
     <PreferenceCategory
+        android:key="aod_display"
+        android:title="@string/aod_display_category_title">
+        <com.crdroid.settings.preferences.SystemSettingSwitchPreference
+            android:key="custom_aod_image_enabled"
+            android:title="@string/lockscreen_custom_image_enabled_title"
+            android:summary="@string/lockscreen_custom_image_summary"
+            android:defaultValue="false" />
+        <Preference
+            android:key="lockscreen_custom_image"
+            android:title="@string/lockscreen_custom_image_title"
+            android:summary="@string/lockscreen_custom_image_pick_summary"
+            android:dependency="custom_aod_image_enabled" />
+
+        <com.crdroid.settings.preferences.SystemSettingSwitchPreference
+            android:key="custom_aod_fs_image_enabled"
+            android:title="@string/lockscreen_custom_fs_image_enabled_title"
+            android:summary="@string/lockscreen_custom_fs_image_summary"
+            android:defaultValue="false" />
+
+        <com.crdroid.settings.preferences.SystemSettingSwitchPreference
+            android:key="custom_aod_notification_enabled"
+            android:title="@string/lockscreen_custom_aod_notification_enabled_title"
+            android:summary="@string/lockscreen_custom_aod_notification_summary"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="lockscreen_clock_category"
         android:title="@string/qs_clock_title">
 
@@ -139,6 +167,13 @@
             android:title="@string/lockscreen_doubletap_sleep_title"
             android:summary="@string/lockscreen_doubletap_sleep_summary"
             android:defaultValue="true" />
+
+        <com.crdroid.settings.preferences.SecureSettingSwitchPreference
+            android:key="baikalos_fp_wake_enabled"
+            android:icon="@drawable/ic_fp"
+            android:title="@string/baikalos_fp_wake_enabled_title"
+            android:summary="@string/baikalos_fp_wake_enabled_summary"
+            android:defaultValue="false" />
 
         <com.crdroid.settings.preferences.SystemSettingSwitchPreference
             android:key="fp_success_vibrate"

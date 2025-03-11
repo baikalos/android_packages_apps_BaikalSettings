@@ -48,6 +48,14 @@
         android:summary="@string/baikalos_disable_gms_swa_spoof_summary" 
         android:defaultValue="false" />
 
+
+    <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+        android:key="baikalos_gms_spoofer_update"
+        android:icon="@drawable/ic_backup"
+        android:title="@string/baikalos_gms_spoofer_update_title"
+        android:summary="@string/baikalos_gms_spoofer_update_summary" 
+        android:defaultValue="false" />
+
     <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
         android:key="baikalos_gms_override_spoof"
         android:icon="@drawable/ic_backup"
@@ -59,7 +67,6 @@
         android:key="baikalos_gms_props"
         android:title="@string/baikalos_gms_props_title"
         android:dependency="baikalos_gms_override_spoof" >
-
 
         <com.crdroid.settings.preferences.SystemPropertiesEditTextPreference
             android:key="persist.spoof.manufacturer"
@@ -117,10 +124,22 @@
             />
 
         <Preference
+            android:key="spoof_setings_update"
+            android:title="@string/spoof_setings_update_title"
+            android:summary="@string/spoof_setings_update_summary" />
+
+        <Preference
             android:key="spoof_setings_reset"
             android:title="@string/spoof_setings_reset_title"
             android:summary="@string/spoof_setings_reset_summary" />
 
     </PreferenceCategory>
+
+    <Preference
+        android:key="spoof_restart_gms"
+        android:title="@string/spoof_restart_gms_title"
+        android:summary="@string/spoof_restart_gms_summary" />
+
+
 
 </PreferenceScreen>

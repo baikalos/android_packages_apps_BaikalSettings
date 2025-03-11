@@ -225,6 +225,15 @@
     <string name="spoof_setings_reset_title">Сброс</string>
     <string name="spoof_setings_reset_summary">Сброс параметров к значениям по умолчанию</string>
 
+    <string name="spoof_setings_update_title">Обновить</string>
+    <string name="spoof_setings_update_summary">Обновить настройки с сервера crDroid</string>
+
+    <string name="spoof_restart_gms_title">Рестарт GMS</string>
+    <string name="spoof_restart_gms_summary">Перезапустить Сервисы Гугл</string>
+
+    <string name="baikalos_gms_spoofer_update_title">Автообновление</string>
+    <string name="baikalos_gms_spoofer_update_summary">Периодически проверять обновления ключей через интернет</string>
+
     <string name="baikalos_color_doze_title">Цвет</string>
     <string name="baikalos_color_doze_summary">Разрешить использование цвета на экране событий</string>
 
@@ -259,7 +268,7 @@
     <string name="back_camera_mode_summary">Отключить доступ приложений к основной камере. Отменяется настройкой в профиле приложения</string>
 
     <string name="enable_stationary_throttle_title">Местоположение при неподвижности</string>
-    <string name="enable_stationary_throttle_summary">Снижать частоту запросов местоположения если устройство во сне и непожвижно</string>
+    <string name="enable_stationary_throttle_summary">Снижать частоту запросов местоположения если устройство во сне и неподвижно</string>
 
     <string name="force_wfc_title">Принудительный WFC</string>
     <string name="force_wfc_summary">Принудительно разрешать использование VoWiFi даже если это запрещено профилем оператора</string>
@@ -269,5 +278,14 @@
 
     <string name="camera_ignore_ir_title">Игнорировать IR камеру</string>
     <string name="camera_ignore_ir_summary">Использовать обычную фронтальную камеру для распознавания лица</string>
+
+    <string name="smart_low_battery_trigger_level_title">Предупреждение о низком заряде</string>
+    <string name="smart_critical_battery_trigger_level_title">Предупреждение о критическом заряде</string>
+
+    <string name="baikalos_airplane_dont_toggle_bt_title">Не отключать BT</string>
+    <string name="baikalos_airplane_dont_toggle_bt_summary">Не отключать BT при включении режима полета</string>
+
+    <string name="baikalos_airplane_dont_toggle_wifi_title">Не отключать WiFi</string>
+    <string name="baikalos_airplane_dont_toggle_wifi_summary">Не отключать WiFi при включении режима полета</string>
 
 </resources>

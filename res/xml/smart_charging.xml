@@ -67,6 +67,22 @@
         android:defaultValue="60"
         android:dependency="baikalos_smart_charging" />
 
+    <com.crdroid.settings.preferences.GlobalSettingSeekBarPreference
+        android:key="baikalos_low_battery_trigger_level"
+        android:title="@string/smart_low_battery_trigger_level_title"
+        android:max="100"
+        settings:min="0"
+        settings:units="%"
+        android:defaultValue="10" />
+
+    <com.crdroid.settings.preferences.GlobalSettingSeekBarPreference
+        android:key="baikalos_critical_battery_trigger_level"
+        android:title="@string/smart_critical_battery_trigger_level_title"
+        android:max="100"
+        settings:min="0"
+        settings:units="%"
+        android:defaultValue="5" />
+
     <com.android.settingslib.widget.FooterPreference
         android:key="smart_charging_footer"
         android:selectable="false"

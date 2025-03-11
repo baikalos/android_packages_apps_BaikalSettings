@@ -89,7 +89,7 @@
         android:icon="@drawable/ic_map_marker"
         android:title="@string/baikalos_location_mode_title"
         android:summary="@string/baikalos_location_mode_summary"
-        android:defaultValue="false" />
+        android:defaultValue="true" />
 
     <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
         android:key="baikalos_camera_disable_back"
@@ -154,6 +154,19 @@
             android:targetClass="org.omnirom.omnijaws.SettingsActivity" />
     </Preference>
 
+    <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+        android:key="baikalos_airplane_dont_toggle_bt"
+        android:icon="@drawable/ic_airplane_mode"
+        android:title="@string/baikalos_airplane_dont_toggle_bt_title"
+        android:summary="@string/baikalos_airplane_dont_toggle_bt_summary"
+        android:defaultValue="false" />
+
+    <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+        android:key="baikalos_airplane_dont_toggle_wifi"
+        android:icon="@drawable/ic_airplane_mode"
+        android:title="@string/baikalos_airplane_dont_toggle_wifi_title"
+        android:summary="@string/baikalos_airplane_dont_toggle_wifi_summary"
+        android:defaultValue="false" />
 
     <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
         android:key="restricted_networking_mode"
@@ -254,7 +267,7 @@
         android:icon="@drawable/ic_map_marker"
         android:title="@string/enable_stationary_throttle_title"
         android:summary="@string/enable_stationary_throttle_summary"
-        android:defaultValue="false" />
+        android:defaultValue="true" />
 
     <com.crdroid.settings.preferences.SystemPropertySwitchPreference
         android:key="persist.baikal.art.inc_max"

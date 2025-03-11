@@ -81,13 +81,13 @@
     <string name="background_restrictions_disabled">Disabled</string>
 
     <string name="app_profile_pinned_title">Pinned</string>
-    <string name="app_profile_pinned_summary">Protect an app from been killed by the system</string>
+    <string name="app_profile_pinned_summary">Protect an app from been killed by the system. DO NOT USE if not absolutely sure that you need it!</string>
 
     <string name="app_profile_donotclose_title">Do not close</string>
     <string name="app_profile_donotclose_summary">Do not close on aggressive memory management</string>
 
-    <string name="app_profile_disable_title">Disable Autostart</string>
-    <string name="app_profile_disable_summary">Disable app autostart on device boot</string>
+    <string name="app_profile_disable_boot_title">Disable Autostart</string>
+    <string name="app_profile_disable_boot_summary">Disable app autostart on device boot</string>
 
     <string name="app_profile_disable_wakeup_title">Disable Wakeup</string>
     <string name="app_profile_disable_wakeup_summary">Disable app to set wakeup alarms</string>
@@ -334,5 +334,15 @@
     <string name="darkmode_default">Default</string>
     <string name="darkmode_forced_as_system">Forced as system</string>
     <string name="darkmode_forced">Forced</string>
+
+    <string name="app_profile_disable_title">Disable</string>
+    <string name="app_profile_disable_summary">Disable appplication</string>
+
+    <string name="app_dsable_confirm_title">Caution!</string>
+    <string name="app_dsable_confirm_summary">This will disable an application. All application specific data will be removed!</string>
+    <string name="app_disable_confirm_ok">Disable</string>
+    <string name="app_disable_confirm_cancel">Cancel</string>
+
+    <string name="app_profile_main_title">Package name</string>
 
 </resources>

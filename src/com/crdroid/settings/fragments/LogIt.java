@@ -471,7 +471,11 @@ public class LogIt extends SettingsPreferenceFragment implements Preference.OnPr
         SuShell.runWithShellCheck(rmCommand);
 
         String command = "dumpsys power";
-        command += " > " + DUMPSYS_FILE;
+        command += " >> " + DUMPSYS_FILE;
+        SuShell.runWithShellCheck(command);
+
+        command = "dumpsys activity";
+        command += " >> " + DUMPSYS_FILE;
         SuShell.runWithShellCheck(command);
 
         command = "dumpsys suspend_control_internal -a";
@@ -489,7 +493,6 @@ public class LogIt extends SettingsPreferenceFragment implements Preference.OnPr
         command = "dumpsys batterystats";
         command += " >> " + DUMPSYS_FILE;
         SuShell.runWithShellCheck(command);
-
     }
 
     private void createShareZip(boolean logcat, boolean logcatRadio, boolean kmsg, boolean dmesg, boolean dumpsys, boolean anr)
