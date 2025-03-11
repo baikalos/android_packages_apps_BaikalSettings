@@ -30,6 +30,9 @@
     <string name="baikalos_debug_title">Registro detallado</string>
     <string name="baikalos_debug_summary">Activa el registro detallado. No activar sin motivo</string>
 
+    <string name="baikalos_force_warm_title">Forzar reinicio en caliente</string>
+    <string name="baikalos_force_warm_summary">Fuerza el reinicio en caliente en caso de kernel panic para preservar los registros de kmsg</string>
+
 
     <!-- Device parts -->
     <string name="device_part_title">Características del dispositivo</string>
@@ -102,6 +105,9 @@
     <string name="captive_portal_default">Por defecto (Google)</string>
     <string name="captive_portal_apple">Apple</string>
     <string name="captive_portal_yandex">Yandex</string>
+
+    <string name="block_if_busy_title">Rechazar si está ocupado</string>
+    <string name="block_if_busy_summary">Rechaza las llamadas móviles entrantes si hay una llamada de voz activa (Telegram, WhatsApp, conferencia, etc...)</string>
 
     <string name="r_secure_title">Almacenamiento sin restricciones</string>
     <string name="r_secure_summary">Desactiva las restricciones introducidas por Android 11 en el acceso a algunas carpetas del almacenamiento externo</string>
@@ -290,11 +296,77 @@
     <string name="spoof_setings_reset_summary">Restablece a los valores por defecto del sistema</string>
     <string name="spoof_setings_reset_title">Restablecer</string>
 
+    <string name="spoof_setings_update_summary">Actualiza los ajustes desde los servidores de crDroid</string>
+    <string name="spoof_setings_update_title">Actualizar</string>
+
+    <string name="spoof_restart_gms_summary">Reinicia los servicios de Google Play</string>
+    <string name="spoof_restart_gms_title">Reiniciar GMS</string>
+
+    <string name="baikalos_gms_spoofer_update_title">Actualización automática</string>
+    <string name="baikalos_gms_spoofer_update_summary">Comprueba periódicamente si hay claves actualizadas en Internet</string>
+
     <string name="audio_route_speaker_title">Forzar al altavoz</string>
     <string name="audio_route_duplicate_title">Duplicar al altavoz</string>
     <string name="baikalos_enable_force_speaker_title">Reforzar altavoz</string>
     <string name="baikalos_enable_force_speaker_summary">Refuerza el uso del altavoz. Esto sustituirá los valores anteriores y romperá la duplicación.</string>
 
     <string name="baikalos_power_zram_title">ZRAM</string>
+
+    <string name="baikalos_color_doze_title">Color</string>
+    <string name="baikalos_color_doze_summary">Activa el contenido coloreado en la pantalla ambientada</string>
+
+    <string name="special_devices_title">Escenarios especiales</string>
+    <string name="special_devices_summary">Ajustes de escenarios especiales</string>
+
+    <string name="special_bt_dev_title">Dispositivos Bluetooth</string>
+    <string name="special_bt_dev_summary">Dispositivos Bluetooth utilizados en escenarios especiales</string>
+
+    <string name="sd_incall_title">Despertar durante llamada</string>
+    <string name="sd_incall_summary">Mantiene el dispositivo despierto si está en una llamada y hay un dispositivo especial conectado</string>
+
+    <string name="sd_keep_title">Mantener despierto</string>
+    <string name="sd_keep_summary">Mantiene el dispositivo despierto si hay un dispositivo especial conectado</string>
+
+    <string name="filterfs_enable_title">Filtro del sistema de archivos</string>
+    <string name="filterfs_enable_summary">Activa el filtro del sistema de archivos por aplicación. Esto bloqueará o desbloqueará (dependiendo de la opción Invertir) el acceso a ciertas carpetas y archivos del sistema para ocultarlos de las aplicaciones</string>
+
+    <string name="filterfs_invert_title">Invertir filtro del sistema de archivos</string>
+    <string name="filterfs_invert_summary">Si no está marcado, todas las aplicaciones, excepto las designadas en el perfil de la app, tendrán acceso. Si está marcado, solo las aplicaciones designadas tendrán acceso</string>
+
+    <string name="filterfs_isolated_title">Filtrar aplicaciones aisladas</string>
+    <string name="filterfs_isolated_summary">Filtra siempre el sistema de archivos para las aplicaciones aisladas</string>
+
+    <string name="baikalos_location_mode_title">Receptor GNSS</string>
+    <string name="baikalos_location_mode_summary">"Activa el receptor GNSS de hardware</string>
+
+    <string name="front_camera_mode_title">Desactivar cámara frontal</string>
+    <string name="front_camera_mode_summary">Desactiva la cámara frontal por defecto. Puede ser anulado por un perfil de aplicación.</string>
+
+    <string name="back_camera_mode_title">Desactiva cámara trasera</string>
+    <string name="back_camera_mode_summary">Desactiva la cámara trasera por defecto. Puede ser anulado por un perfil de aplicación.</string>
+
+    <string name="force_wfc_title">Forzar WFC</string>
+    <string name="force_wfc_summary">Fuerza que VoWiFi esté disponible sin tener en cuenta la configuración de aprovisionamiento del operador</string>
+
+    <string name="force_cs_title">Forzar Cross SIM</string>
+    <string name="force_cs_summary">Fuerza que Cross SIM (llamadas de respaldo) esté disponible sin tener en cuenta la configuración de aprovisionamiento del operador</string>
+
+    <string name="enable_stationary_throttle_title">Limitador estacionario</string>
+    <string name="enable_stationary_throttle_summary">Si se debe limitar la ubicación cuando el dispositivo está en modo de suspensión y permanece inactivo.</string>
+
+    <string name="camera_ignore_ir_title">Ignorar IR</string>
+    <string name="camera_ignore_ir_summary">Utiliza la cámara frontal regular para el reconocimiento facial</string>
+
+    <string name="smart_low_battery_trigger_level_title">Nivel de aviso de batería baja</string>
+    <string name="smart_critical_battery_trigger_level_title">Nivel de aviso de batería crítica</string>
+
+    <string name="baikalos_fp_wake_enabled_title">Despertar con huella dactilar</string>
+    <string name="baikalos_fp_wake_enabled_summary">Despierta el dispositivo con el sensor de huellas dactilares si no hay huellas dactilares registradas</string>
+
+    <string name="baikalos_airplane_dont_toggle_bt_title">No alternar Bluetooth</string>
+    <string name="baikalos_airplane_dont_toggle_bt_summary">No alterna el Bluetooth en el modo avión</string>
+
+    <string name="baikalos_airplane_dont_toggle_wifi_title">No alternar WiFi</string>
+    <string name="baikalos_airplane_dont_toggle_wifi_summary">No alterna el WiFi en el modo avión</string>
 
 </resources>
