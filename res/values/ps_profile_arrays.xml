@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string-array name="ps_profile_AdjustBrightnessFactor_listentries">
+    	<item>100\%</item>
+    	<item>75\%</item>
+    	<item>50\%</item>
+    	<item>25\%</item>
+    </string-array>
+
+    <string-array name="ps_profile_AdjustBrightnessFactor_listvalues">
+    	<item>100</item>
+    	<item>75</item>
+    	<item>50</item>
+    	<item>25</item>
+    </string-array>
+
+    <string-array name="ps_profile_SoundTriggerMode_listentries">
+    	<item>@string/ps_profile_SoundTriggerMode_Enabled</item>
+    	<item>@string/ps_profile_SoundTriggerMode_CriticalOnly</item>
+    	<item>@string/ps_profile_SoundTriggerMode_Disabled</item>
+     </string-array>
+
+     <string-array name="ps_profile_SoundTriggerMode_listvalues">
+    	<item>0</item>
+    	<item>1</item>
+    	<item>2</item>
+    </string-array>
+
+    <string-array name="ps_profile_LocationMode_listentries">
+    	<item>@string/ps_profile_LocationMode_Default</item>
+    	<item>@string/ps_profile_LocationMode_ForegroundNetworkOnly</item>
+    	<item>@string/ps_profile_LocationMode_ForegroundOnly</item>
+    	<item>@string/ps_profile_LocationMode_NetworkOnly</item>
+    	<item>@string/ps_profile_LocationMode_Disabled</item>
+    </string-array>
+
+    <string-array name="ps_profile_LocationMode_listvalues">
+    	<item>0</item>
+    	<item>1</item>
+    	<item>3</item>
+    	<item>4</item>
+    	<item>2</item>
+    </string-array>
+
+    <string-array name="ps_profile_CacheAppTimeout_listentries">
+    	<item>24h</item>
+    	<item>3h</item>
+    	<item>1h</item>
+    	<item>30m</item>
+    	<item>15m</item>
+    	<item>10m</item>
+    	<item>5m</item>
+    	<item>1m</item>
+    	<item>30s</item>
+    	<item>15s</item>
+    </string-array>
+
+    <string-array name="ps_profile_CacheAppTimeout_listvalues">
+    	<item>86400</item>
+    	<item>10800</item>
+    	<item>3600</item>
+    	<item>1800</item>
+    	<item>900</item>
+    	<item>600</item>
+    	<item>300</item>
+    	<item>60</item>
+    	<item>30</item>
+    	<item>15</item>
+    </string-array>
+
+</resources>
