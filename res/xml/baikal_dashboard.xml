@@ -141,6 +141,11 @@
             android:icon="@drawable/ic_settings_misc"
             android:fragment="com.crdroid.settings.fragments.Device" />
 
+        <PreferenceScreen
+            android:title="@string/privacy_title"
+            android:summary="@string/privacy_summary"
+            android:icon="@drawable/ic_privacy"
+            android:fragment="com.crdroid.settings.fragments.Privacy" />
 
         <PreferenceScreen
             android:title="@string/about_crdroid"

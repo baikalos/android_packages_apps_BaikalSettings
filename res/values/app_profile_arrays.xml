@@ -187,6 +187,7 @@
     	<item>Sony Xperia 2 5G</item>       <!-- 14 -->
     	<item>Sony Xperia 5</item>       <!-- 25 -->
     	<item>Samsung S21</item>            <!-- 15 -->
+        <item>Samsung S24 Ultra</item>      <!-- 34 -->
     	<item>Xiaomi MI 8</item>            <!-- 18 -->
     	<item>Xiaomi MI 10 Pro</item>       <!-- 16 -->
     	<item>Xiaomi Mi 11T</item>          <!-- 20 -->
@@ -224,6 +225,7 @@
     	<item>14</item>
     	<item>25</item>
     	<item>15</item>
+        <item>34</item>
     	<item>18</item>
     	<item>16</item>
     	<item>20</item>
@@ -375,6 +377,18 @@
     </string-array>
 
     <string-array name="darkmode_listvalues">
+    	<item>0</item>
+    	<item>1</item>
+    	<item>2</item>
+    </string-array>
+
+    <string-array name="tri_state_listentries">
+    	<item>@string/tri_state_default</item>
+    	<item>@string/tri_state_enabled</item>
+    	<item>@string/tri_state_disabled</item>
+    </string-array>
+
+    <string-array name="tri_state_listvalues">
     	<item>0</item>
     	<item>1</item>
     	<item>2</item>

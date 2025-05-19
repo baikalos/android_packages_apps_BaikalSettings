@@ -42,8 +42,8 @@ import android.content.DialogInterface;
 
 import android.content.res.Resources;
 
-import android.baikalos.AppProfile;
-import com.android.internal.baikalos.AppProfileBackend;
+import android.baikalos.BaikalAppProfile;
+import com.android.internal.baikalos.BaikalAppProfileBackend;
 
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.internal.util.crdroid.Utils;
@@ -400,7 +400,7 @@ public class PowerSave extends SettingsPreferenceFragment {
         builder.setPositiveButton(R.string.app_setings_backup_ok, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface arg0, int arg1) {
-                AppProfileBackend.getInstance(new Handler(),mContext).saveBackup(PowerSave.this.getActivity().getContentResolver());
+                BaikalAppProfileBackend.getInstance(new Handler(),mContext).saveBackup(PowerSave.this.getActivity().getContentResolver());
             }
         });
 
@@ -416,8 +416,8 @@ public class PowerSave extends SettingsPreferenceFragment {
         builder.setPositiveButton(R.string.app_setings_restore_ok, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface arg0, int arg1) {
-                AppProfileBackend.getInstance(new Handler(),mContext).restoreBackup(PowerSave.this.getActivity().getContentResolver());
-                AppProfileBackend.getInstance().loadProfiles();
+                BaikalAppProfileBackend.getInstance(new Handler(),mContext).restoreBackup(PowerSave.this.getActivity().getContentResolver());
+                BaikalAppProfileBackend.getInstance().loadProfiles();
             }
         });
 
@@ -433,8 +433,8 @@ public class PowerSave extends SettingsPreferenceFragment {
         builder.setPositiveButton(R.string.app_setings_reset_ok, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface arg0, int arg1) {
-                AppProfileBackend.getInstance(new Handler(),mContext).resetAll(PowerSave.this.getActivity().getContentResolver());
-                AppProfileBackend.getInstance().loadProfiles();
+                BaikalAppProfileBackend.getInstance(new Handler(),mContext).resetAll(PowerSave.this.getActivity().getContentResolver());
+                BaikalAppProfileBackend.getInstance().loadProfiles();
             }
         });
 

@@ -92,20 +92,6 @@
         android:defaultValue="true" />
 
     <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
-        android:key="baikalos_camera_disable_back"
-        android:icon="@drawable/ic_camera_rear"
-        android:title="@string/back_camera_mode_title"
-        android:summary="@string/back_camera_mode_summary"
-        android:defaultValue="false" />
-
-    <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
-        android:key="baikalos_camera_disable_front"
-        android:icon="@drawable/ic_camera"
-        android:title="@string/front_camera_mode_title"
-        android:summary="@string/front_camera_mode_summary"
-        android:defaultValue="false" />
-
-    <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
         android:key="baikalos_camera_ignore_ir"
         android:icon="@drawable/ic_camera"
         android:title="@string/camera_ignore_ir_title"
@@ -191,27 +177,6 @@
         android:defaultValue="default"
         android:summary="%s"/>
 
-    <com.crdroid.settings.preferences.SystemPropertySwitchPreference
-        android:key="persist.baikal.filterfs_enable"
-        android:icon="@drawable/ic_storage"
-        android:title="@string/filterfs_enable_title"
-        android:summary="@string/filterfs_enable_summary"
-        android:defaultValue="false" />
-
-    <com.crdroid.settings.preferences.SystemPropertySwitchPreference
-        android:key="persist.baikal.filterfs_invert"
-        android:icon="@drawable/ic_storage"
-        android:title="@string/filterfs_invert_title"
-        android:summary="@string/filterfs_invert_summary"
-        android:defaultValue="false" />
-
-    <com.crdroid.settings.preferences.SystemPropertySwitchPreference
-        android:key="persist.baikal.filterfs_isolated"
-        android:icon="@drawable/ic_storage"
-        android:title="@string/filterfs_isolated_title"
-        android:summary="@string/filterfs_isolated_summary"
-        android:defaultValue="false" />
-
     <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
         android:key="baikalos_r_secure"
         android:icon="@drawable/ic_storage"
@@ -224,6 +189,13 @@
         android:icon="@drawable/ic_storage"
         android:title="@string/allow_downgrade_title"
         android:summary="@string/allow_downgrade_summary"
+        android:defaultValue="false" />
+
+    <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+        android:key="baikalos_allow_sig_override"
+        android:icon="@drawable/ic_storage"
+        android:title="@string/allow_sig_override_title"
+        android:summary="@string/allow_sig_override_summary"
         android:defaultValue="false" />
 
     <com.crdroid.settings.preferences.GlobalSettingSwitchPreference

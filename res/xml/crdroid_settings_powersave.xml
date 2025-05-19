@@ -102,12 +102,12 @@
     <PreferenceCategory
         android:title="@string/powersave_title">
 
-        <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+        <!-- com.crdroid.settings.preferences.GlobalSettingSwitchPreference
             android:key="baikalos_aggressive_idle"
             android:defaultValue="false"
             android:title="@string/baikalos_aggressive_idle_title"
             android:summary="@string/baikalos_aggressive_idle_summary"
-        />
+        / -->
 
         <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
             android:key="cached_apps_freezer"

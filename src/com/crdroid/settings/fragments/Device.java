@@ -90,14 +90,14 @@ public class Device extends SettingsPreferenceFragment {
         final PreferenceScreen prefScreen = getPreferenceScreen();
 
         boolean isCertificateSpooferAvailable = mContext.getResources().
-                getBoolean(com.android.internal.R.bool.config_certificateSpooferAvailable);
+                getBoolean(com.android.internal.R.bool.config_certificateSpfrAvailable);
 
         if (!isCertificateSpooferAvailable) {
             ((Preference) findPreference("baikalos_disable_certificate_spoof")).setVisible(false);
         }
 
         boolean isSignatureSpooferAvailable = mContext.getResources().
-                getBoolean(com.android.internal.R.bool.config_signatureSpooferAvailable);
+                getBoolean(com.android.internal.R.bool.config_signatureSpfrAvailable);
 
         if (!isSignatureSpooferAvailable) {
             ((Preference) findPreference("baikalos_disable_signature_spoof")).setVisible(false);
@@ -171,32 +171,32 @@ public class Device extends SettingsPreferenceFragment {
     }
 
     private void resetSettings() {
-        SystemProperties.set("persist.spoof.manufacturer","");
-        SystemProperties.set("persist.spoof.model","");
-        SystemProperties.set("persist.spoof.fingerprint", "");
-        SystemProperties.set("persist.spoof.brand", "");
-        SystemProperties.set("persist.spoof.product", "");
-        SystemProperties.set("persist.spoof.device", "");
-        SystemProperties.set("persist.spoof.id", "");
-        SystemProperties.set("persist.spoof.release", "");
-        SystemProperties.set("persist.spoof.incremental", "");
-        SystemProperties.set("persist.spoof.security_patch", "");
-        SystemProperties.set("persist.spoof.firs_api_level", "");
+        SystemProperties.set("persist.spf.manufacturer","");
+        SystemProperties.set("persist.spf.model","");
+        SystemProperties.set("persist.spf.fingerprint", "");
+        SystemProperties.set("persist.spf.brand", "");
+        SystemProperties.set("persist.spf.product", "");
+        SystemProperties.set("persist.spf.device", "");
+        SystemProperties.set("persist.spf.id", "");
+        SystemProperties.set("persist.spf.release", "");
+        SystemProperties.set("persist.spf.incremental", "");
+        SystemProperties.set("persist.spf.security_patch", "");
+        SystemProperties.set("persist.spf.firs_api_level", "");
         fill();
     }
 
     private void fill() {
-            fill("persist.spoof.manufacturer", BaikalSpoofer.MANUFACTURER);
-            fill("persist.spoof.model", BaikalSpoofer.MODEL);
-            fill("persist.spoof.fingerprint", BaikalSpoofer.FINGERPRINT);
-            fill("persist.spoof.brand", BaikalSpoofer.BRAND);
-            fill("persist.spoof.product", BaikalSpoofer.PRODUCT);
-            fill("persist.spoof.device", BaikalSpoofer.DEVICE);
-            fill("persist.spoof.id", BaikalSpoofer.ID);
-            fill("persist.spoof.release", BaikalSpoofer.RELEASE);
-            fill("persist.spoof.incremental", BaikalSpoofer.INCREMENTAL);
-            fill("persist.spoof.security_patch", BaikalSpoofer.SECURITY_PATCH);
-            fill("persist.spoof.firs_api_level", String.valueOf(BaikalSpoofer.FIRST_API_LEVEL));
+            fill("persist.spf.manufacturer", BaikalSpoofer.MANUFACTURER);
+            fill("persist.spf.model", BaikalSpoofer.MODEL);
+            fill("persist.spf.fingerprint", BaikalSpoofer.FINGERPRINT);
+            fill("persist.spf.brand", BaikalSpoofer.BRAND);
+            fill("persist.spf.product", BaikalSpoofer.PRODUCT);
+            fill("persist.spf.device", BaikalSpoofer.DEVICE);
+            fill("persist.spf.id", BaikalSpoofer.ID);
+            fill("persist.spf.release", BaikalSpoofer.RELEASE);
+            fill("persist.spf.incremental", BaikalSpoofer.INCREMENTAL);
+            fill("persist.spf.security_patch", BaikalSpoofer.SECURITY_PATCH);
+            fill("persist.spf.firs_api_level", String.valueOf(BaikalSpoofer.FIRST_API_LEVEL));
     }
 
     private void fill(String key, String def) {
@@ -206,29 +206,29 @@ public class Device extends SettingsPreferenceFragment {
 
     private void updateFrom(PiItem item) {
 
-        SystemProperties.set("persist.spoof.manufacturer",item.MANUFACTURER);
-        SystemProperties.set("persist.spoof.model",item.MODEL);
-        SystemProperties.set("persist.spoof.fingerprint", item.FINGERPRINT);
-        SystemProperties.set("persist.spoof.brand", item.BRAND);
-        SystemProperties.set("persist.spoof.product", item.PRODUCT);
-        SystemProperties.set("persist.spoof.device", item.DEVICE);
-        SystemProperties.set("persist.spoof.id", item.ID);
-        SystemProperties.set("persist.spoof.release", item.RELEASE);
-        SystemProperties.set("persist.spoof.incremental", item.INCREMENTAL);
-        SystemProperties.set("persist.spoof.security_patch", item.SECURITY_PATCH);
-        SystemProperties.set("persist.spoof.firs_api_level", item.DEVICE_INITIAL_SDK_INT);
+        SystemProperties.set("persist.spf.manufacturer",item.MANUFACTURER);
+        SystemProperties.set("persist.spf.model",item.MODEL);
+        SystemProperties.set("persist.spf.fingerprint", item.FINGERPRINT);
+        SystemProperties.set("persist.spf.brand", item.BRAND);
+        SystemProperties.set("persist.spf.product", item.PRODUCT);
+        SystemProperties.set("persist.spf.device", item.DEVICE);
+        SystemProperties.set("persist.spf.id", item.ID);
+        SystemProperties.set("persist.spf.release", item.RELEASE);
+        SystemProperties.set("persist.spf.incremental", item.INCREMENTAL);
+        SystemProperties.set("persist.spf.security_patch", item.SECURITY_PATCH);
+        SystemProperties.set("persist.spf.firs_api_level", item.DEVICE_INITIAL_SDK_INT);
 
-            fill("persist.spoof.manufacturer", item.MANUFACTURER);
-            fill("persist.spoof.model", item.MODEL);
-            fill("persist.spoof.fingerprint", item.FINGERPRINT);
-            fill("persist.spoof.brand", item.BRAND);
-            fill("persist.spoof.product", item.PRODUCT);
-            fill("persist.spoof.device", item.DEVICE);
-            fill("persist.spoof.id", item.ID);
-            fill("persist.spoof.release", item.RELEASE);
-            fill("persist.spoof.incremental", item.INCREMENTAL);
-            fill("persist.spoof.security_patch", item.SECURITY_PATCH);
-            fill("persist.spoof.firs_api_level", item.DEVICE_INITIAL_SDK_INT);
+            fill("persist.spf.manufacturer", item.MANUFACTURER);
+            fill("persist.spf.model", item.MODEL);
+            fill("persist.spf.fingerprint", item.FINGERPRINT);
+            fill("persist.spf.brand", item.BRAND);
+            fill("persist.spf.product", item.PRODUCT);
+            fill("persist.spf.device", item.DEVICE);
+            fill("persist.spf.id", item.ID);
+            fill("persist.spf.release", item.RELEASE);
+            fill("persist.spf.incremental", item.INCREMENTAL);
+            fill("persist.spf.security_patch", item.SECURITY_PATCH);
+            fill("persist.spf.firs_api_level", item.DEVICE_INITIAL_SDK_INT);
     }
 
     public PiItem updateFromGoogle() {

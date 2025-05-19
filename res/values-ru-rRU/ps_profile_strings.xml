@@ -75,4 +75,7 @@
     <string name="ps_profile_disableBackgroundByDefault_title">Отключить по умолчанию</string>
     <string name="ps_profile_disableBackgroundByDefault_summary">Отключить фоновое исполнение приложений c режимом \'автоматически\'</string>
 
+    <string name="ps_profile_SystemPriority_title">Приоритет системы</string>
+    <string name="ps_profile_SystemPriority_summary">Увеличить приоритет системных процессов</string>
+
 </resources>

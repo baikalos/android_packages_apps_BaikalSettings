@@ -75,4 +75,7 @@
     <string name="ps_profile_disableBackgroundByDefault_title">Disable by default</string>
     <string name="ps_profile_disableBackgroundByDefault_summary">Disable background execution for the apps with \'auto\' background mode </string>
 
+    <string name="ps_profile_SystemPriority_title">System Priority</string>
+    <string name="ps_profile_SystemPriority_summary">Set higher priority for system tasks</string>
+
 </resources>

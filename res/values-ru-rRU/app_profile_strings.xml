@@ -273,6 +273,13 @@
 
     <string name="app_profile_privacy_title">Конфиденциальность</string>
     <string name="app_profile_privacy_summary">Параметры конфиденциальности</string>
+
+    <string name="app_profile_spoofing_title">Спуфинг</string>
+    <string name="app_profile_spoofing_summary">Опции спуфинга</string>
+
+    <string name="app_profile_block_notification_title">Блокировать Уведомления</string>
+    <string name="app_profile_block_sms_title">Блокировать СМС</string>
+
     <string name="app_profile_block_contacts_title">Блокировать Контакты</string>
     <string name="app_profile_block_contacts_summary"></string>
     <string name="app_profile_block_calllog_title">Блокировать Журнал Вызовов</string>
@@ -291,6 +298,9 @@
     <string name="app_profile_filterfs_title">Фильтр файловой системы</string>
     <string name="app_profile_filterfs_summary">Блокирует или разрешает (в зависимости от значения опции Инвертировать в настройках Прочее) доступ к некоторым файлам таким как su, addon.d, и т.д...</string>
 
+    <string name="app_profile_filterfs_add_title">Дополнительный Фильтр</string>
+    <string name="app_profile_filterfs_add_summary">Блокирует доступ к файлам lineage, crdroid</string>
+
     <string name="darkmode_default">По умолчанию</string>
     <string name="darkmode_forced_as_system">Принудительно как в системе</string>
     <string name="darkmode_forced">Принудительно</string>
@@ -304,5 +314,9 @@
     <string name="app_disable_confirm_cancel">Отменить</string>
 
     <string name="app_profile_main_title">Имя пакета приложения</string>
+
+    <string name="tri_state_default">По умолчанию</string>
+    <string name="tri_state_enabled">Разрешено</string>
+    <string name="tri_state_disabled">Запрещено</string>
 
 </resources>

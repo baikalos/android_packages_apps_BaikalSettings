@@ -37,6 +37,31 @@
             android:summary="@string/trust_always_summary"
             android:dependency="baikalos_trust_enabled" />
 
+        <com.crdroid.settings.preferences.GlobalSettingSeekBarPreference
+            android:key="baikalos_trust_timeout_in_millis"
+            android:title="@string/trust_timeout_in_millis_title"
+            android:max="168"
+            settings:min="0"
+            settings:units="hours"
+            android:defaultValue="4" />
+
+        <com.crdroid.settings.preferences.GlobalSettingSeekBarPreference
+            android:key="baikalos_trustable_idle_timeout_in_millis"
+            android:title="@string/trustable_idle_timeout_in_millis_title"
+            android:max="168"
+            settings:min="0"
+            settings:units="hours"
+            android:defaultValue="8" />
+
+        <com.crdroid.settings.preferences.GlobalSettingSeekBarPreference
+            android:key="baikalos_trustable_timeout_in_millis"
+            android:title="@string/trustable_timeout_in_millis_title"
+            android:max="168"
+            settings:min="0"
+            settings:units="hours"
+            android:defaultValue="24" />
+
+
         <!-- com.crdroid.settings.preferences.SecureSettingSwitchPreference
             android:key="baikalos_trust_incall"
             android:defaultValue="false"

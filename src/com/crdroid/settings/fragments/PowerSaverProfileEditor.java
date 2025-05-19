@@ -47,8 +47,8 @@ import com.android.settings.R;
 import com.crdroid.settings.preferences.SystemPropertiesListPreference;
 
 import com.android.internal.baikalos.BaikalConstants;
-import com.android.internal.baikalos.PowerSaverSettings;
-import com.android.internal.baikalos.PowerSaverPolicyConfig;
+import com.android.internal.baikalos.BaikalPowerSaverSettings;
+import com.android.internal.baikalos.BaikalPowerSaverPolicyConfig;
 
 
 import java.util.List;
@@ -62,8 +62,8 @@ public class PowerSaverProfileEditor extends SettingsPreferenceFragment {
     private int mType;
     private String mName;
 
-    PowerSaverPolicyConfig mPolicy;
-    PowerSaverSettings mPowerSaverSettings;
+    BaikalPowerSaverPolicyConfig mPolicy;
+    BaikalPowerSaverSettings mPowerSaverSettings;
 
     Context mContext;
     Resources mResources;
@@ -95,13 +95,13 @@ public class PowerSaverProfileEditor extends SettingsPreferenceFragment {
         mContext = (Context) getActivity();
         mResources = getActivity().getResources();
 
-        mPowerSaverSettings = new PowerSaverSettings(new Handler(),mContext);
+        mPowerSaverSettings = new BaikalPowerSaverSettings(new Handler(),mContext);
         mPowerSaverSettings.registerObserver(false);
         mPowerSaverSettings.loadPolicies();
 
         mPolicy = mPowerSaverSettings.getPoliciesById().get(mType);
         if( mPolicy == null ) {
-            mPolicy = new PowerSaverPolicyConfig(mName,mType); 
+            mPolicy = new BaikalPowerSaverPolicyConfig(mName,mType); 
         }
 
         SwitchPreference switchPreference = null;
@@ -509,6 +509,28 @@ public class PowerSaverProfileEditor extends SettingsPreferenceFragment {
                     }
                 });
             }
+
+
+            switchPreference = (SwitchPreference) findPreference("ps_profile_SystemPriority");
+            if( switchPreference != null ) {
+                switchPreference.setChecked(mPolicy.systemPriority);
+                Log.e(TAG, "ps_profile_SystemPriority: mName=" + mName + ", value=" + mPolicy.systemPriority);
+                switchPreference.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                    public boolean onPreferenceChange(Preference preference, Object newValue) {
+                        try {
+                            mPolicy.systemPriority = ((Boolean)newValue);
+                            mPowerSaverSettings.updatePolicy(mPolicy);
+                            mPowerSaverSettings.save();
+                            Log.e(TAG, "ps_profile_SystemPriority: mName=" + mName + ", value=" + (Boolean)newValue);
+                        } catch(Exception re) {
+                            Log.e(TAG, "onCreate: ps_profile_SystemPriority Fatal! exception", re );
+                        }
+                        return true;
+                    }
+                });
+            }
+
+
 
             listPreference = (ListPreference) findPreference("ps_profile_SoundTriggerMode");
             if( listPreference != null ) {

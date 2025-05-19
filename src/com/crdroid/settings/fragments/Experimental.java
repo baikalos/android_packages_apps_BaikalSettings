@@ -31,6 +31,7 @@ import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.SwitchPreference;
+import androidx.preference.EditTextPreference;
 
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.R;
@@ -38,12 +39,23 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.SearchIndexable;
 
+import com.crdroid.settings.utils.Util;
+import com.crdroid.settings.utils.SuShell;
+
 import java.util.List;
 
 @SearchIndexable
-public class Experimental extends SettingsPreferenceFragment {
+public class Experimental extends SettingsPreferenceFragment /* implements Preference.OnPreferenceChangeListener */ {
 
     public static final String TAG = "Experimental";
+
+    public static final String RUN_CMD_PREF = "run_cmd";
+    public static final String RET_CMD_PREF = "ret_cmd";
+
+    EditTextPreference mCmdEditTextPreference;
+
+    Preference mCmdRetvalText;
+    Preference mCmdRunIt;
 
 
     @Override
@@ -55,7 +67,48 @@ public class Experimental extends SettingsPreferenceFragment {
         Context mContext = getActivity().getApplicationContext();
         final PreferenceScreen prefScreen = getPreferenceScreen();
 
+        mCmdEditTextPreference = (EditTextPreference) findPreference(RUN_CMD_PREF);
+        if( mCmdEditTextPreference != null ) {
+            //mCmdEditTextPreference.setOnPreferenceChangeListener(this);
+        }
+
+        mCmdRetvalText = (Preference) findPreference(RET_CMD_PREF);
+        mCmdRunIt = (Preference) findPreference("run_it");
     }
+
+
+    @Override
+    public boolean onPreferenceTreeClick(Preference preference) {
+        if (preference == mCmdRunIt) {
+            String cmd = mCmdEditTextPreference.getText();
+            List<String> ret = SuShell.runWithShellCheck(cmd);
+            if( ret == null ) mCmdRetvalText.setSummary("");
+            else {
+                String val = "";
+                for(String line : ret) {
+                    val += line + "\n";
+                }
+                mCmdRetvalText.setSummary(val);
+            }
+        } 
+        return true;
+    }
+
+    /*public boolean onPreferenceChange(Preference preference, Object newValue) {
+        String key = preference.getKey();
+        if (RUN_CMD_PREF.equals(key)) {
+            List<String> ret = SuShell.runWithShellCheck((String) newValue);
+            if( ret == null ) mCmdRetvalText.setSummary("");
+            else {
+                String val = "";
+                for(String line : ret) {
+                    val += line + "\n";
+                }
+                mCmdRetvalText.setSummary(val);
+            }
+        }
+        return true;
+    }*/
 
     public static void reset(Context mContext) {
         ContentResolver resolver = mContext.getContentResolver();

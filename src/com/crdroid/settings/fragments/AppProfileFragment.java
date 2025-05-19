@@ -49,10 +49,10 @@ import android.os.RemoteException;
 
 import android.content.res.Resources;
 
-import android.baikalos.AppProfile;
-import com.android.internal.baikalos.AppProfileBackend;
+import android.baikalos.BaikalAppProfile;
+import com.android.internal.baikalos.BaikalAppProfileBackend;
 
-import com.android.internal.baikalos.PowerWhitelistBackend;
+import com.android.internal.baikalos.BaikalPowerWhitelistBackend;
 import com.android.internal.baikalos.BaikalSpoofer;
 import com.android.internal.baikalos.BaikalConstants;
 
@@ -140,6 +140,7 @@ public class AppProfileFragment extends SettingsPreferenceFragment
     private static final String APP_PROFILE_PHKA = "app_profile_phka";
     private static final String APP_PROFILE_DEVMODE = "app_profile_devmode";
     private static final String APP_PROFILE_FILTERFS = "app_profile_filterfs";
+    private static final String APP_PROFILE_FILTERFS_ADD = "app_profile_filterfs_add";
 
     private static final String APP_PROFILE_LOCATION = "app_profile_location";
     private static final String APP_PROFILE_CAMERA = "app_profile_camera";
@@ -150,6 +151,9 @@ public class AppProfileFragment extends SettingsPreferenceFragment
     private static final String APP_PROFILE_LANGUAGE = "app_profile_language";
 
     private static final String APP_PROFILE_FORCED_SCREENSHOT = "app_profile_forced_screenshot";
+
+    private static final String APP_PROFILE_BLOCK_SMS = "app_profile_block_sms";
+    private static final String APP_PROFILE_BLOCK_NOTIFICATION = "app_profile_block_notification";
 
     private static final String APP_PROFILE_BLOCK_CONTACTS = "app_profile_block_contacts";
     private static final String APP_PROFILE_BLOCK_CALLLOG = "app_profile_block_calllog";
@@ -186,18 +190,22 @@ public class AppProfileFragment extends SettingsPreferenceFragment
     private SwitchPreference mAppPhkaProfile;
     private SwitchPreference mAppDevModeProfile;
     private SwitchPreference mAppFilterFsProfile;
+    private SwitchPreference mAppFilterFsAddProfile;
     private SwitchPreference mAppAllowIdleNetwork;
     private SwitchPreference mAppHideIdle;
     private SwitchPreference mAppForcedScreenshot;
     private SwitchPreference mAppBlockOverlaysProfile;
-    private SwitchPreference mAppHideHMS;
-    private SwitchPreference mAppHideGMS;
-    private SwitchPreference mAppHide3P;
+    private ListPreference mAppHideHMS;
+    private ListPreference mAppHideGMS;
+    private ListPreference mAppHide3P;
 
-    private SwitchPreference mAppBlockContacts;
-    private SwitchPreference mAppBlockCalllog;
-    private SwitchPreference mAppBlockCalendar;
-    private SwitchPreference mAppBlockMedia;
+    private ListPreference mAppBlockContacts;
+    private ListPreference mAppBlockCalllog;
+    private ListPreference mAppBlockCalendar;
+    private ListPreference mAppBlockMedia;
+
+    private ListPreference mAppBlockSms;
+    private ListPreference mAppBlockNotification;
 
     private SwitchPreference mAppPrivPhoneState;
 
@@ -222,8 +230,8 @@ public class AppProfileFragment extends SettingsPreferenceFragment
     private ListPreference mPerformanceScale;
     private ListPreference mAppLanguageProfile;
 
-    private AppProfileBackend mAppSettings;
-    private AppProfile mProfile;
+    private BaikalAppProfileBackend mAppSettings;
+    private BaikalAppProfile mProfile;
 
 
     private boolean isKernelIncompatible = false;
@@ -285,13 +293,13 @@ public class AppProfileFragment extends SettingsPreferenceFragment
             Log.w(TAG, "Unable to obtain freezer support status from ActivityManager");
         }
 
-        mAppSettings = AppProfileBackend.getInstance(new Handler(),mContext);
+        mAppSettings = BaikalAppProfileBackend.getInstance(new Handler(),mContext);
         //mAppSettings.registerObserver(false);
 
         mAppSettings.loadProfiles();
-        mProfile = mAppSettings.getProfileWithNull(mPackageName);
+        mProfile = mAppSettings.getBaikalProfileWithNull(mPackageName);
         if( mProfile == null ) { 
-            mProfile = new AppProfile(mPackageName,-1);
+            mProfile = new BaikalAppProfile(mPackageName,-1);
         }
 
         //mProfile = mAppSettings.updateProfileFromSystemSettings(mProfile);
@@ -309,7 +317,7 @@ public class AppProfileFragment extends SettingsPreferenceFragment
             mainCategory.setSummary(mPackageName);
 
 
-            PowerWhitelistBackend mBackend = PowerWhitelistBackend.getInstance(getContext());
+            BaikalPowerWhitelistBackend mBackend = BaikalPowerWhitelistBackend.getInstance(getContext());
             mBackend.refreshList();
 
             mAppOldLinks = (SwitchPreference) findPreference(APP_PROFILE_OLD_LINKS);
@@ -1423,6 +1431,26 @@ public class AppProfileFragment extends SettingsPreferenceFragment
                 });
             }
 
+            mAppFilterFsAddProfile = (SwitchPreference) findPreference(APP_PROFILE_FILTERFS_ADD);
+            if( mAppFilterFsAddProfile != null ) {
+                boolean appFilterFsAddProfile = mProfile.mFilterFSadd;
+                Log.e(TAG, "mAppFilterFsAddProfile: mPackageName=" + mPackageName + ", appFilterFsAddProfile=" + appFilterFsAddProfile);
+                mAppFilterFsAddProfile.setChecked(mProfile.mFilterFSadd);
+                mAppFilterFsAddProfile.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                  public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    try {
+                        mProfile.mFilterFSadd = ((Boolean)newValue);
+                        mAppSettings.updateProfile(mProfile);
+                        mAppSettings.save();
+                        Log.e(TAG, "mAppFilterFsAddProfile: mPackageName=" + mPackageName + ", appFilterAddFsProfile=" + mProfile.mFilterFSadd);
+                    } catch(Exception re) {
+                        Log.e(TAG, "onCreate: mAppFilterFsAddProfile Fatal! exception", re );
+                    }
+                    return true;
+                  }
+                });
+            }
+
 
             mAppBlockOverlaysProfile = (SwitchPreference) findPreference(APP_PROFILE_BLOCK_OVERLAYS);
             if( mAppBlockOverlaysProfile != null ) {
@@ -1444,21 +1472,18 @@ public class AppProfileFragment extends SettingsPreferenceFragment
                 });
             }
 
-
-            
-
-            mAppHideHMS = (SwitchPreference) findPreference(APP_PROFILE_HIDE_HMS);
+            mAppHideHMS = (ListPreference) findPreference(APP_PROFILE_HIDE_HMS);
             if( mAppHideHMS != null ) {
                 if( !Utils.isPackageInstalled(mContext, "com.huawei.hwid")) {
                     mAppHideHMS.setVisible(false);                    
                 } else {
-                    boolean hide = mProfile.mHideHMS;
+                    int hide = mProfile.mHideHMS;
                     Log.e(TAG, "mAppHideHMS: mPackageName=" + mPackageName + ", mAppHideHMS=" + hide);
-                    mAppHideHMS.setChecked(hide);
+                    mAppHideHMS.setValue(Integer.toString(hide));
                     mAppHideHMS.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
                       public boolean onPreferenceChange(Preference preference, Object newValue) {
                         try {
-                            mProfile.mHideHMS = ((Boolean)newValue);
+                            mProfile.mHideHMS = Integer.parseInt(newValue.toString());
                             mAppSettings.updateProfile(mProfile);
                             mAppSettings.save();
                             Log.e(TAG, "mAppHideHMS: mPackageName=" + mPackageName + ", mAppHideHMS=" + mProfile.mHideHMS);
@@ -1472,18 +1497,18 @@ public class AppProfileFragment extends SettingsPreferenceFragment
             }
 
 
-            mAppHideGMS = (SwitchPreference) findPreference(APP_PROFILE_HIDE_GMS);
+            mAppHideGMS = (ListPreference) findPreference(APP_PROFILE_HIDE_GMS);
             if( mAppHideGMS != null ) {
                 if( !Utils.isPackageInstalled(mContext, "com.google.android.gms")) {
                     mAppHideGMS.setVisible(false);                    
                 } else {
-                    boolean hide = mProfile.mHideGMS;
+                    int hide = mProfile.mHideGMS;
                     Log.e(TAG, "mAppHideGMS: mPackageName=" + mPackageName + ", mAppHideGMS=" + hide);
-                    mAppHideGMS.setChecked(hide);
+                    mAppHideGMS.setValue(Integer.toString(hide));
                     mAppHideGMS.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
                       public boolean onPreferenceChange(Preference preference, Object newValue) {
                         try {
-                            mProfile.mHideGMS = ((Boolean)newValue);
+                            mProfile.mHideGMS = Integer.parseInt(newValue.toString());
                             mAppSettings.updateProfile(mProfile);
                             mAppSettings.save();
                             Log.e(TAG, "mAppHideGMS: mPackageName=" + mPackageName + ", mAppHideGMS=" + mProfile.mHideGMS);
@@ -1496,15 +1521,15 @@ public class AppProfileFragment extends SettingsPreferenceFragment
                 }
             }
 
-            mAppHide3P = (SwitchPreference) findPreference(APP_PROFILE_HIDE_3P);
+            mAppHide3P = (ListPreference) findPreference(APP_PROFILE_HIDE_3P);
             if( mAppHide3P != null ) {
-                boolean hide = mProfile.mHide3P;
+                int hide = mProfile.mHide3P;
                 Log.e(TAG, "mAppHide3P: mPackageName=" + mPackageName + ", mAppHide3P=" + hide);
-                mAppHide3P.setChecked(hide);
+                mAppHide3P.setValue(Integer.toString(hide));
                 mAppHide3P.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
                   public boolean onPreferenceChange(Preference preference, Object newValue) {
                     try {
-                        mProfile.mHide3P = ((Boolean)newValue);
+                        mProfile.mHide3P = Integer.parseInt(newValue.toString());
                         mAppSettings.updateProfile(mProfile);
                         mAppSettings.save();
                         Log.e(TAG, "mAppHide3P: mPackageName=" + mPackageName + ", mAppHide3P=" + mProfile.mHide3P);
@@ -1536,15 +1561,56 @@ public class AppProfileFragment extends SettingsPreferenceFragment
                 });
             }
 
-            mAppBlockContacts = (SwitchPreference) findPreference(APP_PROFILE_BLOCK_CONTACTS);
+            mAppBlockNotification = (ListPreference) findPreference(APP_PROFILE_BLOCK_NOTIFICATION);
+            if( mAppBlockNotification != null ) {
+                int block = mProfile.mBlockNotification;
+                Log.e(TAG, "mAppBlockNotification: mPackageName=" + mPackageName + ", mAppBlockNotification=" + block);
+                mAppBlockNotification.setValue(Integer.toString(block));
+                mAppBlockNotification.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                  public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    try {
+                        mProfile.mBlockNotification = Integer.parseInt(newValue.toString());
+                        mAppSettings.updateProfile(mProfile);
+                        mAppSettings.save();
+                        Log.e(TAG, "mAppBlockNotification: mPackageName=" + mPackageName + ", mAppBlockNotification=" + mProfile.mBlockNotification);
+                    } catch(Exception re) {
+                        Log.e(TAG, "onCreate: mAppBlockNotification Fatal! exception", re );
+                    }
+                    return true;
+                  }
+                });
+            }
+
+            mAppBlockSms = (ListPreference) findPreference(APP_PROFILE_BLOCK_SMS);
+            if( mAppBlockSms != null ) {
+                int block = mProfile.mBlockSms;
+                Log.e(TAG, "mAppBlockSms: mPackageName=" + mPackageName + ", mAppBlockSms=" + block);
+                mAppBlockSms.setValue(Integer.toString(block));
+                mAppBlockSms.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                  public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    try {
+                        mProfile.mBlockSms = Integer.parseInt(newValue.toString());
+                        mAppSettings.updateProfile(mProfile);
+                        mAppSettings.save();
+                        Log.e(TAG, "mAppBlockSms: mPackageName=" + mPackageName + ", mAppBlockSms=" + mProfile.mBlockSms);
+                    } catch(Exception re) {
+                        Log.e(TAG, "onCreate: mAppBlockSms Fatal! exception", re );
+                    }
+                    return true;
+                  }
+                });
+            }
+
+
+            mAppBlockContacts = (ListPreference) findPreference(APP_PROFILE_BLOCK_CONTACTS);
             if( mAppBlockContacts != null ) {
-                boolean block = mProfile.mBlockContacts;
+                int block = mProfile.mBlockContacts;
                 Log.e(TAG, "mAppBlockContacts: mPackageName=" + mPackageName + ", mAppBlockContacts=" + block);
-                mAppBlockContacts.setChecked(block);
+                mAppBlockContacts.setValue(Integer.toString(block));
                 mAppBlockContacts.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
                   public boolean onPreferenceChange(Preference preference, Object newValue) {
                     try {
-                        mProfile.mBlockContacts = ((Boolean)newValue);
+                        mProfile.mBlockContacts = Integer.parseInt(newValue.toString());
                         mAppSettings.updateProfile(mProfile);
                         mAppSettings.save();
                         Log.e(TAG, "mAppBlockContacts: mPackageName=" + mPackageName + ", mAppBlockContacts=" + mProfile.mBlockContacts);
@@ -1556,15 +1622,15 @@ public class AppProfileFragment extends SettingsPreferenceFragment
                 });
             }
 
-            mAppBlockCalllog = (SwitchPreference) findPreference(APP_PROFILE_BLOCK_CALLLOG);
+            mAppBlockCalllog = (ListPreference) findPreference(APP_PROFILE_BLOCK_CALLLOG);
             if( mAppBlockCalllog != null ) {
-                boolean block = mProfile.mBlockCalllog;
+                int block = mProfile.mBlockCalllog;
                 Log.e(TAG, "mAppBlockCalllog: mPackageName=" + mPackageName + ", mAppBlockCalllog=" + block);
-                mAppBlockCalllog.setChecked(block);
+                mAppBlockCalllog.setValue(Integer.toString(block));
                 mAppBlockCalllog.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
                   public boolean onPreferenceChange(Preference preference, Object newValue) {
                     try {
-                        mProfile.mBlockCalllog = ((Boolean)newValue);
+                        mProfile.mBlockCalllog = Integer.parseInt(newValue.toString());
                         mAppSettings.updateProfile(mProfile);
                         mAppSettings.save();
                         Log.e(TAG, "mAppBlockCalllog: mPackageName=" + mPackageName + ", mAppBlockCalllog=" + mProfile.mBlockCalllog);
@@ -1577,15 +1643,15 @@ public class AppProfileFragment extends SettingsPreferenceFragment
             }
 
 
-            mAppBlockCalendar = (SwitchPreference) findPreference(APP_PROFILE_BLOCK_CALENDAR);
+            mAppBlockCalendar = (ListPreference) findPreference(APP_PROFILE_BLOCK_CALENDAR);
             if( mAppBlockCalendar != null ) {
-                boolean block = mProfile.mBlockCalendar;
+                int block = mProfile.mBlockCalendar;
                 Log.e(TAG, "mAppBlockCalendar: mPackageName=" + mPackageName + ", mAppBlockCalendar=" + block);
-                mAppBlockCalendar.setChecked(block);
+                mAppBlockCalendar.setValue(Integer.toString(block));
                 mAppBlockCalendar.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
                   public boolean onPreferenceChange(Preference preference, Object newValue) {
                     try {
-                        mProfile.mBlockCalendar = ((Boolean)newValue);
+                        mProfile.mBlockCalendar = Integer.parseInt(newValue.toString());
                         mAppSettings.updateProfile(mProfile);
                         mAppSettings.save();
                         Log.e(TAG, "mAppBlockCalendar: mPackageName=" + mPackageName + ", mAppBlockCalendar=" + mProfile.mBlockCalendar);
@@ -1597,15 +1663,15 @@ public class AppProfileFragment extends SettingsPreferenceFragment
                 });
             }
 
-            mAppBlockMedia = (SwitchPreference) findPreference(APP_PROFILE_BLOCK_MEDIA);
+            mAppBlockMedia = (ListPreference) findPreference(APP_PROFILE_BLOCK_MEDIA);
             if( mAppBlockMedia != null ) {
-                boolean block = mProfile.mBlockMedia;
+                int block = mProfile.mBlockMedia;
                 Log.e(TAG, "mAppBlockMedia: mPackageName=" + mPackageName + ", mAppBlockMedia=" + block);
-                mAppBlockMedia.setChecked(block);
+                mAppBlockMedia.setValue(Integer.toString(block));
                 mAppBlockMedia.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
                   public boolean onPreferenceChange(Preference preference, Object newValue) {
                     try {
-                        mProfile.mBlockMedia = ((Boolean)newValue);
+                        mProfile.mBlockMedia = Integer.parseInt(newValue.toString());
                         mAppSettings.updateProfile(mProfile);
                         mAppSettings.save();
                         Log.e(TAG, "mAppBlockMedia: mPackageName=" + mPackageName + ", mAppBlockMedia=" + mProfile.mBlockMedia);

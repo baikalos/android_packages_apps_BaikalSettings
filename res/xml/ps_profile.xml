@@ -173,4 +173,10 @@
             android:defaultValue="600"
             android:summary="%s" />
 
+        <SwitchPreference
+            android:key="ps_profile_SystemPriority"
+            android:title="@string/ps_profile_SystemPriority_title"
+            android:summary="@string/ps_profile_SystemPriority_summary"
+            android:defaultValue="false" />
+
 </PreferenceScreen>

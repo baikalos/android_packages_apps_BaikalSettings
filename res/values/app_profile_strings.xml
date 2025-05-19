@@ -313,6 +313,13 @@
 
     <string name="app_profile_privacy_title">Privacy</string>
     <string name="app_profile_privacy_summary">Privacy options</string>
+
+    <string name="app_profile_spoofing_title">Spoofing</string>
+    <string name="app_profile_spoofing_summary">Spoofing options</string>
+
+    <string name="app_profile_block_notification_title">Block Notifications</string>
+    <string name="app_profile_block_sms_title">Block SMS</string>
+
     <string name="app_profile_block_contacts_title">Block Contacts</string>
     <string name="app_profile_block_contacts_summary"></string>
     <string name="app_profile_block_calllog_title">Block Calllog</string>
@@ -331,6 +338,9 @@
     <string name="app_profile_filterfs_title">Filesystem Filter</string>
     <string name="app_profile_filterfs_summary">Block or allow (depends on Invert option in Misc) access to some system files like su, addon.d, etc...</string>
 
+    <string name="app_profile_filterfs_add_title">Additional Filter</string>
+    <string name="app_profile_filterfs_add_summary">Block access to system files from lineage and crdroid</string>
+
     <string name="darkmode_default">Default</string>
     <string name="darkmode_forced_as_system">Forced as system</string>
     <string name="darkmode_forced">Forced</string>
@@ -344,5 +354,9 @@
     <string name="app_disable_confirm_cancel">Cancel</string>
 
     <string name="app_profile_main_title">Package name</string>
+
+    <string name="tri_state_default">Default</string>
+    <string name="tri_state_enabled">Enabled</string>
+    <string name="tri_state_disabled">Disabled</string>
 
 </resources>

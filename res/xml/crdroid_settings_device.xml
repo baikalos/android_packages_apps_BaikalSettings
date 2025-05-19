@@ -69,57 +69,57 @@
         android:dependency="baikalos_gms_override_spoof" >
 
         <com.crdroid.settings.preferences.SystemPropertiesEditTextPreference
-            android:key="persist.spoof.manufacturer"
+            android:key="persist.spf.manufacturer"
             android:title="@string/baikalos_spoof_manufacturer_title"
             />
 
         <com.crdroid.settings.preferences.SystemPropertiesEditTextPreference
-            android:key="persist.spoof.brand"
+            android:key="persist.spf.brand"
             android:title="@string/baikalos_spoof_brand_title"
             />
 
         <com.crdroid.settings.preferences.SystemPropertiesEditTextPreference
-            android:key="persist.spoof.product"
+            android:key="persist.spf.product"
             android:title="@string/baikalos_spoof_product_title"
             />
 
         <com.crdroid.settings.preferences.SystemPropertiesEditTextPreference
-            android:key="persist.spoof.model"
+            android:key="persist.spf.model"
             android:title="@string/baikalos_spoof_model_title"
             />
 
         <com.crdroid.settings.preferences.SystemPropertiesEditTextPreference
-            android:key="persist.spoof.device"
+            android:key="persist.spf.device"
             android:title="@string/baikalos_spoof_device_title"
             />
 
         <com.crdroid.settings.preferences.SystemPropertiesEditTextPreference
-            android:key="persist.spoof.fingerprint"
+            android:key="persist.spf.fingerprint"
             android:title="@string/baikalos_spoof_fingerprint_title"
             />
 
         <com.crdroid.settings.preferences.SystemPropertiesEditTextPreference
-            android:key="persist.spoof.id"
+            android:key="persist.spf.id"
             android:title="@string/baikalos_spoof_id_title"
             />
 
         <com.crdroid.settings.preferences.SystemPropertiesEditTextPreference
-            android:key="persist.spoof.incremental"
+            android:key="persist.spf.incremental"
             android:title="@string/baikalos_spoof_incremental_title"
             />
 
         <com.crdroid.settings.preferences.SystemPropertiesEditTextPreference
-            android:key="persist.spoof.release"
+            android:key="persist.spf.release"
             android:title="@string/baikalos_spoof_release_title"
             />
 
         <com.crdroid.settings.preferences.SystemPropertiesEditTextPreference
-            android:key="persist.spoof.security_patch"
+            android:key="persist.spf.security_patch"
             android:title="@string/baikalos_spoof_sp_title"
             />
 
         <com.crdroid.settings.preferences.SystemPropertiesEditTextPreference
-            android:key="persist.spoof.firs_api_level"
+            android:key="persist.spf.firs_api_level"
             android:title="@string/baikalos_spoof_first_api_level_title"
             />
 
