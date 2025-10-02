@@ -66,13 +66,16 @@
     <string name="ps_profile_LocationMode_title">Modo de ubicación</string>
     <string name="ps_profile_CacheAppTimeout_title">Tiempo de espera de app en caché</string>
 
-    <string name="ps_profile_KillInBackground_title">Matar apps inactivas</string>
-    <string name="ps_profile_KillInBackground_summary">Mata las apps inactivas en segundo plano</string>
+    <string name="ps_profile_KillInBackground_title">Cerrar apps inactivas</string>
+    <string name="ps_profile_KillInBackground_summary">Cierra las apps inactivas en segundo plano</string>
 
     <string name="ps_profile_lessRestrictiveBackgroundPolicy_title">Menos restricciones</string>
     <string name="ps_profile_lessRestrictiveBackgroundPolicy_summary">Limitador de segundo plano menos restrictivo</string>
 
     <string name="ps_profile_disableBackgroundByDefault_title">Desactivado por defecto</string>
     <string name="ps_profile_disableBackgroundByDefault_summary">Desactiva la ejecución en segundo plano de las aplicaciones con modo de segundo plano \'automático\'</string>
+
+    <string name="ps_profile_SystemPriority_title">Prioridad del sistema</string>
+    <string name="ps_profile_SystemPriority_summary">Establece una prioridad más alta para las tareas del sistema</string>
 
 </resources>
