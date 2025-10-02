@@ -81,8 +81,7 @@
     <string name="background_restrictions_disabled">Desactivado</string>
 
     <string name="app_profile_pinned_title">Fijado</string>
-
-    <string name="app_profile_pinned_summary">Protege esta aplicación de ser cerrada por el sistema. ¡NO USAR si no está absolutamente seguro de que lo necesita!</string>
+    <string name="app_profile_pinned_summary">Protege esta aplicación de ser cerrada por el sistema. ¡NO USAR si no estás absolutamente seguro de que lo necesita!</string>
 
     <string name="app_profile_donotclose_title">No cerrar</string>
     <string name="app_profile_donotclose_summary">No cierra esta aplicación en la gestión agresiva de la memoria</string>
@@ -313,13 +312,19 @@
 
     <string name="app_profile_privacy_title">Privacidad</string>
     <string name="app_profile_privacy_summary">Opciones de privacidad</string>
+
+    <string name="app_profile_spoofing_title">Falsificación</string>
+    <string name="app_profile_spoofing_summary">Opciones de falsificación</string>
+
+    <string name="app_profile_block_notification_title">Bloquear notificaciones</string>
+    <string name="app_profile_block_sms_title">Bloquear SMS</string>
     <string name="app_profile_block_contacts_title">Bloquear contactos</string>
     <string name="app_profile_block_contacts_summary"></string>
     <string name="app_profile_block_calllog_title">Bloquear registro de llamadas</string>
     <string name="app_profile_block_calllog_summary"></string>
     <string name="app_profile_block_calendar_title">Bloquear calendario</string>
     <string name="app_profile_block_calendar_summary"></string>
-    <string name="app_profile_block_media_title">Bloquear medios</string>
+    <string name="app_profile_block_media_title">Bloquear multimedia</string>
     <string name="app_profile_block_media_summary"></string>
 
     <string name="keep_on_default">No</string>
@@ -330,6 +335,9 @@
 
     <string name="app_profile_filterfs_title">Filtro del sistema de archivos</string>
     <string name="app_profile_filterfs_summary">Bloquea o permite (dependiendo de la opción Invertir en Otros) el acceso a ciertos archivos del sistema, como su, addon.d, etc...</string>
+
+    <string name="app_profile_filterfs_add_title">Filtro adicional</string>
+    <string name="app_profile_filterfs_add_summary">Bloquea el acceso a los archivos del sistema desde lineage y crdroid</string>
 
     <string name="darkmode_default">Por defecto</string>
     <string name="darkmode_forced_as_system">Forzado como el sistema</string>
@@ -343,5 +351,9 @@
     <string name="app_disable_confirm_cancel">Cancelar</string>
 
     <string name="app_profile_main_title">Nombre del paquete</string>
+
+    <string name="tri_state_default">Por defecto</string>
+    <string name="tri_state_enabled">Activado</string>
+    <string name="tri_state_disabled">Desactivado</string>
 
 </resources>
