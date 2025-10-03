@@ -255,11 +255,6 @@
             android:defaultValue="false" / -->
 
 
-        <SwitchPreference
-            android:key="app_profile_debug"
-            android:title="@string/app_profile_debug_title"
-            android:summary="@string/app_profile_debug_summary"
-            android:defaultValue="false" />
 
         <SwitchPreference
             android:key="app_profile_old_links"
@@ -320,11 +315,11 @@
             android:defaultValue="0"
             android:summary="%s" />
 
-        <SwitchPreference
+        <!-- SwitchPreference
             android:key="app_profile_phka"
             android:title="@string/app_profile_phka_title"
             android:summary="@string/app_profile_phka_summary"
-            android:persistent="false" />
+            android:persistent="false" / -->
 
         <SwitchPreference
             android:key="app_profile_devmode"
@@ -342,6 +337,48 @@
             android:key="app_profile_filterfs_add"
             android:title="@string/app_profile_filterfs_add_title"
             android:summary="@string/app_profile_filterfs_add_summary"
+            android:persistent="false" />
+
+        <EditTextPreference
+            android:key="app_profile_spoof_sim_country"
+            android:title="@string/app_profile_spoof_sim_country"
+            android:dialogTitle="@string/app_profile_spoof_sim_country"
+            android:singleLine="true" />
+
+        <EditTextPreference
+            android:key="app_profile_spoof_sim_mnc"
+            android:title="@string/app_profile_spoof_sim_mnc"
+            android:dialogTitle="@string/app_profile_spoof_sim_mnc"
+            android:singleLine="true" />
+
+        <EditTextPreference
+            android:key="app_profile_spoof_sim_opname"
+            android:title="@string/app_profile_spoof_sim_opname"
+            android:dialogTitle="@string/app_profile_spoof_sim_opname"
+            android:singleLine="true" />
+
+        <EditTextPreference
+            android:key="app_profile_spoof_sim_ln"
+            android:title="@string/app_profile_spoof_sim_ln"
+            android:dialogTitle="@string/app_profile_spoof_sim_ln"
+            android:singleLine="true" />
+
+        <SwitchPreference
+            android:key="app_profile_allow_sig_override"
+            android:title="@string/allow_sig_override_title"
+            android:summary="@string/allow_sig_override_summary"
+            android:persistent="false" />
+
+        <SwitchPreference
+            android:key="app_profile_spoof_default_dialer"
+            android:title="@string/spoof_default_dialer_title"
+            android:summary="@string/spoof_default_dialer_summary"
+            android:persistent="false" />
+
+        <SwitchPreference
+            android:key="app_profile_spoof_default_sms"
+            android:title="@string/spoof_default_sms_title"
+            android:summary="@string/spoof_default_sms_summary"
             android:persistent="false" />
 
     </PreferenceCategory>
@@ -441,6 +478,12 @@
     
     </PreferenceCategory>
 
+
+    <SwitchPreference
+        android:key="app_profile_debug"
+        android:title="@string/app_profile_debug_title"
+        android:summary="@string/app_profile_debug_summary"
+        android:defaultValue="false" />
 
     </PreferenceCategory>
 </PreferenceScreen>

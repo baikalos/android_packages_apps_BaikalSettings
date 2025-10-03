@@ -201,6 +201,15 @@
             android:title="dw_decoupled"
             android:defaultValue="false" />
 
+        <com.crdroid.settings.preferences.SystemPropertySwitchPreference
+            android:key="debug.sf.hw"
+            android:title="debug.sf.hw"
+            android:defaultValue="false" />
+
+        <com.crdroid.settings.preferences.SystemPropertySwitchPreference
+            android:key="debug.egl.hw"
+            android:title="debug.egl.hw"
+            android:defaultValue="false" />
 
         <EditTextPreference
             android:title="@string/run_cmd_title"

@@ -32,6 +32,7 @@ import android.os.UserHandle;
 import android.os.UserManager;
 import android.os.Process;
 import android.os.SystemProperties;
+import androidx.preference.EditTextPreference;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
@@ -195,6 +196,9 @@ public class AppProfileFragment extends SettingsPreferenceFragment
     private SwitchPreference mAppHideIdle;
     private SwitchPreference mAppForcedScreenshot;
     private SwitchPreference mAppBlockOverlaysProfile;
+    private SwitchPreference mAppAllowSigOverride;
+    private SwitchPreference mAppSpoofDefaultDialer;
+
     private ListPreference mAppHideHMS;
     private ListPreference mAppHideGMS;
     private ListPreference mAppHide3P;
@@ -229,6 +233,11 @@ public class AppProfileFragment extends SettingsPreferenceFragment
     private ListPreference mAppMicrophone;
     private ListPreference mPerformanceScale;
     private ListPreference mAppLanguageProfile;
+
+    private EditTextPreference mAppSpoofSimCountry;
+    private EditTextPreference mAppSpoofSimMnc;
+    private EditTextPreference mAppSpoofSimOpName;
+    private EditTextPreference mAppSpoofSimLN;
 
     private BaikalAppProfileBackend mAppSettings;
     private BaikalAppProfile mProfile;
@@ -500,10 +509,10 @@ public class AppProfileFragment extends SettingsPreferenceFragment
 
             mAppHeavyMemory = (SwitchPreference) findPreference(APP_PROFILE_HEAVY_MEMORY);
 
-            if( isKernelIncompatible ) {
+            /*if( isKernelIncompatible ) {
                 mAppHeavyMemory.setVisible(false);
                 mAppHeavyMemory = null;
-            }
+            }*/
 
             if( mAppHeavyMemory != null ) {
                 if( isKernelIncompatible ) {
@@ -529,10 +538,10 @@ public class AppProfileFragment extends SettingsPreferenceFragment
 
             mAppHeavyCPU = (SwitchPreference) findPreference(APP_PROFILE_HEAVY_CPU);
 
-            if( isKernelIncompatible ) {
+            /*if( isKernelIncompatible ) {
                 mAppHeavyCPU.setVisible(false);
                 mAppHeavyCPU = null;
-            }
+            }*/
 
             if( mAppHeavyCPU != null ) {
                 if( isKernelIncompatible ) {
@@ -1412,6 +1421,12 @@ public class AppProfileFragment extends SettingsPreferenceFragment
             }
 
             mAppFilterFsProfile = (SwitchPreference) findPreference(APP_PROFILE_FILTERFS);
+
+            if( isKernelIncompatible && mAppFilterFsProfile != null ) {
+                mAppFilterFsProfile.setEnabled(false);
+                mAppFilterFsProfile = null;
+            }
+
             if( mAppFilterFsProfile != null ) {
                 boolean appFilterFsProfile = mProfile.mFilterFS;
                 Log.e(TAG, "mAppFilterFsProfile: mPackageName=" + mPackageName + ", appFilterFsProfile=" + appFilterFsProfile);
@@ -1432,6 +1447,12 @@ public class AppProfileFragment extends SettingsPreferenceFragment
             }
 
             mAppFilterFsAddProfile = (SwitchPreference) findPreference(APP_PROFILE_FILTERFS_ADD);
+
+            if( isKernelIncompatible && mAppFilterFsAddProfile != null ) {
+                mAppFilterFsAddProfile.setEnabled(false);
+                mAppFilterFsAddProfile = null;
+            }
+
             if( mAppFilterFsAddProfile != null ) {
                 boolean appFilterFsAddProfile = mProfile.mFilterFSadd;
                 Log.e(TAG, "mAppFilterFsAddProfile: mPackageName=" + mPackageName + ", appFilterFsAddProfile=" + appFilterFsAddProfile);
@@ -1682,6 +1703,139 @@ public class AppProfileFragment extends SettingsPreferenceFragment
                   }
                 });
             }
+
+
+            mAppSpoofSimCountry = (EditTextPreference) findPreference("app_profile_spoof_sim_country");
+            if( mAppSpoofSimCountry != null ) {
+                String text = mProfile.mSpoofSimCountry;
+                Log.e(TAG, "mAppSpoofSimCountry: mPackageName=" + mPackageName + ", mAppSpoofSimCountry=" + text);
+                mAppSpoofSimCountry.setText(text);
+                mAppSpoofSimCountry.setSummary(text);
+                mAppSpoofSimCountry.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                  public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    try {
+                        mProfile.mSpoofSimCountry = newValue.toString();
+                        mAppSpoofSimCountry.setSummary(newValue.toString());
+                        mAppSettings.updateProfile(mProfile);
+                        mAppSettings.save();
+                        Log.e(TAG, "mAppSpoofSimCountry: mPackageName=" + mPackageName + ", mAppSpoofSimCountry=" + mProfile.mSpoofSimCountry);
+                    } catch(Exception re) {
+                        Log.e(TAG, "onCreate: mAppSpoofSimCountry Fatal! exception", re );
+                    }
+                    return true;
+                  }
+                });
+            }
+
+            mAppSpoofSimMnc = (EditTextPreference) findPreference("app_profile_spoof_sim_mnc");
+            if( mAppSpoofSimMnc != null ) {
+                String text = mProfile.mSpoofSimMnc;
+                Log.e(TAG, "mAppSpoofSimMnc: mPackageName=" + mPackageName + ", mAppSpoofSimMnc=" + text);
+                mAppSpoofSimMnc.setText(text);
+                mAppSpoofSimMnc.setSummary(text);
+                mAppSpoofSimMnc.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                  public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    try {
+                        mProfile.mSpoofSimMnc = newValue.toString();
+                        mAppSpoofSimMnc.setSummary(newValue.toString());
+                        mAppSettings.updateProfile(mProfile);
+                        mAppSettings.save();
+                        Log.e(TAG, "mAppSpoofSimMnc: mPackageName=" + mPackageName + ", mAppSpoofSimMnc=" + mProfile.mSpoofSimMnc);
+                    } catch(Exception re) {
+                        Log.e(TAG, "onCreate: mAppSpoofSimMnc Fatal! exception", re );
+                    }
+                    return true;
+                  }
+                });
+            }
+
+            mAppSpoofSimOpName = (EditTextPreference) findPreference("app_profile_spoof_sim_opname");
+            if( mAppSpoofSimOpName != null ) {
+                String text = mProfile.mSpoofSimOpName;
+                Log.e(TAG, "mAppSpoofSimOpName: mPackageName=" + mPackageName + ", mAppSpoofSimOpName=" + text);
+                mAppSpoofSimOpName.setText(text);
+                mAppSpoofSimOpName.setSummary(text);
+                mAppSpoofSimOpName.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                  public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    try {
+                        mProfile.mSpoofSimOpName = newValue.toString();
+                        mAppSpoofSimOpName.setSummary(newValue.toString());
+                        mAppSettings.updateProfile(mProfile);
+                        mAppSettings.save();
+                        Log.e(TAG, "mAppSpoofSimOpName: mPackageName=" + mPackageName + ", mAppSpoofSimOpName=" + mProfile.mSpoofSimOpName);
+                    } catch(Exception re) {
+                        Log.e(TAG, "onCreate: mAppSpoofSimOpName Fatal! exception", re );
+                    }
+                    return true;
+                  }
+                });
+            }
+
+            mAppSpoofSimLN = (EditTextPreference) findPreference("app_profile_spoof_sim_ln");
+            if( mAppSpoofSimLN != null ) {
+                String text = mProfile.mSpoofSimLN;
+                Log.e(TAG, "mAppSpoofSimLN: mPackageName=" + mPackageName + ", mAppSpoofSimLN=" + text);
+                mAppSpoofSimLN.setText(text);
+                mAppSpoofSimLN.setSummary(text);
+                mAppSpoofSimLN.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                  public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    try {
+                        mProfile.mSpoofSimLN = newValue.toString();
+                        mAppSpoofSimLN.setSummary(newValue.toString());
+                        mAppSettings.updateProfile(mProfile);
+                        mAppSettings.save();
+                        Log.e(TAG, "mAppSpoofSimLN: mPackageName=" + mPackageName + ", mAppSpoofSimLN=" + mProfile.mSpoofSimLN);
+                    } catch(Exception re) {
+                        Log.e(TAG, "onCreate: mAppSpoofSimLN Fatal! exception", re );
+                    }
+                    return true;
+                  }
+                });
+            }
+
+            mAppAllowSigOverride = (SwitchPreference) findPreference("app_profile_allow_sig_override");
+            if( mAppAllowSigOverride != null ) {
+                boolean val = mProfile.mAllowSigOverride;
+                Log.e(TAG, "mAppAllowSigOverride: mPackageName=" + mPackageName + ", mAppAllowSigOverride=" + val);
+                mAppAllowSigOverride.setChecked(mProfile.mAllowSigOverride);
+                mAppAllowSigOverride.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                  public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    try {
+                        mProfile.mAllowSigOverride = ((Boolean)newValue);
+                        mAppSettings.updateProfile(mProfile);
+                        mAppSettings.save();
+                        Log.e(TAG, "mAppAllowSigOverride: mPackageName=" + mPackageName + ", mAppAllowSigOverride=" + mProfile.mAllowSigOverride);
+                    } catch(Exception re) {
+                        Log.e(TAG, "onCreate: mAppAllowSigOverride Fatal! exception", re );
+                    }
+                    return true;
+                  }
+                });
+            }
+
+            mAppSpoofDefaultDialer = (SwitchPreference) findPreference("app_profile_spoof_default_dialer");
+            if( mAppSpoofDefaultDialer != null ) {
+                boolean val = mProfile.mSpoofAsDefaultDialer;
+                Log.e(TAG, "mAppSpoofDefaultDialer: mPackageName=" + mPackageName + ", mAppSpoofDefaultDialer=" + val);
+                mAppSpoofDefaultDialer.setChecked(mProfile.mSpoofAsDefaultDialer);
+                mAppSpoofDefaultDialer.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                  public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    try {
+                        mProfile.mSpoofAsDefaultDialer = ((Boolean)newValue);
+                        mAppSettings.updateProfile(mProfile);
+                        mAppSettings.save();
+                        Log.e(TAG, "mAppSpoofDefaultDialer: mPackageName=" + mPackageName + ", mAppSpoofDefaultDialer=" + mProfile.mSpoofAsDefaultDialer);
+                    } catch(Exception re) {
+                        Log.e(TAG, "onCreate: mAppSpoofDefaultDialer Fatal! exception", re );
+                    }
+                    return true;
+                  }
+                });
+            }
+
+
+
+
 
        } catch(Exception re) {
            Log.e(TAG, "onCreate: Fatal! exception", re );

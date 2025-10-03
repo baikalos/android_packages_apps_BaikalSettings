@@ -4,6 +4,9 @@
     <string name="app_profile_performance_title">Профиль производительности</string>
     <string name="app_profile_thermal_title">Профиль температурного режима</string>
 
+    <string name="app_screenoff_performance_title">Профиль производительности с выкл экраном</string>
+    <string name="app_screenoff_thermal_title">Профиль температурного режима с выкл экраном</string>
+
     <string name="app_idle_performance_title">Профиль производительности во сне</string>
     <string name="app_idle_thermal_title">Профиль температурного режима во сне</string>
 
@@ -318,5 +321,11 @@
     <string name="tri_state_default">По умолчанию</string>
     <string name="tri_state_enabled">Разрешено</string>
     <string name="tri_state_disabled">Запрещено</string>
+
+    <string name="spoof_default_dialer_title">Телефон по умолчанию</string>
+    <string name="spoof_default_dialer_summary">Маскировка под приложение «Телефон по умолчанию»</string>
+
+    <string name="spoof_default_sms_title">SMS по умолчанию</string>
+    <string name="spoof_default_sms_summary">Маскировка под приложение SMS по умолчанию</string>
 
 </resources>

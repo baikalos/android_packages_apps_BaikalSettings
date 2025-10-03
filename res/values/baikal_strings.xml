@@ -267,11 +267,32 @@
     <string name="baikalos_disable_gms_spoof_title">Disable GMS spoofing</string>
     <string name="baikalos_disable_gms_spoof_summary">Disable DeviceID spoofing for Google Services</string>
 
+    <string name="baikalos_enable_gms_spoof_title">Core GMS spoofing</string>
+    <string name="baikalos_enable_gms_spoof_summary">Enable DeviceID spoofing for Google Services</string>
+
+    <string name="baikalos_enable_vending_spoof_title">Enable Google Play spoofing</string>
+    <string name="baikalos_enable_vending_spoof_summary">Enable DeviceID spoofing for Google Play</string>
+
+    <string name="baikalos_enable_services_spoof_title">Google Servceis spoofing</string>
+    <string name="baikalos_enable_services_spoof_summary">Enable DeviceID spoofing for Google Services</string>
+
     <string name="baikalos_disable_certificate_spoof_title">Disable Certificate spoofing</string>
     <string name="baikalos_disable_certificate_spoof_summary">Disable Certificate spoofing for Google Services</string>
 
-    <string name="baikalos_disable_signature_spoof_title">Disable Signature spoofing</string>
-    <string name="baikalos_disable_signature_spoof_summary">Disable Core package Signature spoofing for Google Services</string>
+    <string name="baikalos_enable_certificate_spoof_title">Certificate spoofing for GMS</string>
+    <string name="baikalos_enable_certificate_spoof_summary">Enable Certificate spoofing for Google Services</string>
+
+    <string name="baikalos_enable_certificate_spoof_vending_title">Certificate spoofing for Google Play</string>
+    <string name="baikalos_enable_certificate_spoof_vending_summary">Enable Certificate spoofing for Google Play Integrity</string>
+
+    <string name="baikalos_enable_certificate_spoof_apps_title">Certificate spoofing for Apps</string>
+    <string name="baikalos_enable_certificate_spoof_apps_summary">Enable Certificate spoofing for Apps bootloader status</string>
+
+    <string name="baikalos_enable_certificate_spoof_services_title">Certificate spoofing thru GMS</string>
+    <string name="baikalos_enable_certificate_spoof_services_summary">Enable Certificate spoofing for app attestation through Google Services</string>
+
+    <string name="baikalos_enable_signature_spoof_title">Enable Platform Signature spoofing</string>
+    <string name="baikalos_enable_signature_spoof_summary">Enable Android Platform Signature spoofing for Google Services</string>
 
     <string name="baikalos_disable_gms_swa_spoof_title">Disable SW attestation</string>
     <string name="baikalos_disable_gms_swa_spoof_summary">Disable enforcing SW attestation for Google Services</string>
@@ -295,6 +316,7 @@
     <string name="baikalos_spoof_release_title">RELEASE</string>
     <string name="baikalos_spoof_sp_title">SECURITY PATCH</string>
     <string name="baikalos_spoof_first_api_level_title">First API Level</string>
+    <string name="baikalos_spoof_sdk_int_title">SDK</string>
 
     <string name="spoof_setings_reset_summary">Reset to system default values</string>
     <string name="spoof_setings_reset_title">Reset</string>
@@ -404,6 +426,12 @@
     <string name="run_it_now_summary"></string>
     <string name="run_it_now_title">Run</string>
     <string name="ret_cmd_title">Command Output</string>
+
+    <string name="default_app_none">None</string>
+
+    <string name="callscreening_service_title">Secondary CallerID service</string>
+    <string name="call_screening_no_dd_title">No Default Dialer ID</string>
+    <string name="call_screening_no_dd_summary">Do not use default dialer app as Caller ID service</string>
 
     <!-- string name=""></string -->
 </resources>

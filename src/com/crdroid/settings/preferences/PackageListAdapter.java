@@ -53,7 +53,8 @@ public class PackageListAdapter extends BaseAdapter implements Runnable {
     private static final String[] PACKAGE_WHITELIST = new String[] {
         "android",                          /* system server */
         "com.android.systemui",             /* system UI */
-        "com.android.providers.downloads"   /* download provider */
+        "com.android.providers.downloads",   /* download provider */
+        "com.google.android.gms"
     };
 
     private final Handler mHandler = new Handler(Looper.getMainLooper()) {

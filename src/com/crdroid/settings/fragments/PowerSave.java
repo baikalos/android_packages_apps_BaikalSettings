@@ -66,6 +66,9 @@ public class PowerSave extends SettingsPreferenceFragment {
     private static final String APP_PROFILE_PERF = "default_profile_performance";
     private static final String APP_PROFILE_THERM = "default_profile_thermal";
 
+    private static final String APP_SCREENOFF_PERF = "default_screenoff_performance";
+    private static final String APP_SCREENOFF_THERM = "default_screenoff_thermal";
+
     private static final String APP_IDLE_PERF = "default_idle_performance";
     private static final String APP_IDLE_THERM = "default_idle_thermal";
 
@@ -78,6 +81,8 @@ public class PowerSave extends SettingsPreferenceFragment {
 
     private ListPreference mAppPerfProfile;
     private ListPreference mAppThermProfile;
+    private ListPreference mAppScreenOffPerfProfile;
+    private ListPreference mAppScreenOffThermProfile;
     private ListPreference mAppIdlePerfProfile;
     private ListPreference mAppIdleThermProfile;
 
@@ -217,6 +222,57 @@ public class PowerSave extends SettingsPreferenceFragment {
                 }
             }
 
+            mAppScreenOffPerfProfile = (ListPreference) findPreference(APP_SCREENOFF_PERF);
+            if( mAppScreenOffPerfProfile != null ) { 
+                if(!perfProf) {
+                    mAppScreenOffPerfProfile.setVisible(false);
+                } else if( isKernelIncompatible ) {
+                    mAppScreenOffPerfProfile.setEnabled(false);
+                } else {
+                    int profile = Settings.Global.getInt(resolver,Settings.Global.BAIKALOS_DEFAULT_SCREENOFF_PERFORMANCE, -1);
+                    if( profile == -1 ) profile = 1;
+                    Log.e(TAG, "mAppScreenOffPerfProfile: getProfile=" + profile);
+                    try { mAppScreenOffPerfProfile.setValue(Integer.toString(profile)); } catch (Exception rre) { }
+                    mAppScreenOffPerfProfile.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                        public boolean onPreferenceChange(Preference preference, Object newValue) {
+                            try {
+                                Settings.Global.putInt(resolver,Settings.Global.BAIKALOS_DEFAULT_SCREENOFF_PERFORMANCE, Integer.parseInt(newValue.toString()));
+                                Log.e(TAG, "mAppScreenOffPerfProfile: setProfile=" + newValue.toString());
+                            } catch(Exception re) {
+                                Log.e(TAG, "onCreate: mAppScreenOffPerfProfile Fatal! exception", re );
+                            }
+                            return true;
+                        }
+                    });
+                }
+            }
+
+            mAppScreenOffThermProfile = (ListPreference) findPreference(APP_SCREENOFF_THERM);
+            if( mAppScreenOffThermProfile != null ) {
+                if(!thermProf) {
+                    mAppScreenOffThermProfile.setVisible(false);
+                } else if( isKernelIncompatible ) {
+                    mAppScreenOffThermProfile.setEnabled(false);
+                } else {
+                    int profile = Settings.Global.getInt(resolver,Settings.Global.BAIKALOS_DEFAULT_SCREENOFF_THERMAL, -1);
+                    if( profile == -1 ) profile = 1;
+                    Log.e(TAG, "mAppScreenOffThermProfile: getProfile=" + profile);
+                    try { mAppScreenOffThermProfile.setValue(Integer.toString(profile)); } catch (Exception rre) { }
+                    mAppScreenOffThermProfile.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                        public boolean onPreferenceChange(Preference preference, Object newValue) {
+                            try {
+                                Settings.Global.putInt(resolver,Settings.Global.BAIKALOS_DEFAULT_SCREENOFF_THERMAL, Integer.parseInt(newValue.toString()));
+                                Log.e(TAG, "mAppScreenOffThermProfile: setProfile=" + newValue.toString());
+                            } catch(Exception re) {
+                                Log.e(TAG, "onCreate: mAppScreenOffThermProfile Fatal! exception", re );
+                            }
+                            return true;
+                        }
+                    });
+                }
+            }
+
+
             mAppIdlePerfProfile = (ListPreference) findPreference(APP_IDLE_PERF);
             if( mAppIdlePerfProfile != null ) { 
                 if(!perfProf) {
@@ -225,7 +281,7 @@ public class PowerSave extends SettingsPreferenceFragment {
                     mAppIdlePerfProfile.setEnabled(false);
                 } else {
                     int profile = Settings.Global.getInt(resolver,Settings.Global.BAIKALOS_DEFAULT_IDLE_PERFORMANCE, -1);
-                    if( profile == -1 ) profile = 7;
+                    if( profile == -1 ) profile = 8;
                     Log.e(TAG, "mAppIdlePerfProfile: getProfile=" + profile);
                     try { mAppIdlePerfProfile.setValue(Integer.toString(profile)); } catch (Exception rre) { }
                     mAppIdlePerfProfile.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {

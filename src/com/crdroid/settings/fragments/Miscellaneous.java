@@ -17,6 +17,10 @@ package com.crdroid.settings.fragments;
 
 import android.content.ContentResolver;
 import android.content.Context;
+import android.content.Intent;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.os.SystemProperties;
@@ -39,6 +43,7 @@ import com.android.settingslib.search.SearchIndexable;
 import com.crdroid.settings.fragments.misc.SensorBlock;
 import com.crdroid.settings.fragments.misc.SmartCharging;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import lineageos.providers.LineageSettings;
@@ -61,6 +66,7 @@ public class Miscellaneous extends SettingsPreferenceFragment implements
     private Preference mPocketJudge;
 
     private ListPreference mCaptivePortal;
+    private ListPreference mCallScreeningService;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -131,6 +137,53 @@ public class Miscellaneous extends SettingsPreferenceFragment implements
                         Log.e(TAG, "mCaptivePortal: portal=" + portal);
                     } catch(Exception re) {
                         Log.e(TAG, "mCaptivePortal: mCaptivePortal Fatal! exception", re );
+                    }
+                    return true;
+                }
+            });
+        }
+
+
+        mCallScreeningService = (ListPreference) findPreference("callscreening_service");
+        if( mCallScreeningService != null ) {
+
+            PackageManager pm = getPackageManager();
+            Intent intent = new Intent("android.telecom.CallScreeningService");
+            List<ResolveInfo> services = pm.queryIntentServices(intent, PackageManager.MATCH_ALL);
+
+            List<String> entries = new ArrayList<>();
+            List<String> values = new ArrayList<>();
+
+            entries.add(res.getString(R.string.default_app_none));
+            values.add("");
+
+            for (ResolveInfo info : services) {
+                String pkgName = info.serviceInfo.packageName;
+                CharSequence label = pkgName;
+                try {
+                    ApplicationInfo appInfo = pm.getApplicationInfo(pkgName, 0);
+                    if( appInfo != null ) label = pm.getApplicationLabel(appInfo);
+                } catch(Exception aie) {
+                }
+
+                Log.d(TAG, "mCallScreeningService: Supports call screening: " + pkgName + " -> " + label);
+
+                entries.add(label.toString());
+                values.add(pkgName);
+            }
+
+            mCallScreeningService.setEntries(entries.toArray(new String[entries.size()]));
+            mCallScreeningService.setEntryValues(values.toArray(new String[values.size()]));
+            
+            String callScreeningPackageName = SystemProperties.get("persist.baikal.call_screening", "");
+            mCallScreeningService.setValue(callScreeningPackageName);
+            mCallScreeningService.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    try {
+                        Log.e(TAG, "mCallScreeningService: set mCallScreeningPackageName=" + newValue.toString());
+                        SystemProperties.set("persist.baikal.call_screening", newValue.toString());
+                    } catch(Exception re) {
+                        Log.e(TAG, "onCreate: mCallScreeningService Fatal! exception", re );
                     }
                     return true;
                 }

@@ -9,6 +9,8 @@
     <string name="app_profile_brightness_title">Screen Brightness</string>
     <string name="app_profile_rotation_title">Screen Rotation</string>
     <string name="app_profile_darkmode_title">Forced Dark Mode</string>
+    <string name="app_screenoff_performance_title">Screen Off Performance profile</string>
+    <string name="app_screenoff_thermal_title">Screen Off Thermal profile</string>
     <string name="app_idle_performance_title">Idle Performance profile</string>
     <string name="app_idle_thermal_title">Idle Thermal profile</string>
 
@@ -358,5 +360,16 @@
     <string name="tri_state_default">Default</string>
     <string name="tri_state_enabled">Enabled</string>
     <string name="tri_state_disabled">Disabled</string>
+
+    <string name="app_profile_spoof_sim_country">SIM Country</string>
+    <string name="app_profile_spoof_sim_mnc">SIM MNC</string>
+    <string name="app_profile_spoof_sim_opname">SIM Operator Name</string>
+    <string name="app_profile_spoof_sim_ln">SIM Line Number</string>
+
+    <string name="spoof_default_dialer_title">Default Dialer</string>
+    <string name="spoof_default_dialer_summary">Spoof as a Default Dialer</string>
+
+    <string name="spoof_default_sms_title">Default SMS</string>
+    <string name="spoof_default_sms_summary">Spoof as a Default SMS app</string>
 
 </resources>

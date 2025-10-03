@@ -21,32 +21,67 @@
     >
 
     <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
-        android:key="baikalos_disable_gms_spoof"
+        android:key="baikalos_enable_gms_spoof"
         android:icon="@drawable/ic_backup"
-        android:title="@string/baikalos_disable_gms_spoof_title"
-        android:summary="@string/baikalos_disable_gms_spoof_summary" 
+        android:title="@string/baikalos_enable_gms_spoof_title"
+        android:summary="@string/baikalos_enable_gms_spoof_summary" 
         android:defaultValue="false" />
 
     <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
-        android:key="baikalos_disable_certificate_spoof"
+        android:key="baikalos_enable_vending_spoof"
         android:icon="@drawable/ic_backup"
-        android:title="@string/baikalos_disable_certificate_spoof_title"
-        android:summary="@string/baikalos_disable_certificate_spoof_summary" 
+        android:title="@string/baikalos_enable_vending_spoof_title"
+        android:summary="@string/baikalos_enable_vending_spoof_summary" 
+        android:defaultValue="false" />
+
+    <!-- com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+        android:key="baikalos_enable_services_spoof"
+        android:icon="@drawable/ic_backup"
+        android:title="@string/baikalos_enable_services_spoof_title"
+        android:summary="@string/baikalos_enable_services_spoof_summary" 
+        android:defaultValue="false" / -->
+
+    <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+        android:key="baikalos_enable_certificate_spoof"
+        android:icon="@drawable/ic_backup"
+        android:title="@string/baikalos_enable_certificate_spoof_title"
+        android:summary="@string/baikalos_enable_certificate_spoof_summary" 
         android:defaultValue="false" />
 
     <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
-        android:key="baikalos_disable_signature_spoof"
+        android:key="baikalos_enable_certificate_spoof_vending"
         android:icon="@drawable/ic_backup"
-        android:title="@string/baikalos_disable_signature_spoof_title"
-        android:summary="@string/baikalos_disable_signature_spoof_summary" 
+        android:title="@string/baikalos_enable_certificate_spoof_vending_title"
+        android:summary="@string/baikalos_enable_certificate_spoof_vending_summary" 
         android:defaultValue="false" />
 
     <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+        android:key="baikalos_enable_certificate_spoof_apps"
+        android:icon="@drawable/ic_backup"
+        android:title="@string/baikalos_enable_certificate_spoof_apps_title"
+        android:summary="@string/baikalos_enable_certificate_spoof_apps_summary" 
+        android:defaultValue="false" />
+
+    <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+        android:key="baikalos_enable_certificate_spoof_services"
+        android:icon="@drawable/ic_backup"
+        android:title="@string/baikalos_enable_certificate_spoof_services_title"
+        android:summary="@string/baikalos_enable_certificate_spoof_services_summary" 
+        android:defaultValue="false" />
+
+    <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+        android:key="baikalos_enable_signature_spoof"
+        android:icon="@drawable/ic_backup"
+        android:title="@string/baikalos_enable_signature_spoof_title"
+        android:summary="@string/baikalos_enable_signature_spoof_summary" 
+        android:defaultValue="false" />
+
+    <!-- com.crdroid.settings.preferences.GlobalSettingSwitchPreference
         android:key="baikalos_disable_gms_swa_spoof"
         android:icon="@drawable/ic_backup"
         android:title="@string/baikalos_disable_gms_swa_spoof_title"
         android:summary="@string/baikalos_disable_gms_swa_spoof_summary" 
-        android:defaultValue="false" />
+        android:defaultValue="false" / -->
 
 
     <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
@@ -121,6 +156,11 @@
         <com.crdroid.settings.preferences.SystemPropertiesEditTextPreference
             android:key="persist.spf.firs_api_level"
             android:title="@string/baikalos_spoof_first_api_level_title"
+            />
+
+        <com.crdroid.settings.preferences.SystemPropertiesEditTextPreference
+            android:key="persist.spf.sdk_int"
+            android:title="@string/baikalos_spoof_sdk_int_title"
             />
 
         <Preference

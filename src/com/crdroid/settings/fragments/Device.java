@@ -56,6 +56,7 @@ import java.io.BufferedReader;
 import java.io.DataInputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
+import java.net.URI;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -92,16 +93,31 @@ public class Device extends SettingsPreferenceFragment {
         boolean isCertificateSpooferAvailable = mContext.getResources().
                 getBoolean(com.android.internal.R.bool.config_certificateSpfrAvailable);
 
-        if (!isCertificateSpooferAvailable) {
-            ((Preference) findPreference("baikalos_disable_certificate_spoof")).setVisible(false);
+        String bootid = SystemProperties.get("ro.boot.vbmeta.digest");
+        if( bootid == null || "".equals(bootid) ) isCertificateSpooferAvailable = false;
+
+        if (!isCertificateSpooferAvailable ) {
+            Preference pref = (Preference) findPreference("baikalos_enable_certificate_spoof");
+            if( pref != null ) {
+                pref.setVisible(false);
+            }
+            pref = (Preference) findPreference("baikalos_enable_certificate_spoof_vending");
+            if( pref != null ) {
+                pref.setVisible(false);
+            }
+            pref = (Preference) findPreference("baikalos_enable_certificate_spoof_apps");
+            if( pref != null ) {
+                pref.setVisible(false);
+            }
         }
 
         boolean isSignatureSpooferAvailable = mContext.getResources().
                 getBoolean(com.android.internal.R.bool.config_signatureSpfrAvailable);
 
-        if (!isSignatureSpooferAvailable) {
-            ((Preference) findPreference("baikalos_disable_signature_spoof")).setVisible(false);
-        }
+        //if (!isSignatureSpooferAvailable) {
+        //    Preference pref = (Preference) findPreference("baikalos_disable_signature_spoof");
+        //    if( pref != null ) pref.setVisible(false);
+        //}
 
         mReset = (Preference) findPreference("spoof_setings_reset");
         mUpdate = (Preference) findPreference("spoof_setings_update");
@@ -182,6 +198,7 @@ public class Device extends SettingsPreferenceFragment {
         SystemProperties.set("persist.spf.incremental", "");
         SystemProperties.set("persist.spf.security_patch", "");
         SystemProperties.set("persist.spf.firs_api_level", "");
+        SystemProperties.set("persist.spf.sdk_int", "");
         fill();
     }
 
@@ -196,7 +213,8 @@ public class Device extends SettingsPreferenceFragment {
             fill("persist.spf.release", BaikalSpoofer.RELEASE);
             fill("persist.spf.incremental", BaikalSpoofer.INCREMENTAL);
             fill("persist.spf.security_patch", BaikalSpoofer.SECURITY_PATCH);
-            fill("persist.spf.firs_api_level", String.valueOf(BaikalSpoofer.FIRST_API_LEVEL));
+            fill("persist.spf.firs_api_level", BaikalSpoofer.FIRST_API_LEVEL);
+            fill("persist.spf.sdk_int", BaikalSpoofer.SDK_INT);
     }
 
     private void fill(String key, String def) {
@@ -217,6 +235,8 @@ public class Device extends SettingsPreferenceFragment {
         SystemProperties.set("persist.spf.incremental", item.INCREMENTAL);
         SystemProperties.set("persist.spf.security_patch", item.SECURITY_PATCH);
         SystemProperties.set("persist.spf.firs_api_level", item.DEVICE_INITIAL_SDK_INT);
+        SystemProperties.set("persist.spf.sdk_int", item.SDK_INT);
+        Settings.Global.putString(mContext.getContentResolver(), "baikal_kb_data_override", item.ATT_CERT);
 
             fill("persist.spf.manufacturer", item.MANUFACTURER);
             fill("persist.spf.model", item.MODEL);
@@ -229,16 +249,20 @@ public class Device extends SettingsPreferenceFragment {
             fill("persist.spf.incremental", item.INCREMENTAL);
             fill("persist.spf.security_patch", item.SECURITY_PATCH);
             fill("persist.spf.firs_api_level", item.DEVICE_INITIAL_SDK_INT);
+            fill("persist.spf.sdk_int", item.SDK_INT);
+
     }
 
     public PiItem updateFromGoogle() {
         PiItem item = null;
         try {
-            URL url = new URL("https://raw.githubusercontent.com/crdroidandroid/android_vendor_certification/refs/heads/15.0/gms_certified_props.json");
+
+            URL url = new URI(BaikalSpoofer.getDevString(BaikalSpoofer.DEV_CONST.SPOOFER_JSON_URL)).toURL();
+            //URL url = new URL("https://raw.githubusercontent.com/baikalos/android_vendor_certification/refs/heads/13.0/gms_certified_props.json");
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("GET");
-            conn.setConnectTimeout(3000);
-            conn.setReadTimeout(3000);
+            conn.setConnectTimeout(10000);
+            conn.setReadTimeout(10000);
 
             BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
             StringBuilder content = new StringBuilder();
@@ -269,8 +293,11 @@ public class Device extends SettingsPreferenceFragment {
         public String RELEASE;
         public String SECURITY_PATCH;
         public String DEVICE_INITIAL_SDK_INT;
+        public String SDK_INT;
+        public String ATT_CERT;
 
         public PiItem() {
+            SDK_INT = "33";
         }
 
         public PiItem(String json) {
@@ -309,16 +336,26 @@ public class Device extends SettingsPreferenceFragment {
                             ID = value;
                             break;
                         case "VERSION.INCREMENTAL":
+                        case "INCREMENTAL":
                             INCREMENTAL = value;
                             break;
                         case "VERSION.RELEASE":
+                        case "RELEASE":
                             RELEASE = value;
                             break;
                         case "VERSION.SECURITY_PATCH":
+                        case "SECURITY_PATCH":
                             SECURITY_PATCH = value;
                             break;
                         case "VERSION.DEVICE_INITIAL_SDK_INT":
+                        case "DEVICE_INITIAL_SDK_INT":
                             DEVICE_INITIAL_SDK_INT = value;
+                            break;
+                        case "SDK_INT":
+                            SDK_INT = value;
+                            break;
+                        case "ATT_CERT":
+                            ATT_CERT = value;
                             break;
                     }
                 }

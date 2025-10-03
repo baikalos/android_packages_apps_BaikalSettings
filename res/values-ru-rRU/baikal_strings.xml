@@ -211,11 +211,38 @@
     <string name="baikalos_disable_gms_spoof_title">Запретить спуфинг GMS</string>
     <string name="baikalos_disable_gms_spoof_summary">Запретить встроенную подмену идентификатора устройства для Сервисов Гугл</string>
 
-    <string name="baikalos_disable_certificate_spoof_title">Запретить спуфинг сертификатов</string>
+    <string name="baikalos_enable_gms_spoof_title">Спуфинг GMS</string>
+    <string name="baikalos_enable_gms_spoof_summary">Разрешить встроенную подмену идентификатора устройства для Сервисов Гугл</string>
+
+    <string name="baikalos_enable_vending_spoof_title">Спуфинг Google Play</string>
+    <string name="baikalos_enable_vending_spoof_summary">Разрешить встроенную подмену идентификатора устройства для Google Play</string>
+
+    <string name="baikalos_enable_services_spoof_title">Спуфинг Google Services</string>
+    <string name="baikalos_enable_services_spoof_summary">Разрешить встроенную подмену идентификатора устройства для Google Services</string>
+
+    <string name="baikalos_disable_certificate_spoof_title">Запретить спуфинг сертификатов GMS</string>
     <string name="baikalos_disable_certificate_spoof_summary">Запретить встроенную подмену сертификатов устройства для Сервисов Гугл</string>
 
-    <string name="baikalos_disable_signature_spoof_title">Запретить спуфинг подписи</string>
-    <string name="baikalos_disable_signature_spoof_summary">Запретить подмену подписи платформы для Сервисов Гугл</string>
+    <string name="baikalos_disable_certificate_spoof_vending_title">Запретить спуфинг сертификатов Google Play</string>
+    <string name="baikalos_disable_certificate_spoof_vending_summary">Запретить встроенную подмену сертификатов устройства для Google Play Integrity</string>
+
+    <string name="baikalos_disable_certificate_spoof_apps_title">Запретить спуфинг сертификатов Приложений</string>
+    <string name="baikalos_disable_certificate_spoof_apps_summary">Запретить встроенную подмену сертификатов устройства для приложений для скрытия статуса загрузчика</string>
+
+    <string name="baikalos_enable_certificate_spoof_title">Спуфинг сертификатов GMS</string>
+    <string name="baikalos_enable_certificate_spoof_summary">Разрешить встроенную подмену сертификатов устройства для сервисов гугл</string>
+
+    <string name="baikalos_enable_certificate_spoof_vending_title">Спуфинг сертификатов Google Play</string>
+    <string name="baikalos_enable_certificate_spoof_vending_summary">Разрешить встроенную подмену сертификатов устройства для Google Play Integrity</string>
+
+    <string name="baikalos_enable_certificate_spoof_apps_title">Спуфинг сертификатов для приложений</string>
+    <string name="baikalos_enable_certificate_spoof_apps_summary">Разрешить встроенную подмену сертификатов устройства для скрытия статуса загрузчика от приложений</string>
+
+    <string name="baikalos_enable_certificate_spoof_services_title">Спуфинг сертификатов через GMS</string>
+    <string name="baikalos_enable_certificate_spoof_services_summary">Разрешить встроенную подмену сертификатов для аттестации приложений через сервисы Google</string>
+
+    <string name="baikalos_enable_signature_spoof_title">Разрешить спуфинг подписи</string>
+    <string name="baikalos_enable_signature_spoof_summary">Разрешить подмену подписи платформы Android для Сервисов Гугл</string>
 
     <string name="baikalos_gms_override_spoof_title">Изменить параметры</string>
     <string name="baikalos_gms_override_spoof_summary">Изменить параметры используемые по умолчанию для подмены Google Services</string>
@@ -317,5 +344,7 @@
     <string name="trust_timeout_in_millis_title">Таймаут доверия</string>
     <string name="trustable_idle_timeout_in_millis_title">Таймаут доверенного состояния в режиме ожидания</string>
     <string name="trustable_timeout_in_millis_title">Таймаут доверенного состояния</string>
+
+    <string name="default_app_none">"Нет"</string>
 
 </resources>

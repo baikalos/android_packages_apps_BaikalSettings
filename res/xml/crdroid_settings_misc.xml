@@ -27,6 +27,19 @@
         android:summary="@string/block_if_busy_summary"
         android:defaultValue="false" />
 
+    <ListPreference
+ 	    android:key="callscreening_service"
+        android:icon="@drawable/ic_phone_ring"
+   	    android:title="@string/callscreening_service_title"
+        android:defaultValue=""
+        android:summary="%s"/>
+
+    <com.crdroid.settings.preferences.SystemPropertySwitchPreference
+        android:key="persist.baikal.call_screening_no_dd"
+        android:icon="@drawable/ic_phone_ring"
+        android:title="@string/call_screening_no_dd_title"
+        android:summary="@string/call_screening_no_dd_summary"
+        android:defaultValue="false"/>
 
     <!-- Gaming mode -->
     <Preference
@@ -177,6 +190,7 @@
         android:defaultValue="default"
         android:summary="%s"/>
 
+
     <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
         android:key="baikalos_r_secure"
         android:icon="@drawable/ic_storage"
@@ -191,12 +205,12 @@
         android:summary="@string/allow_downgrade_summary"
         android:defaultValue="false" />
 
-    <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+    <!-- com.crdroid.settings.preferences.GlobalSettingSwitchPreference
         android:key="baikalos_allow_sig_override"
         android:icon="@drawable/ic_storage"
         android:title="@string/allow_sig_override_title"
         android:summary="@string/allow_sig_override_summary"
-        android:defaultValue="false" />
+        android:defaultValue="false" / -->
 
     <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
         android:key="baikalos_disable_autorevoke"
