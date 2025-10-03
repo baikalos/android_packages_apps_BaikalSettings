@@ -267,11 +267,32 @@
     <string name="baikalos_disable_gms_spoof_title">Desactivar falsificación de GMS</string>
     <string name="baikalos_disable_gms_spoof_summary">Desactiva la falsificación del ID del dispositivo para los servicios de Google</string>
 
+    <string name="baikalos_enable_gms_spoof_title">Falsificar núcleo GMS</string>
+    <string name="baikalos_enable_gms_spoof_summary">Activa la falsificación de DeviceID para los servicios de Google</string>
+
+    <string name="baikalos_enable_vending_spoof_title">Activar falsificación de Google Play</string>
+    <string name="baikalos_enable_vending_spoof_summary">Activa la falsificación de DeviceID para Google Play</string>
+
+    <string name="baikalos_enable_services_spoof_title">Falsificar servicios de Google</string>
+    <string name="baikalos_enable_services_spoof_summary">Activa la falsificación de DeviceID para los servicios de Google.</string>
+
     <string name="baikalos_disable_certificate_spoof_title">Desactivar falsificación de certificados</string>
     <string name="baikalos_disable_certificate_spoof_summary">Desactiva la falsificación de certificados para los servicios de Google</string>
 
-    <string name="baikalos_disable_signature_spoof_title">Desactivar falsificación de firma</string>
-    <string name="baikalos_disable_signature_spoof_summary">Desactiva la falsificación de firma del paquete principal para los servicios de Google</string>
+    <string name="baikalos_enable_certificate_spoof_title">Falsificar certificados para GMS</string>
+    <string name="baikalos_enable_certificate_spoof_summary">Activa la falsificación de certificados para los servicios de Google</string>
+
+    <string name="baikalos_enable_certificate_spoof_vending_title">Falsificar certificados para Google Play</string>
+    <string name="baikalos_enable_certificate_spoof_vending_summary">Activa la falsificación de certificados para Google Play Integrity</string>
+
+    <string name="baikalos_enable_certificate_spoof_apps_title">Falsificar certificados para aplicaciones</string>
+    <string name="baikalos_enable_certificate_spoof_apps_summary">Activa la falsificación de certificados para el estado del gestor de arranque de las aplicaciones</string>
+
+    <string name="baikalos_enable_certificate_spoof_services_title">Falsificar certificados a través de GMS</string>
+    <string name="baikalos_enable_certificate_spoof_services_summary">Activa la falsificación de certificados para la certificación de aplicaciones a través de los servicios de Google</string>
+
+    <string name="baikalos_enable_signature_spoof_title">Activar falsificación de firma de plataforma</string>
+    <string name="baikalos_enable_signature_spoof_summary">Activa la falsificación de la firma de la plataforma Android para los servicios de Google</string>
 
     <string name="baikalos_disable_gms_swa_spoof_title">Desactivar atestación por software</string>
     <string name="baikalos_disable_gms_swa_spoof_summary">Desactiva la aplicación obligatoria de la atestación por software para los servicios de Google</string>
@@ -404,5 +425,11 @@
     <string name="run_it_now_summary"></string>
     <string name="run_it_now_title">Ejecutar</string>
     <string name="ret_cmd_title">Salida del comando</string>
+
+    <string name="default_app_none">Ninguna</string>
+
+    <string name="callscreening_service_title">Servicio secundario de identificación de llamadas</string>
+    <string name="call_screening_no_dd_title">Sin marcador de identificación predeterminado</string>
+    <string name="call_screening_no_dd_summary">No utiliza la aplicación de marcación predeterminada como servicio de identificación de llamadas</string>
 
 </resources>
