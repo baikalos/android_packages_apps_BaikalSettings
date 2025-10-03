@@ -9,6 +9,8 @@
     <string name="app_profile_brightness_title">Brillo de pantalla</string>
     <string name="app_profile_rotation_title">Rotación de pantalla</string>
     <string name="app_profile_darkmode_title">Modo oscuro forzado</string>
+    <string name="app_screenoff_performance_title">Perfil de rendimiento con pantalla apagada</string>
+    <string name="app_screenoff_thermal_title">Perfil térmico con pantalla apagada</string>
     <string name="app_idle_performance_title">Perfil de rendimiento en reposo</string>
     <string name="app_idle_thermal_title">Perfil térmico en reposo</string>
 
@@ -355,5 +357,16 @@
     <string name="tri_state_default">Por defecto</string>
     <string name="tri_state_enabled">Activado</string>
     <string name="tri_state_disabled">Desactivado</string>
+
+    <string name="app_profile_spoof_sim_country">País de la SIM</string>
+    <string name="app_profile_spoof_sim_mnc">MNC de la SIM</string>
+    <string name="app_profile_spoof_sim_opname">Nombre del operador de la SIM</string>
+    <string name="app_profile_spoof_sim_ln">Número de línea de la SIM</string>
+
+    <string name="spoof_default_dialer_title">Marcador predeterminado</string>
+    <string name="spoof_default_dialer_summary">Falsifica como marcador predeterminado</string>
+
+    <string name="spoof_default_sms_title">SMS predeterminado</string>
+    <string name="spoof_default_sms_summary">Falsifica como aplicación SMS predeterminada</string>
 
 </resources>
