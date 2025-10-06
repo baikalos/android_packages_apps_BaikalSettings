@@ -197,7 +197,7 @@ public class Device extends SettingsPreferenceFragment {
         SystemProperties.set("persist.spf.release", "");
         SystemProperties.set("persist.spf.incremental", "");
         SystemProperties.set("persist.spf.security_patch", "");
-        SystemProperties.set("persist.spf.firs_api_level", "");
+        SystemProperties.set("persist.spf.first_api_level", "");
         SystemProperties.set("persist.spf.sdk_int", "");
         fill();
     }
@@ -213,7 +213,7 @@ public class Device extends SettingsPreferenceFragment {
             fill("persist.spf.release", BaikalSpoofer.RELEASE);
             fill("persist.spf.incremental", BaikalSpoofer.INCREMENTAL);
             fill("persist.spf.security_patch", BaikalSpoofer.SECURITY_PATCH);
-            fill("persist.spf.firs_api_level", BaikalSpoofer.FIRST_API_LEVEL);
+            fill("persist.spf.first_api_level", BaikalSpoofer.FIRST_API_LEVEL);
             fill("persist.spf.sdk_int", BaikalSpoofer.SDK_INT);
     }
 
@@ -234,7 +234,7 @@ public class Device extends SettingsPreferenceFragment {
         SystemProperties.set("persist.spf.release", item.RELEASE);
         SystemProperties.set("persist.spf.incremental", item.INCREMENTAL);
         SystemProperties.set("persist.spf.security_patch", item.SECURITY_PATCH);
-        SystemProperties.set("persist.spf.firs_api_level", item.DEVICE_INITIAL_SDK_INT);
+        SystemProperties.set("persist.spf.first_api_level", item.DEVICE_INITIAL_SDK_INT);
         SystemProperties.set("persist.spf.sdk_int", item.SDK_INT);
         Settings.Global.putString(mContext.getContentResolver(), "baikal_kb_data_override", item.ATT_CERT);
 
@@ -248,7 +248,7 @@ public class Device extends SettingsPreferenceFragment {
             fill("persist.spf.release", item.RELEASE);
             fill("persist.spf.incremental", item.INCREMENTAL);
             fill("persist.spf.security_patch", item.SECURITY_PATCH);
-            fill("persist.spf.firs_api_level", item.DEVICE_INITIAL_SDK_INT);
+            fill("persist.spf.first_api_level", item.DEVICE_INITIAL_SDK_INT);
             fill("persist.spf.sdk_int", item.SDK_INT);
 
     }
