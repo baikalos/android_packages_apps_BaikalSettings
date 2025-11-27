@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * Copyright (C) 2023 BaikalOS
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+-->
+<PreferenceScreen 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res-auto"
+    android:title="@string/settings_app_title"
+    android:key="baikalos_top_level_apps">
+
+
+    <PreferenceCategory
+        android:layout="@layout/settingslib_expressive_untitled_preference_category">
+
+        <PreferenceScreen
+            android:title="@string/app_all_title"
+            android:summary="@string/app_all_category"
+            android:fragment="ru.baikalos.settings.fragments.app.AllAppListFragment" />
+
+        <PreferenceScreen
+            android:title="@string/app_user_profile_title"
+            android:summary="@string/app_user_profile_category"
+            android:fragment="ru.baikalos.settings.fragments.app.UserProfileAppListFragment" />
+
+        <PreferenceScreen
+            android:title="@string/app_disabled_title"
+            android:summary="@string/app_disabled_category"
+            android:fragment="ru.baikalos.settings.fragments.app.DisabledAppFragment" />
+
+        <PreferenceScreen
+            android:title="@string/app_background_title"
+            android:summary="@string/app_background_category"
+            android:fragment="ru.baikalos.settings.fragments.app.BackgroundAppListFragment" />
+
+        <PreferenceScreen
+            android:title="@string/app_autoboot_title"
+            android:summary="@string/app_autoboot_category"
+            android:fragment="ru.baikalos.settings.fragments.app.AutoBootAppFragment" />
+
+        <PreferenceScreen
+            android:title="@string/app_background_unlimited_title"
+            android:summary="@string/app_background_unlimited_category"
+            android:fragment="ru.baikalos.settings.fragments.app.BackgroundUnlimitedAppListFragment" />
+
+        <PreferenceScreen
+            android:title="@string/app_background_restricted_title"
+            android:summary="@string/app_background_restricted_category"
+            android:fragment="ru.baikalos.settings.fragments.app.BackgroundRestrictedAppListFragment" />
+
+        <PreferenceScreen
+            android:title="@string/app_debug_title"
+            android:summary="@string/app_debug_category"
+            android:fragment="ru.baikalos.settings.fragments.app.DebugAppFragment" />
+
+        <PreferenceScreen
+            android:title="@string/app_ignore_sign_title"
+            android:summary="@string/app_ignore_sign_category"
+            android:fragment="ru.baikalos.settings.fragments.app.IgnoreSignAppFragment" />
+
+        <PreferenceScreen
+            android:title="@string/app_forced_screen_shot_title"
+            android:summary="@string/app_forced_screen_shot_category"
+            android:fragment="ru.baikalos.settings.fragments.app.ForcedScreenShotAppFragment" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
