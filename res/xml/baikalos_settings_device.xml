@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+     Copyright (C) 2016-2023 crDroid Android Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+    android:title="@string/device_title"
+    >
+
+    <Preference
+        android:key="play_integrity_fix"
+        android:icon="@drawable/ic_fingerprint"
+        android:title="@string/play_integrity_fix_title"
+        android:summary="@string/play_integrity_fix_summary"
+        android:fragment="com.crdroid.settings.fragments.misc.PlayIntegrityFix" />
+
+    <!-- TrickyStore -->
+    <Preference
+        android:key="tricky_store"
+        android:icon="@drawable/ic_vpn_key"
+        android:title="@string/tricky_store_title"
+        android:summary="@string/tricky_store_summary"
+        android:fragment="com.crdroid.settings.fragments.misc.TrickyStore" />
+
+    <!-- com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+        android:key="baikalos_enable_gms_spoof"
+        android:icon="@drawable/ic_backup"
+        android:title="@string/baikalos_enable_gms_spoof_title"
+        android:summary="@string/baikalos_enable_gms_spoof_summary" 
+        android:defaultValue="false" / -->
+
+    <!-- com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+        android:key="baikalos_enable_vending_spoof"
+        android:icon="@drawable/ic_backup"
+        android:title="@string/baikalos_enable_vending_spoof_title"
+        android:summary="@string/baikalos_enable_vending_spoof_summary" 
+        android:defaultValue="false" / -->
+
+    <!-- com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+        android:key="baikalos_enable_services_spoof"
+        android:icon="@drawable/ic_backup"
+        android:title="@string/baikalos_enable_services_spoof_title"
+        android:summary="@string/baikalos_enable_services_spoof_summary" 
+        android:defaultValue="false" / -->
+
+    <!-- com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+        android:key="baikalos_enable_certificate_spoof"
+        android:icon="@drawable/ic_backup"
+        android:title="@string/baikalos_enable_certificate_spoof_title"
+        android:summary="@string/baikalos_enable_certificate_spoof_summary" 
+        android:defaultValue="false" />
+
+    <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+        android:key="baikalos_enable_certificate_spoof_vending"
+        android:icon="@drawable/ic_backup"
+        android:title="@string/baikalos_enable_certificate_spoof_vending_title"
+        android:summary="@string/baikalos_enable_certificate_spoof_vending_summary" 
+        android:defaultValue="false" />
+
+    <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+        android:key="baikalos_enable_certificate_spoof_apps"
+        android:icon="@drawable/ic_backup"
+        android:title="@string/baikalos_enable_certificate_spoof_apps_title"
+        android:summary="@string/baikalos_enable_certificate_spoof_apps_summary" 
+        android:defaultValue="false" />
+
+    <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+        android:key="baikalos_enable_certificate_spoof_services"
+        android:icon="@drawable/ic_backup"
+        android:title="@string/baikalos_enable_certificate_spoof_services_title"
+        android:summary="@string/baikalos_enable_certificate_spoof_services_summary" 
+        android:defaultValue="false" / -->
+
+    <!-- com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+        android:key="baikalos_enable_signature_spoof"
+        android:icon="@drawable/ic_backup"
+        android:title="@string/baikalos_enable_signature_spoof_title"
+        android:summary="@string/baikalos_enable_signature_spoof_summary" 
+        android:defaultValue="false" / -->
+
+    <!-- com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+        android:key="baikalos_disable_gms_swa_spoof"
+        android:icon="@drawable/ic_backup"
+        android:title="@string/baikalos_disable_gms_swa_spoof_title"
+        android:summary="@string/baikalos_disable_gms_swa_spoof_summary" 
+        android:defaultValue="false" / -->
+
+
+    <!-- com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+        android:key="baikalos_gms_spoofer_update"
+        android:icon="@drawable/ic_backup"
+        android:title="@string/baikalos_gms_spoofer_update_title"
+        android:summary="@string/baikalos_gms_spoofer_update_summary" 
+        android:defaultValue="false" />
+
+    <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+        android:key="baikalos_gms_override_spoof"
+        android:icon="@drawable/ic_backup"
+        android:title="@string/baikalos_gms_override_spoof_title"
+        android:summary="@string/baikalos_gms_override_spoof_summary" 
+        android:defaultValue="false" />
+
+    <PreferenceCategory
+        android:key="baikalos_gms_props"
+        android:title="@string/baikalos_gms_props_title"
+        android:dependency="baikalos_gms_override_spoof" >
+
+        <ru.baikalos.settings.preferences.SystemPropertiesEditTextPreference
+            android:key="persist.spf.manufacturer"
+            android:title="@string/baikalos_spoof_manufacturer_title"
+            />
+
+        <ru.baikalos.settings.preferences.SystemPropertiesEditTextPreference
+            android:key="persist.spf.brand"
+            android:title="@string/baikalos_spoof_brand_title"
+            />
+
+        <ru.baikalos.settings.preferences.SystemPropertiesEditTextPreference
+            android:key="persist.spf.product"
+            android:title="@string/baikalos_spoof_product_title"
+            />
+
+        <ru.baikalos.settings.preferences.SystemPropertiesEditTextPreference
+            android:key="persist.spf.model"
+            android:title="@string/baikalos_spoof_model_title"
+            />
+
+        <ru.baikalos.settings.preferences.SystemPropertiesEditTextPreference
+            android:key="persist.spf.device"
+            android:title="@string/baikalos_spoof_device_title"
+            />
+
+        <ru.baikalos.settings.preferences.SystemPropertiesEditTextPreference
+            android:key="persist.spf.fingerprint"
+            android:title="@string/baikalos_spoof_fingerprint_title"
+            />
+
+        <ru.baikalos.settings.preferences.SystemPropertiesEditTextPreference
+            android:key="persist.spf.id"
+            android:title="@string/baikalos_spoof_id_title"
+            />
+
+        <ru.baikalos.settings.preferences.SystemPropertiesEditTextPreference
+            android:key="persist.spf.incremental"
+            android:title="@string/baikalos_spoof_incremental_title"
+            />
+
+        <ru.baikalos.settings.preferences.SystemPropertiesEditTextPreference
+            android:key="persist.spf.release"
+            android:title="@string/baikalos_spoof_release_title"
+            />
+
+        <ru.baikalos.settings.preferences.SystemPropertiesEditTextPreference
+            android:key="persist.spf.security_patch"
+            android:title="@string/baikalos_spoof_sp_title"
+            />
+
+        <ru.baikalos.settings.preferences.SystemPropertiesEditTextPreference
+            android:key="persist.spf.firs_api_level"
+            android:title="@string/baikalos_spoof_first_api_level_title"
+            />
+
+        <ru.baikalos.settings.preferences.SystemPropertiesEditTextPreference
+            android:key="persist.spf.sdk_int"
+            android:title="@string/baikalos_spoof_sdk_int_title"
+            />
+
+        <Preference
+            android:key="spoof_setings_update"
+            android:title="@string/spoof_setings_update_title"
+            android:summary="@string/spoof_setings_update_summary" />
+
+        <Preference
+            android:key="spoof_setings_reset"
+            android:title="@string/spoof_setings_reset_title"
+            android:summary="@string/spoof_setings_reset_summary" />
+
+    </PreferenceCategory>
+
+    <Preference
+        android:key="spoof_restart_gms"
+        android:title="@string/spoof_restart_gms_title"
+        android:summary="@string/spoof_restart_gms_summary" / -->
+
+</PreferenceScreen>
