@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+
+    <string name="baikalos_module_title">Modules</string>
+    <string name="baikalos_module_summary">BaikalOS optional modules</string>
+
+    <string name="baikalos_module_gms_title">Google Play Services</string>
+    <string name="baikalos_module_gms_summary">Google Play Services and Market</string>
+
+    <string name="baikalos_module_gms_aa_title">Google Android Auto</string>
+    <string name="baikalos_module_gms_aa_summary">Google Android Auto</string>
+
+    <string name="baikalos_module_gms_assistant_title">Google Android Auto</string>
+    <string name="baikalos_module_gms_assistant_summary">Google Android Auto</string>
+
+    <string name="baikalos_module_hms_title">Huawei Mobile Services</string>
+    <string name="baikalos_module_hms_summary">Huawei Mobile Services and AppGallery</string>
+
+    <string name="baikalos_module_fdroid_title">F-Droid Market</string>
+    <string name="baikalos_module_fdroid_summary">F-Droid app market</string>
+
+    <string name="baikalos_module_aurora_title">Aurora store</string>
+    <string name="baikalos_module_aurora_summary">Aurora app store</string>
+
+</resources>

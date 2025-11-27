@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * Copyright (C) 2023 BaikalOS
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+-->
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+    xmlns:lineage="http://schemas.android.com/apk/res-auto"
+    android:title="@string/app_profile_title">
+
+    <SwitchPreferenceCompat
+        android:key="app_profile_disable"
+        android:title="@string/app_profile_disable_title"
+        android:summary="@string/app_profile_disable_summary"
+        android:defaultValue="false" />
+
+
+    <PreferenceCategory
+        android:key="app_profile_main"
+        android:title="@string/app_profile_main_title"
+        >
+
+
+        <ListPreference
+            android:key="app_profile_performance"
+            android:title="@string/app_profile_performance_title"
+            android:entries="@array/performance_listentries"
+            android:entryValues="@array/performance_listvalues" 
+            android:defaultValue="default"
+            android:summary="%s"/>
+
+        <ListPreference
+            android:key="app_profile_thermal"
+            android:title="@string/app_profile_thermal_title"
+            android:entries="@array/thermal_listentries"
+            android:entryValues="@array/thermal_listvalues"
+            android:defaultValue="default"
+            android:summary="%s" />
+
+        <SwitchPreferenceCompat
+            android:key="app_profile_bypass_charging"
+            android:title="@string/app_profile_bypass_charging_title"
+            android:summary="@string/app_profile_bypass_charging_summary"
+            android:defaultValue="false" />
+
+        <ListPreference
+            android:key="app_profile_min_fps"
+            android:title="@string/app_profile_min_fps_title"
+            android:defaultValue="0"
+            android:summary="%s" />
+
+        <ListPreference
+            android:key="app_profile_max_fps"
+            android:title="@string/app_profile_max_fps_title"
+            android:defaultValue="0"
+            android:summary="%s" />
+
+        <SwitchPreferenceCompat
+            android:key="app_profile_pinned"
+            android:title="@string/app_profile_pinned_title"
+            android:summary="@string/app_profile_pinned_summary"
+            android:defaultValue="false" />
+
+        <SwitchPreferenceCompat
+            android:key="app_profile_donotclose"
+            android:title="@string/app_profile_donotclose_title"
+            android:summary="@string/app_profile_donotclose_summary"
+            android:defaultValue="false" />
+
+        <ListPreference
+            android:key="app_profile_background"
+            android:title="@string/app_profile_background_title"
+            android:entries="@array/background_restrictions_entries"
+            android:entryValues="@array/background_restrictions_values" 
+            android:defaultValue="default"
+            android:summary="%s"/>
+
+        <SwitchPreferenceCompat
+            android:key="app_profile_allowwhileidle"
+            android:title="@string/app_profile_allowwhileidle_title"
+            android:summary="@string/app_profile_allowwhileidle_summary"
+            android:defaultValue="false" />
+
+        <SwitchPreferenceCompat
+            android:key="app_profile_idle_network"
+            android:title="@string/app_profile_idle_network_title"
+            android:summary="@string/app_profile_idle_network_summary"
+            android:defaultValue="false" />
+
+        <!-- SwitchPreferenceCompat
+            android:key="app_profile_stamina"
+            android:title="@string/app_profile_stamina_title"
+            android:summary="@string/app_profile_stamina_summary"
+            android:defaultValue="false" / -->
+
+        <!-- SwitchPreferenceCompat
+            android:key="app_profile_freezer"
+            android:title="@string/app_profile_freezer_title"
+            android:summary="@string/app_profile_freezer_summary"
+            android:defaultValue="false" / -->
+
+        <!-- SwitchPreferenceCompat
+            android:key="app_profile_keep_on"
+            android:title="@string/app_profile_keep_on_title"
+            android:summary="@string/app_profile_keep_on_summary"
+            android:defaultValue="false" / -->
+
+        <ListPreference
+            android:key="app_profile_keep_on"
+            android:title="@string/app_profile_keep_on_title"
+            android:summary="%s"
+            android:entries="@array/keep_on_listentries"
+            android:entryValues="@array/keep_on_listvalues"
+            android:defaultValue="0"
+            android:persistent="false" />
+
+        <!-- ListPreference
+            android:key="app_profile_reader"
+            android:title="@string/app_profile_reader_title"
+            android:summary="%s"
+            android:entries="@array/super_saver_listentries"
+            android:entryValues="@array/super_saver_listvalues"
+            android:defaultValue="0"
+            android:persistent="false" / -->
+
+        <SwitchPreferenceCompat
+            android:key="app_profile_disable_boot"
+            android:title="@string/app_profile_disable_boot_title"
+            android:summary="@string/app_profile_disable_boot_summary"
+            android:defaultValue="false" />
+
+        <SwitchPreferenceCompat
+            android:key="app_profile_disable_wakeup"
+            android:title="@string/app_profile_disable_wakeup_title"
+            android:summary="@string/app_profile_disable_wakeup_summary"
+            android:defaultValue="false" />
+
+
+        <!-- ListPreference
+            android:key="app_profile_cpu_performance_limit"
+            android:title="@string/app_profile_performance_limit_title"
+            android:entries="@array/cpu_resources_listentries"
+            android:entryValues="@array/cpu_resources_listvalues" 
+            android:defaultValue="default"
+            android:summary="%s"/>
+
+        <ListPreference
+            android:key="app_profile_boost_control"
+            android:title="@string/app_profile_boost_control_title"
+            android:entries="@array/boost_control_listentries"
+            android:entryValues="@array/boost_control_listvalues" 
+            android:defaultValue="default"
+            android:summary="%s"/ -->
+
+        <SwitchPreferenceCompat
+            android:key="app_profile_heavy_memory"
+            android:title="@string/app_profile_heavy_memory_title"
+            android:summary="@string/app_profile_heavy_memory_summary"
+            android:defaultValue="false" />
+
+        <!-- SwitchPreferenceCompat
+            android:key="app_profile_heavy_cpu"
+            android:title="@string/app_profile_heavy_cpu_title"
+            android:summary="@string/app_profile_heavy_cpu_summary"
+            android:defaultValue="false" / -->
+
+        <ListPreference
+            android:key="app_profile_brightness"
+            android:title="@string/app_profile_brightness_title"
+            android:entries="@array/brightness_listentries"
+            android:entryValues="@array/brightness_listvalues"
+            android:defaultValue="default"
+            android:summary="%s" />
+
+        <ListPreference
+            android:key="app_profile_rotation"
+            android:title="@string/app_profile_rotation_title"
+            android:entries="@array/rotation_listentries"
+            android:entryValues="@array/rotation_listvalues"
+            android:defaultValue="default"
+            android:summary="%s" />
+
+        <ListPreference
+            android:key="app_profile_darkmode"
+            android:title="@string/app_profile_darkmode_title"
+            android:entries="@array/darkmode_listentries"
+            android:entryValues="@array/darkmode_listvalues"
+            android:defaultValue="default"
+            android:summary="%s" />
+
+        <!-- ListPreference
+            android:key="app_profile_scalefactor"
+            android:title="@string/app_profile_scalefactor_title"
+            android:entries="@array/app_scalefactor_listentries"
+            android:entryValues="@array/app_scalefactor_listvalues"
+            android:defaultValue="0"
+            android:summary="%s" / -->
+
+
+        <SwitchPreferenceCompat
+            android:key="app_profile_block_overlays"
+            android:title="@string/app_profile_block_overlays_title"
+            android:summary="@string/app_profile_block_overlays_summary"
+            android:defaultValue="false" />
+
+        <SwitchPreferenceCompat
+            android:key="app_profile_forced_screenshot"
+            android:title="@string/app_profile_forced_screenshot_title"
+            android:summary="@string/app_profile_forced_screenshot_summary"
+            android:defaultValue="false" />
+
+        <ListPreference
+            android:key="app_profile_force_sonification"
+            android:title="@string/app_sound_sonif_a2dp_title"
+            android:entries="@array/app_sonif_a2dp_listentries"
+            android:entryValues="@array/app_sonif_a2dp_listvalues"
+            android:defaultValue="0"
+            android:summary="%s" />
+
+        <SwitchPreferenceCompat
+            android:key="app_profile_block_focus_recv"
+            android:title="@string/app_profile_block_focus_recv_title"
+            android:summary="@string/app_profile_block_focus_recv_summary"
+            android:defaultValue="false" />
+
+        <SwitchPreferenceCompat
+            android:key="app_profile_block_focus_send"
+            android:title="@string/app_profile_block_focus_send_title"
+            android:summary="@string/app_profile_block_focus_send_summary"
+            android:defaultValue="false" />
+
+        <!-- SwitchPreferenceCompat
+            android:key="app_profile_force_sonification"
+            android:title="@string/app_profile_force_sonification_title"
+            android:summary="@string/app_profile_force_sonification_summary"
+            android:defaultValue="false" / -->
+
+
+
+        <!-- SwitchPreferenceCompat
+            android:key="app_profile_old_links"
+            android:title="@string/app_profile_old_links_title"
+            android:summary="@string/app_profile_old_links_summary"
+            android:defaultValue="false" / -->
+
+
+    <PreferenceCategory
+        android:key="app_profile_spoofing"
+        android:title="@string/app_profile_spoofing_title"
+        android:summary="@string/app_profile_spoofing_summary"
+        >
+
+        <!-- SwitchPreferenceCompat
+            android:key="app_profile_override_fonts"
+            android:title="@string/app_profile_override_fonts_title"
+            android:summary="@string/app_profile_override_fonts_summary"
+            android:defaultValue="false" / -->
+
+        <ListPreference
+            android:key="app_profile_spoof"
+            android:title="@string/app_profile_spoof_title"
+            android:entries="@array/spoof_listentries"
+            android:entryValues="@array/spoof_listvalues"
+            android:defaultValue="default"
+            android:summary="%s" />
+
+        <SwitchPreferenceCompat
+            android:key="app_profile_hide_idle"
+            android:title="@string/app_profile_hide_idle_title"
+            android:summary="@string/app_profile_hide_idle_summary"
+            android:defaultValue="false" />
+
+        <SwitchPreferenceCompat
+            android:key="app_profile_hide_location"
+            android:title="@string/app_profile_hide_location_title"
+            android:summary="@string/app_profile_hide_location_summary"
+            android:defaultValue="false" />
+
+        <SwitchPreferenceCompat
+            android:key="app_profile_hide_battery_opt"
+            android:title="@string/app_profile_hide_battery_opt_title"
+            android:summary="@string/app_profile_hide_battery_opt_summary"
+            android:defaultValue="false" />
+
+        <SwitchPreferenceCompat
+            android:key="app_profile_hide_phone_opt"
+            android:title="@string/app_profile_hide_phone_opt_title"
+            android:summary="@string/app_profile_hide_phone_opt_summary"
+            android:defaultValue="false" />
+
+        <SwitchPreferenceCompat
+            android:key="app_profile_hide_sms_opt"
+            android:title="@string/app_profile_hide_phone_sms_title"
+            android:summary="@string/app_profile_hide_phone_sms_summary"
+            android:defaultValue="false" />
+
+        <ListPreference
+            android:key="app_profile_hide_hms"
+            android:title="@string/app_profile_hide_hms_title"
+            android:entries="@array/tri_state_listentries"
+            android:entryValues="@array/tri_state_listvalues"
+            android:defaultValue="0"
+            android:summary="%s" />
+
+        <ListPreference
+            android:key="app_profile_hide_gms"
+            android:title="@string/app_profile_hide_gms_title"
+            android:entries="@array/tri_state_listentries"
+            android:entryValues="@array/tri_state_listvalues"
+            android:defaultValue="0"
+            android:summary="%s" />
+
+        <ListPreference
+            android:key="app_profile_hide_3p"
+            android:title="@string/app_profile_hide_3p_title"
+            android:entries="@array/tri_state_listentries"
+            android:entryValues="@array/tri_state_listvalues"
+            android:defaultValue="0"
+            android:summary="%s" />
+
+        <ListPreference
+            android:key="app_profile_installer"
+            android:title="@string/app_profile_installer_title"
+            android:entries="@array/app_installer_listentries"
+            android:entryValues="@array/app_installer_listvalues"
+            android:defaultValue="0"
+            android:summary="%s" />
+
+        <!-- SwitchPreferenceCompat
+            android:key="app_profile_phka"
+            android:title="@string/app_profile_phka_title"
+            android:summary="@string/app_profile_phka_summary"
+            android:persistent="false" / -->
+
+        <SwitchPreferenceCompat
+            android:key="app_profile_devmode"
+            android:title="@string/app_profile_devmode_title"
+            android:summary="@string/app_profile_devmode_summary"
+            android:persistent="false" />
+
+        <SwitchPreferenceCompat
+            android:key="app_profile_filterfs"
+            android:title="@string/app_profile_filterfs_title"
+            android:summary="@string/app_profile_filterfs_summary"
+            android:persistent="false" />
+
+        <SwitchPreferenceCompat
+            android:key="app_profile_filterfs_add"
+            android:title="@string/app_profile_filterfs_add_title"
+            android:summary="@string/app_profile_filterfs_add_summary"
+            android:persistent="false" />
+
+        <EditTextPreference
+            android:key="app_profile_spoof_sim_country"
+            android:title="@string/app_profile_spoof_sim_country"
+            android:dialogTitle="@string/app_profile_spoof_sim_country"
+            android:singleLine="true" />
+
+        <EditTextPreference
+            android:key="app_profile_spoof_sim_mnc"
+            android:title="@string/app_profile_spoof_sim_mnc"
+            android:dialogTitle="@string/app_profile_spoof_sim_mnc"
+            android:singleLine="true" />
+
+        <EditTextPreference
+            android:key="app_profile_spoof_sim_opname"
+            android:title="@string/app_profile_spoof_sim_opname"
+            android:dialogTitle="@string/app_profile_spoof_sim_opname"
+            android:singleLine="true" />
+
+        <EditTextPreference
+            android:key="app_profile_spoof_sim_ln"
+            android:title="@string/app_profile_spoof_sim_ln"
+            android:dialogTitle="@string/app_profile_spoof_sim_ln"
+            android:singleLine="true" />
+
+        <SwitchPreferenceCompat
+            android:key="app_profile_allow_sig_override"
+            android:title="@string/allow_sig_override_title"
+            android:summary="@string/allow_sig_override_summary"
+            android:persistent="false" />
+
+        <SwitchPreferenceCompat
+            android:key="app_profile_spoof_default_dialer"
+            android:title="@string/spoof_default_dialer_title"
+            android:summary="@string/spoof_default_dialer_summary"
+            android:persistent="false" />
+
+        <SwitchPreferenceCompat
+            android:key="app_profile_spoof_default_sms"
+            android:title="@string/spoof_default_sms_title"
+            android:summary="@string/spoof_default_sms_summary"
+            android:persistent="false" />
+
+    </PreferenceCategory>
+
+
+    <PreferenceCategory
+        android:key="app_profile_privacy"
+        android:title="@string/app_profile_privacy_title"
+        android:summary="@string/app_profile_privacy_summary"
+        >
+
+        <ListPreference
+            android:key="app_profile_camera"
+            android:title="@string/app_profile_camera_title"
+            android:entries="@array/camera_listentries"
+            android:entryValues="@array/camera_listvalues"
+            android:defaultValue="0"
+            android:summary="%s" />
+
+        <ListPreference
+            android:key="app_profile_location"
+            android:title="@string/app_profile_location_title"
+            android:entries="@array/location_listentries"
+            android:entryValues="@array/location_listvalues"
+            android:defaultValue="0"
+            android:summary="%s" />
+
+        <ListPreference
+            android:key="app_profile_block_notification"
+            android:title="@string/app_profile_block_notification_title"
+            android:entries="@array/tri_state_listentries"
+            android:entryValues="@array/tri_state_listvalues"
+            android:defaultValue="0"
+            android:summary="%s" />
+
+        <ListPreference
+            android:key="app_profile_block_sms"
+            android:title="@string/app_profile_block_sms_title"
+            android:entries="@array/tri_state_listentries"
+            android:entryValues="@array/tri_state_listvalues"
+            android:defaultValue="0"
+            android:summary="%s" />
+
+        <ListPreference
+            android:key="app_profile_block_contacts"
+            android:title="@string/app_profile_block_contacts_title"
+            android:entries="@array/tri_state_listentries"
+            android:entryValues="@array/tri_state_listvalues"
+            android:defaultValue="0"
+            android:summary="%s" />
+
+        <ListPreference
+            android:key="app_profile_block_calllog"
+            android:title="@string/app_profile_block_calllog_title"
+            android:entries="@array/tri_state_listentries"
+            android:entryValues="@array/tri_state_listvalues"
+            android:defaultValue="0"
+            android:summary="%s" />
+
+        <ListPreference
+            android:key="app_profile_block_calendar"
+            android:title="@string/app_profile_block_calendar_title"
+            android:entries="@array/tri_state_listentries"
+            android:entryValues="@array/tri_state_listvalues"
+            android:defaultValue="0"
+            android:summary="%s" />
+
+        <ListPreference
+            android:key="app_profile_block_media"
+            android:title="@string/app_profile_block_media_title"
+            android:entries="@array/tri_state_listentries"
+            android:entryValues="@array/tri_state_listvalues"
+            android:defaultValue="0"
+            android:summary="%s" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="app_profile_boot_options"
+        android:title="@string/app_profile_boot_options_title"
+        android:summary="@string/app_profile_boot_options_summary"
+        >
+
+        <ListPreference
+            android:key="app_profile_file_access"
+            android:title="@string/file_access_title"
+            android:entries="@array/file_access_listentries"
+            android:entryValues="@array/file_access_listvalues"
+            android:defaultValue="default"
+            android:summary="%s" />
+
+        <SwitchPreferenceCompat
+            android:key="app_profile_priv_phone_state"
+            android:title="@string/app_profile_priv_phone_state_title"
+            android:summary="@string/app_profile_priv_phone_state_summary"
+            android:defaultValue="false" />
+    
+    </PreferenceCategory>
+
+
+    <SwitchPreferenceCompat
+        android:key="app_profile_debug"
+        android:title="@string/app_profile_debug_title"
+        android:summary="@string/app_profile_debug_summary"
+        android:defaultValue="false" />
+
+    </PreferenceCategory>
+</PreferenceScreen>

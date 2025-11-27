@@ -1,0 +1,460 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+
+    <string name="baikalos_settings_title">BaikalOS Settings</string>
+    <string name="baikalos_settings_summary">Open goodness</string>
+
+    <string name="about_baikalos">About BaikalOS</string>
+
+    <string name="baikalos_source_title">GitHub</string>
+    <string name="baikalos_source_summary">We love open source, check us out</string>
+    <string name="baikalos_telegram_title">BaikalOS community</string>
+    <string name="baikalos_telegram_summary">We are on telegram. Join us!</string>
+
+    <string name="log_it_title">Save Logs</string>
+    <string name="log_it_summary">Logcat, kmesg, dmesg, dumpsys</string>
+
+    <string name="experimental_title">Experimental</string>
+    <string name="experimental_summary">Experimental system settings and flags</string>
+
+    <string name="experimental_crdroid">Experimental</string>
+    
+
+    <string name="logcat_title">Logcat</string>
+    <string name="logcat_radio_title">Radio log</string>
+    <string name="kmesg_title">Kmesg</string>
+    <string name="dmesg_title">Dmesg</string>
+    <string name="dumpsys_title">Dumpsys</string>
+    <string name="anr_title">ANR</string>
+    <string name="log_it_now_title">Save</string>
+    <string name="log_it_dialog_title">Save</string>
+    <string name="logcat_warning">Share it</string>
+    <string name="share_title">Share...</string>
+    <string name="log_it_share_subject">BaikalOS logs</string>
+    <string name="log_it_now_summary">Be patient for the logs to be created</string>
+    <string name="log_it_logs_in_progress">Logs are being created…</string>
+    <string name="log_it_share_type_title">Share method</string>
+    <string name="log_it_share_type_zip">ZIP-File</string>
+    <string name="log_it_share_type_haste">Upload to BaikalOS Haste</string>
+    <string name="log_it_share_via">Share via</string>
+
+    <string name="baikalos_debug_title">Verbose log</string>
+    <string name="baikalos_debug_summary">Enable verbose logging. Do not enable without a reason</string>
+
+    <string name="baikalos_force_warm_title">Force Warm Reboot</string>
+    <string name="baikalos_force_warm_summary">Force warm reboot on kernel panic to save kmsg logs</string>
+
+    <!-- Device parts -->
+    <string name="device_part_title">Device features</string>
+    <string name="device_part_category">Device</string>
+
+    <string name="user_interface_category">UI</string>
+    <string name="system_category">BaikalOS Settings</string>
+    <string name="other_category">Other</string>
+
+    <!-- Display cutout -->
+    <string name="status_bar_notch_category_title">Display Cutout</string>
+    <string name="display_hide_notch_title">Hide display cutout</string>
+    <string name="display_hide_notch_summary">Disable black fill-in for display cutout</string>
+
+    <!-- Personalization Categories -->
+    <string name="button_summary">Hardware keys, power menu</string>
+    <string name="lockscreen_summary">Lock Screen settings</string>
+    <string name="misc_summary">All that is not known where to place</string>
+    <string name="navigation_summary">Hit the road Jack</string>
+    <string name="notifications_summary">Annoyers</string>
+    <string name="quicksettings_summary">Let\'s try to make this ..it a bit more usable</string>
+    <string name="sound_summary">They Said To Play It Louder Than Hell</string>
+    <string name="statusbar_summary">Status bar, icons, etc...</string>
+    <string name="display_title">Display</string>
+    <string name="ui_summary">User Interface settings</string>
+    <string name="about_summary">BaikalOS bits</string>
+
+    <!-- Google services -->
+    <string name="gms_enabled_title">Google Mobile Services</string>
+    <string name="gms_enabled_summary">Control Google services and core apps</string>
+    <string name="gms_enabled_footer">Before disabling Google services and core apps, you should disable "Find My Device" and 2-step verification on your Google account. It is strongly recommended to keep this setting enabled else apps dependent on Google components will be affected. If you run into any issues after changing this setting, perform a factory reset.</string>
+    <string name="gms_disable_confirmation">Google Services Setup</string>
+
+    <!-- Huawei services -->
+    <string name="hms_enabled_title">Huawei Mobile Services</string>
+    <string name="hms_enabled_summary">Control Huawei Mobile services and AppGallery</string>
+
+    <!-- F-Droid services -->
+    <string name="fdroid_enabled_title">FDroid App Store</string>
+    <string name="fdroid_enabled_summary">Control FDroid App Store</string>
+
+    <!-- Aurora services -->
+    <string name="aurora_enabled_title">Aurora Store</string>
+    <string name="aurora_enabled_summary">Control Aurora Store</string>
+
+    <string name="dolby_enabled_title">Dolby</string>
+    <string name="dolby_enabled_summary">Dolby Audio Service. Reboot required for changes to take effect!</string>
+
+    <string name="jdsp_enabled_title">James DSP</string>
+    <string name="jdsp_enabled_summary">James DSP audio processor</string>
+
+    <string name="afx_enabled_title">AudioFX DSP</string>
+    <string name="afx_enabled_summary">AOSP AudioFX audio processor</string>
+
+    <string name="services_title">Optional Services</string>
+    <string name="services_summary">Google, Huawei, Fdroid, etc...</string>
+
+    <!-- Face Unlock services -->
+    <string name="fu_enabled_title">Face Unlock Service</string>
+    <string name="fu_enabled_summary">Control Face Unlock Service. Reboot required for changes to take effect!</string>
+
+    <!-- Nfc services -->
+    <string name="nfc_enabled_title">NFC Service</string>
+    <string name="nfc_enabled_summary">Control NFC Service</string>
+
+    <string name="audio_tweaks_a2dp_last_codec_title">Last used codec</string>
+    <string name="audio_tweaks_a2dp_last_bitrate_title">Last used bitrate</string>
+
+    <string name="captive_portal_title">Network Monitor Server</string>
+
+    <string name="captive_portal_default">Default (Google)</string>
+    <string name="captive_portal_apple">Apple</string>
+    <string name="captive_portal_yandex">Yandex</string>
+    <string name="captive_portal_xiaomi">Xiaomi</string>
+    <string name="captive_portal_huawei">Huawei</string>
+    <string name="captive_portal_ubuntu">Ubuntu</string>
+    <string name="captive_portal_cloudflare">Cloudflare</string>
+
+    <string name="block_if_busy_title">Reject if busy</string>
+    <string name="block_if_busy_summary">Reject incoming mobile calls if there is active voice call (Telegram, WhatsApp, Conference, etc ...)</string>
+
+    <string name="r_secure_title">Unrestricted Storage</string>
+    <string name="r_secure_summary">Disable restrictions introduced by Android 11 on access to some External Storage folders</string>
+
+    <string name="background_blur_radius_title">Background blur</string>
+    <string name="blur_behind_radius_title">Blur behind</string>
+
+    <string name="background_blur_type_title">Blur type</string>
+
+    <string name="restricted_networking_mode_title">Restricted networking</string>
+    <string name="restricted_networking_mode_summary">Enable LineageOS options to control per-app networks access</string>
+
+    <string name="baikalos_full_data_saver_title">Full Datasaver</string>
+    <string name="baikalos_full_data_saver_summary">Disable metered data acces for foreground apps in Data Saver mode</string>
+
+    <string name="disable_autorevoke_title">Disable Auto Revoke</string>
+    <string name="disable_autorevoke_summary">Disable permissions auto revoke globally. Reboot required!</string>
+
+    <string name="baikalos_interaction_boost_title">Interaction Boost</string>
+    <string name="baikalos_interaction_boost_summary">Enable interaction boost</string>
+
+    <string name="baikalos_rendering_boost_title">Rendering Boost</string>
+    <string name="baikalos_rendering_boost_summary">Enable rendering boost</string>
+
+    <string name="boost_override_silver_title">Silver cluster boost</string>
+    <string name="boost_override_gold_title">Gold cluster boost</string>
+    <string name="boost_override_platinum_title">Platinum cluster boost</string>
+
+    <string name="baikalos_display_boost_title">Display Boost</string>
+    <string name="baikalos_display_boost_summary">Enable boost on display update</string>
+
+    <string name="baikalos_limited_charge_screen_on_title">Limit on screen on</string>
+    <string name="baikalos_limited_charge_screen_on_summary">Limit charging while screen is on</string>
+    <string name="baikalos_bpcharge_screen_on_title">Bypass on screen on</string>
+    <string name="baikalos_bpcharge_screen_on_summary">Turn on bypass charging while screen is on</string>
+
+    <string name="baikalos_aod_on_charger_title">AOD on Charger</string>
+    <string name="baikalos_aod_on_charger_summary">Enable Always On Display on charger</string>
+
+    <string name="sound_sonif_a2dp_title">Notification sound</string>
+    <string name="sonif_a2dp_default">Default</string>
+    <string name="sonif_a2dp_force_speaker">Force on speaker</string>
+    <string name="sonif_a2dp_duplicate_speaker">Duplicate on speaker</string>
+
+    <string name="app_sound_sonif_a2dp_title">App sound</string>
+
+    <string name="installer_default">Default</string>
+    <string name="installer_none">None</string>
+    <string name="installer_googleplay">Google Play</string>
+    <string name="installer_appgallery">App Gallery</string>
+    <string name="installer_rustore">Rustore</string>
+    <string name="installer_aosp_pi">AOSP Package Installer</string>
+    <string name="installer_google_pi">Google Package Installer</string>
+
+    <string name="baikalos_freeze_cached_title">Cached Apps Freezer</string>
+    <string name="baikalos_freeze_cached_summary">Enable Cached Apps Freezer</string>
+
+    <string name="disable_inband_ringing_title">Disable Inband Ringing</string>
+    <string name="disable_inband_ringing_summary">Disable inband ringtone playback on bluetooth handsfree</string>
+
+    <string name="brightness_curve_default">Default</string>
+    <string name="brightness_curve_darker">Darker</string>
+    <string name="brightness_curve_lighter">Lighter</string>
+    <string name="brightness_curve_darkest">Darkest</string>
+    <string name="brightness_curve_lightest">Lightest</string>
+
+    <string name="baikalos_reduced_brightness_title">Reduced brightness</string>
+    <string name="baikalos_reduced_brightness_summary">Reduced brightness in moderate ambient light. Require reboot.</string>
+
+    <string name="allow_downgrade_title">Allow downgrade</string>
+    <string name="allow_downgrade_summary">Allow app downgrade. CAUTION!!! Downgrading may break the application. Application data may be completely corrupted.</string>
+
+    <string name="allow_sig_override_title">Allow signature override</string>
+    <string name="allow_sig_override_summary">Allow app signature override. CAUTION!!! Signature override will make your app vulnarable for malware attack. Do not keep this setting turned ON!!!</string>
+
+    <string name="baikalos_profile_edit_title">Profile Editor</string>
+    <string name="baikalos_profile_edit_summary">Edit Performance profile values</string>
+
+    <string name="baikalos_ignore_zero_battery_title">Ignore Zero Battery</string>
+    <string name="baikalos_ignore_zero_battery_summary">Do not shutdown on 0 battery level. Data loss warning! Phone will be shutdown by battery controller</string>
+
+    <string name="app_profile_heavy_memory_title">Heavy memory</string>
+    <string name="app_profile_heavy_memory_summary">This app uses a lot of memory. Close all unimportant background apps.</string>
+
+    <string name="app_profile_heavy_cpu_title">Heavy CPU</string>
+    <string name="app_profile_heavy_cpu_summary">This app uses a lot of CPU. Drop down priority of any background app.</string>
+
+    <string name="reset_persistent_mac_title">Renew random MAC</string>
+    <string name="reset_persistent_mac_summary">Renew randomized WiFi MAC address on a next connect attempt</string>
+
+    <string name="purge_package_cache_title">Purge package cache</string>
+    <string name="purge_package_cache_summary">Purge package cache on next system boot</string>
+
+    <string name="restore_gms_permissions_title">GMS permissions</string>
+    <string name="restore_gms_permissions_summary">Restore Google Services permissions on a next system boot</string>
+
+    <string name="restore_system_permissions_title">System Apps permissions</string>
+    <string name="restore_system_permissions_summary">Restore all system apps permissions on a next system boot</string>
+
+    <string name="ui_use_new_back_gesturu_title">Back gesture UI</string>
+    <string name="ui_use_new_back_gesturu_summary">Use new back gesture UI</string>
+
+    <string name="profile_management_title">Manage App Profiles</string>
+
+    <string name="baikalos_little_freq_max_title">Little cluster max freq</string>
+    <string name="baikalos_little_freq_min_title">Little cluster min freq</string>
+
+    <string name="baikalos_big_freq_max_title">Big cluster max freq</string>
+    <string name="baikalos_big_freq_min_title">Big cluster min freq</string>
+
+    <string name="baikalos_bigplus_freq_max_title">Big+ cluster max freq</string>
+    <string name="baikalos_bigplus_freq_min_title">Big+ cluster min freq</string>
+
+    <string name="baikalos_gpu_max_title">GPU max freq</string>
+    <string name="baikalos_gpu_min_title">GPU min freq</string>
+
+
+    <string name="baikalos_task_boost_title">Task boost</string>
+    <string name="baikalos_silver_boost_title">Little cluster boost</string>
+    <string name="baikalos_gold_boost_title">Big cluster boost</string>
+    <string name="baikalos_plus_boost_title">Big+ cluster boost</string>
+
+    <string name="baikalos_little_core_ctl_title">Little cluster core control</string>
+    <string name="baikalos_big_core_ctl_title">Big cluster core control</string>
+    <string name="baikalos_plus_core_ctl_title">Big+ cluster core control</string>
+
+    <string name="fuse_passthrough_title">Enable FUSE passthrough</string>
+    <string name="fuse_passthrough_summary">Use FUSE passthrough if available. Reboot required.</string>
+
+    <string name="baikalos_enable_optional_components_title">Optional Services</string>
+    <string name="baikalos_enable_optional_components_summary">Enable some optional services, like Nearby Discovery, etc... Reboot required</string>
+
+    <string name="art_inc_max_title">Increase ART limits</string>
+    <string name="art_inc_max_summary">Increase ART compiler memory and registers usage limits</string>
+
+    <string name="old_links_title">A11 in-app links</string>
+    <string name="old_links_summary">Use old A11 in-app links behavior</string>
+
+    <string name="baikalos_power_level_ind_title">Color Indication</string>
+    <string name="baikalos_power_level_ind_summary">Use colored percentage text to indicate current powersaving profile</string>
+
+    <string name="baikalos_expand_all_notifications_title">Expand all</string>
+    <string name="baikalos_expand_all_notifications_summary">Expand all non-group notifications by default</string>
+
+    <string name="baikalos_pulse_duration_tile">Pulsing duration</string>
+    <string name="baikalos_pulse_duration_summary"></string>
+
+    <string name="baikalos_pulse_duration_in_tile">Pulsing In duration</string>
+    <string name="baikalos_pulse_duration_in_summary"></string>
+
+    <string name="baikalos_pulse_duration_out_tile">Pulsing Out duration</string>
+    <string name="baikalos_pulse_duration_out_summary"></string>
+
+    <string name="baikalos_a2dp_ignore_call_state_title">Ignore Call State</string>
+    <string name="baikalos_a2dp_ignore_call_state_summary">Igore Call State for A2DP service</string>
+
+    <string name="baikalos_disable_gms_spoof_title">Disable GMS spoofing</string>
+    <string name="baikalos_disable_gms_spoof_summary">Disable DeviceID spoofing for Google Services</string>
+
+    <string name="baikalos_enable_gms_spoof_title">Core GMS spoofing</string>
+    <string name="baikalos_enable_gms_spoof_summary">Enable DeviceID spoofing for Google Services</string>
+
+    <string name="baikalos_enable_vending_spoof_title">Enable Google Play spoofing</string>
+    <string name="baikalos_enable_vending_spoof_summary">Enable DeviceID spoofing for Google Play</string>
+
+    <string name="baikalos_enable_services_spoof_title">Google Servceis spoofing</string>
+    <string name="baikalos_enable_services_spoof_summary">Enable DeviceID spoofing for Google Services</string>
+
+    <string name="baikalos_disable_certificate_spoof_title">Disable Certificate spoofing</string>
+    <string name="baikalos_disable_certificate_spoof_summary">Disable Certificate spoofing for Google Services</string>
+
+    <string name="baikalos_enable_certificate_spoof_title">Certificate spoofing for GMS</string>
+    <string name="baikalos_enable_certificate_spoof_summary">Enable Certificate spoofing for Google Services</string>
+
+    <string name="baikalos_enable_certificate_spoof_vending_title">Certificate spoofing for Google Play</string>
+    <string name="baikalos_enable_certificate_spoof_vending_summary">Enable Certificate spoofing for Google Play Integrity</string>
+
+    <string name="baikalos_enable_certificate_spoof_apps_title">Certificate spoofing for Apps</string>
+    <string name="baikalos_enable_certificate_spoof_apps_summary">Enable Certificate spoofing for Apps bootloader status</string>
+
+    <string name="baikalos_enable_certificate_spoof_services_title">Certificate spoofing thru GMS</string>
+    <string name="baikalos_enable_certificate_spoof_services_summary">Enable Certificate spoofing for app attestation through Google Services</string>
+
+    <string name="baikalos_enable_signature_spoof_title">Enable Platform Signature spoofing</string>
+    <string name="baikalos_enable_signature_spoof_summary">Enable Android Platform Signature spoofing for Google Services</string>
+
+    <string name="baikalos_disable_gms_swa_spoof_title">Disable SW attestation</string>
+    <string name="baikalos_disable_gms_swa_spoof_summary">Disable enforcing SW attestation for Google Services</string>
+
+    <string name="baikalos_gms_override_spoof_title">Override properties</string>
+    <string name="baikalos_gms_override_spoof_summary">Override properties used for spoofing Google Services</string>
+
+    <string name="baikalos_gms_props_title">Spoofer properties</string>
+
+    <string name="device_title">Device ID</string>
+    <string name="device_summary">Device ID for GMS spoofing</string>
+
+    <string name="baikalos_spoof_manufacturer_title">MANUFACTURER</string>
+    <string name="baikalos_spoof_brand_title">BRAND</string>
+    <string name="baikalos_spoof_product_title">PRODUCT</string>
+    <string name="baikalos_spoof_model_title">MODEL</string>
+    <string name="baikalos_spoof_device_title">DEVICE</string>
+    <string name="baikalos_spoof_fingerprint_title">FINGERPRINT</string>
+    <string name="baikalos_spoof_id_title">ID</string>
+    <string name="baikalos_spoof_incremental_title">INCREMENTAL</string>
+    <string name="baikalos_spoof_release_title">RELEASE</string>
+    <string name="baikalos_spoof_sp_title">SECURITY PATCH</string>
+    <string name="baikalos_spoof_first_api_level_title">First API Level</string>
+    <string name="baikalos_spoof_sdk_int_title">SDK</string>
+
+    <string name="spoof_setings_reset_summary">Reset to system default values</string>
+    <string name="spoof_setings_reset_title">Reset</string>
+
+    <string name="spoof_setings_update_summary">Update settings from crDroid servers</string>
+    <string name="spoof_setings_update_title">Update</string>
+
+    <string name="spoof_restart_gms_summary">Restart Google Play Services</string>
+    <string name="spoof_restart_gms_title">Restart GMS</string>
+
+    <string name="baikalos_gms_spoofer_update_title">Auto update</string>
+    <string name="baikalos_gms_spoofer_update_summary">Periodically check for updated keys on internet</string>
+
+    <string name="audio_route_speaker_title">Force to speaker</string>
+    <string name="audio_route_duplicate_title">Duplicate to speaker</string>
+    <string name="baikalos_enable_force_speaker_title">Enforce speaker</string>
+    <string name="baikalos_enable_force_speaker_summary">Enforce speaker usage. This will override above values and break duplication.</string>
+
+    <string name="baikalos_power_zram_title">ZRAM</string>
+
+    <string name="baikalos_color_doze_title">Color</string>
+    <string name="baikalos_color_doze_summary">Enable colored content on ambient display</string>
+
+    <string name="special_devices_title">Special Scenarios</string>
+    <string name="special_devices_summary">Special scenarios settings</string>
+
+    <string name="special_bt_dev_title">BT Devices</string>
+    <string name="special_bt_dev_summary">BT Devices used in special scenarios</string>
+
+    <string name="sd_incall_title">Awake in call</string>
+    <string name="sd_incall_summary">Keep device awake if incall and special device connected</string>
+
+    <string name="sd_keep_title">Keep awake</string>
+    <string name="sd_keep_summary">Keep device awake if special device connected</string>
+
+    <string name="filterfs_enable_title">Filesystem Filter</string>
+    <string name="filterfs_enable_summary">Enable per-app file-system filter. Will block or unblock (depened on Invert option) access to some system folders and files to hide them from apps</string>
+
+    <string name="filterfs_invert_title">Invert FS Filter</string>
+    <string name="filterfs_invert_summary">If unchecked all apps except marked in app profile will have access. If cheched only marked apps will have access</string>
+
+    <string name="filterfs_isolated_title">Filter Isolated Apps</string>
+    <string name="filterfs_isolated_summary">Always filter file-system for Isolated Apps</string>
+
+    <string name="baikalos_location_mode_title">GNSS Receiver</string>
+    <string name="baikalos_location_mode_summary">Enable HW GNSS receiver</string>
+
+    <string name="front_camera_mode_title">Disable Front camera</string>
+    <string name="front_camera_mode_summary">Disable front camera by default. Can be overriden by an app profile.</string>
+
+    <string name="back_camera_mode_title">Disable Back camera</string>
+    <string name="back_camera_mode_summary">Disable back camera by default. Can be overriden by an app profile.</string>
+
+    <string name="force_wfc_title">Force WFC</string>
+    <string name="force_wfc_summary">Force VoWiFi availbale regardless of carrier provisioning settings</string>
+
+    <string name="force_cs_title">Force Cross SIM</string>
+    <string name="force_cs_summary">Force Cross SIM (backup calling) availbale regardless of carrier provisioning settings</string>
+
+    <string name="enable_stationary_throttle_title">Stationary Throttle</string>
+    <string name="enable_stationary_throttle_summary">Whether to throttle location when the device is in doze and still.</string>
+
+    <string name="camera_ignore_ir_title">Ignore IR</string>
+    <string name="camera_ignore_ir_summary">Use regular front facing camera for face unlock</string>
+
+    <string name="smart_low_battery_trigger_level_title">Low battery warning level</string>
+    <string name="smart_critical_battery_trigger_level_title">Critical battery warning level</string>
+
+    <string name="baikalos_fp_wake_enabled_title">Wake on Fingerprint</string>
+    <string name="baikalos_fp_wake_enabled_summary">Wakeup device on fingerprint sensor if no fingerprints are enrolled</string>
+
+    <string name="baikalos_airplane_dont_toggle_bt_title">Don\'t toggle BT</string>
+    <string name="baikalos_airplane_dont_toggle_bt_summary">Do not toggle BT on airplain mode</string>
+
+    <string name="baikalos_airplane_dont_toggle_wifi_title">Don\'t toggle WiFi</string>
+    <string name="baikalos_airplane_dont_toggle_wifi_summary">Do not toggle WiFi on airplain mode</string>
+
+    <string name="privacy_title">Privacy and Protection</string>
+    <string name="privacy_summary">Spoof apps with fake data for your privacy and protection</string>
+    <string name="privacy_hide_gms_summary">Hide GMS from 3rd party apps by default</string>
+    <string name="privacy_hide_gms_title">Hide GMS</string>
+    <string name="privacy_hide_hms_summary">Hide HMS from 3rd party apps by default</string>
+    <string name="privacy_hide_hms_title">Hide HMS</string>
+    <string name="privacy_hide_3p_summary">Hide 3rd party apps from other apps by default</string>
+    <string name="privacy_hide_3p_title">Hide other apps</string>
+
+    <string name="privacy_block_notification_summary">Block access to notifications by default</string>
+    <string name="privacy_block_notification_title">Block Notifications</string>
+
+    <string name="privacy_block_sms_summary">Spoof empty SMS database by default</string>
+    <string name="privacy_block_sms_title">Spoof SMS</string>
+    <string name="privacy_block_contacts_summary">Spoof empty Contact list by default</string>
+    <string name="privacy_block_contacts_title">Spoof Contacts</string>
+    <string name="privacy_block_calllog_summary">Spoof empty Call Log by default</string>
+    <string name="privacy_block_calllog_title">Spoof Call Log</string>
+    <string name="privacy_block_calendar_summary">Block access to Calendar by default</string>
+    <string name="privacy_block_calendar_title">Block Calendar</string>
+    <string name="privacy_block_media_summary">Block access to Media files by default</string>
+    <string name="privacy_block_media_title">Block Media</string>
+
+    <string name="trust_timeout_in_millis_title">Trust timeout</string>
+    <string name="trustable_idle_timeout_in_millis_title">Trustable while idle timeout</string>
+    <string name="trustable_timeout_in_millis_title">Trustable timeout</string>
+
+    <string name="run_cmd_dialog_title">Run Shell Command</string>
+    <string name="run_cmd_title">Command</string>
+    <string name="run_it_now_summary"></string>
+    <string name="run_it_now_title">Run</string>
+    <string name="ret_cmd_title">Command Output</string>
+
+    <string name="default_app_none">None</string>
+
+    <string name="callscreening_service_title">Secondary CallerID service</string>
+    <string name="call_screening_no_dd_title">No Default Dialer ID</string>
+    <string name="call_screening_no_dd_summary">Do not use default dialer app as Caller ID service</string>
+
+    <string name="baikalos_proximity_disable_title">Disable Proximity</string>
+    <string name="baikalos_proximity_disable_summary">Disable proximity sensor</string>
+
+    <string name="cpu_top_title">CPU Usage</string>
+
+    <string name="baikalos_cpu_top_title">CPU Usage</string>
+    <string name="baikalos_cpu_top_summary">Show CPU Usage by every system process</string>
+
+    <!-- string name=""></string -->
+</resources>
