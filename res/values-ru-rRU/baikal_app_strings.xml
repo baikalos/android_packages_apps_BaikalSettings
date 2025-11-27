@@ -1,0 +1,54 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+
+    <string name="status_no_items">Пусто</string>
+    <string name="app_menu_filter_system">Системные приложения</string>
+    <string name="app_menu_search">Поиск</string>
+
+
+    <string name="settings_app_title">Приложения</string>
+    <string name="settings_app_category">Приложения</string>
+    <string name="settings_app_summary">Настройки профилей Приложений</string>
+
+    <string name="app_autoboot_title">Автозагрузка</string>
+    <string name="app_autoboot_category">Приложения стартующие при загрузке системы</string>
+    <string name="app_autoboot_category_title">Автозагрузка</string>
+
+    <string name="app_all_title">Все приложения</string>
+    <string name="app_all_category"></string>
+    <string name="app_all_category_title">Все приложения</string>
+
+    <string name="app_user_profile_title">Пользовательские профили</string>
+    <string name="app_user_profile_category">Приложения с модифицированными профилями</string>
+    <string name="app_user_profile_category_title">Пользовательские профили</string>
+
+    <string name="app_disabled_title">Замороженные приложения</string>
+    <string name="app_disabled_category">Замороженные (отключенные) приложения</string>
+    <string name="app_disabled_category_title">Замороженные приложения</string>
+
+    <string name="app_debug_title">Отладка</string>
+    <string name="app_debug_category">Приложения с ключенной отладкой</string>
+    <string name="app_debug_category_title">Отладка</string>
+
+    <string name="app_ignore_sign_title">Игнорируют подпись</string>
+    <string name="app_ignore_sign_category">Приложения с отключенной проверкой подписи для устновки</string>
+    <string name="app_ignore_sign_category_title">Игнорируют подпись</string>
+
+    <string name="app_background_unlimited_title">Неограниченный фон</string>
+    <string name="app_background_unlimited_category">Приложения с отключенными фоновыми ограничениями</string>
+    <string name="app_background_unlimited_category_title">Неограниченный фон</string>
+
+    <string name="app_background_restricted_title">Ограниченный фон</string>
+    <string name="app_background_restricted_category">Приложения с включенными фоновыми ограничениями</string>
+    <string name="app_background_restricted_category_title">Ограниченный фон</string>
+
+    <string name="app_forced_screen_shot_title">Скриншот без ограничений</string>
+    <string name="app_forced_screen_shot_category">Приложения с отключенным ограничением скриншотов</string>
+    <string name="app_forced_screen_shot_category_title">Скриншот без ограничений</string>
+
+    <string name="app_background_title">Фоновые приложения</string>
+    <string name="app_background_category">Приложения запускавшиеся в фоновом режиме</string>
+    <string name="app_background_category_title">Фоновые приложения</string>
+
+    <!-- string name=""></string -->
+</resources>

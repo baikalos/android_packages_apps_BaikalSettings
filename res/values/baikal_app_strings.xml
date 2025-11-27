@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+
+    <string name="status_no_items">Empty</string>
+    <string name="app_menu_filter_system">Show system apps</string>
+    <string name="app_menu_search">Search</string>
+
+
+    <string name="settings_app_title">Applications</string>
+    <string name="settings_app_category">Applications</string>
+    <string name="settings_app_summary">Application specific settings</string>
+
+    <string name="app_autoboot_title">Autostart on Boot</string>
+    <string name="app_autoboot_category">Apps allowed to start on boot</string>
+    <string name="app_autoboot_category_title">Autostart on Boot</string>
+
+    <string name="app_all_title">All apps</string>
+    <string name="app_all_category"></string>
+    <string name="app_all_category_title">All apps</string>
+
+    <string name="app_user_profile_title">User profiles</string>
+    <string name="app_user_profile_category">Apps with user modified profiles</string>
+    <string name="app_user_profile_category_title">User profiles</string>
+
+    <string name="app_disabled_title">Frozen Apps</string>
+    <string name="app_disabled_category">Frozen (disabled) Apps</string>
+    <string name="app_disabled_category_title">Frozen Apps</string>
+
+    <string name="app_debug_title">Debugged</string>
+    <string name="app_debug_category">Debugged</string>
+    <string name="app_debug_category_title">Debugged</string>
+
+    <string name="app_ignore_sign_title">Ignore signature</string>
+    <string name="app_ignore_sign_category">Ignore signature</string>
+    <string name="app_ignore_sign_category_title">Ignore signature</string>
+
+    <string name="app_background_unlimited_title">Background Unlimited</string>
+    <string name="app_background_unlimited_category">Background Unlimited</string>
+    <string name="app_background_unlimited_category_title">Background Unlimited</string>
+
+    <string name="app_background_restricted_title">Background Restricted</string>
+    <string name="app_background_restricted_category">Background Unlimited</string>
+    <string name="app_background_restricted_category_title">Background Unlimited</string>
+
+    <string name="app_forced_screen_shot_title">Forced Screenshot</string>
+    <string name="app_forced_screen_shot_category">Forced Screenshot</string>
+    <string name="app_forced_screen_shot_category_title">Forced Screenshot</string>
+
+    <string name="app_background_title">Background started</string>
+    <string name="app_background_category">Background started</string>
+    <string name="app_background_category_title">Background started</string>
+
+    <!-- string name=""></string -->
+</resources>

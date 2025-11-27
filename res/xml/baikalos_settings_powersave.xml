@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * Copyright (C) 2023 BaikalOS
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+-->
+
+<PreferenceScreen 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+    xmlns:lineage="http://schemas.android.com/apk/res-auto"
+    android:title="@string/powersave_title"
+    >
+
+    <PreferenceCategory
+        android:title="@string/device_profiles_title">
+
+        <ListPreference
+            android:key="default_profile_performance"
+            android:title="@string/app_profile_performance_title"
+            android:entries="@array/performance_listentries"
+            android:entryValues="@array/performance_listvalues" 
+            android:defaultValue="default"
+            android:summary="%s"/>
+
+        <ListPreference
+            android:key="default_profile_thermal"
+            android:title="@string/app_profile_thermal_title"
+            android:entries="@array/thermal_listentries"
+            android:entryValues="@array/thermal_listvalues"
+            android:defaultValue="default"
+            android:summary="%s" />
+
+
+        <ListPreference
+            android:key="default_screenoff_performance"
+            android:title="@string/app_screenoff_performance_title"
+            android:entries="@array/performance_listentries"
+            android:entryValues="@array/performance_listvalues" 
+            android:defaultValue="default"
+            android:summary="%s"/>
+
+        <ListPreference
+            android:key="default_screenoff_thermal"
+            android:title="@string/app_screenoff_thermal_title"
+            android:entries="@array/thermal_listentries"
+            android:entryValues="@array/thermal_listvalues"
+            android:defaultValue="default"
+            android:summary="%s" />
+
+
+        <ListPreference
+            android:key="default_idle_performance"
+            android:title="@string/app_idle_performance_title"
+            android:entries="@array/performance_listentries"
+            android:entryValues="@array/performance_listvalues" 
+            android:defaultValue="default"
+            android:summary="%s"/>
+
+        <ListPreference
+            android:key="default_idle_thermal"
+            android:title="@string/app_idle_thermal_title"
+            android:entries="@array/thermal_listentries"
+            android:entryValues="@array/thermal_listvalues"
+            android:defaultValue="default"
+            android:summary="%s" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/powesaver_profiles_title">
+
+        <ListPreference
+            android:key="powesaver_screenon"
+            android:title="@string/powesaver_screenon_title"
+            android:entries="@array/powesaver_listentries"
+            android:entryValues="@array/powesaver_listvalues" 
+            android:defaultValue="0"
+            android:summary="%s"/>
+
+        <ListPreference
+            android:key="powesaver_standby"
+            android:title="@string/powesaver_standby_title"
+            android:entries="@array/powesaver_listentries"
+            android:entryValues="@array/powesaver_listvalues" 
+            android:defaultValue="0"
+            android:summary="%s"/>
+
+        <ListPreference
+            android:key="powesaver_idle"
+            android:title="@string/powesaver_idle_title"
+            android:entries="@array/powesaver_listentries"
+            android:entryValues="@array/powesaver_listvalues" 
+            android:defaultValue="0"
+            android:summary="%s"/>
+
+        <ListPreference
+            android:key="powesaver_screenon_charger"
+            android:title="@string/powesaver_screenon_charger_title"
+            android:entries="@array/powesaver_listentries"
+            android:entryValues="@array/powesaver_listvalues" 
+            android:defaultValue="0"
+            android:summary="%s"/>
+
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/powersave_title">
+
+        <!-- com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+            android:key="baikalos_aggressive_idle"
+            android:defaultValue="false"
+            android:title="@string/baikalos_aggressive_idle_title"
+            android:summary="@string/baikalos_aggressive_idle_summary"
+        / -->
+
+        <!-- com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+            android:key="cached_apps_freezer"
+            android:defaultValue="true"
+            android:title="@string/baikalos_freeze_cached_title"
+            android:summary="@string/baikalos_freeze_cached_summary"
+        / -->
+
+        <!-- com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+            android:key="baikalos_kill_in_background"
+            android:defaultValue="false"
+            android:title="@string/baikalos_kill_in_background_title"
+            android:summary="@string/baikalos_kill_in_background_summary"
+        / -->
+
+
+        <!-- com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+            android:key="baikalos_auto_limit"
+            android:defaultValue="false"
+            android:title="@string/baikalos_auto_limit_title"
+            android:summary="@string/baikalos_auto_limit_summary"
+        / -->
+
+        <!-- com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+            android:key="baikalos_aggressive_device_idle"
+            android:defaultValue="false"
+            android:title="@string/baikalos_aggressive_device_idle_title"
+            android:summary="@string/baikalos_aggressive_device_idle_summary"
+        / -->
+
+        <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+            android:key="baikalos_unrestricted_net"
+            android:defaultValue="false"
+            android:title="@string/baikalos_unrestricted_net_title"
+            android:summary="@string/baikalos_unrestricted_net_summary"
+        />
+
+        <!-- com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+            android:key="baikalos_brightness_curve"
+            android:defaultValue="false"
+            android:title="@string/baikalos_reduced_brightness_title"
+            android:summary="@string/baikalos_reduced_brightness_summary"
+        / -->
+
+        <!-- com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+            android:key="baikalos_boost_interaction"
+            android:defaultValue="true"
+            android:title="@string/baikalos_interaction_boost_title"
+            android:summary="@string/baikalos_interaction_boost_summary"
+        / -->
+
+        <!-- com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+            android:key="baikalos_boost_rendering"
+            android:defaultValue="true"
+            android:title="@string/baikalos_rendering_boost_title"
+            android:summary="@string/baikalos_rendering_boost_summary"
+        /-->
+
+        <!-- com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+            android:key="baikalos_super_saver"
+            android:defaultValue="false"
+            android:title="@string/baikalos_super_saver_title"
+            android:summary="@string/baikalos_super_saver_summary"
+        / -->
+
+        <!-- com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+            android:key="baikalos_super_saver_draw"
+            android:defaultValue="false"
+            android:title="@string/baikalos_super_saver_draw_title"
+            android:summary="@string/baikalos_super_saver_draw_summary"
+        / -->
+
+    </PreferenceCategory>
+
+
+    <!-- PreferenceCategory
+        android:title="@string/profile_management_title">
+
+        <Preference
+            android:key="app_setings_backup"
+            android:title="@string/app_setings_backup_title"
+            android:summary="@string/app_setings_backup_summary" />
+
+        <Preference
+            android:key="app_setings_restore"
+            android:title="@string/app_setings_restore_title"
+            android:summary="@string/app_setings_restore_summary" />
+
+        <Preference
+            android:key="app_setings_reset"
+            android:title="@string/app_setings_reset_title"
+            android:summary="@string/app_setings_reset_summary" />
+
+    </PreferenceCategory -->
+
+        <Preference
+            android:key="baikalos_power_profiles_editor"
+            android:title="@string/baikalos_power_profiles_editor_title"
+            android:summary="@string/baikalos_power_profiles_editor_summary"
+            android:fragment="ru.baikalos.settings.fragments.PowerProfilesEditor" />
+
+        <Preference
+            android:key="baikalos_profile_editor"
+            android:title="@string/baikalos_profile_edit_title"
+            android:summary="@string/baikalos_profile_edit_summary"
+            android:fragment="ru.baikalos.settings.fragments.PerformanceProfileEditor" />
+
+        <!-- com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+            android:key="baikalos_extreme_idle"
+            android:defaultValue="false"
+            android:title="@string/baikalos_extreme_idle_title"
+            android:summary="@string/baikalos_extreme_idle_summary"
+            android:dependency="baikalos_aggressive_idle"
+        / -->
+
+        <!-- com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+            android:key="baikalos_stamina_enabled"
+            android:defaultValue="false"
+            android:title="@string/baikalos_stamina_title"
+            android:summary="@string/baikalos_stamina_summary"
+        / -->
+
+        <!-- com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+             android:key="baikalos_boost_display_update_imminent_disable"
+            android:defaultValue="true"
+            android:title="@string/baikalos_display_boost_title"
+            android:summary="@string/baikalos_display_boost_summary"
+        / -->
+
+        <!-- com.crdroid.settings.preferences.SystemPropertiesListPreference
+            android:key="persist.baikal.zramsize"
+            android:title="@string/baikalos_power_zram_title"
+            android:dialogTitle="@string/baikalos_power_zram_title"
+            android:entries="@array/baikalos_zram_entries"
+            android:entryValues="@array/baikalos_zram_values"
+            android:defaultValue="2048" / -->
+
+        <Preference
+            android:key="baikalos_cpu_top"
+            android:title="@string/baikalos_cpu_top_title"
+            android:summary="@string/baikalos_cpu_top_summary"
+            android:fragment="ru.baikalos.settings.fragments.CpuTopFragment" />
+
+</PreferenceScreen>

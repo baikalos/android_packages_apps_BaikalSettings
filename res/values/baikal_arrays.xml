@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string-array name="default_captive_portal_listentries">
+    	<item>@string/captive_portal_default</item>
+    	<item>@string/captive_portal_apple</item>
+    	<item>@string/captive_portal_yandex</item>
+    	<item>@string/captive_portal_xiaomi</item>
+    	<item>@string/captive_portal_huawei</item>
+    	<item>@string/captive_portal_ubuntu</item>
+    	<item>@string/captive_portal_cloudflare</item>
+     </string-array>
+
+     <string-array name="default_captive_portal_listvalues">
+    	<item>default</item>
+    	<item>apple</item>
+    	<item>yandex</item>
+    	<item>xiaomi</item>
+    	<item>huawei</item>
+    	<item>ubuntu</item>
+    	<item>cloudflare</item>
+    </string-array>
+
+    <string-array name="background_blur_type_entries">
+    	<item>Default</item>
+    	<item>CLAMP</item>
+    	<item>REPEAT</item>
+    	<item>MIRROR</item>
+    	<item>DECAL</item>
+     </string-array>
+
+     <string-array name="background_blur_type_values">
+    	<item>0</item>
+    	<item>1</item>
+    	<item>2</item>
+    	<item>3</item>
+    	<item>4</item>
+    </string-array>
+
+
+    <!-- Log it -->
+
+    <string-array name="log_it_share_type_entries" translatable="false">
+        <item>@string/log_it_share_type_zip</item>
+        <item>@string/log_it_share_type_haste</item>
+    </string-array>
+
+    <string-array name="log_it_share_type_values" translatable="false">
+        <item>1</item>
+        <item>0</item>
+    </string-array>
+
+    <string-array name="sonif_a2dp_listentries" translatable="false">
+        <item>@string/sonif_a2dp_default</item>
+        <item>@string/sonif_a2dp_force_speaker</item>
+        <item>@string/sonif_a2dp_duplicate_speaker</item>
+    </string-array>
+
+
+    <string-array name="sonif_a2dp_listvalues" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="app_sonif_a2dp_listentries" translatable="false">
+        <item>@string/sonif_a2dp_default</item>
+        <item>@string/sonif_a2dp_force_speaker</item>
+        <!-- item>@string/sonif_a2dp_duplicate_speaker</item -->
+    </string-array>
+
+
+    <string-array name="app_sonif_a2dp_listvalues" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <!-- item>2</item -->
+    </string-array>
+
+    <string-array name="app_installer_listentries" translatable="false">
+        <item>@string/installer_default</item>
+        <item>@string/installer_none</item>
+        <item>@string/installer_googleplay</item>
+        <item>@string/installer_appgallery</item>
+        <item>@string/installer_rustore</item>
+        <item>@string/installer_aosp_pi</item>
+        <item>@string/installer_google_pi</item>
+    </string-array>
+
+    <string-array name="app_installer_listvalues" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+
+    <string-array name="brightness_curve_entries">
+    	<item>@string/brightness_curve_default</item>
+    	<item>@string/brightness_curve_darker</item>
+    	<item>@string/brightness_curve_lighter</item>
+     </string-array>
+
+     <string-array name="brightness_curve_values">
+    	<item>0</item>
+    	<item>1</item>
+    	<item>2</item>
+    </string-array>
+
+    <string-array name="app_scalefactor_listentries" translatable="false">
+        <item>150%</item>
+        <item>140%</item>
+        <item>130%</item>
+        <item>120%</item>
+        <item>110%</item>
+        <item>100%</item>
+        <item>90%</item>
+        <item>80%</item>
+        <item>70%</item>
+        <item>60%</item>
+        <item>50%</item>
+    </string-array>
+
+    <string-array name="app_scalefactor_listvalues" translatable="false">
+        <item>150</item>
+        <item>140</item>
+        <item>130</item>
+        <item>120</item>
+        <item>110</item>
+        <item>0</item>
+        <item>90</item>
+        <item>80</item>
+        <item>70</item>
+        <item>60</item>
+        <item>50</item>
+    </string-array>
+
+    <string-array name="baikalos_audio_content_type_entries" translatable="false">
+        <item>UNKNOWN</item>
+        <item>SPEECH</item>
+        <item>MUSIC</item>
+        <item>MOVIE</item>
+        <item>SONIFICATION</item>
+    </string-array>
+
+    <string-array name="baikalos_audio_content_type_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+    <string-array name="baikalos_audio_usage_entries" translatable="false">
+        <item>UNKNOWN</item>
+        <item>MEDIA</item>
+        <item>VOICE_COMMUNICATION</item>
+        <item>VOICE_COMMUNICATION_SIGNALLING</item>
+        <item>ALARM</item>
+        <item>NOTIFICATION</item>
+        <item>NOTIFICATION_RINGTONE</item>
+        <item>NOTIFICATION_COMMUNICATION_REQUEST</item>
+        <item>NOTIFICATION_COMMUNICATION_INSTANT</item>
+        <item>NOTIFICATION_COMMUNICATION_DELAYED</item>
+        <item>NOTIFICATION_EVENT</item>
+        <item>ASSISTANCE_ACCESSIBILITY</item>
+        <item>ASSISTANCE_NAVIGATION_GUIDANCE</item>
+        <item>ASSISTANCE_SONIFICATION</item>
+        <item>GAME</item>
+        <item>VIRTUAL_SOURCE</item>
+        <item>ASSISTANT</item>
+    </string-array>
+
+    <string-array name="baikalos_audio_usage_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+    </string-array>
+
+    <string-array name="baikalos_zram_entries" translatable="false">
+        <item>Disabled</item>
+        <item>512M</item>
+        <item>1024M</item>
+        <item>2048M</item>
+        <item>3072M</item>
+        <item>4096M</item>
+    </string-array>
+
+    <string-array name="baikalos_zram_values" translatable="false">
+        <item>0</item>
+        <item>512</item>
+        <item>1024</item>
+        <item>2048</item>
+        <item>3072</item>
+        <item>4096</item>
+    </string-array>
+
+</resources>
