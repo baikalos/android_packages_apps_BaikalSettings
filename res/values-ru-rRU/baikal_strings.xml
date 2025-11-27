@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * Copyright (C) 2023 BaikalOS
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+-->
+<resources>
+
+    <string name="baikalos_settings_title">Настройки BaikalOS</string>
+    <string name="baikalos_settings_summary"></string>
+
+    <string name="about_baikalos">Информация BaikalOS</string>
+    <string name="about_summary">Все про BaikalOS. Логи системы.</string>
+
+    <string name="log_it_title">Снять лог!</string>
+    <string name="log_it_summary">Logcat, kmesg, dmesg, dumpsys</string>
+    <string name="logcat_title">Logcat</string>
+    <string name="logcat_radio_title">Радио лог</string>
+    <string name="kmesg_title">Kmesg</string>
+    <string name="dmesg_title">Dmesg</string>
+    <string name="dumpsys_title">Dumpsys</string>
+    <string name="share_title">Поделиться...</string>
+    <string name="log_it_share_subject">Логи BaikalOS</string>
+    <string name="log_it_now_summary">Ожидайте создания логов</string>
+    <string name="log_it_logs_in_progress">Создаются логи …</string>
+    <string name="log_it_share_type_title">Метод отправки</string>
+    <string name="log_it_share_type_zip">ZIP-Файл</string>
+    <string name="log_it_share_type_haste">Загрузить на BaikalOS Haste</string>
+    <string name="log_it_share_via">Поделиться через</string>
+
+    <string name="baikalos_debug_title">Подробный лог</string>
+    <string name="baikalos_debug_summary">Включить подробный лог. Не включайте без причины. Расходует ресурсы, увеличивает потребление.</string>
+
+    <string name="baikalos_force_warm_title">Мягкая перезагрузка</string>
+    <string name="baikalos_force_warm_summary">Форсировать мягкую перезагрузку для записи логов ядра</string>
+
+    <!-- Dashboard -->
+    <string name="user_interface_category">Интерфейс</string>
+    <string name="system_category">Настройки BaikalOS</string>
+    <string name="other_category">Другое</string>
+    <!-- Device parts -->
+    <string name="device_part_title">Возможности устройства</string>
+    <string name="device_part_category">Устройство</string>
+
+    <string name="status_bar_notch_category_title">Вырез дисплея</string>
+    <string name="display_hide_notch_title">Скрыть вырез дисплея</string>
+    <string name="display_hide_notch_summary">Отключить заливку черным цветом для выреза экрана</string>
+
+    <!-- Personalization Categories -->
+    <string name="button_summary">Аппаратные кнопки, меню кнопки питания</string>
+    <string name="lockscreen_summary">Настройки экрана блокировки</string>
+    <string name="misc_summary">Все, что непонятно куда засунуть</string>
+    <string name="navigation_summary">Hit the road Jack</string>
+    <string name="notifications_summary">Надоедалки</string>
+    <string name="quicksettings_summary">Попытаемся сделать этот ужас чуть более удобным</string>
+    <string name="sound_summary">They Said To Play It Louder Than Hell</string>
+    <string name="statusbar_summary">Строка состояния, иконки уведомлений, связи и батареи</string>
+    <string name="display_summary">Display</string>
+    <string name="ui_summary">Дополнительные настройки пользовательского интерфейса</string>
+
+    <!-- Google services -->
+    <string name="gms_enabled_title">Сервисы Google</string>
+    <string name="gms_enabled_summary">Управление сервисами и приложениями Google</string>
+    <string name="gms_enabled_footer">Перед отключением сервисов Google настоятельно рекомендуется отключить "Find My Device" и 2-х факторную верификацию в вашем аккаунте Google. Приложения зависящие от сервисов Google перестануть работать или будут работать с ошибками! Если в работе устройства будут перебои потребуется сброс к заводским настройкам!</string>
+    <string name="gms_disable_confirmation">Отключение Сервисов Google</string>
+
+    <!-- Huawei services -->
+    <string name="hms_enabled_title">Huawei Mobile Services</string>
+    <string name="hms_enabled_summary">Управление сервисами и магазином приложений Huawei</string>
+
+    <!-- Huawei services -->
+    <string name="fdroid_enabled_title">F-Droid App Store</string>
+    <string name="fdroid_enabled_summary">Магазин приложений F-Droid</string>
+
+    <!-- Huawei services -->
+    <string name="aurora_enabled_title">Aurora Store</string>
+    <string name="aurora_enabled_summary">Магазин приложений Aurora</string>
+
+    <string name="services_title">Дополнительные Сервисы</string>
+    <string name="services_summary">Google, Huawei, Fdroid, etc...</string>
+
+    <!-- Face Unlock services -->
+    <string name="fu_enabled_title">Фейсконтроль</string>
+    <string name="fu_enabled_summary">Управление сервисом Фейсконтроля. Требуется перезагрузка!</string>
+
+    <string name="audio_tweaks_a2dp_last_codec_title">Последний использованный кодек</string>
+    <string name="audio_tweaks_a2dp_last_bitrate_title">Последний использованный битрейт</string>
+
+    <string name="captive_portal_title">Сервер сетевого монитора</string>
+    <string name="captive_portal_default">По умолчанию (Google)</string>
+    <string name="captive_portal_apple">Apple</string>
+    <string name="captive_portal_yandex">Yandex</string>
+
+    <string name="r_secure_title">Неограниченный доступ</string>
+    <string name="r_secure_summary">Отключить введенные Android 11 ограничения на доступ к некоторым папкам внешнего хранилища</string>
+
+    <string name="block_if_busy_title">Отклонить если занято</string>
+    <string name="block_if_busy_summary">Отклонять входящие вызовы по мобильной сети если есть активный голосовой вызов (Telegram, WhatsApp, Конференция, и т.д.)</string>
+
+    <string name="baikalos_limited_charge_screen_on_title">Ограничить</string>
+    <string name="baikalos_limited_charge_screen_on_summary">Ограничить ток заряда при включенном экране</string>
+    <string name="baikalos_bpcharge_screen_on_title">Обходная зарядка</string>
+    <string name="baikalos_bpcharge_screen_on_summary">Использовать обходную зарядку при включенном экране</string>
+
+    <string name="baikalos_aod_on_charger_title">AOD при зарядке</string>
+    <string name="baikalos_aod_on_charger_summary">Включать Always On Display при зарядке</string>
+
+    <string name="sound_sonif_a2dp_title">Звук уведомления</string>
+    <string name="sonif_a2dp_default">По умолчанию</string>
+    <string name="sonif_a2dp_force_speaker">Форсировать на динамик</string>
+    <string name="sonif_a2dp_duplicate_speaker">Дублировать на динамик</string>
+
+    <string name="app_sound_sonif_a2dp_title">Звук приложения</string>
+
+    <string name="installer_default">По умолчанию</string>
+    <string name="installer_none">Отсутствует</string>
+    <string name="installer_googleplay">Google Play</string>
+    <string name="installer_appgallery">App Gallery</string>
+    <string name="installer_rustore">Rustore</string>
+
+    <string name="baikalos_freeze_cached_title">Заморозка приложений</string>
+    <string name="baikalos_freeze_cached_summary">Включает режим заморозки кэшированных приложений</string>
+
+    <string name="disable_inband_ringing_title">Отключить Рингтон</string>
+    <string name="disable_inband_ringing_summary">Отключить проигрывание рингтона в беспроводное устройство</string>
+
+    <string name="disable_autorevoke_title">Отключить автоотзыв</string>
+    <string name="disable_autorevoke_summary">Отключить автоматический отзыв разрешений. Требуется перезагрузка!</string>
+
+    <string name="baikalos_reduced_brightness_title">Уменьшенная яркость</string>
+    <string name="baikalos_reduced_brightness_summary">Уменьшенная яркость в условиях умеренной освещенности. Требуется перезагрузка.</string>
+
+    <string name="allow_downgrade_title">Понижение версии</string>
+    <string name="allow_downgrade_summary">Разрешить установку приложений более ранних версий. ВНИМАНИЕ!!! Понижение версии может полностью сломать приложение. Данные приложения могут быть полностью уничтожены!!!</string>
+
+    <string name="allow_sig_override_title">Замена Подписи</string>
+    <string name="allow_sig_override_summary">Разрешить переустановку с другой подписью. ВНИМАНИЕ!!! Замена подписи делает ваши приложения уязвимыми для атак. Не оставляйте данную опицю включённой!!!</string>
+
+    <string name="baikalos_profile_edit_title">Редактор Профилей</string>
+    <string name="baikalos_profile_edit_summary">Изменить значения профилей производительности</string>
+
+    <string name="baikalos_ignore_zero_battery_title">Игнорировать 0 заряд</string>
+    <string name="baikalos_ignore_zero_battery_summary">Не отключать при достижении 0 заряда. Возможна потеря данных! Телефон будет отключен контроллером батареи</string>
+
+    <string name="app_profile_heavy_memory_title">Много памяти</string>
+    <string name="app_profile_heavy_memory_summary">Приложение требует много памяти. Закрыть вcе неважные фоновые приложения.</string>
+
+    <string name="app_profile_heavy_cpu_title">Много CPU</string>
+    <string name="app_profile_heavy_cpu_summary">Приложение требует полной мощности CPU. Понизить приоритет всем фоновым приложениям.</string>
+
+    <string name="restricted_networking_mode_title">Ограничения сети</string>
+    <string name="restricted_networking_mode_summary">Разрешить ограничения доступа к сети отдельных приложений</string>
+
+    <string name="baikalos_full_data_saver_title">Полная экономия данных</string>
+    <string name="baikalos_full_data_saver_summary">Отключить передачу данных для активных приложений по тарифицируемой сети в режиме экономии данных</string>
+
+    <string name="reset_persistent_mac_title">Обновить случайный MAC</string>
+    <string name="reset_persistent_mac_summary">Обновить случайный WiFi MAC адрес при следующем подключении к WiFi сети</string>
+
+    <string name="purge_package_cache_title">Очистить кеш пакетов</string>
+    <string name="purge_package_cache_summary">Очистить кеш пакетов установленных приложений при следующей загрузке</string>
+
+    <string name="restore_gms_permissions_title">Разрешения GMS</string>
+    <string name="restore_gms_permissions_summary">Восстановить разрешения для Гугл Сервисов при следующей загрузке</string>
+
+    <string name="restore_system_permissions_title">Системные Разрешения</string>
+    <string name="restore_system_permissions_summary">Восстановить разрешения для системных приложений при следующей загрузке</string>
+
+    <string name="ui_use_new_back_gesturu_title">Новый вид жеста назад</string>
+    <string name="ui_use_new_back_gesturu_summary">Использовать новый внешний вид жеста назад</string>
+
+    <string name="profile_management_title">Профили Приложений</string>
+
+    <string name="fuse_passthrough_title">FUSE passthrough</string>
+    <string name="fuse_passthrough_summary">Использовать FUSE passthrough если доступен. Требуется перезагрузка.</string>
+
+    <string name="baikalos_enable_optional_components_title">Опциональные сервисы</string>
+    <string name="baikalos_enable_optional_components_summary">Включить некоторые необязательные сервисы, такие как Nearby Discovery и т.д. Требуется перезагрузка</string>
+
+    <string name="baikalos_interaction_boost_title">Буст при касании</string>
+    <string name="baikalos_interaction_boost_summary">Включить буст при касании экрана</string>
+
+    <string name="baikalos_rendering_boost_title">Буст отрисовки</string>
+    <string name="baikalos_rendering_boost_summary">Включить буст при отрисовке сложных сцен</string>
+
+    <string name="art_inc_max_title">Увеличить лимиты ART</string>
+    <string name="art_inc_max_summary">Увеличить лимиты использования памяти и регистров ART компилятором</string>
+
+    <string name="old_links_title">A11 cсылки в приложениях</string>
+    <string name="old_links_summary">Использовать старое поведения при открытии ссылок приложениями</string>
+
+    <string name="baikalos_power_level_ind_title">Цветовая индикация</string>
+    <string name="baikalos_power_level_ind_summary">Использовать цвет текста процента заряда для индикации установленного профиля энергосбережения</string>
+
+    <string name="baikalos_expand_all_notifications_title">Раскрывать все</string>
+    <string name="baikalos_expand_all_notifications_summary">Показывать все несгруппированные сообщения раскрытыми</string>
+
+    <string name="baikalos_pulse_duration_tile">Длительность уведомления</string>
+    <string name="baikalos_pulse_duration_summary">Время удержания экрана при показе пульсирующих уведомлений</string>
+
+    <string name="device_title">Идентификация Устройства</string>
+    <string name="device_summary">Идентификаторы устройства для Сервисов гугл</string>
+
+    <string name="baikalos_disable_gms_spoof_title">Запретить спуфинг GMS</string>
+    <string name="baikalos_disable_gms_spoof_summary">Запретить встроенную подмену идентификатора устройства для Сервисов Гугл</string>
+
+    <string name="baikalos_enable_gms_spoof_title">Спуфинг GMS</string>
+    <string name="baikalos_enable_gms_spoof_summary">Разрешить встроенную подмену идентификатора устройства для Сервисов Гугл</string>
+
+    <string name="baikalos_enable_vending_spoof_title">Спуфинг Google Play</string>
+    <string name="baikalos_enable_vending_spoof_summary">Разрешить встроенную подмену идентификатора устройства для Google Play</string>
+
+    <string name="baikalos_enable_services_spoof_title">Спуфинг Google Services</string>
+    <string name="baikalos_enable_services_spoof_summary">Разрешить встроенную подмену идентификатора устройства для Google Services</string>
+
+    <string name="baikalos_disable_certificate_spoof_title">Запретить спуфинг сертификатов GMS</string>
+    <string name="baikalos_disable_certificate_spoof_summary">Запретить встроенную подмену сертификатов устройства для Сервисов Гугл</string>
+
+    <string name="baikalos_disable_certificate_spoof_vending_title">Запретить спуфинг сертификатов Google Play</string>
+    <string name="baikalos_disable_certificate_spoof_vending_summary">Запретить встроенную подмену сертификатов устройства для Google Play Integrity</string>
+
+    <string name="baikalos_disable_certificate_spoof_apps_title">Запретить спуфинг сертификатов Приложений</string>
+    <string name="baikalos_disable_certificate_spoof_apps_summary">Запретить встроенную подмену сертификатов устройства для приложений для скрытия статуса загрузчика</string>
+
+    <string name="baikalos_enable_certificate_spoof_title">Спуфинг сертификатов GMS</string>
+    <string name="baikalos_enable_certificate_spoof_summary">Разрешить встроенную подмену сертификатов устройства для сервисов гугл</string>
+
+    <string name="baikalos_enable_certificate_spoof_vending_title">Спуфинг сертификатов Google Play</string>
+    <string name="baikalos_enable_certificate_spoof_vending_summary">Разрешить встроенную подмену сертификатов устройства для Google Play Integrity</string>
+
+    <string name="baikalos_enable_certificate_spoof_apps_title">Спуфинг сертификатов для приложений</string>
+    <string name="baikalos_enable_certificate_spoof_apps_summary">Разрешить встроенную подмену сертификатов устройства для скрытия статуса загрузчика от приложений</string>
+
+    <string name="baikalos_enable_certificate_spoof_services_title">Спуфинг сертификатов через GMS</string>
+    <string name="baikalos_enable_certificate_spoof_services_summary">Разрешить встроенную подмену сертификатов для аттестации приложений через сервисы Google</string>
+
+    <string name="baikalos_enable_signature_spoof_title">Разрешить спуфинг подписи</string>
+    <string name="baikalos_enable_signature_spoof_summary">Разрешить подмену подписи платформы Android для Сервисов Гугл</string>
+
+    <string name="baikalos_gms_override_spoof_title">Изменить параметры</string>
+    <string name="baikalos_gms_override_spoof_summary">Изменить параметры используемые по умолчанию для подмены Google Services</string>
+
+    <string name="baikalos_disable_gms_swa_spoof_title">Отключить SW аттестацию</string>
+    <string name="baikalos_disable_gms_swa_spoof_summary">Отключить принудительную SW аттестацию для Google Services</string>
+
+    <string name="baikalos_gms_props_title">Параметры спуфера</string>
+
+    <string name="spoof_setings_reset_title">Сброс</string>
+    <string name="spoof_setings_reset_summary">Сброс параметров к значениям по умолчанию</string>
+
+    <string name="spoof_setings_update_title">Обновить</string>
+    <string name="spoof_setings_update_summary">Обновить настройки с сервера BaikalOS</string>
+
+    <string name="spoof_restart_gms_title">Рестарт GMS</string>
+    <string name="spoof_restart_gms_summary">Перезапустить Сервисы Гугл</string>
+
+    <string name="baikalos_gms_spoofer_update_title">Автообновление</string>
+    <string name="baikalos_gms_spoofer_update_summary">Периодически проверять обновления ключей через интернет</string>
+
+    <string name="baikalos_color_doze_title">Цвет</string>
+    <string name="baikalos_color_doze_summary">Разрешить использование цвета на экране событий</string>
+
+    <string name="special_devices_title">Специальные сценарии</string>
+    <string name="special_devices_summary">Настройки специальных сценариев</string>
+
+    <string name="special_bt_dev_title">Устройства BT</string>
+    <string name="special_bt_dev_summary">Bluetooth устройства для специальных сценариев</string>
+
+    <string name="sd_incall_title">Включен при разговоре</string>
+    <string name="sd_incall_summary">Удерживать включенным при разговоре и присоединенном устройстве</string>
+
+    <string name="sd_keep_title">Включено</string>
+    <string name="sd_keep_summary">Удерживать включенным при присоединенном устройстве</string>
+
+    <string name="filterfs_enable_title">Фильтр Файловой Системы</string>
+    <string name="filterfs_enable_summary">Включить фильтр файловой системы. Позволяет блокировать доступ к системным папкам и файлам (addon.d/su/и т.д.)</string>
+
+    <string name="filterfs_invert_title">Инвертировать фильтр файловой системы</string>
+    <string name="filterfs_invert_summary">Если выключено, то все приложения, кроме помеченных в профиле имеют доступ. Если включено, только у помеченных есть доступ.</string>
+
+    <string name="filterfs_isolated_title">Фильтр Изолированных</string>
+    <string name="filterfs_isolated_summary">Всегда запрещать доступ изолированным приложениям</string>
+
+    <string name="baikalos_location_mode_title">Приёмник GNSS</string>
+    <string name="baikalos_location_mode_summary">Разрешить использование приемника GNSS</string>
+
+    <string name="front_camera_mode_title">Отключить Фронтальную камеру</string>
+    <string name="front_camera_mode_summary">Отключить доступ приложений к фронтальной камере. Отменяется настройкой в профиле приложения</string>
+
+    <string name="back_camera_mode_title">Отключить Основную камеру</string>
+    <string name="back_camera_mode_summary">Отключить доступ приложений к основной камере. Отменяется настройкой в профиле приложения</string>
+
+    <string name="enable_stationary_throttle_title">Местоположение при неподвижности</string>
+    <string name="enable_stationary_throttle_summary">Снижать частоту запросов местоположения если устройство во сне и неподвижно</string>
+
+    <string name="force_wfc_title">Принудительный WFC</string>
+    <string name="force_wfc_summary">Принудительно разрешать использование VoWiFi даже если это запрещено профилем оператора</string>
+
+    <string name="force_cs_title">Принудительный Cross SIM</string>
+    <string name="force_cs_summary">Принудительно разрешать использование доступа к данным на второй SIM для работы VoWiFi (backup calling)</string>
+
+    <string name="camera_ignore_ir_title">Игнорировать IR камеру</string>
+    <string name="camera_ignore_ir_summary">Использовать обычную фронтальную камеру для распознавания лица</string>
+
+    <string name="smart_low_battery_trigger_level_title">Предупреждение о низком заряде</string>
+    <string name="smart_critical_battery_trigger_level_title">Предупреждение о критическом заряде</string>
+
+    <string name="baikalos_airplane_dont_toggle_bt_title">Не отключать BT</string>
+    <string name="baikalos_airplane_dont_toggle_bt_summary">Не отключать BT при включении режима полета</string>
+
+    <string name="baikalos_airplane_dont_toggle_wifi_title">Не отключать WiFi</string>
+    <string name="baikalos_airplane_dont_toggle_wifi_summary">Не отключать WiFi при включении режима полета</string>
+
+    <string name="privacy_title">Конфиденциальность и защита</string>
+    <string name="privacy_summary">Подделывайте данные приложений для обеспечения конфиденциальности и защиты</string>
+    <string name="privacy_hide_gms_summary">Скрыть GMS для сторонних приложений по умолчанию</string>
+    <string name="privacy_hide_gms_title">Скрыть GMS</string>
+    <string name="privacy_hide_hms_summary">Скрыть HMS для сторонних приложений по умолчанию</string>
+    <string name="privacy_hide_hms_title">Скрыть HMS</string>
+    <string name="privacy_hide_3p_summary">Скрыть сторонние приложения от других приложений по умолчанию</string>
+    <string name="privacy_hide_3p_title">Скрыть другие приложения</string>
+    
+    <string name="privacy_block_notification_summary">Блокировать доступ к уведомлениям по умолчанию</string>
+    <string name="privacy_block_notification_title">Блокировать уведомления</string>
+
+    <string name="privacy_block_sms_summary">Подделывать пустую базу данных SMS по умолчанию</string>
+    <string name="privacy_block_sms_title">Подделывать SMS</string>
+    <string name="privacy_block_contacts_summary">Подделывать пустой список контактов по умолчанию</string>
+    <string name="privacy_block_contacts_title">Подделывать контакты</string>
+    <string name="privacy_block_calllog_summary">Подделывать пустой журнал вызовов по умолчанию</string>
+    <string name="privacy_block_calllog_title">Подделывать журнал вызовов</string>
+    <string name="privacy_block_calendar_summary">Блокировать доступ к календарю по умолчанию</string>
+    <string name="privacy_block_calendar_title">Блокировать календарь</string>
+    <string name="privacy_block_media_summary">Блокировать доступ к медиафайлам по умолчанию</string>
+    <string name="privacy_block_media_title">Блокировать медиа</string>
+
+    <string name="trust_timeout_in_millis_title">Таймаут доверия</string>
+    <string name="trustable_idle_timeout_in_millis_title">Таймаут доверенного состояния в режиме ожидания</string>
+    <string name="trustable_timeout_in_millis_title">Таймаут доверенного состояния</string>
+
+    <string name="default_app_none">"Нет"</string>
+
+    <string name="baikalos_cpu_top_title">Использование CPU</string>
+    <string name="baikalos_cpu_top_summary">Использование CPU процессами</string>
+
+    <string name="baikalos_proximity_disable_title">Датчик Приближения</string>
+    <string name="baikalos_proximity_disable_summary">Отключить датчик приближения</string>
+
+    <string name="callscreening_service_title">Вторичный АОН</string>
+
+    <string name="call_screening_no_dd_title">Выкл АОН в звонилке</string>
+    <string name="call_screening_no_dd_summary">Не использовать сервис АОН в звонилке устноавленной основной</string>
+
+</resources>
